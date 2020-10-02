@@ -1,0 +1,16 @@
+.ControlButton {
+    background-color: #efefef;
+    padding: 15px;
+    font-size: 19px;
+    color: #555;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.ControlButton:hover,
+.ControlButton:active {
+    background-color: #efefef;
+    border-color: gray;
+}

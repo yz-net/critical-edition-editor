@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { ContentBody } from "./components/Viewer/ContentBody";
+import { CriticalEditionDocument } from "./CriticalEditionData";
 
-function App() {
+function App(props: { essayPath: string }) {
+  const [essayContent, setEssayContent] = useState<CriticalEditionDocument>();
+
+  useEffect(() => {
+    if (essayContent) {
+      console.log("essayContent loaded", essayContent);
+      return;
+    }
+    console.log("essayContent", essayContent);
+    fetch(props.essayPath)
+      .then((content) => content.json())
+      .then((jsonContent) => {
+        setEssayContent(jsonContent);
+      })
+      .catch((error) => {
+        return <div>Error Loading content</div>;
+      });
+  }, [essayContent, props.essayPath]);
+
+  if (!essayContent) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContentBody documentData={essayContent} />
     </div>
   );
 }
