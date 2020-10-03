@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import styles from "./ControlButtons.module.css";
-import { speechStarted, speechStopped } from "../../../utils/playerEvents";
+import { speechStarted, speechStopped } from "../../../../utils/playerEvents";
 
-export default function PlayText(props: { text: string }) {
+export default function PlayText(props: { text: string; playBar?: any }) {
   const [playing, setPlaying] = useState<boolean>(false);
 
   const { text } = props;
 
   return (
     <button
+      tabIndex={0}
+      aria-label="speak paragraph"
       onClick={() => {
         if (playing) {
           dispatchEvent(speechStopped);

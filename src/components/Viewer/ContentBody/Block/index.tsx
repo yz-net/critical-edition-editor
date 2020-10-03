@@ -3,11 +3,11 @@ import {
   CriticalEditionDocumentBlock,
   FootnoteParagraphBlockData,
   ParagraphBlockData,
-} from "../../../CriticalEditionData";
-import validBlockData from "../../../CriticalEditionData/validators/validBlockData";
-import htmlToText from "../../../utils/htmlToText";
-import { Footnote } from "../Footnote";
-import { Paragraph } from "../Paragraph";
+} from "../../../../CriticalEditionData";
+import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
+import htmlToText from "../../../../utils/htmlToText";
+import { Footnote } from "../../Footnote";
+import { Paragraph } from "../../Paragraph";
 import styles from "./Block.module.css";
 import PlayText from "./PlayText";
 

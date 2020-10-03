@@ -4,7 +4,7 @@ import {
   CriticalEditionDocumentBlock,
 } from "../../../CriticalEditionData";
 import validCriticalEditionDocumentData from "../../../CriticalEditionData/validators/validDocumentData";
-import Block from "../Block";
+import Block from "./Block";
 import styles from "./ContentBody.module.css";
 
 export function ContentBody(props: {
@@ -18,12 +18,14 @@ export function ContentBody(props: {
   }
   // console.log("document blocks", props.edition.blocks);
   return (
-    <div className={styles.ContentBody}>
-      {props.documentData.blocks.map(
-        (blockData: CriticalEditionDocumentBlock, i) => {
-          return <Block key={i} blockData={blockData} />;
-        }
-      )}
-    </div>
+    <article>
+      <div className={styles.ContentBody}>
+        {props.documentData.blocks.map(
+          (blockData: CriticalEditionDocumentBlock, i) => {
+            return <Block key={i} blockData={blockData} />;
+          }
+        )}
+      </div>
+    </article>
   );
 }

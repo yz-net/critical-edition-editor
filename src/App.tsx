@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ContentBody } from "./components/Viewer/ContentBody";
+import ControlBar from "./components/Viewer/ControlBar";
 import { CriticalEditionDocument } from "./CriticalEditionData";
 
 function App(props: { essayPath: string }) {
@@ -22,11 +23,14 @@ function App(props: { essayPath: string }) {
   }, [essayContent, props.essayPath]);
 
   if (!essayContent) {
-    return <div>Loading...</div>;
+    return <div>Loading essay</div>;
   }
 
   return (
     <div className="App">
+      <ControlBar
+        title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
+      />
       <ContentBody documentData={essayContent} />
     </div>
   );
