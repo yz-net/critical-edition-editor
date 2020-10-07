@@ -1,5 +1,7 @@
+import DebugLogger from "../DebugLogger";
 import { IDocumentPlayer, IDocumentPlayerProps } from "./IDocumentPlayer";
 
+const logger = new DebugLogger("SpeechSynthesisDocumentPlayer");
 export default class SpeechSynthesisDocumentPlayer implements IDocumentPlayer {
   props: IDocumentPlayerProps;
   utterances: Array<SpeechSynthesisUtterance>;
@@ -28,12 +30,12 @@ export default class SpeechSynthesisDocumentPlayer implements IDocumentPlayer {
       this.props.document.getBlockText(blockIndex)
     );
     speechSynthesis.speak(utterance);
-    console.log("Playing block", blockIndex);
+    logger.log("Playing block", blockIndex);
     this.props.playStatusHandler("playing");
 
     if (utterance && utterance.onend === null) {
       utterance.onend = () => {
-        console.log("Done playing block");
+        logger.log("Done playing block");
         this.props.playStatusHandler("finished");
         utterance.onend = null;
       };
@@ -48,7 +50,7 @@ export default class SpeechSynthesisDocumentPlayer implements IDocumentPlayer {
       if (!u || !u.onend) {
         break;
       }
-      console.log("Canceling u.onend");
+      logger.log("Canceling u.onend");
       u.onend = null;
     }
 

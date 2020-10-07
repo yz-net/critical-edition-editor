@@ -1,9 +1,9 @@
-import Document from "../Document/Document";
+import DocumentReader from "../Document/Document";
 
 export type PlayStatus = "playing" | "stopped" | "finished";
 
 export interface IDocumentPlayerProps {
-    document: Document;
+    document: DocumentReader;
     playStatusHandler: (status: PlayStatus) => void;
 
 }

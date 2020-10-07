@@ -1,10 +1,13 @@
 import { CriticalEditionDocumentBlock } from "..";
+import DebugLogger from "../../utils/DebugLogger";
 import ValidatorFunction from "./ValidatorFunction";
 import validFootnoteParagraphBlockData from "./validFootnoteParagraphBlockData";
 import validParagraphBlockData from "./validParagraphBlockData";
 
+const logger = new DebugLogger("validBlockData").hush();
+
 const validBlockData: ValidatorFunction<CriticalEditionDocumentBlock> = (data: any) => {
-    console.log("Validating block", data)
+    logger.log("Validating block", data)
 
     if (!data) { throw new Error("No object provided") }
     // if (!data.type) { throw new Error("Missing required field: .type") }

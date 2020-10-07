@@ -5,11 +5,14 @@ import {
   ParagraphBlockData,
 } from "../../../../CriticalEditionData";
 import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
+import DebugLogger from "../../../../utils/DebugLogger";
 import htmlToText from "../../../../utils/htmlToText";
 import { Footnote } from "../../Footnote";
 import { Paragraph } from "../../Paragraph";
 import styles from "./Block.module.css";
 import PlayText from "./PlayText";
+
+const logger = new DebugLogger("Block");
 
 export default function Block(props: {
   blockData: CriticalEditionDocumentBlock;
@@ -20,10 +23,10 @@ export default function Block(props: {
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    console.log("inFocus changed", props.inFocus);
+    logger.log("inFocus changed", props.inFocus);
     if (props.inFocus && ref.current) {
-      console.log("infocus: Commence scroll");
-      console.log(ref.current);
+      logger.log("infocus: Commence scroll");
+      logger.log(ref.current);
       ref.current.scrollIntoView({ behavior: "smooth" });
       ref.current.focus();
     }
@@ -63,7 +66,7 @@ export default function Block(props: {
   try {
     validBlockData(props.blockData);
   } catch (e) {
-    console.warn("Error validating block " + String(e), Block);
+    logger.warn("Error validating block " + String(e), Block);
     return null;
   }
   if (props.blockData.type.toLocaleLowerCase().trim() === "paragraph") {

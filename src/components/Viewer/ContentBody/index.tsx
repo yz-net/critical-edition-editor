@@ -4,8 +4,11 @@ import {
   CriticalEditionDocumentBlock,
 } from "../../../CriticalEditionData";
 import validCriticalEditionDocumentData from "../../../CriticalEditionData/validators/validDocumentData";
+import DebugLogger from "../../../utils/DebugLogger";
 import Block from "./Block";
 import styles from "./ContentBody.module.css";
+
+const logger = new DebugLogger("ContentBody.index");
 
 interface ContentBodyProps {
   documentData: CriticalEditionDocument;
@@ -18,11 +21,10 @@ export function ContentBody(props: ContentBodyProps): JSX.Element {
   try {
     validCriticalEditionDocumentData(props.documentData);
   } catch (e) {
-    console.error(e);
+    logger.error(e);
     return <div>Error loading data.</div>;
   }
-  // console.log("document blocks", props.edition.blocks);
-  console.log("playBlock", props.playBlock);
+
   return (
     <div className={styles.Container}>
       <div className={styles.ContentBody}>
