@@ -7,9 +7,14 @@ import validCriticalEditionDocumentData from "../../../CriticalEditionData/valid
 import Block from "./Block";
 import styles from "./ContentBody.module.css";
 
-export function ContentBody(props: {
+interface ContentBodyProps {
   documentData: CriticalEditionDocument;
-}): JSX.Element {
+  playBlock: (block: number) => void;
+  stopPlaying: () => void;
+  playing: boolean;
+  playingBlock?: number;
+}
+export function ContentBody(props: ContentBodyProps): JSX.Element {
   try {
     validCriticalEditionDocumentData(props.documentData);
   } catch (e) {
@@ -17,15 +22,27 @@ export function ContentBody(props: {
     return <div>Error loading data.</div>;
   }
   // console.log("document blocks", props.edition.blocks);
+  console.log("playBlock", props.playBlock);
   return (
-    <article>
+    <div className={styles.Container}>
       <div className={styles.ContentBody}>
-        {props.documentData.blocks.map(
-          (blockData: CriticalEditionDocumentBlock, i) => {
-            return <Block key={i} blockData={blockData} />;
-          }
-        )}
+        <article>
+          {props.documentData.blocks.map(
+            (blockData: CriticalEditionDocumentBlock, i) => {
+              return (
+                <Block
+                  key={i}
+                  playBlock={() => props.playBlock(i)}
+                  stopPlaying={props.stopPlaying}
+                  playing={props.playing}
+                  blockData={blockData}
+                  inFocus={i === props.playingBlock}
+                />
+              );
+            }
+          )}
+        </article>
       </div>
-    </article>
+    </div>
   );
 }

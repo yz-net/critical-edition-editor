@@ -1,3 +1,12 @@
+.Container {
+    position: fixed;
+    top: 112px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: scroll;
+}
+
 .ContentBody {
     max-width: 8.5in;
     margin-left: auto;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   CriticalEditionDocumentBlock,
   FootnoteParagraphBlockData,
@@ -13,15 +13,45 @@ import PlayText from "./PlayText";
 
 export default function Block(props: {
   blockData: CriticalEditionDocumentBlock;
+  playBlock: () => void;
+  stopPlaying: () => void;
+  playing: boolean;
+  inFocus: boolean;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    console.log("inFocus changed", props.inFocus);
+    if (props.inFocus && ref.current) {
+      console.log("infocus: Commence scroll");
+      console.log(ref.current);
+      ref.current.scrollIntoView({ behavior: "smooth" });
+      ref.current.focus();
+    }
+  }, [props.inFocus]);
+
   function Controls() {
     const html = (props.blockData.data as ParagraphBlockData).text;
-    return <div>{html ? <PlayText text={htmlToText(html)} /> : null}</div>;
+    return (
+      <div>
+        {html ? (
+          <PlayText
+            stopPlaying={props.stopPlaying}
+            playing={props.playing}
+            playBlock={props.playBlock}
+            text={htmlToText(html)}
+          />
+        ) : null}
+      </div>
+    );
   }
 
   function WrapBlock(inner: JSX.Element) {
     return (
-      <div tabIndex={0} className={styles.Block}>
+      <div
+        ref={ref}
+        tabIndex={0}
+        className={`${styles.Block} ${props.inFocus ? styles.InFocus : null}`}
+      >
         <div className={styles.ControlsWrapper}>
           <Controls />
         </div>
@@ -47,5 +77,5 @@ export default function Block(props: {
     );
   }
 
-  return <div>Block</div>;
+  return null;
 }

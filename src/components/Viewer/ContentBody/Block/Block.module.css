@@ -2,8 +2,10 @@
     border-right: 10px solid transparent;
     flex: 0 0 100px;
     visibility: hidden;
+    transition: 1s border-color ease-in-out;
 }
 
+.InFocus .ControlsWrapper,
 .Block:focus .ControlsWrapper,
 .Block:hover .ControlsWrapper {
     visibility: unset;
@@ -18,16 +20,18 @@
     padding-left: 10px;
     border-left: 10px solid transparent;
     display: flex;
+    line-height: 2em;
+    font-size: 19px;
 }
 
 .Block:focus .ControlsWrapper {
     border-color: gray;
 }
-.Block:hover .ControlsWrapper {
-    border-color: lightgray;
+
+.InFocus.Block .ControlsWrapper {
+    border-color: lightblue;
 }
 
-.Block {
-    line-height: 2em;
-    font-size: 19px;
+.Block:hover .ControlsWrapper {
+    border-color: lightgray;
 }
