@@ -16,7 +16,7 @@ import OpenFootnote from "./OpenFootnotes";
 import Permalink from "./Permalink";
 import PlayText from "./PlayText";
 
-const logger = new DebugLogger("Block");
+const logger = new DebugLogger("Block: ");
 
 export default function Block(props: {
   index: number;
@@ -34,6 +34,7 @@ export default function Block(props: {
   }`;
 
   const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
+
   useEffect(() => {
     if (props.inFocus && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
