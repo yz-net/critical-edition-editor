@@ -75,8 +75,6 @@ export function Footnote(props: { data: FootnoteParagraphBlockData }) {
     };
 
     interval = setInterval(incrementHeight, intervalDuration);
-
-    // node.style.height = `${toHeight}px`;
   }
 
   function collapse() {
