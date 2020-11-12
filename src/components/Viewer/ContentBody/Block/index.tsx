@@ -6,10 +6,13 @@ import {
 } from "../../../../CriticalEditionData";
 import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
 import DebugLogger from "../../../../utils/DebugLogger";
+import getFootnotes from "../../../../utils/getFootnotes";
 import htmlToText from "../../../../utils/htmlToText";
-import { Footnote } from "../../Footnote";
-import { Paragraph } from "../../Paragraph";
+import { Footnote } from "../Footnote";
+import { Paragraph } from "../Paragraph";
 import styles from "./Block.module.css";
+import CopyText from "./CopyText";
+import OpenFootnote from "./OpenFootnotes";
 import Permalink from "./Permalink";
 import PlayText from "./PlayText";
 
@@ -29,6 +32,8 @@ export default function Block(props: {
     (props.blockData.data as FootnoteParagraphBlockData).id ||
     `p-${props.index}`
   }`;
+
+  const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
   useEffect(() => {
     if (props.inFocus && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
@@ -39,7 +44,7 @@ export default function Block(props: {
   function Controls() {
     const html = (props.blockData.data as ParagraphBlockData).text;
     return (
-      <div>
+      <div className={styles.Controls}>
         {html ? (
           <React.Fragment>
             <PlayText
@@ -49,6 +54,12 @@ export default function Block(props: {
               text={htmlToText(html)}
             />
             <Permalink blockID={blockID} />
+            <CopyText
+              text={(props.blockData.data as ParagraphBlockData).text}
+            />
+            {props.blockData.type === "paragraph" && footnotes.length > 0 ? (
+              <OpenFootnote footnoteIDs={footnotes} />
+            ) : null}
           </React.Fragment>
         ) : null}
       </div>

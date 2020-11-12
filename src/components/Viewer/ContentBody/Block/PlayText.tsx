@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ControlButtons.module.css";
+import { ReactComponent as PlayIcon } from "../../svg/audio_icon.svg";
 
 interface PlayTextProps {
   text: string;
@@ -22,7 +23,8 @@ export default function PlayText(props: PlayTextProps) {
       }}
       className={styles.ControlButton}
     >
-      {props.playing ? "||" : ">"}
+      {/* {props.playing ? "||" : ">"} */}
+      <PlayIcon />
     </button>
   );
 }
