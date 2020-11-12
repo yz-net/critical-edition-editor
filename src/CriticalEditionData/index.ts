@@ -16,6 +16,7 @@ export interface ParagraphBlockData extends BlockData {
 export interface FootnoteParagraphBlockData extends ParagraphBlockData {
     id: string;
     embedCode?: string;
+    label: string;
 }
 
 export interface CriticalEditionDocument {

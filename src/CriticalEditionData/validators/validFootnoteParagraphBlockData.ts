@@ -9,6 +9,7 @@ const validFootnoteParagraphBlockData: ValidatorFunction<FootnoteParagraphBlockD
     logger.log("Validating footnote data ", data);
     if (data.embedCode && !(typeof data.embedCode === "string")) { throw new Error("FootnoteParagraphBlockData requires .embedCode to be undefined or String") }
     if (!data.id || !(typeof data.id === "string")) { throw new Error("FootnoteParagraphBlockData requires .id String") }
+    if (!data.label || !(typeof data.label === "string")) { throw new Error("FootnoteParagraphBlockData requires .label String") }
 
     return data as FootnoteParagraphBlockData;
 

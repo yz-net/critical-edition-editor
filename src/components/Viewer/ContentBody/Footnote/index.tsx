@@ -4,9 +4,11 @@ import DebugLogger from "../../../../utils/DebugLogger";
 import styles from "./Footnote.module.css";
 
 const logger = new DebugLogger("Footnote: ");
+
 export function Footnote(props: { data: FootnoteParagraphBlockData }) {
   const [collapsed, setCollapsed] = useState<boolean>(false);
   const [height, setHeight] = useState<number>(-1);
+  const label = props.data.label;
 
   useEffect(() => {
     if (ref.current) {
@@ -104,12 +106,14 @@ export function Footnote(props: { data: FootnoteParagraphBlockData }) {
       <div className={styles.ButtonTray}>
         <button onClick={toggleCollapse}>{collapsed ? "+" : "-"}</button>
       </div>
-      <div
-        ref={ref}
-        className={styles.ContentArea}
-        // id={props.data.id}
-        dangerouslySetInnerHTML={{ __html: props.data.text }}
-      ></div>
+      <div ref={ref} className={styles.FootnoteTextGroup}>
+        <div className={styles.FootnoteLabel}>{label}</div>
+        <div
+          className={styles.FootnoteText}
+          // id={props.data.id}
+          dangerouslySetInnerHTML={{ __html: props.data.text }}
+        ></div>
+      </div>
     </div>
   );
 }

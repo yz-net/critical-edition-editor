@@ -3,6 +3,7 @@
     /* padding: 20px; */
     display: flex;
     flex-direction: column;
+    padding-bottom: 0.5em;
 }
 
 .ButtonTray{
@@ -11,7 +12,22 @@
     line-height: unset;
 }
 
-.ContentArea{
+/* .ContentArea{
     overflow: hidden;
+} */
+
+.FootnoteTextGroup {
+    display: flex;
+    overflow: hidden;
+    /* padding: 1em; */
+    box-sizing: border-box;
 }
 
+.FootnoteLabel {
+    /* font-weight: lighter; */
+    padding: 0 1em;
+}
+
+.FootnoteText {
+    padding-right: 1em;
+}
