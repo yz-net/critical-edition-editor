@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { start } from "repl";
-import { JsxEmit } from "typescript";
 import { FootnoteParagraphBlockData } from "../../../CriticalEditionData";
 import DebugLogger from "../../../utils/DebugLogger";
 import styles from "./Footnote.module.css";
