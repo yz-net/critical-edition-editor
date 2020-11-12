@@ -1,11 +1,16 @@
 .ControlButton {
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
     background-color: #efefef;
-    padding: 15px;
-    font-size: 19px;
+    margin: 1px;
+    border: 1px solid #555;
+    /* padding: 15px;
+    font-size: 19px; */
     color: #555;
     box-shadow: none;
     border-radius: 5px;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     cursor: pointer;
 }
 
@@ -13,4 +18,7 @@
 .ControlButton:active {
     background-color: #efefef;
     border-color: gray;
+
+    background-color: #999;
+    color: #efefef;
 }

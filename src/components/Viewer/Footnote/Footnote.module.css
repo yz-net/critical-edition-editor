@@ -1,4 +1,18 @@
 .Footnote {
     background-color: beige;
-    padding: 20px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
 }
+
+.ButtonTray{
+    display: flex;
+    justify-content: end;
+    line-height: unset;
+}
+
+.ContentArea{
+    border: 1px solid green;
+    overflow: hidden;
+}
+

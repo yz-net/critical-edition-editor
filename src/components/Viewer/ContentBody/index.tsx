@@ -17,6 +17,7 @@ interface ContentBodyProps {
   playing: boolean;
   playingBlock?: number;
 }
+
 export function ContentBody(props: ContentBodyProps): JSX.Element {
   try {
     validCriticalEditionDocumentData(props.documentData);
@@ -33,6 +34,7 @@ export function ContentBody(props: ContentBodyProps): JSX.Element {
             (blockData: CriticalEditionDocumentBlock, i) => {
               return (
                 <Block
+                  index={i + 1}
                   key={i}
                   playBlock={() => props.playBlock(i)}
                   stopPlaying={props.stopPlaying}

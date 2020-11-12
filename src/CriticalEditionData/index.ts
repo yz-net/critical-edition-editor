@@ -9,6 +9,7 @@ export interface BlockData {
 }
 
 export interface ParagraphBlockData extends BlockData {
+    id?: string;
     text: string;
 }
 
