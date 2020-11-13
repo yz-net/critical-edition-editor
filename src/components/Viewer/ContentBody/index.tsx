@@ -16,6 +16,7 @@ interface ContentBodyProps {
   stopPlaying: () => void;
   playing: boolean;
   playingBlock?: number;
+  // offset: number;
 }
 
 export function ContentBody(props: ContentBodyProps): JSX.Element {

@@ -2,9 +2,10 @@
     height: 40px;
     width: 40px;
     overflow: hidden;
-    background-color: #efefef;
+    background-color: white;
     margin: 1px;
-    border: 1px solid #555;
+    /* border: 1px solid #555; */
+    border: none;
     /* padding: 15px;
     font-size: 19px; */
     color: #555;
@@ -12,13 +13,20 @@
     border-radius: 5px;
     /* border: 1px solid transparent; */
     cursor: pointer;
+    /* border-bottom: 1px solid gray;
+    border-radius: 0px; */
+
 }
 
 .ControlButton:hover,
 .ControlButton:active {
-    background-color: #efefef;
+    background-color: white;
     border-color: gray;
 
-    background-color: #999;
-    color: #efefef;
+    /* background-color: #999; */
+    /* color: #efefef; */
+    /* fill: green; */
+
+    fill: orangered;
+    color: orangered;
 }
