@@ -21,7 +21,7 @@ const validCriticalEditionDocumentData: ValidatorFunction<CriticalEditionDocumen
         try {
             validBlockData(data.blocks[i]);
         } catch (e) {
-            console.warn("Invalid block", data.blocks[i])
+            logger.warn("Invalid block", data.blocks[i])
         }
     }
     return data as CriticalEditionDocument;

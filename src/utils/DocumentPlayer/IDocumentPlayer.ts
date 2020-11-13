@@ -1,4 +1,4 @@
-import DocumentReader from "../Document/Document";
+import DocumentReader from "../DocumentReader/DocumentReader";
 
 export type PlayStatus = "playing" | "stopped" | "finished";
 

@@ -1,37 +1,63 @@
 .ControlsWrapper {
-    border-right: 10px solid transparent;
-    flex: 0 0 100px;
+    /* border-right: 10px solid transparent; */
+    flex: 0 1 60px;
+    padding: 0 1em;
     visibility: hidden;
     transition: 1s border-color ease-in-out;
+
+    height: 0px;;
+    cursor: pointer;
 }
 
-.InFocus .ControlsWrapper,
-.Block:focus .ControlsWrapper,
-.Block:hover .ControlsWrapper {
+.Controls{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .InFocus .ControlsWrapper, */
+/* .Block:focus .ControlsWrapper */
+.Block:hover .ControlsWrapper 
+{
     visibility: unset;
 }
+
+.Block:focus{
+outline: none;
+}
+
+/* .Block:focus .BlockWrapper{
+    outline: medium
+} */
 
 .BlockWrapper {
     flex: auto;
     margin-left: 10px;
+
+    border-left: 10px solid transparent;
+    padding-left: 10px;
 }
 .Block {
     padding: 10px 0px;
     padding-left: 10px;
-    border-left: 10px solid transparent;
+    /* border-left: 10px solid transparent; */
     display: flex;
     line-height: 2em;
     font-size: 19px;
 }
-
+/* 
+.Block:focus .BlockWrapper,
 .Block:focus .ControlsWrapper {
     border-color: gray;
-}
+} */
 
+.InFocus.Block .BlockWrapper,
 .InFocus.Block .ControlsWrapper {
     border-color: lightblue;
 }
 
+.Block:hover .BlockWrapper,
 .Block:hover .ControlsWrapper {
     border-color: lightgray;
 }

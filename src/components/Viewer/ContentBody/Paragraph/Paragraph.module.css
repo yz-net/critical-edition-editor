@@ -1,0 +1,27 @@
+.Paragraph {
+    /* background-color: #efefef; */
+}
+
+.FootnoteLink {
+    /* background-color: #555; */
+    color: white;
+    color: #555;
+    border: 1px solid #555;
+    border-radius: 3px;
+    padding: 0 0.5em;
+    margin: 0 0.5em 0 0.1em;
+    text-decoration: none;
+    background-color: beige;
+    /* font-size: 12px;
+    line-height: 1em; */
+    /* box-shadow: 1px 1px 0px #999; */
+
+}
+
+.FootnoteLink:hover{
+    /* box-shadow: 4px 4px 0px #999; */
+    /* border-color:beige */
+    color: blue;
+    /* transition: color 1s; */
+
+}

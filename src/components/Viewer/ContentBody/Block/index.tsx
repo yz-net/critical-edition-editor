@@ -6,27 +6,37 @@ import {
 } from "../../../../CriticalEditionData";
 import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
 import DebugLogger from "../../../../utils/DebugLogger";
+import getFootnotes from "../../../../utils/getFootnotes";
 import htmlToText from "../../../../utils/htmlToText";
-import { Footnote } from "../../Footnote";
-import { Paragraph } from "../../Paragraph";
+import { Footnote } from "../Footnote";
+import { Paragraph } from "../Paragraph";
 import styles from "./Block.module.css";
+import CopyText from "./CopyText";
+import OpenFootnote from "./OpenFootnotes";
+import Permalink from "./Permalink";
 import PlayText from "./PlayText";
 
-const logger = new DebugLogger("Block");
+const logger = new DebugLogger("Block: ");
 
 export default function Block(props: {
+  index: number;
   blockData: CriticalEditionDocumentBlock;
   playBlock: () => void;
   stopPlaying: () => void;
   playing: boolean;
   inFocus: boolean;
+  expand?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const blockID = `${
+    (props.blockData.data as FootnoteParagraphBlockData).id ||
+    `p-${props.index}`
+  }`;
+
+  const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
+
   useEffect(() => {
-    logger.log("inFocus changed", props.inFocus);
     if (props.inFocus && ref.current) {
-      logger.log("infocus: Commence scroll");
-      logger.log(ref.current);
       ref.current.scrollIntoView({ behavior: "smooth" });
       ref.current.focus();
     }
@@ -35,14 +45,23 @@ export default function Block(props: {
   function Controls() {
     const html = (props.blockData.data as ParagraphBlockData).text;
     return (
-      <div>
+      <div className={styles.Controls}>
         {html ? (
-          <PlayText
-            stopPlaying={props.stopPlaying}
-            playing={props.playing}
-            playBlock={props.playBlock}
-            text={htmlToText(html)}
-          />
+          <React.Fragment>
+            <PlayText
+              stopPlaying={props.stopPlaying}
+              playing={props.playing}
+              playBlock={props.playBlock}
+              text={htmlToText(html)}
+            />
+            <Permalink blockID={blockID} />
+            <CopyText
+              text={(props.blockData.data as ParagraphBlockData).text}
+            />
+            {props.blockData.type === "paragraph" && footnotes.length > 0 ? (
+              <OpenFootnote footnoteIDs={footnotes} />
+            ) : null}
+          </React.Fragment>
         ) : null}
       </div>
     );
@@ -51,6 +70,8 @@ export default function Block(props: {
   function WrapBlock(inner: JSX.Element) {
     return (
       <div
+        // id={id || `p-${props.index}`}
+        id={blockID}
         ref={ref}
         tabIndex={0}
         className={`${styles.Block} ${props.inFocus ? styles.InFocus : null}`}
