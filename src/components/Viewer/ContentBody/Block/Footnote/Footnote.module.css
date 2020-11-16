@@ -6,9 +6,38 @@
     padding-bottom: 0.5em;
 }
 
-.ButtonTray{
+.NavButtonTray{
+    flex: 0 0 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.NavButtonTray button {
+    width: 40px;
+    height: 40px;
+    background-color: tan;
+    border: none;
+    color: white;
+    font-size: 20px;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+.NavButtonTray button:hover{
+    background-color: orangered;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.NavButtonTray button:disabled{
+    opacity: 0;
     display: none;
-    /* display: flex; */
+    width: 0px;
+}
+
+.ButtonTray{
+    /* display: none; */
+    display: flex;
     justify-content: flex-end;
     line-height: unset;
 }

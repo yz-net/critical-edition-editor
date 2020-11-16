@@ -119,7 +119,7 @@ class Viewer extends React.Component<ViewerProps> {
         {/* <div style={{ position: "fixed", bottom: 0 }}>
           Playing: {this.state.playingBlock}
         </div> */}
-        <div className={styles.HeaderAreaContainer}>
+        {/* <div className={styles.HeaderAreaContainer}>
           <HeaderArea
             height={this.state.headerHeight}
             title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
@@ -135,18 +135,57 @@ class Viewer extends React.Component<ViewerProps> {
               this.setState({ continuePlaying: !this.state.continuePlaying });
             }}
           />
+        </div> */}
+
+        <div className={styles.SplashTitleContainer}>
+          <div className={styles.SplashTitle}>
+            <div>
+              <h1>
+                {"Introduction to the testimony of Liubov’ Krasilovskaia"}
+              </h1>
+            </div>
+            <div>
+              <div className={styles.SplashMetaDivider}></div>
+              <div className={styles.SplashMeta}>by Author Name</div>
+              <div className={styles.SplashMeta}>January 1, 2021</div>
+            </div>
+          </div>
+          <div className={styles.SplashTitleTail}></div>
         </div>
+
+        <div className={styles.FixedTitleContainer}>
+          <div className={styles.FixedTitleContents}>
+            <HeaderArea
+              height={this.state.headerHeight}
+              title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
+              author={"Author Name"}
+              publicationDate={"January 1, 2020"}
+              continuousPlay={this.state.continuePlaying}
+              playing={this.state.playing === "playing"}
+              play={() => {
+                this.playBlock(this.state.playingBlock || 0);
+              }}
+              stop={this.stopPlaying}
+              toggleContinuousPlay={() => {
+                this.setState({ continuePlaying: !this.state.continuePlaying });
+              }}
+            />
+          </div>
+        </div>
+
         <div
           // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
           className={styles.ContentBodyContainer}
         >
-          <ContentBody
-            playingBlock={this.state.playingBlock}
-            playBlock={this.playBlock}
-            stopPlaying={this.stopPlaying}
-            playing={this.state.playing === "playing"}
-            documentData={this.state.document.document}
-          />
+          <div className={styles.ContentBodyContents}>
+            <ContentBody
+              playingBlock={this.state.playingBlock}
+              playBlock={this.playBlock}
+              stopPlaying={this.stopPlaying}
+              playing={this.state.playing === "playing"}
+              documentData={this.state.document.document}
+            />
+          </div>
         </div>
       </div>
     );

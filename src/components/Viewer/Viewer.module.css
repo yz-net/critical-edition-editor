@@ -4,11 +4,117 @@
 }
 
 .ContentBodyContainer {
+    position: relative;
     z-index: 10;
+    top: 25vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .HeaderAreaContainer {
+    /* z-index: 30; */
+    /* border-top: 1px solid white; */
+}
+
+.FixedTitleContainer {
+    border-top: 1px solid black;
+
     z-index: 30;
+}
+
+.SplashTitleContainer {
+    position: relative;
+    z-index: 40;
+}
+
+/* .HeaderAreaContainer {
     position: sticky;
     top: 0;
+} */
+
+.SplashTitleContainer{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: white;;
+    /* background-color: #222; */
+    /* box-shadow: 0px 0px 10px gray; */
+}
+
+.SplashTitleTail {
+    height: 100px;
+    background-color:white;
+    /* background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
+    /* background: linear-gradient(white 0%, transparent 100%); */
+        /* background: linear-gradient(transparent 0%, white 100%); */
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid black;
+
+}
+
+.SplashTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 1em;
+    color: #222;
+    height: 100%;
+    padding: 1em;
+
+}
+
+.SplashTitle h1{
+    font-weight: 900;
+    margin: 0px;
+    /* color: white; */
+    line-height: 1.4em;
+    font-size: 1em;
+}
+
+.SplashTitleContainer .SplashMetaDivider{
+    height: 10px;
+    background-color: #222;
+    /* width: 50%; */
+}
+
+.SplashTitleContainer .SplashMeta {
+    font-weight: lighter
+}
+
+@media screen and (max-width:400px){
+    .SplashTitle{
+        font-size: 30px;
+    }
+    
+}
+
+@media screen and (min-width:401px) and (max-width:600px){
+    .SplashTitle{
+        font-size: 40px;
+    }   
+}
+
+@media screen and (min-width:601px) and (max-width:800px){
+    .SplashTitle{
+        font-size: 50px;
+    }   
+}
+
+@media screen and (min-width:801px) and (max-width:1000px){
+    .SplashTitle{
+        font-size: 60px;
+    }   
+}
+
+@media screen and (min-width:1000px){
+    .SplashTitle{
+        font-size: 70px;
+    }   
+}
+
+.FixedTitleContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }

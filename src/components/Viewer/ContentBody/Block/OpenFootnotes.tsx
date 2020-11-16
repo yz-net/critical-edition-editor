@@ -5,6 +5,7 @@ import scrollToElementByID from "../../../../utils/scrollToElementByID";
 
 type PermalinkProps = {
   footnoteIDs: Array<string>;
+  footnoteCount: number;
 };
 export default function OpenFootnote(props: PermalinkProps) {
   return (
@@ -15,7 +16,8 @@ export default function OpenFootnote(props: PermalinkProps) {
       className={styles.ControlButton}
     >
       <FootnoteIcon />
-      <div>{props.footnoteIDs.length}</div>
+      {/* <div>{props.footnoteIDs.length}</div> */}
+      <div>{props.footnoteCount}</div>
     </button>
   );
 }
