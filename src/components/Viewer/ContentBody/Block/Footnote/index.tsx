@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FootnoteParagraphBlockData } from "../../../../CriticalEditionData";
-import DebugLogger from "../../../../utils/DebugLogger";
+import { FootnoteParagraphBlockData } from "../../../../../CriticalEditionData";
+import DebugLogger from "../../../../../utils/DebugLogger";
 import styles from "./Footnote.module.css";
 
 const logger = new DebugLogger("Footnote: ");
@@ -107,7 +107,9 @@ export function Footnote(props: { data: FootnoteParagraphBlockData }) {
         <button onClick={toggleCollapse}>{collapsed ? "+" : "-"}</button>
       </div>
       <div ref={ref} className={styles.FootnoteTextGroup}>
-        <div className={styles.FootnoteLabel}>{label}</div>
+        <div>
+          <div className={styles.FootnoteLabel}>{label}</div>
+        </div>
         <div
           className={styles.FootnoteText}
           // id={props.data.id}

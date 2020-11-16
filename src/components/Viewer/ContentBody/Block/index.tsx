@@ -8,8 +8,8 @@ import validBlockData from "../../../../CriticalEditionData/validators/validBloc
 import DebugLogger from "../../../../utils/DebugLogger";
 import getFootnotes from "../../../../utils/getFootnotes";
 import htmlToText from "../../../../utils/htmlToText";
-import { Footnote } from "../Footnote";
-import { Paragraph } from "../Paragraph";
+import { Footnote } from "./Footnote";
+import { Paragraph } from "./Paragraph";
 import styles from "./Block.module.css";
 import CopyText from "./CopyText";
 import OpenFootnote from "./OpenFootnotes";
@@ -74,10 +74,15 @@ export default function Block(props: {
         id={blockID}
         ref={ref}
         tabIndex={0}
-        className={`${styles.Block} ${props.inFocus ? styles.InFocus : null}`}
+        data-blocktype={props.blockData.type}
+        className={`Block ${styles.Block} ${
+          props.inFocus ? styles.InFocus : null
+        }`}
       >
         <div className={styles.ControlsWrapper}>
-          <Controls />
+          <div className={styles.ControlsFrame}>
+            <Controls />
+          </div>
         </div>
         <div className={styles.BlockWrapper}>{inner}</div>
       </div>

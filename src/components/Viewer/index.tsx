@@ -1,6 +1,6 @@
 import React from "react";
 import { ContentBody } from "./ContentBody";
-import ControlBar from "./ControlBar";
+// import ControlBar from "./HeaderArea/ControlBar";
 import DebugLogger from "../../utils/DebugLogger";
 import DocumentReader from "../../utils/DocumentReader/DocumentReader";
 import {
@@ -8,6 +8,8 @@ import {
   PlayStatus,
 } from "../../utils/DocumentPlayer/IDocumentPlayer";
 import SpeechSynthesisDocumentPlayer from "../../utils/DocumentPlayer/SpeechSynthesisDocumentPlayer";
+import HeaderArea from "./HeaderArea";
+import styles from "./Viewer.module.css";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -16,6 +18,7 @@ interface ViewerState {
   playing: PlayStatus;
   continuePlaying: boolean;
   playingBlock?: number;
+  headerHeight: number;
 }
 
 interface ViewerProps {
@@ -36,6 +39,7 @@ class Viewer extends React.Component<ViewerProps> {
     this.playStatusHandler = this.playStatusHandler.bind(this);
     this.playBlock = this.playBlock.bind(this);
     this.stopPlaying = this.stopPlaying.bind(this);
+    // this.handleScroll = this.handleScroll.bind(this);
 
     const emptyDocument: DocumentReader = new DocumentReader({
       document: { blocks: [] },
@@ -49,6 +53,7 @@ class Viewer extends React.Component<ViewerProps> {
         document: emptyDocument,
         playStatusHandler: this.playStatusHandler,
       }),
+      headerHeight: 200,
     };
   }
 
@@ -99,32 +104,50 @@ class Viewer extends React.Component<ViewerProps> {
       });
   }
 
+  // handleScroll(evt: React.UIEvent<HTMLDivElement, UIEvent>) {
+  //   console.log("scroll event", evt.currentTarget.scrollTop, typeof evt.target);
+  //   this.setState({ scrollPosition: evt.currentTarget.scrollTop });
+  // }
+
   render() {
     logger.log("Rendering with state", this.state);
     return (
-      <div className="Viewer">
-        <div style={{ position: "fixed", bottom: 0 }}>
+      <div
+        // onScroll={this.handleScroll}
+        className={styles.Viewer}
+      >
+        {/* <div style={{ position: "fixed", bottom: 0 }}>
           Playing: {this.state.playingBlock}
+        </div> */}
+        <div className={styles.HeaderAreaContainer}>
+          <HeaderArea
+            height={this.state.headerHeight}
+            title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
+            author={"Author Name"}
+            publicationDate={"January 1, 2020"}
+            continuousPlay={this.state.continuePlaying}
+            playing={this.state.playing === "playing"}
+            play={() => {
+              this.playBlock(this.state.playingBlock || 0);
+            }}
+            stop={this.stopPlaying}
+            toggleContinuousPlay={() => {
+              this.setState({ continuePlaying: !this.state.continuePlaying });
+            }}
+          />
         </div>
-        <ControlBar
-          title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
-          continuousPlay={this.state.continuePlaying}
-          playing={this.state.playing === "playing"}
-          play={() => {
-            this.playBlock(this.state.playingBlock || 0);
-          }}
-          stop={this.stopPlaying}
-          toggleContinuousPlay={() => {
-            this.setState({ continuePlaying: !this.state.continuePlaying });
-          }}
-        />
-        <ContentBody
-          playingBlock={this.state.playingBlock}
-          playBlock={this.playBlock}
-          stopPlaying={this.stopPlaying}
-          playing={this.state.playing === "playing"}
-          documentData={this.state.document.document}
-        />
+        <div
+          // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
+          className={styles.ContentBodyContainer}
+        >
+          <ContentBody
+            playingBlock={this.state.playingBlock}
+            playBlock={this.playBlock}
+            stopPlaying={this.stopPlaying}
+            playing={this.state.playing === "playing"}
+            documentData={this.state.document.document}
+          />
+        </div>
       </div>
     );
   }

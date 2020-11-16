@@ -15,7 +15,7 @@ export default function OpenFootnote(props: PermalinkProps) {
       className={styles.ControlButton}
     >
       <FootnoteIcon />
-      {props.footnoteIDs.length}
+      <div>{props.footnoteIDs.length}</div>
     </button>
   );
 }

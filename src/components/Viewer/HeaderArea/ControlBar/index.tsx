@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./ControlBar.module.css";
 
-interface ControlBarProps {
-  title?: string;
+export interface ControlBarProps {
+  // title?: string;
+  // author?: string;
+  // publicationDate?: string;
+  // thumbnailImgSrc?: string;
   playing: boolean;
   continuousPlay: boolean;
   play: () => void;
@@ -27,7 +30,7 @@ export default function ControlBar(props: ControlBarProps): JSX.Element {
         Continous Play: {props.continuousPlay ? "on" : "off"}
       </button>
 
-      <h1>{props.title}</h1>
+      {/* <h1>{props.title}</h1> */}
     </div>
   );
 }
