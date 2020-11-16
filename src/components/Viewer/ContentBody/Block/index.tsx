@@ -15,6 +15,7 @@ import CopyText from "./CopyText";
 import OpenFootnote from "./OpenFootnotes";
 import Permalink from "./Permalink";
 import PlayText from "./PlayText";
+import { useLocation } from "react-router-dom";
 
 const logger = new DebugLogger("Block: ");
 
@@ -26,6 +27,8 @@ export default function Block(props: {
   playing: boolean;
   inFocus: boolean;
   expand?: boolean;
+  nextFootnoteBlock?: FootnoteParagraphBlockData;
+  previousFootnoteBlock?: FootnoteParagraphBlockData;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const blockID = `${
@@ -59,7 +62,13 @@ export default function Block(props: {
               text={(props.blockData.data as ParagraphBlockData).text}
             />
             {props.blockData.type === "paragraph" && footnotes.length > 0 ? (
-              <OpenFootnote footnoteIDs={footnotes} />
+              // <OpenFootnote footnoteIDs={footnotes} />
+              <OpenFootnote
+                footnoteCount={footnotes.length}
+                footnoteIDs={
+                  props.nextFootnoteBlock ? [props.nextFootnoteBlock.id] : []
+                }
+              />
             ) : null}
           </React.Fragment>
         ) : null}
@@ -68,6 +77,11 @@ export default function Block(props: {
   }
 
   function WrapBlock(inner: JSX.Element) {
+    const location = useLocation();
+    const hide =
+      props.blockData.type === "footnoteParagraph" &&
+      location.hash.replace("#", "") !== blockID;
+
     return (
       <div
         // id={id || `p-${props.index}`}
@@ -75,9 +89,9 @@ export default function Block(props: {
         ref={ref}
         tabIndex={0}
         data-blocktype={props.blockData.type}
-        className={`Block ${styles.Block} ${
-          props.inFocus ? styles.InFocus : null
-        }`}
+        className={`Block ${hide ? "hidden" : ""} blocktype-${
+          props.blockData.type
+        } ${styles.Block} ${props.inFocus ? styles.InFocus : ""}`}
       >
         <div className={styles.ControlsWrapper}>
           <div className={styles.ControlsFrame}>
@@ -102,7 +116,11 @@ export default function Block(props: {
   }
   if (props.blockData.type.toLocaleLowerCase().trim() === "footnoteparagraph") {
     return WrapBlock(
-      <Footnote data={props.blockData.data as FootnoteParagraphBlockData} />
+      <Footnote
+        nextFootnoteBlock={props.nextFootnoteBlock}
+        previousFootnoteBlock={props.previousFootnoteBlock}
+        data={props.blockData.data as FootnoteParagraphBlockData}
+      />
     );
   }
 
