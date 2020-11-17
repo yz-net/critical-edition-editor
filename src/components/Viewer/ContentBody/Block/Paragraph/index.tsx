@@ -6,9 +6,9 @@ import styles from "./Paragraph.module.css";
 import { ReactComponent as FootnoteIcon } from "../../../svg/footnote_icon.svg";
 import { renderToString } from "react-dom/server";
 import scrollToElementByID from "../../../../../utils/scrollToElementByID";
-import DebugLogger from "../../../../../utils/DebugLogger";
+// import DebugLogger from "../../../../../utils/DebugLogger";
 
-const logger = new DebugLogger("Paragraph: ");
+// const logger = new DebugLogger("Paragraph: ");
 
 export function Paragraph(props: { data: ParagraphBlockData }) {
   let paragraphData: ParagraphBlockData;
