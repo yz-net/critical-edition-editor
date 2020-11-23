@@ -32,12 +32,12 @@
   }
 } */
 
-.Block.blocktype-paragraph:first-child ::first-letter{
-  /* color:red; */
+/* .Block.blocktype-paragraph:first-child ::first-letter{
+  /* color:red; 
   float: left;
   font-size: 200px;
   padding-top: 4px;
   padding-right: 8px;
   font-weight: 900;
   color: #222;
-}
+} */
