@@ -28,27 +28,33 @@ function MetaItem(props: { label?: string; value?: string }) {
 }
 
 export default function HeaderArea(props: HeaderAreaProps) {
+  const { author, publicationDate } = props;
   return (
-    <header
-      // style={{ height: props.height }}
-
-      className={`${props.collapse ? styles.Collapse : ""} ${
-        styles.HeaderArea
-      }`}
-    >
-      <div className={styles.ControlsContainer}>
-        <ControlBar {...props} />
-      </div>
-      <div className={`${styles.MetaContainer}`}>
-        <h1 className={styles.Title}>{props.title}</h1>
-        {props.collapse === true ? null : (
-          <div className={styles.MetaArea}>
-            <MetaItem value={props.author} />
-            <MetaItem label={"Published"} value={props.publicationDate} />
-          </div>
-        )}
-      </div>
-      <div className={styles.ThumbnailContainer}>Thumbnail</div>
+    <header>
+      <h3>
+        {author}, {publicationDate}
+      </h3>
     </header>
+    // <header
+    //   // style={{ height: props.height }}
+
+    //   className={`${props.collapse ? styles.Collapse : ""} ${
+    //     styles.HeaderArea
+    //   }`}
+    // >
+    //   <div className={styles.ControlsContainer}>
+    //     <ControlBar {...props} />
+    //   </div>
+    //   <div className={`${styles.MetaContainer}`}>
+    //     <h1 className={styles.Title}>{props.title}</h1>
+    //     {props.collapse === true ? null : (
+    //       <div className={styles.MetaArea}>
+    //         <MetaItem value={props.author} />
+    //         <MetaItem label={"Published"} value={props.publicationDate} />
+    //       </div>
+    //     )}
+    //   </div>
+    //   <div className={styles.ThumbnailContainer}>Thumbnail</div>
+    // </header>
   );
 }

@@ -13,13 +13,24 @@
 }
 
 .HeaderAreaContainer {
-    /* z-index: 30; */
-    /* border-top: 1px solid white; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    border-top: 1px solid white;
+    background-color: white;
+    /* box-shadow: 0px 0px 6px #999; */
+    height: 22px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #222;
 }
 
 .FixedTitleContainer {
-    border-top: 1px solid black;
-
+    /* border-top: 1px solid black; */
     z-index: 30;
 }
 
@@ -42,15 +53,17 @@
 }
 
 .SplashTitleTail {
-    height: 100px;
-    background-color:white;
+    height: 80px;
+    /* background-color:white; */
     /* background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
     /* background: linear-gradient(white 0%, transparent 100%); */
         /* background: linear-gradient(transparent 0%, white 100%); */
     /* background: linear-gradient(45deg, transparent 0%, white 100%); */
 
     /* border-top: 1px solid black; */
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+
+    background: linear-gradient(white 0%, transparent 100%)
 
 }
 

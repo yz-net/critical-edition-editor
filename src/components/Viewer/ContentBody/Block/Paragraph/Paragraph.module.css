@@ -1,6 +1,7 @@
 .Paragraph {
     /* background-color: #efefef; */
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 button.FootnoteLink{
@@ -9,6 +10,7 @@ button.FootnoteLink{
 }
 
 .FootnoteLink {
+    cursor: pointer;
     /* background-color: #555; */
     color: white;
     color: teal;

@@ -119,7 +119,7 @@ class Viewer extends React.Component<ViewerProps> {
         {/* <div style={{ position: "fixed", bottom: 0 }}>
           Playing: {this.state.playingBlock}
         </div> */}
-        {/* <div className={styles.HeaderAreaContainer}>
+        <div className={styles.HeaderAreaContainer}>
           <HeaderArea
             height={this.state.headerHeight}
             title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
@@ -135,7 +135,7 @@ class Viewer extends React.Component<ViewerProps> {
               this.setState({ continuePlaying: !this.state.continuePlaying });
             }}
           />
-        </div> */}
+        </div>
 
         <div className={styles.SplashTitleContainer}>
           <div className={styles.SplashTitle}>
@@ -155,7 +155,7 @@ class Viewer extends React.Component<ViewerProps> {
 
         <div className={styles.FixedTitleContainer}>
           <div className={styles.FixedTitleContents}>
-            <HeaderArea
+            {/* <HeaderArea
               height={this.state.headerHeight}
               title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
               author={"Author Name"}
@@ -169,7 +169,7 @@ class Viewer extends React.Component<ViewerProps> {
               toggleContinuousPlay={() => {
                 this.setState({ continuePlaying: !this.state.continuePlaying });
               }}
-            />
+            /> */}
           </div>
         </div>
 
