@@ -9,6 +9,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import DebugLogger from "./utils/DebugLogger";
+import "./App.css";
+
 const essays: { [essayID: string]: { title: string; essayPath: string } } = {
   krasilovskaia: {
     title: "Introduction to the testimony of Liubov’ Krasilovskaia",
