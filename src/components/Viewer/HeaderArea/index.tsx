@@ -1,6 +1,6 @@
-import ControlBar, { ControlBarProps } from "./ControlBar";
+import { ControlBarProps } from "./ControlBar";
 import React from "react";
-import styles from "./HeaderArea.module.css";
+// import styles from "./HeaderArea.module.css";
 
 interface HeaderAreaProps extends ControlBarProps {
   title?: string;
@@ -11,21 +11,21 @@ interface HeaderAreaProps extends ControlBarProps {
   collapse?: boolean;
 }
 
-function MetaItem(props: { label?: string; value?: string }) {
-  if (props.value === undefined) {
-    return null;
-  }
-  return (
-    <div className={styles.MetaItem}>
-      {props.label ? (
-        <React.Fragment>
-          <span className={styles.MetaLabel}>{props.label}</span>{" "}
-        </React.Fragment>
-      ) : null}
-      <span className={styles.MetaValue}>{props.value}</span>
-    </div>
-  );
-}
+// function MetaItem(props: { label?: string; value?: string }) {
+//   if (props.value === undefined) {
+//     return null;
+//   }
+//   return (
+//     <div className={styles.MetaItem}>
+//       {props.label ? (
+//         <React.Fragment>
+//           <span className={styles.MetaLabel}>{props.label}</span>{" "}
+//         </React.Fragment>
+//       ) : null}
+//       <span className={styles.MetaValue}>{props.value}</span>
+//     </div>
+//   );
+// }
 
 export default function HeaderArea(props: HeaderAreaProps) {
   const { author, publicationDate } = props;

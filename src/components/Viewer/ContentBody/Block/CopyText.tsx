@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ControlButtons.module.css";
+// import styles from "./ControlButtons.module.css";
 import { ReactComponent as CopyIcon } from "../../svg/copy_icon.svg";
 import ControlButton from "../../../common/ControlButton";
 
