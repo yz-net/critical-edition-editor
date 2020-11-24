@@ -119,6 +119,7 @@ class Viewer extends React.Component<ViewerProps> {
         {/* <div style={{ position: "fixed", bottom: 0 }}>
           Playing: {this.state.playingBlock}
         </div> */}
+
         <div className={styles.HeaderAreaContainer}>
           <HeaderArea
             height={this.state.headerHeight}
@@ -138,6 +139,12 @@ class Viewer extends React.Component<ViewerProps> {
         </div>
 
         <div className={styles.SplashTitleContainer}>
+          <div className={styles.SplashBackgroundVideoContainer}>
+            <video muted loop autoPlay className={styles.SplashBackgroundVideo}>
+              <source src="https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/web-liubov-loop.mov"></source>
+            </video>
+          </div>
+
           <div className={styles.SplashTitle}>
             <div>
               <h1>

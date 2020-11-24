@@ -4,9 +4,10 @@
 }
 
 .ContentBodyContainer {
+    background-color: white;;
     position: relative;
     z-index: 10;
-    top: 25vh;
+    top: 33vh;
     left: 0;
     bottom: 0;
     right: 0;
@@ -39,21 +40,48 @@
     z-index: 40;
 }
 
+
 /* .HeaderAreaContainer {
     position: sticky;
     top: 0;
 } */
 
 .SplashTitleContainer{
+    position: relative;
     height: 100vh;
+    overflow: hidden;
     box-sizing: border-box;
-    background-color: white;;
+    /* background-color: white;; */
     /* background-color: #222; */
     /* box-shadow: 0px 0px 10px gray; */
 }
 
+.SplashBackgroundVideoContainer {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+
+}
+
+.SplashBackgroundVideo {
+    width: 200%;
+    height: 200%;
+}
+
+
 .SplashTitleTail {
     height: 80px;
+    background: white;
     /* background-color:white; */
     /* background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
     /* background: linear-gradient(white 0%, transparent 100%); */
@@ -68,13 +96,17 @@
 }
 
 .SplashTitle {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 1em;
-    color: #222;
+    /* margin: 0 1em; */
+    /* color: #222; */
+    color: white;
     height: 100%;
     padding: 1em;
+    background-color: rgba(0,0,0,0.75)
 
 }
 
@@ -88,7 +120,7 @@
 
 .SplashTitleContainer .SplashMetaDivider{
     height: 10px;
-    background-color: #222;
+    background-color: white;
     /* width: 50%; */
 }
 
