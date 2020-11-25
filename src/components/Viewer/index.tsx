@@ -140,7 +140,13 @@ class Viewer extends React.Component<ViewerProps> {
 
         <div className={styles.SplashTitleContainer}>
           <div className={styles.SplashBackgroundVideoContainer}>
-            <video muted loop autoPlay className={styles.SplashBackgroundVideo}>
+            <video
+              playsInline
+              muted
+              loop
+              autoPlay
+              className={styles.SplashBackgroundVideo}
+            >
               <source src="https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/web-liubov-loop.mov"></source>
             </video>
           </div>
