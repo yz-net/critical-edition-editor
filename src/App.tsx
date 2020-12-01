@@ -14,7 +14,7 @@ import "./App.css";
 const essays: { [essayID: string]: { title: string; essayPath: string } } = {
   krasilovskaia: {
     title: "Introduction to the testimony of Liubov’ Krasilovskaia",
-    essayPath: "/data/with-delimiter.json",
+    essayPath: "/data/with-blockquotes.json",
   },
 };
 

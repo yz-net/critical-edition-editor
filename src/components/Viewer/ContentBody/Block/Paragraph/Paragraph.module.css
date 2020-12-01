@@ -4,6 +4,14 @@
     padding-right: 10px;
 }
 
+.Paragraph[data-paragraph-type="blockquote"]{
+
+    padding: 1em 2em;
+    font-style: italic;
+    background-color: #efefef;
+    border-radius: 3px;
+}
+
 button.FootnoteLink{
     background-color: transparent;
     border: none;

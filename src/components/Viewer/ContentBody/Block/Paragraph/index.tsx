@@ -80,6 +80,7 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
   return (
     <div
       ref={ref}
+      data-paragraph-type={paragraphData.paragraphType || "paragraph"}
       className={styles.Paragraph}
       dangerouslySetInnerHTML={{ __html: paragraphData.text }}
     ></div>
