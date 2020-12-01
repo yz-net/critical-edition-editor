@@ -92,6 +92,9 @@ outline: none;
     border-color: orangered;
 }
 
-
-
-
+.Delimiter {
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: .3em;
+    color: #222;
+}

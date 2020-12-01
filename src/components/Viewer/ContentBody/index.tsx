@@ -38,18 +38,6 @@ export function ContentBody(props: ContentBodyProps): JSX.Element {
               i,
               blocks: Array<CriticalEditionDocumentBlock>
             ) => {
-              // const hasNextBlock = i + 1 < blocks.length;
-              // let nextBlock: CriticalEditionDocumentBlock | undefined;
-              // let nextBlockIsFootnote: boolean = false;
-              // let nextFootnoteBlock: FootnoteParagraphBlockData | undefined;
-              // if (hasNextBlock) {
-              //   nextBlock = blocks[i + 1];
-              //   nextBlockIsFootnote = nextBlock.type === "footnoteParagraph";
-              //   if (nextBlockIsFootnote)
-              //     nextFootnoteBlock = nextBlock.data as FootnoteParagraphBlockData;
-              // }
-
-              // let prevFootnoteBlock: FootnoteParagraphBlockData | undefined;
               const getFootnoteBlock = (
                 index: number
               ): FootnoteParagraphBlockData | undefined => {

@@ -38,6 +38,7 @@ export default function Block(props: {
 
   const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
 
+  logger.log("BLOCK TYPE:", props.blockData.type);
   useEffect(() => {
     if (props.inFocus && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
@@ -84,7 +85,6 @@ export default function Block(props: {
 
     return (
       <div
-        // id={id || `p-${props.index}`}
         id={blockID}
         ref={ref}
         tabIndex={0}
@@ -103,13 +103,22 @@ export default function Block(props: {
     );
   }
 
+  if (props.blockData.type.toLowerCase().trim() === "delimiter") {
+    return (
+      <div className={styles.Delimiter}>
+        <div className={styles.DelimiterInner}>***</div>
+      </div>
+    );
+  }
+
   try {
     validBlockData(props.blockData);
   } catch (e) {
     logger.warn("Error validating block " + String(e), Block);
     return null;
   }
-  if (props.blockData.type.toLocaleLowerCase().trim() === "paragraph") {
+
+  if (props.blockData.type.toLowerCase().trim() === "paragraph") {
     return WrapBlock(
       <Paragraph data={props.blockData.data as ParagraphBlockData} />
     );
