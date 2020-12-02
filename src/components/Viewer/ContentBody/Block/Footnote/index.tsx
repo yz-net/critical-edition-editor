@@ -3,6 +3,8 @@ import { FootnoteParagraphBlockData } from "../../../../../CriticalEditionData";
 // import DebugLogger from "../../../../../utils/DebugLogger";
 import scrollToElementByID from "../../../../../utils/scrollToElementByID";
 import styles from "./Footnote.module.css";
+import { ReactComponent as RightArrow } from "./right-arrow.svg";
+import { ReactComponent as LeftArrow } from "./left-arrow.svg";
 
 // const logger = new DebugLogger("Footnote: ");
 
@@ -116,7 +118,7 @@ export function Footnote(props: FootnoteProps) {
         }
       }}
     >
-      ◀︎
+      <LeftArrow />
     </button>
   ) : (
     <button disabled></button>
@@ -130,7 +132,7 @@ export function Footnote(props: FootnoteProps) {
         }
       }}
     >
-      ▶
+      <RightArrow />
     </button>
   ) : (
     <button disabled></button>
@@ -146,11 +148,16 @@ export function Footnote(props: FootnoteProps) {
         <div>
           <div className={styles.FootnoteLabel}>{label}</div>
         </div>
-        <div
-          className={styles.FootnoteText}
-          // id={props.data.id}
-          dangerouslySetInnerHTML={{ __html: props.data.text }}
-        ></div>
+        <div className={styles.FootnoteText}>
+          <div
+            className={styles.EmbedCode}
+            dangerouslySetInnerHTML={{ __html: props.data.embedCode || "" }}
+          ></div>
+          <div
+            // id={props.data.id}
+            dangerouslySetInnerHTML={{ __html: props.data.text }}
+          ></div>
+        </div>
         <div className={styles.NavButtonTray}>
           {prevButton}
           {nextButton}
