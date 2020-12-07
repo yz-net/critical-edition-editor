@@ -10,6 +10,7 @@ import {
 import SpeechSynthesisDocumentPlayer from "../../utils/DocumentPlayer/SpeechSynthesisDocumentPlayer";
 import HeaderArea from "./HeaderArea";
 import styles from "./Viewer.module.css";
+import { EssayDataEntry } from "../../App";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -22,9 +23,9 @@ interface ViewerState {
 }
 
 interface ViewerProps {
+  essay: EssayDataEntry;
   essayPath: string;
   hash: string;
-  //   essays: Array<{ id: string; essayPath: string }>;
 }
 
 class Viewer extends React.Component<ViewerProps> {
@@ -123,9 +124,9 @@ class Viewer extends React.Component<ViewerProps> {
         <div className={styles.HeaderAreaContainer}>
           <HeaderArea
             height={this.state.headerHeight}
-            title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
-            author={"Author Name"}
-            publicationDate={"January 1, 2020"}
+            title={this.props.essay.title}
+            author={this.props.essay.author}
+            publicationDate={this.props.essay.publicationDate}
             continuousPlay={this.state.continuePlaying}
             playing={this.state.playing === "playing"}
             play={() => {
@@ -141,20 +142,23 @@ class Viewer extends React.Component<ViewerProps> {
         <div className={styles.SplashTitleContainer}>
           <div className={styles.SplashBackgroundVideoContainer}>
             <video
+              poster={this.props.essay.posterPath}
               playsInline
               muted
               loop
               autoPlay
               className={styles.SplashBackgroundVideo}
             >
-              <source src="https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/web-liubov-loop.mov"></source>
+              <source src={this.props.essay.videoPath}></source>
             </video>
           </div>
 
           <div className={styles.SplashTitle}>
             <div>
               <h1>
-                {"Introduction to the testimony of Liubov’ Krasilovskaia"}
+                <small>{this.props.essay.supertitle}</small>
+                <br />
+                {this.props.essay.title}
               </h1>
             </div>
             <div>

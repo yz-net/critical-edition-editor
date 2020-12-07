@@ -11,10 +11,34 @@ import {
 import DebugLogger from "./utils/DebugLogger";
 import "./App.css";
 
-const essays: { [essayID: string]: { title: string; essayPath: string } } = {
+export interface EssayDataEntry {
+  supertitle?: string;
+  title: string;
+  essayPath: string;
+  author: string;
+  posterPath?: string;
+  videoPath?: string;
+  publicationDate: string;
+}
+
+const essays: {
+  [essayID: string]: EssayDataEntry;
+} = {
   krasilovskaia: {
-    title: "Introduction to the testimony of Liubov’ Krasilovskaia",
+    supertitle: "Introduction to the testimony of",
+    title: "Liubov’ Krasilovskaia",
+    author: "Author",
+    videoPath:
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/web-liubov-loop.mov",
     essayPath: "/data/intro-hvt-3280.json",
+    publicationDate: "February 1, 2021",
+  },
+  saraffian: {
+    supertitle: "Introduction to the testimony of",
+    title: "Martha Saraffian",
+    author: "Nikolaus Hagen",
+    essayPath: "/data/intro-hvt-0237.json",
+    publicationDate: "February 1, 2021",
   },
 };
 
@@ -30,7 +54,7 @@ function ViewerWrapper() {
   if (!params.essayID) {
     return <BadViewRequest />;
   }
-  const essay: { essayPath: string } | undefined = essays[essayID];
+  const essay: EssayDataEntry | undefined = essays[essayID];
   if (!essay) {
     return <div>NULL ESSAY</div>;
   }
@@ -38,7 +62,11 @@ function ViewerWrapper() {
   return (
     <Router>
       <Route path="/">
-        <Viewer hash={location.hash} essayPath={essay.essayPath} />
+        <Viewer
+          essay={essay}
+          hash={location.hash}
+          essayPath={essay.essayPath}
+        />
       </Route>
     </Router>
   );
