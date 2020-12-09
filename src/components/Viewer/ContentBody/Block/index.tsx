@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import {
   CriticalEditionDocumentBlock,
   FootnoteParagraphBlockData,
+  HeaderBlockData,
   ParagraphBlockData,
 } from "../../../../CriticalEditionData";
 import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
@@ -109,6 +110,19 @@ export default function Block(props: {
         <div className={styles.DelimiterInner}>***</div>
       </div>
     );
+  }
+
+  if (props.blockData.type.toLowerCase().trim() == "header") {
+    const data = props.blockData.data as HeaderBlockData;
+    const HeaderTag = "h" + String(data.level); //`h${data.level}`;
+    const inner = React.createElement(
+      `h${data.level}`,
+      {
+        foo: "bar",
+      },
+      `${data.text}`
+    );
+    return WrapBlock(<div className={styles.Header}>{inner}</div>);
   }
 
   try {

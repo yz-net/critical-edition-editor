@@ -8,6 +8,12 @@ export interface BlockData {
 
 }
 
+export interface HeaderBlockData {
+    text: string
+    level: 1 | 2 | 3 | 4 | 5 | 6
+
+}
+
 export interface ParagraphBlockData extends BlockData {
     paragraphType: "blockquote" | "paragraph"
     id?: string;
