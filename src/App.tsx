@@ -47,6 +47,13 @@ const essays: {
     essayPath: "/data/intro-hvt-2033.json",
     publicationDate: "February 1, 2021",
   },
+  frei: {
+    supertitle: "Introduction to the testimony of",
+    title: "Hans Frei",
+    author: "Author Name",
+    essayPath: "/data/intro-hvt-0170.json",
+    publicationDate: "February 1, 2021",
+  },
 };
 
 const logger = new DebugLogger("App: ");
