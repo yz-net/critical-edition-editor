@@ -40,6 +40,13 @@ const essays: {
     essayPath: "/data/intro-hvt-0237.json",
     publicationDate: "February 1, 2021",
   },
+  fox: {
+    supertitle: "Introduction to the testimony of",
+    title: "Esther Fox",
+    author: "Author Name",
+    essayPath: "/data/intro-hvt-2033.json",
+    publicationDate: "February 1, 2021",
+  },
 };
 
 const logger = new DebugLogger("App: ");
