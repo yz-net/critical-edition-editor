@@ -112,9 +112,8 @@ export default function Block(props: {
     );
   }
 
-  if (props.blockData.type.toLowerCase().trim() == "header") {
+  if (props.blockData.type.toLowerCase().trim() === "header") {
     const data = props.blockData.data as HeaderBlockData;
-    const HeaderTag = "h" + String(data.level); //`h${data.level}`;
     const inner = React.createElement(
       `h${data.level}`,
       {
