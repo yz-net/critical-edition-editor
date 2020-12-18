@@ -54,6 +54,29 @@ const essays: {
     essayPath: "/data/intro-hvt-0170.json",
     publicationDate: "February 1, 2021",
   },
+  zawistowska: {
+    supertitle: "Introduction to the testimony of",
+    title: "Władysława Zawistowska",
+    author: "Paweł Machcewicz",
+    essayPath: "/data/intro-hvt-3169.json",
+    publicationDate: "February 1, 2021",
+  },
+  zwolinska: {
+    supertitle: "Introduction to the testimony of",
+    title: "Helena Balicka-Zwolińska",
+    author: "Anna Machcewicz",
+    essayPath: "/data/intro-hvt-3164.json",
+    publicationDate: "February 1, 2021",
+  },
+  riegner: {
+    supertitle: "Introduction to the testimony of",
+    title: "Gerhart M. Riegner",
+    author: "Gil Rubin",
+    essayPath: "/data/intro-hvt-0764.json",
+    videoPath:
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/hvt-0764-background-loop.mp4",
+    publicationDate: "February 1, 2021",
+  },
 };
 
 const logger = new DebugLogger("App: ");
