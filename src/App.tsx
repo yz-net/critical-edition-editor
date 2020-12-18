@@ -26,8 +26,8 @@ const essays: {
 } = {
   krasilovskaia: {
     supertitle: "Introduction to the testimony of",
-    title: "Liubov’ Krasilovskaia",
-    author: "Author",
+    title: "Liubov’ Naumovna Krasilovskaia",
+    author: "Sarah Garibova",
     videoPath:
       "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/web-liubov-loop.mov",
     essayPath: "/data/intro-hvt-3280.json",
@@ -43,14 +43,14 @@ const essays: {
   fox: {
     supertitle: "Introduction to the testimony of",
     title: "Esther Fox",
-    author: "Author Name",
+    author: "Sari Siegel",
     essayPath: "/data/intro-hvt-2033.json",
     publicationDate: "February 1, 2021",
   },
   frei: {
     supertitle: "Introduction to the testimony of",
     title: "Hans Frei",
-    author: "Author Name",
+    author: "Ion Popa",
     essayPath: "/data/intro-hvt-0170.json",
     publicationDate: "February 1, 2021",
   },

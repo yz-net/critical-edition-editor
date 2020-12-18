@@ -163,7 +163,9 @@ class Viewer extends React.Component<ViewerProps> {
             </div>
             <div>
               <div className={styles.SplashMetaDivider}></div>
-              <div className={styles.SplashMeta}>by Author Name</div>
+              <div className={styles.SplashMeta}>
+                by {this.props.essay.author}
+              </div>
               <div className={styles.SplashMeta}>January 1, 2021</div>
             </div>
           </div>
