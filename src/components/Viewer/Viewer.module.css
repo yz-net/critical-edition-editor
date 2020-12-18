@@ -74,6 +74,7 @@
 }
 
 .SplashBackgroundVideo {
+    object-fit: cover;
     width: 200%;
     height: 200%;
 }
@@ -106,7 +107,7 @@
     color: white;
     height: 100%;
     padding: 1em;
-    background-color: rgba(0,0,0,0.75)
+    background-color: rgba(0,0,0,0.50)
 
 }
 
