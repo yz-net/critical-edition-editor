@@ -1,0 +1,22 @@
+.EssayIndexItem{
+    margin: 6px 0px;
+    
+    display: flex;
+}
+
+.EssayIndexItem:hover{
+    background-color: #efefef;
+}
+
+.ThumbnailArea {
+    flex: 0 0 320px;
+    overflow: hidden;
+}
+
+.ThumbnailArea video {
+    max-width: 100%;
+}
+
+.TextArea {
+    flex: 1 1 1;
+}

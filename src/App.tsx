@@ -4,12 +4,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useParams,
   useLocation,
 } from "react-router-dom";
 import DebugLogger from "./utils/DebugLogger";
 import "./App.css";
+import EssayIndexItem from "./components/EssayIndexItem";
 
 export interface EssayDataEntry {
   supertitle?: string;
@@ -38,6 +38,10 @@ const essays: {
     title: "Martha Saraffian",
     author: "Nikolaus Hagen",
     essayPath: "/data/intro-hvt-0237.json",
+    posterPath:
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/background.png",
+    videoPath:
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/background-loop.mp4",
     publicationDate: "February 1, 2021",
   },
   fox: {
@@ -52,6 +56,10 @@ const essays: {
     title: "Hans Frei",
     author: "Ion Popa",
     essayPath: "/data/intro-hvt-0170.json",
+    posterPath:
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background.png",
+    videoPath:
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background-loop.mp4",
     publicationDate: "February 1, 2021",
   },
   zawistowska: {
@@ -73,6 +81,8 @@ const essays: {
     title: "Gerhart M. Riegner",
     author: "Gil Rubin",
     essayPath: "/data/intro-hvt-0764.json",
+    posterPath:
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0764/background.png",
     videoPath:
       "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/hvt-0764-background-loop.mp4",
     publicationDate: "February 1, 2021",
@@ -122,17 +132,12 @@ export default function App() {
         </Route>
         <Route path="/">
           {Object.keys(essays).map((essayID: string, i: number) => {
-            const essay: { title: string; essayPath: string } | undefined =
-              essays[essayID];
+            const essay: EssayDataEntry = essays[essayID];
             if (!essay) {
               logger.warn("bad essay id: " + essayID);
               return null;
             }
-            return (
-              <div key={i}>
-                <Link to={`/essay/${essayID}`}>{essay.title}</Link>
-              </div>
-            );
+            return <EssayIndexItem essayID={essayID} key={i} essay={essay} />;
           })}
         </Route>
       </Switch>
