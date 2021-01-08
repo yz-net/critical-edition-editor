@@ -10,7 +10,7 @@ import {
 import SpeechSynthesisDocumentPlayer from "../../utils/DocumentPlayer/SpeechSynthesisDocumentPlayer";
 import HeaderArea from "./HeaderArea";
 import styles from "./Viewer.module.css";
-import { EssayDataEntry } from "../../App";
+import { EssayDataEntry } from "../../EssayData";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {

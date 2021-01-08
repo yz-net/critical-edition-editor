@@ -10,13 +10,24 @@
 
 .ThumbnailArea {
     flex: 0 0 320px;
-    overflow: hidden;
-}
 
-.ThumbnailArea video {
-    max-width: 100%;
 }
 
 .TextArea {
     flex: 1 1 1;
+}
+
+.ThumbnailArea {
+    overflow: hidden;
+}
+
+.ThumbnailArea video {
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.TextArea {
+    padding: 0 1em;
 }

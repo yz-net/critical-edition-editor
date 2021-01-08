@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { EssayDataEntry } from "../../App";
+import { EssayDataEntry } from "../../EssayData";
 import styles from "./EssayIndexItem.module.css";
 
 export interface EssayIndexItemProps {
@@ -28,11 +28,13 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
             <source src={props.essay.videoPath}></source>
           </video>
         </div>
-        <h3>
-          <small>{essay.supertitle ? essay.supertitle : null}</small>
-          <br />
-          {essay.title}
-        </h3>
+        <div className={styles.TextArea}>
+          <h3>
+            <small>{essay.supertitle ? essay.supertitle : null}</small>
+            <br />
+            {essay.title}
+          </h3>
+        </div>
       </div>
     </Link>
   );
