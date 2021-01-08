@@ -29,11 +29,17 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
           </video>
         </div>
         <div className={styles.TextArea}>
-          <h3>
-            <small>{essay.supertitle ? essay.supertitle : null}</small>
-            <br />
-            {essay.title}
-          </h3>
+          <div className={styles.TitleContainer}>
+            <h3>
+              <small>{essay.supertitle ? essay.supertitle : null}</small>
+              <br />
+              {essay.title}
+            </h3>
+          </div>
+          <div className={styles.MetaContainer}>
+            <div className={styles.MetaItem}>by {essay.author}</div>
+            <div className={styles.MetaItem}>{essay.publicationDate}</div>
+          </div>
         </div>
       </div>
     </Link>
