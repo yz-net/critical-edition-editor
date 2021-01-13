@@ -37,6 +37,9 @@ export const essays: {
         author: "Sari Siegel",
         essayPath: "/data/intro-hvt-2033.json",
         publicationDate: "February 1, 2021",
+        videoPath:
+            "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/2033/background-loop.mp4",
+
     },
     frei: {
         supertitle: "Introduction to the testimony of",
@@ -55,6 +58,9 @@ export const essays: {
         author: "Paweł Machcewicz",
         essayPath: "/data/intro-hvt-3169.json",
         publicationDate: "February 1, 2021",
+        videoPath:
+            "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3169/background-loop.mp4",
+
     },
     zwolinska: {
         supertitle: "Introduction to the testimony of",
@@ -62,6 +68,9 @@ export const essays: {
         author: "Anna Machcewicz",
         essayPath: "/data/intro-hvt-3164.json",
         publicationDate: "February 1, 2021",
+        videoPath:
+            "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3164/background-loop.mp4",
+
     },
     riegner: {
         supertitle: "Introduction to the testimony of",
