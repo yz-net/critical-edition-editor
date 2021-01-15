@@ -1,33 +1,57 @@
-.EssayIndexItem{
-    margin: 6px 0px;
-    
-    display: flex;
+.EssayIndexItem {
+  margin: 6px 0px;
+
+  display: flex;
 }
 
-.EssayIndexItem:hover{
-    background-color: #efefef;
-}
+/* .EssayIndexItem:hover {
+  background-color: #efefef;
+} */
 
 .ThumbnailArea {
-    flex: 0 0 320px;
-
+  flex: 0 0 320px;
 }
 
 .TextArea {
-    flex: 1 1 1;
+  flex: 1 1 1;
 }
 
 .ThumbnailArea {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .ThumbnailArea video {
-    width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-    object-fit: contain;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  object-fit: contain;
+  border: 1px solid #222;
 }
 
 .TextArea {
-    padding: 0 1em;
+  padding: 0 33px;
+}
+
+a.EssayIndexItem {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover.EssayIndexItem {
+  color: #0d99ab;
+}
+
+.TextArea .Title {
+  font-size: 30px;
+  font-weight: normal;
+  font-family: YaleNewRoman, "Times New Roman", Times, serif;
+}
+
+.TextArea {
+  font-size: 14px;
+  font-family: "Mallory", Arial, Helvetica, sans-serif;
+}
+
+.SuperTitle {
+  text-transform: uppercase;
 }

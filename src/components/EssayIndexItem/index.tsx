@@ -11,7 +11,7 @@ export interface EssayIndexItemProps {
 export default function EssayIndexItem(props: EssayIndexItemProps) {
   const { essayID, essay } = props;
   return (
-    <Link to={`/essay/${essayID}`}>
+    <Link to={`/essay/${essayID}`} className={styles.EssayIndexItem}>
       <div className={styles.EssayIndexItem}>
         <div className={styles.ThumbnailArea}>
           <video
@@ -30,16 +30,17 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
         </div>
         <div className={styles.TextArea}>
           <div className={styles.TitleContainer}>
-            <h3>
-              <small>{essay.supertitle ? essay.supertitle : null}</small>
-              <br />
-              {essay.title}
-            </h3>
+            <header>
+              {/* <p className={styles.SuperTitle}>
+                {essay.supertitle ? essay.supertitle : null}
+              </p> */}
+              <h3 className={styles.Title}> {essay.title}</h3>
+              <p>by {essay.author}</p>
+            </header>
           </div>
-          <div className={styles.MetaContainer}>
+          {/* <div className={styles.MetaContainer}>
             <div className={styles.MetaItem}>by {essay.author}</div>
-            <div className={styles.MetaItem}>{essay.publicationDate}</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>

@@ -1,169 +1,203 @@
-
 .Viewer {
-    position: relative;
+  position: relative;
+}
+
+.SuperTitle {
+  font-family: "Mallory", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .ContentBodyContainer {
-    background-color: white;;
-    position: relative;
-    z-index: 10;
-    top: 33vh;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+  top: 33vh;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .HeaderAreaContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 30;
-    border-top: 1px solid white;
-    background-color: white;
-    /* box-shadow: 0px 0px 6px #999; */
-    height: 22px;
-    font-size: 11px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  border-top: 1px solid white;
+  background-color: white;
+  /* box-shadow: 0px 0px 6px #999; */
+  height: 22px;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #222;
 }
 
 .FixedTitleContainer {
-    /* border-top: 1px solid black; */
-    z-index: 30;
+  /* border-top: 1px solid black; */
+  z-index: 30;
 }
 
 .SplashTitleContainer {
-    position: relative;
-    z-index: 40;
+  position: relative;
+  z-index: 40;
 }
-
 
 /* .HeaderAreaContainer {
     position: sticky;
     top: 0;
 } */
 
-.SplashTitleContainer{
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    box-sizing: border-box;
-    /* background-color: white;; */
-    /* background-color: #222; */
-    /* box-shadow: 0px 0px 10px gray; */
+.SplashTitleContainer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* background-color: white;; */
+  /* background-color: #222; */
+  /* box-shadow: 0px 0px 10px gray; */
 }
 
 .SplashBackgroundVideoContainer {
-    position: absolute;
-    z-index: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    overflow: hidden;
-
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
 }
 
 .SplashBackgroundVideo {
-    object-fit: cover;
-    object-position: top;
-    width: 100%;
-    height: 100%;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 100%;
 }
 
-
 .SplashTitleTail {
-    height: 80px;
-    background: white;
-    /* background-color:white; */
-    /* background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
-    /* background: linear-gradient(white 0%, transparent 100%); */
-        /* background: linear-gradient(transparent 0%, white 100%); */
-    /* background: linear-gradient(45deg, transparent 0%, white 100%); */
+  height: 80px;
+  background: white;
+  /* background-color:white; */
+  /* background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%); */
+  /* background: linear-gradient(white 0%, transparent 100%); */
+  /* background: linear-gradient(transparent 0%, white 100%); */
+  /* background: linear-gradient(45deg, transparent 0%, white 100%); */
 
-    /* border-top: 1px solid black; */
-    /* border-bottom: 1px solid black; */
+  /* border-top: 1px solid black; */
+  /* border-bottom: 1px solid black; */
 
-    /* background: linear-gradient(white 0%, transparent 100%) */
-
+  /* background: linear-gradient(white 0%, transparent 100%) */
 }
 
 .SplashTitle {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* margin: 0 1em; */
-    /* color: #222; */
-    color: white;
-    height: 100%;
-    padding: 1em;
-    background-color: rgba(0,0,0,0.50)
-
+  position: relative;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin: 0 1em; */
+  /* color: #222; */
+  color: white;
+  height: 100%;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px 9px black;
 }
 
-.SplashTitle h1{
-    font-weight: 900;
-    margin: 0px;
-    /* color: white; */
-    line-height: 1.4em;
-    font-size: 1em;
+.Gradient {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    black 10%,
+    transparent 33%,
+    transparent 66%,
+    black 90%
+  );
 }
 
-.SplashTitleContainer .SplashMetaDivider{
-    height: 10px;
-    background-color: white;
-    /* width: 50%; */
+.SplashTitle h1 {
+  font-weight: normal;
+  margin: 0px;
+  /* color: white; */
+  line-height: 1.4em;
+  font-size: 1em;
 }
 
+.SplashTitleContainer .SplashMetaDivider {
+  height: 10px;
+  background-color: white;
+  /* width: 50%; */
+}
 .SplashTitleContainer .SplashMeta {
-    font-weight: lighter
+  /* font-weight: lighter */
 }
 
-@media screen and (max-width:400px){
-    .SplashTitle{
-        font-size: 30px;
-    }
-    
+@media screen and (max-width: 400px) {
+  .SplashTitle {
+    font-size: 30px;
+  }
+  .SplashMeta {
+    font-size: 20px;
+  }
 }
 
-@media screen and (min-width:401px) and (max-width:600px){
-    .SplashTitle{
-        font-size: 40px;
-    }   
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  .SplashTitle {
+    font-size: 40px;
+  }
+
+  .SplashMeta {
+    font-size: 20px;
+  }
 }
 
-@media screen and (min-width:601px) and (max-width:800px){
-    .SplashTitle{
-        font-size: 50px;
-    }   
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .SplashTitle {
+    font-size: 50px;
+  }
+
+  .SplashMeta {
+    font-size: 20px;
+  }
 }
 
-@media screen and (min-width:801px) and (max-width:1000px){
-    .SplashTitle{
-        font-size: 60px;
-    }   
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  .SplashTitle {
+    font-size: 60px;
+  }
+
+  .SplashMeta {
+    font-size: 30px;
+  }
 }
 
-@media screen and (min-width:1000px){
-    .SplashTitle{
-        font-size: 70px;
-    }   
+@media screen and (min-width: 1000px) {
+  .SplashTitle {
+    font-size: 72px;
+  }
+
+  .SplashMeta {
+    font-size: 30px;
+  }
 }
 
-.FixedTitleContainer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+.FixedTitleContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }

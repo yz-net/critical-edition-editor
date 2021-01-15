@@ -1,4 +1,7 @@
 .Footnote {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: uns;
     background-color: beige;
     /* padding: 20px; */
     display: flex;
@@ -54,6 +57,12 @@
     /* overflow: hidden; */
     /* padding: 1em; */
     box-sizing: border-box;
+
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.9em;
+
 }
 
 .FootnoteLabel {
@@ -81,4 +90,5 @@
     flex: 1;
     padding-right: 1em;
     padding-left: 1em;
+    padding-top: 1em;
 }

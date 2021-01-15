@@ -140,6 +140,7 @@ class Viewer extends React.Component<ViewerProps> {
         </div>
 
         <div className={styles.SplashTitleContainer}>
+          <div className={styles.Gradient} />
           <div className={styles.SplashBackgroundVideoContainer}>
             <video
               poster={this.props.essay.posterPath}
@@ -155,14 +156,16 @@ class Viewer extends React.Component<ViewerProps> {
 
           <div className={styles.SplashTitle}>
             <div>
-              <h1>
-                <small>{this.props.essay.supertitle}</small>
-                <br />
-                {this.props.essay.title}
-              </h1>
+              <header>
+                {/* See example 5: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines */}
+                <p className={styles.SuperTitle}>
+                  {this.props.essay.supertitle}
+                </p>
+                <h1>{this.props.essay.title}</h1>
+              </header>
             </div>
             <div>
-              <div className={styles.SplashMetaDivider}></div>
+              {/* <div className={styles.SplashMetaDivider}></div> */}
               <div className={styles.SplashMeta}>
                 by {this.props.essay.author}
               </div>

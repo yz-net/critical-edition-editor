@@ -46,18 +46,20 @@ function ViewerWrapper() {
 export default function App() {
   // return <Viewer essayPath={"./data/essay.json"} />;
   return (
-    <Router>
-      <Switch>
-        <Route path="/example-essay">
-          {/* <Viewer essayPath={"/data/essay.json"} /> */}
-        </Route>
-        <Route path="/essay/:essayID">
-          <ViewerWrapper />
-        </Route>
-        <Route path="/">
-          <IndexPage essays={essays} />
-        </Route>
-      </Switch>
-    </Router>
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route path="/example-essay">
+            {/* <Viewer essayPath={"/data/essay.json"} /> */}
+          </Route>
+          <Route path="/essay/:essayID">
+            <ViewerWrapper />
+          </Route>
+          <Route path="/">
+            <IndexPage essays={essays} />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
