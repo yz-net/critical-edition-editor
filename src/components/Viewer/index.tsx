@@ -141,6 +141,7 @@ class Viewer extends React.Component<ViewerProps> {
 
         <div className={styles.SplashTitleContainer}>
           <div className={styles.Gradient} />
+
           <div className={styles.SplashBackgroundVideoContainer}>
             <video
               poster={this.props.essay.posterPath}

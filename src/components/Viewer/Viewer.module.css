@@ -12,7 +12,8 @@
   background-color: white;
   position: relative;
   z-index: 10;
-  top: 33vh;
+  /* top: 33vh; */
+  top: 75px;
   left: 0;
   bottom: 0;
   right: 0;
@@ -49,7 +50,7 @@
 
 .SplashTitleContainer {
   position: relative;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
   box-sizing: border-box;
   /* background-color: white;; */
@@ -63,8 +64,7 @@
   left: 0;
   right: 0;
   top: 0;
-  height: 100vh;
-  width: 100vw;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,6 +77,8 @@
   object-fit: cover;
   object-position: top;
   width: 100%;
+  max-width: 800px;
+  max-height: 100%;
   height: 100%;
 }
 
@@ -114,16 +116,25 @@
   position: absolute;
   z-index: 100;
   top: 0;
-  left: 0;
-  right: 0;
+  left: calc(50% - 400px);
+  right: calc(50% - 400px);
   bottom: 0;
+
   background-image: linear-gradient(
+    to right,
+    black 10%,
+    rgba(0, 0, 0, 0.1) 49%,
+    rgba(0, 0, 0, 0.1) 51%,
+    black 90%
+  );
+
+  /* background-image: linear-gradient(
     to right,
     black 10%,
     transparent 33%,
     transparent 66%,
     black 90%
-  );
+  ); */
 }
 
 .SplashTitle h1 {
@@ -145,6 +156,16 @@
 }
 
 @media screen and (max-width: 400px) {
+  .Gradient {
+    background-image: linear-gradient(
+      to right,
+      black 10%,
+      rgba(0, 0, 0, 0.5) 49%,
+      rgba(0, 0, 0, 0.5) 51%,
+      black 90%
+    );
+  }
+
   .SplashTitle {
     font-size: 30px;
   }
@@ -163,7 +184,7 @@
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 800px) {
+@media screen and (min-width: 601px) {
   .SplashTitle {
     font-size: 50px;
   }
@@ -173,7 +194,7 @@
   }
 }
 
-@media screen and (min-width: 801px) and (max-width: 1000px) {
+/* @media screen and (min-width: 801px) {
   .SplashTitle {
     font-size: 60px;
   }
@@ -181,9 +202,9 @@
   .SplashMeta {
     font-size: 30px;
   }
-}
+} */
 
-@media screen and (min-width: 1000px) {
+/* @media screen and (min-width: 1000px) {
   .SplashTitle {
     font-size: 72px;
   }
@@ -195,4 +216,4 @@
   .SplashMeta {
     font-size: 30px;
   }
-}
+} */
