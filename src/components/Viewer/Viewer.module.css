@@ -75,7 +75,7 @@
 
 .SplashBackgroundVideo {
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   width: 100%;
   max-width: 800px;
   max-height: 100%;
