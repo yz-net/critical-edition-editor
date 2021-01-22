@@ -182,8 +182,14 @@ class Viewer extends React.Component<ViewerProps> {
         >
           <EssayLinks
             links={[
-              { title: "testimony", href: "https://google.com" },
-              { title: "transcript", href: "https://google.com" },
+              {
+                title: "HVT-" + this.props.essay.hvtID,
+                href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+              },
+              {
+                title: "transcript",
+                href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+              },
             ]}
           ></EssayLinks>
 
