@@ -17,6 +17,10 @@
   left: 0;
   bottom: 0;
   right: 0;
+
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .HeaderAreaContainer {
@@ -31,6 +35,12 @@
   background-color: white;
   /* box-shadow: 0px 0px 6px #999; */
   height: 22px;
+
+  /* prevent from taking more than one line*/
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
   font-size: 11px;
   display: flex;
   justify-content: center;
@@ -144,6 +154,7 @@
   line-height: 1.4em;
   font-size: 1em;
   margin-bottom: 1em;
+  color: white;
 }
 
 .SplashTitleContainer .SplashMetaDivider {
@@ -151,11 +162,27 @@
   background-color: white;
   /* width: 50%; */
 }
-.SplashTitleContainer .SplashMeta {
-  /* font-weight: lighter */
+
+@media screen and (max-height: 400px) {
+  .SplashTitle {
+    font-size: 20px;
+  }
+  .SuperTitle,
+  .SplashMeta {
+    font-size: 14px;
+  }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-height: 400px) and (max-height: 600px) {
+  .SplashTitle {
+    font-size: 30px;
+  }
+  .SuperTitle,
+  .SplashMeta {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 400px) and (min-height: 600px) {
   .Gradient {
     background-image: linear-gradient(
       to right,
@@ -174,7 +201,7 @@
   }
 }
 
-@media screen and (min-width: 401px) and (max-width: 600px) {
+@media screen and (min-width: 401px) and (max-width: 600px) and (min-height: 600px) {
   .SplashTitle {
     font-size: 40px;
   }
@@ -184,7 +211,7 @@
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 601px) and (min-height: 600px) {
   .SplashTitle {
     font-size: 50px;
   }

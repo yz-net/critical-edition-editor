@@ -56,7 +56,11 @@ export default function App() {
             <ViewerWrapper />
           </Route>
           <Route path="/">
-            <IndexPage essays={essays} />
+            <IndexPage
+              projectTitle="Critical Edition Series"
+              projectDescription=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sollicitudin sit amet lectus id rhoncus. Nunc convallis euismod tortor, nec molestie magna faucibus et. Vestibulum ante orci, laoreet at arcu sed, fermentum placerat justo. Nullam fringilla ac ex suscipit pretium. Donec tincidunt semper ligula, ac hendrerit leo scelerisque nec. Aenean semper placerat neque. Proin interdum ut purus ut aliquet. Etiam et purus rhoncus, venenatis sapien ut, blandit nisl. Proin ac efficitur est. Nullam id mattis nulla. Maecenas sagittis tellus ac ante tincidunt tincidunt. Curabitur nibh enim, malesuada in nibh vitae, mattis scelerisque ex. Maecenas ut nulla vel ex mollis feugiat vulputate vitae sem. "
+              essays={essays}
+            />
           </Route>
         </Switch>
       </Router>

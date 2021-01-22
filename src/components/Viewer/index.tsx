@@ -11,6 +11,7 @@ import SpeechSynthesisDocumentPlayer from "../../utils/DocumentPlayer/SpeechSynt
 import HeaderArea from "./HeaderArea";
 import styles from "./Viewer.module.css";
 import { EssayDataEntry } from "../../EssayData";
+import EssayLinks from "./EssayLinks";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -179,6 +180,13 @@ class Viewer extends React.Component<ViewerProps> {
           // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
           className={styles.ContentBodyContainer}
         >
+          <EssayLinks
+            links={[
+              { title: "testimony", href: "https://google.com" },
+              { title: "transcript", href: "https://google.com" },
+            ]}
+          ></EssayLinks>
+
           <div className={styles.ContentBodyContents}>
             <ContentBody
               playingBlock={this.state.playingBlock}

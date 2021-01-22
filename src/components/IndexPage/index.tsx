@@ -5,16 +5,33 @@ import EssayIndexItem from "../EssayIndexItem";
 import styles from "./IndexPage.module.css";
 
 export interface IndexPageProps {
+  projectTitle: string;
+  projectDescription: string;
   essays: { [essayID: string]: EssayDataEntry };
 }
 
 const logger = new DebugLogger("IndexPage: ");
 
+interface IndexHeaderProps {
+  title: string;
+  description: string;
+}
+function IndexHeader(props: IndexHeaderProps) {
+  const { title, description } = props;
+  return (
+    <div>
+      <h1>{title}</h1>
+      <p className="sans-copy-ff">{description}</p>
+    </div>
+  );
+}
+
 export default function IndexPage(props: IndexPageProps) {
-  const { essays } = props;
+  const { essays, projectDescription, projectTitle } = props;
 
   return (
     <div className={styles.IndexPage}>
+      <IndexHeader title={projectTitle} description={projectDescription} />
       {Object.keys(essays).map((essayID: string, i: number) => {
         const essay: EssayDataEntry = essays[essayID];
         if (!essay) {

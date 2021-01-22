@@ -28,12 +28,10 @@ interface HeaderAreaProps extends ControlBarProps {
 // }
 
 export default function HeaderArea(props: HeaderAreaProps) {
-  const { author, publicationDate } = props;
+  const { title } = props;
   return (
     <header>
-      <h3>
-        {author}, {publicationDate}
-      </h3>
+      <h3>{title}</h3>
     </header>
     // <header
     //   // style={{ height: props.height }}

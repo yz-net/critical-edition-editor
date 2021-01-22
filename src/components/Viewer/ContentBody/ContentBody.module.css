@@ -1,5 +1,5 @@
 .Container {
-    /* position: fixed;
+  /* position: fixed;
     top: 200px;
     left: 0;
     right: 0;
@@ -7,8 +7,8 @@
     overflow-x: scroll; */
 }
 
-.ContentBody {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* .ContentBody {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+} */
