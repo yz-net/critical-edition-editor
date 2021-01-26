@@ -94,4 +94,12 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/hvt-0764-background-loop.mp4",
         publicationDate: "February 1, 2021",
     },
+    dynner: {
+        hvtID: "3038",
+        supertitle: "Introduction to the testimony of",
+        title: "Rubin Pinski",
+        author: "Glenn Dynner",
+        essayPath: "/data/intro-hvt-3038.json",
+        publicationDate: "February 1, 2021"
+    }
 };
