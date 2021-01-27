@@ -17,7 +17,6 @@ export const essays: {
     krasilovskaia: {
         supertitle: "Introduction to the testimony of",
         hvtID: "3280",
-
         title: "Liubov’ Naumovna Krasilovskaia",
         author: "Sarah Garibova",
         videoPath:
