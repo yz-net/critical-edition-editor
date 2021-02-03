@@ -96,7 +96,7 @@ export const essays: {
     dynner: {
         hvtID: "3038",
         supertitle: "Introduction to the testimony of",
-        title: "Rubin Pinski",
+        title: "Rubin Pinsker",
         author: "Glenn Dynner",
         essayPath: "/data/intro-hvt-3038.json",
         publicationDate: "February 1, 2021"
