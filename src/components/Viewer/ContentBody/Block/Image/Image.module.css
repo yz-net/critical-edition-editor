@@ -1,0 +1,14 @@
+.Image {
+  font-size: 14px;
+}
+
+.Image img {
+  max-height: 50vh;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.Caption {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}

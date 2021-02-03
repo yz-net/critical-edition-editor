@@ -3,6 +3,7 @@ import {
   CriticalEditionDocumentBlock,
   FootnoteParagraphBlockData,
   HeaderBlockData,
+  ImageBlockData,
   ParagraphBlockData,
 } from "../../../../CriticalEditionData";
 import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
@@ -11,6 +12,7 @@ import getFootnotes from "../../../../utils/getFootnotes";
 import htmlToText from "../../../../utils/htmlToText";
 import { Footnote } from "./Footnote";
 import { Paragraph } from "./Paragraph";
+import { Image } from "./Image";
 import styles from "./Block.module.css";
 import CopyText from "./CopyText";
 import OpenFootnote from "./OpenFootnotes";
@@ -144,6 +146,9 @@ export default function Block(props: {
         data={props.blockData.data as FootnoteParagraphBlockData}
       />
     );
+  }
+  if (props.blockData.type.toLowerCase().trim() === "image") {
+    return WrapBlock(<Image data={props.blockData.data as ImageBlockData} />);
   }
 
   return null;
