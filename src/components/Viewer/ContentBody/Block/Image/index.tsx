@@ -11,7 +11,9 @@ export function Image(props: ImageProps) {
   console.log("RENDERING IMAGE", props.data);
   return (
     <div className={`sans-copy-ff ${styles.Image}`}>
-      <img srcSet={srcset} sizes={sizes} src={src} alt={caption || ""} />
+      <div className={styles.ImgContainer}>
+        <img srcSet={srcset} sizes={sizes} src={src} alt={caption || ""} />
+      </div>
       <div
         dangerouslySetInnerHTML={{ __html: caption || "" }}
         className={styles.Caption}

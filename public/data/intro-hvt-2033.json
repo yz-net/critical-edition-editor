@@ -1022,6 +1022,22 @@
       }
     },
     {
+      "type": "image",
+      "data": {
+        "src": "/media/hvt-2033/sweden-1947-1000.jpg",
+        "srcset": "/media/hvt-2033/sweden-1947-1000.jpg 1000px, /media/hvt-2033/sweden-1947-2000.jpg 2000px",
+        "caption": "Doctors, nurses, and staff of the Hospital on Lagiewnicka Street. The photo was given to Esther by a doctor (likely a colleague from that hospital) in Stockholm, Sweden in 1947. Gift of Esther Fox, Yaffa Eliach Collection donated by the Center for Holocaust Studies, Museum of Jewish Heritage, NY."
+      }
+    },
+    {
+      "type": "image",
+      "data": {
+        "src": "/media/hvt-2033/jkms-1966-1000.jpg",
+        "srcset": "/media/hvt-2033/jkms-1966-1000.jpg 1000px, /media/hvt-2033/jkms-1966-2000.jpg 2000px",
+        "caption": "Esther Fox (seated, second from left) at the annual benefit dinner for the Janusz Korczak Medical Society (an organization of Polish-Jewish physicians in the US), dated March 26, 1966. YIVO Institute for Jewish Research."
+      }
+    },
+    {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",

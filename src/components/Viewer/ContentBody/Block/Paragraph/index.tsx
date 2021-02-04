@@ -35,6 +35,7 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
       // now iterate through the permanent list of references
       for (let i = 0; i < linkReferences.length; i++) {
         const link = linkReferences[i];
+
         if (!link) {
           console.log("null link");
           continue;
@@ -62,7 +63,8 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         // icon when the paragraph is open/active
         link.classList.add(styles.FootnoteLink);
         // const label = link.innerText.replace("[", "").replace("]", "");
-        const label = link.innerText;
+        // const label = link.innerText;
+        const label = href.replace("#fn-", "");
         // link.innerHTML = `<span>
         //     ${renderToString(<FootnoteIcon />)}
         //   </span>`;
