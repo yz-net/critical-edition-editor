@@ -154,7 +154,7 @@ export function Footnote(props: FootnoteProps) {
             dangerouslySetInnerHTML={{ __html: props.data.embedCode || "" }}
           ></div>
           <div
-            // id={props.data.id}
+            id={props.data.id}
             dangerouslySetInnerHTML={{ __html: props.data.text }}
           ></div>
         </div>

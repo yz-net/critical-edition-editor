@@ -6,6 +6,9 @@ export interface EssayDataEntry {
     posterPath?: string;
     videoPath?: string;
     publicationDate: string;
+
+    hvtID: string;
+
 }
 
 export const essays: {
@@ -13,6 +16,7 @@ export const essays: {
 } = {
     krasilovskaia: {
         supertitle: "Introduction to the testimony of",
+        hvtID: "3280",
         title: "Liubov’ Naumovna Krasilovskaia",
         author: "Sarah Garibova",
         videoPath:
@@ -22,6 +26,7 @@ export const essays: {
     },
     saraffian: {
         supertitle: "Introduction to the testimony of",
+        hvtID: "0237",
         title: "Martha Saraffian",
         author: "Nikolaus Hagen",
         essayPath: "/data/intro-hvt-0237.json",
@@ -33,6 +38,7 @@ export const essays: {
     },
     fox: {
         supertitle: "Introduction to the testimony of",
+        hvtID: "2033",
         title: "Esther Fox",
         author: "Sari Siegel",
         essayPath: "/data/intro-hvt-2033.json",
@@ -44,6 +50,7 @@ export const essays: {
     frei: {
         supertitle: "Introduction to the testimony of",
         title: "Hans Frei",
+        hvtID: "0170",
         author: "Ion Popa",
         essayPath: "/data/intro-hvt-0170.json",
         posterPath:
@@ -53,6 +60,7 @@ export const essays: {
         publicationDate: "February 1, 2021",
     },
     zawistowska: {
+        hvtID: "3169",
         supertitle: "Introduction to the testimony of",
         title: "Władysława Zawistowska",
         author: "Paweł Machcewicz",
@@ -63,6 +71,7 @@ export const essays: {
 
     },
     zwolinska: {
+        hvtID: "3164",
         supertitle: "Introduction to the testimony of",
         title: "Helena Balicka-Zwolińska",
         author: "Anna Machcewicz",
@@ -73,6 +82,7 @@ export const essays: {
 
     },
     riegner: {
+        hvtID: "0764",
         supertitle: "Introduction to the testimony of",
         title: "Gerhart M. Riegner",
         author: "Gil Rubin",
@@ -83,4 +93,12 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/hvt-0764-background-loop.mp4",
         publicationDate: "February 1, 2021",
     },
+    dynner: {
+        hvtID: "3038",
+        supertitle: "Introduction to the testimony of",
+        title: "Rubin Pinsker",
+        author: "Glenn Dynner",
+        essayPath: "/data/intro-hvt-3038.json",
+        publicationDate: "February 1, 2021"
+    }
 };

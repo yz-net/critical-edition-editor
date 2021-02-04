@@ -26,6 +26,13 @@ export interface FootnoteParagraphBlockData extends ParagraphBlockData {
     label: string;
 }
 
+export interface ImageBlockData extends BlockData {
+    src: string
+    srcset?: string
+    sizes?: string
+    caption?: string
+
+}
 export interface CriticalEditionDocument {
     version?: number;
     time?: number;

@@ -11,6 +11,7 @@ import SpeechSynthesisDocumentPlayer from "../../utils/DocumentPlayer/SpeechSynt
 import HeaderArea from "./HeaderArea";
 import styles from "./Viewer.module.css";
 import { EssayDataEntry } from "../../EssayData";
+import EssayLinks from "./EssayLinks";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -141,6 +142,7 @@ class Viewer extends React.Component<ViewerProps> {
 
         <div className={styles.SplashTitleContainer}>
           <div className={styles.Gradient} />
+
           <div className={styles.SplashBackgroundVideoContainer}>
             <video
               poster={this.props.essay.posterPath}
@@ -174,30 +176,23 @@ class Viewer extends React.Component<ViewerProps> {
           <div className={styles.SplashTitleTail}></div>
         </div>
 
-        <div className={styles.FixedTitleContainer}>
-          <div className={styles.FixedTitleContents}>
-            {/* <HeaderArea
-              height={this.state.headerHeight}
-              title={"Introduction to the testimony of Liubov’ Krasilovskaia"}
-              author={"Author Name"}
-              publicationDate={"January 1, 2020"}
-              continuousPlay={this.state.continuePlaying}
-              playing={this.state.playing === "playing"}
-              play={() => {
-                this.playBlock(this.state.playingBlock || 0);
-              }}
-              stop={this.stopPlaying}
-              toggleContinuousPlay={() => {
-                this.setState({ continuePlaying: !this.state.continuePlaying });
-              }}
-            /> */}
-          </div>
-        </div>
-
         <div
           // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
           className={styles.ContentBodyContainer}
         >
+          <EssayLinks
+            links={[
+              {
+                title: "HVT-" + this.props.essay.hvtID,
+                href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+              },
+              {
+                title: "transcript",
+                href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+              },
+            ]}
+          ></EssayLinks>
+
           <div className={styles.ContentBodyContents}>
             <ContentBody
               playingBlock={this.state.playingBlock}

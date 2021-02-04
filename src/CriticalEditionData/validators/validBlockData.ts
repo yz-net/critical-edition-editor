@@ -2,6 +2,7 @@ import { CriticalEditionDocumentBlock } from "..";
 import DebugLogger from "../../utils/DebugLogger";
 import ValidatorFunction from "./ValidatorFunction";
 import validFootnoteParagraphBlockData from "./validFootnoteParagraphBlockData";
+import validImageBlockData from "./validImageBlockData";
 import validParagraphBlockData from "./validParagraphBlockData";
 
 const logger = new DebugLogger("validBlockData").hush();
@@ -20,6 +21,8 @@ const validBlockData: ValidatorFunction<CriticalEditionDocumentBlock> = (data: a
     }
     else if (data.type.toLowerCase().trim() === "footnoteparagraph") {
         validFootnoteParagraphBlockData(data.data);
+    } else if (data.type.toLowerCase().trim() === "image") {
+        validImageBlockData(data.data);
     }
     else {
         throw new Error("Unsupported block type: " + data.type);

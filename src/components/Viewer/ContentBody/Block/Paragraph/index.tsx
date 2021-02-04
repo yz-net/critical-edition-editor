@@ -18,24 +18,43 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
 
   useEffect(() => {
     if (ref.current) {
-      const linkCollection = ref.current.getElementsByTagName("a");
+      const linkCollection = ref.current.getElementsByTagName("sup");
 
       // make a permanent list of links. since we will be replacing them
       // they will disappear from linkCollection, making it impossible to
       // both iterate through and modify the links. I know, right?
-      const linkReferences: Array<HTMLAnchorElement> = [];
+      const linkReferences: Array<HTMLElement> = [];
       for (let i = 0; i < linkCollection.length; i++) {
-        linkReferences.push(linkCollection[i]);
+        const el = linkCollection[i];
+        console.log(el.classList, el.classList.contains("footnote-ref"));
+        if (el.classList.contains("footnote-ref")) {
+          linkReferences.push(el);
+        }
       }
 
       // now iterate through the permanent list of references
       for (let i = 0; i < linkReferences.length; i++) {
         const link = linkReferences[i];
+
         if (!link) {
+          console.log("null link");
           continue;
         }
-        const href = link.getAttribute("href") || "";
-        if (href.indexOf("#") !== 0) {
+
+        let href = "";
+
+        if (!link.hasAttribute("a")) {
+          let innerLink = link.getElementsByTagName("a");
+          console.log("innerLink", innerLink[0].getAttribute("href"));
+          if (innerLink[0]) {
+            // console.log("innerLink[0]", innerLink);
+            href = innerLink[0].getAttribute("href") || "";
+          }
+        } else {
+          href = link.getAttribute("a") || "";
+        }
+        if (href.indexOf("#fn-") !== 0) {
+          console.log("not an anchor link", href);
           continue;
         }
 
@@ -43,7 +62,9 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         // add a data attribute that can be used to highlight this
         // icon when the paragraph is open/active
         link.classList.add(styles.FootnoteLink);
-        const label = link.innerText.replace("[", "").replace("]", "");
+        // const label = link.innerText.replace("[", "").replace("]", "");
+        // const label = link.innerText;
+        const label = href.replace("#fn-", "");
         // link.innerHTML = `<span>
         //     ${renderToString(<FootnoteIcon />)}
         //   </span>`;
@@ -57,6 +78,7 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         }
         newElement.innerHTML = `${renderToString(icon)} <sup>${label}</sup> `;
 
+        console.log("Adding click handler");
         newElement.onclick = (e) => {
           const id = href.replace("#", "");
           scrollToElementByID(id, e);
@@ -68,7 +90,8 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
           // }
         };
 
-        ref.current.replaceChild(newElement, link);
+        // ref.current.replaceChild(newElement, link);
+        link.replaceWith(newElement);
         // link.replaceWith(newElement);
       }
     }
