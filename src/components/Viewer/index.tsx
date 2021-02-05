@@ -160,6 +160,7 @@ class Viewer extends React.Component<ViewerProps> {
               muted
               loop
               autoPlay
+              disablePictureInPicture={true}
               className={styles.SplashBackgroundVideo}
             >
               {/* <source src={this.props.essay.videoPath}></source> */}
@@ -169,7 +170,6 @@ class Viewer extends React.Component<ViewerProps> {
                     key={idx}
                     src={get_url(`background-loop-${width}.mp4`)}
                     type={"video/mp4"}
-                    media={`all and (max-width: ${width}px)`}
                   />
                 );
               })}
