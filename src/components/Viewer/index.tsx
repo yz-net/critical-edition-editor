@@ -121,7 +121,7 @@ class Viewer extends React.Component<ViewerProps> {
     const aws_dir =
       "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions";
     const get_url = (file_name: string) => `${aws_dir}/${hvt_num}/${file_name}`;
-    const widths = [160, 320, 640, 960, 1280];
+    // const widths = [160, 320, 640, 960, 1280];
 
     return (
       <div
