@@ -138,7 +138,7 @@ export function Footnote(props: FootnoteProps) {
     <button disabled></button>
   );
   return (
-    <div className={`${styles.Footnote}`}>
+    <div className={`sans-copy-ff ${styles.Footnote}`}>
       {/* <div className={`${styles.Footnote} ${collapsed ? styles.Collapsed : ""}`}> */}
       {/* <div className={styles.ButtonTray}> */}
       {/* <button onClick={toggleCollapse}>{collapsed ? "+" : "-"}</button> */}

@@ -3,7 +3,6 @@
 }
 
 .SuperTitle {
-  font-family: "Mallory", Arial, Helvetica, sans-serif;
   font-size: 20px;
   text-transform: uppercase;
 }
@@ -24,8 +23,6 @@
 }
 
 .HeaderAreaContainer {
-  font-family: "Mallory", Arial, Helvetica, sans-serif;
-
   position: fixed;
   top: 0;
   left: 0;

@@ -1,51 +1,50 @@
 .Footnote {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: uns;
-    background-color: beige;
-    /* padding: 20px; */
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 0.5em;
+  font-size: 14px;
+  line-height: unset;
+  background-color: beige;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5em;
 }
 
-.NavButtonTray{
-    flex: 0 0 80px;
-    display: flex;
-    justify-content: flex-end;
+.NavButtonTray {
+  flex: 0 0 80px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .NavButtonTray button {
-    width: 32px;
-    height: 32px;
-    /* background-color: tan; */
-    background-color:#d5cbb7;
-    fill: white;
-    border: none;
-    color: white;
-    /* font-size: 20px; */
-    opacity: 1;
-    transition: 1s opacity;
-    padding:0;
+  width: 32px;
+  height: 32px;
+  /* background-color: tan; */
+  background-color: #d5cbb7;
+  fill: white;
+  border: none;
+  color: white;
+  /* font-size: 20px; */
+  opacity: 1;
+  transition: 1s opacity;
+  padding: 0;
 }
 
-.NavButtonTray button:hover{
-    background-color: orangered;
-    transition: background-color 0.5s;
-    cursor: pointer;
+.NavButtonTray button:hover {
+  background-color: orangered;
+  transition: background-color 0.5s;
+  cursor: pointer;
 }
 
-.NavButtonTray button:disabled{
-    opacity: 0;
-    display: none;
-    width: 0px;
+.NavButtonTray button:disabled {
+  opacity: 0;
+  display: none;
+  width: 0px;
 }
 
-.ButtonTray{
-    /* display: none; */
-    display: flex;
-    justify-content: flex-end;
-    line-height: unset;
+.ButtonTray {
+  /* display: none; */
+  display: flex;
+  justify-content: flex-end;
+  line-height: unset;
 }
 
 /* .ContentArea{
@@ -53,42 +52,38 @@
 } */
 
 .FootnoteTextGroup {
-    display: flex;
-    /* overflow: hidden; */
-    /* padding: 1em; */
-    box-sizing: border-box;
+  display: flex;
+  /* overflow: hidden; */
+  /* padding: 1em; */
+  box-sizing: border-box;
 
-
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.9em;
-
+  font-size: 14px;
+  line-height: 1.9em;
 }
 
 .FootnoteLabel {
-    /* font-weight: lighter; */
-    /* padding: 0 1em; */
-    padding-left: 14px;
-    padding-right: 14px;
-    position: relative;
-    top: 0;
-    left: 0px;
-    height: auto;
-    background-color:#d5cbb7;
-    color: white;
-    font-weight: 500;
+  /* font-weight: lighter; */
+  /* padding: 0 1em; */
+  padding-left: 14px;
+  padding-right: 14px;
+  position: relative;
+  top: 0;
+  left: 0px;
+  height: auto;
+  background-color: #d5cbb7;
+  color: white;
+  font-weight: 500;
 }
 
-[data-blocktype="footnoteParagraph"]:hover .FootnoteLabel{
-    background-color: orangered;
-    transition: background-color 1s;
-    color: white;
-
+[data-blocktype="footnoteParagraph"]:hover .FootnoteLabel {
+  background-color: orangered;
+  transition: background-color 1s;
+  color: white;
 }
 
 .FootnoteText {
-    flex: 1;
-    padding-right: 1em;
-    padding-left: 1em;
-    padding-top: 1em;
+  flex: 1;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-top: 1em;
 }

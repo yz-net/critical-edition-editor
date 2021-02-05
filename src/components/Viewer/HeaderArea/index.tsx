@@ -30,7 +30,7 @@ interface HeaderAreaProps extends ControlBarProps {
 export default function HeaderArea(props: HeaderAreaProps) {
   const { title } = props;
   return (
-    <header>
+    <header className="sans-title-ff">
       <h3>{title}</h3>
     </header>
     // <header

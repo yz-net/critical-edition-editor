@@ -180,7 +180,7 @@ class Viewer extends React.Component<ViewerProps> {
             <div>
               <header>
                 {/* See example 5: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines */}
-                <p className={styles.SuperTitle}>
+                <p className={`sans-title-ff ${styles.SuperTitle}`}>
                   {this.props.essay.supertitle}
                 </p>
                 <h1>{this.props.essay.title}</h1>
