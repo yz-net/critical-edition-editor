@@ -113,6 +113,16 @@ class Viewer extends React.Component<ViewerProps> {
 
   render() {
     logger.log("Rendering with state", this.state);
+
+    const hvt_num = this.props.essay.hvtID
+      .toLocaleLowerCase()
+      .replace("hvt-", "");
+
+    const aws_dir =
+      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions";
+    const get_url = (file_name: string) => `${aws_dir}/${hvt_num}/${file_name}`;
+    const widths = [160, 320, 640, 960, 1280];
+
     return (
       <div
         // onScroll={this.handleScroll}
@@ -145,14 +155,24 @@ class Viewer extends React.Component<ViewerProps> {
 
           <div className={styles.SplashBackgroundVideoContainer}>
             <video
-              poster={this.props.essay.posterPath}
+              poster={get_url("poster.jpg")}
               playsInline
               muted
               loop
               autoPlay
               className={styles.SplashBackgroundVideo}
             >
-              <source src={this.props.essay.videoPath}></source>
+              {/* <source src={this.props.essay.videoPath}></source> */}
+              {[1280].map((width, idx) => {
+                return (
+                  <source
+                    key={idx}
+                    src={get_url(`background-loop-${width}.mp4`)}
+                    type={"video/mp4"}
+                    media={`all and (max-width: ${width}px)`}
+                  />
+                );
+              })}
             </video>
           </div>
 

@@ -10,12 +10,20 @@ export interface EssayIndexItemProps {
 
 export default function EssayIndexItem(props: EssayIndexItemProps) {
   const { essayID, essay } = props;
+  const hvt_num = props.essay.hvtID.toLowerCase().replace("hvt-", "");
+  const aws_dir =
+    "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions";
+  const get_url = (file_name: string) => `${aws_dir}/${hvt_num}/${file_name}`;
+  const poster = get_url("poster.jpg");
+  const source = get_url("background-loop-640.mp4");
+  // const widths = [160, 320, 640, 960, 1280];
+
   return (
     <Link to={`/essay/${essayID}`} className={styles.EssayIndexItem}>
       <div className={styles.EssayIndexItem}>
         <div className={styles.ThumbnailArea}>
           <video
-            poster={essay.posterPath}
+            poster={poster}
             playsInline
             muted
             loop
@@ -25,7 +33,7 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
             ) => (event.target as HTMLVideoElement).play()}
             onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
           >
-            <source src={props.essay.videoPath}></source>
+            <source src={source} type={"video/mp4"}></source>
           </video>
         </div>
         <div className={styles.TextArea}>
