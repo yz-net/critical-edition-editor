@@ -1,0 +1,13 @@
+.EssayPreamble {
+  background-color: #efefef;
+  font-size: inherit;
+  font-style: italic;
+
+  padding: 10px 20px;
+}
+
+.EssayPreamble svg {
+  height: 0.7em;
+  width: 0.7em;
+  margin-right: 1em;
+}

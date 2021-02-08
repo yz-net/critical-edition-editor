@@ -8,10 +8,11 @@ import {
   PlayStatus,
 } from "../../utils/DocumentPlayer/IDocumentPlayer";
 import SpeechSynthesisDocumentPlayer from "../../utils/DocumentPlayer/SpeechSynthesisDocumentPlayer";
-import HeaderArea from "./HeaderArea";
+// import HeaderArea from "./HeaderArea";
 import styles from "./Viewer.module.css";
 import { EssayDataEntry } from "../../EssayData";
-import EssayLinks from "./EssayLinks";
+// import EssayLinks from "./EssayLinks";
+import EssayPreamble from "./EssayPreamble";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -132,7 +133,7 @@ class Viewer extends React.Component<ViewerProps> {
           Playing: {this.state.playingBlock}
         </div> */}
 
-        <div className={styles.HeaderAreaContainer}>
+        {/* <div className={styles.HeaderAreaContainer}>
           <HeaderArea
             height={this.state.headerHeight}
             title={this.props.essay.title}
@@ -148,7 +149,7 @@ class Viewer extends React.Component<ViewerProps> {
               this.setState({ continuePlaying: !this.state.continuePlaying });
             }}
           />
-        </div>
+        </div> */}
 
         <div className={styles.SplashTitleContainer}>
           <div className={styles.Gradient} />
@@ -196,22 +197,25 @@ class Viewer extends React.Component<ViewerProps> {
           <div className={styles.SplashTitleTail}></div>
         </div>
 
+        <EssayPreamble hvtID={this.props.essay.hvtID} />
         <div
           // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
           className={styles.ContentBodyContainer}
         >
-          <EssayLinks
-            links={[
-              {
-                title: "HVT-" + this.props.essay.hvtID,
-                href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
-              },
-              {
-                title: "transcript",
-                href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
-              },
-            ]}
-          ></EssayLinks>
+          {
+            //<EssayLinks
+            // links={[
+            //   {
+            //     title: "HVT-" + this.props.essay.hvtID,
+            //     href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+            //   },
+            //   {
+            //     title: "transcript",
+            //     href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+            //   },
+            // ]}
+            ///>
+          }
 
           <div className={styles.ContentBodyContents}>
             <ContentBody

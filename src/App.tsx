@@ -44,7 +44,6 @@ function ViewerWrapper() {
 }
 
 export default function App() {
-  // return <Viewer essayPath={"./data/essay.json"} />;
   return (
     <div className="App serif-copy-ff">
       <Router>

@@ -4,7 +4,7 @@ import { ParagraphBlockData } from "../../../../../CriticalEditionData";
 import validParagraphBlockData from "../../../../../CriticalEditionData/validators/validParagraphBlockData";
 import styles from "./Paragraph.module.css";
 import { ReactComponent as FootnoteIcon } from "../../../svg/footnote_icon.svg";
-import { ReactComponent as VideoIcon } from "./video-icon.svg";
+import { ReactComponent as VideoIcon } from "../../../svg/video-icon.svg";
 import { renderToString } from "react-dom/server";
 import scrollToElementByID from "../../../../../utils/scrollToElementByID";
 // import DebugLogger from "../../../../../utils/DebugLogger";

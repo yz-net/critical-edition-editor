@@ -16,6 +16,14 @@ a:hover {
   color: #0d99ab;
 }
 
+.teal-svg {
+  fill: #0d99ab;
+}
+
+.teal-svg:hover {
+  fill: teal;
+}
+
 h1,
 h2,
 h3,
