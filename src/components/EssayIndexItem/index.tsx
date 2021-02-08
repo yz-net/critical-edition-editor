@@ -19,7 +19,7 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
   // const widths = [160, 320, 640, 960, 1280];
 
   return (
-    <Link to={`/essay/${essayID}`} className={styles.EssayIndexItem}>
+    <Link to={`/essay/${essayID}`} className={styles.ItemLink}>
       <div className={styles.EssayIndexItem}>
         <div className={styles.ThumbnailArea}>
           <video

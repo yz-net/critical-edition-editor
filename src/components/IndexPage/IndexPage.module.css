@@ -1,6 +1,19 @@
-.IndexPage{
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+.IndexPage {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.IndexHeader {
+  margin: 60px 0;
+}
+
+.IndexHeader .Title {
+  margin-bottom: 16px;
+}
+
+@media all and (max-width: 1000px) {
+  .IndexPage {
+    padding: 20px;
+  }
+}

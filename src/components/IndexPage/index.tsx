@@ -19,8 +19,8 @@ interface IndexHeaderProps {
 function IndexHeader(props: IndexHeaderProps) {
   const { title, description } = props;
   return (
-    <div>
-      <h1>{title}</h1>
+    <div className={styles.IndexHeader}>
+      <h1 className={`teal-font ${styles.Title}`}>{title}</h1>
       <p className="sans-copy-ff">{description}</p>
     </div>
   );

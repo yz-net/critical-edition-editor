@@ -1,6 +1,5 @@
 .EssayIndexItem {
-  margin: 6px 0px;
-
+  margin: 32px 0px;
   display: flex;
 }
 
@@ -26,18 +25,19 @@
   overflow: hidden;
   object-fit: contain;
   border: 1px solid #222;
+  background-color: black;
 }
 
 .TextArea {
   padding: 0 33px;
 }
 
-a.EssayIndexItem {
+a.ItemLink {
   text-decoration: none;
   color: inherit;
 }
 
-a:hover.EssayIndexItem {
+a.ItemLink:hover {
   color: #0d99ab;
 }
 
@@ -52,4 +52,12 @@ a:hover.EssayIndexItem {
 
 .SuperTitle {
   text-transform: uppercase;
+}
+
+@media all and (max-width: 800px) {
+  .EssayIndexItem {
+    flex-direction: column;
+    margin-bottom: 32px;
+    box-shadow: 0px 0px 10px #aaa;
+  }
 }
