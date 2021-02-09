@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   CriticalEditionDocument,
   CriticalEditionDocumentBlock,
@@ -6,6 +7,7 @@ import {
 } from "../../../CriticalEditionData";
 import validCriticalEditionDocumentData from "../../../CriticalEditionData/validators/validDocumentData";
 import DebugLogger from "../../../utils/DebugLogger";
+import scrollToElementByID from "../../../utils/scrollToElementByID";
 import Block from "./Block";
 import styles from "./ContentBody.module.css";
 
@@ -21,6 +23,12 @@ interface ContentBodyProps {
 }
 
 export function ContentBody(props: ContentBodyProps): JSX.Element {
+  const location = useLocation();
+  const hash = location.hash.replace("#", "");
+  useEffect(() => {
+    scrollToElementByID(hash);
+  }, [hash, props.documentData]);
+
   try {
     validCriticalEditionDocumentData(props.documentData);
   } catch (e) {

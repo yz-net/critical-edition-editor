@@ -82,9 +82,9 @@ export default function Block(props: {
 
   function WrapBlock(inner: JSX.Element) {
     const location = useLocation();
+    const hash = location.hash.replace("#", "");
     const hide =
-      props.blockData.type === "footnoteParagraph" &&
-      location.hash.replace("#", "") !== blockID;
+      props.blockData.type === "footnoteParagraph" && hash !== blockID;
 
     return (
       <div
