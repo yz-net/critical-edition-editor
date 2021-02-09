@@ -1,7 +1,7 @@
 .EssayPreamble {
   background-color: #efefef;
   font-size: inherit;
-  font-style: italic;
+  /* font-style: italic; */
 
   padding: 10px 20px;
 }
@@ -10,4 +10,8 @@
   height: 0.7em;
   width: 0.7em;
   margin-right: 1em;
+}
+
+.EssayPreamble a {
+  /* color: teal; */
 }
