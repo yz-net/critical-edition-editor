@@ -93,10 +93,10 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "header",
       "data": {
-        "paragraphType": "paragraph",
-        "text": "<strong>The Jews of Zhetl</strong> "
+        "text": "The Jews of Zhetl",
+        "level": 2
       }
     },
     {
@@ -394,21 +394,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Baruch Kaplinski, <em>Pinkes Zhetl</em> (Tel-Aviv, 1957)  "
-      }
-    },
-    {
-      "type": "paragraph",
-      "data": {
-        "paragraphType": "paragraph",
-        "text": "Haya Lipski, Rivkah Lipski-Kaufman and Yitshak Ganoz, <em>'Ayaratenu Z\u2019etel: shishim shanah le-hurban kehilat Z\u2019etel 1942-2002</em> (Tel Aviv, 2002),  "
-      }
-    },
-    {
-      "type": "paragraph",
-      "data": {
-        "paragraphType": "paragraph",
-        "text": "<a href=\"http://shtetlroutes.eu/en/yizkor-book-of-dzyatlava/\">http://shtetlroutes.eu/en/yizkor-book-of-dzyatlava/</a> "
+        "text": "\u2022\u00a0Baruch Kaplinski, <em>Pinkes Zhetl</em> (Tel-Aviv, 1957)<br/>\n\u2022\u00a0Haya Lipski, Rivkah Lipski-Kaufman and Yitshak Ganoz, <em>'Ayaratenu Z\u2019etel: shishim shanah le-hurban kehilat Z\u2019etel 1942-2002</em> (Tel Aviv, 2002),<br/>\n\u2022\u00a0<a href=\"http://shtetlroutes.eu/en/yizkor-book-of-dzyatlava/\">http://shtetlroutes.eu/en/yizkor-book-of-dzyatlava/</a> "
       }
     }
   ]
