@@ -264,7 +264,8 @@
       "data": {
         "id": "fn-19",
         "label": "19",
-        "text": "Nadia R., HVT 3132."
+        "text": "012:40 - 13:59 Tape I (Nadia R. HVT 3132)",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/97303?e=839&media=97303&t=760&e=839\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
     {
@@ -533,7 +534,16 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>[00:16:47.01] INTERVIEWER: Well, that takes us back to you and your family and the relationship between you and your family, which must have been or must be or must have been strained as a result of this departure on your part, even though it was clear why it happened.<br/>\n[00:17:06.43] SUBJECT: My departure from-- towards Christianity, you mean?<br/>\n[00:17:10.31] INTERVIEWER: Well, yeah-- not really toward Christianity. But away from the condition that the family found itself in.<br/>\n[00:17:18.31] SUBJECT: Actually not, no, that-- I think the problem was not-- is not there. The problem-- I mean, they-- they-- they saw what I was doing as a not-- as a continuation of their own pattern of assimilation on the one hand, and moving into an academic life, on the other hand. The problem, really, for me is that I am, far more than a good many other people, at once an outsider to Jewishness and an insider.<br/>\n[\u2026]<br/>\n[00:18:34.78] Um, there's an author who's written a very deeply moving book, Saul Friedlander, When Memory Comes.  So have you looked at it?<br/>\n[00:18:43.59] INTERVIEWER: Mhm.<br/>\n[00:18:44.37] SUBJECT: And he's become a very loyal, devoted Israeli, though he teaches half time in Geneva each year, half the year. And yet, I think you'll find-- in that book I found part of the same thing-- kind of an inability to get two halves of his personality together again, except in a very tenuous way. Well, that's true for me, too.<br/>\n[00:19:14.94] But you see that my dominant personality became secular and Christian. Therefore, it would take a conscious move, rather than a natural emotive response, for me to identify myself with Judaism now. I'm too far gone.  </p>"
+        "text": "<p>[00:16:47.01] INTERVIEWER: Well, that takes us back to you and your family and the relationship between you and your family, which must have been or must be or must have been strained as a result of this departure on your part, even though it was clear why it happened.<br/>\n[00:17:06.43] SUBJECT: My departure from-- towards Christianity, you mean?<br/>\n[00:17:10.31] INTERVIEWER: Well, yeah-- not really toward Christianity. But away from the condition that the family found itself in.<br/>\n[00:17:18.31] SUBJECT: Actually not, no, that-- I think the problem was not-- is not there. The problem-- I mean, they-- they-- they saw what I was doing as a not-- as a continuation of their own pattern of assimilation on the one hand, and moving into an academic life, on the other hand. The problem, really, for me is that I am, far more than a good many other people, at once an outsider to Jewishness and an insider.<br/>\n[\u2026]<br/>\n[00:18:34.78] Um, there's an author who's written a very deeply moving book, Saul Friedlander, When Memory Comes.  So have you looked at it?<br/>\n[00:18:43.59] INTERVIEWER: Mhm.<br/>\n[00:18:44.37] SUBJECT: And he's become a very loyal, devoted Israeli, though he teaches half time in Geneva each year, half the year. And yet, I think you'll find-- in that book I found part of the same thing-- kind of an inability to get two halves of his personality together again, except in a very tenuous way. Well, that's true for me, too.<br/>\n[00:19:14.94] But you see that my dominant personality became secular and Christian. Therefore, it would take a conscious move, rather than a natural emotive response, for me to identify myself with Judaism now. I'm too far gone.<sup class=\"footnote-ref\" id=\"fnref-37\"><a href=\"#fn-37\">37</a></sup></p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-37",
+        "label": "37",
+        "text": "016:47 - 019:34",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80727?e=1174&media=80727&t=1007&e=1174\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
     {
@@ -554,7 +564,16 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>[00:48:24.31] INTERVIEWER: I-- I have to persist in the question of why they sent you to a Quaker school rather than a Jewish school.<br/>\n[00:48:30.98] SUBJECT: In England?<br/>\n[00:48:31.49] INTERVIEWER: Mhm.<br/>\n[00:48:32.21] SUBJECT: Because, like so many other Jewish families, my family was totally secularized. That is to say they had given up their-- they-- we were-- we knew we were Jews, you see? But that meant simply German citizens of Jewish religion until the Nazis came.<br/>\n[00:48:54.89] That was what assimilation meant. We were totally assimilated, and as a result, my parents had us baptized, you see? My parents had all of us children baptized.  </p>"
+        "text": "<p>[00:48:24.31] INTERVIEWER: I-- I have to persist in the question of why they sent you to a Quaker school rather than a Jewish school.<br/>\n[00:48:30.98] SUBJECT: In England?<br/>\n[00:48:31.49] INTERVIEWER: Mhm.<br/>\n[00:48:32.21] SUBJECT: Because, like so many other Jewish families, my family was totally secularized. That is to say they had given up their-- they-- we were-- we knew we were Jews, you see? But that meant simply German citizens of Jewish religion until the Nazis came.<br/>\n[00:48:54.89] That was what assimilation meant. We were totally assimilated, and as a result, my parents had us baptized, you see? My parents had all of us children baptized. <sup class=\"footnote-ref\" id=\"fnref-38\"><a href=\"#fn-38\">38</a></sup> </p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-38",
+        "label": "38",
+        "text": "48:24 - 49:07 Tape I",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80726?e=2947&media=80726&t=2904&e=2947\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
     {
@@ -582,7 +601,16 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>[00:52:58.77] INTERVIEWER: You claim you felt Jewish, or you felt an identification with your Jewish heritage ancestry, yet you were practicing Christians in an assimilated German society. It's, uh\u2014<br/>\n[00:53:11.51] SUBJECT: Heinrich Heine, the German poet who was himself Jewish, and rather cynically converted, once said that the-- that bap-- the baptismal certificate is the admission ticket to European culture. And a lot of Jewish people in the middle of the 19th century, especially in Germany, began to feel some sympathy for that. So that even when they did not do it themselves, as my parents did, they downplayed any part of their heritage, except one of a strictly limited religious cultural sort.  </p>"
+        "text": "<p>[00:52:58.77] INTERVIEWER: You claim you felt Jewish, or you felt an identification with your Jewish heritage ancestry, yet you were practicing Christians in an assimilated German society. It's, uh\u2014<br/>\n[00:53:11.51] SUBJECT: Heinrich Heine, the German poet who was himself Jewish, and rather cynically converted, once said that the-- that bap-- the baptismal certificate is the admission ticket to European culture. And a lot of Jewish people in the middle of the 19th century, especially in Germany, began to feel some sympathy for that. So that even when they did not do it themselves, as my parents did, they downplayed any part of their heritage, except one of a strictly limited religious cultural sort.<sup class=\"footnote-ref\" id=\"fnref-39\"><a href=\"#fn-39\">39</a></sup></p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-39",
+        "label": "39",
+        "text": "52:58 - 53:54 Tape I",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80726?e=3234&media=80726&t=3178&e=3234\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
     {
@@ -596,7 +624,16 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>[00:17:49.75] And I find that a very difficult way, you see. I mean, for example, if this country were to go officially anti-Semitic, which I don't see coming, but nonetheless, you know, [? if it somehow ?] did, I would clearly identify myself with the Jewish community.<br/>\n[00:18:09.64] INTERVIEWER: Why?<br/>\n[00:18:10.75] SUBJECT: That's because I think one should always identify oneself with those who are persecuted.  I think that's-- that's only right.  </p>"
+        "text": "<p>[00:17:49.75] And I find that a very difficult way, you see. I mean, for example, if this country were to go officially anti-Semitic, which I don't see coming, but nonetheless, you know, [? if it somehow ?] did, I would clearly identify myself with the Jewish community.<br/>\n[00:18:09.64] INTERVIEWER: Why?<br/>\n[00:18:10.75] SUBJECT: That's because I think one should always identify oneself with those who are persecuted.  I think that's-- that's only right.<sup class=\"footnote-ref\" id=\"fnref-40\"><a href=\"#fn-40\">40</a></sup> </p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-40",
+        "label": "40",
+        "text": "017:49 - 018:21 Tape II",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80727?e=1082&media=80727&t=1069&e=1101\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
     {
