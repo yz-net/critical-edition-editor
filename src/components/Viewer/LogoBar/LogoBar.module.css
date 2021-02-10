@@ -1,0 +1,15 @@
+.LogoBar {
+  height: 60px;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: 0px 0px 10px #ddd;
+}
+
+.LogoBar svg {
+  height: 60px;
+}
+
+.LogoBar:hover {
+  opacity: 0.8;
+}
