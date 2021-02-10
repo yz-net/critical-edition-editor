@@ -151,7 +151,7 @@ class Viewer extends React.Component<ViewerProps> {
           />
         </div> */}
 
-        <a className="teal-font" href="/">
+        <a className={styles.BrandingNavAnchor} href="/">
           <div className={`${styles.BrandingNav}`}>
             <div className={styles.BrandingNavItem}>
               Fortunoff Critical Editions
