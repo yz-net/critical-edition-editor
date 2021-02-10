@@ -8,17 +8,18 @@ import {
 } from "../../../../CriticalEditionData";
 import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
 import DebugLogger from "../../../../utils/DebugLogger";
-import getFootnotes from "../../../../utils/getFootnotes";
-import htmlToText from "../../../../utils/htmlToText";
+// import getFootnotes from "../../../../utils/getFootnotes";
+// import htmlToText from "../../../../utils/htmlToText";
 import { Footnote } from "./Footnote";
 import { Paragraph } from "./Paragraph";
 import { Image } from "./Image";
 import styles from "./Block.module.css";
-import CopyText from "./CopyText";
-import OpenFootnote from "./OpenFootnotes";
-import Permalink from "./Permalink";
-import PlayText from "./PlayText";
+// import CopyText from "./CopyText";
+// import OpenFootnote from "./OpenFootnotes";
+// import Permalink from "./Permalink";
+// import PlayText from "./PlayText";
 import { useLocation } from "react-router-dom";
+import FootnoteCount from "./FootnoteCount";
 
 const logger = new DebugLogger("Block: ");
 
@@ -39,7 +40,7 @@ export default function Block(props: {
     `p-${props.index}`
   }`;
 
-  const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
+  // const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
 
   logger.log("BLOCK TYPE:", props.blockData.type);
   useEffect(() => {
@@ -49,36 +50,36 @@ export default function Block(props: {
     }
   }, [props.inFocus]);
 
-  function Controls() {
-    const html = (props.blockData.data as ParagraphBlockData).text;
-    return (
-      <div className={styles.Controls}>
-        {html ? (
-          <React.Fragment>
-            <PlayText
-              stopPlaying={props.stopPlaying}
-              playing={props.playing}
-              playBlock={props.playBlock}
-              text={htmlToText(html)}
-            />
-            <Permalink blockID={blockID} />
-            <CopyText
-              text={(props.blockData.data as ParagraphBlockData).text}
-            />
-            {props.blockData.type === "paragraph" && footnotes.length > 0 ? (
-              // <OpenFootnote footnoteIDs={footnotes} />
-              <OpenFootnote
-                footnoteCount={footnotes.length}
-                footnoteIDs={
-                  props.nextFootnoteBlock ? [props.nextFootnoteBlock.id] : []
-                }
-              />
-            ) : null}
-          </React.Fragment>
-        ) : null}
-      </div>
-    );
-  }
+  // function Controls() {
+  //   const html = (props.blockData.data as ParagraphBlockData).text;
+  //   return (
+  //     <div className={styles.Controls}>
+  //       {html ? (
+  //         <React.Fragment>
+  //           <PlayText
+  //             stopPlaying={props.stopPlaying}
+  //             playing={props.playing}
+  //             playBlock={props.playBlock}
+  //             text={htmlToText(html)}
+  //           />
+  //           <Permalink blockID={blockID} />
+  //           <CopyText
+  //             text={(props.blockData.data as ParagraphBlockData).text}
+  //           />
+  //           {props.blockData.type === "paragraph" && footnotes.length > 0 ? (
+  //             // <OpenFootnote footnoteIDs={footnotes} />
+  //             <OpenFootnote
+  //               footnoteCount={footnotes.length}
+  //               footnoteIDs={
+  //                 props.nextFootnoteBlock ? [props.nextFootnoteBlock.id] : []
+  //               }
+  //             />
+  //           ) : null}
+  //         </React.Fragment>
+  //       ) : null}
+  //     </div>
+  //   );
+  // }
 
   function WrapBlock(inner: JSX.Element) {
     const location = useLocation();
@@ -96,12 +97,18 @@ export default function Block(props: {
           props.blockData.type
         } ${styles.Block} ${props.inFocus ? styles.InFocus : ""}`}
       >
-        <div className={styles.ControlsWrapper}>
+        <div className={styles.LeftMargin}>
+          <FootnoteCount
+            blockData={props.blockData.data as ParagraphBlockData}
+          />
+        </div>
+        {/* <div className={styles.ControlsWrapper}>
           <div className={styles.ControlsFrame}>
             <Controls />
           </div>
-        </div>
+        </div> */}
         <div className={styles.BlockWrapper}>{inner}</div>
+        <div className={styles.RightMargin}></div>
       </div>
     );
   }

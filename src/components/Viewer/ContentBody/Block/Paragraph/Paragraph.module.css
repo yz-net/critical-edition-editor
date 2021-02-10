@@ -7,6 +7,12 @@
   color: #333;
 }
 
+@media all and (max-width: 600px) {
+  .Paragraph[data-paragraph-type="paragraph"] {
+    padding: 0px 40px;
+  }
+}
+
 .Paragraph[data-paragraph-type="blockquote"] {
   padding: 1em 2em;
   font-style: italic;

@@ -56,9 +56,21 @@
 .BlockWrapper {
   flex: auto;
 
-  border-left: 10px solid transparent;
+  border-left: 0px solid transparent;
   /* padding-left: 10px; */
 }
+.LeftMargin,
+.RightMargin {
+  flex: 0 0 50px;
+}
+
+@media all and (max-width: 600px) {
+  .LeftMargin,
+  .RightMargin {
+    display: none;
+  }
+}
+
 .Block {
   margin: 18px 0;
   padding: 18px 0;

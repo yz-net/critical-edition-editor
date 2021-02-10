@@ -1,0 +1,20 @@
+.FootnoteCount {
+  color: #999;
+  fill: #999;
+  padding-top: 1em;
+}
+
+.IconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.IconContainer svg {
+  width: 20px;
+  height: 20px;
+}
+
+.Label {
+  font-size: 11px;
+  text-align: center;
+}
