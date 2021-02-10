@@ -2,11 +2,6 @@
   position: relative;
 }
 
-.SuperTitle {
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 .ContentBodyContainer {
   background-color: white;
   position: relative;
@@ -17,7 +12,7 @@
   bottom: 0;
   right: 0;
 
-  max-width: 1000px;
+  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -134,113 +129,49 @@
     rgba(0, 0, 0, 0.1) 51%,
     black 90%
   );
+}
 
-  /* background-image: linear-gradient(
-    to right,
-    black 10%,
-    transparent 33%,
-    transparent 66%,
-    black 90%
-  ); */
+.SuperTitle {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.SplashMeta {
+  font-size: 24px;
 }
 
 .SplashTitle h1 {
-  font-weight: normal;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1em;
   margin: 0px;
+  margin: 0 0 0.75em;
+
   /* color: white; */
-  line-height: 1.4em;
-  font-size: 1em;
-  margin-bottom: 1em;
-  color: white;
+  /* line-height: 1.4em; */
+  /* font-size: 1em; */
+  /* margin-bottom: 1em; */
+  /* color: white; */
 }
 
-.SplashTitleContainer .SplashMetaDivider {
-  height: 10px;
-  background-color: white;
-  /* width: 50%; */
-}
-
-@media screen and (max-height: 400px) {
-  .SplashTitle {
-    font-size: 20px;
-  }
-  .SuperTitle,
-  .SplashMeta {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-height: 400px) and (max-height: 600px) {
-  .SplashTitle {
-    font-size: 30px;
-  }
-  .SuperTitle,
-  .SplashMeta {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 400px) and (min-height: 600px) {
-  .Gradient {
-    background-image: linear-gradient(
-      to right,
-      black 10%,
-      rgba(0, 0, 0, 0.5) 49%,
-      rgba(0, 0, 0, 0.5) 51%,
-      black 90%
-    );
-  }
-
-  .SplashTitle {
-    font-size: 30px;
-  }
-  .SplashMeta {
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 401px) and (max-width: 600px) and (min-height: 600px) {
-  .SplashTitle {
-    font-size: 40px;
-  }
-
-  .SplashMeta {
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 601px) and (min-height: 600px) {
-  .SplashTitle {
-    font-size: 50px;
-  }
-
-  .SplashMeta {
-    font-size: 20px;
-  }
-}
-
-/* @media screen and (min-width: 801px) {
-  .SplashTitle {
-    font-size: 60px;
-  }
-
-  .SplashMeta {
-    font-size: 30px;
-  }
-} */
-
-/* @media screen and (min-width: 1000px) {
-  .SplashTitle {
-    font-size: 72px;
-  }
-
+@media all and (max-width: 400px) {
   .SplashTitle h1 {
-    max-width: 600px;
+    font-size: 32px;
   }
+}
 
-  .SplashMeta {
-    font-size: 30px;
+@media all and (min-width: 400px) and (max-width: 600px) {
+  .SplashTitle h1 {
+    font-size: 36px;
   }
-} */
+}
+
+@media all and (min-width: 600px) and (max-width: 800px) {
+  .SplashTitle h1 {
+    font-size: 46px;
+  }
+}
 
 .BrandingNav {
   user-select: none;

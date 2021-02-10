@@ -1,46 +1,48 @@
 .Paragraph {
-    /* background-color: #efefef; */
-    padding-left: 10px;
-    padding-right: 10px;
+  /* background-color: #efefef; */
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 21px;
+  line-height: 1.75em;
+  color: #333;
 }
 
-.Paragraph[data-paragraph-type="blockquote"]{
-
-    padding: 1em 2em;
-    font-style: italic;
-    background-color: #efefef;
-    border-radius: 3px;
+.Paragraph[data-paragraph-type="blockquote"] {
+  padding: 1em 2em;
+  font-style: italic;
+  background-color: #efefef;
+  border-radius: 3px;
 }
 
-button.FootnoteLink{
-    background-color: transparent;
-    border: none;
+button.FootnoteLink {
+  background-color: transparent;
+  border: none;
 }
 
 .FootnoteLink {
-    cursor: pointer;
-    /* background-color: #555; */
-    color: white;
-    color: teal;
-    fill: teal;
-    /* border: 1px solid #555; */
-    /* border-radius: 3px; */
-    /* padding: 0 0.5em; */
-    margin: 0 0.5em 0 0.1em;
-    text-decoration: none;
-    /* background-color: beige; */
-    /* font-size: 12px;
-    line-height: 1em; */
-    /* box-shadow: 1px 1px 0px #999; */
-    font-size: .75em;
+  cursor: pointer;
+  /* background-color: #555; */
+  color: white;
+  color: teal;
+  fill: teal;
+  /* border: 1px solid #555; */
+  /* border-radius: 3px; */
+  /* padding: 0 0.5em; */
 
+  margin: 0 0.1em;
+  text-decoration: none;
+  /* background-color: beige; */
+  /* font-size: 12px;
+    line-height: 1em; */
+  /* box-shadow: 1px 1px 0px #999; */
+  font-size: 0.75em;
 }
 
-.FootnoteLink:hover{
-    /* box-shadow: 4px 4px 0px #999; */
-    /* border-color:beige */
-    color: orangered;
-    fill: orangered;
-    /* transition: color 1s; */
-
+.FootnoteLink:hover {
+  /* box-shadow: 4px 4px 0px #999; */
+  /* border-color:beige */
+  color: orangered;
+  fill: orangered;
+  background-color: #f9f5ef;
+  border-radius: 2px;
 }

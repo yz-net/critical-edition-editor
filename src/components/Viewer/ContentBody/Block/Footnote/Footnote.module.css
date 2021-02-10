@@ -29,7 +29,7 @@
 }
 
 .NavButtonTray button:hover {
-  background-color: orangered;
+  background-color: #ccc0a6;
   transition: background-color 0.5s;
   cursor: pointer;
 }
@@ -57,8 +57,8 @@
   /* padding: 1em; */
   box-sizing: border-box;
 
-  font-size: 14px;
-  line-height: 1.9em;
+  font-size: 13px;
+  line-height: 1.75em;
 }
 
 .FootnoteLabel {
@@ -76,7 +76,7 @@
 }
 
 [data-blocktype="footnoteParagraph"]:hover .FootnoteLabel {
-  background-color: orangered;
+  background-color: #ccc0a6;
   transition: background-color 1s;
   color: white;
 }
