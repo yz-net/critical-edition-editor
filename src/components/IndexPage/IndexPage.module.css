@@ -26,6 +26,10 @@
 
 .IndexItemContainer {
   flex: 1 0 50%;
+
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media all and (max-width: 1000px) {
