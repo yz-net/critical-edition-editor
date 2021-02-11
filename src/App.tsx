@@ -59,7 +59,7 @@ export default function App() {
           <Route path="/">
             <IndexPage
               projectTitle="Critical Edition Series"
-              projectDescription="The Fortunoff Video Archive’s Critical Editions Series offers students, researchers and the public the opportunity to watch and learn about a selection of our video testimonies within their rich historical context. Written by our visiting scholars and postdoctoral fellows, each Critical Edition consists of two parts. The first is an introductory essay that draws on the most recent historical research to situate the survivor’s testimony in its specific time and place. The second is an annoted transcript, embedded in the video, that elucidate and shed light on the survivor’s testimony."
+              projectDescription="The Critical Editions Series contextualizes Fortunoff Video testimonies in their historical time and space. Each testimony in the series was chosen by one of our visiting scholars. Each scholar then produced an introductory essay about the chosen testimony, along with an annotated transcript that provides additional insight and background information. "
               essays={essays}
             />
           </Route>
