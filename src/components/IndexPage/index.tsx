@@ -2,6 +2,7 @@ import React from "react";
 import { EssayDataEntry } from "../../EssayData";
 import DebugLogger from "../../utils/DebugLogger";
 import EssayIndexItem from "../EssayIndexItem";
+import LogoBar from "../Viewer/LogoBar";
 import ImpactHeader from "./ImpactHeader";
 import styles from "./IndexPage.module.css";
 
@@ -32,6 +33,7 @@ export default function IndexPage(props: IndexPageProps) {
 
   return (
     <div>
+      <LogoBar />
       <ImpactHeader />
       <div className={styles.CenterColumn}>
         <IndexHeader title={projectTitle} description={projectDescription} />

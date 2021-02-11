@@ -13,6 +13,7 @@ import styles from "./Viewer.module.css";
 import { EssayDataEntry } from "../../EssayData";
 // import EssayLinks from "./EssayLinks";
 import EssayPreamble from "./EssayPreamble";
+import LogoBar from "./LogoBar";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -129,6 +130,8 @@ class Viewer extends React.Component<ViewerProps> {
         // onScroll={this.handleScroll}
         className={styles.Viewer}
       >
+        <LogoBar />
+
         {/* <div style={{ position: "fixed", bottom: 0 }}>
           Playing: {this.state.playingBlock}
         </div> */}

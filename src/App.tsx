@@ -12,7 +12,7 @@ import "./App.css";
 // import EssayIndexItem from "./components/EssayIndexItem";
 import IndexPage from "./components/IndexPage";
 import { EssayDataEntry, essays } from "./EssayData";
-import LogoBar from "./components/Viewer/LogoBar";
+// import LogoBar from "./components/Viewer/LogoBar";
 
 // const logger = new DebugLogger("App: ");
 
@@ -47,7 +47,6 @@ function ViewerWrapper() {
 export default function App() {
   return (
     <div className="App serif-copy-ff">
-      <LogoBar />
       <Router>
         <Switch>
           <Route path="/example-essay">
