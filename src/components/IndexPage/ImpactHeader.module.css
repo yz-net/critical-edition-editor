@@ -47,16 +47,6 @@
   z-index: 20;
 }
 
-@media all and (max-width: 800px) {
-  h1.Title {
-    font-size: 46px;
-  }
-
-  .TextArea {
-    padding-bottom: 14px;
-  }
-}
-
 h1.Title {
   font-size: 56px;
   line-height: 1em;
@@ -70,4 +60,14 @@ h1.Title {
   margin: 10px 0;
   font-style: italic;
   padding-left: 12px;
+}
+
+@media screen and (max-width: 800px) {
+  h1.Title {
+    font-size: 46px;
+  }
+
+  .TagLine {
+    font-size: 19px;
+  }
 }
