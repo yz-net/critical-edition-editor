@@ -4,8 +4,6 @@ import { ReactComponent as Logo } from "../svg/yale-logo-square.svg";
 
 export default function LogoBar() {
   return (
-    // <a href="https://fortunoff.library.yale.edu">
-
     <React.Fragment>
       <div className={`${styles.BigBar} ${styles.Bar}`}>
         <div className={styles.BlueBox}>
@@ -20,6 +18,5 @@ export default function LogoBar() {
         <div className={styles.LogoText}>Fortunoff Critical Editions</div>
       </div> */}
     </React.Fragment>
-    // </a>
   );
 }
