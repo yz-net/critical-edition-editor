@@ -11,6 +11,10 @@
   background-color: #efefef;
 }
 
+.Byline {
+  margin-top: 0px;
+}
+
 /* .ThumbnailArea {
   flex: 0 0 320px;
 } */

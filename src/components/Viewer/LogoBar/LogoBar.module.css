@@ -9,13 +9,19 @@
 
 .BlueBox {
   background-color: black;
-  width: 60px;
-  height: 100%;
+  /* width: 60px; */
+  height: 60px;
+}
+
+.BlueBox svg {
+  height: 60px;
+  background-color: white;
 }
 
 .LogoBar svg {
   height: 60px;
   flex: 0 0 60px;
+  background-color: white;
 }
 
 .LogoBar:hover {
@@ -23,7 +29,12 @@
 }
 
 .LogoText {
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  /* text-transform: uppercase; */
+  font-feature-settings: "smcp" 1;
+  letter-spacing: 2px;
+  font-size: 19px;
+  color: #333;
   text-align: center;
   top: 0;
 
@@ -33,11 +44,17 @@
 
   position: sticky;
 
-  font-size: 19px;
+  /* font-size: 19px; */
+}
+
+.LogoText svg {
+  height: 20px;
 }
 
 .Bar {
   display: flex;
+  justify-content: space-between;
+
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   z-index: 100;
 
@@ -55,4 +72,47 @@
   top: 0;
   height: 30px;
   box-shadow: 0px 0px 10px #999;
+}
+
+.BarLink:hover {
+  opacity: 0.5;
+}
+
+.BackButton {
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  display: block;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.FullAppLogo {
+  height: 60px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BackButton,
+.FullAppLogo {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .BackButton {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .FullAppLogo {
+    display: flex;
+  }
 }

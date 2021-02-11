@@ -43,7 +43,9 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
                 {essay.supertitle ? essay.supertitle : null}
               </p> */}
               <h3 className={styles.Title}> {essay.title}</h3>
-              <p className={"sans-copy-ff"}>by {essay.author}</p>
+              <p className={`${styles.Byline} sans-copy-ff`}>
+                by {essay.author}
+              </p>
             </header>
           </div>
           {/* <div className={styles.MetaContainer}>

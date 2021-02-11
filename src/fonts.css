@@ -31,6 +31,11 @@
 }
 
 @font-face {
+  font-family: "YaleDesign";
+  src: url("/fonts/yaledessmacap-webfont.woff") format("woff");
+}
+
+@font-face {
   font-family: "Mallory";
   src: url("/fonts/Mallory-Medium.woff"), url("/fonts/Mallory-Medium.woff2");
   font-weight: normal;

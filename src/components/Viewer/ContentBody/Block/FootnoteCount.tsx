@@ -2,7 +2,7 @@ import { ParagraphBlockData } from "../../../../CriticalEditionData";
 import styles from "./FootnoteCount.module.css";
 import React from "react";
 import getFootnotes from "../../../../utils/getFootnotes";
-import { ReactComponent as FootnoteIcon } from "../../svg/footnote_icon.svg";
+import { ReactComponent as FootnoteIcon } from "../../../../svg/footnote_icon.svg";
 
 interface FootnoteCountProps {
   blockData: ParagraphBlockData;

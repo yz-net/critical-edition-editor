@@ -22,7 +22,7 @@ function IndexHeader(props: IndexHeaderProps) {
   return (
     <div className={styles.IndexHeader}>
       {/* <h1 className={`teal-font ${styles.Title}`}>{title}</h1> */}
-      <p className="sans-copy-ff">{description}</p>
+      <p className={`sans-copy-ff`}>{description}</p>
     </div>
   );
 }
