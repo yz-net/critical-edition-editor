@@ -96,6 +96,16 @@
   border-color: #eee;
 }
 
+.Block[data-blocktype="header"] {
+  margin-bottom: -10px;
+  padding: 0px;
+  padding-top: 10px;
+}
+
+.Block[data-blocktype="header"] h2 {
+  font-size: 32px;
+}
+
 .Block[data-blocktype="blockquote"] .BlockWrapper,
 .Block[data-blocktype="header"] .BlockWrapper {
   margin-left: 10px;
