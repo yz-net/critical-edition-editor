@@ -65,7 +65,9 @@ h1.Title {
 
 .TagLine {
   font-size: 26px;
-  line-height: 0.25em;
+  /* line-height: 0.25em; */
+  /* line-height: 1em; */
+  margin: 10px 0;
   font-style: italic;
   padding-left: 12px;
 }
