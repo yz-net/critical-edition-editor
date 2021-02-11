@@ -58,6 +58,7 @@
 
   border-left: 0px solid transparent;
   /* padding-left: 10px; */
+  padding-left: 20px;
 }
 .LeftMargin,
 .RightMargin {
@@ -93,6 +94,11 @@
 .Block:hover .BlockWrapper,
 .Block:hover .ControlsWrapper {
   border-color: #eee;
+}
+
+.Block[data-blocktype="blockquote"] .BlockWrapper,
+.Block[data-blocktype="header"] .BlockWrapper {
+  margin-left: 10px;
 }
 
 .Block[data-blocktype="footnoteParagraph"]:hover .BlockWrapper,
