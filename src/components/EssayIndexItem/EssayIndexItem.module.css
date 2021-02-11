@@ -30,10 +30,16 @@
   object-fit: contain;
   border: 1px solid #222;
   background-color: black;
+
+  filter: saturate(50%);
+}
+
+.ThumbnailArea:hover video {
+  filter: unset;
 }
 
 .TextArea {
-  padding: 0 33px;
+  /* padding: 0 33px; */
 }
 
 a.ItemLink {
