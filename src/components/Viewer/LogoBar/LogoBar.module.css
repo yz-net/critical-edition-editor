@@ -1,15 +1,58 @@
-.LogoBar {
-  height: 60px;
+/* .LogoBar {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
   box-shadow: 0px 0px 10px #ddd;
+  position: relative;
+  top: 0;
+} */
+
+.BlueBox {
+  background-color: black;
+  width: 60px;
+  height: 100%;
 }
 
 .LogoBar svg {
   height: 60px;
+  flex: 0 0 60px;
 }
 
 .LogoBar:hover {
   opacity: 0.8;
+}
+
+.LogoText {
+  flex-grow: 1;
+  text-align: center;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: sticky;
+
+  font-size: 19px;
+}
+
+.Bar {
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.BigBar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+}
+
+.SmallBar {
+  position: sticky;
+  top: 0;
+  height: 30px;
+  box-shadow: 0px 0px 10px #999;
 }
