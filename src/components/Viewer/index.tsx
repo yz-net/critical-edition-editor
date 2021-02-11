@@ -151,14 +151,6 @@ class Viewer extends React.Component<ViewerProps> {
           />
         </div> */}
 
-        {/* <a className={styles.BrandingNavAnchor} href="/">
-          <div className={`${styles.BrandingNav}`}>
-            <div className={styles.BrandingNavItem}>
-              Fortunoff Critical Editions
-            </div>
-          </div>
-        </a> */}
-
         <div className={styles.SplashTitleContainer}>
           <div className={styles.Gradient} />
 
