@@ -107,7 +107,7 @@ export default function Block(props: {
             <Controls />
           </div>
         </div> */}
-        <div className={styles.BlockWrapper}>{inner}</div>
+        {hide ? null : <div className={styles.BlockWrapper}>{inner}</div>}
         <div className={styles.RightMargin}></div>
       </div>
     );

@@ -15,6 +15,12 @@ export default function scrollToElementByID(elementID: string, e?: Event) {
         element.scrollIntoView({ behavior: "smooth", block: "center" });
         element.focus();
         e?.preventDefault();
+
+        // Update the page hash
+        const location = window.location;
+        window.location.hash = "#" + elementID;
+
+
     } else {
         logger.warn("Trying to scroll to nonexistent element: " + elementID)
     }
