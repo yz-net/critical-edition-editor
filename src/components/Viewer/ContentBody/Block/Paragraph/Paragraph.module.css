@@ -5,6 +5,9 @@
   font-size: 21px;
   line-height: 1.75em;
   color: #333;
+
+  /* Chrome hack: https://stackoverflow.com/questions/11289166/chrome-on-android-resizes-font */
+  max-height: 999999px;
 }
 
 @media screen and (max-width: 600px) {
