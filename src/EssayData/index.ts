@@ -14,7 +14,7 @@ export interface EssayDataEntry {
 export const essays: {
     [essayID: string]: EssayDataEntry;
 } = {
-    krasilovskaia: {
+    "hvt-3280": {
         supertitle: "Introduction to the testimony of",
         hvtID: "3280",
         title: "Liubov’ Naumovna Krasilovskaia",
@@ -24,7 +24,7 @@ export const essays: {
         essayPath: "/data/intro-hvt-3280.json",
         publicationDate: "February 1, 2021",
     },
-    saraffian: {
+    "hvt-0237": {
         supertitle: "Introduction to the testimony of",
         hvtID: "0237",
         title: "Martha Saraffian",
@@ -36,7 +36,7 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/background-loop.mp4",
         publicationDate: "February 1, 2021",
     },
-    fox: {
+    "hvt-2033": {
         supertitle: "Introduction to the testimony of",
         hvtID: "2033",
         title: "Esther Fox",
@@ -47,7 +47,7 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/2033/background-loop.mp4",
 
     },
-    frei: {
+    "hvt-0170": {
         supertitle: "Introduction to the testimony of",
         title: "Hans Frei",
         hvtID: "0170",
@@ -59,7 +59,7 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background-loop.mp4",
         publicationDate: "February 1, 2021",
     },
-    zawistowska: {
+    "hvt-3169": {
         hvtID: "3169",
         supertitle: "Introduction to the testimony of",
         title: "Władysława Zawistowska",
@@ -70,7 +70,7 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3169/background-loop.mp4",
 
     },
-    zwolinska: {
+    "hvt-3164": {
         hvtID: "3164",
         supertitle: "Introduction to the testimony of",
         title: "Helena Balicka-Zwolińska",
@@ -81,7 +81,7 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3164/background-loop.mp4",
 
     },
-    riegner: {
+    "hvt-0764": {
         hvtID: "0764",
         supertitle: "Introduction to the testimony of",
         title: "Gerhart M. Riegner",
@@ -93,7 +93,7 @@ export const essays: {
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/hvt-0764-background-loop.mp4",
         publicationDate: "February 1, 2021",
     },
-    dynner: {
+    "hvt-3038": {
         hvtID: "3038",
         supertitle: "Introduction to the testimony of",
         title: "Rubin Pinsker",
