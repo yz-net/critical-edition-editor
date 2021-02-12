@@ -17,7 +17,6 @@ export default function scrollToElementByID(elementID: string, e?: Event) {
         e?.preventDefault();
 
         // Update the page hash
-        const location = window.location;
         window.location.hash = "#" + elementID;
 
 
