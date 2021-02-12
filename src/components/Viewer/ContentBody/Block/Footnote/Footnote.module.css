@@ -6,12 +6,21 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 0.5em;
+
+  position: relative;
 }
 
 .NavButtonTray {
-  flex: 0 0 80px;
+  flex: 0 0 64px;
   display: flex;
   justify-content: flex-end;
+
+  /* border: 10px solid red; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: calc(100% - 64px);
 }
 
 .NavButtonTray button {
@@ -73,6 +82,8 @@
   background-color: #d5cbb7;
   color: white;
   font-weight: 500;
+
+  position: absolute;
 }
 
 [data-blocktype="footnoteParagraph"]:hover .FootnoteLabel {
@@ -83,7 +94,12 @@
 
 .FootnoteText {
   flex: 1;
-  padding-right: 1em;
-  padding-left: 1em;
-  padding-top: 1em;
+  /* padding-right: 1em;
+  padding-left: 1em; */
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.TextContent {
+  margin: 0px 32px;
 }

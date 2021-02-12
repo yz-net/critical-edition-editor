@@ -8,6 +8,12 @@
   position: relative;
 }
 
+@media screen and (max-height: 500px) {
+  .ImpactHeader {
+    height: calc(100vh - 60px);
+  }
+}
+
 .Background {
   background-image: url("/img/fortunoff_ce_texture.jpg");
   background-size: 100%;

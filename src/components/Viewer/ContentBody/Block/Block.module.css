@@ -58,7 +58,7 @@
 
   border-left: 0px solid transparent;
   /* padding-left: 10px; */
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 .LeftMargin,
 .RightMargin {
@@ -104,6 +104,13 @@
 
 .Block[data-blocktype="header"] h2 {
   font-size: 32px;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .Block[data-blocktype="header"] h2 {
+    font-size: 24px;
+  }
 }
 
 .Block[data-blocktype="blockquote"] .BlockWrapper,
@@ -114,6 +121,10 @@
 .Block[data-blocktype="footnoteParagraph"]:hover .BlockWrapper,
 .Block[data-blocktype="footnoteParagraph"] .ControlsWrapper {
   border-color: #ccc0a6;
+}
+
+.Block[data-blocktype="paragraph"] .BlockWrapper {
+  padding: 0px 10px;
 }
 
 .Delimiter {

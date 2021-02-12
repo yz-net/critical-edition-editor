@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.Affiliation {
+  font-size: 13px;
+}
+
 .ContentBodyContainer {
   background-color: white;
   position: relative;
@@ -58,6 +62,12 @@
   /* background-color: white;; */
   /* background-color: #222; */
   /* box-shadow: 0px 0px 10px gray; */
+}
+
+@media screen and (max-height: 500px) {
+  .SplashTitleContainer {
+    height: calc(100vh - 60px);
+  }
 }
 
 .SplashBackgroundVideoContainer {

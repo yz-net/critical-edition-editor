@@ -194,6 +194,9 @@ class Viewer extends React.Component<ViewerProps> {
               {/* <div className={styles.SplashMetaDivider}></div> */}
               <div className={styles.SplashMeta}>
                 by {this.props.essay.author}
+                <div className={`${styles.Affiliation} sans-copy-ff`}>
+                  {this.props.essay.affiliation}
+                </div>
               </div>
             </div>
           </div>
