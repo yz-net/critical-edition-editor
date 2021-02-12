@@ -1,7 +1,7 @@
 .Footnote {
   font-size: 14px;
   line-height: unset;
-  background-color: beige;
+  background-color: #f9f5ef;
   /* padding: 20px; */
   display: flex;
   flex-direction: column;
