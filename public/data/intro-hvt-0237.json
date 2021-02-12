@@ -355,10 +355,10 @@
       }
     },
     {
-      "type": "paragraph",
+      "type": "image",
       "data": {
-        "paragraphType": "paragraph",
-        "text": "Historic postcard showing Reichstra\u00dfe (today Polsk\u00e1 street) in the 1930s (source: akpool.de).  "
+        "src": "/media/hvt-0237/town-square-1000.jpg",
+        "caption": "The central town square of Trautenau/Trutnov in the early 20th century. (Source: Author\u2019s private collection)"
       }
     },
     {
@@ -744,6 +744,13 @@
         "label": "v-6",
         "text": "Tape I 16:05 - 16:37",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=963&media=94894&t=965&e=997\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "image",
+      "data": {
+        "src": "/media/hvt-0237/trutnov-1000.jpg",
+        "caption": "Trautenau/Trutnov after the annexation of the Sudetenland by Nazi Germany in 1939 (source: author\u2019s private collection)"
       }
     },
     {
