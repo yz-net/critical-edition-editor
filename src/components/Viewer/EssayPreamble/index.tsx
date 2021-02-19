@@ -5,11 +5,14 @@ import styles from "./EssayPreamble.module.css";
 
 export interface EssayPreambleProps {
   hvtID: string;
+  aviaryLink?: string;
 }
 export default function EssayPreamble(props: EssayPreambleProps) {
   const { hvtID } = props;
   const pdfURL = `/pdf/critical-edition-hvt-${hvtID}.pdf`;
-  const aviaryURL = `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${hvtID}`;
+  const aviaryURL =
+    props.aviaryLink ||
+    `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${hvtID}`;
 
   return (
     <div className={`sans-copy-ff ${styles.EssayPreamble}`}>

@@ -203,7 +203,10 @@ class Viewer extends React.Component<ViewerProps> {
           <div className={styles.SplashTitleTail}></div>
         </div>
 
-        <EssayPreamble hvtID={this.props.essay.hvtID} />
+        <EssayPreamble
+          hvtID={this.props.essay.hvtID}
+          aviaryLink={this.props.essay.aviaryLink}
+        />
         <div
           // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
           className={styles.ContentBodyContainer}
