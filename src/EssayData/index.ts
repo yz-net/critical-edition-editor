@@ -30,7 +30,7 @@ export const essays: {
         hvtID: "0237",
         title: "Martha Saraffian",
         author: "Nikolaus Hagen",
-        affiliation: "Universität Innsbruck",
+        affiliation: "Innsbruck",
         essayPath: "/data/intro-hvt-0237.json",
         posterPath:
             "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/background.png",
@@ -43,7 +43,7 @@ export const essays: {
         hvtID: "2033",
         title: "Esther Fox",
         author: "Sari Siegel",
-        affiliation: "Cedars Sinai",
+        affiliation: "Cedars-Sinai Medical Center/UCLA",
         essayPath: "/data/intro-hvt-2033.json",
         publicationDate: "February 1, 2021",
         videoPath:
