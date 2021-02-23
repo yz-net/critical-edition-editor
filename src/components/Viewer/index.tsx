@@ -14,6 +14,7 @@ import { EssayDataEntry } from "../../EssayData";
 // import EssayLinks from "./EssayLinks";
 import EssayPreamble from "./EssayPreamble";
 import LogoBar from "./LogoBar";
+import CallToAction from "./CallToAction";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -235,6 +236,15 @@ class Viewer extends React.Component<ViewerProps> {
               documentData={this.state.document.document}
             />
           </div>
+
+          {this.props.essay.aviaryLink ? (
+            <div className={styles.CallToActionArea}>
+              <CallToAction
+                posterURL={get_url("poster.jpg")}
+                essay={this.props.essay}
+              />
+            </div>
+          ) : null}
         </div>
       </div>
     );
