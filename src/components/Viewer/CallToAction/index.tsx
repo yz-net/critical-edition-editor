@@ -12,7 +12,14 @@ export default function CallToAction(props: CallToActionProps) {
     <div className={styles.CallToActionOuter}>
       <a className={styles.CallToActionLink} href={essay.aviaryLink}>
         <div className={styles.CallToActionInner}>
-          <div className={styles.VideoContainer}>
+          <div
+            // style={{ backgroundImage: `url(${posterURL})` }}
+            className={styles.VideoContainer}
+          >
+            {/* <div
+              style={{ backgroundImage: `url(${posterURL})` }}
+              className={styles.VideoPoster}
+            /> */}
             <img
               className={styles.VideoPreview}
               alt={`Frame from video from testimony of ${essay.title}`}
@@ -28,14 +35,16 @@ export default function CallToAction(props: CallToActionProps) {
             </div>
           </div>
           <div className={styles.TextArea}>
-            <p className={`${styles.OverLine}`}>
-              View the annotated video testimony of
-            </p>
-            <h3 className={styles.IntervieweeName}>{props.essay.title}</h3>
-            <p className={`sans-copy-ff ${styles.CallNumber}`}>
-              HVT-{essay.hvtID} | Fortunoff Video Archive for Holocaust
-              Testimonies
-            </p>
+            <div>
+              <p className={`${styles.OverLine}`}>
+                View the annotated video testimony of
+              </p>
+              <h3 className={styles.IntervieweeName}>{props.essay.title}</h3>
+              <p className={`sans-copy-ff ${styles.CallNumber}`}>
+                HVT-{essay.hvtID} | Fortunoff Video Archive for Holocaust
+                Testimonies
+              </p>
+            </div>
           </div>
         </div>
       </a>
