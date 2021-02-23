@@ -13,6 +13,12 @@
 }
 
 @media screen and (max-width: 800px) {
+  .CallToActionOuter {
+    margin: 0px;
+    background-color: #efefef;
+    padding-bottom: 22px;
+  }
+
   .CallToActionInner {
     display: block;
     /* width: 50%; */
