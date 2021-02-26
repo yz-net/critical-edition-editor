@@ -70,18 +70,18 @@
   }
 }
 
-.CallToActionInner:hover .VideoContainer {
+/* .CallToActionInner:hover .VideoContainer {
   border-color: #0d99ab;
-}
+} */
 
 img.VideoPreview {
   width: 100%;
-  opacity: 0.7;
-}
-
-.CallToActionInner:hover img.VideoPreview {
   opacity: 1;
 }
+/* 
+.CallToActionInner:hover img.VideoPreview {
+  opacity: 1;
+} */
 
 .TextArea {
   margin: 0px 24px;
