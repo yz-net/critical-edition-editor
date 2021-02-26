@@ -1,0 +1,41 @@
+.PlayButtonOuter {
+  display: inline-block;
+}
+
+.PlayButtonOuter a {
+  text-decoration: none;
+}
+
+.PlayButtonInner:hover {
+  box-shadow: 0px 0px 10px #999;
+  opacity: 0.9;
+}
+
+.PlayButtonInner {
+  border-radius: 12px;
+  background-color: #0d99ab;
+  fill: white;
+  color: white;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 23px 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Icon {
+  display: flex;
+  align-items: center;
+}
+
+.Icon svg {
+  height: 26px;
+  width: 26px;
+  margin-right: 18px;
+}
+
+.Text {
+  text-align: right;
+}
