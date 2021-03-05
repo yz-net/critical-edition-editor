@@ -76,3 +76,12 @@ h1.Title {
     font-size: 19px;
   }
 }
+
+.Caption {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  z-index: 30;
+  font-size: 13px;
+  color: #777;
+}

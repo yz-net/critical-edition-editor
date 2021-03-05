@@ -1,4 +1,5 @@
 import React from "react";
+import { ProjectData } from "../../Data/ProjectData";
 import styles from "./ImpactHeader.module.css";
 
 export interface ImpactHeaderProps {
@@ -24,6 +25,9 @@ export default function ImpactHeader(props: ImpactHeaderProps) {
       <div className={styles.TextArea}>
         <h1 className={styles.Title}>{title}</h1>
         <p className={styles.TagLine}>{subtitle}</p>
+      </div>
+      <div className={`sans-copy-ff ${styles.Caption}`}>
+        {ProjectData.impactImageCaption}
       </div>
     </div>
   );
