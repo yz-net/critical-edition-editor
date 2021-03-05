@@ -122,3 +122,15 @@ export const essays: {
         publicationDate: "February 1, 2021"
     }
 };
+
+// set to undefined to use default object order
+export const essayOrder = [
+    "hvt-2033", // Fox
+    "hvt-0170", // Frei
+    "hvt-3280",  // Krasilovskaia
+    "hvt-3038", // Pinsker
+    "hvt-0764", // Riegner
+    "hvt-0237", // Saraffian
+    "hvt-3169", // Zawistowska
+    "hvt-3164", // Zwolinska
+]

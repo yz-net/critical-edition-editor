@@ -1,5 +1,5 @@
 import React from "react";
-import { EssayDataEntry } from "../../Data/EssayData";
+import { EssayDataEntry, essayOrder } from "../../Data/EssayData";
 import DebugLogger from "../../utils/DebugLogger";
 import EssayIndexItem from "../EssayIndexItem";
 import LogoBar from "../Viewer/LogoBar";
@@ -51,18 +51,20 @@ export default function IndexPage(props: IndexPageProps) {
       <div className={styles.CenterColumn}>
         <IndexHeader title={projectTitle} description={projectDescription} />
         <div className={styles.ItemListContainer}>
-          {Object.keys(essays).map((essayID: string, i: number) => {
-            const essay: EssayDataEntry = essays[essayID];
-            if (!essay) {
-              logger.warn("bad essay id: " + essayID);
-              return null;
+          {(essayOrder || Object.keys(essays)).map(
+            (essayID: string, i: number) => {
+              const essay: EssayDataEntry = essays[essayID];
+              if (!essay) {
+                logger.warn("bad essay id: " + essayID);
+                return null;
+              }
+              return (
+                <div key={i} className={styles.IndexItemContainer}>
+                  <EssayIndexItem essayID={essayID} essay={essay} />
+                </div>
+              );
             }
-            return (
-              <div key={i} className={styles.IndexItemContainer}>
-                <EssayIndexItem essayID={essayID} essay={essay} />
-              </div>
-            );
-          })}
+          )}
         </div>
       </div>
     </div>
