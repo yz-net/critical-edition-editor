@@ -39,7 +39,7 @@ export default function CallToAction(props: CallToActionProps) {
         <div className={styles.TextArea}>
           <div className={styles.TextGrouping}>
             <p className={`${styles.OverLine}`}>
-              View the annotated video testimony of
+              Watch the annotated video testimony of
             </p>
 
             <h3 className={styles.IntervieweeName}>{props.essay.title}</h3>

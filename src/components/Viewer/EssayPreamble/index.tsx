@@ -24,7 +24,7 @@ export default function EssayPreamble(props: EssayPreambleProps) {
       <p>
         {`HVT-${props.hvtID}`} |{" "}
         <a className="teal-svg teal-font" href={aviaryURL}>
-          View the annotated video testimony
+          Watch the annotated video testimony
         </a>{" "}
         or{" "}
         <a className="teal-svg teal-font" href={pdfURL}>
