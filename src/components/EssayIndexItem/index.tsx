@@ -35,6 +35,7 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
               <h3 className={styles.Title}> {essay.title}</h3>
               <p className={`${styles.Byline} sans-copy-ff`}>
                 by {essay.author}
+                {essay.affiliation ? `, ${essay.affiliation}` : null}
               </p>
             </header>
           </div>
