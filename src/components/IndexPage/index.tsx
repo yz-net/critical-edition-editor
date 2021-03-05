@@ -1,5 +1,5 @@
 import React from "react";
-import { EssayDataEntry } from "../../EssayData";
+import { EssayDataEntry } from "../../Data/EssayData";
 import DebugLogger from "../../utils/DebugLogger";
 import EssayIndexItem from "../EssayIndexItem";
 import LogoBar from "../Viewer/LogoBar";
@@ -9,6 +9,8 @@ import styles from "./IndexPage.module.css";
 export interface IndexPageProps {
   projectTitle: string;
   projectDescription: string;
+  projectSubtitle: string;
+  backgroundImageURL: string;
   essays: { [essayID: string]: EssayDataEntry };
 }
 
@@ -18,6 +20,7 @@ interface IndexHeaderProps {
   title: string;
   description: string;
 }
+
 function IndexHeader(props: IndexHeaderProps) {
   const { description } = props;
   return (
@@ -29,12 +32,22 @@ function IndexHeader(props: IndexHeaderProps) {
 }
 
 export default function IndexPage(props: IndexPageProps) {
-  const { essays, projectDescription, projectTitle } = props;
+  const {
+    essays,
+    backgroundImageURL,
+    projectDescription,
+    projectTitle,
+    projectSubtitle,
+  } = props;
 
   return (
     <div>
       <LogoBar />
-      <ImpactHeader />
+      <ImpactHeader
+        backgroundImageURL={backgroundImageURL}
+        title={projectTitle}
+        subtitle={projectSubtitle}
+      />
       <div className={styles.CenterColumn}>
         <IndexHeader title={projectTitle} description={projectDescription} />
         <div className={styles.ItemListContainer}>
@@ -45,8 +58,8 @@ export default function IndexPage(props: IndexPageProps) {
               return null;
             }
             return (
-              <div className={styles.IndexItemContainer}>
-                <EssayIndexItem essayID={essayID} key={i} essay={essay} />
+              <div key={i} className={styles.IndexItemContainer}>
+                <EssayIndexItem essayID={essayID} essay={essay} />
               </div>
             );
           })}

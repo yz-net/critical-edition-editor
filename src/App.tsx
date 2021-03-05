@@ -11,7 +11,8 @@ import {
 import "./App.css";
 // import EssayIndexItem from "./components/EssayIndexItem";
 import IndexPage from "./components/IndexPage";
-import { EssayDataEntry, essays } from "./EssayData";
+import { EssayDataEntry, essays } from "./Data/EssayData";
+import { ProjectData } from "./Data/ProjectData";
 // import LogoBar from "./components/Viewer/LogoBar";
 
 // const logger = new DebugLogger("App: ");
@@ -35,9 +36,11 @@ function ViewerWrapper() {
     <Router>
       <Route path="/">
         <Viewer
+          homeLink={ProjectData.homeLink}
           essay={essay}
           hash={location.hash}
           essayPath={essay.essayPath}
+          posterPath={essay.posterPath}
         />
       </Route>
     </Router>
@@ -57,8 +60,10 @@ export default function App() {
           </Route>
           <Route path="/">
             <IndexPage
-              projectTitle="Critical Edition Series"
-              projectDescription="The Critical Editions Series contextualizes Fortunoff Video testimonies in their historical time and place. Each testimony in the series was chosen by one of our visiting scholars. Each scholar then produced an introductory essay about the chosen testimony, along with an annotated transcript that provides additional insight and background information. "
+              projectTitle={ProjectData.title}
+              projectSubtitle={ProjectData.subtitle || ""}
+              projectDescription={ProjectData.introCopy || ""}
+              backgroundImageURL="/img/ImpactHeaderBackground.jpg"
               essays={essays}
             />
           </Route>
