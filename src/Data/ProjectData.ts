@@ -5,6 +5,7 @@ export interface ProjectDataObject {
   introCopy?: string,
   homeLink: string,
   callToAction: boolean,
+  impactImageCaption?: string,
 }
 
 export const ProjectData: ProjectDataObject = {
@@ -13,6 +14,7 @@ export const ProjectData: ProjectDataObject = {
   introCopy:
     "The Critical Editions Series contextualizes Fortunoff Video testimonies in their historical time and place. Each testimony in the series was chosen by one of our visiting scholars. Each scholar then produced an introductory essay about the chosen testimony, along with an annotated transcript that provides additional insight and background information.",
   homeLink: "https://fortunoff.library.yale.edu",
-  callToAction: true
+  callToAction: true,
+  impactImageCaption: "Caption of image by photographer"
 };
 
