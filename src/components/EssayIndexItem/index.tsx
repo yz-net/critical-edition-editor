@@ -5,14 +5,13 @@ import styles from "./EssayIndexItem.module.css";
 
 export interface EssayIndexItemProps {
   essay: EssayDataEntry;
-  essayID: string;
 }
 
 export default function EssayIndexItem(props: EssayIndexItemProps) {
-  const { essayID, essay } = props;
+  const { essay } = props;
 
   return (
-    <Link to={`/essay/${essayID}`} className={styles.ItemLink}>
+    <Link to={`/essay/${essay.id}`} className={styles.ItemLink}>
       <div className={styles.EssayIndexItem}>
         <div className={styles.ThumbnailArea}>
           <video

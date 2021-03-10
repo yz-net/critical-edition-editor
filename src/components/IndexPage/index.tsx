@@ -1,6 +1,6 @@
 import React from "react";
-import { EssayDataEntry, essayOrder } from "../../Data/EssayData";
-import DebugLogger from "../../utils/DebugLogger";
+import { EssayDataEntry } from "../../Data/EssayData";
+// import DebugLogger from "../../utils/DebugLogger";
 import EssayIndexItem from "../EssayIndexItem";
 import LogoBar from "../Viewer/LogoBar";
 import ImpactHeader from "./ImpactHeader";
@@ -11,10 +11,10 @@ export interface IndexPageProps {
   projectDescription: string;
   projectSubtitle: string;
   backgroundImageURL: string;
-  essays: { [essayID: string]: EssayDataEntry };
+  essays: Array<EssayDataEntry>;
 }
 
-const logger = new DebugLogger("IndexPage: ");
+// const logger = new DebugLogger("IndexPage: ");
 
 interface IndexHeaderProps {
   title: string;
@@ -51,20 +51,18 @@ export default function IndexPage(props: IndexPageProps) {
       <div className={styles.CenterColumn}>
         <IndexHeader title={projectTitle} description={projectDescription} />
         <div className={styles.ItemListContainer}>
-          {(essayOrder || Object.keys(essays)).map(
-            (essayID: string, i: number) => {
-              const essay: EssayDataEntry = essays[essayID];
-              if (!essay) {
-                logger.warn("bad essay id: " + essayID);
-                return null;
-              }
-              return (
-                <div key={i} className={styles.IndexItemContainer}>
-                  <EssayIndexItem essayID={essayID} essay={essay} />
-                </div>
-              );
+          {essays.map((essay, i: number) => {
+            // const essay: EssayDataEntry = essays[essayID];
+            if (!essay) {
+              // logger.warn("bad essay id: " + essayID);
+              return null;
             }
-          )}
+            return (
+              <div key={i} className={styles.IndexItemContainer}>
+                <EssayIndexItem essay={essay} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
