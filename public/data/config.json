@@ -3,7 +3,7 @@
         {
             "id": "hvt-2033",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/2033/background-loop-1280.mp4",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/2033/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/2033/background-loop-640.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/2033/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/2097/transcript?",
             "supertitle": "Introduction to the testimony of",
@@ -16,7 +16,7 @@
         },
         {
             "id": "hvt-0170",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background-loop-640.mp4",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background-loop-1280.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/241/transcript?",
@@ -31,7 +31,7 @@
         {
             "id": "hvt-3280",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3280/background-loop-1280.mp4",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3280/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3280/background-loop-640.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3280/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/3328/transcript?",
             "supertitle": "Introduction to the testimony of",
@@ -44,7 +44,7 @@
         },
         {
             "id": "hvt-3038",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3038/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3038/background-loop-640.mp4",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3038/background-loop-1280.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3038/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/3091/transcript?",
@@ -58,7 +58,7 @@
         },
         {
             "id": "hvt-0764",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0764/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0764/background-loop-640.mp4",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0764/background-loop-1280.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0764/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/830/transcript?",
@@ -73,7 +73,7 @@
         {
             "id": "hvt-0237",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/background-loop-1280.mp4",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/background-loop-640.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0237/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/307/transcript?",
             "supertitle": "Introduction to the testimony of",
@@ -86,7 +86,7 @@
         },
         {
             "id": "hvt-3169",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3169/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3169/background-loop-640.mp4",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3169/background-loop-1280.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3169/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/3219/transcript?",
@@ -100,7 +100,7 @@
         },
         {
             "id": "hvt-3164",
-            "smallvideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3164/background-loop-640.mp4",
+            "smallVideoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3164/background-loop-640.mp4",
             "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3164/background-loop-1280.mp4",
             "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/3164/poster.jpg",
             "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/3214/transcript?",
