@@ -1,6 +1,5 @@
 import React from "react";
 import { ContentBody } from "./ContentBody";
-// import ControlBar from "./HeaderArea/ControlBar";
 import DebugLogger from "../../utils/DebugLogger";
 import DocumentReader from "../../utils/DocumentReader/DocumentReader";
 import {
@@ -8,13 +7,12 @@ import {
   PlayStatus,
 } from "../../utils/DocumentPlayer/IDocumentPlayer";
 import SpeechSynthesisDocumentPlayer from "../../utils/DocumentPlayer/SpeechSynthesisDocumentPlayer";
-// import HeaderArea from "./HeaderArea";
 import styles from "./Viewer.module.css";
-import { EssayDataEntry } from "../../EssayData";
-// import EssayLinks from "./EssayLinks";
+import { EssayDataEntry } from "../../Data/EssayData";
 import EssayPreamble from "./EssayPreamble";
 import LogoBar from "./LogoBar";
 import CallToAction from "./CallToAction";
+import { ProjectData } from "../../Data/ProjectData";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -29,7 +27,9 @@ interface ViewerState {
 interface ViewerProps {
   essay: EssayDataEntry;
   essayPath: string;
+  posterPath?: string;
   hash: string;
+  homeLink: string;
 }
 
 class Viewer extends React.Component<ViewerProps> {
@@ -115,17 +115,6 @@ class Viewer extends React.Component<ViewerProps> {
   // }
 
   render() {
-    logger.log("Rendering with state", this.state);
-
-    const hvt_num = this.props.essay.hvtID
-      .toLocaleLowerCase()
-      .replace("hvt-", "");
-
-    const aws_dir =
-      "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions";
-    const get_url = (file_name: string) => `${aws_dir}/${hvt_num}/${file_name}`;
-    // const widths = [160, 320, 640, 960, 1280];
-
     return (
       <div
         // onScroll={this.handleScroll}
@@ -160,7 +149,7 @@ class Viewer extends React.Component<ViewerProps> {
 
           <div className={styles.SplashBackgroundVideoContainer}>
             <video
-              poster={get_url("poster.jpg")}
+              poster={this.props.posterPath}
               playsInline
               muted
               loop
@@ -169,7 +158,9 @@ class Viewer extends React.Component<ViewerProps> {
               className={styles.SplashBackgroundVideo}
             >
               {/* <source src={this.props.essay.videoPath}></source> */}
-              {[1280].map((width, idx) => {
+              <source src={this.props.essay.videoPath} type={"video/mp4"} />
+
+              {/* {[1280].map((width, idx) => {
                 return (
                   <source
                     key={idx}
@@ -177,7 +168,7 @@ class Viewer extends React.Component<ViewerProps> {
                     type={"video/mp4"}
                   />
                 );
-              })}
+              })} */}
             </video>
           </div>
 
@@ -208,6 +199,7 @@ class Viewer extends React.Component<ViewerProps> {
           hvtID={this.props.essay.hvtID}
           aviaryLink={this.props.essay.aviaryLink}
         />
+
         <div
           // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
           className={styles.ContentBodyContainer}
@@ -237,10 +229,10 @@ class Viewer extends React.Component<ViewerProps> {
             />
           </div>
 
-          {this.props.essay.aviaryLink ? (
+          {ProjectData.callToAction && this.props.essay.aviaryLink ? (
             <div className={styles.CallToActionArea}>
               <CallToAction
-                posterURL={get_url("poster.jpg")}
+                posterURL={this.props.essay.posterPath}
                 essay={this.props.essay}
               />
             </div>

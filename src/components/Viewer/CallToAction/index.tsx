@@ -1,10 +1,10 @@
 import React from "react";
-import { EssayDataEntry } from "../../../EssayData";
+import { EssayDataEntry } from "../../../Data/EssayData";
 import styles from "./CallToAction.module.css";
 import PlayButton from "./PlayButton";
 export interface CallToActionProps {
   essay: EssayDataEntry;
-  posterURL: string;
+  posterURL?: string;
 }
 export default function CallToAction(props: CallToActionProps) {
   const { essay, posterURL } = props;
@@ -20,11 +20,13 @@ export default function CallToAction(props: CallToActionProps) {
               style={{ backgroundImage: `url(${posterURL})` }}
               className={styles.VideoPoster}
             /> */}
-          <img
-            className={styles.VideoPreview}
-            alt={`Frame from video from testimony of ${essay.title}`}
-            src={posterURL}
-          />
+          {posterURL ? (
+            <img
+              className={styles.VideoPreview}
+              alt={`Frame from video from testimony of ${essay.title}`}
+              src={posterURL}
+            />
+          ) : null}
           {/* <div className={`sans-copy-ff ${styles.OverLay}`}>
               <div className={styles.PlayCircle}>
                 <PlayCircle />
@@ -37,7 +39,7 @@ export default function CallToAction(props: CallToActionProps) {
         <div className={styles.TextArea}>
           <div className={styles.TextGrouping}>
             <p className={`${styles.OverLine}`}>
-              View the annotated video testimony of
+              Watch the annotated video testimony of
             </p>
 
             <h3 className={styles.IntervieweeName}>{props.essay.title}</h3>

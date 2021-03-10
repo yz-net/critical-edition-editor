@@ -4,11 +4,16 @@ import styles from "./EssayPreamble.module.css";
 // import { ReactComponent as DocumentIcon } from "../svg/download_icon.svg";
 
 export interface EssayPreambleProps {
-  hvtID: string;
+  hvtID?: string;
   aviaryLink?: string;
 }
 export default function EssayPreamble(props: EssayPreambleProps) {
   const { hvtID } = props;
+
+  if (!hvtID) {
+    return null;
+  }
+
   const pdfURL = `/pdf/critical-edition-hvt-${hvtID}.pdf`;
   const aviaryURL =
     props.aviaryLink ||
@@ -19,7 +24,7 @@ export default function EssayPreamble(props: EssayPreambleProps) {
       <p>
         {`HVT-${props.hvtID}`} |{" "}
         <a className="teal-svg teal-font" href={aviaryURL}>
-          View the annotated video testimony
+          Watch the annotated video testimony
         </a>{" "}
         or{" "}
         <a className="teal-svg teal-font" href={pdfURL}>

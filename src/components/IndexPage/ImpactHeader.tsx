@@ -1,16 +1,33 @@
 import React from "react";
+import { ProjectData } from "../../Data/ProjectData";
 import styles from "./ImpactHeader.module.css";
 
-export default function ImpactHeader() {
+export interface ImpactHeaderProps {
+  title: String;
+  subtitle: String;
+  backgroundImageURL?: string;
+}
+
+export default function ImpactHeader(props: ImpactHeaderProps) {
+  const { title, subtitle, backgroundImageURL } = props;
+
+  const backgroundImageCSSProperty = backgroundImageURL
+    ? `url(${backgroundImageURL})`
+    : "";
+
+  const style = backgroundImageURL
+    ? { backgroundImage: backgroundImageCSSProperty }
+    : {};
   return (
     <div className={styles.ImpactHeader}>
-      <div className={styles.Background}></div>
+      <div style={style} className={styles.Background}></div>
       <div className={styles.Gradient}></div>
       <div className={styles.TextArea}>
-        <h1 className={styles.Title}>Critical Editions</h1>
-        <p className={styles.TagLine}>
-          Holocaust Testimonies in Historical Context
-        </p>
+        <h1 className={styles.Title}>{title}</h1>
+        <p className={styles.TagLine}>{subtitle}</p>
+      </div>
+      <div className={`sans-copy-ff ${styles.Caption}`}>
+        {ProjectData.impactImageCaption}
       </div>
     </div>
   );
