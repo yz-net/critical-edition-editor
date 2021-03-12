@@ -13,6 +13,7 @@ import "./App.css";
 import IndexPage from "./components/IndexPage";
 import { EssayDataEntry } from "./Data/EssayData";
 import { ProjectData } from "./Data/ProjectData";
+import Footer from "./components/Footer";
 // import LogoBar from "./components/Viewer/LogoBar";
 
 // const logger = new DebugLogger("App: ");
@@ -94,6 +95,7 @@ export default function App() {
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }

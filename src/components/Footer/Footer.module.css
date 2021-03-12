@@ -1,0 +1,56 @@
+.Footer {
+  margin-top: 120px;
+  height: 120px;
+  background-color: white;
+  overflow: hidden;
+  color: #efefef;
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.FooterInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .Footer {
+    height: unset;
+    padding: 30px 10px;
+  }
+  .FooterInner {
+    display: unset;
+    width: unset;
+  }
+  .Right {
+    margin-top: 20px;
+  }
+}
+
+.Footer svg {
+  height: 70px;
+}
+
+.Left {
+  display: flex;
+}
+
+.YaleLogo {
+  margin-right: 30px;
+}
+
+.Right {
+  font-size: 13px;
+}
+
+.Right a {
+  color: inherit;
+}
