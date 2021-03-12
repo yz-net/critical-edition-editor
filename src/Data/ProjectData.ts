@@ -15,6 +15,6 @@ export const ProjectData: ProjectDataObject = {
     "The Critical Editions Series contextualizes Fortunoff Video testimonies in their historical time and place. Each testimony in the series was chosen by one of our visiting scholars. Each scholar then produced an introductory essay about the chosen testimony, along with an annotated transcript that provides additional insight and background information.",
   homeLink: "https://fortunoff.library.yale.edu",
   callToAction: true,
-  impactImageCaption: "Caption of image by photographer"
+  impactImageCaption: "Photo: Steven H. and Marion L. Holocaust testimony (HVT-544), recorded in 1985. "
 };
 

@@ -79,9 +79,15 @@ h1.Title {
 
 .Caption {
   position: absolute;
-  bottom: 0;
+  bottom: 6px;
   right: 60px;
   z-index: 30;
   font-size: 13px;
   color: #777;
+}
+
+@media all and (max-width: 600px) {
+  .Caption {
+    visibility: hidden;
+  }
 }
