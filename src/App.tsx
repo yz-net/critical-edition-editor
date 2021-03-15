@@ -53,6 +53,8 @@ function ViewerWrapper(props: ViewerWrapperProps) {
     <Router>
       <Route path="/">
         <Viewer
+          appName={projectData.title || "Critical Editions Viewer"}
+          organizationName={projectData.organizationName || ""}
           homeLink={
             projectData.homeLink || "https://github.com/yale-fortunoff/"
           }
@@ -91,6 +93,7 @@ export default function App() {
           </Route>
           <Route path="/">
             <IndexPage
+              organizationName={projectData.organizationName || ""}
               projectTitle={projectData.title || ""}
               projectSubtitle={projectData.subtitle || ""}
               projectDescription={projectData.introCopy || ""}
@@ -98,13 +101,18 @@ export default function App() {
               projectHomeURL={
                 projectData.homeLink || "https://github.com/yale-fortunoff"
               }
-              backgroundImageURL={"/img/ImpactHeaderBackground.jpg"}
+              backgroundImageURL={"/img/impact-header-background.jpg"}
               essays={essays}
             />
           </Route>
         </Switch>
       </Router>
-      <Footer />
+      <Footer
+        orgName={projectData.organizationName || ""}
+        orgURL={projectData.homeLink || ""}
+        parentOrgName={projectData.parentOrganizationName || ""}
+        parentOrgURL={projectData.parentOrganizationURL || ""}
+      />
     </div>
   );
 }

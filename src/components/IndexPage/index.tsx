@@ -11,6 +11,7 @@ export interface IndexPageProps {
   projectDescription: string;
   projectSubtitle: string;
   projectHomeURL: string;
+  organizationName: string;
   backgroundImageURL: string;
   backgroundImageCaption: string;
   essays: Array<EssayDataEntry>;
@@ -38,6 +39,7 @@ export default function IndexPage(props: IndexPageProps) {
     essays,
     backgroundImageURL,
     backgroundImageCaption,
+    organizationName,
     projectDescription,
     projectTitle,
     projectSubtitle,
@@ -46,7 +48,11 @@ export default function IndexPage(props: IndexPageProps) {
 
   return (
     <div>
-      <LogoBar homeLink={projectHomeURL} />
+      <LogoBar
+        appName={projectTitle}
+        orgName={organizationName}
+        homeLink={projectHomeURL}
+      />
       <ImpactHeader
         caption={backgroundImageCaption}
         backgroundImageURL={backgroundImageURL}

@@ -13,6 +13,10 @@
   height: 60px;
 }
 
+.BlueBox:hover {
+  opacity: 0.8;
+}
+
 .BlueBox svg {
   height: 60px;
   background-color: white;
@@ -24,16 +28,22 @@
   background-color: white;
 }
 
+.BlueBox img {
+  height: 60px;
+  background-color: white;
+  overflow: hidden;
+}
+/* 
 .LogoBar:hover {
   opacity: 0.8;
-}
+} */
 
 .LogoText {
   /* flex-grow: 1; */
   /* text-transform: uppercase; */
   font-feature-settings: "smcp" 1;
-  letter-spacing: 2px;
-  font-size: 19px;
+  letter-spacing: 0.12em;
+  font-size: 21px;
   color: #333;
   text-align: center;
   top: 0;
@@ -77,9 +87,10 @@
 a.BarLink {
   text-decoration: none;
 }
+/* 
 .BarLink:hover {
   opacity: 0.5;
-}
+} */
 
 .BackButton {
   width: 60px;
@@ -97,10 +108,18 @@ a.BarLink {
 .FullAppLogo {
   height: 60px;
   display: flex;
+  color: #444;
+  text-transform: lowercase;
+  margin-right: 80px;
+  font-size: 22px;
 
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.FullAppLogo:hover {
+  color: #0d99ab;
 }
 
 .BackButton,

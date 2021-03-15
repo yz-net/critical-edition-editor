@@ -48,6 +48,12 @@
   margin-right: 30px;
 }
 
+.FortunoffLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .Right {
   font-size: 13px;
 }

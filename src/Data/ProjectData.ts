@@ -1,11 +1,14 @@
 
 export interface ProjectDataObject {
-  title?: string,
-  subtitle?: string,
-  introCopy?: string,
-  homeLink?: string,
-  callToAction?: boolean,
-  impactImageCaption?: string,
+  title?: string;
+  subtitle?: string;
+  introCopy?: string;
+  homeLink?: string;
+  callToAction?: boolean;
+  impactImageCaption?: string;
+  organizationName?: string;
+  parentOrganizationName?: string;
+  parentOrganizationURL?: string;
 }
 
 // export const ProjectData: ProjectDataObject = {

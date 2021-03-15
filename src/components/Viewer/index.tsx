@@ -29,7 +29,9 @@ interface ViewerProps {
   posterPath?: string;
   hash: string;
   homeLink: string;
+  appName: string;
   callToAction?: boolean;
+  organizationName: string;
 }
 
 class Viewer extends React.Component<ViewerProps> {
@@ -120,7 +122,11 @@ class Viewer extends React.Component<ViewerProps> {
         // onScroll={this.handleScroll}
         className={styles.Viewer}
       >
-        <LogoBar homeLink={this.props.homeLink} />
+        <LogoBar
+          appName={this.props.appName}
+          orgName={this.props.organizationName}
+          homeLink={this.props.homeLink}
+        />
 
         {/* <div style={{ position: "fixed", bottom: 0 }}>
           Playing: {this.state.playingBlock}

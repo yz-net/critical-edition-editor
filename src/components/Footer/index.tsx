@@ -1,19 +1,26 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { ReactComponent as YaleLogo } from "../../svg/Yale_block.svg";
-import { ReactComponent as FortunoffLogo } from "../../svg/fortunoff_only.svg";
+interface FooterProps {
+  parentOrgURL?: string;
+  parentOrgName?: string;
 
-export default function () {
+  orgName: string;
+  orgURL: string;
+}
+
+export default function Footer(props: FooterProps) {
+  const { orgName, orgURL, parentOrgName } = props;
   return (
     <div className={styles.Footer}>
       <div className={styles.FooterInner}>
         <div className={styles.Left}>
           <div className={styles.YaleLogo}>
-            <YaleLogo />
+            <img alt={`${parentOrgName} logo`} src="/img/parent-logo.svg"></img>
           </div>
           <div className={styles.FortunoffLogo}>
-            <a href="https://fortunoff.library.yale.edu">
-              <FortunoffLogo />
+            <a href={orgURL}>
+              {/* <FortunoffLogo /> */}
+              <img alt={`${orgName} logo`} src="/img/org-logo.svg"></img>
             </a>
           </div>
         </div>

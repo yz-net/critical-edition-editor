@@ -1,6 +1,6 @@
 {
   "name": "critical-edition-viewer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -19,7 +19,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy:package": "zip -rq build-$VERSION.zip build/",
+    "deploy:push-version": "aws --profile=fortunoff-admin s3 cp build-$VERSION.zip s3://ce-viewer-builds/ --acl public-read",
+    "deploy:push-latest": "aws --profile=fortunoff-admin s3 cp build-$VERSION.zip s3://ce-viewer-builds/latest.zip --acl public-read",
+    "deploy:cleanup": "rm build-$VERSION.zip",
+    "deploy": "yarn deploy:package && yarn deploy:push-version && yarn deploy:push-latest && yarn deploy:cleanup"
   },
   "eslintConfig": {
     "extends": "react-app"
