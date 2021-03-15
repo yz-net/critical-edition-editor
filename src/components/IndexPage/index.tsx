@@ -10,7 +10,9 @@ export interface IndexPageProps {
   projectTitle: string;
   projectDescription: string;
   projectSubtitle: string;
+  projectHomeURL: string;
   backgroundImageURL: string;
+  backgroundImageCaption: string;
   essays: Array<EssayDataEntry>;
 }
 
@@ -35,15 +37,18 @@ export default function IndexPage(props: IndexPageProps) {
   const {
     essays,
     backgroundImageURL,
+    backgroundImageCaption,
     projectDescription,
     projectTitle,
     projectSubtitle,
+    projectHomeURL,
   } = props;
 
   return (
     <div>
-      <LogoBar />
+      <LogoBar homeLink={projectHomeURL} />
       <ImpactHeader
+        caption={backgroundImageCaption}
         backgroundImageURL={backgroundImageURL}
         title={projectTitle}
         subtitle={projectSubtitle}

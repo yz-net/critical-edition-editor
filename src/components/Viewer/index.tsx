@@ -12,7 +12,6 @@ import { EssayDataEntry } from "../../Data/EssayData";
 import EssayPreamble from "./EssayPreamble";
 import LogoBar from "./LogoBar";
 import CallToAction from "./CallToAction";
-import { ProjectData } from "../../Data/ProjectData";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -30,6 +29,7 @@ interface ViewerProps {
   posterPath?: string;
   hash: string;
   homeLink: string;
+  callToAction?: boolean;
 }
 
 class Viewer extends React.Component<ViewerProps> {
@@ -120,7 +120,7 @@ class Viewer extends React.Component<ViewerProps> {
         // onScroll={this.handleScroll}
         className={styles.Viewer}
       >
-        <LogoBar />
+        <LogoBar homeLink={this.props.homeLink} />
 
         {/* <div style={{ position: "fixed", bottom: 0 }}>
           Playing: {this.state.playingBlock}
@@ -229,7 +229,7 @@ class Viewer extends React.Component<ViewerProps> {
             />
           </div>
 
-          {ProjectData.callToAction && this.props.essay.aviaryLink ? (
+          {this.props.callToAction && this.props.essay.aviaryLink ? (
             <div className={styles.CallToActionArea}>
               <CallToAction
                 posterURL={this.props.essay.posterPath}

@@ -12,16 +12,17 @@ import "./App.css";
 // import EssayIndexItem from "./components/EssayIndexItem";
 import IndexPage from "./components/IndexPage";
 import { EssayDataEntry } from "./Data/EssayData";
-import { ProjectData } from "./Data/ProjectData";
+import { ProjectDataObject } from "./Data/ProjectData";
 import Footer from "./components/Footer";
 // import LogoBar from "./components/Viewer/LogoBar";
 
 // const logger = new DebugLogger("App: ");
 interface ViewerWrapperProps {
   essays: Array<EssayDataEntry>;
+  projectData: ProjectDataObject;
 }
 function ViewerWrapper(props: ViewerWrapperProps) {
-  const { essays } = props;
+  const { essays, projectData } = props;
   const location = useLocation();
 
   function BadViewRequest() {
@@ -52,7 +53,9 @@ function ViewerWrapper(props: ViewerWrapperProps) {
     <Router>
       <Route path="/">
         <Viewer
-          homeLink={ProjectData.homeLink}
+          homeLink={
+            projectData.homeLink || "https://github.com/yale-fortunoff/"
+          }
           essay={essay}
           hash={location.hash}
           essayPath={essay.essayPath}
@@ -65,11 +68,13 @@ function ViewerWrapper(props: ViewerWrapperProps) {
 
 export default function App() {
   const [essays, setEssays] = useState<Array<EssayDataEntry>>([]);
+  const [projectData, setProjectData] = useState<ProjectDataObject>({});
 
   useEffect(() => {
     fetch("/data/config.json")
       .then((resp) => resp.json())
       .then((json) => {
+        setProjectData(json["projectData"]);
         setEssays(json["essays"]);
       });
   }, []);
@@ -82,14 +87,18 @@ export default function App() {
             {/* <Viewer essayPath={"/data/essay.json"} /> */}
           </Route>
           <Route path="/essay/:essayID">
-            <ViewerWrapper essays={essays} />
+            <ViewerWrapper projectData={projectData} essays={essays} />
           </Route>
           <Route path="/">
             <IndexPage
-              projectTitle={ProjectData.title}
-              projectSubtitle={ProjectData.subtitle || ""}
-              projectDescription={ProjectData.introCopy || ""}
-              backgroundImageURL="/img/ImpactHeaderBackground.jpg"
+              projectTitle={projectData.title || ""}
+              projectSubtitle={projectData.subtitle || ""}
+              projectDescription={projectData.introCopy || ""}
+              backgroundImageCaption={projectData.impactImageCaption || ""}
+              projectHomeURL={
+                projectData.homeLink || "https://github.com/yale-fortunoff"
+              }
+              backgroundImageURL={"/img/ImpactHeaderBackground.jpg"}
               essays={essays}
             />
           </Route>

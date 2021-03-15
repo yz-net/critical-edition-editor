@@ -1,15 +1,15 @@
 import React from "react";
-import { ProjectData } from "../../Data/ProjectData";
 import styles from "./ImpactHeader.module.css";
 
 export interface ImpactHeaderProps {
   title: String;
   subtitle: String;
   backgroundImageURL?: string;
+  caption: string;
 }
 
 export default function ImpactHeader(props: ImpactHeaderProps) {
-  const { title, subtitle, backgroundImageURL } = props;
+  const { title, subtitle, backgroundImageURL, caption } = props;
 
   const backgroundImageCSSProperty = backgroundImageURL
     ? `url(${backgroundImageURL})`
@@ -26,9 +26,7 @@ export default function ImpactHeader(props: ImpactHeaderProps) {
         <h1 className={styles.Title}>{title}</h1>
         <p className={styles.TagLine}>{subtitle}</p>
       </div>
-      <div className={`sans-copy-ff ${styles.Caption}`}>
-        {ProjectData.impactImageCaption}
-      </div>
+      <div className={`sans-copy-ff ${styles.Caption}`}>{caption}</div>
     </div>
   );
 }

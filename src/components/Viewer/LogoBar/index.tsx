@@ -3,17 +3,19 @@ import styles from "./LogoBar.module.css";
 import { ReactComponent as Logo } from "../../../svg/home-logo.svg";
 import { ReactComponent as CELogo } from "../../../svg/app-logo.svg";
 import { ReactComponent as ArrowLeft } from "../../../svg/arrow-left.svg";
-import { ProjectData } from "../../../Data/ProjectData";
 
-export interface LogoBarProps {}
+export interface LogoBarProps {
+  homeLink: string;
+}
 export default function LogoBar(props: LogoBarProps) {
   const pathname = window.location.pathname;
   const isIndexPage: Boolean = pathname === "/";
-  console.log("path name", pathname, isIndexPage);
+
+  const { homeLink } = props;
   return (
     <React.Fragment>
       <div className={`${styles.BigBar} ${styles.Bar}`}>
-        <a className={styles.BarLink} href={ProjectData.homeLink}>
+        <a className={styles.BarLink} href={homeLink}>
           <div className={styles.BlueBox}>
             <Logo />
           </div>
