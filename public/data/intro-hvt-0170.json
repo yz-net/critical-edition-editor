@@ -5,8 +5,8 @@
     "hvtID": "0170",
     "author": "Ion Popa",
     "essayPath": "/data/intro-hvt-0170.json",
-    "posterPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background.png",
-    "videoPath": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/0170/background-loop.mp4",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background.png",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background-loop.mp4",
     "publicationDate": "February 1, 2021"
   },
   "blocks": [

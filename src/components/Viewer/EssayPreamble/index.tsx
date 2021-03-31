@@ -14,7 +14,7 @@ export default function EssayPreamble(props: EssayPreambleProps) {
     return null;
   }
 
-  const pdfURL = `https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/pdf/critical-edition-hvt-${hvtID}.pdf`;
+  const pdfURL = `https://d12q9fe14kxf9b.cloudfront.net/pdf/critical-edition-hvt-${hvtID}.pdf`;
   const aviaryURL =
     props.aviaryLink ||
     `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${hvtID}`;

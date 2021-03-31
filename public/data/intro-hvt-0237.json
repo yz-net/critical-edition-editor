@@ -318,8 +318,8 @@
     {
       "type": "image",
       "data": {
-        "src": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/kummerman-emanuel-onb-700.jpg",
-        "srcset": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/kummerman-emanuel-onb-700.jpg 706px, https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/kummerman-emanuel-onb-1400.jpg 1411px",
+        "src": "https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/kummerman-emanuel-onb-700.jpg",
+        "srcset": "https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/kummerman-emanuel-onb-700.jpg 706px, https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/kummerman-emanuel-onb-1400.jpg 1411px",
         "caption": "Obituary announcing Emanuel Kummermann\u2019s death. Several of his children and children-in-law were murdered in the Holocaust, including his daughter Ida Freund and his daughter-in-law Elvira Kummermann (Source: <i>Prager Tagblatt<i>, May 26, 1906, 18)."
       }
     },
@@ -357,7 +357,7 @@
     {
       "type": "image",
       "data": {
-        "src": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/town-square-1000.jpg",
+        "src": "https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/town-square-1000.jpg",
         "caption": "The central town square of Trautenau/Trutnov in the early 20th century. (Source: Author\u2019s private collection)"
       }
     },
@@ -504,7 +504,7 @@
     {
       "type": "image",
       "data": {
-        "src": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/sarrafian-onb-900.jpg",
+        "src": "https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/sarrafian-onb-900.jpg",
         "caption": "A recipe for \u201cTurkish style Spinach\u201d by Martha Saraffian, printed in the <i>Prager Tagblatt<i> newspaper on August 29, 1936."
       }
     },
@@ -749,7 +749,7 @@
     {
       "type": "image",
       "data": {
-        "src": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/trutnov-1000.jpg",
+        "src": "https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/trutnov-1000.jpg",
         "caption": "Trautenau/Trutnov after the annexation of the Sudetenland by Nazi Germany in 1939 (source: author\u2019s private collection)"
       }
     },
@@ -1171,7 +1171,7 @@
     {
       "type": "image",
       "data": {
-        "src": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/construction-1000.jpg",
+        "src": "https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/construction-1000.jpg",
         "caption": "Stages of construction of the Hagibor camp taken from the report of the Jewish Central Labor Office (Source: Jewish Museum in Prague)."
       }
     },
@@ -1193,7 +1193,7 @@
     {
       "type": "image",
       "data": {
-        "src": "https://fortunoff-media-public.s3.ca-central-1.amazonaws.com/critical-editions/media/hvt-0237/barracks-1000.jpg",
+        "src": "https://d12q9fe14kxf9b.cloudfront.net/media/hvt-0237/barracks-1000.jpg",
         "caption": "The camp consisted of seven living barracks and three labor barracks. Kitchen and administration were outside of the camp at the site of a former Jewish retirement home in Prague XI (Source: Jewish Museum in Prague)."
       }
     },

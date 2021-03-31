@@ -24,3 +24,4 @@ yarn-error.log*
 public/data/OLD
 public/data/published
 *.zip
+scratch
