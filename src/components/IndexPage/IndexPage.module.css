@@ -29,6 +29,10 @@
 .ItemListContainer {
   display: flex;
   flex-wrap: wrap;
+
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .IndexItemContainer {

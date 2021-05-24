@@ -150,7 +150,7 @@ class Viewer extends React.Component<ViewerProps> {
           />
         </div> */}
 
-        <div className={styles.SplashTitleContainer}>
+        <header className={styles.SplashTitleContainer}>
           <div className={styles.Gradient} />
 
           <div className={styles.SplashBackgroundVideoContainer}>
@@ -180,13 +180,13 @@ class Viewer extends React.Component<ViewerProps> {
 
           <div className={styles.SplashTitle}>
             <div>
-              <header>
-                {/* See example 5: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines */}
-                <p className={`sans-title-ff ${styles.SuperTitle}`}>
-                  {this.props.essay.supertitle}
-                </p>
-                <h1>{this.props.essay.title}</h1>
-              </header>
+              {/* <header> */}
+              {/* See example 5: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines */}
+              <p className={`sans-title-ff ${styles.SuperTitle}`}>
+                {this.props.essay.supertitle}
+              </p>
+              <h1>{this.props.essay.title}</h1>
+              {/* </header> */}
             </div>
             <div>
               {/* <div className={styles.SplashMetaDivider}></div> */}
@@ -199,7 +199,7 @@ class Viewer extends React.Component<ViewerProps> {
             </div>
           </div>
           <div className={styles.SplashTitleTail}></div>
-        </div>
+        </header>
 
         <EssayPreamble
           hvtID={this.props.essay.hvtID}
@@ -225,7 +225,7 @@ class Viewer extends React.Component<ViewerProps> {
             ///>
           }
 
-          <div className={styles.ContentBodyContents}>
+          <main className={styles.ContentBodyContents}>
             <ContentBody
               playingBlock={this.state.playingBlock}
               playBlock={this.playBlock}
@@ -233,7 +233,7 @@ class Viewer extends React.Component<ViewerProps> {
               playing={this.state.playing === "playing"}
               documentData={this.state.document.document}
             />
-          </div>
+          </main>
 
           {this.props.callToAction && this.props.essay.aviaryLink ? (
             <div className={styles.CallToActionArea}>

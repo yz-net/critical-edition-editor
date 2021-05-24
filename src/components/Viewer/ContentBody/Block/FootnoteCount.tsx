@@ -9,9 +9,9 @@ interface FootnoteCountProps {
 }
 
 const empty = (
-  <div className={styles.FootnoteCount}>
+  <aside className={styles.FootnoteCount}>
     <div className={styles.IconContainer}></div>
-  </div>
+  </aside>
 );
 
 export default function FootnoteCount(props: FootnoteCountProps) {
@@ -27,11 +27,11 @@ export default function FootnoteCount(props: FootnoteCountProps) {
   }
 
   return (
-    <div className={`sans-copy-ff ${styles.FootnoteCount}`}>
+    <aside className={`sans-copy-ff ${styles.FootnoteCount}`}>
       <div className={styles.IconContainer}>
         <FootnoteIcon />
       </div>
       <div className={styles.Label}>{count}</div>
-    </div>
+    </aside>
   );
 }

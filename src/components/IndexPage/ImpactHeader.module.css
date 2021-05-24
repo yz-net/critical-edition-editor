@@ -83,7 +83,7 @@ h1.Title {
   right: 60px;
   z-index: 30;
   font-size: 13px;
-  color: #777;
+  color: #cfcfcf;
 }
 
 @media all and (max-width: 600px) {

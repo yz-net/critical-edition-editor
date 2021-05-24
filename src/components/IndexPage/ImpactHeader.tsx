@@ -19,7 +19,7 @@ export default function ImpactHeader(props: ImpactHeaderProps) {
     ? { backgroundImage: backgroundImageCSSProperty }
     : {};
   return (
-    <div className={styles.ImpactHeader}>
+    <header className={styles.ImpactHeader}>
       <div style={style} className={styles.Background}></div>
       <div className={styles.Gradient}></div>
       <div className={styles.TextArea}>
@@ -27,6 +27,6 @@ export default function ImpactHeader(props: ImpactHeaderProps) {
         <p className={styles.TagLine}>{subtitle}</p>
       </div>
       <div className={`sans-copy-ff ${styles.Caption}`}>{caption}</div>
-    </div>
+    </header>
   );
 }

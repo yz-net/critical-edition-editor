@@ -11,10 +11,11 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
   const { essay } = props;
 
   return (
-    <Link to={`/essay/${essay.id}`} className={styles.ItemLink}>
-      <div className={styles.EssayIndexItem}>
+    <Link tabIndex={0} to={`/essay/${essay.id}`} className={styles.ItemLink}>
+      <article title={essay.title} className={styles.EssayIndexItem}>
         <div className={styles.ThumbnailArea}>
           <video
+            aria-label={`Thumbnail video for '${essay.title}'`}
             poster={essay.posterPath}
             playsInline
             muted
@@ -30,16 +31,16 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
         </div>
         <div className={styles.TextArea}>
           <div className={styles.TitleContainer}>
-            <header>
-              <h3 className={styles.Title}> {essay.title}</h3>
-              <p className={`${styles.Byline} sans-copy-ff`}>
-                by {essay.author}
-                {essay.affiliation ? `, ${essay.affiliation}` : null}
-              </p>
-            </header>
+            {/* <header> */}
+            <h3 className={styles.Title}> {essay.title}</h3>
+            <p className={`${styles.Byline} sans-copy-ff`}>
+              by {essay.author}
+              {essay.affiliation ? `, ${essay.affiliation}` : null}
+            </p>
+            {/* </header> */}
           </div>
         </div>
-      </div>
+      </article>
     </Link>
   );
 }

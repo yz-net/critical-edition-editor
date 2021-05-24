@@ -11,7 +11,7 @@ interface FooterProps {
 export default function Footer(props: FooterProps) {
   const { orgName, orgURL, parentOrgName } = props;
   return (
-    <div className={styles.Footer}>
+    <footer className={styles.Footer}>
       <div className={styles.FooterInner}>
         <div className={styles.Left}>
           <div className={styles.YaleLogo}>
@@ -31,6 +31,6 @@ export default function Footer(props: FooterProps) {
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

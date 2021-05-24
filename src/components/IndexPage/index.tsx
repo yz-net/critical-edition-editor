@@ -59,23 +59,25 @@ export default function IndexPage(props: IndexPageProps) {
         title={projectTitle}
         subtitle={projectSubtitle}
       />
-      <div className={styles.CenterColumn}>
+      <main className={styles.CenterColumn}>
         <IndexHeader title={projectTitle} description={projectDescription} />
-        <div className={styles.ItemListContainer}>
-          {essays.map((essay, i: number) => {
-            // const essay: EssayDataEntry = essays[essayID];
-            if (!essay) {
-              // logger.warn("bad essay id: " + essayID);
-              return null;
-            }
-            return (
-              <div key={i} className={styles.IndexItemContainer}>
-                <EssayIndexItem essay={essay} />
-              </div>
-            );
-          })}
-        </div>
-      </div>
+        <nav aria-label="List of essays">
+          <ul className={styles.ItemListContainer}>
+            {essays.map((essay, i: number) => {
+              // const essay: EssayDataEntry = essays[essayID];
+              if (!essay) {
+                // logger.warn("bad essay id: " + essayID);
+                return null;
+              }
+              return (
+                <li key={i} className={styles.IndexItemContainer}>
+                  <EssayIndexItem essay={essay} />
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </main>
     </div>
   );
 }
