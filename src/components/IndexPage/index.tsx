@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { EssayDataEntry } from "../../Data/EssayData";
 // import DebugLogger from "../../utils/DebugLogger";
 import EssayIndexItem from "../EssayIndexItem";
@@ -45,6 +45,12 @@ export default function IndexPage(props: IndexPageProps) {
     projectSubtitle,
     projectHomeURL,
   } = props;
+
+  useEffect(() => {
+    document.title = `${projectTitle} ${
+      organizationName ? " | " + organizationName : ""
+    }`;
+  }, [organizationName, projectTitle]);
 
   return (
     <div>

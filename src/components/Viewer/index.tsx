@@ -91,6 +91,9 @@ class Viewer extends React.Component<ViewerProps> {
 
   componentDidMount() {
     this.loadEssay();
+    document.title = `${this.props.essay.title} | ${this.props.appName} ${
+      this.props.organizationName ? " | " + this.props.organizationName : ""
+    }`;
   }
 
   loadEssay() {
