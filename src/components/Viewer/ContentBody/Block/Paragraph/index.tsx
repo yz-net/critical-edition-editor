@@ -35,7 +35,6 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
       // now iterate through the permanent list of references
       for (let i = 0; i < linkReferences.length; i++) {
         const link = linkReferences[i];
-
         if (!link) {
           console.log("null link");
           continue;
@@ -45,7 +44,7 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
 
         if (!link.hasAttribute("a")) {
           let innerLink = link.getElementsByTagName("a");
-          console.log("innerLink", innerLink[0].getAttribute("href"));
+          // console.log("innerLink", innerLink[0].getAttribute("href"));
           if (innerLink[0]) {
             // console.log("innerLink[0]", innerLink);
             href = innerLink[0].getAttribute("href") || "";
@@ -64,7 +63,16 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         link.classList.add(styles.FootnoteLink);
         // const label = link.innerText.replace("[", "").replace("]", "");
         // const label = link.innerText;
-        const label = href.replace("#fn-", "");
+        const label =
+          link.getAttribute("data-label") || href.replace("#fn-", "");
+        if (link.hasAttribute("data-label")) {
+          // console.log(
+          //   "issue-1: Link has a custom label: ",
+          //   link.getAttribute("data-label")
+          // );
+        } else {
+          // console.log("issue-1: Link does not have custom label", link);
+        }
         // link.innerHTML = `<span>
         //     ${renderToString(<FootnoteIcon />)}
         //   </span>`;
