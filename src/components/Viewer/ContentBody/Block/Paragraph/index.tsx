@@ -62,9 +62,9 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         // icon when the paragraph is open/active
         link.classList.add(styles.FootnoteLink);
         // const label = link.innerText.replace("[", "").replace("]", "");
-        // const label = link.innerText;
-        const label =
-          link.getAttribute("data-label") || href.replace("#fn-", "");
+        const label = link.innerText;
+        // const label =
+        //   link.getAttribute("data-label") || href.replace("#fn-", "");
         if (link.hasAttribute("data-label")) {
           // console.log(
           //   "issue-1: Link has a custom label: ",
