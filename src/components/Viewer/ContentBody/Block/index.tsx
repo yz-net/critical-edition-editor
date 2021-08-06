@@ -45,10 +45,10 @@ export default function Block(props: {
   logger.log("BLOCK TYPE:", props.blockData.type);
   useEffect(() => {
     if (props.inFocus && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
       ref.current.focus();
     }
-  }, [props.inFocus]);
+  }, [blockID, props.inFocus]);
 
   // function Controls() {
   //   const html = (props.blockData.data as ParagraphBlockData).text;
@@ -123,13 +123,7 @@ export default function Block(props: {
 
   if (props.blockData.type.toLowerCase().trim() === "header") {
     const data = props.blockData.data as HeaderBlockData;
-    const inner = React.createElement(
-      `h${data.level}`,
-      {
-        foo: "bar",
-      },
-      `${data.text}`
-    );
+    const inner = React.createElement(`h${data.level}`, {}, `${data.text}`);
     return WrapBlock(<div className={styles.Header}>{inner}</div>);
   }
 
