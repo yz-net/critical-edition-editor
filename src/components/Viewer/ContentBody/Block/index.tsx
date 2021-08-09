@@ -20,6 +20,7 @@ import styles from "./Block.module.css";
 // import PlayText from "./PlayText";
 import { useLocation } from "react-router-dom";
 import FootnoteCount from "./FootnoteCount";
+import scrollToElementByID from "../../../../utils/scrollToElementByID";
 
 const logger = new DebugLogger("Block: ");
 
@@ -42,11 +43,12 @@ export default function Block(props: {
 
   // const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
 
-  logger.log("BLOCK TYPE:", props.blockData.type);
   useEffect(() => {
     if (props.inFocus && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
-      ref.current.focus();
+      // ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      // ref.current.focus();
+      console.log("Block.useEffect scroll");
+      scrollToElementByID(blockID);
     }
   }, [blockID, props.inFocus]);
 

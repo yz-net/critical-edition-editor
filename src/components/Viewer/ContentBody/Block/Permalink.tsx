@@ -16,18 +16,8 @@ export default function Permalink(props: PermalinkProps) {
       icon={<LinkIcon />}
       label="Copy link to paragraph"
       onClick={() => {
-        console.log(permalink.href);
         navigator.clipboard.writeText(permalink.href);
       }}
     />
-    // <button
-    //   onClick={() => {
-    //     console.log(permalink.href);
-    //     navigator.clipboard.writeText(permalink.href);
-    //   }}
-    //   className={styles.ControlButton}
-    // >
-    //   <LinkIcon />
-    // </button>
   );
 }

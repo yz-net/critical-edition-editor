@@ -53,6 +53,7 @@ function ViewerWrapper(props: ViewerWrapperProps) {
     <Router>
       <Route path="/">
         <Viewer
+          projectData={projectData}
           appName={projectData.title || "Critical Editions Viewer"}
           organizationName={projectData.organizationName || ""}
           homeLink={
@@ -107,12 +108,12 @@ export default function App() {
           </Route>
         </Switch>
       </Router>
-      <Footer
+      {/* <Footer
         orgName={projectData.organizationName || ""}
         orgURL={projectData.homeLink || ""}
         parentOrgName={projectData.parentOrganizationName || ""}
         parentOrgURL={projectData.parentOrganizationURL || ""}
-      />
+      /> */}
     </div>
   );
 }

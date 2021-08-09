@@ -26,7 +26,6 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
       const linkReferences: Array<HTMLElement> = [];
       for (let i = 0; i < linkCollection.length; i++) {
         const el = linkCollection[i];
-        console.log(el.classList, el.classList.contains("footnote-ref"));
         if (el.classList.contains("footnote-ref")) {
           linkReferences.push(el);
         }
@@ -36,7 +35,6 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
       for (let i = 0; i < linkReferences.length; i++) {
         const link = linkReferences[i];
         if (!link) {
-          console.log("null link");
           continue;
         }
 
@@ -44,16 +42,13 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
 
         if (!link.hasAttribute("a")) {
           let innerLink = link.getElementsByTagName("a");
-          // console.log("innerLink", innerLink[0].getAttribute("href"));
           if (innerLink[0]) {
-            // console.log("innerLink[0]", innerLink);
             href = innerLink[0].getAttribute("href") || "";
           }
         } else {
           href = link.getAttribute("a") || "";
         }
         if (href.indexOf("#fn-") !== 0) {
-          console.log("not an anchor link", href);
           continue;
         }
 
@@ -66,12 +61,7 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         // const label =
         //   link.getAttribute("data-label") || href.replace("#fn-", "");
         if (link.hasAttribute("data-label")) {
-          // console.log(
-          //   "issue-1: Link has a custom label: ",
-          //   link.getAttribute("data-label")
-          // );
         } else {
-          // console.log("issue-1: Link does not have custom label", link);
         }
         // link.innerHTML = `<span>
         //     ${renderToString(<FootnoteIcon />)}
@@ -86,16 +76,9 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         }
         newElement.innerHTML = `${renderToString(icon)} <sup>${label}</sup> `;
 
-        console.log("Adding click handler");
         newElement.onclick = (e) => {
           const id = href.replace("#", "");
           scrollToElementByID(id, e);
-          // const footnote = document.getElementById(id);
-          // if (footnote) {
-          //   footnote.scrollIntoView({ behavior: "smooth", block: "center" });
-          //   footnote.focus();
-          //   e.preventDefault();
-          // }
         };
 
         // ref.current.replaceChild(newElement, link);

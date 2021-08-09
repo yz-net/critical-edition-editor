@@ -1,6 +1,8 @@
 .App {
   color: #333;
   /* margin-bottom: 100px; */
+  /* height: 100vh;
+  overflow: hidden; */
 }
 
 a {

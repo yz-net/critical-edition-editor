@@ -1,26 +1,28 @@
 import DebugLogger from "./DebugLogger";
 
 const logger = new DebugLogger("scrollToELementByID: ")
-export default function scrollToElementByID(elementID: string, e?: Event) {
+export default function scrollToElementByID(elementID: string, e?: Event, options: ScrollIntoViewOptions = {}) {
+
+    e?.preventDefault();
+
     const footnotes = document.getElementsByClassName("blocktype-footnoteParagraph")
     for (let i = 0; i < footnotes.length; i++) {
         const item = footnotes.item(i)
         item?.classList.add("hidden")
-        // console.log("hiding", item)
     }
 
     const element = document.getElementById(elementID);
     if (element) {
         element.classList.remove("hidden");
-        element.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        element.scrollIntoView({ block: "start", behavior: "smooth", ...options });
         element.focus();
-        e?.preventDefault();
 
         // Update the page hash
-        window.location.hash = "#" + elementID;
+        setTimeout(() => { window.location.hash = "#" + elementID; }, 200);
 
 
     } else {
-        logger.warn("Trying to scroll to nonexistent element: " + elementID)
+        logger.warn("Trying to scroll to nonexistent element: " + elementID, element)
     }
 }

@@ -15,106 +15,17 @@ interface FootnoteProps {
 }
 
 export function Footnote(props: FootnoteProps) {
-  // const [collapsed, setCollapsed] = useState<boolean>(false);
-  // const [height, setHeight] = useState<number>(-1);
   const label = props.data.label;
 
-  // useEffect(() => {
-  //   if (ref.current) {
-  //     setHeight(ref.current.getBoundingClientRect().height);
-  //   }
-  // }, []);
-
   const ref = useRef<HTMLDivElement>(null);
-  // if (!props.data || !props.data.text) {
-  //   logger.warn("Invalid block <missing data.text property>", props.data);
-  //   return null;
-  // }
-
-  // let interval: any;
-
-  // function easeHeight(node: HTMLDivElement, toHeight: number) {
-  //   // const intervalMS = 10;
-  //   const duration = 500;
-  //   let height = node.getBoundingClientRect().height;
-  //   const fromHeight = height;
-  //   const shrink = fromHeight > toHeight;
-  //   const difference = toHeight - height;
-  //   console.log("Difference", difference, toHeight, height);
-  //   const increment = Math.max(1, Math.ceil(difference / duration));
-  //   console.log("increment size:", increment);
-  //   const intervalDuration = 10;
-
-  //   clearInterval(interval);
-
-  //   const heightAtTime = (time: number) => {
-  //     const totalDifference = toHeight - fromHeight;
-  //     if (time >= duration) {
-  //       return toHeight;
-  //     }
-  //     // const percentDone = time / duration;
-  //     const max = Math.PI / 2;
-  //     const x = (time / duration) * max;
-  //     const percentDone = Math.sin(x);
-  //     const differenceSoFar = totalDifference * percentDone; //Math.sin((percentDone * Math.PI) / 2);
-  //     return Math.round(fromHeight + differenceSoFar);
-  //   };
-
-  //   const startTime = Number(new Date());
-
-  //   const incrementHeight = () => {
-  //     const currentTime = Number(new Date());
-  //     const elapsedTime = currentTime - startTime;
-
-  //     let currentHeight = heightAtTime(elapsedTime);
-
-  //     let done: boolean;
-  //     if (shrink) {
-  //       done = currentHeight <= toHeight;
-  //     } else {
-  //       done = currentHeight >= toHeight;
-  //     }
-  //     if (done) {
-  //       logger.log("break", currentHeight, toHeight);
-  //       currentHeight = toHeight;
-  //       clearInterval(interval);
-  //     }
-  //     logger.log("Setting height", currentHeight);
-  //     node.style.height = `${currentHeight}px`;
-  //   };
-
-  //   interval = setInterval(incrementHeight, intervalDuration);
-  // }
-
-  // function collapse() {
-  //   if (ref.current) {
-  //     logger.log("Collapsing");
-  //     setCollapsed(true);
-  //     easeHeight(ref.current, 0);
-  //   }
-  // }
-
-  // function expand() {
-  //   if (ref.current) {
-  //     logger.log("Expanding to " + height.toString());
-  //     setCollapsed(false);
-  //     easeHeight(ref.current, height);
-  //   }
-  // }
-
-  // function toggleCollapse() {
-  //   if (collapsed) {
-  //     expand();
-  //   } else {
-  //     collapse();
-  //   }
-  // }
 
   const prevButton = props.previousFootnoteBlock ? (
     <button
       onClick={() => {
         if (props.previousFootnoteBlock) {
-          scrollToElementByID(props.previousFootnoteBlock.id);
+          scrollToElementByID(props.previousFootnoteBlock.id, undefined, {
+            behavior: "auto",
+          });
         }
       }}
     >
@@ -128,7 +39,9 @@ export function Footnote(props: FootnoteProps) {
     <button
       onClick={() => {
         if (props.nextFootnoteBlock) {
-          scrollToElementByID(props.nextFootnoteBlock.id);
+          scrollToElementByID(props.nextFootnoteBlock.id, undefined, {
+            behavior: "auto",
+          });
         }
       }}
     >
@@ -139,11 +52,6 @@ export function Footnote(props: FootnoteProps) {
   );
   return (
     <div className={`sans-copy-ff ${styles.Footnote}`}>
-      {/* <div className={`${styles.Footnote} ${collapsed ? styles.Collapsed : ""}`}> */}
-      {/* <div className={styles.ButtonTray}> */}
-      {/* <button onClick={toggleCollapse}>{collapsed ? "+" : "-"}</button> */}
-      {/* </div> */}
-
       <div ref={ref} className={styles.FootnoteTextGroup}>
         <div>
           <div className={styles.FootnoteLabel}>{label}</div>

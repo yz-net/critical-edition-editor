@@ -26,6 +26,7 @@ export function ContentBody(props: ContentBodyProps): JSX.Element {
   const location = useLocation();
   const hash = location.hash.replace("#", "");
   useEffect(() => {
+    // logger.log("ContentBody useEffect() calling scrollToElementByID");
     scrollToElementByID(hash);
   }, [hash, props.documentData]);
 
