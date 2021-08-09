@@ -53,6 +53,7 @@ function ViewerWrapper(props: ViewerWrapperProps) {
     <Router>
       <Route path="/">
         <Viewer
+          callToAction={projectData.callToAction}
           projectData={projectData}
           appName={projectData.title || "Critical Editions Viewer"}
           organizationName={projectData.organizationName || ""}
