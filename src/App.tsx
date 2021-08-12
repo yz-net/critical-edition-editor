@@ -13,7 +13,7 @@ import "./App.css";
 import IndexPage from "./components/IndexPage";
 import { EssayDataEntry } from "./Data/EssayData";
 import { ProjectDataObject } from "./Data/ProjectData";
-import Footer from "./components/Footer";
+
 // import LogoBar from "./components/Viewer/LogoBar";
 
 // const logger = new DebugLogger("App: ");
