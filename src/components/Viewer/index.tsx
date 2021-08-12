@@ -12,6 +12,8 @@ import { EssayDataEntry } from "../../Data/EssayData";
 import EssayPreamble from "./EssayPreamble";
 import LogoBar from "./LogoBar";
 import CallToAction from "./CallToAction";
+import Footer from "../Footer";
+import { ProjectDataObject } from "../../Data/ProjectData";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -32,6 +34,7 @@ interface ViewerProps {
   appName: string;
   callToAction?: boolean;
   organizationName: string;
+  projectData: ProjectDataObject;
 }
 
 class Viewer extends React.Component<ViewerProps> {
@@ -121,55 +124,33 @@ class Viewer extends React.Component<ViewerProps> {
 
   render() {
     return (
-      <div
-        // onScroll={this.handleScroll}
-        className={styles.Viewer}
-      >
-        <LogoBar
-          appName={this.props.appName}
-          orgName={this.props.organizationName}
-          homeLink={this.props.homeLink}
-        />
-
-        {/* <div style={{ position: "fixed", bottom: 0 }}>
-          Playing: {this.state.playingBlock}
-        </div> */}
-
-        {/* <div className={styles.HeaderAreaContainer}>
-          <HeaderArea
-            height={this.state.headerHeight}
-            title={this.props.essay.title}
-            author={this.props.essay.author}
-            publicationDate={this.props.essay.publicationDate}
-            continuousPlay={this.state.continuePlaying}
-            playing={this.state.playing === "playing"}
-            play={() => {
-              this.playBlock(this.state.playingBlock || 0);
-            }}
-            stop={this.stopPlaying}
-            toggleContinuousPlay={() => {
-              this.setState({ continuePlaying: !this.state.continuePlaying });
-            }}
+      <div className={styles.Viewer}>
+        <div className={styles.LogoBarContainer}>
+          <LogoBar
+            appName={this.props.appName}
+            orgName={this.props.organizationName}
+            homeLink={this.props.homeLink}
           />
-        </div> */}
+        </div>
 
-        <header className={styles.SplashTitleContainer}>
-          <div className={styles.Gradient} />
+        <div className={styles.PageContent}>
+          <header className={styles.SplashTitleContainer}>
+            <div className={styles.Gradient} />
 
-          <div className={styles.SplashBackgroundVideoContainer}>
-            <video
-              poster={this.props.posterPath}
-              playsInline
-              muted
-              loop
-              autoPlay
-              disablePictureInPicture={true}
-              className={styles.SplashBackgroundVideo}
-            >
-              {/* <source src={this.props.essay.videoPath}></source> */}
-              <source src={this.props.essay.videoPath} type={"video/mp4"} />
+            <div className={styles.SplashBackgroundVideoContainer}>
+              <video
+                poster={this.props.posterPath}
+                playsInline
+                muted
+                loop
+                autoPlay
+                disablePictureInPicture={true}
+                className={styles.SplashBackgroundVideo}
+              >
+                {/* <source src={this.props.essay.videoPath}></source> */}
+                <source src={this.props.essay.videoPath} type={"video/mp4"} />
 
-              {/* {[1280].map((width, idx) => {
+                {/* {[1280].map((width, idx) => {
                 return (
                   <source
                     key={idx}
@@ -178,74 +159,84 @@ class Viewer extends React.Component<ViewerProps> {
                   />
                 );
               })} */}
-            </video>
-          </div>
-
-          <div className={styles.SplashTitle}>
-            <div>
-              {/* <header> */}
-              {/* See example 5: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines */}
-              <p className={`sans-title-ff ${styles.SuperTitle}`}>
-                {this.props.essay.supertitle}
-              </p>
-              <h1>{this.props.essay.title}</h1>
-              {/* </header> */}
+              </video>
             </div>
-            <div>
-              {/* <div className={styles.SplashMetaDivider}></div> */}
-              <div className={styles.SplashMeta}>
-                by {this.props.essay.author}
-                <div className={`${styles.Affiliation} sans-copy-ff`}>
-                  {this.props.essay.affiliation}
+
+            <div className={styles.SplashTitle}>
+              <div>
+                {/* <header> */}
+                {/* See example 5: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines */}
+                <p className={`sans-title-ff ${styles.SuperTitle}`}>
+                  {this.props.essay.supertitle}
+                </p>
+                <h1>{this.props.essay.title}</h1>
+                {/* </header> */}
+              </div>
+              <div>
+                {/* <div className={styles.SplashMetaDivider}></div> */}
+                <div className={styles.SplashMeta}>
+                  by {this.props.essay.author}
+                  <div className={`${styles.Affiliation} sans-copy-ff`}>
+                    {this.props.essay.affiliation}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className={styles.SplashTitleTail}></div>
-        </header>
+            <div className={styles.SplashTitleTail}></div>
+          </header>
 
-        <EssayPreamble
-          hvtID={this.props.essay.hvtID}
-          aviaryLink={this.props.essay.aviaryLink}
-        />
+          <EssayPreamble
+            hvtID={this.props.essay.hvtID}
+            aviaryLink={this.props.essay.aviaryLink}
+          />
 
-        <div
-          // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
-          className={styles.ContentBodyContainer}
-        >
-          {
-            //<EssayLinks
-            // links={[
-            //   {
-            //     title: "HVT-" + this.props.essay.hvtID,
-            //     href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
-            //   },
-            //   {
-            //     title: "transcript",
-            //     href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
-            //   },
-            // ]}
-            ///>
-          }
+          <div
+            // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
+            className={styles.ContentBodyContainer}
+          >
+            {
+              //<EssayLinks
+              // links={[
+              //   {
+              //     title: "HVT-" + this.props.essay.hvtID,
+              //     href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+              //   },
+              //   {
+              //     title: "transcript",
+              //     href: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${this.props.essay.hvtID}`,
+              //   },
+              // ]}
+              ///>
+            }
 
-          <main className={styles.ContentBodyContents}>
-            <ContentBody
-              playingBlock={this.state.playingBlock}
-              playBlock={this.playBlock}
-              stopPlaying={this.stopPlaying}
-              playing={this.state.playing === "playing"}
-              documentData={this.state.document.document}
-            />
-          </main>
-
-          {this.props.callToAction && this.props.essay.aviaryLink ? (
-            <div className={styles.CallToActionArea}>
-              <CallToAction
-                posterURL={this.props.essay.posterPath}
-                essay={this.props.essay}
+            <main className={styles.ContentBodyContents}>
+              <ContentBody
+                playingBlock={this.state.playingBlock}
+                playBlock={this.playBlock}
+                stopPlaying={this.stopPlaying}
+                playing={this.state.playing === "playing"}
+                documentData={this.state.document.document}
               />
-            </div>
-          ) : null}
+            </main>
+
+            {this.props.callToAction && this.props.essay.aviaryLink ? (
+              <div className={styles.CallToActionArea}>
+                <CallToAction
+                  posterURL={this.props.essay.posterPath}
+                  essay={this.props.essay}
+                />
+              </div>
+            ) : null}
+
+            <Footer
+              orgName={this.props.projectData.organizationName || ""}
+              orgURL={this.props.projectData.homeLink || ""}
+              parentOrgName={
+                this.props.projectData.parentOrganizationName || ""
+              }
+              parentOrgURL={this.props.projectData.parentOrganizationURL || ""}
+            />
+          </div>
         </div>
       </div>
     );

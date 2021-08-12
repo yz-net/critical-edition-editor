@@ -1,5 +1,10 @@
 .Viewer {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .Affiliation {
@@ -8,13 +13,13 @@
 
 .ContentBodyContainer {
   background-color: white;
-  position: relative;
+  /* position: relative; */
   z-index: 10;
   /* top: 33vh; */
-  top: 75px;
+  /* top: 75px;
   left: 0;
   bottom: 0;
-  right: 0;
+  right: 0; */
 
   max-width: 1070px; /*1080px;*/
   margin-left: auto;
@@ -53,6 +58,20 @@
     position: sticky;
     top: 0;
 } */
+
+.LogoBarContainer {
+  overflow: hidden;
+  height: 60px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.PageContent {
+  overflow: scroll;
+  flex: 100%;
+  flex-shrink: 1;
+  flex-grow: 0;
+}
 
 .SplashTitleContainer {
   position: relative;

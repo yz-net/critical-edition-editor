@@ -13,7 +13,7 @@ import "./App.css";
 import IndexPage from "./components/IndexPage";
 import { EssayDataEntry } from "./Data/EssayData";
 import { ProjectDataObject } from "./Data/ProjectData";
-import Footer from "./components/Footer";
+
 // import LogoBar from "./components/Viewer/LogoBar";
 
 // const logger = new DebugLogger("App: ");
@@ -53,6 +53,8 @@ function ViewerWrapper(props: ViewerWrapperProps) {
     <Router>
       <Route path="/">
         <Viewer
+          callToAction={projectData.callToAction}
+          projectData={projectData}
           appName={projectData.title || "Critical Editions Viewer"}
           organizationName={projectData.organizationName || ""}
           homeLink={
@@ -107,12 +109,12 @@ export default function App() {
           </Route>
         </Switch>
       </Router>
-      <Footer
+      {/* <Footer
         orgName={projectData.organizationName || ""}
         orgURL={projectData.homeLink || ""}
         parentOrgName={projectData.parentOrganizationName || ""}
         parentOrgURL={projectData.parentOrganizationURL || ""}
-      />
+      /> */}
     </div>
   );
 }

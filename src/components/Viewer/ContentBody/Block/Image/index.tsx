@@ -8,7 +8,6 @@ export interface ImageProps {
 export function Image(props: ImageProps) {
   const { src, srcset, sizes, caption } = props.data;
 
-  console.log("RENDERING IMAGE", props.data);
   return (
     <div className={`sans-copy-ff ${styles.Image}`}>
       <div className={styles.ImgContainer}>
