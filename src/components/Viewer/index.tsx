@@ -123,6 +123,45 @@ class Viewer extends React.Component<ViewerProps> {
   // }
 
   render() {
+    const splashImage = (
+      <div
+        className={styles.SplashBackgroundImage}
+        style={{
+          backgroundImage: `url(${this.props.posterPath})`,
+        }}
+      >
+        {" "}
+      </div>
+    );
+    const splashVideo = (
+      <video
+        poster={this.props.posterPath}
+        playsInline
+        muted
+        loop
+        autoPlay
+        disablePictureInPicture={true}
+        className={styles.SplashBackgroundVideo}
+      >
+        {/* <source src={this.props.essay.videoPath}></source> */}
+        <source src={this.props.essay.videoPath} type={"video/mp4"} />
+
+        {/* {[1280].map((width, idx) => {
+    return (
+      <source
+        key={idx}
+        src={get_url(`background-loop-${width}.mp4`)}
+        type={"video/mp4"}
+      />
+    );
+  })} */}
+      </video>
+    );
+
+    const splashContent = this.props.essay.videoPath
+      ? splashVideo
+      : splashImage;
+
     return (
       <div className={styles.Viewer}>
         <div className={styles.LogoBarContainer}>
@@ -135,33 +174,12 @@ class Viewer extends React.Component<ViewerProps> {
 
         <div className={styles.PageContent}>
           <header className={styles.SplashTitleContainer}>
-            <div className={styles.Gradient} />
-
+            {this.props.essay.videoPath ? (
+              <div className={styles.Gradient} />
+            ) : null}
             <div className={styles.SplashBackgroundVideoContainer}>
-              <video
-                poster={this.props.posterPath}
-                playsInline
-                muted
-                loop
-                autoPlay
-                disablePictureInPicture={true}
-                className={styles.SplashBackgroundVideo}
-              >
-                {/* <source src={this.props.essay.videoPath}></source> */}
-                <source src={this.props.essay.videoPath} type={"video/mp4"} />
-
-                {/* {[1280].map((width, idx) => {
-                return (
-                  <source
-                    key={idx}
-                    src={get_url(`background-loop-${width}.mp4`)}
-                    type={"video/mp4"}
-                  />
-                );
-              })} */}
-              </video>
+              {splashContent}
             </div>
-
             <div className={styles.SplashTitle}>
               <div>
                 {/* <header> */}
