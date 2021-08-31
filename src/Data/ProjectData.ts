@@ -9,6 +9,7 @@ export interface ProjectDataObject {
   organizationName?: string;
   parentOrganizationName?: string;
   parentOrganizationURL?: string;
+  textOnlyIndexPage?: boolean;
 }
 
 // export const ProjectData: ProjectDataObject = {

@@ -15,6 +15,7 @@ export interface IndexPageProps {
   backgroundImageURL: string;
   backgroundImageCaption: string;
   essays: Array<EssayDataEntry>;
+  textOnly: boolean;
 }
 
 // const logger = new DebugLogger("IndexPage: ");
@@ -44,7 +45,10 @@ export default function IndexPage(props: IndexPageProps) {
     projectTitle,
     projectSubtitle,
     projectHomeURL,
+    textOnly,
   } = props;
+
+  console.log("text only? ", textOnly);
 
   useEffect(() => {
     document.title = `${projectTitle} ${
@@ -68,7 +72,11 @@ export default function IndexPage(props: IndexPageProps) {
       <main className={styles.CenterColumn}>
         <IndexHeader title={projectTitle} description={projectDescription} />
         <nav aria-label="List of essays">
-          <ul className={styles.ItemListContainer}>
+          <ul
+            className={`${styles.ItemListContainer} ${
+              textOnly ? styles.TextOnly : null
+            }`}
+          >
             {essays.map((essay, i: number) => {
               // const essay: EssayDataEntry = essays[essayID];
               if (!essay) {
@@ -77,7 +85,7 @@ export default function IndexPage(props: IndexPageProps) {
               }
               return (
                 <li key={i} className={styles.IndexItemContainer}>
-                  <EssayIndexItem essay={essay} />
+                  <EssayIndexItem textOnly={textOnly} essay={essay} />
                 </li>
               );
             })}

@@ -5,30 +5,33 @@ import styles from "./EssayIndexItem.module.css";
 
 export interface EssayIndexItemProps {
   essay: EssayDataEntry;
+  textOnly: boolean;
 }
 
 export default function EssayIndexItem(props: EssayIndexItemProps) {
-  const { essay } = props;
+  const { essay, textOnly } = props;
 
   return (
     <Link tabIndex={0} to={`/essay/${essay.id}`} className={styles.ItemLink}>
       <article title={essay.title} className={styles.EssayIndexItem}>
-        <div className={styles.ThumbnailArea}>
-          <video
-            aria-label={`Thumbnail video for '${essay.title}'`}
-            poster={essay.posterPath}
-            playsInline
-            muted
-            loop
-            className={styles.SplashBackgroundVideo}
-            onMouseOver={(
-              event: React.MouseEvent<HTMLVideoElement, MouseEvent>
-            ) => (event.target as HTMLVideoElement).play()}
-            onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
-          >
-            <source src={essay.smallVideoPath} type={"video/mp4"}></source>
-          </video>
-        </div>
+        {textOnly ? null : (
+          <div className={styles.ThumbnailArea}>
+            <video
+              aria-label={`Thumbnail video for '${essay.title}'`}
+              poster={essay.posterPath}
+              playsInline
+              muted
+              loop
+              className={styles.SplashBackgroundVideo}
+              onMouseOver={(
+                event: React.MouseEvent<HTMLVideoElement, MouseEvent>
+              ) => (event.target as HTMLVideoElement).play()}
+              onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
+            >
+              <source src={essay.smallVideoPath} type={"video/mp4"}></source>
+            </video>
+          </div>
+        )}
         <div className={styles.TextArea}>
           <div className={styles.TitleContainer}>
             {/* <header> */}

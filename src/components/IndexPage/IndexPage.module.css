@@ -35,6 +35,18 @@
   padding-left: 0;
 }
 
+.TextOnly.ItemListContainer {
+  display: block;
+  margin-left: unset;
+  margin-right: unset;
+}
+
+.TextOnly .IndexItemContainer {
+  max-width: unset;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 .IndexItemContainer {
   flex: 1 0 50%;
 
