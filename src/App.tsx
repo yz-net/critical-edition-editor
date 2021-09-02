@@ -14,6 +14,15 @@ import IndexPage from "./components/IndexPage";
 import { EssayDataEntry } from "./Data/EssayData";
 import { ProjectDataObject } from "./Data/ProjectData";
 
+export function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 // import LogoBar from "./components/Viewer/LogoBar";
 
 // const logger = new DebugLogger("App: ");
@@ -51,6 +60,7 @@ function ViewerWrapper(props: ViewerWrapperProps) {
 
   return (
     <Router>
+      <ScrollToTop />
       <Route path="/">
         <Viewer
           callToAction={projectData.callToAction}
@@ -100,11 +110,18 @@ export default function App() {
               projectSubtitle={projectData.subtitle || ""}
               projectDescription={projectData.introCopy || ""}
               backgroundImageCaption={projectData.impactImageCaption || ""}
+              showBylines={
+                projectData.showBylinesOnIndexPage === false ? false : true
+              }
+              showSupertitles={
+                projectData.showSupertitlesOnIndexPage === true ? true : false
+              }
               projectHomeURL={
                 projectData.homeLink || "https://github.com/yale-fortunoff"
               }
               backgroundImageURL={"/img/impact-header-background.jpg"}
               essays={essays}
+              textOnly={projectData.textOnlyIndexPage ? true : false}
             />
           </Route>
         </Switch>

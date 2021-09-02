@@ -10,6 +10,8 @@ export interface ProjectDataObject {
   parentOrganizationName?: string;
   parentOrganizationURL?: string;
   textOnlyIndexPage?: boolean;
+  showBylinesOnIndexPage?: boolean;
+  showSupertitlesOnIndexPage?: boolean;
 }
 
 // export const ProjectData: ProjectDataObject = {

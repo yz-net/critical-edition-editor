@@ -6,10 +6,12 @@ import styles from "./EssayIndexItem.module.css";
 export interface EssayIndexItemProps {
   essay: EssayDataEntry;
   textOnly: boolean;
+  showBylines: boolean;
+  showSupertitles: boolean;
 }
 
 export default function EssayIndexItem(props: EssayIndexItemProps) {
-  const { essay, textOnly } = props;
+  const { essay, textOnly, showBylines, showSupertitles } = props;
 
   return (
     <Link tabIndex={0} to={`/essay/${essay.id}`} className={styles.ItemLink}>
@@ -35,11 +37,16 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
         <div className={styles.TextArea}>
           <div className={styles.TitleContainer}>
             {/* <header> */}
+            {showSupertitles ? (
+              <p className={styles.SuperTitle}>{essay.supertitle}</p>
+            ) : null}
             <h3 className={styles.Title}> {essay.title}</h3>
-            <p className={`${styles.Byline} sans-copy-ff`}>
-              by {essay.author}
-              {essay.affiliation ? `, ${essay.affiliation}` : null}
-            </p>
+            {showBylines ? (
+              <p className={`${styles.Byline} sans-copy-ff`}>
+                by {essay.author}
+                {essay.affiliation ? `, ${essay.affiliation}` : null}
+              </p>
+            ) : null}
             {/* </header> */}
           </div>
         </div>

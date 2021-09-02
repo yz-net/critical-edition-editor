@@ -16,6 +16,8 @@ export interface IndexPageProps {
   backgroundImageCaption: string;
   essays: Array<EssayDataEntry>;
   textOnly: boolean;
+  showBylines: boolean;
+  showSupertitles: boolean;
 }
 
 // const logger = new DebugLogger("IndexPage: ");
@@ -46,6 +48,8 @@ export default function IndexPage(props: IndexPageProps) {
     projectSubtitle,
     projectHomeURL,
     textOnly,
+    showBylines,
+    showSupertitles,
   } = props;
 
   console.log("text only? ", textOnly);
@@ -85,7 +89,12 @@ export default function IndexPage(props: IndexPageProps) {
               }
               return (
                 <li key={i} className={styles.IndexItemContainer}>
-                  <EssayIndexItem textOnly={textOnly} essay={essay} />
+                  <EssayIndexItem
+                    showSupertitles={showSupertitles}
+                    showBylines={showBylines}
+                    textOnly={textOnly}
+                    essay={essay}
+                  />
                 </li>
               );
             })}
