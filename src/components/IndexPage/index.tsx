@@ -1,3 +1,4 @@
+import { CompleteProjectDataObject } from "Data/ProjectData";
 import React, { useEffect } from "react";
 import { EssayDataEntry } from "../../Data/EssayData";
 // import DebugLogger from "../../utils/DebugLogger";
@@ -7,17 +8,8 @@ import ImpactHeader from "./ImpactHeader";
 import styles from "./IndexPage.module.css";
 
 export interface IndexPageProps {
-  projectTitle: string;
-  projectDescription: string;
-  projectSubtitle: string;
-  projectHomeURL: string;
-  organizationName: string;
-  backgroundImageURL: string;
-  backgroundImageCaption: string;
+  projectData: CompleteProjectDataObject;
   essays: Array<EssayDataEntry>;
-  textOnly: boolean;
-  showBylines: boolean;
-  showSupertitles: boolean;
 }
 
 // const logger = new DebugLogger("IndexPage: ");
@@ -38,47 +30,51 @@ function IndexHeader(props: IndexHeaderProps) {
 }
 
 export default function IndexPage(props: IndexPageProps) {
-  const {
-    essays,
-    backgroundImageURL,
-    backgroundImageCaption,
-    organizationName,
-    projectDescription,
-    projectTitle,
-    projectSubtitle,
-    projectHomeURL,
-    textOnly,
-    showBylines,
-    showSupertitles,
-  } = props;
+  const { projectData, essays } = props;
 
-  console.log("text only? ", textOnly);
+  // const organizationName = projectData.organizationName || "";
+  // const projectTitle = projectData.title || "";
+  // const projectSubtitle = projectData.subtitle || "";
+  // const projectDescription = projectData.introCopy || "";
+  // const backgroundImageCaption = projectData.impactImageCaption || "";
+  // const showBylines =
+  //   projectData.showBylinesOnIndexPage === false ? false : true;
+  // const showSupertitles =
+  //   projectData.showSupertitlesOnIndexPage === true ? true : false;
+
+  // const projectHomeURL =
+  //   projectData.homeLink || "https://github.com/yale-fortunoff";
+  const backgroundImageURL = "/img/impact-header-background.jpg";
+  // const textOnly = projectData.textOnlyIndexPage ? true : false;
 
   useEffect(() => {
-    document.title = `${projectTitle} ${
-      organizationName ? " | " + organizationName : ""
+    document.title = `${projectData.title} ${
+      projectData.organizationName ? " | " + projectData.organizationName : ""
     }`;
-  }, [organizationName, projectTitle]);
+  }, [projectData]);
 
   return (
     <div>
       <LogoBar
-        appName={projectTitle}
-        orgName={organizationName}
-        homeLink={projectHomeURL}
+        appName={projectData.title}
+        orgName={projectData.organizationName}
+        homeLink={projectData.homeLink}
       />
       <ImpactHeader
-        caption={backgroundImageCaption}
+        caption={projectData.impactImageCaption}
         backgroundImageURL={backgroundImageURL}
-        title={projectTitle}
-        subtitle={projectSubtitle}
+        title={projectData.title}
+        subtitle={projectData.subtitle}
       />
       <main className={styles.CenterColumn}>
-        <IndexHeader title={projectTitle} description={projectDescription} />
+        <IndexHeader
+          title={projectData.title}
+          description={projectData.introCopy}
+        />
         <nav aria-label="List of essays">
           <ul
             className={`${styles.ItemListContainer} ${
-              textOnly ? styles.TextOnly : null
+              projectData.textOnlyIndexPage ? styles.TextOnly : null
             }`}
           >
             {essays.map((essay, i: number) => {
@@ -90,9 +86,9 @@ export default function IndexPage(props: IndexPageProps) {
               return (
                 <li key={i} className={styles.IndexItemContainer}>
                   <EssayIndexItem
-                    showSupertitles={showSupertitles}
-                    showBylines={showBylines}
-                    textOnly={textOnly}
+                    showSupertitles={projectData.showBylinesOnIndexPage}
+                    showBylines={projectData.showBylinesOnIndexPage}
+                    textOnly={projectData.textOnlyIndexPage}
                     essay={essay}
                   />
                 </li>

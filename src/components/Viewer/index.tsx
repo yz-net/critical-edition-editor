@@ -13,7 +13,7 @@ import EssayPreamble from "./EssayPreamble";
 import LogoBar from "./LogoBar";
 import CallToAction from "./CallToAction";
 import Footer from "../Footer";
-import { ProjectDataObject } from "../../Data/ProjectData";
+import { CompleteProjectDataObject } from "../../Data/ProjectData";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -26,15 +26,15 @@ interface ViewerState {
 }
 
 interface ViewerProps {
+  projectData: CompleteProjectDataObject;
   essay: EssayDataEntry;
-  essayPath: string;
-  posterPath?: string;
-  hash: string;
-  homeLink: string;
-  appName: string;
-  callToAction?: boolean;
-  organizationName: string;
-  projectData: ProjectDataObject;
+  // essayPath: string;
+  // posterPath?: string;
+  // hash: string;
+  // homeLink: string;
+  // appName: string;
+  // callToAction?: boolean;
+  // organizationName: string;
 }
 
 class Viewer extends React.Component<ViewerProps> {
@@ -94,13 +94,17 @@ class Viewer extends React.Component<ViewerProps> {
 
   componentDidMount() {
     this.loadEssay();
-    document.title = `${this.props.essay.title} | ${this.props.appName} ${
-      this.props.organizationName ? " | " + this.props.organizationName : ""
+    document.title = `${this.props.essay.title} | ${
+      this.props.projectData.title
+    } ${
+      this.props.projectData.organizationName
+        ? " | " + this.props.projectData.organizationName
+        : ""
     }`;
   }
 
   loadEssay() {
-    fetch(this.props.essayPath)
+    fetch(this.props.essay.essayPath)
       .then((content) => content.json())
       .then((essayContent) => {
         const loadedDocument = new DocumentReader({ document: essayContent });
@@ -127,7 +131,7 @@ class Viewer extends React.Component<ViewerProps> {
       <div
         className={styles.SplashBackgroundImage}
         style={{
-          backgroundImage: `url(${this.props.posterPath})`,
+          backgroundImage: `url(${this.props.essay.posterPath})`,
         }}
       >
         {" "}
@@ -135,7 +139,7 @@ class Viewer extends React.Component<ViewerProps> {
     );
     const splashVideo = (
       <video
-        poster={this.props.posterPath}
+        poster={this.props.essay.posterPath}
         playsInline
         muted
         loop
@@ -166,9 +170,9 @@ class Viewer extends React.Component<ViewerProps> {
       <div className={styles.Viewer}>
         <div className={styles.LogoBarContainer}>
           <LogoBar
-            appName={this.props.appName}
-            orgName={this.props.organizationName}
-            homeLink={this.props.homeLink}
+            appName={this.props.projectData.title}
+            orgName={this.props.projectData.organizationName}
+            homeLink={this.props.projectData.homeLink}
           />
         </div>
 
@@ -237,7 +241,8 @@ class Viewer extends React.Component<ViewerProps> {
               />
             </main>
 
-            {this.props.callToAction && this.props.essay.aviaryLink ? (
+            {this.props.projectData.callToAction &&
+            this.props.essay.aviaryLink ? (
               <div className={styles.CallToActionArea}>
                 <CallToAction
                   posterURL={this.props.essay.posterPath}

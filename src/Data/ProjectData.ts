@@ -14,6 +14,38 @@ export interface ProjectDataObject {
   showSupertitlesOnIndexPage?: boolean;
 }
 
+export interface CompleteProjectDataObject {
+  title: string;
+  subtitle: string;
+  introCopy: string;
+  homeLink: string;
+  callToAction: boolean;
+  impactImageCaption: string;
+  organizationName: string;
+  parentOrganizationName: string;
+  parentOrganizationURL: string;
+  textOnlyIndexPage: boolean;
+  showBylinesOnIndexPage: boolean;
+  showSupertitlesOnIndexPage: boolean;
+}
+
+export function processProjectData(projectData: ProjectDataObject): CompleteProjectDataObject {
+  return {
+    organizationName: projectData.organizationName || "",
+    title: projectData.title || "",
+    subtitle: projectData.subtitle || "",
+    introCopy: projectData.introCopy || "",
+    impactImageCaption: projectData.impactImageCaption || "",
+    showBylinesOnIndexPage: projectData.showBylinesOnIndexPage === false ? false : true,
+    showSupertitlesOnIndexPage: projectData.showSupertitlesOnIndexPage === true ? true : false,
+    homeLink: projectData.homeLink || "https://github.com/yale-fortunoff",
+    textOnlyIndexPage: projectData.textOnlyIndexPage ? true : false,
+    callToAction: projectData.callToAction === true ? true : false,
+    parentOrganizationName: projectData.parentOrganizationName || "Parent Organization",
+    parentOrganizationURL: projectData.parentOrganizationURL || "https://github.com/yale-fortunoff"
+  }
+}
+
 // export const ProjectData: ProjectDataObject = {
 //   title: "Critical Editions",
 //   subtitle: "Holocaust Testimonies in Historical Context",
