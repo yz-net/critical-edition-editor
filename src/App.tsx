@@ -80,18 +80,21 @@ function ViewerWrapper(props: ViewerWrapperProps) {
   );
 }
 
-export default function App() {
-  const [essays, setEssays] = useState<Array<EssayDataEntry>>([]);
-  const [projectData, setProjectData] = useState<ProjectDataObject>({});
+export interface RenderAppProps {
+  projectData: ProjectDataObject;
+  essays: Array<EssayDataEntry>;
+}
 
-  useEffect(() => {
-    fetch("/data/config.json")
-      .then((resp) => resp.json())
-      .then((json) => {
-        setProjectData(json["projectData"]);
-        setEssays(json["essays"]);
-      });
-  }, []);
+function Loading() {
+  return <div>Loading</div>;
+}
+
+export function RenderApp(props: RenderAppProps) {
+  const { projectData, essays } = props;
+
+  if (!projectData || !essays) {
+    return <Loading />;
+  }
 
   return (
     <div className="App serif-copy-ff">
@@ -134,4 +137,23 @@ export default function App() {
       /> */}
     </div>
   );
+}
+
+export default function App() {
+  const [essays, setEssays] = useState<Array<EssayDataEntry>>([]);
+  const [projectData, setProjectData] = useState<ProjectDataObject>({});
+
+  useEffect(() => {
+    fetch("/data/config.json")
+      .then((resp) => resp.json())
+      .then((json) => {
+        setProjectData(json["projectData"]);
+        setEssays(json["essays"]);
+      });
+  }, []);
+
+  return RenderApp({
+    projectData,
+    essays,
+  });
 }
