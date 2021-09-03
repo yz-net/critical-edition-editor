@@ -13,7 +13,11 @@ import EssayPreamble from "./EssayPreamble";
 import LogoBar from "./LogoBar";
 import CallToAction from "./CallToAction";
 import Footer from "../Footer";
-import { CompleteProjectDataObject } from "../../Data/ProjectData";
+import {
+  CompleteProjectDataObject,
+  defaultProjectData,
+} from "Data/ProjectData";
+import { DataContext } from "Data/Context";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -23,10 +27,12 @@ interface ViewerState {
   continuePlaying: boolean;
   playingBlock?: number;
   headerHeight: number;
+
+  projectData: CompleteProjectDataObject;
 }
 
 interface ViewerProps {
-  projectData: CompleteProjectDataObject;
+  // projectData: CompleteProjectDataObject;
   essay: EssayDataEntry;
   // essayPath: string;
   // posterPath?: string;
@@ -39,6 +45,7 @@ interface ViewerProps {
 
 class Viewer extends React.Component<ViewerProps> {
   state: ViewerState;
+  static contextType = DataContext;
 
   constructor(props: ViewerProps) {
     super(props);
@@ -64,6 +71,7 @@ class Viewer extends React.Component<ViewerProps> {
         playStatusHandler: this.playStatusHandler,
       }),
       headerHeight: 200,
+      projectData: defaultProjectData(),
     };
   }
 
@@ -94,11 +102,16 @@ class Viewer extends React.Component<ViewerProps> {
 
   componentDidMount() {
     this.loadEssay();
+
+    this.setState({ projectData: this.context.projectData });
+  }
+
+  componentDidUpdate() {
     document.title = `${this.props.essay.title} | ${
-      this.props.projectData.title
+      this.state.projectData.title
     } ${
-      this.props.projectData.organizationName
-        ? " | " + this.props.projectData.organizationName
+      this.state.projectData.organizationName
+        ? " | " + this.state.projectData.organizationName
         : ""
     }`;
   }
@@ -170,9 +183,9 @@ class Viewer extends React.Component<ViewerProps> {
       <div className={styles.Viewer}>
         <div className={styles.LogoBarContainer}>
           <LogoBar
-            appName={this.props.projectData.title}
-            orgName={this.props.projectData.organizationName}
-            homeLink={this.props.projectData.homeLink}
+            appName={this.state.projectData.title}
+            orgName={this.state.projectData.organizationName}
+            homeLink={this.state.projectData.homeLink}
           />
         </div>
 
@@ -241,7 +254,7 @@ class Viewer extends React.Component<ViewerProps> {
               />
             </main>
 
-            {this.props.projectData.callToAction &&
+            {this.state.projectData.callToAction &&
             this.props.essay.aviaryLink ? (
               <div className={styles.CallToActionArea}>
                 <CallToAction
@@ -252,12 +265,12 @@ class Viewer extends React.Component<ViewerProps> {
             ) : null}
 
             <Footer
-              orgName={this.props.projectData.organizationName || ""}
-              orgURL={this.props.projectData.homeLink || ""}
+              orgName={this.state.projectData.organizationName || ""}
+              orgURL={this.state.projectData.homeLink || ""}
               parentOrgName={
-                this.props.projectData.parentOrganizationName || ""
+                this.state.projectData.parentOrganizationName || ""
               }
-              parentOrgURL={this.props.projectData.parentOrganizationURL || ""}
+              parentOrgURL={this.state.projectData.parentOrganizationURL || ""}
             />
           </div>
         </div>

@@ -12,10 +12,7 @@ import "./App.css";
 // import EssayIndexItem from "./components/EssayIndexItem";
 import IndexPage from "./components/IndexPage";
 import { EssayDataEntry } from "./Data/EssayData";
-import {
-  processProjectData,
-  CompleteProjectDataObject,
-} from "./Data/ProjectData";
+import { DataContext, DataContextObject } from "./Data/Context";
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,13 +25,8 @@ export function ScrollToTop() {
 }
 // import LogoBar from "./components/Viewer/LogoBar";
 // const logger = new DebugLogger("App: ");
-interface ViewerWrapperProps {
-  essays: Array<EssayDataEntry>;
-  projectData: CompleteProjectDataObject;
-}
-
-function ViewerWrapper(props: ViewerWrapperProps) {
-  const { essays, projectData } = props;
+function ViewerWrapper() {
+  const context = React.useContext(DataContext);
 
   function ViewError(props: { message: string }) {
     return <div>{props.message}</div>;
@@ -54,6 +46,9 @@ function ViewerWrapper(props: ViewerWrapperProps) {
     return <BadViewRequest />;
   }
 
+  if (!context) return <ViewError message="Context Not Loaded" />;
+  const { essays } = context;
+
   // look for essay. when multiple have the same id, return the first
   const matches = essays.filter((e) => e.id === params.essayID);
   let essay: EssayDataEntry;
@@ -68,32 +63,14 @@ function ViewerWrapper(props: ViewerWrapperProps) {
     return <EssayNotFound />;
   }
 
-  return (
-    // <Router>
-    //   <ScrollToTop />
-    //   <Route path="/">
-    <Viewer projectData={projectData} essay={essay} />
-    //   </Route>
-    // </Router>
-  );
+  return <Viewer essay={essay} />;
 }
 
-export interface RenderAppProps {
-  projectData: CompleteProjectDataObject;
-  essays: Array<EssayDataEntry>;
-}
+// function Loading() {
+//   return <div>Loading</div>;
+// }
 
-function Loading() {
-  return <div>Loading</div>;
-}
-
-export function RenderApp(props: RenderAppProps) {
-  const { projectData, essays } = props;
-
-  if (!projectData || !essays) {
-    return <Loading />;
-  }
-
+export function RenderApp() {
   return (
     <div className="App serif-copy-ff">
       <Router>
@@ -101,10 +78,10 @@ export function RenderApp(props: RenderAppProps) {
         <Switch>
           <Route path="/example-essay"></Route>
           <Route path="/essay/:essayID">
-            <ViewerWrapper projectData={projectData} essays={essays} />
+            <ViewerWrapper />
           </Route>
           <Route path="/">
-            <IndexPage projectData={projectData} essays={essays} />
+            <IndexPage />
           </Route>
         </Switch>
       </Router>
@@ -113,20 +90,26 @@ export function RenderApp(props: RenderAppProps) {
 }
 
 export default function App() {
-  const [essays, setEssays] = useState<Array<EssayDataEntry>>([]);
-  const [projectData, setProjectData] = useState<CompleteProjectDataObject>({});
+  const [data, setData] = useState<DataContextObject | null>();
 
   useEffect(() => {
     fetch("/data/config.json")
       .then((resp) => resp.json())
       .then((json) => {
-        setProjectData(processProjectData(json["projectData"]));
-        setEssays(json["essays"]);
+        setData({
+          projectData: json["projectData"],
+          essays: json["essays"],
+        });
       });
   }, []);
 
-  return RenderApp({
-    projectData,
-    essays,
-  });
+  if (!data) {
+    return <div>Project data not loaded</div>;
+  }
+
+  return (
+    <DataContext.Provider value={data}>
+      <RenderApp />
+    </DataContext.Provider>
+  );
 }

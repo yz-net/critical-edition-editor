@@ -46,6 +46,10 @@ export function processProjectData(projectData: ProjectDataObject): CompleteProj
   }
 }
 
+export function defaultProjectData(): CompleteProjectDataObject {
+  return processProjectData({})
+}
+
 // export const ProjectData: ProjectDataObject = {
 //   title: "Critical Editions",
 //   subtitle: "Holocaust Testimonies in Historical Context",
