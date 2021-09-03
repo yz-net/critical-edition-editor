@@ -133,11 +133,6 @@ class Viewer extends React.Component<ViewerProps> {
       });
   }
 
-  // handleScroll(evt: React.UIEvent<HTMLDivElement, UIEvent>) {
-  //   console.log("scroll event", evt.currentTarget.scrollTop, typeof evt.target);
-  //   this.setState({ scrollPosition: evt.currentTarget.scrollTop });
-  // }
-
   render() {
     const splashImage = (
       <div

@@ -71,7 +71,7 @@ export default function IndexPage() {
               return (
                 <li key={i} className={styles.IndexItemContainer}>
                   <EssayIndexItem
-                    showSupertitles={projectData.showBylinesOnIndexPage}
+                    showSupertitles={projectData.showSupertitlesOnIndexPage}
                     showBylines={projectData.showBylinesOnIndexPage}
                     textOnly={projectData.textOnlyIndexPage}
                     essay={essay}

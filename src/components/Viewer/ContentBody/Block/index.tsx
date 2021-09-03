@@ -47,7 +47,6 @@ export default function Block(props: {
     if (props.inFocus && ref.current) {
       // ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
       // ref.current.focus();
-      console.log("Block.useEffect scroll");
       scrollToElementByID(blockID);
     }
   }, [blockID, props.inFocus]);
