@@ -7,7 +7,6 @@ export function fetchProjectConfiguration(): Promise<DataContextObject> {
     return fetch("/data/config.json")
         .then((resp) => resp.json())
         .then((json) => {
-            console.log("using API to fretch project configuration")
             const projectData = processProjectData(json["projectData"])
             const essays = json["essays"]
             return {
