@@ -3,7 +3,6 @@ import styles from "./Footer.module.css";
 interface FooterProps {
   parentOrgURL?: string;
   parentOrgName?: string;
-
   orgName: string;
   orgURL: string;
 }

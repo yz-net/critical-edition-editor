@@ -38,11 +38,19 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
           <div className={styles.TitleContainer}>
             {/* <header> */}
             {showSupertitles ? (
-              <p className={styles.SuperTitle}>{essay.supertitle}</p>
+              <p
+                aria-label={`Supertitle for '${essay.title}'`}
+                className={styles.SuperTitle}
+              >
+                {essay.supertitle}
+              </p>
             ) : null}
             <h3 className={styles.Title}> {essay.title}</h3>
             {showBylines ? (
-              <p className={`${styles.Byline} sans-copy-ff`}>
+              <p
+                aria-label={`Author byline for '${essay.title}'`}
+                className={`${styles.Byline} sans-copy-ff`}
+              >
                 by {essay.author}
                 {essay.affiliation ? `, ${essay.affiliation}` : null}
               </p>
