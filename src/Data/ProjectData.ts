@@ -32,17 +32,17 @@ export interface CompleteProjectDataObject {
 export function processProjectData(projectData: ProjectDataObject): CompleteProjectDataObject {
   return {
     organizationName: projectData.organizationName || "",
+    homeLink: projectData.homeLink || "",
     title: projectData.title || "",
     subtitle: projectData.subtitle || "",
     introCopy: projectData.introCopy || "",
     impactImageCaption: projectData.impactImageCaption || "",
     showBylinesOnIndexPage: projectData.showBylinesOnIndexPage === false ? false : true,
     showSupertitlesOnIndexPage: projectData.showSupertitlesOnIndexPage === true ? true : false,
-    homeLink: projectData.homeLink || "https://github.com/yale-fortunoff",
     textOnlyIndexPage: projectData.textOnlyIndexPage ? true : false,
     callToAction: projectData.callToAction === true ? true : false,
-    parentOrganizationName: projectData.parentOrganizationName || "Parent Organization",
-    parentOrganizationURL: projectData.parentOrganizationURL || "https://github.com/yale-fortunoff"
+    parentOrganizationName: projectData.parentOrganizationName || "",
+    parentOrganizationURL: projectData.parentOrganizationURL || ""
   }
 }
 
