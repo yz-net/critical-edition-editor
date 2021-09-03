@@ -5,6 +5,8 @@ import { EssayDataEntry } from "Data/EssayData";
 import faker from "faker";
 import { DataContext, DataContextObject } from "Data/Context";
 import { defaultProjectData } from "Data/ProjectData";
+import IndexPage from "components/IndexPage";
+import { MemoryRouter } from "react-router-dom";
 
 window.scrollTo = () => {};
 
@@ -38,12 +40,17 @@ function fakeEssay(): EssayDataEntry {
 }
 
 it("index renders expected number of list items", () => {
-  const app = customRender(<RenderApp />, {
-    projectData: defaultProjectData(),
-    essays: Array(10)
-      .fill(0)
-      .map(() => fakeEssay()),
-  });
+  const app = customRender(
+    <MemoryRouter>
+      <IndexPage />
+    </MemoryRouter>,
+    {
+      projectData: defaultProjectData(),
+      essays: Array(10)
+        .fill(0)
+        .map(() => fakeEssay()),
+    }
+  );
   const listItems = app.getAllByRole("listitem");
   expect(listItems.length).toBe(10);
 });

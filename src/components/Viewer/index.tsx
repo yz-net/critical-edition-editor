@@ -18,6 +18,7 @@ import {
   defaultProjectData,
 } from "Data/ProjectData";
 import { DataContext } from "Data/Context";
+import { fetchEssay } from "Data/api";
 
 const logger = new DebugLogger("Viewer");
 interface ViewerState {
@@ -117,10 +118,8 @@ class Viewer extends React.Component<ViewerProps> {
   }
 
   loadEssay() {
-    fetch(this.props.essay.essayPath)
-      .then((content) => content.json())
-      .then((essayContent) => {
-        const loadedDocument = new DocumentReader({ document: essayContent });
+    fetchEssay(this.props.essay)
+      .then((loadedDocument) => {
         this.setState({
           document: loadedDocument,
           player: new SpeechSynthesisDocumentPlayer({

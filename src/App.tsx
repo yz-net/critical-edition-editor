@@ -13,6 +13,7 @@ import "./App.css";
 import IndexPage from "./components/IndexPage";
 import { EssayDataEntry } from "./Data/EssayData";
 import { DataContext, DataContextObject } from "./Data/Context";
+import { fetchProjectConfiguration } from "Data/api";
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -93,14 +94,9 @@ export default function App() {
   const [data, setData] = useState<DataContextObject | null>();
 
   useEffect(() => {
-    fetch("/data/config.json")
-      .then((resp) => resp.json())
-      .then((json) => {
-        setData({
-          projectData: json["projectData"],
-          essays: json["essays"],
-        });
-      });
+    fetchProjectConfiguration().then((config) => {
+      setData(config);
+    });
   }, []);
 
   if (!data) {
