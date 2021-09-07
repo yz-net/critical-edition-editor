@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import Viewer from "./components/Viewer";
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   useParams,
   useLocation,
-} from "react-router-dom";
+} from 'react-router-dom';
+import Viewer from './components/Viewer';
 // import DebugLogger from "./utils/DebugLogger";
-import "./App.css";
+import './App.css';
 // import EssayIndexItem from "./components/EssayIndexItem";
-import IndexPage from "./components/IndexPage";
-import { EssayDataEntry } from "./Data/EssayData";
-import { DataContext, DataContextObject } from "./Data/Context";
-import { fetchProjectConfiguration } from "Data/api";
+import IndexPage from './components/IndexPage';
+import { EssayDataEntry } from './Data/EssayData';
+import { DataContext, DataContextObject } from './Data/Context';
+import { fetchProjectConfiguration } from './Data/api';
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,7 +30,8 @@ function ViewerWrapper() {
   const context = React.useContext(DataContext);
 
   function ViewError(props: { message: string }) {
-    return <div>{props.message}</div>;
+    const { message } = props;
+    return <div>{message}</div>;
   }
 
   function BadViewRequest() {
@@ -53,13 +54,8 @@ function ViewerWrapper() {
   // look for essay. when multiple have the same id, return the first
   const matches = essays.filter((e) => e.id === params.essayID);
   let essay: EssayDataEntry;
-  if (matches.length === 1) {
-    essay = matches[0];
-  } else if (matches.length > 1) {
-    essay = matches[0];
-    console.warn(
-      `Warning: Multiple essays with the same id: ${params.essayID}`
-    );
+  if (matches.length >= 1) {
+    [essay] = matches;
   } else {
     return <EssayNotFound />;
   }
@@ -77,7 +73,7 @@ export function RenderApp() {
       <Router>
         <ScrollToTop />
         <Switch>
-          <Route path="/example-essay"></Route>
+          <Route path="/example-essay" />
           <Route path="/essay/:essayID">
             <ViewerWrapper />
           </Route>
