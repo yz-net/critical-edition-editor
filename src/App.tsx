@@ -12,7 +12,11 @@ import './App.css';
 // import EssayIndexItem from "./components/EssayIndexItem";
 import IndexPage from './components/IndexPage';
 import { EssayDataEntry } from './Data/EssayData';
-import { DataContext, DataContextObject } from './Data/Context';
+import {
+  DataContext,
+  DataContextObject,
+  defaultDataContext,
+} from './Data/Context';
 import { fetchProjectConfiguration } from './Data/api';
 
 export function ScrollToTop() {
@@ -39,7 +43,7 @@ function ViewerWrapper() {
   }
 
   function EssayNotFound() {
-    return <ViewError message="Essay Not Found" />;
+    return <ViewError message="" />;
   }
 
   const params: { essayID: string } = useParams();
@@ -87,7 +91,7 @@ export function RenderApp() {
 }
 
 export default function App() {
-  const [data, setData] = useState<DataContextObject | null>();
+  const [data, setData] = useState<DataContextObject>(defaultDataContext());
 
   useEffect(() => {
     fetchProjectConfiguration().then((config) => {
