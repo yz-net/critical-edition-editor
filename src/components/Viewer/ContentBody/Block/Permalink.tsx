@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // import styles from "./ControlButtons.module.css";
-import { ReactComponent as LinkIcon } from "../../svg/link_icon.svg";
-import ControlButton from "../../../common/ControlButton";
+import { ReactComponent as LinkIcon } from '../../svg/link_icon.svg';
+import ControlButton from '../../../common/ControlButton';
 // import { useLocation } from "react-router-dom";
 
 type PermalinkProps = {
@@ -9,7 +9,8 @@ type PermalinkProps = {
 };
 export default function Permalink(props: PermalinkProps) {
   const permalink: URL = new URL(window.location.toString());
-  permalink.hash = props.blockID;
+  const { blockID } = props;
+  permalink.hash = blockID;
 
   return (
     <ControlButton

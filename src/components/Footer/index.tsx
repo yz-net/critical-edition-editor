@@ -1,12 +1,15 @@
-import React from "react";
-import styles from "./Footer.module.css";
+import React from 'react';
+import styles from './Footer.module.css';
 
 interface FooterProps {
-  parentOrgURL?: string;
   parentOrgName?: string;
   orgName: string;
   orgURL: string;
 }
+
+Footer.defaultProps = {
+  parentOrgName: undefined,
+};
 
 export default function Footer(props: FooterProps) {
   const { orgName, orgURL, parentOrgName } = props;
@@ -25,7 +28,7 @@ export default function Footer(props: FooterProps) {
           </div>
         </div>
         <div className={`sans-copy-ff ${styles.Right}`}>
-          An experiment of the{" "}
+          An experiment of the{' '}
           <a href="https://dhlab.yale.edu">
             Yale Digital Humanities Laboratory
           </a>

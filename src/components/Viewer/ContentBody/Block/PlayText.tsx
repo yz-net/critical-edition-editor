@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react';
 // import styles from "./ControlButtons.module.css";
-import { ReactComponent as PlayIcon } from "../../svg/audio_icon.svg";
+import { ReactComponent as PlayIcon } from '../../svg/audio_icon.svg';
 // import svgPlayIcon from "../../svg/audio_icon.svg";
-import ControlButton from "../../../common/ControlButton";
+import ControlButton from '../../../common/ControlButton';
 
 interface PlayTextProps {
-  text: string;
   playBlock: () => void;
   stopPlaying: () => void;
   playing: boolean;

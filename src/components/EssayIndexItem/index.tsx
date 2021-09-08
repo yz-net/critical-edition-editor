@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { EssayDataEntry } from "../../Data/EssayData";
-import styles from "./EssayIndexItem.module.css";
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { EssayDataEntry } from '../../Data/EssayData';
+import styles from './EssayIndexItem.module.css';
 
 export interface EssayIndexItemProps {
   essay: EssayDataEntry;
@@ -12,23 +12,41 @@ export interface EssayIndexItemProps {
 
 export default function EssayIndexItem(props: EssayIndexItemProps) {
   const { essay, textOnly, showBylines, showSupertitles } = props;
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleMouseOver = () => {
+    if (videoRef && videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
+  const handleMouseOut = () => {
+    if (videoRef && videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
 
   return (
-    <Link tabIndex={0} to={`/essay/${essay.id}`} className={styles.ItemLink}>
+    <Link
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+      onFocus={handleMouseOver}
+      onBlur={handleMouseOut}
+      tabIndex={0}
+      to={`/essay/${essay.id}`}
+      className={styles.ItemLink}
+    >
       <article title={essay.title} className={styles.EssayIndexItem}>
         {textOnly ? null : (
           <div className={styles.ThumbnailArea}>
             <video
+              ref={videoRef}
               aria-label={`Thumbnail video for '${essay.title}'`}
               poster={essay.posterPath}
               playsInline
               muted
               loop
               className={styles.SplashBackgroundVideo}
-              onMouseOver={(
-                event: React.MouseEvent<HTMLVideoElement, MouseEvent>
-              ) => (event.target as HTMLVideoElement).play()}
-              onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
             >
               <source src={essay.smallVideoPath} type="video/mp4" />
             </video>

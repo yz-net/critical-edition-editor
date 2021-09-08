@@ -69,6 +69,7 @@ export default function ContentBody(props: ContentBodyProps): JSX.Element {
                   nextFootnoteBlock={getFootnoteBlock(i + 1)}
                   previousFootnoteBlock={getFootnoteBlock(i - 1)}
                   index={i + 1}
+                  // eslint-disable-next-line react/no-array-index-key
                   key={i}
                   playBlock={() => props.playBlock(i)}
                   stopPlaying={props.stopPlaying}

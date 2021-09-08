@@ -17,7 +17,7 @@ const validCriticalEditionDocumentData: ValidatorFunction<CriticalEditionDocumen
     // not really an issue interms of performance, so I'll leave it
     // more comprehensive of a test.
     // 2. Should this remove invalid blocks? For now I'll just warn.
-    for (let i = 0; i < data.blocks.length; i++) {
+    for (let i = 0; i < data.blocks.length; i += 1) {
         try {
             validBlockData(data.blocks[i]);
         } catch (e) {

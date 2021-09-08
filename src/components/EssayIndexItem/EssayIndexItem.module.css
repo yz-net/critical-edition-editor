@@ -11,6 +11,10 @@
   background-color: #efefef;
 }
 
+.ItemLink:focus-within .EssayIndexItem {
+  outline: 4px solid blue;
+}
+
 .Byline {
   margin-top: 0px;
   color: #444;
