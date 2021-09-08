@@ -37,10 +37,10 @@ export function processProjectData(projectData: ProjectDataObject): CompleteProj
     subtitle: projectData.subtitle || "",
     introCopy: projectData.introCopy || "",
     impactImageCaption: projectData.impactImageCaption || "",
-    showBylinesOnIndexPage: projectData.showBylinesOnIndexPage === false ? false : true,
-    showSupertitlesOnIndexPage: projectData.showSupertitlesOnIndexPage === true ? true : false,
-    textOnlyIndexPage: projectData.textOnlyIndexPage ? true : false,
-    callToAction: projectData.callToAction === true ? true : false,
+    showBylinesOnIndexPage: projectData.showBylinesOnIndexPage !== false,
+    showSupertitlesOnIndexPage: projectData.showSupertitlesOnIndexPage === true,
+    textOnlyIndexPage: !!projectData.textOnlyIndexPage,
+    callToAction: projectData.callToAction === true,
     parentOrganizationName: projectData.parentOrganizationName || "",
     parentOrganizationURL: projectData.parentOrganizationURL || ""
   }

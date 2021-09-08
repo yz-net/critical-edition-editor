@@ -15,7 +15,7 @@ interface FootnoteProps {
 }
 
 export function Footnote(props: FootnoteProps) {
-  const label = props.data.label;
+  const {label} = props.data;
 
   const ref = useRef<HTMLDivElement>(null);
 
@@ -32,7 +32,7 @@ export function Footnote(props: FootnoteProps) {
       <LeftArrow />
     </button>
   ) : (
-    <button disabled></button>
+    <button disabled />
   );
 
   const nextButton = props.nextFootnoteBlock ? (
@@ -48,7 +48,7 @@ export function Footnote(props: FootnoteProps) {
       <RightArrow />
     </button>
   ) : (
-    <button disabled></button>
+    <button disabled />
   );
   return (
     <div className={`sans-copy-ff ${styles.Footnote}`}>
@@ -60,12 +60,12 @@ export function Footnote(props: FootnoteProps) {
           <div
             className={styles.EmbedCode}
             dangerouslySetInnerHTML={{ __html: props.data.embedCode || "" }}
-          ></div>
+           />
           <div
             className={styles.TextContent}
             id={props.data.id}
             dangerouslySetInnerHTML={{ __html: props.data.text }}
-          ></div>
+           />
         </div>
         <div className={styles.NavButtonTray}>
           {prevButton}

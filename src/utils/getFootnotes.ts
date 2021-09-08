@@ -4,10 +4,10 @@ export default function getFootnotes(data: ParagraphBlockData) {
 
     const temp = document.createElement("div")
     temp.innerHTML = data.text || "";
-    let ret: Array<string> = []
+    const ret: Array<string> = []
 
     const links = temp.getElementsByTagName("a");
-    for (let i = 0; i < links.length; i++) {
+    for (let i = 0; i < links.length; i += 1) {
         const link = links[i];
         const href = link.getAttribute("href") || "";
 

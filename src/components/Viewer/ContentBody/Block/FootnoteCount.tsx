@@ -1,6 +1,6 @@
+import React from "react";
 import { ParagraphBlockData } from "../../../../CriticalEditionData";
 import styles from "./FootnoteCount.module.css";
-import React from "react";
 import getFootnotes from "../../../../utils/getFootnotes";
 import { ReactComponent as FootnoteIcon } from "../../../../svg/footnote_icon.svg";
 
@@ -10,7 +10,7 @@ interface FootnoteCountProps {
 
 const empty = (
   <aside className={styles.FootnoteCount}>
-    <div className={styles.IconContainer}></div>
+    <div className={styles.IconContainer} />
   </aside>
 );
 

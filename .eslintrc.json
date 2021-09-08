@@ -13,11 +13,19 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
+  "ignorePatterns": ["*.svg", "*.woff", "*.woff2", "*.css", "*.scss", ""],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
-    // note you must disable the base rule as it can report incorrect errors
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".tsx", ".jsx", ".ts"] }
+    ],
+    "import/no-unresoved": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-undef": "off",
+    "no-underscore-dangle": "off",
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
+    // "@typescript-eslint/no-use-before-define": ["error"],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -31,9 +39,7 @@
   },
   "settings": {
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+      "typescript": {}
     }
   }
 }

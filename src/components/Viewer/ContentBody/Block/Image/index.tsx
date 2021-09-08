@@ -16,7 +16,7 @@ export function Image(props: ImageProps) {
       <div
         dangerouslySetInnerHTML={{ __html: caption || "" }}
         className={styles.Caption}
-      ></div>
+       />
     </div>
   );
 }

@@ -6,7 +6,7 @@ export default function scrollToElementByID(elementID: string, e?: Event, option
     e?.preventDefault();
 
     const footnotes = document.getElementsByClassName("blocktype-footnoteParagraph")
-    for (let i = 0; i < footnotes.length; i++) {
+    for (let i = 0; i < footnotes.length; i += 1) {
         const item = footnotes.item(i)
         item?.classList.add("hidden")
     }
@@ -19,10 +19,10 @@ export default function scrollToElementByID(elementID: string, e?: Event, option
         element.focus();
 
         // Update the page hash
-        setTimeout(() => { window.location.hash = "#" + elementID; }, 200);
+        setTimeout(() => { window.location.hash = `#${elementID}`; }, 200);
 
 
     } else {
-        logger.warn("Trying to scroll to nonexistent element: " + elementID, element)
+        logger.warn(`Trying to scroll to nonexistent element: ${elementID}`, element)
     }
 }

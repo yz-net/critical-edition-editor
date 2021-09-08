@@ -1,5 +1,5 @@
-import { EssayDataEntry } from "Data/EssayData";
 import faker from "faker";
+import { EssayDataEntry } from "../Data/EssayData";
 
 export default function fakeEssay(): EssayDataEntry {
     return {

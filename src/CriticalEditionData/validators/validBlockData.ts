@@ -25,7 +25,7 @@ const validBlockData: ValidatorFunction<CriticalEditionDocumentBlock> = (data: a
         validImageBlockData(data.data);
     }
     else {
-        throw new Error("Unsupported block type: " + data.type);
+        throw new Error(`Unsupported block type: ${  data.type}`);
     }
 
     return data as CriticalEditionDocumentBlock;

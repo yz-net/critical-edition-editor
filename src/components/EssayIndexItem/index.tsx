@@ -30,7 +30,7 @@ export default function EssayIndexItem(props: EssayIndexItemProps) {
               ) => (event.target as HTMLVideoElement).play()}
               onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
             >
-              <source src={essay.smallVideoPath} type={"video/mp4"}></source>
+              <source src={essay.smallVideoPath} type="video/mp4" />
             </video>
           </div>
         )}

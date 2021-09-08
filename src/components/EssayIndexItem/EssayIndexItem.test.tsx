@@ -17,9 +17,9 @@ const fakeEssayIndexItem = (options: {
 }) => {
   const props = {
     essay: options.essay || fakeEssay(),
-    textOnly: options.textOnly === true ? true : false,
-    showBylines: options.showBylines === false ? false : true,
-    showSupertitles: options.showSupertitles === false ? false : true,
+    textOnly: options.textOnly === true,
+    showBylines: options.showBylines !== false,
+    showSupertitles: options.showSupertitles !== false,
   };
   return customRender(
     <MemoryRouter>

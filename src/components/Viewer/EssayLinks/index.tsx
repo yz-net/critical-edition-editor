@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./EssayLinks.module.css";
+import React from 'react';
+import styles from './EssayLinks.module.css';
 
 interface EssayLinkProps {
   title: string;
@@ -25,9 +25,9 @@ export default function EssayLinks(props: EssayLinksProps) {
   const { links } = props;
   return (
     <div className={styles.EssayLinkContainer}>
-      {links.map((link, index) => {
-        return <EssayLink key={index} title={link.title} href={link.href} />;
-      })}
+      {links.map((link) => (
+        <EssayLink key={link.href} title={link.title} href={link.href} />
+      ))}
     </div>
   );
 }

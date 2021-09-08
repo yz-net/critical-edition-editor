@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   CriticalEditionDocument,
   CriticalEditionDocumentBlock,
   FootnoteParagraphBlockData,
-} from "../../../CriticalEditionData";
-import validCriticalEditionDocumentData from "../../../CriticalEditionData/validators/validDocumentData";
-import DebugLogger from "../../../utils/DebugLogger";
-import scrollToElementByID from "../../../utils/scrollToElementByID";
-import Block from "./Block";
-import styles from "./ContentBody.module.css";
+} from '../../../CriticalEditionData';
+import validCriticalEditionDocumentData from '../../../CriticalEditionData/validators/validDocumentData';
+import DebugLogger from '../../../utils/DebugLogger';
+import scrollToElementByID from '../../../utils/scrollToElementByID';
+import Block from './Block';
+import styles from './ContentBody.module.css';
 
-const logger = new DebugLogger("ContentBody.index");
+const logger = new DebugLogger('ContentBody.index');
 
 interface ContentBodyProps {
   documentData: CriticalEditionDocument;
@@ -22,13 +22,18 @@ interface ContentBodyProps {
   // offset: number;
 }
 
-export function ContentBody(props: ContentBodyProps): JSX.Element {
+ContentBody.defaultProps = {
+  playingBlock: 0,
+};
+
+export default function ContentBody(props: ContentBodyProps): JSX.Element {
   const location = useLocation();
-  const hash = location.hash.replace("#", "");
+  const hash = location.hash.replace('#', '');
+  const { documentData } = props;
   useEffect(() => {
     // logger.log("ContentBody useEffect() calling scrollToElementByID");
     scrollToElementByID(hash);
-  }, [hash, props.documentData]);
+  }, [hash, documentData]);
 
   try {
     validCriticalEditionDocumentData(props.documentData);
@@ -41,22 +46,23 @@ export function ContentBody(props: ContentBodyProps): JSX.Element {
     <div className={styles.Container}>
       <div className={styles.ContentBody}>
         <article>
-          {props.documentData.blocks.map(
+          {documentData.blocks.map(
             (
               blockData: CriticalEditionDocumentBlock,
               i,
               blocks: Array<CriticalEditionDocumentBlock>
             ) => {
-              const getFootnoteBlock = (
+              function getFootnoteBlock(
                 index: number
-              ): FootnoteParagraphBlockData | undefined => {
+              ): FootnoteParagraphBlockData | undefined {
                 if (index < 0 && blocks.length <= index) {
-                  return;
+                  return undefined;
                 }
                 const block: CriticalEditionDocumentBlock = blocks[index];
-                if (!block || block.type !== "footnoteParagraph") return;
+                if (!block || block.type !== 'footnoteParagraph')
+                  return undefined;
                 return block.data as FootnoteParagraphBlockData;
-              };
+              }
 
               return (
                 <Block

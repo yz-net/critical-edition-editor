@@ -1,9 +1,12 @@
+/* eslint-disable */
+
 /**
  * A cheap and cheerful logger that wraps console.log, .warn, .error, with
  * labeling and silencing to make debugging with devtools easier.
  */
 export default class DebugLogger {
     private _label: string;
+
     private _silent: boolean;
 
     constructor(label: string) {
@@ -29,12 +32,14 @@ export default class DebugLogger {
 
     console(fname: "log" | "error" | "warn", ...args: any[]) {
         if (this._silent) { return }
-        let f = console[fname];
+        const f = console[fname];
         f(`${this._label}:`, ...args);
     }
 
     log = (...args: any[]) => this.console("log", ...args);
+
     warn = (...args: any[]) => this.console("warn", ...args);
+
     error = (...args: any[]) => this.console("error", ...args)
 
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 // import { useLocation } from "react-router-dom";
+import { renderToString } from "react-dom/server";
 import { ParagraphBlockData } from "../../../../../CriticalEditionData";
 import validParagraphBlockData from "../../../../../CriticalEditionData/validators/validParagraphBlockData";
 import styles from "./Paragraph.module.css";
 import { ReactComponent as FootnoteIcon } from "../../../../../svg/footnote_icon.svg";
 import { ReactComponent as VideoIcon } from "../../../../../svg/video_icon.svg";
-import { renderToString } from "react-dom/server";
 import scrollToElementByID from "../../../../../utils/scrollToElementByID";
 // import DebugLogger from "../../../../../utils/DebugLogger";
 
@@ -41,7 +41,7 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
         let href = "";
 
         if (!link.hasAttribute("a")) {
-          let innerLink = link.getElementsByTagName("a");
+          const innerLink = link.getElementsByTagName("a");
           if (innerLink[0]) {
             href = innerLink[0].getAttribute("href") || "";
           }
@@ -100,6 +100,6 @@ export function Paragraph(props: { data: ParagraphBlockData }) {
       data-paragraph-type={paragraphData.paragraphType || "paragraph"}
       className={styles.Paragraph}
       dangerouslySetInnerHTML={{ __html: paragraphData.text }}
-    ></div>
+     />
   );
 }

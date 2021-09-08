@@ -12,6 +12,6 @@ export interface IDocumentPlayer {
 
     playBlock: (blockIndex: number) => void;
     stopPlaying: () => void;
-    supportedByBrowser: () => boolean;
+    // supportedByBrowser: () => boolean;
 }
 

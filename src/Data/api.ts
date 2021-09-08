@@ -7,8 +7,8 @@ export function fetchProjectConfiguration(): Promise<DataContextObject> {
     return fetch("/data/config.json")
         .then((resp) => resp.json())
         .then((json) => {
-            const projectData = processProjectData(json["projectData"])
-            const essays = json["essays"]
+            const projectData = processProjectData(json.projectData)
+            const {essays} = json
             return {
                 projectData,
                 essays
@@ -19,7 +19,5 @@ export function fetchProjectConfiguration(): Promise<DataContextObject> {
 export function fetchEssay(essayMeta: EssayDataEntry): Promise<DocumentReader> {
     return fetch(essayMeta.essayPath)
         .then((content) => content.json())
-        .then((essayContent) => {
-            return new DocumentReader({ document: essayContent });
-        })
+        .then((essayContent) => new DocumentReader({ document: essayContent }))
 }

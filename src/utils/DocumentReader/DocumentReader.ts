@@ -17,16 +17,16 @@ export default class DocumentReader {
 
     get document() { return this._document }
 
-    expandFootnote(footnoteID: string) {
+    // expandFootnote(footnoteID: string) {
 
-    }
+    // }
 
-    collapseFootnote(footnoteID: string) {
+    // collapseFootnote(footnoteID: string) {
 
-    }
+    // }
 
     getBlock(blockIndex: number): CriticalEditionDocumentBlock {
-        const blocks = this._document.blocks;
+        const { blocks } = this._document;
         try {
             return blocks[blockIndex];
         } catch (e) {

@@ -2,6 +2,7 @@ import React from "react";
 import { EssayDataEntry } from "../../../Data/EssayData";
 import styles from "./CallToAction.module.css";
 import PlayButton from "./PlayButton";
+
 export interface CallToActionProps {
   essay: EssayDataEntry;
   posterURL?: string;

@@ -4,8 +4,9 @@ export const fixMutedVideoBug = () => {
   });
 }
 
-export const fixMissingScrollTo = () =>
+export function fixMissingScrollTo() {
   window.scrollTo = () => { }
+}
 
 export const doAllMocks = () => {
   fixMissingScrollTo();

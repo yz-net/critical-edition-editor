@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { RenderApp } from "./App";
 
 import { defaultProjectData } from "Data/ProjectData";
 import customRender from "test_utils/customRender";
 import { fixMissingScrollTo } from "test_utils/mocks";
+import { RenderApp } from "./App";
 
 fixMissingScrollTo();
 

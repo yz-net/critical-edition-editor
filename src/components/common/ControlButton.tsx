@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./ControlButton.module.css";
+import React from 'react';
+import styles from './ControlButton.module.css';
 
 export interface ControlButtonProps {
   onClick: () => void;
@@ -11,6 +11,7 @@ export default function ControlButton(props: ControlButtonProps) {
   return (
     <div className="ControlButtonWrapper">
       <button
+        type="button"
         tabIndex={0}
         onClick={onClick}
         aria-label={label}
