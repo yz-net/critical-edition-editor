@@ -13,7 +13,7 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "ignorePatterns": ["*.svg", "*.woff", "*.woff2", "*.css", "*.scss"],
+  "ignorePatterns": ["*.svg", "*.woff", "*.woff2", "*.otf", "*.css", "*.scss"],
   "rules": {
     "react/jsx-filename-extension": [
       1,
