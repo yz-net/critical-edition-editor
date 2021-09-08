@@ -30,6 +30,7 @@
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "lint": "yarn eslint \"src/**\"",
+    "format": "yarn prettier src --write",
     "eject": "react-scripts eject",
     "deploy:package": "zip -rq build-$VERSION.zip build/",
     "deploy:push-version": "aws --profile=fortunoff-admin s3 cp build-$VERSION.zip s3://ce-viewer-builds/ --acl public-read",
