@@ -1,4 +1,3 @@
-
 export interface ProjectDataObject {
   title?: string;
   subtitle?: string;
@@ -29,25 +28,27 @@ export interface CompleteProjectDataObject {
   showSupertitlesOnIndexPage: boolean;
 }
 
-export function processProjectData(projectData: ProjectDataObject): CompleteProjectDataObject {
+export function processProjectData(
+  projectData: ProjectDataObject
+): CompleteProjectDataObject {
   return {
-    organizationName: projectData.organizationName || "",
-    homeLink: projectData.homeLink || "",
-    title: projectData.title || "",
-    subtitle: projectData.subtitle || "",
-    introCopy: projectData.introCopy || "",
-    impactImageCaption: projectData.impactImageCaption || "",
+    organizationName: projectData.organizationName || '',
+    homeLink: projectData.homeLink || '',
+    title: projectData.title || '',
+    subtitle: projectData.subtitle || '',
+    introCopy: projectData.introCopy || '',
+    impactImageCaption: projectData.impactImageCaption || '',
     showBylinesOnIndexPage: projectData.showBylinesOnIndexPage !== false,
     showSupertitlesOnIndexPage: projectData.showSupertitlesOnIndexPage === true,
     textOnlyIndexPage: !!projectData.textOnlyIndexPage,
     callToAction: projectData.callToAction === true,
-    parentOrganizationName: projectData.parentOrganizationName || "",
-    parentOrganizationURL: projectData.parentOrganizationURL || ""
-  }
+    parentOrganizationName: projectData.parentOrganizationName || '',
+    parentOrganizationURL: projectData.parentOrganizationURL || '',
+  };
 }
 
 export function defaultProjectData(): CompleteProjectDataObject {
-  return processProjectData({})
+  return processProjectData({});
 }
 
 // export const ProjectData: ProjectDataObject = {
@@ -59,4 +60,3 @@ export function defaultProjectData(): CompleteProjectDataObject {
 //   callToAction: true,
 //   impactImageCaption: "Photo: Steven H. and Marion L. Holocaust testimony (HVT-544), recorded in 1985. "
 // };
-

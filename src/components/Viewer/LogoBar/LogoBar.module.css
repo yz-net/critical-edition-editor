@@ -41,7 +41,7 @@
 .LogoText {
   /* flex-grow: 1; */
   /* text-transform: uppercase; */
-  font-feature-settings: "smcp" 1;
+  font-feature-settings: 'smcp' 1;
   letter-spacing: 0.12em;
   font-size: 21px;
   color: #333;

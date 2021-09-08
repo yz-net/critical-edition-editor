@@ -1,16 +1,16 @@
 .ControlBar {
-    background-color: #efefef;
-    /* position: -webkit-sticky; /* Safari * /
+  background-color: #efefef;
+  /* position: -webkit-sticky; /* Safari * /
     position: sticky; */
-    /* position: fixed;
+  /* position: fixed;
     top: 0;
     left: 0;
     right: 0; */
 
-    /* display: flex; */
+  /* display: flex; */
 }
 
 .ControlBar h1 {
-    font-size: 28px;
-    font-weight: normal;
+  font-size: 28px;
+  font-weight: normal;
 }

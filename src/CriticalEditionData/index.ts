@@ -1,40 +1,35 @@
-
 export interface CriticalEditionDocumentBlock {
-    type: string;
-    data: BlockData;
+  type: string;
+  data: BlockData;
 }
 
-export interface BlockData {
-
-}
+export interface BlockData {}
 
 export interface HeaderBlockData {
-    text: string
-    level: 1 | 2 | 3 | 4 | 5 | 6
-
+  text: string;
+  level: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 export interface ParagraphBlockData extends BlockData {
-    paragraphType: "blockquote" | "paragraph"
-    id?: string;
-    text: string;
+  paragraphType: 'blockquote' | 'paragraph';
+  id?: string;
+  text: string;
 }
 
 export interface FootnoteParagraphBlockData extends ParagraphBlockData {
-    id: string;
-    embedCode?: string;
-    label: string;
+  id: string;
+  embedCode?: string;
+  label: string;
 }
 
 export interface ImageBlockData extends BlockData {
-    src: string
-    srcset?: string
-    sizes?: string
-    caption?: string
-
+  src: string;
+  srcset?: string;
+  sizes?: string;
+  caption?: string;
 }
 export interface CriticalEditionDocument {
-    version?: number;
-    time?: number;
-    blocks: Array<CriticalEditionDocumentBlock>;
+  version?: number;
+  time?: number;
+  blocks: Array<CriticalEditionDocumentBlock>;
 }
