@@ -5,6 +5,7 @@ import {
   CompleteProjectDataObject,
   defaultProjectData,
 } from 'Data/ProjectData';
+import { Helmet } from 'react-helmet';
 import ContentBody from './ContentBody';
 import DebugLogger from '../../utils/DebugLogger';
 import DocumentReader from '../../utils/DocumentReader/DocumentReader';
@@ -78,20 +79,20 @@ class Viewer extends React.Component<ViewerProps, ViewerState> {
     this.setState({ projectData });
   }
 
-  componentDidUpdate() {
-    const {
-      props: {
-        essay: { title: essayTitle },
-      },
-      state: {
-        projectData: { title: projectTitle, organizationName },
-      },
-    } = this;
+  // componentDidUpdate() {
+  //   const {
+  //     props: {
+  //       essay: { title: essayTitle },
+  //     },
+  //     state: {
+  //       projectData: { title: projectTitle, organizationName },
+  //     },
+  //   } = this;
 
-    document.title = `${essayTitle} | ${projectTitle} ${
-      organizationName ? ` | ${organizationName}` : ''
-    }`;
-  }
+  //   const pageTitle = `${essayTitle} | ${projectTitle} ${
+  //     organizationName ? ` | ${organizationName}` : ''
+  //   }`;
+  // }
 
   playBlock(blockIndex: number) {
     const {
@@ -170,6 +171,7 @@ class Viewer extends React.Component<ViewerProps, ViewerState> {
           parentOrganizationURL,
           homeLink,
           callToAction,
+          title: projectTitle,
         },
       },
     } = this;
@@ -198,9 +200,16 @@ class Viewer extends React.Component<ViewerProps, ViewerState> {
       </video>
     );
 
+    const pageTitle = `${essayTitle} | ${projectTitle} ${
+      organizationName ? ` | ${organizationName}` : ''
+    }`;
+
     const splashContent = essay.videoPath ? splashVideo : splashImage;
     return (
       <div className={styles.Viewer}>
+        <Helmet>
+          <title>{pageTitle}</title>
+        </Helmet>
         <div className={styles.LogoBarContainer}>
           <LogoBar />
         </div>

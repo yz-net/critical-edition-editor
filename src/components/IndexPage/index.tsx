@@ -1,6 +1,7 @@
 import { DataContext } from 'Data/Context';
 import React from 'react';
 // import DebugLogger from "../../utils/DebugLogger";
+import { Helmet } from 'react-helmet';
 import EssayIndexItem from '../EssayIndexItem';
 import LogoBar from '../Viewer/LogoBar';
 import ImpactHeader from './ImpactHeader';
@@ -33,12 +34,16 @@ export default function IndexPage() {
 
   const backgroundImageURL = '/img/impact-header-background.jpg';
 
-  document.title = `${projectTitle} ${
+  const pageTitle = `${projectTitle} ${
     projectData.organizationName ? ` | ${projectData.organizationName}` : ''
   }`;
 
   return (
     <div>
+      <Helmet>
+        <title>{pageTitle}</title>
+      </Helmet>
+
       <LogoBar />
       <ImpactHeader
         caption={projectData.impactImageCaption}
