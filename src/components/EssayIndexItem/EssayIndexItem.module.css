@@ -11,6 +11,10 @@
   background-color: #efefef;
 }
 
+.ItemLink:focus-within .EssayIndexItem {
+  outline: 4px solid blue;
+}
+
 .Byline {
   margin-top: 0px;
   color: #444;
@@ -68,8 +72,10 @@ a.ItemLink:hover {
   font-size: 14px;
 }
 
-.SuperTitle {
+p.SuperTitle {
   text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
 }
 
 /* @media all and (max-width: 800px) { */

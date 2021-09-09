@@ -1,6 +1,7 @@
-import React from "react";
-import styles from "./PlayButton.module.css";
-import { ReactComponent as PlayCircle } from "../../../svg/circle_play.svg";
+import React from 'react';
+import styles from './PlayButton.module.css';
+import { ReactComponent as PlayCircle } from '../../../svg/circle_play.svg';
+
 export interface PlayButtonProps {
   url: string;
 }

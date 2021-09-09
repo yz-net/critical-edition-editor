@@ -96,34 +96,34 @@
   border-color: #eee;
 }
 
-.Block[data-blocktype="header"] {
+.Block[data-blocktype='header'] {
   margin-bottom: -10px;
   padding: 0px;
   padding-top: 10px;
 }
 
-.Block[data-blocktype="header"] h2 {
+.Block[data-blocktype='header'] h2 {
   font-size: 27px;
   padding: 0 10px;
 }
 
 @media screen and (max-width: 600px) {
-  .Block[data-blocktype="header"] h2 {
+  .Block[data-blocktype='header'] h2 {
     font-size: 24px;
   }
 }
 
-.Block[data-blocktype="blockquote"] .BlockWrapper,
-.Block[data-blocktype="header"] .BlockWrapper {
+.Block[data-blocktype='blockquote'] .BlockWrapper,
+.Block[data-blocktype='header'] .BlockWrapper {
   margin-left: 10px;
 }
 
-.Block[data-blocktype="footnoteParagraph"]:hover .BlockWrapper,
-.Block[data-blocktype="footnoteParagraph"] .ControlsWrapper {
+.Block[data-blocktype='footnoteParagraph']:hover .BlockWrapper,
+.Block[data-blocktype='footnoteParagraph'] .ControlsWrapper {
   border-color: #ccc0a6;
 }
 
-.Block[data-blocktype="paragraph"] .BlockWrapper {
+.Block[data-blocktype='paragraph'] .BlockWrapper {
   padding: 0px 10px;
 }
 

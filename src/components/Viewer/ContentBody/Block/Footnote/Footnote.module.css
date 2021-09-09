@@ -86,7 +86,7 @@
   position: absolute;
 }
 
-[data-blocktype="footnoteParagraph"]:hover .FootnoteLabel {
+[data-blocktype='footnoteParagraph']:hover .FootnoteLabel {
   background-color: #ccc0a6;
   transition: background-color 1s;
   color: white;

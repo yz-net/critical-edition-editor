@@ -8,7 +8,10 @@
         "impactImageCaption": "Photo: Steven H. and Marion L. Holocaust testimony (HVT-544), recorded in 1985. ",
         "organizationName": "Fortunoff Vidoe Archive for Holocaust Testimonies",
         "parentOrganizationName": "Yale University",
-        "parentOrganizationURL": "https://library.yale.edu"
+        "parentOrganizationURL": "https://library.yale.edu",
+        "showBylinesOnIndexPage": true,
+        "showSupertitlesOnIndexPage": false,
+        "textOnlyIndexPage": false
     },
     "essays": [
         {

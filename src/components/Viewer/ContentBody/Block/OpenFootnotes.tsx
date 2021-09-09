@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 // import styles from "./ControlButtons.module.css";
-import { ReactComponent as FootnoteIcon } from "../../svg/footnote_icon.svg";
-import scrollToElementByID from "../../../../utils/scrollToElementByID";
-import ControlButton from "../../../common/ControlButton";
+import { ReactComponent as FootnoteIcon } from '../../svg/footnote_icon.svg';
+import scrollToElementByID from '../../../../utils/scrollToElementByID';
+import ControlButton from '../../../common/ControlButton';
 
 type PermalinkProps = {
   footnoteIDs: Array<string>;

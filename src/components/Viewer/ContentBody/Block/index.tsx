@@ -1,103 +1,76 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   CriticalEditionDocumentBlock,
   FootnoteParagraphBlockData,
   HeaderBlockData,
   ImageBlockData,
   ParagraphBlockData,
-} from "../../../../CriticalEditionData";
-import validBlockData from "../../../../CriticalEditionData/validators/validBlockData";
-import DebugLogger from "../../../../utils/DebugLogger";
+} from '../../../../CriticalEditionData';
+import validBlockData from '../../../../CriticalEditionData/validators/validBlockData';
+import DebugLogger from '../../../../utils/DebugLogger';
 // import getFootnotes from "../../../../utils/getFootnotes";
 // import htmlToText from "../../../../utils/htmlToText";
-import { Footnote } from "./Footnote";
-import { Paragraph } from "./Paragraph";
-import { Image } from "./Image";
-import styles from "./Block.module.css";
+import Footnote from './Footnote';
+import Paragraph from './Paragraph';
+import { Image } from './Image';
+import styles from './Block.module.css';
 // import CopyText from "./CopyText";
 // import OpenFootnote from "./OpenFootnotes";
 // import Permalink from "./Permalink";
 // import PlayText from "./PlayText";
-import { useLocation } from "react-router-dom";
-import FootnoteCount from "./FootnoteCount";
-import scrollToElementByID from "../../../../utils/scrollToElementByID";
+import FootnoteCount from './FootnoteCount';
+// import scrollToElementByID from '../../../../utils/scrollToElementByID';
 
-const logger = new DebugLogger("Block: ");
+const logger = new DebugLogger('Block: ');
+
+Block.defaultProps = {
+  nextFootnoteBlock: undefined,
+  previousFootnoteBlock: undefined,
+  inFocus: false,
+};
 
 export default function Block(props: {
   index: number;
   blockData: CriticalEditionDocumentBlock;
-  playBlock: () => void;
-  stopPlaying: () => void;
-  playing: boolean;
-  inFocus: boolean;
-  expand?: boolean;
+  inFocus?: boolean;
   nextFootnoteBlock?: FootnoteParagraphBlockData;
   previousFootnoteBlock?: FootnoteParagraphBlockData;
 }) {
+  const {
+    index,
+    blockData: { data, type: blockType },
+    inFocus,
+  } = props;
   const ref = useRef<HTMLDivElement>(null);
-  const blockID = `${
-    (props.blockData.data as FootnoteParagraphBlockData).id ||
-    `p-${props.index}`
-  }`;
+  const blockID = `${(data as FootnoteParagraphBlockData).id || `p-${index}`}`;
 
   // const footnotes = getFootnotes(props.blockData.data as ParagraphBlockData);
 
-  useEffect(() => {
-    if (props.inFocus && ref.current) {
-      // ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
-      // ref.current.focus();
-      console.log("Block.useEffect scroll");
-      scrollToElementByID(blockID);
-    }
-  }, [blockID, props.inFocus]);
-
-  // function Controls() {
-  //   const html = (props.blockData.data as ParagraphBlockData).text;
-  //   return (
-  //     <div className={styles.Controls}>
-  //       {html ? (
-  //         <React.Fragment>
-  //           <PlayText
-  //             stopPlaying={props.stopPlaying}
-  //             playing={props.playing}
-  //             playBlock={props.playBlock}
-  //             text={htmlToText(html)}
-  //           />
-  //           <Permalink blockID={blockID} />
-  //           <CopyText
-  //             text={(props.blockData.data as ParagraphBlockData).text}
-  //           />
-  //           {props.blockData.type === "paragraph" && footnotes.length > 0 ? (
-  //             // <OpenFootnote footnoteIDs={footnotes} />
-  //             <OpenFootnote
-  //               footnoteCount={footnotes.length}
-  //               footnoteIDs={
-  //                 props.nextFootnoteBlock ? [props.nextFootnoteBlock.id] : []
-  //               }
-  //             />
-  //           ) : null}
-  //         </React.Fragment>
-  //       ) : null}
-  //     </div>
-  //   );
-  // }
+  // TODO -- is this effect redundant?
+  // useEffect(() => {
+  //   if (inFocus && ref.current) {
+  //     // ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+  //     // ref.current.focus();
+  //     // scrollToElementByID(blockID);
+  //   }
+  // }, [blockID, inFocus]);
 
   function WrapBlock(inner: JSX.Element) {
     const location = useLocation();
-    const hash = location.hash.replace("#", "");
+    const hash = location.hash.replace('#', '');
     const hide =
-      props.blockData.type === "footnoteParagraph" && hash !== blockID;
+      props.blockData.type === 'footnoteParagraph' && hash !== blockID;
 
     return (
       <div
         id={blockID}
         ref={ref}
-        tabIndex={0}
+        // tabIndex={0}
         data-blocktype={props.blockData.type}
-        className={`Block ${hide ? "hidden" : ""} blocktype-${
+        className={`Block ${hide ? 'hidden' : ''} blocktype-${
           props.blockData.type
-        } ${styles.Block} ${props.inFocus ? styles.InFocus : ""}`}
+        } ${styles.Block} ${inFocus ? styles.InFocus : ''}`}
       >
         <div className={styles.LeftMargin}>
           <FootnoteCount
@@ -110,12 +83,12 @@ export default function Block(props: {
           </div>
         </div> */}
         {hide ? null : <div className={styles.BlockWrapper}>{inner}</div>}
-        <div className={styles.RightMargin}></div>
+        <div className={styles.RightMargin} />
       </div>
     );
   }
 
-  if (props.blockData.type.toLowerCase().trim() === "delimiter") {
+  if (blockType.toLowerCase().trim() === 'delimiter') {
     return (
       <div className={styles.Delimiter}>
         <div className={styles.DelimiterInner}>***</div>
@@ -123,25 +96,29 @@ export default function Block(props: {
     );
   }
 
-  if (props.blockData.type.toLowerCase().trim() === "header") {
-    const data = props.blockData.data as HeaderBlockData;
-    const inner = React.createElement(`h${data.level}`, {}, `${data.text}`);
+  if (blockType.toLowerCase().trim() === 'header') {
+    const headerData = props.blockData.data as HeaderBlockData;
+    const inner = React.createElement(
+      `h${headerData.level}`,
+      {},
+      `${headerData.text}`
+    );
     return WrapBlock(<div className={styles.Header}>{inner}</div>);
   }
 
   try {
     validBlockData(props.blockData);
   } catch (e) {
-    logger.warn("Error validating block " + String(e), Block);
+    logger.warn(`Error validating block ${String(e)}`, Block);
     return null;
   }
 
-  if (props.blockData.type.toLowerCase().trim() === "paragraph") {
+  if (blockType.toLowerCase().trim() === 'paragraph') {
     return WrapBlock(
       <Paragraph data={props.blockData.data as ParagraphBlockData} />
     );
   }
-  if (props.blockData.type.toLocaleLowerCase().trim() === "footnoteparagraph") {
+  if (blockType.toLocaleLowerCase().trim() === 'footnoteparagraph') {
     return WrapBlock(
       <Footnote
         nextFootnoteBlock={props.nextFootnoteBlock}
@@ -150,7 +127,7 @@ export default function Block(props: {
       />
     );
   }
-  if (props.blockData.type.toLowerCase().trim() === "image") {
+  if (blockType.toLowerCase().trim() === 'image') {
     return WrapBlock(<Image data={props.blockData.data as ImageBlockData} />);
   }
 

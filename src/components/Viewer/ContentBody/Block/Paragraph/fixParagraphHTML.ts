@@ -1,1 +1,1 @@
-export default function fixParagraphHTML() { }
+export default function fixParagraphHTML() {}

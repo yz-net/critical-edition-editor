@@ -4,21 +4,33 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^7.1.2",
+    "@types/faker": "^5.5.8",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react-hooks": "^4",
+    "faker": "^5.5.3",
+    "prettier": "^2.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
+    "lint": "yarn eslint \"src/**\"",
+    "format": "yarn prettier src --write",
     "eject": "react-scripts eject",
     "deploy:package": "zip -rq build-$VERSION.zip build/",
     "deploy:push-version": "aws --profile=fortunoff-admin s3 cp build-$VERSION.zip s3://ce-viewer-builds/ --acl public-read",
@@ -43,6 +55,9 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.6",
-    "react-router-dom": "^5.2.0"
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.21.5"
   }
 }

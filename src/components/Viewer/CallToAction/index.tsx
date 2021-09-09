@@ -1,25 +1,22 @@
-import React from "react";
-import { EssayDataEntry } from "../../../Data/EssayData";
-import styles from "./CallToAction.module.css";
-import PlayButton from "./PlayButton";
+import React from 'react';
+import { EssayDataEntry } from '../../../Data/EssayData';
+import styles from './CallToAction.module.css';
+import PlayButton from './PlayButton';
+
 export interface CallToActionProps {
   essay: EssayDataEntry;
   posterURL?: string;
 }
 export default function CallToAction(props: CallToActionProps) {
-  const { essay, posterURL } = props;
+  const {
+    essay,
+    essay: { title: essayTitle },
+    posterURL,
+  } = props;
   return (
     <div className={styles.CallToActionOuter}>
-      {/* <a className={styles.CallToActionLink} href={essay.aviaryLink}> */}
       <div className={styles.CallToActionInner}>
-        <div
-          // style={{ backgroundImage: `url(${posterURL})` }}
-          className={styles.VideoContainer}
-        >
-          {/* <div
-              style={{ backgroundImage: `url(${posterURL})` }}
-              className={styles.VideoPoster}
-            /> */}
+        <div className={styles.VideoContainer}>
           {posterURL ? (
             <img
               className={styles.VideoPreview}
@@ -27,14 +24,6 @@ export default function CallToAction(props: CallToActionProps) {
               src={posterURL}
             />
           ) : null}
-          {/* <div className={`sans-copy-ff ${styles.OverLay}`}>
-              <div className={styles.PlayCircle}>
-                <PlayCircle />
-              </div>
-              <div className={styles.OverLayText}>
-                View the annotated testimony
-              </div>
-            </div> */}
         </div>
         <div className={styles.TextArea}>
           <div className={styles.TextGrouping}>
@@ -42,15 +31,14 @@ export default function CallToAction(props: CallToActionProps) {
               Watch the annotated video testimony of
             </p>
 
-            <h3 className={styles.IntervieweeName}>{props.essay.title}</h3>
+            <h3 className={styles.IntervieweeName}>{essayTitle}</h3>
           </div>
 
           <div className={styles.ButtonContainer}>
-            <PlayButton url={essay.aviaryLink || ""} />
+            <PlayButton url={essay.aviaryLink || ''} />
           </div>
         </div>
       </div>
-      {/* </a> */}
     </div>
   );
 }

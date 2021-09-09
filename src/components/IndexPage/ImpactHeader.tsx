@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./ImpactHeader.module.css";
+import React from 'react';
+import styles from './ImpactHeader.module.css';
 
 export interface ImpactHeaderProps {
   title: String;
@@ -13,15 +13,15 @@ export default function ImpactHeader(props: ImpactHeaderProps) {
 
   const backgroundImageCSSProperty = backgroundImageURL
     ? `url(${backgroundImageURL})`
-    : "";
+    : '';
 
   const style = backgroundImageURL
     ? { backgroundImage: backgroundImageCSSProperty }
     : {};
   return (
     <header className={styles.ImpactHeader}>
-      <div style={style} className={styles.Background}></div>
-      <div className={styles.Gradient}></div>
+      <div style={style} className={styles.Background} />
+      <div className={styles.Gradient} />
       <div className={styles.TextArea}>
         <h1 className={styles.Title}>{title}</h1>
         <p className={styles.TagLine}>{subtitle}</p>

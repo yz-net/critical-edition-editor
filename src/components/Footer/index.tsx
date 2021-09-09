@@ -1,12 +1,15 @@
-import React from "react";
-import styles from "./Footer.module.css";
-interface FooterProps {
-  parentOrgURL?: string;
-  parentOrgName?: string;
+import React from 'react';
+import styles from './Footer.module.css';
 
+interface FooterProps {
+  parentOrgName?: string;
   orgName: string;
   orgURL: string;
 }
+
+Footer.defaultProps = {
+  parentOrgName: undefined,
+};
 
 export default function Footer(props: FooterProps) {
   const { orgName, orgURL, parentOrgName } = props;
@@ -15,17 +18,17 @@ export default function Footer(props: FooterProps) {
       <div className={styles.FooterInner}>
         <div className={styles.Left}>
           <div className={styles.YaleLogo}>
-            <img alt={`${parentOrgName} logo`} src="/img/parent-logo.svg"></img>
+            <img alt={`${parentOrgName} logo`} src="/img/parent-logo.svg" />
           </div>
           <div className={styles.FortunoffLogo}>
             <a href={orgURL}>
               {/* <FortunoffLogo /> */}
-              <img alt={`${orgName} logo`} src="/img/org-logo.svg"></img>
+              <img alt={`${orgName} logo`} src="/img/org-logo.svg" />
             </a>
           </div>
         </div>
         <div className={`sans-copy-ff ${styles.Right}`}>
-          An experiment of the{" "}
+          An experiment of the{' '}
           <a href="https://dhlab.yale.edu">
             Yale Digital Humanities Laboratory
           </a>

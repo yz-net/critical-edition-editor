@@ -1,27 +1,14 @@
-import React, { useEffect } from "react";
-import { EssayDataEntry } from "../../Data/EssayData";
+import { DataContext } from 'Data/Context';
+import React from 'react';
 // import DebugLogger from "../../utils/DebugLogger";
-import EssayIndexItem from "../EssayIndexItem";
-import LogoBar from "../Viewer/LogoBar";
-import ImpactHeader from "./ImpactHeader";
-import styles from "./IndexPage.module.css";
-
-export interface IndexPageProps {
-  projectTitle: string;
-  projectDescription: string;
-  projectSubtitle: string;
-  projectHomeURL: string;
-  organizationName: string;
-  backgroundImageURL: string;
-  backgroundImageCaption: string;
-  essays: Array<EssayDataEntry>;
-  textOnly: boolean;
-}
+import EssayIndexItem from '../EssayIndexItem';
+import LogoBar from '../Viewer/LogoBar';
+import ImpactHeader from './ImpactHeader';
+import styles from './IndexPage.module.css';
 
 // const logger = new DebugLogger("IndexPage: ");
 
 interface IndexHeaderProps {
-  title: string;
   description: string;
 }
 
@@ -29,63 +16,58 @@ function IndexHeader(props: IndexHeaderProps) {
   const { description } = props;
   return (
     <div className={styles.IndexHeader}>
-      {/* <h1 className={`teal-font ${styles.Title}`}>{title}</h1> */}
-      <p className={`sans-copy-ff`}>{description}</p>
+      <p className="sans-copy-ff">{description}</p>
     </div>
   );
 }
 
-export default function IndexPage(props: IndexPageProps) {
-  const {
-    essays,
-    backgroundImageURL,
-    backgroundImageCaption,
-    organizationName,
-    projectDescription,
-    projectTitle,
-    projectSubtitle,
-    projectHomeURL,
-    textOnly,
-  } = props;
+export default function IndexPage() {
+  const context = React.useContext(DataContext);
 
-  console.log("text only? ", textOnly);
+  if (!context) {
+    return <div>No Context passed to IndexPage</div>;
+  }
 
-  useEffect(() => {
-    document.title = `${projectTitle} ${
-      organizationName ? " | " + organizationName : ""
-    }`;
-  }, [organizationName, projectTitle]);
+  const { essays, projectData } = context;
+  const { title: projectTitle } = projectData;
+
+  const backgroundImageURL = '/img/impact-header-background.jpg';
+
+  document.title = `${projectTitle} ${
+    projectData.organizationName ? ` | ${projectData.organizationName}` : ''
+  }`;
 
   return (
     <div>
-      <LogoBar
-        appName={projectTitle}
-        orgName={organizationName}
-        homeLink={projectHomeURL}
-      />
+      <LogoBar />
       <ImpactHeader
-        caption={backgroundImageCaption}
+        caption={projectData.impactImageCaption}
         backgroundImageURL={backgroundImageURL}
-        title={projectTitle}
-        subtitle={projectSubtitle}
+        title={projectData.title}
+        subtitle={projectData.subtitle}
       />
       <main className={styles.CenterColumn}>
-        <IndexHeader title={projectTitle} description={projectDescription} />
+        <IndexHeader description={projectData.introCopy} />
         <nav aria-label="List of essays">
           <ul
             className={`${styles.ItemListContainer} ${
-              textOnly ? styles.TextOnly : null
+              projectData.textOnlyIndexPage ? styles.TextOnly : null
             }`}
           >
-            {essays.map((essay, i: number) => {
+            {essays.map((essay) => {
               // const essay: EssayDataEntry = essays[essayID];
               if (!essay) {
                 // logger.warn("bad essay id: " + essayID);
                 return null;
               }
               return (
-                <li key={i} className={styles.IndexItemContainer}>
-                  <EssayIndexItem textOnly={textOnly} essay={essay} />
+                <li key={essay.id} className={styles.IndexItemContainer}>
+                  <EssayIndexItem
+                    showSupertitles={projectData.showSupertitlesOnIndexPage}
+                    showBylines={projectData.showBylinesOnIndexPage}
+                    textOnly={projectData.textOnlyIndexPage}
+                    essay={essay}
+                  />
                 </li>
               );
             })}

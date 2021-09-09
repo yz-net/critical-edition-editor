@@ -1,28 +1,49 @@
-import DebugLogger from "./DebugLogger";
+function setFocusOnFootnote(element: HTMLElement) {
+  const footnotes = document.getElementsByClassName(
+    'blocktype-footnoteParagraph'
+  );
 
-const logger = new DebugLogger("scrollToELementByID: ")
-export default function scrollToElementByID(elementID: string, e?: Event, options: ScrollIntoViewOptions = {}) {
+  for (let i = 0; i < footnotes.length; i += 1) {
+    const item = footnotes.item(i);
+    item?.classList.add('hidden');
+  }
 
-    e?.preventDefault();
+  if (element) {
+    element.classList.remove('hidden');
+    element.focus();
+  }
+}
 
-    const footnotes = document.getElementsByClassName("blocktype-footnoteParagraph")
-    for (let i = 0; i < footnotes.length; i++) {
-        const item = footnotes.item(i)
-        item?.classList.add("hidden")
-    }
+export function jumpToNeighboringFootnote(elementID: string, e?: Event) {
+  e?.preventDefault();
+  const element = document.getElementById(elementID);
+  if (!element) {
+    return;
+  }
+  setFocusOnFootnote(element);
 
-    const element = document.getElementById(elementID);
-    if (element) {
-        element.classList.remove("hidden");
+  // element.scrollIntoView({ block: "start", behavior: "smooth" });
 
-        element.scrollIntoView({ block: "start", behavior: "smooth", ...options });
-        element.focus();
+  // Update the page hash
+  window.location.hash = `#${elementID}`;
+}
 
-        // Update the page hash
-        setTimeout(() => { window.location.hash = "#" + elementID; }, 200);
+export default function scrollToElementByID(
+  elementID: string,
+  e?: Event,
+  options: ScrollIntoViewOptions = {}
+) {
+  e?.preventDefault();
+  const element = document.getElementById(elementID);
+  if (!element) {
+    return;
+  }
+  setFocusOnFootnote(element);
 
+  element.scrollIntoView({ block: 'start', behavior: 'smooth', ...options });
 
-    } else {
-        logger.warn("Trying to scroll to nonexistent element: " + elementID, element)
-    }
+  // Update the page hash
+  setTimeout(() => {
+    window.location.hash = `#${elementID}`;
+  }, 200);
 }

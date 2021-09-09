@@ -19,7 +19,7 @@
   } */
 }
 
-.Paragraph[data-paragraph-type="blockquote"] {
+.Paragraph[data-paragraph-type='blockquote'] {
   padding: 1em 2em;
   font-style: italic;
   background-color: #efefef;
