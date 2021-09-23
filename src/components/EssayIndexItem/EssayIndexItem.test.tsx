@@ -9,30 +9,33 @@ import EssayIndexItem from '.';
 
 doAllMocks();
 
-const fakeEssayIndexItem = (options: {
+interface FakeEssayIndexItemProps {
   essay?: EssayDataEntry;
   textOnly?: boolean;
   showBylines?: boolean;
   showSupertitles?: boolean;
-}) => {
-  const props = {
-    essay: options.essay || fakeEssay(),
-    textOnly: options.textOnly === true,
-    showBylines: options.showBylines !== false,
-    showSupertitles: options.showSupertitles !== false,
-  };
-  return customRender(
+}
+
+const fakeEssayIndexItem = ({
+  essay,
+  textOnly,
+  showBylines,
+  showSupertitles,
+}: FakeEssayIndexItemProps) =>
+  customRender(
     <MemoryRouter>
-      {EssayIndexItem(props)}
-      {/* <EssayIndexItem {...props} /> */}
+      <EssayIndexItem
+        essay={essay || fakeEssay()}
+        textOnly={textOnly === true}
+        showBylines={showBylines !== false}
+        showSupertitles={showSupertitles !== false}
+      />
     </MemoryRouter>,
     {
       projectData: defaultProjectData(),
       essays: [],
     }
   );
-};
-
 it('EssayIndexItem renders with all fields enabled', () => {
   const app = fakeEssayIndexItem({});
   const articles = app.getAllByRole('article');

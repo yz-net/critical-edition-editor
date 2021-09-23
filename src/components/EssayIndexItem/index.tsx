@@ -10,8 +10,13 @@ export interface EssayIndexItemProps {
   showSupertitles: boolean;
 }
 
-export default function EssayIndexItem(props: EssayIndexItemProps) {
-  const { essay, textOnly, showBylines, showSupertitles } = props;
+export default function EssayIndexItem({
+  essay,
+  textOnly,
+  showBylines,
+  showSupertitles,
+}: EssayIndexItemProps) {
+  // const { essay, textOnly, showBylines, showSupertitles } = props;
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseOver = () => {
