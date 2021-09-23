@@ -1,5 +1,7 @@
 # Critical Edition Viewer
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd246805-4849-47da-ac14-84b8398cc3c9/deploy-status)](https://app.netlify.com/sites/critical-edition-viewer/deploys)
+
 ## 1. Overview
 
 This repo is for the core template of the Fortunoff Archive's
