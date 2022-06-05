@@ -1,16 +1,17 @@
+import { AviaryVideoBlock } from 'components/Viewer/ContentBody/Block/AviaryVideoBlock';
 import { CriticalEditionDocumentBlock } from '..';
 import DebugLogger from '../../utils/DebugLogger';
 import ValidatorFunction from './ValidatorFunction';
 import validFootnoteParagraphBlockData from './validFootnoteParagraphBlockData';
 import validImageBlockData from './validImageBlockData';
 import validParagraphBlockData from './validParagraphBlockData';
+import validAviaryVideoBlockData from './validAviaryVideoBlockData';
 
-const logger = new DebugLogger('validBlockData').hush();
+const logger = new DebugLogger('validBlockData') //.hush();
 
 const validBlockData: ValidatorFunction<CriticalEditionDocumentBlock> = (
   data: any
 ) => {
-  logger.log('Validating block', data);
 
   if (!data) {
     throw new Error('No object provided');
@@ -23,14 +24,19 @@ const validBlockData: ValidatorFunction<CriticalEditionDocumentBlock> = (
     throw new Error('Block requires field .data of type Object');
   }
 
+
+  const blockType = data.type.toLowerCase()
   // validate the data
-  if (data.type.toLowerCase().trim() === 'paragraph') {
+  if (blockType == 'paragraph') {
     validParagraphBlockData(data.data);
-  } else if (data.type.toLowerCase().trim() === 'footnoteparagraph') {
+  } else if (blockType == 'footnoteparagraph') {
     validFootnoteParagraphBlockData(data.data);
-  } else if (data.type.toLowerCase().trim() === 'image') {
+  } else if (blockType == 'image') {
     validImageBlockData(data.data);
-  } else {
+  } else if (blockType == 'aviary') {
+    validAviaryVideoBlockData(data.data);
+  } 
+  else {
     throw new Error(`Unsupported block type: ${data.type}`);
   }
 

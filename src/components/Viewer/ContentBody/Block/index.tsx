@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
+  AviaryVideoBlockData,
   CriticalEditionDocumentBlock,
   FootnoteParagraphBlockData,
   HeaderBlockData,
@@ -20,6 +21,7 @@ import styles from './Block.module.css';
 // import Permalink from "./Permalink";
 // import PlayText from "./PlayText";
 import FootnoteCount from './FootnoteCount';
+import { AviaryVideoBlock } from './AviaryVideoBlock';
 // import scrollToElementByID from '../../../../utils/scrollToElementByID';
 
 const logger = new DebugLogger('Block: ');
@@ -88,7 +90,8 @@ export default function Block(props: {
     );
   }
 
-  if (blockType.toLowerCase().trim() === 'delimiter') {
+  const cleanBlockType = blockType.toLowerCase().trim()
+  if (cleanBlockType == 'delimiter') {
     return (
       <div className={styles.Delimiter}>
         <div className={styles.DelimiterInner}>***</div>
@@ -96,7 +99,7 @@ export default function Block(props: {
     );
   }
 
-  if (blockType.toLowerCase().trim() === 'header') {
+  if (cleanBlockType === 'header') {
     const headerData = props.blockData.data as HeaderBlockData;
     const inner = React.createElement(
       `h${headerData.level}`,
@@ -113,12 +116,12 @@ export default function Block(props: {
     return null;
   }
 
-  if (blockType.toLowerCase().trim() === 'paragraph') {
+  if (cleanBlockType == 'paragraph') {
     return WrapBlock(
       <Paragraph data={props.blockData.data as ParagraphBlockData} />
     );
   }
-  if (blockType.toLocaleLowerCase().trim() === 'footnoteparagraph') {
+  if (cleanBlockType === 'footnoteparagraph') {
     return WrapBlock(
       <Footnote
         nextFootnoteBlock={props.nextFootnoteBlock}
@@ -127,8 +130,12 @@ export default function Block(props: {
       />
     );
   }
-  if (blockType.toLowerCase().trim() === 'image') {
+  if (cleanBlockType == 'image') {
     return WrapBlock(<Image data={props.blockData.data as ImageBlockData} />);
+  }
+  if (cleanBlockType == 'aviary') {
+    logger.log("Wrapping aviary video block")
+    return WrapBlock(<AviaryVideoBlock data={props.blockData.data as AviaryVideoBlockData} />);
   }
 
   return null;

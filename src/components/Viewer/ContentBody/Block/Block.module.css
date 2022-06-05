@@ -59,6 +59,7 @@
   border-left: 0px solid transparent;
   /* padding-left: 10px; */
   /* padding-left: 20px; */
+  width: 100%;
 }
 .LeftMargin,
 .RightMargin {

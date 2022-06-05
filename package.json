@@ -43,10 +43,20 @@
     "post-deploy:zip": "zip -r public.zip public -x '.DS_Store' -x '__MACOSX'",
     "post-deploy:push": "aws --profile=fortunoff-admin s3 cp public.zip s3://public-critical-editions-data/public.zip --acl public-read",
     "post-deploy": "yarn post-deploy:zip && yarn post-deploy:push",
+    
     "fetch-public:curl": "curl --output public.zip https://public-critical-editions-data.s3.amazonaws.com/public.zip",
     "fetch-public:unzip": "unzip public.zip",
     "fetch-public:cleanup": "rm public.zip",
-    "fetch-public": "yarn fetch-public:curl && yarn fetch-public:unzip && yarn fetch-public:cleanup"
+    "fetch-public": "yarn fetch-public:curl && yarn fetch-public:unzip && yarn fetch-public:cleanup",
+
+    "publish-test-data:zip": "zip -r test-public.zip public -x '.DS_Store' -x '__MACOSX'",
+    "publish-test-data:push": "aws --profile=fortunoff-admin s3 cp test-public.zip s3://public-critical-editions-data/test-public.zip --acl public-read",
+    "publish-test-data": "yarn publish-test-data:zip && yarn publish-test-data:push",
+
+    "fetch-test-data:curl":"curl --output test-public.zip  https://public-critical-editions-data.s3.amazonaws.com/test-public.zip ",
+    "fetch-test-data:unzip": "unzip test-public.zip ",
+    "fetch-test-data:cleanup": "rm test-public.zip ",
+    "fetch-test-data": "yarn fetch-test-data:curl && yarn fetch-test-data:unzip && yarn fetch-test-data:cleanup"
   },
   "eslintConfig": {
     "extends": "react-app"
