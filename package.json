@@ -34,6 +34,7 @@
     "lint": "yarn eslint \"src/**\"",
     "format": "yarn prettier src --write",
     "eject": "react-scripts eject",
+    "list-versions": "aws --profile=fortunoff-admin s3 ls s3://ce-viewer-builds",
     "deploy:package": "zip -rq build-$VERSION.zip build/",
     "deploy:push-version": "aws --profile=fortunoff-admin s3 cp build-$VERSION.zip s3://ce-viewer-builds/ --acl public-read",
     "deploy:push-latest": "aws --profile=fortunoff-admin s3 cp build-$VERSION.zip s3://ce-viewer-builds/latest.zip --acl public-read",
