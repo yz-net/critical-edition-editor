@@ -1,0 +1,25 @@
+.Aviary {
+    width: 100%;
+    /* use width as a way to constrain the height, which is
+    determined using padding in the AviaryIframeContainer 
+    defined below */
+    max-width: 150vh;
+}
+
+.AviaryIframeContainer {
+    background-color: lightgray;
+    padding:56.25% 0 0 0;
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.Aviary iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    width:100%;
+    height:100%;
+}

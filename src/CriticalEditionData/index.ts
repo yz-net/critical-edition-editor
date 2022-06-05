@@ -11,7 +11,7 @@ export interface HeaderBlockData {
 }
 
 export interface ParagraphBlockData extends BlockData {
-  paragraphType: 'blockquote' | 'paragraph';
+  paragraphType: 'blockquote' | 'paragraph' | 'embed';
   id?: string;
   text: string;
 }
@@ -22,12 +22,23 @@ export interface FootnoteParagraphBlockData extends ParagraphBlockData {
   label: string;
 }
 
-export interface ImageBlockData extends BlockData {
+export interface ImageBlockData extends InlineEmbedBlockData {
   src: string;
   srcset?: string;
   sizes?: string;
+}
+
+export interface AviaryVideoBlockData extends InlineEmbedBlockData {
+  ead_id: string;
+  tape: string;
+  start_time: number;
+  end_time: number;
+}
+
+export interface InlineEmbedBlockData extends BlockData {
   caption?: string;
 }
+
 export interface CriticalEditionDocument {
   version?: number;
   time?: number;

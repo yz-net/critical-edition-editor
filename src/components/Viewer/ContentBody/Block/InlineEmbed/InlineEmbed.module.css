@@ -1,0 +1,21 @@
+.InlineEmbed {
+  padding: 10px;
+}
+
+.InlineEmbed {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.EmbedContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.Caption {
+  margin-top: 13px;
+  font-size: 15px;
+  line-height: 2em;
+  color: #333;
+}
