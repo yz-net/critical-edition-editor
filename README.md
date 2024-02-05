@@ -1,86 +1,28 @@
-# Critical Edition Viewer
+# Create T3 App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fd246805-4849-47da-ac14-84b8398cc3c9/deploy-status)](https://app.netlify.com/sites/critical-edition-viewer/deploys)
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-## 1. Overview
+## What's next? How do I make an app with this?
 
-This repo is for the core template of the Fortunoff Archive's
-[Critical Editions Project](https://editions.fortunoff.library.yale.edu).
+We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
 
-Most of the time, you won't need to modify this repository, and you should be
-working with the site builder tool. It allows you to create and maintain your
-own Critical Editions site with your own content, without getting into any
-programming. To get started, check out the
-[site builder](https://github.com/jakekara/essay-formatter) and start building
-your own site.
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
-## 2. Development
+- [Next.js](https://nextjs.org)
+- [NextAuth.js](https://next-auth.js.org)
+- [Prisma](https://prisma.io)
+- [Tailwind CSS](https://tailwindcss.com)
+- [tRPC](https://trpc.io)
 
-### 2.1. Do you really need to be here
+## Learn More
 
-Once you have a Critical Editions site instance set up with the site builder
-mentioned in the previous section, and you find that you do need to modify the
-core template — either fixing bugs or adding features or changing the design —
-then read on.
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
-### 2.2. Bring your own public folder
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-To get started developing, you'll need to bring a [public](https://create-react-app.dev/docs/using-the-public-folder/) folder and copy it the
-root of this directory. You should already have one that you've generated with
-the site builder. You can also fetch a copy of the public folder using
-`yarn fetch-public`. This script will get you started with the data from
-[Critical Editions site](https://editions.fortunoff.library.yale.edu). This
-content, including artwork and essays, is copyright protected, so use it only to
-test your template development against it.
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-### 2.3. Get started
+## How do I deploy this?
 
-This app is built using `create-react-app` (`react-scripts`). After cloning the
-repo and bringing your public folder as discussed in the last section, follow these steps.
-
-Install dependencies
-
-```bash
-yarn
-```
-
-Start the development server
-
-```
-yarn start
-```
-
-This will start the react dev server.
-
-### 2.2.4 Other npm scripts
-
-The `package.json` includes several other scripts. You will find these ones
-useful — and they do exactly what they sound like:
-
-```
-yarn lint
-```
-
-```
-yarn format
-```
-
-```
-yarn test
-```
-
-You will not find the `deploy*` scripts useful unless you have access to the
-Fortunoff s3 bucket. These scripts are for deploying bundled versions of the
-core template. These bundles are fetched by the `site-builder` to build the
-latest version of the site.
-
-You may wish to rewrite these scripts to push to your own s3 bucket, and update
-the site-builder to pull templates from your own production build directory.
-
-## Software license
-
-The software license in this repository does not apply to the public folder, it
-does not include any fonts, images, or essay content that may exist in this
-repo, including in past or commits. The Critical Edition series published by the
-Fortunoff Video Archive for Holocaust testimonies is copyrighted with all rights
-reserved by the authors and archive.
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.

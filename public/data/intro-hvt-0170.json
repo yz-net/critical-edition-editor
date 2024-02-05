@@ -1,0 +1,656 @@
+{
+  "meta": {
+    "supertitle": "Introduction to the testimony of",
+    "title": "Hans Frei",
+    "hvtID": "0170",
+    "author": "Ion Popa",
+    "essayPath": "/data/intro-hvt-0170.json",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background.png",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background-loop.mp4",
+    "publicationDate": "February 1, 2021"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Conversion to Christianity was something hundreds of thousands of Jews experienced before and during the Holocaust. Joseph Jacobs estimates that throughout the nineteenth century the number of Jewish conversions to Christianity worldwide was 204,542. The greatest numbers were in Russia (84,536), Austria-Hungary (44,756), Great Britain (28,830), and Germany (22,520).<sup class=\"footnote-ref\" id=\"fnref-1\"><a href=\"#fn-1\">1</a></sup> Unfortunately we lack such centralised figures from 1900 to the period of the Holocaust, but we know from post-war testimonies and available scholarship<sup class=\"footnote-ref\" id=\"fnref-2\"><a href=\"#fn-2\">2</a></sup> that the trend of conversions intensified in many countries immediately prior to and during the Holocaust. "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-1",
+        "label": "1",
+        "text": "Joseph Jacobs, \u201cStatistics,\u201d in <em>The Jewish Encyclopaedia</em>, ed. Isidore Singer (New York and London: Funk and Wagnalls Company, 1905), vol. 11, 530. An online version is available at: <a href=\"http://www.jewishencyclopedia.com/articles/13992-statistics\">http://www.jewishencyclopedia.com/articles/13992-statistics</a>. Jacobs provides separate data for various regions that would later form Germany and/or Austria-Hungary, as well as total data for these countries."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-2",
+        "label": "2",
+        "text": "See for example Todd Endelman, <em>Leaving the Jewish Fold: Conversion and Radical Assimilation in Modern Jewish History</em> (Princeton: Princeton University Press, 2015), 150-158. See also Viktor Karadi, <em>The Jews of Europe in the Modern Era</em> (Budapest and New York: Central European University Press, 2004), 38."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "This annotated testimony is accompanied by an article published in SIMON, the academic journal of the Vienna Wiesenthal Institute for Holocaust Research. The article describes the main findings of my examination of 97 testimonies, containing details about conversion to Christianity before and during the Holocaust, found in the Forutnoff Video Archive of Holocaust Testimonies. This introduction borrows some information from that article, such as the state of research on conversion of Jews to Christianity and a summary of the ways in which Fortunoff interviewees remember the experience of conversion and its impact on their sense of belonging. The primary focus, however, is on Hans Frei\u2019s life and the way in which his testimony is similar or different to the other 96.  "
+      }
+    },
+    {
+      "type": "header",
+      "data": {
+        "text": "State of research on conversion of Jews to Christianity",
+        "level": 2
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "For various reasons,<sup class=\"footnote-ref\" id=\"fnref-3\"><a href=\"#fn-3\">3</a></sup> research into the number of conversions during the Shoah, the effect of this experience on the converts\u2019 lives/identities/belonging, and the way in which they were treated by Christian and Jewish communities, has been scarce. This is due, to some extent, to the lack of sources, as for a long time converted Jews did not speak out about this topic. Yaakov Ariel rightly argues in a seminal article on conversions of Jews to Christianity during the Holocaust that, while a number of authors wrote during the 1950s and 1960s about Jews hiding among \u201cAryans,\u201d or about the reclaiming of Jewish children after the war, their narratives carried \u201ca Jewish heroic undertone,\u201d \u201clargely overlooked the religious aspects of conversions, and did not relate to their spiritual and communal contexts.\u201d<sup class=\"footnote-ref\" id=\"fnref-4\"><a href=\"#fn-4\">4</a></sup> In the last decade, however, interest in the impact of conversions has increased and more steps have been taken to understand this forgotten group of Holocaust survivors. Several topics, such as the effect of conversion on the relation of Jews to their former faith,<sup class=\"footnote-ref\" id=\"fnref-5\"><a href=\"#fn-5\">5</a></sup> the psychological impact of conversion on Jewish identity,<sup class=\"footnote-ref\" id=\"fnref-6\"><a href=\"#fn-6\">6</a></sup> or the phenomenon of Jewish children who converted during the years of the Holocaust and the attempts to bring them into the Jewish fold in the immediate post-war years,<sup class=\"footnote-ref\" id=\"fnref-7\"><a href=\"#fn-7\">7</a></sup> have seen notable progress.  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-3",
+        "label": "3",
+        "text": "See more on this in Ion Popa, \u201cExperiences of Jews who Converted to Christianity before and during the Holocaust: An Overview of Testimonies in the Fortunoff Video Archive,\u201d <em>S:I.M.O.N. SHOAH: INTERVENTION. METHODS. DOCUMENTATION</em> 6, no. 2 (2020): 75-86."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-4",
+        "label": "4",
+        "text": "Yaakov Ariel, \u201cFrom Faith to Faith: Conversions and De-Conversions during the Holocaust,\u201d in <em>Simon Dubnow Institute Yearbook</em>, ed. Dan Diner (G\u00f6ttingen: Vandenhoeck &amp; Ruprecht, 2013), 38."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-5",
+        "label": "5",
+        "text": "Ronald Berger, \u201cTo Be Or Not To Be: The Holocaust And Jewish Identity In The Postwar Era,\u201d <em>Humanity and Society</em> 31, no. 1 (February 2007): 24-42; see also Julia Matveev, \u201cVladimir Vertlib On \u2018Jewish Identity In Particular and Identity and Belonging In General,\u2019\u201d <em>German Life and Letters</em> 68, 3 (July 2015): 1468-83."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-6",
+        "label": "6",
+        "text": "See for example Katarzyna Prot-Klinger, \u201cBroken Identity. The Impact of the Holocaust on Identity in Romanian and Polish Jews,\u201d <em>The Israel Journal of Psychiatry and Related Sciences</em> 45, no. 4 (2008): 239-46."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-7",
+        "label": "7",
+        "text": "Eva Fleischner, \u201c\u2018Who am I?\u2019 The Struggle for Religious Identity of Jewish Children Hidden by Christians During the Shoah,\u201d in <em>Gray Zones: Ambiguity and Compromise in the Holocaust and its Aftermath</em>, eds. Jonathan Petropoulos and John K. Roth (London: Berghahn Books, 2012), 107-117; see also Joanna Michlic, \u201c\u2018Who Am I?\u2019 The Identity of Jewish Children in Poland, 1945-1949,\u201d <em>Polin</em> 20 (2007): 98-121."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Although a careful analysis of \u201cJewish conversions to Christianity, and attempts at adopting hybrid identities\u201d<sup class=\"footnote-ref\" id=\"fnref-8\"><a href=\"#fn-8\">8</a></sup> has been mostly absent, details on how widespread this phenomenon was in various European countries have continued to come to light. One of the first countries that came under scrutiny was Hungary, where the number of converted Jews was high. In his most recent edition of <em>The Politics of Genocide</em>, Randolph Braham puts the number of Christians of Jewish origin residing in Hungary in 1941 at up to 100,000.<sup class=\"footnote-ref\" id=\"fnref-9\"><a href=\"#fn-9\">9</a></sup> Other historians<sup class=\"footnote-ref\" id=\"fnref-10\"><a href=\"#fn-10\">10</a></sup> and the <em>YIVO Encyclopaedia of Jews in Eastern Europe</em><sup class=\"footnote-ref\" id=\"fnref-11\"><a href=\"#fn-11\">11</a></sup> put forward similar numbers, which are mostly based on statistical data released after the March-April 1941 census. Unfortunately, and this is another sign of the lack of in-depth research, we do not have a critical assessment of these numbers. In Romania, the census of 1942 revealed that 4631, out of 272,573 Jews who remained after the changes of borders and the killings and deportations of 1941-1942, were converts.<sup class=\"footnote-ref\" id=\"fnref-12\"><a href=\"#fn-12\">12</a></sup> However, as in the case of Hungary, there is a need for better understanding of the context in which these censuses were gathered, as threat to life may have influenced whether or not a Jewish person declared him or herself Christian or Jewish. Although in the last decade the topic of conversions in Western Europe appears sporadically in research about Churches\u2019 attitudes during the Holocaust, or the treatment of Jews found in mixed marriages, we lack clear numbers and a clear overview of how widespread this phenomenon was in specific countries.  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-8",
+        "label": "8",
+        "text": "Yaakov, \u201cFrom Faith to Faith,\u201d 38."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-9",
+        "label": "9",
+        "text": "Randolph Braham, <em>The Politics of Genocide: The Holocaust in Hungary</em>, Third Edition (New York: Columbia University Press, 2016), vol. 1, 88."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-10",
+        "label": "10",
+        "text": "William McCagg Jr., \u201cJewish Conversion in Hungary in Modern Times,\u201d in <em>Jewish Apostasy in the Modern World</em>, ed. Todd Endelman (New York/London: Holmes and Meier, 1987), 142-64; see also Endelman, <em>Leaving the Jewish Fold</em>, 152."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-11",
+        "label": "11",
+        "text": "Gershon David Hundert (ed.), <em>The Yivo Encyclopedia of Jews in Eastern Europe</em> (New Haven/London: Yale University Press, 2008), vol. 1, 348-51. The section on \u201cConversion\u201d is written by Magda Teter."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-12",
+        "label": "12",
+        "text": "ACSIER [The Archive of the Centre for the Study of the History of Romanian Jews] III/474, 1-2."
+      }
+    },
+    {
+      "type": "header",
+      "data": {
+        "text": "Methodology of finding and researching the testimonies referring to conversion",
+        "level": 2
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "The Fortunoff Video Archive, which was the first to start gathering video testimonies of Holocaust survivors, was initiated in 1979 by Dr. Dori Laub, a child survivor and psychiatrist born in Czernowitz, Romania, and Laurel Vlock, a television journalist who produced many interviews for Channel 8 in New Haven. From the beginning, they paid special attention to the psychological dimensions of remembering past traumatic experiences.<sup class=\"footnote-ref\" id=\"fnref-13\"><a href=\"#fn-13\">13</a></sup> Moreover, the initial guidelines of the Fortunoff Archive stressed the importance of allowing survivors to remember their experiences without much intervention from the interviewers.<sup class=\"footnote-ref\" id=\"fnref-14\"><a href=\"#fn-14\">14</a></sup> However, in my examination of the 97 testimonies I found that the guidelines were not always followed. This was because of the professional formation of the interviewers (Laurel Vlock, for example, tended to follow a media style of interviewing), or because of the expansion of the project to different locations (for example in the interviews done at affiliate locations in Europe, especially in Yugoslavia, the survivors were often guided in their answers by the questions of the interviewer).  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-13",
+        "label": "13",
+        "text": "See for example Yale University Sterling Memorial Library, Holocaust Survivors Film Project records, MS 1909 Box 1, Folder 1, a report on \u201cexisting literature on the psychological effects of videotaping on interviews\u201d (undated, but the next document in the box is from December 1979, so this report was most likely written before). See also \u201cSummary of meeting on 2 June, 1981 with Professor Geoffrey Hartman, Dr. Dori Laub, and Laurel Vlock of the Holocaust Survivors Film Project,\u201d document dated June 16, 1981 (the pages in the box are not numbered)."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-14",
+        "label": "14",
+        "text": "See Ibid., Box 2, Folder 5, \u201cProject procedures\u201d (no date, but the documents in the box before and after are from 1981), describing procedures for pre-interview, interview, and post-interview."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "In February 2019, when my Fortunoff fellowship at the Vienna Wiesenthal Institute for Holocaust Studies started, I proceeded immediately by searching four key words (using the <em>hvt</em> \u2013 Holocaust video testimony \u2013 in front of each word): <em>conversion</em>, <em>converted</em>, <em>baptism</em> and <em>baptised</em>. I relied on Orbis, the search engine of the Yale University library. Each testimony contains a brief (usually between ten to 20 lines) description of its content. The four searches produced 153 results, of which 97 are testimonies describing in one form or another experiences of conversion of the interviewees, while the rest are either duplicates, irrelevant (as the words refers to something else), or are about conversion of somebody else (usually parents, with only a brief mention). 61 testimonies are from women Holocaust survivors and 36 from men. The vast majority were children at the time of baptism. Conversion to Catholicism is predominant because most testimonies are from countries where Catholicism was the main religion. In terms of countries of origin, the largest number of testimonies is from people who either lived at the time of recording or were originally from Slovakia (26), which is due to the fact that during the 1990s the Fortunoff Archive had an active office in Bratislava, where some of these testimonies were recorded.  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "In April-May 2019 the Fortunoff Video Archive rolled out the beta version of another online platform, Aviary, which provides enhanced descriptions of testimonies. The search using the word <em>conversion</em> produced 90 results (in comparison to 63 in my previous Orbis search). Due to time limitations, I was unable to check the new results. However, the first sample of 97 overall testimonies is sufficient to offer an informed view on the way in which survivors remember their experience of conversion. It should be noted that in my documentation for this introduction and the annotated edition, apart from the transcript itself, the other 96 testimonies, and relevant secondary literature, I relied also on the two boxes of Hans Frei personal documents found in the Yale Divinity School Library and on two boxes of Fortunoff Archive documents found in the Yale University\u2019s Sterling Memorial Library.  "
+      }
+    },
+    {
+      "type": "header",
+      "data": {
+        "text": "The impact of conversion on Jewish identity/belonging as revealed in the Fortunoff Video Archive",
+        "level": 2
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Conversion had a significant impact on the life and sense of belonging of the converts, even if it was temporary.<sup class=\"footnote-ref\" id=\"fnref-15\"><a href=\"#fn-15\">15</a></sup> Most Fortunoff survivors, who, we should not forget, were children during the war, speak of conversion in very bleak tones \u2013 as betrayal, shameful, and an embarrassment. Susan M., who was born in Budapest (her date of birth is not clear in the interview) and almost converted as a small child in Hungary to avoid persecution, describes her experience in these terms:  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-15",
+        "label": "15",
+        "text": "For a discussion of the psychological impact of conversion on Jewish identity see: Prot-Klinger, \u201cBroken Identity,\u201d 239-246."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>I felt somehow that God was watching us and if anything this was gonna be the cause of our perishing, the next air raid or whatever, just because we were doing it. It was like, like being a traitor and I was always terribly ashamed. I am not ashamed of anything else associated with the Holocaust and I practically talk about anything else, but this is something I\u2019ve always been very embarrassed about [\u2026]<sup class=\"footnote-ref\" id=\"fnref-16\"><a href=\"#fn-16\">16</a></sup> </p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-16",
+        "label": "16",
+        "text": "Susan M., HVT 537.",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/108964?media=108964&e=29\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Peter B., who was born in Budapest, in 1928, talks about mandatory catechisation classes and about how, \u201cIf I was going to survive, it was important that I have the inner sense of being Christian. I had to be the perfect actor, in a sense.\u201d He summarises the entire experience: \u201cI consider this process as really destructive. I think my soul was executed in the process of conversion; I did not feel this as a kid, but in retrospect, this is how I feel. It has taken me years to come to terms with what I did.\u201d<sup class=\"footnote-ref\" id=\"fnref-17\"><a href=\"#fn-17\">17</a></sup> "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-17",
+        "label": "17",
+        "text": "Peter B., HVT 2736."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "In a few cases conversion is explicitly denied, although the recollection of events is imbued with a suspected glorious narrative of resistance. One such example is Susan B., born in Michalovce, Czechoslovakia, in 1927. During the Holocaust, her father asked a friend who was a village priest to convert the family as a way of avoiding deportation. The priest insisted on catechisation classes and baptism. \u201cSo my father, mother, sister, and brother converted. I was an idealist and I refused to convert. But he was a very nice man, and he said that he could not make someone with such strong beliefs convert, so he just gave me the papers.\u201d In 1949 Susan immigrated to Israel (in 1958 she moved to the US) and maintained strong links with Judaism.<sup class=\"footnote-ref\" id=\"fnref-18\"><a href=\"#fn-18\">18</a></sup> In some cases, the grown-up survivors dismiss the importance of conversion in a desire to emphasise their Jewishness, although it is clear from the testimony that the experience had a longstanding emotional impact. Nadia R. was born in 1938, in Bratislava. She was baptised into a Protestant church when she was four. The way she retells the story of her baptismal ceremony reveals the internal tensions between acknowledging the importance of the event as her first memory and denying its importance:  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-18",
+        "label": "18",
+        "text": "Susan B., HVT 2008."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<ul>\n<li>What does it mean? Do you mean baptism?  </li>\n<li>Baptism, yeah, I remember it very, very clearly and that was sort of very courageous people from the, mostly Protestant, the Lutheran Church did it. [\u2026]   </li>\n<li>Did you have a ceremony?  </li>\n<li>Yes, I remember the ceremony.   </li>\n<li>What was that?  </li>\n<li>Well, it was in a church. I must have been three or four, so, it was in a church and for me I don\u2019t remember synagogues before, maybe I was in one, but I don\u2019t remember. This was my first, you know, and \u2026 it didn\u2019t make a big splash in my life at that time; it was something which I went through. Only later in life I really knew what it was all about, so no, there was no Jewish education in my life at that time and no identity I have to say.<sup class=\"footnote-ref\" id=\"fnref-19\"><a href=\"#fn-19\">19</a></sup> </li>\n</ul>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-19",
+        "label": "19",
+        "text": "012:40 - 13:59 Tape I (Nadia R. HVT 3132)",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/109175?media=109175&e=78\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "The internal voice of consciousness, which led many survivors to talk about conversion as betrayal, was echoed sometimes by some form of outside opprobrium.<sup class=\"footnote-ref\" id=\"fnref-20\"><a href=\"#fn-20\">20</a></sup> In many Jewish communities converts were not welcomed back, no longer seen as Jews. Sometimes this implicit pressure can be felt in the Fortunoff testimonies when the survivors try to answer unasked questions, minimise the importance of conversion, or all of a sudden bring up Israel or involvement in Holocaust education as a way of emphasising their Jewish belonging.<sup class=\"footnote-ref\" id=\"fnref-21\"><a href=\"#fn-21\">21</a></sup> In some other cases they retell the story of attempted conversion in very glorious tones, highlighting their resistance and devotedness to Judaism.<sup class=\"footnote-ref\" id=\"fnref-22\"><a href=\"#fn-22\">22</a></sup> "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-20",
+        "label": "20",
+        "text": "See the case of Berthe B., HVT 2668, who was born in Paris in 1935. She tells that the Jewish community was highly critical of her parents for sending her to a Catholic school."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-21",
+        "label": "21",
+        "text": "See for example Nadia R., HVT 3132."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-22",
+        "label": "22",
+        "text": "See for example the case of Judith S. HVT 1263, who was born in Szeged in 1929. She explains that, when offered the possibility of conversion, her father declared: \u201cwe won\u2019t change our religion. We were born as Jews, we will die as Jews if we have to. The religion is not a coat that you can change with the season.\u201d"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "In the Fortunoff collection there are examples where the different experiences of persecution during the Holocaust impacted differently members of the same family who converted to Christianity.<sup class=\"footnote-ref\" id=\"fnref-23\"><a href=\"#fn-23\">23</a></sup> Nicholas P., for example, was born in Budapest in 1912. He and his brother converted to Catholicism as children. They both survived the Holocaust, Nicholas in Hungary and his brother as a Catholic priest in Italy. Nicholas, who was persecuted in Hungary, returned to Judaism immediately after the war, while his brother, who was not directly affected by the Holocaust, remained a Christian. In other cases, children who were hidden in the same place experienced conversion and post-war tensions of belonging in very different ways.<sup class=\"footnote-ref\" id=\"fnref-24\"><a href=\"#fn-24\">24</a></sup> "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-23",
+        "label": "23",
+        "text": "Nicholas P., HVT 575."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-24",
+        "label": "24",
+        "text": "See the joint testimony of Jacques F., David I., and Paul S., HVT 1792. They were hidden in a Belgian village but did not know about each other until after the war. They remembered conversion and relation to various Catholic individuals in significantly different ways."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Jews who converted before or during the Holocaust in both Germany and France generally retell the story of conversion and attachment to Catholicism in more positive terms, without shadows of betrayal or embarrassment. This is probably because these communities were much secularised. An excellent example, although not singular, is Paulette G., who was born in Paris in 1933 and hidden during the Holocaust by a Catholic family. She describes Catholicism and her experience as a converted Jew in these terms:  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>I think that, Catholicism for me stood me in good stead, it gave me a discipline, it gave some comfort, and it allowed me not to go astray someway, you know, I had something to hold on to. This religion called Catholicism. And I had a lot of fears about things, because no one could teach me anything, so I had to teach it myself, and through religion, I think, through Catholicism, I was able to hold on to certain values and ethics that allowed me to carry on with my life, you see, because I had little else to hold on to. So, in fact it was a great help to grow up with this kind of thing, and as young adults to be able to fall back on something like this, because I did believe for a long time.  </p>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Paullette is also open, during her interview, about her continued belief in Christianity after the war and the dilemmas of identity raised by this reality:  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>You know, my belief in Christianity did not stop when the war ended. It continued on for a long, long time. And my identity crisis as a Jew and as a Christian was very difficult. And it began to take shape after I married my husband who was an American Jewish man. And so it was a conflict, a great crisis up until that point. Was I a Jew, was I a Christian? And when I met my husband I finally found a peaceful way to resolve that problem. It was quite comfortable being a Jew again.<sup class=\"footnote-ref\" id=\"fnref-25\"><a href=\"#fn-25\">25</a></sup> </p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-25",
+        "label": "25",
+        "text": "Paulette G., HVT 2170.",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/109068?media=109068&e=47\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "There are a few other Fortunoff testimonies expressing similar attachment to Christianity. Denise B., who was born in Paris in 1934, says: \u201cOne of the nuns began to give me private lessons on Catholicism. I became very attached to Virgin Mary. I began to pray fervently because I thought that this would bring my mother back. [\u2026] Catholicism helped me to think straight, my mind was such a blur.\u201d<sup class=\"footnote-ref\" id=\"fnref-26\"><a href=\"#fn-26\">26</a></sup> Henri B., who was born in Paris in 1927 and baptised into Catholicism while in hiding with his mother and siblings in a little village outside Paris, is also appreciative of the structure Christian belief and ritual gave him: \u201cI told you before that I was very religious. It kept me occupied during my entire deportation, I always prayed. I think it helped me. When you get beaten, and then say \u2018forgive them, they know not what they do,\u2019 perhaps it changes something. It also imposed rules on me, things I did or did not do.\u201d<sup class=\"footnote-ref\" id=\"fnref-27\"><a href=\"#fn-27\">27</a></sup> "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-26",
+        "label": "26",
+        "text": "Denise B., HVT 2172."
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-27",
+        "label": "27",
+        "text": "Henri B., HVT 2154."
+      }
+    },
+    {
+      "type": "header",
+      "data": {
+        "text": "Hans Frei in the context of other Fortunoff Video Archive testimonies",
+        "level": 2
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Ariel points out that conversions during and following the Holocaust \u201cinvolved massive formations of identities weaving elements together in new reconfigurations.\u201d This process was often painful. In comparison to many human beings who get through their lives without being much concerned about their \u201cidentities,\u201d converted Jews had to adapt, to learn skills in assuming new identities, to reinvent and reconfigure themselves constantly, \u201cto recreate and plant themselves successfully, albeit not without pain, in new and often hostile communal and spiritual territories.\u201d<sup class=\"footnote-ref\" id=\"fnref-28\"><a href=\"#fn-28\">28</a></sup> "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-28",
+        "label": "28",
+        "text": "Ariel, \u201cFrom Faith to Faith,\u201d 65-6."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "The Fortunoff Video Archive provides a great array of testimonies from survivors who converted to Christianity before, during, or, in a very few instances, after the Holocaust. They were interviewed in different locations in the US, Canada, Western Europe, Eastern Europe and Israel. As a result, we are provided with a wealth of information about the way in which the Holocaust and conversions were experienced in many European countries. Apart from these historical details, some of them analysed in the SIMON article, the aspect that really stands out from examining the 97 testimonies is the fascinating insight provided into the impact of conversion on Jewish lives, identities, and belonging. Especially, the attachment of Jews who converted to the Christian community has been too easily dismissed and needs further, more insightful exploration.<sup class=\"footnote-ref\" id=\"fnref-29\"><a href=\"#fn-29\">29</a></sup> Here the testimony of Frei, as that of Paulette G. mentioned above, show a different picture from most Fortunoff testimonies, a picture where survivors who converted during the Holocaust are willing to make peace with their hybrid identities.  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-29",
+        "label": "29",
+        "text": "Ariel, \u201cFrom Faith to Faith,\u201d 42-6."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "At the time of the interview (April 18, 1980) with Laurel Vlock, Frei was a respected, well-known Professor of Theology at the Yale Divinity School. He was born in 1922 in Breslau, then part of Germany, into a family of Jewish parents who had converted to Christianity in their early adulthood. His father, Wilhelm Siegmund Frei, was a professor at the Faculty of Medicine, University of Breslau, and his mother, Magda Frankfurther Frei, was a medic. Hans was the youngest of three children. As he explains at one point in his testimony, he and his siblings were baptised into a Protestant Church (most likely Lutheran) soon after birth. In the 1920s the family moved to Berlin after the father got a job at an important hospital in Spandau. Due to his parents\u2019 professional status, the family did not feel the economic depression that ravaged Germany throughout the 1920s and the early 1930s. However, they were impacted by antisemitic policies as soon as Hitler came to power in 1933. In order to avoid the hostile environment, from 1935 until 1938 Hans was sent to a Quaker school in Saffron Walden, Essex, England.<sup class=\"footnote-ref\" id=\"fnref-30\"><a href=\"#fn-30\">30</a></sup> The choice of this school was not necessarily down to religious preference (Hans explains that his parents were not committed Christians, and were not enthusiastic about the Quakers) and probably reflects rather bureaucratic reasons, for the Quakers were relatively relaxed on the currency exchange requirements of the time. Frei developed a close connection with this religious group, but later, after the family moved to the US, identified rather with Lutheranism and Anglicanism.  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-30",
+        "label": "30",
+        "text": "The name of the school is not mentioned in the interview but appears in documents from Yale Divinity School. See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27. Personal Items and memorabilia, Folder 1, the second CV (the pages are not numbered)."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "His testimony is, in many ways, very different from others in the Fortunoff collection. First, Frei left Germany in 1938. He experienced the beginning of the Holocaust, but unlike most survivors, did not feel the full blow of persecution. He actually says, in the first sentences of the interview: \u201cWell, I was one of the lucky ones who escaped without ever having seen anything more horrible than some street clashes in Germany.\u201d<sup class=\"footnote-ref\" id=\"fnref-31\"><a href=\"#fn-31\">31</a></sup> Nonetheless, his insight into the growing persecution is extremely relevant. As the reader/listener will notice, he talks several times about the terror of those early years: the terror of denunciations, the terror of a growing police state, and the terror of legislation that excluded Jews from the German society and made them unwelcome. Two interesting episodes reflect this sense of terror. In one, probably in 1935, while returning from England Hans missed his train and arrived with the next one. He describes the profound anxiety of his parents who feared the worst. In the second, which happened in 1934 in the context of the Night of the Long Knives, he was at home with his grandmother. An individual who was chased by the police asked to take shelter in their apartment, claiming to have known his father from the trenches in the First World War. In the end Hans, who was 12 at the time, refused to give the man permission to enter; the memory of that event, and the guilt of a missed opportunity to help, were still vivid decades later.  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-31",
+        "label": "31",
+        "text": "Hans F., HVT 170, p. 1 of 2 [00:01:29.96]."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "In 1938 the Frei family moved to New York. In the testimony he does not give many details about this period, apart from some brief insight about the German Jewish life in the neighbourhoods of Flushing and Washington Heights: \u201cWe lived in the latter place. And I think a good many of those people were very much like we were, thoroughly secularized, quite relaxed about the fact that they were Jews, having a variety of outlooks towards Zionism, from strong sympathy to mild antipathy. But none of them really, in any sense, ardently members of the larger Jewish community.\u201d<sup class=\"footnote-ref\" id=\"fnref-32\"><a href=\"#fn-32\">32</a></sup> His father worked at the Montefiore Hospital in the Bronx from 1937 until his death on January 27, 1943.  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-32",
+        "label": "32",
+        "text": "Hans F., HVT 170, p.2 of 2 [00:02:14.23]."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "According to documents found at Yale Divinity School, Frei graduated with a BS from North Carolina State College (1942), a BD from Yale Divinity School (1945), and a PhD from Yale University (1956). He was a Fulbright Research Fellow in Germany (1959-1960). In 1966-1967 he was the recipient of an American Association of Theological Schools fellowship, which allowed him to study at the University of Cambridge. Career wise, Frei was a minister at North Stratford Baptist Church, North Stratford, New Hampshire (1945-1947), before starting an academic career that took him in the end to the Yale Divinity School, where he was an Assistant Professor of Religious Studies (1957-1963), Associate Professor (1963-1974), and Professor of Religious Studies (1974-1988). He was the Chairman of the Department of Religious Studies at Yale Divinity School (1983-1986). The spring syllabus 1974 shows him teaching two courses: \u201cHegel: Early Theological writings,\u201d and \u201cHegel: Reason in History.\u201d His writings, especially <em>The Eclipse of Biblical Narrative: A Study in Eighteenth and Nineteenth Century Hermeneutics</em> (New Haven: Yale University Press, 1974), and <em>The Identity of Jesus Christ: The Hermeneutical Bases of Dogmatic Theology</em> (Philadelphia: Fortress Press, 1975) are essential in the field of Christian Theology.<sup class=\"footnote-ref\" id=\"fnref-33\"><a href=\"#fn-33\">33</a></sup> "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-33",
+        "label": "33",
+        "text": "See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27, especially folder 1."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Frei died unexpectedly on September 12, 1988. Family, friends and colleagues celebrated his work in a memorial service held at Battel Chapel, Yale, on September 22, 1988. He was praised for many things, two of which appear consistently: his academic excellence (he is described as a leading Anselmian), and his connection to students, who often portrayed him as a father figure.<sup class=\"footnote-ref\" id=\"fnref-34\"><a href=\"#fn-34\">34</a></sup> His influence on Christian theology continued long after his passing, as testified by articles and books dedicated to him. In his 1992 article \u201cHans Frei and the Future of Theology,\u201d David Ford summarises the influence of Frei on various theologians:  "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-34",
+        "label": "34",
+        "text": "See Ibid., folder 5 \u201cIn Memoriam: Hans W. Frei\u201d \u2013 Memorial Service for HWF with tributes by colleagues."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>David Kelsey says that Frei helped him to rethink Luther and Calvin, especially on justification and sanctification. Michael Root says that Frei\u2019s insider/outsider view of the German tradition stimulated his appropriation of his own Lutheranism. James Buckley has, in his forthcoming book, <em>Seeking the Humanity of God</em>, drawn on Frei to present a \u2018Catholic particularism following in the tradition of Vatican II.\u2019 [\u2026] In terms of the history of modern theology, one of Frei\u2019s major achievements in this regard was to move Schleiermacher nearer to Barth, out of opposition and into neighbourly relations.<sup class=\"footnote-ref\" id=\"fnref-35\"><a href=\"#fn-35\">35</a></sup> </p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-35",
+        "label": "35",
+        "text": "David Ford, \u201cHans Frei and the Future of Theology,\u201d <em>Modern Theology</em> 8 (April 1992): 204."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Although Frei did not conceal his Jewish roots (testimony to that is the interview he gave to the Fortunoff Video Archive in 1980), for reasons not entirely clear his Jewishness was entirely overlooked in the memorial service and in an obituary published in <em>New Haven Register</em> on Wednesday September 14, 1988. One sentence of that obituary is particularly striking through its deliberate occlusion of his Jewish identity and persecution in Germany: \u201cMr. Frei was born in Breslau, Germany, April 29, 1922, son of the late Wilhelm and Magda Frankfurter Frei. His father, a physician, was on the medical faculty of the University of Breslau. Political developments prompted the family to leave Germany.\u201d<sup class=\"footnote-ref\" id=\"fnref-36\"><a href=\"#fn-36\">36</a></sup> "
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-36",
+        "label": "36",
+        "text": "See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27, Folder 6 Frei Hans, Obituary."
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "One of the main reasons I chose his testimony for the annotated edition was the beautiful ways in which the topic of identity is touched upon during the interview. The interview conducted by Laurel Vlock follows a media style of questioning, which allows for in-depth examination of events and their impact on belonging. However, it is Frei\u2019s intellect that really digs deep into all the complexities of feeling of the pressure to define yourself and the pain of having to live with hybrid identities. Frei grew up in a family that was secular and very much assimilated into German society. His education in a Quaker school from the age of 13 to the age of 16 made a great impression on him. In comparison to other converted survivors who, forcefully categorised as Jews and persecuted, found it easier to identify as Jews and return to Judaism, Frei continued to identify as Christian after the Holocaust. His experience is, to a great extent, unique in the Fortunoff Archive, where converted survivors generally identify themselves as Jewish and either deny the importance of conversion or, such as in the case of Paulette G., accept a version of hybrid identity where the Jewish component is primordial. Towards the end of his interview, Frei offers a complex view into his self-identification:  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>[00:16:47.01] INTERVIEWER: Well, that takes us back to you and your family and the relationship between you and your family, which must have been or must be or must have been strained as a result of this departure on your part, even though it was clear why it happened.<br/>\n[00:17:06.43] SUBJECT: My departure from-- towards Christianity, you mean?<br/>\n[00:17:10.31] INTERVIEWER: Well, yeah-- not really toward Christianity. But away from the condition that the family found itself in.<br/>\n[00:17:18.31] SUBJECT: Actually not, no, that-- I think the problem was not-- is not there. The problem-- I mean, they-- they-- they saw what I was doing as a not-- as a continuation of their own pattern of assimilation on the one hand, and moving into an academic life, on the other hand. The problem, really, for me is that I am, far more than a good many other people, at once an outsider to Jewishness and an insider.<br/>\n[\u2026]<br/>\n[00:18:34.78] Um, there's an author who's written a very deeply moving book, Saul Friedlander, When Memory Comes.  So have you looked at it?<br/>\n[00:18:43.59] INTERVIEWER: Mhm.<br/>\n[00:18:44.37] SUBJECT: And he's become a very loyal, devoted Israeli, though he teaches half time in Geneva each year, half the year. And yet, I think you'll find-- in that book I found part of the same thing-- kind of an inability to get two halves of his personality together again, except in a very tenuous way. Well, that's true for me, too.<br/>\n[00:19:14.94] But you see that my dominant personality became secular and Christian. Therefore, it would take a conscious move, rather than a natural emotive response, for me to identify myself with Judaism now. I'm too far gone.<sup class=\"footnote-ref\" id=\"fnref-37\"><a href=\"#fn-37\">37</a></sup></p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-37",
+        "label": "37",
+        "text": "016:47 - 019:34",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80727?e=1174&media=80727&t=1007&e=1174\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "This is not to say that Frei denies his Jewishness and, had he remained in Europe and experienced the full force of persecution, perhaps his post-war sense of belonging would have been different. It should be mentioned here that, while still in Germany, his father renounced his Christian conversion as a protest against the Nazi persecution of Jews. Unfortunately, the interview does not offer any details about what this renunciation entailed. We do not know whether it was only a private declaration or if any formal steps were made in that direction. However, the episode indicates how the experience of the war may have impacted Hans too. As he left in 1938, he did not have to take shelter in a convent, nor to be hidden conditionally by some villagers, nor to convert as a way of gaining the trust of a convent or a foster family, as most Fortunoff survivors did.  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Laurel Vlock often pushes Frei to confront what she perceives as ambivalence on his part:  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>[00:48:24.31] INTERVIEWER: I-- I have to persist in the question of why they sent you to a Quaker school rather than a Jewish school.<br/>\n[00:48:30.98] SUBJECT: In England?<br/>\n[00:48:31.49] INTERVIEWER: Mhm.<br/>\n[00:48:32.21] SUBJECT: Because, like so many other Jewish families, my family was totally secularized. That is to say they had given up their-- they-- we were-- we knew we were Jews, you see? But that meant simply German citizens of Jewish religion until the Nazis came.<br/>\n[00:48:54.89] That was what assimilation meant. We were totally assimilated, and as a result, my parents had us baptized, you see? My parents had all of us children baptized. <sup class=\"footnote-ref\" id=\"fnref-38\"><a href=\"#fn-38\">38</a></sup> </p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-38",
+        "label": "38",
+        "text": "48:24 - 49:07 Tape I",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80726?e=2947&media=80726&t=2904&e=2947\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "To make matters even more complicated, over their Christian and Jewish identities (and he explains very clearly that although baptised, they still saw themselves as Jewish), there was another overarching allegiance, the allegiance to Germany:  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>[00:51:58.83] We had been so deeply assimilated, you see? So deeply assimilated that, on the one hand, we were proud of the fact that we were Jewish, in a curious, undefinable way. We felt that we were Jewish, and that was that. Jews were good people.<br/>\n[00:52:20.11] Uh, but on the other hand, we felt that it was simply a kind of cultural religious distinctness, but not anything that interfered with our, first of all, being German citizens. You see, our whole world-- for just that reason, our whole world was turned far more upside down in 1933. We were robbed of our primary support. Namely, our national identity, which was much more our identity than our Jewish identity.  </p>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "At one point during the interview, returning to what she perceives as ambivalence on Hans Frei\u2019s part, Laurel Vlock asks:  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>[00:52:58.77] INTERVIEWER: You claim you felt Jewish, or you felt an identification with your Jewish heritage ancestry, yet you were practicing Christians in an assimilated German society. It's, uh\u2014<br/>\n[00:53:11.51] SUBJECT: Heinrich Heine, the German poet who was himself Jewish, and rather cynically converted, once said that the-- that bap-- the baptismal certificate is the admission ticket to European culture. And a lot of Jewish people in the middle of the 19th century, especially in Germany, began to feel some sympathy for that. So that even when they did not do it themselves, as my parents did, they downplayed any part of their heritage, except one of a strictly limited religious cultural sort.<sup class=\"footnote-ref\" id=\"fnref-39\"><a href=\"#fn-39\">39</a></sup></p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-39",
+        "label": "39",
+        "text": "52:58 - 53:54 Tape I",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80726?e=3234&media=80726&t=3178&e=3234\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "Frei\u2019s answer reveals the complexity of belonging, and the readiness of many Jews in Germany to adapt to various circumstances they found themselves in. This fluidity, which crosses limited boundaries of self-identification, appears later on when, borrowing some of the principles of his father (who, recall, renounced conversion as a protest) and of the Quakers, to whom he alludes several times in his testimony, he says:  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "blockquote",
+        "text": "<p>[00:17:49.75] And I find that a very difficult way, you see. I mean, for example, if this country were to go officially anti-Semitic, which I don't see coming, but nonetheless, you know, [? if it somehow ?] did, I would clearly identify myself with the Jewish community.<br/>\n[00:18:09.64] INTERVIEWER: Why?<br/>\n[00:18:10.75] SUBJECT: That's because I think one should always identify oneself with those who are persecuted.  I think that's-- that's only right.<sup class=\"footnote-ref\" id=\"fnref-40\"><a href=\"#fn-40\">40</a></sup> </p>"
+      }
+    },
+    {
+      "type": "footnoteParagraph",
+      "data": {
+        "id": "fn-40",
+        "label": "40",
+        "text": "017:49 - 018:21 Tape II",
+        "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80727?e=1082&media=80727&t=1069&e=1101\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "However, he adds: \u201cBut I think I would do so as one whose persuasion is one of considerable scepticism at the same time.\u201d His ambivalence, his \u201cinability to get two halves of his personality together again,\u201d is visible throughout the interview. On the hand he is proud of his Jewish heritage and talks at length about the persecution in Germany or mentions the German Jewish community in the US. At the same time, he expresses his devotedness to the Christian community in general and the Quaker community in particular. He categorises himself as being secular and Christian first; however, he is very disappointed that his German Christian friends are not willing to assume responsibility for their and their country\u2019s participation in the killing of Jews. In the interview he often uses his own experience of persecution as a Jew to draw comparison with persecution of other minorities in the US, especially of black people.  "
+      }
+    },
+    {
+      "type": "paragraph",
+      "data": {
+        "paragraphType": "paragraph",
+        "text": "The testimony of Frei offers a wealth of information on various events that shaped German society before and after 1933. It also provides some information on German Jewish life in New York at the end of the 1930s. There are also glimpses of Frei\u2019s view on post-Second World War German society, and his vision of Israel. First and foremost, however, this is a template interview on how conversion to Christianity impacts Jewish identity and belonging and how second generation converts depart even more from Judaism. Seen through comparative lenses, Frei\u2019s answer to some of these issues are, as explained above, both similar and different to other Holocaust survivors who converted to Christianity. His family\u2019s secularism, attachment to German belonging, and desire to assimilate into that society all shaped Frei\u2019s later identity. The fact that he escaped the most terrible part of the Holocaust was also essential. However, it is interesting that, although all these elements would be sufficient to make him forget his Jewishness, he nevertheless returns to it very often during the interview. And even when he is tempted to deny it, he does so leaving the door open for an eventual reconsideration.  "
+      }
+    }
+  ]
+}
