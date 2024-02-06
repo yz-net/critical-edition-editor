@@ -1,10 +1,12 @@
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
+import EssayIndexItem from "~/components/EasyIndexItem";
 
 import config from "public/data/config.json" assert { type: "json" };
 
 import styles from "./styles.module.scss";
-import EssayIndexItem from "~/components/EasyIndexItem";
+import Link from "next/link";
+import { FiPlus } from "react-icons/fi";
 
 export default function HomePage() {
   return (
@@ -22,6 +24,14 @@ export default function HomePage() {
         </div>
         <nav aria-label="List of essays">
           <ul className={styles.ItemListContainer}>
+            <li className="max-w-[500px] flex-shrink-0 flex-grow basis-1/2">
+              <Link
+                className="flex h-full w-full items-center justify-center gap-3 rounded bg-red-500 transition-colors hover:bg-green-500"
+                href="/new"
+              >
+                <FiPlus /> New
+              </Link>
+            </li>
             {config.essays.map((essay) => {
               // const essay: EssayDataEntry = essays[essayID];
               if (!essay) {
