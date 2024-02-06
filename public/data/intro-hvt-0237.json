@@ -1,5 +1,18 @@
 {
-  "meta": null,
+  "meta": {
+    "slug": "hvt-0237",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/0237/background-loop-1280.mp4",
+    "smallVideoPath": "https://d12q9fe14kxf9b.cloudfront.net/0237/background-loop-640.mp4",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/0237/poster.jpg",
+    "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/307/transcript?",
+    "supertitle": "Introduction to the testimony of",
+    "hvtID": "0237",
+    "title": "Martha Saraffian",
+    "author": "Nikolaus Hagen",
+    "affiliation": "Innsbruck",
+    "essayPath": "/data/intro-hvt-0237.json",
+    "publicationDate": "February 1, 2021"
+  },
   "blocks": [
     {
       "type": "paragraph",
@@ -13,7 +26,7 @@
       "data": {
         "id": "fn-1",
         "label": "1",
-        "text": "The terms \u201cmixed marriage\u201d (Ger. <em>Mischehe</em>), \u201cintermarried,\u201d \u201cJew,\u201d \u201c<em>Mischlinge</em>,\u201d and \u201cnon-Jew,\u201d as used in this introduction follow the Nazi definitions laid down in the infamous Law on the Protection of German Blood and Honour and the Reich Citizenship Law of 1935, and their implementation regulations."
+        "text": "<p>The terms \u201cmixed marriage\u201d (Ger. <em>Mischehe</em>), \u201cintermarried,\u201d \u201cJew,\u201d \u201c<em>Mischlinge</em>,\u201d and \u201cnon-Jew,\u201d as used in this introduction follow the Nazi definitions laid down in the infamous Law on the Protection of German Blood and Honour and the Reich Citizenship Law of 1935, and their implementation regulations.  </p>"
       }
     },
     {
@@ -28,7 +41,7 @@
       "data": {
         "id": "fn-2",
         "label": "2",
-        "text": "While testimonies of children who grew up in such \u201cmixed\u201d families in Germany and its annexed territories are relatively numerous, only about a dozen interviews were given by the parent generation."
+        "text": "<p>While testimonies of children who grew up in such \u201cmixed\u201d families in Germany and its annexed territories are relatively numerous, only about a dozen interviews were given by the parent generation.  </p>"
       }
     },
     {
@@ -43,7 +56,7 @@
       "data": {
         "id": "fn-3",
         "label": "3",
-        "text": "To date, no extensive studies on either subject exist. Some of the more recent studies on the persecution of \u201cmixed marriages\u201d include (on Austria) Evan Burr Bukey, <em>Jews and Intermarriage in Nazi Austria</em> (New York: Cambridge University Press, 2011) and (on the \u201cOld Reich\u201d) Max Strnad, \u201cThe Fortune of Survival \u2013 Intermarried German Jews in the Dying Breath of the \u2018Thousand-Year Reich\u2019,\u201d <em>Dapim: Studies on the Holocaust</em> 29, no. 3 (2015). The most comprehensive study on the Holocaust in Czechoslovakia is Wolf Gruner, <em>The Holocaust in Bohemia and Moravia: Czech Initiatives, German Policies, Jewish Responses</em> (New York: Berghahn Books, 2019). J\u00f6rg Osterloh\u2019s extensive book on the Holocaust in Sudetenland is only available in German: J\u00f6rg Osterloh, <em>Nationalsozialistische Judenverfolgung im Reichsgau Sudetenland</em> 1938\u20131945 (Munich: Oldenbourg, 2006); for an English summary of the key aspects see: J\u00f6rg Osterloh, \u201cSudetenland,\u201d in Wolf Gruner, J\u00f6rg Osterloh, <em>The Greater German Reich and the Jews: Nazi Persecution in the Annexed Territories 1935\u20131945</em> (New York City: Berghahn Books, 2010), 68\u201398. Both Gruner and Osterloh mention various aspects of the persecution of \u201cmixed marriages\u201d in their works."
+        "text": "<p>To date, no extensive studies on either subject exist. Some of the more recent studies on the persecution of \u201cmixed marriages\u201d include (on Austria) Evan Burr Bukey, <em>Jews and Intermarriage in Nazi Austria</em> (New York: Cambridge University Press, 2011) and (on the \u201cOld Reich\u201d) Max Strnad, \u201cThe Fortune of Survival \u2013 Intermarried German Jews in the Dying Breath of the \u2018Thousand-Year Reich\u2019,\u201d <em>Dapim: Studies on the Holocaust</em> 29, no. 3 (2015). The most comprehensive study on the Holocaust in Czechoslovakia is Wolf Gruner, <em>The Holocaust in Bohemia and Moravia: Czech Initiatives, German Policies, Jewish Responses</em> (New York: Berghahn Books, 2019). J\u00f6rg Osterloh\u2019s extensive book on the Holocaust in Sudetenland is only available in German: J\u00f6rg Osterloh, <em>Nationalsozialistische Judenverfolgung im Reichsgau Sudetenland</em> 1938\u20131945 (Munich: Oldenbourg, 2006); for an English summary of the key aspects see: J\u00f6rg Osterloh, \u201cSudetenland,\u201d in Wolf Gruner, J\u00f6rg Osterloh, <em>The Greater German Reich and the Jews: Nazi Persecution in the Annexed Territories 1935\u20131945</em> (New York City: Berghahn Books, 2010), 68\u201398. Both Gruner and Osterloh mention various aspects of the persecution of \u201cmixed marriages\u201d in their works.  </p>"
       }
     },
     {
@@ -51,7 +64,7 @@
       "data": {
         "id": "fn-4",
         "label": "4",
-        "text": "Her experience in the ghetto of Theresienstadt/Terez\u00edn from the beginning of February 1945 until the liberation in May 1945 constitutes an important and detailed part of the testimony but is only touched upon briefly in this introduction."
+        "text": "<p>Her experience in the ghetto of Theresienstadt/Terez\u00edn from the beginning of February 1945 until the liberation in May 1945 constitutes an important and detailed part of the testimony but is only touched upon briefly in this introduction.  </p>"
       }
     },
     {
@@ -73,7 +86,7 @@
       "data": {
         "id": "fn-5",
         "label": "5",
-        "text": "Her American Social Security number was issued in 1963. Social Security Administration (Washington D.C., USA), Social Security Death Index, Master File. Accessed via Ancestry.com."
+        "text": "<p>Her American Social Security number was issued in 1963. Social Security Administration (Washington D.C., USA), Social Security Death Index, Master File. Accessed via Ancestry.com.  </p>"
       }
     },
     {
@@ -81,7 +94,7 @@
       "data": {
         "id": "fn-6",
         "label": "6",
-        "text": "At one point in the testimony, she reads the name of her older daughter Noemi from a postcard."
+        "text": "<p>At one point in the testimony, she reads the name of her older daughter Noemi from a postcard.  </p>"
       }
     },
     {
@@ -89,7 +102,7 @@
       "data": {
         "id": "fn-7",
         "label": "7",
-        "text": "The small number of such first-generation testimonies makes it relatively difficult to identify common themes and patterns in narration among them. For certain reasons there are also very few interviews from the peripheries, the more rural areas, where the experiences differed in many aspects from those in Berlin, Vienna and other major urban centers. Many of the second-generation testimonies, especially from Berlin, were recorded in the mid- and late 1990s, when the topic of \u201cmixed marriages\u201d had already received considerable attention in the public discourse. They tend to echo this discourse and to stress \u2013 at times even revolve around \u2013 certain events that were very specific to Berlin (e.g. the Rosenstra\u00dfe Protests. Cf. Wolf Gruner, <em>Widerstand in der Rosenstra\u00dfe: Die Fabrik-Aktion und die Verfolgung der \u2018Mischehen\u2019 1943</em> (Frankfurt: S. Fischer, 2005)), but not necessarily mirrored experiences elsewhere. For further details on this problem see my upcoming article in <em>S:I.M.O.N.</em>"
+        "text": "<p>The small number of such first-generation testimonies makes it relatively difficult to identify common themes and patterns in narration among them. For certain reasons there are also very few interviews from the peripheries, the more rural areas, where the experiences differed in many aspects from those in Berlin, Vienna and other major urban centers. Many of the second-generation testimonies, especially from Berlin, were recorded in the mid- and late 1990s, when the topic of \u201cmixed marriages\u201d had already received considerable attention in the public discourse. They tend to echo this discourse and to stress \u2013 at times even revolve around \u2013 certain events that were very specific to Berlin (e.g. the Rosenstra\u00dfe Protests. Cf. Wolf Gruner, <em>Widerstand in der Rosenstra\u00dfe: Die Fabrik-Aktion und die Verfolgung der \u2018Mischehen\u2019 1943</em> (Frankfurt: S. Fischer, 2005)), but not necessarily mirrored experiences elsewhere. For further details on this problem see my upcoming article in <em>S:I.M.O.N.</em> </p>"
       }
     },
     {
@@ -104,7 +117,7 @@
       "data": {
         "id": "fn-8",
         "label": "8",
-        "text": "Altogether she conducted 77 interviews for the Fortunoff Archive and its affiliate projects, according to the archive\u2019s catalogue."
+        "text": "<p>Altogether she conducted 77 interviews for the Fortunoff Archive and its affiliate projects, according to the archive\u2019s catalogue.  </p>"
       }
     },
     {
@@ -119,7 +132,7 @@
       "data": {
         "id": "fn-9",
         "label": "9",
-        "text": "In the annotated transcript, and in this introduction when referring to the testimony, the modern Czech names are provided after the German name. In additional footnotes the modern Czech names are used. Other geographic references are given in the form most common in English."
+        "text": "<p>In the annotated transcript, and in this introduction when referring to the testimony, the modern Czech names are provided after the German name. In additional footnotes the modern Czech names are used. Other geographic references are given in the form most common in English.  </p>"
       }
     },
     {
@@ -141,7 +154,7 @@
       "data": {
         "id": "fn-10",
         "label": "10",
-        "text": "I am very grateful to the archivists at the State District Archives in Trutnov (Dr. Pavel Zahradn\u00edk) and Nymburk (Dr. Michal \u0158ezn\u00ed\u010dek), who provided me with the archival documents and further information cited hereafter."
+        "text": "<p>I am very grateful to the archivists at the State District Archives in Trutnov (Dr. Pavel Zahradn\u00edk) and Nymburk (Dr. Michal \u0158ezn\u00ed\u010dek), who provided me with the archival documents and further information cited hereafter.  </p>"
       }
     },
     {
@@ -149,7 +162,7 @@
       "data": {
         "id": "fn-11",
         "label": "11",
-        "text": "In 1922 the town was merged into the capital city Prague. Hence in many later documents Martha Saraffian\u2019s birthplace is listed as Prague."
+        "text": "<p>In 1922 the town was merged into the capital city Prague. Hence in many later documents Martha Saraffian\u2019s birthplace is listed as Prague.  </p>"
       }
     },
     {
@@ -157,7 +170,7 @@
       "data": {
         "id": "fn-12",
         "label": "12",
-        "text": "Cf. Nancy M. Wingfield, <em>Flag Wars &amp; Stone Saints: How the Bohemian Lands Became Czech</em> (Cambridge, MA: Harvard University Press, 2007)."
+        "text": "<p>Cf. Nancy M. Wingfield, <em>Flag Wars &amp; Stone Saints: How the Bohemian Lands Became Czech</em> (Cambridge, MA: Harvard University Press, 2007).  </p>"
       }
     },
     {
@@ -165,7 +178,7 @@
       "data": {
         "id": "fn-13",
         "label": "13",
-        "text": "For the \u201cidentity struggles\u201d among Bohemian Jews see Kate\u0159ina \u010capkov\u00e1, Czechs, Germans, Jews? National Identity and the Jews of Bohemia (New York: Berghahn Books, 2012)."
+        "text": "<p>For the \u201cidentity struggles\u201d among Bohemian Jews see Kate\u0159ina \u010capkov\u00e1, Czechs, Germans, Jews? National Identity and the Jews of Bohemia (New York: Berghahn Books, 2012).  </p>"
       }
     },
     {
@@ -173,7 +186,7 @@
       "data": {
         "id": "fn-14",
         "label": "14",
-        "text": "Cf. Peter Judson and Marsha Rozenblit (eds.), <em>Constructing Nationalities in East Central Europe</em> (New York: Berghahn, 2005)."
+        "text": "<p>Cf. Peter Judson and Marsha Rozenblit (eds.), <em>Constructing Nationalities in East Central Europe</em> (New York: Berghahn, 2005).  </p>"
       }
     },
     {
@@ -181,7 +194,7 @@
       "data": {
         "id": "fn-15",
         "label": "15",
-        "text": "Frank Meissner, \u201cGerman Jews of Prague: A Quest for Self-Realization,\u201d <em>Publications of the American Jewish Historical Society</em> 50, no. 2 (1960), 98\u2013120, 104."
+        "text": "<p>Frank Meissner, \u201cGerman Jews of Prague: A Quest for Self-Realization,\u201d <em>Publications of the American Jewish Historical Society</em> 50, no. 2 (1960), 98\u2013120, 104.  </p>"
       }
     },
     {
@@ -196,7 +209,7 @@
       "data": {
         "id": "fn-16",
         "label": "16",
-        "text": "Marsha L. Rozenblit, <em>Reconstructing a National Identity: The Jews of Habsburg Austria during World War I</em> (Oxford: Oxford University Press, 2001), 4."
+        "text": "<p>Marsha L. Rozenblit, <em>Reconstructing a National Identity: The Jews of Habsburg Austria during World War I</em> (Oxford: Oxford University Press, 2001), 4.  </p>"
       }
     },
     {
@@ -204,7 +217,7 @@
       "data": {
         "id": "fn-17",
         "label": "17",
-        "text": "Cf. Peter Pulzer, <em>The Rise of Political Anti-Semitism in Germany and Austria</em> (Cambridge, MA: Harvard University Press, 1964), 133\u201336."
+        "text": "<p>Cf. Peter Pulzer, <em>The Rise of Political Anti-Semitism in Germany and Austria</em> (Cambridge, MA: Harvard University Press, 1964), 133\u201336.  </p>"
       }
     },
     {
@@ -212,7 +225,7 @@
       "data": {
         "id": "fn-18",
         "label": "18",
-        "text": "According to Meissner, Bohemian Jews in the 19th and 20th centuries originally faced five alternatives: preserving their traditional religious identity; identifying with the Czech national awakening; identifying with the Germans/Austria; conversion, intermarriage and total assimilation; or overseas emigration. In the 20th century \u201cCommunism and Zionism became real alternatives as well.\u201d Meissner, \u201cGerman Jews,\u201d 102\u2013103."
+        "text": "<p>According to Meissner, Bohemian Jews in the 19th and 20th centuries originally faced five alternatives: preserving their traditional religious identity; identifying with the Czech national awakening; identifying with the Germans/Austria; conversion, intermarriage and total assimilation; or overseas emigration. In the 20th century \u201cCommunism and Zionism became real alternatives as well.\u201d Meissner, \u201cGerman Jews,\u201d 102\u2013103.  </p>"
       }
     },
     {
@@ -227,7 +240,7 @@
       "data": {
         "id": "fn-19",
         "label": "19",
-        "text": "Only few works on the history of the town exist. Many of the more comprehensive works are decidedly revisionist or ethnocentric, e.g. Rheinhard Lamer, <em>Trautenau: Geschichte einer deutschen Stadt</em> (Wien, M\u00fcnchen: Volkstum Verlag, 1971); Anton\u00edn Just, Josef \u0160aback\u00fd, Jaroslav Proch\u00e1zka, <em>700 let Trutnova 1260-1960: Jubilejn\u00ed pr\u016fvodce d\u011bjinami a p\u0159\u00edrodou m\u011bsta pod Krkono\u0161emi</em> (Trutnov: Okr. vlastiv\u011bdn\u00e9 muzeum, 1959). For the Jewish history see below."
+        "text": "<p>Only few works on the history of the town exist. Many of the more comprehensive works are decidedly revisionist or ethnocentric, e.g. Rheinhard Lamer, <em>Trautenau: Geschichte einer deutschen Stadt</em> (Wien, M\u00fcnchen: Volkstum Verlag, 1971); Anton\u00edn Just, Josef \u0160aback\u00fd, Jaroslav Proch\u00e1zka, <em>700 let Trutnova 1260-1960: Jubilejn\u00ed pr\u016fvodce d\u011bjinami a p\u0159\u00edrodou m\u011bsta pod Krkono\u0161emi</em> (Trutnov: Okr. vlastiv\u011bdn\u00e9 muzeum, 1959). For the Jewish history see below.  </p>"
       }
     },
     {
@@ -242,7 +255,7 @@
       "data": {
         "id": "fn-20",
         "label": "20",
-        "text": "Rudolf M. Wlaschek, J\u00fcdisches Leben in Trautenau/Nordostb\u00f6hmen: Ein historischer R\u00fcckblick (Dortmund 1991). See also the entry for \u201cTrautenau\u201d in Klaus-Dieter Alicke, Lexikon der j\u00fcdischen Gemeinden im deutschen Sprachraum Vol. 3 (G\u00fctersloh: G\u00fctersloher Verlagshaus, 2008)."
+        "text": "<p>Rudolf M. Wlaschek, J\u00fcdisches Leben in Trautenau/Nordostb\u00f6hmen: Ein historischer R\u00fcckblick (Dortmund 1991). See also the entry for \u201cTrautenau\u201d in Klaus-Dieter Alicke, Lexikon der j\u00fcdischen Gemeinden im deutschen Sprachraum Vol. 3 (G\u00fctersloh: G\u00fctersloher Verlagshaus, 2008).  </p>"
       }
     },
     {
@@ -264,7 +277,7 @@
       "data": {
         "id": "fn-21",
         "label": "21",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921)."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921).  </p>"
       }
     },
     {
@@ -272,7 +285,7 @@
       "data": {
         "id": "fn-22",
         "label": "22",
-        "text": "Cf. Adolf Brock, \u201cHistory of Jews in Humpolec,\u201d in _The Jews and Jewish Communities of Bohemia in the past and present _(translation of _Die Juden und Judengemeinde B\u00f6hmens in Vergangenheit und Gegenwart _(Brno-Prague: J\u00fcdischer Buch- und Kunst Verlag, 1934), 193\u201396, <a href=\"https://www.jewishgen.org/yizkor/bohemia/boh193.html\">https://www.jewishgen.org/yizkor/bohemia/boh193.html</a>."
+        "text": "<p>Cf. Adolf Brock, \u201cHistory of Jews in Humpolec,\u201d in _The Jews and Jewish Communities of Bohemia in the past and present _(translation of _Die Juden und Judengemeinde B\u00f6hmens in Vergangenheit und Gegenwart _(Brno-Prague: J\u00fcdischer Buch- und Kunst Verlag, 1934), 193\u201396, <a href=\"https://www.jewishgen.org/yizkor/bohemia/boh193.html\">https://www.jewishgen.org/yizkor/bohemia/boh193.html</a>.  </p>"
       }
     },
     {
@@ -280,7 +293,7 @@
       "data": {
         "id": "fn-23",
         "label": "23",
-        "text": "Obtituary \u201cEmanuel Kummermann,\u201d <em>Prager Tagblatt</em>, May 26, 1906, 18."
+        "text": "<p>Obtituary \u201cEmanuel Kummermann,\u201d <em>Prager Tagblatt</em>, May 26, 1906, 18.  </p>"
       }
     },
     {
@@ -288,7 +301,7 @@
       "data": {
         "id": "fn-24",
         "label": "24",
-        "text": "<em>\u00d6sterreichischer Zentralkataster VIII/2: B\u00f6hmen</em> (Vienna: Volkswirtschaftlicher Verlag Alexander Dorn, 1903), 1958."
+        "text": "<p><em>\u00d6sterreichischer Zentralkataster VIII/2: B\u00f6hmen</em> (Vienna: Volkswirtschaftlicher Verlag Alexander Dorn, 1903), 1958.  </p>"
       }
     },
     {
@@ -296,7 +309,7 @@
       "data": {
         "id": "fn-25",
         "label": "25",
-        "text": "See for example the Perlhefter/Palmers family and its textile dynasty: Hanno Loewy, \u201cDie diskrete Familie Palmers,\u201d in Peter Melichar, Nikolaus Hagen (eds.), <em>Der Fall Riccabona: Eine Familiengeschichte zwischen Akzeptanz und Bedrohung im 20. Jahrhundert</em> (Vienna, K\u00f6ln, Weimar: B\u00f6hlau, 2017), 76\u2013101."
+        "text": "<p>See for example the Perlhefter/Palmers family and its textile dynasty: Hanno Loewy, \u201cDie diskrete Familie Palmers,\u201d in Peter Melichar, Nikolaus Hagen (eds.), <em>Der Fall Riccabona: Eine Familiengeschichte zwischen Akzeptanz und Bedrohung im 20. Jahrhundert</em> (Vienna, K\u00f6ln, Weimar: B\u00f6hlau, 2017), 76\u2013101.  </p>"
       }
     },
     {
@@ -304,7 +317,7 @@
       "data": {
         "id": "fn-26",
         "label": "26",
-        "text": "Jaroslav Pol\u00e1k-Rokyan, \u201cThe History of the Jews in Bene\u0161ov-by-Prague, Neveklov and Divisov,\u201d in <em>The Jews and Jewish Communities of Bohemia in the past and present</em>,_ _26\u201327, <a href=\"https://www.jewishgen.org/yizkor/bohemia/boh026.html\">https://www.jewishgen.org/yizkor/bohemia/boh026.html</a>. __"
+        "text": "<p>Jaroslav Pol\u00e1k-Rokyan, \u201cThe History of the Jews in Bene\u0161ov-by-Prague, Neveklov and Divisov,\u201d in <em>The Jews and Jewish Communities of Bohemia in the past and present</em>,_ _26\u201327, <a href=\"https://www.jewishgen.org/yizkor/bohemia/boh026.html\">https://www.jewishgen.org/yizkor/bohemia/boh026.html</a>. __  </p>"
       }
     },
     {
@@ -312,7 +325,7 @@
       "data": {
         "id": "fn-27",
         "label": "27",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921)."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921).  </p>"
       }
     },
     {
@@ -335,7 +348,7 @@
       "data": {
         "id": "fn-28",
         "label": "28",
-        "text": "k.k. Handelsministerium, <em>Zentralblatt f\u00fcr die Eintragungen in das Handelsregister</em> 7, August 12, 1908, 592"
+        "text": "<p>k.k. Handelsministerium, <em>Zentralblatt f\u00fcr die Eintragungen in das Handelsregister</em> 7, August 12, 1908, 592  </p>"
       }
     },
     {
@@ -343,7 +356,7 @@
       "data": {
         "id": "fn-29",
         "label": "29",
-        "text": "Alois Falge, Hermann Benisch, <em>Adre\u00dfbuch der Stadt Trautenau</em> (Trautenau, 1912), 39."
+        "text": "<p>Alois Falge, Hermann Benisch, <em>Adre\u00dfbuch der Stadt Trautenau</em> (Trautenau, 1912), 39.  </p>"
       }
     },
     {
@@ -351,7 +364,7 @@
       "data": {
         "id": "fn-30",
         "label": "30",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921)."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921).  </p>"
       }
     },
     {
@@ -373,7 +386,7 @@
       "data": {
         "id": "fn-31",
         "label": "31",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Records of the District Office (Bezirkshauptmannschaft Trautenau), Registration of business enlargement, Friedrich Kummermann, July 9, 1919."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Records of the District Office (Bezirkshauptmannschaft Trautenau), Registration of business enlargement, Friedrich Kummermann, July 9, 1919.  </p>"
       }
     },
     {
@@ -381,7 +394,7 @@
       "data": {
         "id": "fn-32",
         "label": "32",
-        "text": "<em>Compass Industrielles Jahrbuch \u010cechoslovakei</em> 65 (1932), Prague 1932, 1735."
+        "text": "<p><em>Compass Industrielles Jahrbuch \u010cechoslovakei</em> 65 (1932), Prague 1932, 1735.  </p>"
       }
     },
     {
@@ -389,14 +402,14 @@
       "data": {
         "id": "fn-33",
         "label": "33",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921)."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Domicile collection sheet (Sb\u011brn\u00fd arch domovn\u00ed/Haussammelbogen) and Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921).  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>[\u2026] my father sent-- sent us to France to learn-- to learn French. And I learned millinery, and [\u2026] my sister was studying in French. And we went off to Prague and even to Austria, to Vienna. We had really a nice youth. My father was well off and he wanted that we learn-- I was also in Germany in business school one year. And, uh, then [\u2026] I had the millinery diploma I made in small business. In my father\u2019s house, he gave me two rooms. And I had-- I made-- I had three girls employed and I made these hats. Not-- not-- I didn't must to do it, but I liked it.<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">34</a></sup> </p>"
+        "text": "<p>[\u2026] my father sent-- sent us to France to learn-- to learn French. And I learned millinery, and [\u2026] my sister was studying in French. And we went off to Prague and even to Austria, to Vienna. We had really a nice youth. My father was well off and he wanted that we learn-- I was also in Germany in business school one year. And, uh, then [\u2026] I had the millinery diploma I made in small business. In my father\u2019s house, he gave me two rooms. And I had-- I made-- I had three girls employed and I made these hats. Not-- not-- I didn't must to do it, but I liked it.<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">v-1</a></sup> </p>"
       }
     },
     {
@@ -404,7 +417,7 @@
       "data": {
         "id": "fn-v-1",
         "label": "v-1",
-        "text": "Tape I 05:35 - 6:50",
+        "text": "<p>Tape I 05:35 - 6:50 </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=365&media=94894&t=335&e=410\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -412,7 +425,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "While we don\u2019t know any specifics about the school Martha Saraffian attended in Germany, it was very likely located in the Lower Silesian border district Landeshut in Schlesien (today roughly corresponding with the larger Polish Kamienna G\u00f3ra County), which was linked with Trautenau by a railway line.<sup class=\"footnote-ref\" id=\"fnref-34\"><a href=\"#fn-34\">35</a></sup> "
+        "text": "While we don\u2019t know any specifics about the school Martha Saraffian attended in Germany, it was very likely located in the Lower Silesian border district Landeshut in Schlesien (today roughly corresponding with the larger Polish Kamienna G\u00f3ra County), which was linked with Trautenau by a railway line.<sup class=\"footnote-ref\" id=\"fnref-34\"><a href=\"#fn-34\">34</a></sup> "
       }
     },
     {
@@ -420,14 +433,14 @@
       "data": {
         "id": "fn-34",
         "label": "34",
-        "text": "According to her registration card, she was continuously registered at her father\u2019s house between 1919 and 1932, so the school was most likely close to Trautenau. St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Martha Saraffian, 1919\u20131939."
+        "text": "<p>According to her registration card, she was continuously registered at her father\u2019s house between 1919 and 1932, so the school was most likely close to Trautenau. St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Martha Saraffian, 1919\u20131939.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Another interesting detail from the 1921 census is the national affiliation of the Kummermann family. Independent Czechoslovakia had adopted, by and large, the Imperial Austrian system of national self-identification based on everyday language. However, for the 1921 census the authorities also introduced the option of \u201cJewish\u201d as a national affiliation.<sup class=\"footnote-ref\" id=\"fnref-35\"><a href=\"#fn-35\">36</a></sup> German and Hungarian nationalists decried this as an attempt to weaken Jewish affiliation with their respective minorities. In 1921, under 15 percent of Bohemian Jews identified as \u201cnational Jews\u201d \u2013 the others as Czechs or Germans. In total, however, about half of the 354,000 Czechoslovakian Jews made this identification; in the East, Carpatho-Ukraine and Slovakia, it was over 90 percent. By the late 1920s the numbers of \u201cnational Jews\u201d increased in Bohemia, with around 20 percent declaring Jewish nationality, 50 percent Czech and 30 percent German.<sup class=\"footnote-ref\" id=\"fnref-36\"><a href=\"#fn-36\">37</a></sup> According to J\u00f6rg Osterloh\u2019s estimate, about 30 percent of Jews in the later Reich District Sudetenland, which included Trautenau, identified as national Jews in the early 1930s and most of the others as Germans and some as Czechs.<sup class=\"footnote-ref\" id=\"fnref-37\"><a href=\"#fn-37\">38</a></sup> The exact numbers for Trautenau were 13.35 percent in 1921 and 19.23 in 1930; the other Jews identified as Germans.<sup class=\"footnote-ref\" id=\"fnref-38\"><a href=\"#fn-38\">39</a></sup> In 1921, the entire Kummermann family declared German nationality and Jewish religion.<sup class=\"footnote-ref\" id=\"fnref-39\"><a href=\"#fn-39\">40</a></sup> This is perhaps not surprising in a then almost exclusively German-speaking town, where even the bilingual Czech-German Czechoslovakian census forms were filled out entirely in German. As Wolf Gruner convincingly argues, in the mid-1930s the situation of German-speaking Jews in Czechoslovakia became increasingly precarious. On the one hand radical antisemitism was rapidly increasing, foremost among the Sudeten-Germans, on the other hand, Czech nationalists labelled them national traitors, siding with the Germans.<sup class=\"footnote-ref\" id=\"fnref-40\"><a href=\"#fn-40\">41</a></sup> "
+        "text": "Another interesting detail from the 1921 census is the national affiliation of the Kummermann family. Independent Czechoslovakia had adopted, by and large, the Imperial Austrian system of national self-identification based on everyday language. However, for the 1921 census the authorities also introduced the option of \u201cJewish\u201d as a national affiliation.<sup class=\"footnote-ref\" id=\"fnref-35\"><a href=\"#fn-35\">35</a></sup> German and Hungarian nationalists decried this as an attempt to weaken Jewish affiliation with their respective minorities. In 1921, under 15 percent of Bohemian Jews identified as \u201cnational Jews\u201d \u2013 the others as Czechs or Germans. In total, however, about half of the 354,000 Czechoslovakian Jews made this identification; in the East, Carpatho-Ukraine and Slovakia, it was over 90 percent. By the late 1920s the numbers of \u201cnational Jews\u201d increased in Bohemia, with around 20 percent declaring Jewish nationality, 50 percent Czech and 30 percent German.<sup class=\"footnote-ref\" id=\"fnref-36\"><a href=\"#fn-36\">36</a></sup> According to J\u00f6rg Osterloh\u2019s estimate, about 30 percent of Jews in the later Reich District Sudetenland, which included Trautenau, identified as national Jews in the early 1930s and most of the others as Germans and some as Czechs.<sup class=\"footnote-ref\" id=\"fnref-37\"><a href=\"#fn-37\">37</a></sup> The exact numbers for Trautenau were 13.35 percent in 1921 and 19.23 in 1930; the other Jews identified as Germans.<sup class=\"footnote-ref\" id=\"fnref-38\"><a href=\"#fn-38\">38</a></sup> In 1921, the entire Kummermann family declared German nationality and Jewish religion.<sup class=\"footnote-ref\" id=\"fnref-39\"><a href=\"#fn-39\">39</a></sup> This is perhaps not surprising in a then almost exclusively German-speaking town, where even the bilingual Czech-German Czechoslovakian census forms were filled out entirely in German. As Wolf Gruner convincingly argues, in the mid-1930s the situation of German-speaking Jews in Czechoslovakia became increasingly precarious. On the one hand radical antisemitism was rapidly increasing, foremost among the Sudeten-Germans, on the other hand, Czech nationalists labelled them national traitors, siding with the Germans.<sup class=\"footnote-ref\" id=\"fnref-40\"><a href=\"#fn-40\">40</a></sup> "
       }
     },
     {
@@ -435,7 +448,7 @@
       "data": {
         "id": "fn-35",
         "label": "35",
-        "text": "On Czechoslovakian Jewish nationalism and Zionism see Tatjana Lichtenstein, <em>Zionists in Interwar Czechoslovakia: Minority Nationalism and the Politics of Belonging</em> (Bloomington: Indiana University Press, 2016)."
+        "text": "<p>On Czechoslovakian Jewish nationalism and Zionism see Tatjana Lichtenstein, <em>Zionists in Interwar Czechoslovakia: Minority Nationalism and the Politics of Belonging</em> (Bloomington: Indiana University Press, 2016).  </p>"
       }
     },
     {
@@ -443,7 +456,7 @@
       "data": {
         "id": "fn-36",
         "label": "36",
-        "text": "Gruner, <em>The Holocaust</em>, 25\u201330."
+        "text": "<p>Gruner, <em>The Holocaust</em>, 25\u201330.  </p>"
       }
     },
     {
@@ -451,7 +464,7 @@
       "data": {
         "id": "fn-37",
         "label": "37",
-        "text": "C.f. Osterloh, Nationalsozialistische Judenverfolgung, 59"
+        "text": "<p>C.f. Osterloh, Nationalsozialistische Judenverfolgung, 59  </p>"
       }
     },
     {
@@ -459,7 +472,7 @@
       "data": {
         "id": "fn-38",
         "label": "38",
-        "text": "Wlaschek, <em>J\u00fcdisches Leben</em>, 24."
+        "text": "<p>Wlaschek, <em>J\u00fcdisches Leben</em>, 24.  </p>"
       }
     },
     {
@@ -467,7 +480,7 @@
       "data": {
         "id": "fn-39",
         "label": "39",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921)."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Czechoslavakian Census 1921, Census sheet (s\u010d\u00edtac\u00ed arch/Z\u00e4hlbogen), Friedrich Kummermann (February 16, 1921).  </p>"
       }
     },
     {
@@ -475,7 +488,7 @@
       "data": {
         "id": "fn-40",
         "label": "40",
-        "text": "Gruner, <em>The Holocaust</em>, 32, 34\u201335."
+        "text": "<p>Gruner, <em>The Holocaust</em>, 32, 34\u201335.  </p>"
       }
     },
     {
@@ -489,7 +502,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>And then when I met my husband and I married, so I gave up the business and we moved in a nice apartment. We had-- when my daughter was born, we had the dog and bird and the-- we had the house housekeeper. It was really a nice life. We had a car and sometimes we went by car to Vienna. And really, it was a nice life.<sup class=\"footnote-ref\" id=\"fnref-v-2\"><a href=\"#fn-v-2\">42</a></sup> </p>"
+        "text": "<p>And then when I met my husband and I married, so I gave up the business and we moved in a nice apartment. We had-- when my daughter was born, we had the dog and bird and the-- we had the house housekeeper. It was really a nice life. We had a car and sometimes we went by car to Vienna. And really, it was a nice life.<sup class=\"footnote-ref\" id=\"fnref-v-2\"><a href=\"#fn-v-2\">v-2</a></sup> </p>"
       }
     },
     {
@@ -497,7 +510,7 @@
       "data": {
         "id": "fn-v-2",
         "label": "v-2",
-        "text": "Tape I 06:54 - 0:7:27",
+        "text": "<p>Tape I 06:54 - 0:7:27  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=447&media=94894&t=414&e=447\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -512,7 +525,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "It is unknown how Martha Kummermann met Hrand Saraffian, whom she married in 1931 in Trautenau. Her husband was born on June 17, 1891 in Constantinople/Istanbul in the Ottoman Empire.<sup class=\"footnote-ref\" id=\"fnref-41\"><a href=\"#fn-41\">43</a></sup> At that time Istanbul had a large Armenian population. Initially discriminated against but now tolerated and considered loyal to the Turkish authorities, in the last quarter of the 19th century a strong movement for Armenian national independence grew throughout the Empire. The Ottoman authorities answered with severe repression and several bloody massacres in many Armenian communities in the 1890s. The years 1894 to 1896 saw a campaign of mass killings, the so-called \u201cHamidian massacres,\u201d with 80,000 to 300,000 Armenians murdered, according to varying estimates, and up to 50,000 children orphaned.<sup class=\"footnote-ref\" id=\"fnref-42\"><a href=\"#fn-42\">44</a></sup> It is very likely that Hrand Saraffian and his siblings were among these orphans and were brought to Europe in a humanitarian effort, perhaps organized by Armenians living in the diaspora. According to a post-war document of the International Tracing Service, Hrand Saraffian left Istanbul in 1897 at the age of six and \u201csince then he has not acquired any other citizenship.\u201d<sup class=\"footnote-ref\" id=\"fnref-43\"><a href=\"#fn-43\">45</a></sup> His background, his experience of flight and persecution, left a great impression on Martha Kummermann when she met him:  "
+        "text": "It is unknown how Martha Kummermann met Hrand Saraffian, whom she married in 1931 in Trautenau. Her husband was born on June 17, 1891 in Constantinople/Istanbul in the Ottoman Empire.<sup class=\"footnote-ref\" id=\"fnref-41\"><a href=\"#fn-41\">41</a></sup> At that time Istanbul had a large Armenian population. Initially discriminated against but now tolerated and considered loyal to the Turkish authorities, in the last quarter of the 19th century a strong movement for Armenian national independence grew throughout the Empire. The Ottoman authorities answered with severe repression and several bloody massacres in many Armenian communities in the 1890s. The years 1894 to 1896 saw a campaign of mass killings, the so-called \u201cHamidian massacres,\u201d with 80,000 to 300,000 Armenians murdered, according to varying estimates, and up to 50,000 children orphaned.<sup class=\"footnote-ref\" id=\"fnref-42\"><a href=\"#fn-42\">42</a></sup> It is very likely that Hrand Saraffian and his siblings were among these orphans and were brought to Europe in a humanitarian effort, perhaps organized by Armenians living in the diaspora. According to a post-war document of the International Tracing Service, Hrand Saraffian left Istanbul in 1897 at the age of six and \u201csince then he has not acquired any other citizenship.\u201d<sup class=\"footnote-ref\" id=\"fnref-43\"><a href=\"#fn-43\">43</a></sup> His background, his experience of flight and persecution, left a great impression on Martha Kummermann when she met him:  "
       }
     },
     {
@@ -520,7 +533,7 @@
       "data": {
         "id": "fn-41",
         "label": "41",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand Saraffian, 1929\u20131939."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand Saraffian, 1929\u20131939.  </p>"
       }
     },
     {
@@ -528,7 +541,7 @@
       "data": {
         "id": "fn-42",
         "label": "42",
-        "text": "Ronald Grigor Suny, \u201cThe Hamidian Massacres, 1894\u20131897. Disinterring a Buried History,\u201d <em>\u00c9tudes arm\u00e9niennes contemporaines</em> no. 11\u00a0(2018): 125\u201334."
+        "text": "<p>Ronald Grigor Suny, \u201cThe Hamidian Massacres, 1894\u20131897. Disinterring a Buried History,\u201d <em>\u00c9tudes arm\u00e9niennes contemporaines</em> no. 11\u00a0(2018): 125\u201334.  </p>"
       }
     },
     {
@@ -536,14 +549,14 @@
       "data": {
         "id": "fn-43",
         "label": "43",
-        "text": "Arolsen Archives, 3.2.1./1718000."
+        "text": "<p>Arolsen Archives, 3.2.1./1718000.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>He came to Germany, with a transport, children. What\u2014what were left after a massacre. When the Turks massacred the Armenians, he came to-- to Germany. With an-- it's like a self-help organization what brought this children to Germany. He came there with about four sisters and brothers. He never saw them again because they were all placed in another foster home. So he-- he searched, but he didn't get any-- he didn't see any of his family. Only one uncle was in K\u00f6ln am Rhein and he had the business with stamps. That was the only connection he got. And he was alone and he told me this story.<sup class=\"footnote-ref\" id=\"fnref-v-3\"><a href=\"#fn-v-3\">46</a></sup> </p>"
+        "text": "<p>He came to Germany, with a transport, children. What\u2014what were left after a massacre. When the Turks massacred the Armenians, he came to-- to Germany. With an-- it's like a self-help organization what brought this children to Germany. He came there with about four sisters and brothers. He never saw them again because they were all placed in another foster home. So he-- he searched, but he didn't get any-- he didn't see any of his family. Only one uncle was in K\u00f6ln am Rhein and he had the business with stamps. That was the only connection he got. And he was alone and he told me this story.<sup class=\"footnote-ref\" id=\"fnref-v-3\"><a href=\"#fn-v-3\">v-3</a></sup> </p>"
       }
     },
     {
@@ -551,7 +564,7 @@
       "data": {
         "id": "fn-v-3",
         "label": "v-3",
-        "text": "Tape I 08:15 - 09:27",
+        "text": "<p>Tape I 08:15 - 09:27</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=542&media=94894&t=495&e=567\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -559,7 +572,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "At some point, most likely several years before World War I, Hrand Saraffian moved to Vienna, where he \u201clived for a long time,\u201d according to the testimony. While we lack further details, one indication that he indeed moved to Vienna as a boy or teenager is an Upper Austrian newspaper report from 1908. The newspaper reported a 16-year old Turkish servant from Constantinople, by the name of \u201cRhand Sarafian,\u201d who was the victim of sexual harassment by a known offender when he stayed overnight in Wels during a journey. The police intervened and the servant continued his journey to Vienna, according to the report.<sup class=\"footnote-ref\" id=\"fnref-44\"><a href=\"#fn-44\">47</a></sup> Perhaps even before the end of the war, Hrand Saraffian moved to Bohemia, and began to trade in Persian carpets. Trading businesses, especially those importing Turkish and Oriental goods, were widespread among the European Armenian diaspora. In a Czech newspaper from April 1924 it is mentioned that, in 1922, Saraffian already traded with Persian carpets in Karl\u00edn, which today is part of Prague.<sup class=\"footnote-ref\" id=\"fnref-45\"><a href=\"#fn-45\">48</a></sup> According to his citizen registration card, he moved to Trautenau on December 7, 1929, coming from Rumburg/Rumburk, a town in northwestern Bohemia.<sup class=\"footnote-ref\" id=\"fnref-46\"><a href=\"#fn-46\">49</a></sup>Another interesting detail on the registration card is that he apparently had already been married before: in 1922 Hrand Saraffian married an unidentified woman in Hohenelbe/Vrchlab\u00ed, just west of Trautenau.<sup class=\"footnote-ref\" id=\"fnref-47\"><a href=\"#fn-47\">50</a></sup> It is unclear if the marriage ended in divorce or if his first wife died.  "
+        "text": "At some point, most likely several years before World War I, Hrand Saraffian moved to Vienna, where he \u201clived for a long time,\u201d according to the testimony. While we lack further details, one indication that he indeed moved to Vienna as a boy or teenager is an Upper Austrian newspaper report from 1908. The newspaper reported a 16-year old Turkish servant from Constantinople, by the name of \u201cRhand Sarafian,\u201d who was the victim of sexual harassment by a known offender when he stayed overnight in Wels during a journey. The police intervened and the servant continued his journey to Vienna, according to the report.<sup class=\"footnote-ref\" id=\"fnref-44\"><a href=\"#fn-44\">44</a></sup> Perhaps even before the end of the war, Hrand Saraffian moved to Bohemia, and began to trade in Persian carpets. Trading businesses, especially those importing Turkish and Oriental goods, were widespread among the European Armenian diaspora. In a Czech newspaper from April 1924 it is mentioned that, in 1922, Saraffian already traded with Persian carpets in Karl\u00edn, which today is part of Prague.<sup class=\"footnote-ref\" id=\"fnref-45\"><a href=\"#fn-45\">45</a></sup> According to his citizen registration card, he moved to Trautenau on December 7, 1929, coming from Rumburg/Rumburk, a town in northwestern Bohemia.<sup class=\"footnote-ref\" id=\"fnref-46\"><a href=\"#fn-46\">46</a></sup>Another interesting detail on the registration card is that he apparently had already been married before: in 1922 Hrand Saraffian married an unidentified woman in Hohenelbe/Vrchlab\u00ed, just west of Trautenau.<sup class=\"footnote-ref\" id=\"fnref-47\"><a href=\"#fn-47\">47</a></sup> It is unclear if the marriage ended in divorce or if his first wife died.  "
       }
     },
     {
@@ -567,7 +580,7 @@
       "data": {
         "id": "fn-44",
         "label": "44",
-        "text": "\u201cDer T\u00fcrke,\u201d <em>Salzburger Volksblatt</em>, February 12, 1908, 6."
+        "text": "<p>\u201cDer T\u00fcrke,\u201d <em>Salzburger Volksblatt</em>, February 12, 1908, 6.  </p>"
       }
     },
     {
@@ -575,7 +588,7 @@
       "data": {
         "id": "fn-45",
         "label": "45",
-        "text": "<em>N\u00e1rodn\u00ed osvobozen\u00ed</em>, April 15, 1924, 8."
+        "text": "<p><em>N\u00e1rodn\u00ed osvobozen\u00ed</em>, April 15, 1924, 8.  </p>"
       }
     },
     {
@@ -583,7 +596,7 @@
       "data": {
         "id": "fn-46",
         "label": "46",
-        "text": "The district archive responsible for Rumburk (St\u00e1tn\u00ed Okresn\u00ed Archiv D\u011b\u010d\u00edn) unfortunately has no further evidence of Hrand Saraffian\u2019s presence in the town."
+        "text": "<p>The district archive responsible for Rumburk (St\u00e1tn\u00ed Okresn\u00ed Archiv D\u011b\u010d\u00edn) unfortunately has no further evidence of Hrand Saraffian\u2019s presence in the town.  </p>"
       }
     },
     {
@@ -591,14 +604,14 @@
       "data": {
         "id": "fn-47",
         "label": "47",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand Saraffian, 1929\u20131939."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand Saraffian, 1929\u20131939.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "For all we know, Martha Kummermann and Hrand Saraffian got to know each other in Trautenau, perhaps in early 1930. From the testimony we learn that their romantic involvement must have been going on for some time before they eventually married. Martha was especially intrigued by Hrand\u2019s stories of the Armenian persecution, as she mentions in her testimony. In the testimony she draws parallels between the Jewish and the Armenian experience. Her parents, however, strongly discouraged the relationship and sent her to Berlin, where one of Martha\u2019s cousins studied at a rabbinical school. Apparently, they hoped that her cousin would talk her out of the relationship to a non-Jew, but he did not. During this time, Martha\u2019s grandmother, who lived with the family, died, and Martha was blamed for causing her grandmother\u2019s death. According to Martha\u2019s mother, the grandmother had been so deeply disturbed by her granddaughter\u2019s plan of marrying a non-Jew that she fell ill. Her parents\u2019 opposition caused emotional hardship for Martha, which were exacerbated by her father\u2019s poor health and his temporary refusal to speak to her. Nevertheless, Hrand Saraffian and Martha Kummermann eventually married on June 30, 1931 in Trautenau in a civil marriage.<sup class=\"footnote-ref\" id=\"fnref-48\"><a href=\"#fn-48\">51</a></sup> Her decision to go through with the marriage deepened the rift with her parents:  "
+        "text": "For all we know, Martha Kummermann and Hrand Saraffian got to know each other in Trautenau, perhaps in early 1930. From the testimony we learn that their romantic involvement must have been going on for some time before they eventually married. Martha was especially intrigued by Hrand\u2019s stories of the Armenian persecution, as she mentions in her testimony. In the testimony she draws parallels between the Jewish and the Armenian experience. Her parents, however, strongly discouraged the relationship and sent her to Berlin, where one of Martha\u2019s cousins studied at a rabbinical school. Apparently, they hoped that her cousin would talk her out of the relationship to a non-Jew, but he did not. During this time, Martha\u2019s grandmother, who lived with the family, died, and Martha was blamed for causing her grandmother\u2019s death. According to Martha\u2019s mother, the grandmother had been so deeply disturbed by her granddaughter\u2019s plan of marrying a non-Jew that she fell ill. Her parents\u2019 opposition caused emotional hardship for Martha, which were exacerbated by her father\u2019s poor health and his temporary refusal to speak to her. Nevertheless, Hrand Saraffian and Martha Kummermann eventually married on June 30, 1931 in Trautenau in a civil marriage.<sup class=\"footnote-ref\" id=\"fnref-48\"><a href=\"#fn-48\">48</a></sup> Her decision to go through with the marriage deepened the rift with her parents:  "
       }
     },
     {
@@ -606,14 +619,14 @@
       "data": {
         "id": "fn-48",
         "label": "48",
-        "text": "St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand Saraffian, 1929\u20131939."
+        "text": "<p>St\u00e1tn\u00ed Okresn\u00ed Archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand Saraffian, 1929\u20131939.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>And it was very hard for me when I-- I married a man that was no Jew. My father didn't talk to me one year. And when I married, my mother took the suitcase and went away, and I and my father was in the office. Only my sister went with me with the lawyer to the-- what you call it, where we were married.<sup class=\"footnote-ref\" id=\"fnref-v-4\"><a href=\"#fn-v-4\">52</a></sup> </p>"
+        "text": "<p>And it was very hard for me when I-- I married a man that was no Jew. My father didn't talk to me one year. And when I married, my mother took the suitcase and went away, and I and my father was in the office. Only my sister went with me with the lawyer to the-- what you call it, where we were married.<sup class=\"footnote-ref\" id=\"fnref-v-4\"><a href=\"#fn-v-4\">v-4</a></sup> </p>"
       }
     },
     {
@@ -621,7 +634,7 @@
       "data": {
         "id": "fn-v-4",
         "label": "v-4",
-        "text": "Tape I 04:20-04:53",
+        "text": "<p>Tape I 04:20-04:53</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=293&media=94894&t=260&e=293\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -629,7 +642,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "At the time, Friedrich Kummermann was member of the board of the <em>Israelitische Kultusgemeinde</em>, the Jewish Community of Trautenau.<sup class=\"footnote-ref\" id=\"fnref-49\"><a href=\"#fn-49\">53</a></sup> According to historian Rudolf Wlaschek, the Trautenau community was fairly liberal in the interwar period, not strictly observant or orthodox, and attendance at services was often only during the high holidays. Nevertheless, he characterizes it as a tightknit community, with many institutions, clubs, and a vibrant social life. Conversions were relatively uncommon in Trautenau. Intermarriage rates, however, were high throughout Czechoslovakia towards the 1930s (around 30 percent of all marriages involving a Jewish spouse). Martha\u2019s parents were apparently deeply unhappy with their daughter\u2019s choice for a life partner. It may have been a small comfort that she did not convert to Christianity, as the Czechoslovakian marriage law allowed for interreligious civil marriages. For Martha Saraffian this rift with her parents was quite painful, as we learn from the testimony. It seems likely that it was not only religion alone that caused the opposition of her parents: Hrand Saraffian\u2019s national status, his citizenship, was extremely unclear, and contemporary citizenship law mandated that Martha Kummermann lost her Czechoslovakian citizenship when she married a foreigner.<sup class=\"footnote-ref\" id=\"fnref-50\"><a href=\"#fn-50\">54</a></sup> "
+        "text": "At the time, Friedrich Kummermann was member of the board of the <em>Israelitische Kultusgemeinde</em>, the Jewish Community of Trautenau.<sup class=\"footnote-ref\" id=\"fnref-49\"><a href=\"#fn-49\">49</a></sup> According to historian Rudolf Wlaschek, the Trautenau community was fairly liberal in the interwar period, not strictly observant or orthodox, and attendance at services was often only during the high holidays. Nevertheless, he characterizes it as a tightknit community, with many institutions, clubs, and a vibrant social life. Conversions were relatively uncommon in Trautenau. Intermarriage rates, however, were high throughout Czechoslovakia towards the 1930s (around 30 percent of all marriages involving a Jewish spouse). Martha\u2019s parents were apparently deeply unhappy with their daughter\u2019s choice for a life partner. It may have been a small comfort that she did not convert to Christianity, as the Czechoslovakian marriage law allowed for interreligious civil marriages. For Martha Saraffian this rift with her parents was quite painful, as we learn from the testimony. It seems likely that it was not only religion alone that caused the opposition of her parents: Hrand Saraffian\u2019s national status, his citizenship, was extremely unclear, and contemporary citizenship law mandated that Martha Kummermann lost her Czechoslovakian citizenship when she married a foreigner.<sup class=\"footnote-ref\" id=\"fnref-50\"><a href=\"#fn-50\">50</a></sup> "
       }
     },
     {
@@ -637,7 +650,7 @@
       "data": {
         "id": "fn-49",
         "label": "49",
-        "text": "Wlaschek, <em>J\u00fcdisches Leben</em>, 19."
+        "text": "<p>Wlaschek, <em>J\u00fcdisches Leben</em>, 19.  </p>"
       }
     },
     {
@@ -645,14 +658,14 @@
       "data": {
         "id": "fn-50",
         "label": "50",
-        "text": "The Trautenau municipality registered the whole Saraffian family as Armenians, based on a passport issued by the Armenian mission in Paris in 1929. By that time, Armenia was part of the Soviet Union. It is unclear what this passport really meant. Effectively, the Saraffian family was stateless \u2013 and was treated as such by the Nazi authorities and, after the war, by the Czechoslovakian state."
+        "text": "<p>The Trautenau municipality registered the whole Saraffian family as Armenians, based on a passport issued by the Armenian mission in Paris in 1929. By that time, Armenia was part of the Soviet Union. It is unclear what this passport really meant. Effectively, the Saraffian family was stateless \u2013 and was treated as such by the Nazi authorities and, after the war, by the Czechoslovakian state.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Nevertheless, half a year after their marriage, in December 1931, Hrand Saraffian temporarily moved into the Kummermann house in Reichstra\u00dfe 5. Perhaps this was a first sign that her parents had begun to accept their son-in-law. The birth of their first daughter, Noemi, seems to have finally appeased Martha Saraffian\u2019s parents, especially since they decided that the daughter would be registered as Jewish. \u201cAnd then it took a long time before my parents got used to-- when my first child was born. So they say, we are very happy. But they wanted that <a>she be Jewish </a>and that\u2019s what we did.\u201d Noemi Saraffian was born on February 2, 1934 in Trautenau. By this time the Saraffian family already lived in a separate apartment at Anastasius-Gr\u00fcngasse 1 in Mittel-Vorstadt, the central suburb. In March 1935 the family moved to Walhallastra\u00dfe 16 in the same district.<sup class=\"footnote-ref\" id=\"fnref-51\"><a href=\"#fn-51\">55</a></sup> "
+        "text": "Nevertheless, half a year after their marriage, in December 1931, Hrand Saraffian temporarily moved into the Kummermann house in Reichstra\u00dfe 5. Perhaps this was a first sign that her parents had begun to accept their son-in-law. The birth of their first daughter, Noemi, seems to have finally appeased Martha Saraffian\u2019s parents, especially since they decided that the daughter would be registered as Jewish. \u201cAnd then it took a long time before my parents got used to-- when my first child was born. So they say, we are very happy. But they wanted that <a>she be Jewish </a>and that\u2019s what we did.\u201d Noemi Saraffian was born on February 2, 1934 in Trautenau. By this time the Saraffian family already lived in a separate apartment at Anastasius-Gr\u00fcngasse 1 in Mittel-Vorstadt, the central suburb. In March 1935 the family moved to Walhallastra\u00dfe 16 in the same district.<sup class=\"footnote-ref\" id=\"fnref-51\"><a href=\"#fn-51\">51</a></sup> "
       }
     },
     {
@@ -660,7 +673,7 @@
       "data": {
         "id": "fn-51",
         "label": "51",
-        "text": "St\u00e1tn\u00ed okresn\u00ed archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand/Martha/Noemi Saraffian, undated."
+        "text": "<p>St\u00e1tn\u00ed okresn\u00ed archiv Trutnov (District State Archive Trutnov), Trutnov citizen registration, Hrand/Martha/Noemi Saraffian, undated.  </p>"
       }
     },
     {
@@ -681,7 +694,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Around the time of the \u201c<em>Anschluss</em>,\u201d Friedrich and Elvira Kummermann left Trautenau and moved in with a brother of Friedrich, deeper inside Czechoslovakia: \u201cHe left about, uh, half year, one year before l left, with my mother. They left all and went to a brother from my-- my father. And then my father got sick again so they went in the spa and lived in a hotel.\u201d Her parents most likely temporarily moved in with either Robert or Rudolf Kummermann. Eventually, perhaps towards the end of 1938, they decided to move to a hotel in Podiebrad/Pod\u011bbrady, about 50 km outside of Prague. In the interwar period Podiebrad developed into an internationally known spa town. As Friedrich Kummermann suffered from various illnesses for a long time he was probably also seeking the comforts of the spas. While he was gone, Hrand Saraffian took care of certain financial affairs for his father-in-law. This further improved their relationship. Eventually, Friedrich and Elvira Kummermann rented an apartment in house Nr. 619/II.<sup class=\"footnote-ref\" id=\"fnref-52\"><a href=\"#fn-52\">56</a></sup> "
+        "text": "Around the time of the \u201c<em>Anschluss</em>,\u201d Friedrich and Elvira Kummermann left Trautenau and moved in with a brother of Friedrich, deeper inside Czechoslovakia: \u201cHe left about, uh, half year, one year before l left, with my mother. They left all and went to a brother from my-- my father. And then my father got sick again so they went in the spa and lived in a hotel.\u201d Her parents most likely temporarily moved in with either Robert or Rudolf Kummermann. Eventually, perhaps towards the end of 1938, they decided to move to a hotel in Podiebrad/Pod\u011bbrady, about 50 km outside of Prague. In the interwar period Podiebrad developed into an internationally known spa town. As Friedrich Kummermann suffered from various illnesses for a long time he was probably also seeking the comforts of the spas. While he was gone, Hrand Saraffian took care of certain financial affairs for his father-in-law. This further improved their relationship. Eventually, Friedrich and Elvira Kummermann rented an apartment in house Nr. 619/II.<sup class=\"footnote-ref\" id=\"fnref-52\"><a href=\"#fn-52\">52</a></sup> "
       }
     },
     {
@@ -689,14 +702,14 @@
       "data": {
         "id": "fn-52",
         "label": "52",
-        "text": "Statn\u00ed Okresn\u00ed Archiv Nymburk (District State Archive Nymburk), Archiv m\u011bsta Pod\u011bbrady (City Archive Pod\u011bbrady), List of Jewish Inhabitants (undated, ca. 1939\u20131941)."
+        "text": "<p>Statn\u00ed Okresn\u00ed Archiv Nymburk (District State Archive Nymburk), Archiv m\u011bsta Pod\u011bbrady (City Archive Pod\u011bbrady), List of Jewish Inhabitants (undated, ca. 1939\u20131941).  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In the meantime, the Munich agreement of September 30, 1938 forced Czechoslovakia to immediately cede the German-speaking border regions to Nazi Germany. In the months leading up to the agreement, local Nazis and their collaborators from Germany and Austria had waged a campaign of terror in the Sudetenland, delivering the pretext for the annexation. Immediately after the agreement, in the first two weeks of October 1938, German troops occupied the Sudetenland, which was carved out of Czechoslovakia very roughly along ethnic lines. Throughout the region, including Trautenau, riots and violent attacks on Czech and Jewish businesses and persons erupted.<sup class=\"footnote-ref\" id=\"fnref-53\"><a href=\"#fn-53\">57</a></sup> In Trautenau, according to Wlaschek, it was allegedly SA-men from nearby Silesia who were responsible for most of the violence against the Jewish community. It seems very likely that local supporters of the Sudeten German Party \u2013 the regional Nazi affiliate \u2013 also partook in the violence. The Kummermann house in Reichstra\u00dfe 5 was looted during these annexation riots:  "
+        "text": "In the meantime, the Munich agreement of September 30, 1938 forced Czechoslovakia to immediately cede the German-speaking border regions to Nazi Germany. In the months leading up to the agreement, local Nazis and their collaborators from Germany and Austria had waged a campaign of terror in the Sudetenland, delivering the pretext for the annexation. Immediately after the agreement, in the first two weeks of October 1938, German troops occupied the Sudetenland, which was carved out of Czechoslovakia very roughly along ethnic lines. Throughout the region, including Trautenau, riots and violent attacks on Czech and Jewish businesses and persons erupted.<sup class=\"footnote-ref\" id=\"fnref-53\"><a href=\"#fn-53\">53</a></sup> In Trautenau, according to Wlaschek, it was allegedly SA-men from nearby Silesia who were responsible for most of the violence against the Jewish community. It seems very likely that local supporters of the Sudeten German Party \u2013 the regional Nazi affiliate \u2013 also partook in the violence. The Kummermann house in Reichstra\u00dfe 5 was looted during these annexation riots:  "
       }
     },
     {
@@ -704,14 +717,14 @@
       "data": {
         "id": "fn-53",
         "label": "53",
-        "text": "Osterloh, <em>Sudetenland</em>, 73\u201374."
+        "text": "<p>Osterloh, <em>Sudetenland</em>, 73\u201374.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>They broke the door from my parents\u2019 house. They took out everything they find in-- in the shelfs, in the closets, in-- in the drawers, in the offices. Everything was on the floor, it was high like this. From the wall, pictures. And from this handles from brass, everything. What they could damage, they did.<sup class=\"footnote-ref\" id=\"fnref-v-5\"><a href=\"#fn-v-5\">58</a></sup> </p>"
+        "text": "<p>They broke the door from my parents\u2019 house. They took out everything they find in-- in the shelfs, in the closets, in-- in the drawers, in the offices. Everything was on the floor, it was high like this. From the wall, pictures. And from this handles from brass, everything. What they could damage, they did.<sup class=\"footnote-ref\" id=\"fnref-v-5\"><a href=\"#fn-v-5\">v-5</a></sup> </p>"
       }
     },
     {
@@ -719,7 +732,7 @@
       "data": {
         "id": "fn-v-5",
         "label": "v-5",
-        "text": "Tape I 14:36-15:18",
+        "text": "<p>Tape I 14:36-15:18 </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=918&media=94894&t=876&e=918\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -734,7 +747,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>And my husband always said, nothing can happen to us because I'm not Jewish. But then when the Grynszpan affair-- affair came, they-- they we're like animals. They hit an old Jew [\u2026] throwing all over on the place, on the-- on the-- from the town, the big place, they, throw these Jews around that everybody see it.<sup class=\"footnote-ref\" id=\"fnref-v-6\"><a href=\"#fn-v-6\">59</a></sup> </p>"
+        "text": "<p>And my husband always said, nothing can happen to us because I'm not Jewish. But then when the Grynszpan affair-- affair came, they-- they we're like animals. They hit an old Jew [\u2026] throwing all over on the place, on the-- on the-- from the town, the big place, they, throw these Jews around that everybody see it.<sup class=\"footnote-ref\" id=\"fnref-v-6\"><a href=\"#fn-v-6\">v-6</a></sup> </p>"
       }
     },
     {
@@ -742,7 +755,7 @@
       "data": {
         "id": "fn-v-6",
         "label": "v-6",
-        "text": "Tape I 16:05 - 16:37",
+        "text": "<p>Tape I 16:05 - 16:37</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=963&media=94894&t=965&e=997\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -757,7 +770,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In Sudetenland the terror campaign leading to the Munich agreement, the immediate annexation riots and attacks on political enemies, Jews, and Czechs in its aftermath, almost seamlessly transitioned into the anti-Jewish pogrom of November 9/10, 1938.<sup class=\"footnote-ref\" id=\"fnref-54\"><a href=\"#fn-54\">60</a></sup> In Trautenau the synagogue was burnt to the ground. Many of those who had still hoped to reconcile themselves with the new situation now also fled over the new border to Czechoslovakia. For weeks, Martha Saraffian barely left her house, as she was afraid for the safety of her Jewish daughter and of herself. In late 1938, perhaps during or after the pogrom night, Hrand Saraffian was arrested and only released after he provided documents from Vienna proving he was not a Jew. \u201cAnd so then he realized the danger and he-- he said, you must go out from here. So we had a car and the driver took me over there, over the custom with my daughter.\u201d  "
+        "text": "In Sudetenland the terror campaign leading to the Munich agreement, the immediate annexation riots and attacks on political enemies, Jews, and Czechs in its aftermath, almost seamlessly transitioned into the anti-Jewish pogrom of November 9/10, 1938.<sup class=\"footnote-ref\" id=\"fnref-54\"><a href=\"#fn-54\">54</a></sup> In Trautenau the synagogue was burnt to the ground. Many of those who had still hoped to reconcile themselves with the new situation now also fled over the new border to Czechoslovakia. For weeks, Martha Saraffian barely left her house, as she was afraid for the safety of her Jewish daughter and of herself. In late 1938, perhaps during or after the pogrom night, Hrand Saraffian was arrested and only released after he provided documents from Vienna proving he was not a Jew. \u201cAnd so then he realized the danger and he-- he said, you must go out from here. So we had a car and the driver took me over there, over the custom with my daughter.\u201d  "
       }
     },
     {
@@ -765,14 +778,14 @@
       "data": {
         "id": "fn-54",
         "label": "54",
-        "text": "Osterloh, <em>Sudetenland</em>, 76."
+        "text": "<p>Osterloh, <em>Sudetenland</em>, 76.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "According to their Trautenau registration cards, Martha and Noemi Saraffian left Trautenau for Podiebrad on January 14, 1939, where she joined her parents. In later documents the Saraffian\u2019s address in Podiebrad is given as Ringstra\u00dfe 722.<sup class=\"footnote-ref\" id=\"fnref-55\"><a href=\"#fn-55\">61</a></sup> Meanwhile Hrand Saraffian stayed in Trautenau and took care of the family\u2019s properties and his business. On August 18, 1939 he also left Trautenau for Podiebrad. He had tried to acquire a permit to move the family\u2019s belongings over the border. According to the testimony he received it, though in the meantime the situation had again changed completely.  "
+        "text": "According to their Trautenau registration cards, Martha and Noemi Saraffian left Trautenau for Podiebrad on January 14, 1939, where she joined her parents. In later documents the Saraffian\u2019s address in Podiebrad is given as Ringstra\u00dfe 722.<sup class=\"footnote-ref\" id=\"fnref-55\"><a href=\"#fn-55\">55</a></sup> Meanwhile Hrand Saraffian stayed in Trautenau and took care of the family\u2019s properties and his business. On August 18, 1939 he also left Trautenau for Podiebrad. He had tried to acquire a permit to move the family\u2019s belongings over the border. According to the testimony he received it, though in the meantime the situation had again changed completely.  "
       }
     },
     {
@@ -780,14 +793,14 @@
       "data": {
         "id": "fn-55",
         "label": "55",
-        "text": "Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078445, Noemi Saraffian."
+        "text": "<p>Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078445, Noemi Saraffian.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In March 1939, Nazi Germany had annexed the remaining Czech rump state (\u201c<em>Zerschlagung der Resttschechei</em>\u201d) \u2013 Slovakia had simultaneously declared its independence \u2013 and renamed it to the \u201cProtectorate of Bohemia and Moravia.\u201d This \u201cProtectorate\u201d was formally a part of the Reich, though with a degree of pseudo-autonomy for the Czech population. The occupation of Czechia meant that the Nazis gained control over about 118,000 Jews,<sup class=\"footnote-ref\" id=\"fnref-56\"><a href=\"#fn-56\">62</a></sup> among them many who had fled from the Sudetenland just months or weeks earlier. In June 1939, the Germans extended parts of the Nuremberg laws to the Protectorate.<sup class=\"footnote-ref\" id=\"fnref-57\"><a href=\"#fn-57\">63</a></sup> The small number of ethnic Germans were immediately granted German citizenship, whereas Czechs received second-class status as subjects of the Protectorate. While the Protectorate was primarily a propaganda trick of Nazi Germany to curb Czech resistance and secure its control of the region, historians still debate the degree to which the Czech side was able to partake in the regime and the Holocaust. A recent study by Wolf Gruner paints a nuanced picture: while Berlin ultimately had the final say, Czech authorities advanced their own initiatives and agendas, as did the regional Nazi apparatus and power structures.<sup class=\"footnote-ref\" id=\"fnref-58\"><a href=\"#fn-58\">64</a></sup> This is particularly true for the implementation of the Holocaust in this region. While older studies often ignored the Protectorate or assumed that the treatment of Jews mirrored that in Germany and Austria, today we know that the situation in the Protectorate differed in key aspects, many of which influenced the situation of \u201cmixed\u201d families.  "
+        "text": "In March 1939, Nazi Germany had annexed the remaining Czech rump state (\u201c<em>Zerschlagung der Resttschechei</em>\u201d) \u2013 Slovakia had simultaneously declared its independence \u2013 and renamed it to the \u201cProtectorate of Bohemia and Moravia.\u201d This \u201cProtectorate\u201d was formally a part of the Reich, though with a degree of pseudo-autonomy for the Czech population. The occupation of Czechia meant that the Nazis gained control over about 118,000 Jews,<sup class=\"footnote-ref\" id=\"fnref-56\"><a href=\"#fn-56\">56</a></sup> among them many who had fled from the Sudetenland just months or weeks earlier. In June 1939, the Germans extended parts of the Nuremberg laws to the Protectorate.<sup class=\"footnote-ref\" id=\"fnref-57\"><a href=\"#fn-57\">57</a></sup> The small number of ethnic Germans were immediately granted German citizenship, whereas Czechs received second-class status as subjects of the Protectorate. While the Protectorate was primarily a propaganda trick of Nazi Germany to curb Czech resistance and secure its control of the region, historians still debate the degree to which the Czech side was able to partake in the regime and the Holocaust. A recent study by Wolf Gruner paints a nuanced picture: while Berlin ultimately had the final say, Czech authorities advanced their own initiatives and agendas, as did the regional Nazi apparatus and power structures.<sup class=\"footnote-ref\" id=\"fnref-58\"><a href=\"#fn-58\">58</a></sup> This is particularly true for the implementation of the Holocaust in this region. While older studies often ignored the Protectorate or assumed that the treatment of Jews mirrored that in Germany and Austria, today we know that the situation in the Protectorate differed in key aspects, many of which influenced the situation of \u201cmixed\u201d families.  "
       }
     },
     {
@@ -795,7 +808,7 @@
       "data": {
         "id": "fn-56",
         "label": "56",
-        "text": "<em>Die Verfolgung und Ermordung der europ\u00e4ischen Juden durch das nationalsozialistische Deutschland 1933\u20131945</em>, Vol 3: <em>Deutsches Reich und Protektorat September 1939\u2013September 1941</em>, 14 (hereafter cited as <em>VEJ</em> Volume, Doc.)."
+        "text": "<p><em>Die Verfolgung und Ermordung der europ\u00e4ischen Juden durch das nationalsozialistische Deutschland 1933\u20131945</em>, Vol 3: <em>Deutsches Reich und Protektorat September 1939\u2013September 1941</em>, 14 (hereafter cited as <em>VEJ</em> Volume, Doc.).  </p>"
       }
     },
     {
@@ -803,7 +816,7 @@
       "data": {
         "id": "fn-57",
         "label": "57",
-        "text": "<em>VEJ</em> 3, Doc. 247."
+        "text": "<p><em>VEJ</em> 3, Doc. 247.  </p>"
       }
     },
     {
@@ -811,14 +824,14 @@
       "data": {
         "id": "fn-58",
         "label": "58",
-        "text": "Gruner, <em>The Holocaust</em>, 3\u20136."
+        "text": "<p>Gruner, <em>The Holocaust</em>, 3\u20136.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "From the testimony, we learn very little about the annexation of Czechia, the establishment of the Protectorate and of family\u2019s life in Podiebrad in the years 1939 to 1941. We do not know if Hrand and Martha Saraffian contemplated emigration or even tried to acquire the necessary documents. By any means, it would have been very hard by this point in time. Unlike many German and Austrian Jews, Czechoslovakian Jewry was caught mostly by surprise by the events of September/October 1938 and the full annexation in March 1939. Suddenly surrounded by Nazi Germany and its Slovak Ally and the immediate outbreak of the war against Poland in the summer, there was nowhere in the vicinity left to flee. Obtaining emigration visas had already become increasingly hard by mid-1939. Perhaps Martha Saraffian was also occupied with caring for her daughter and parents, especially her father, who was increasingly sick. She and her husband may also have clung to the hope that eventually the situation would become better, despite all indicators pointing in the other direction. Friedrich Kummermann eventually <a>died of cancer on May 1, 1941 in the district hospital of M\u011bstec Kr\u00e1lov\u00e9/K\u00f6nigsst\u00e4dtel, leaving behind his wife Elvira</a>. His death was registered by the Jewish community of Podiebrad.<sup class=\"footnote-ref\" id=\"fnref-59\"><a href=\"#fn-59\">65</a></sup> According to Martha, he had not received proper medical care.  "
+        "text": "From the testimony, we learn very little about the annexation of Czechia, the establishment of the Protectorate and of family\u2019s life in Podiebrad in the years 1939 to 1941. We do not know if Hrand and Martha Saraffian contemplated emigration or even tried to acquire the necessary documents. By any means, it would have been very hard by this point in time. Unlike many German and Austrian Jews, Czechoslovakian Jewry was caught mostly by surprise by the events of September/October 1938 and the full annexation in March 1939. Suddenly surrounded by Nazi Germany and its Slovak Ally and the immediate outbreak of the war against Poland in the summer, there was nowhere in the vicinity left to flee. Obtaining emigration visas had already become increasingly hard by mid-1939. Perhaps Martha Saraffian was also occupied with caring for her daughter and parents, especially her father, who was increasingly sick. She and her husband may also have clung to the hope that eventually the situation would become better, despite all indicators pointing in the other direction. Friedrich Kummermann eventually <a>died of cancer on May 1, 1941 in the district hospital of M\u011bstec Kr\u00e1lov\u00e9/K\u00f6nigsst\u00e4dtel, leaving behind his wife Elvira</a>. His death was registered by the Jewish community of Podiebrad.<sup class=\"footnote-ref\" id=\"fnref-59\"><a href=\"#fn-59\">59</a></sup> According to Martha, he had not received proper medical care.  "
       }
     },
     {
@@ -826,14 +839,14 @@
       "data": {
         "id": "fn-59",
         "label": "59",
-        "text": "National Archives Czech Republic (N\u00e1rodn\u00ed archiv), Registers of Jewish religious communities in the Czech regions (Matriky \u017eidovsk\u00fdch n\u00e1bo\u017eensk\u00fdch obc\u00ed v \u010desk\u00fdch kraj\u00edch), Pod\u011bbrady, death register 1901\u20131949, <a href=\"https://vademecum.nacr.cz/vademecum/permalink?xid=3384d494-f579-4b28-a58f-06eb7ac7bf24&amp;scan=c0edbb9f1f9e6c326e73808c268f67b3\">https://vademecum.nacr.cz/vademecum/permalink?xid=3384d494-f579-4b28-a58f-06eb7ac7bf24&amp;scan=c0edbb9f1f9e6c326e73808c268f67b3</a>."
+        "text": "<p>National Archives Czech Republic (N\u00e1rodn\u00ed archiv), Registers of Jewish religious communities in the Czech regions (Matriky \u017eidovsk\u00fdch n\u00e1bo\u017eensk\u00fdch obc\u00ed v \u010desk\u00fdch kraj\u00edch), Pod\u011bbrady, death register 1901\u20131949, <a href=\"https://vademecum.nacr.cz/vademecum/permalink?xid=3384d494-f579-4b28-a58f-06eb7ac7bf24&amp;scan=c0edbb9f1f9e6c326e73808c268f67b3\">https://vademecum.nacr.cz/vademecum/permalink?xid=3384d494-f579-4b28-a58f-06eb7ac7bf24&amp;scan=c0edbb9f1f9e6c326e73808c268f67b3</a>.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Martha Saraffian may still have clung to the hope that the situation would improve: \u201cMy husband always said that I'm indolent. I don't read newspapers. I don't hear the radio. So I didn't know what happened. It was the spa and I had my-- my child. I had enough to do.\u201d Were there any grounds for hope? At the end of December 1938, Hitler had decided that, under certain conditions, he would spare intermarried Jews from forcible resettlement to so-called Jewish living areas.<sup class=\"footnote-ref\" id=\"fnref-60\"><a href=\"#fn-60\">66</a></sup> These exemptions \u2013 foremost for families in which the husband and the children were non-Jewish \u2013 were the first steps in what would evolve into the precarious statuses of a merely \u201cprotected\u201d and of a \u201cprivileged\u201d mixed marriage.<sup class=\"footnote-ref\" id=\"fnref-61\"><a href=\"#fn-61\">67</a></sup> The latter were granted further exemptions, depending on gender constellations and children. Following this initial decision, most antisemitic regulations contained special clauses for mixed marriages. One such exemption was implemented in the police decree mandating the visual marking of Jews through a patch. From September 1941 onwards, all Jews in the Reich and the Protectorate of Bohemia and Moravia were forced to wear this patch on their clothes, visibly identifying them as Jews.<sup class=\"footnote-ref\" id=\"fnref-62\"><a href=\"#fn-62\">68</a></sup> Paragraph 3 of the police degree ordering the mandatory identification contained an exemption clause for Jews in mixed marriages, if they had children raised as non-Jews, and for Jewish women who were married to non-Jews; not, however, for Jewish men married to non-Jewish women without children. Such exemption clauses prompted mixed families to hope that they would be spared from deportations and eventually even regain their rights. However, the protection awarded by these exemption clauses was treacherous and precarious \u2013 and could have been revoked at any time.  "
+        "text": "Martha Saraffian may still have clung to the hope that the situation would improve: \u201cMy husband always said that I'm indolent. I don't read newspapers. I don't hear the radio. So I didn't know what happened. It was the spa and I had my-- my child. I had enough to do.\u201d Were there any grounds for hope? At the end of December 1938, Hitler had decided that, under certain conditions, he would spare intermarried Jews from forcible resettlement to so-called Jewish living areas.<sup class=\"footnote-ref\" id=\"fnref-60\"><a href=\"#fn-60\">60</a></sup> These exemptions \u2013 foremost for families in which the husband and the children were non-Jewish \u2013 were the first steps in what would evolve into the precarious statuses of a merely \u201cprotected\u201d and of a \u201cprivileged\u201d mixed marriage.<sup class=\"footnote-ref\" id=\"fnref-61\"><a href=\"#fn-61\">61</a></sup> The latter were granted further exemptions, depending on gender constellations and children. Following this initial decision, most antisemitic regulations contained special clauses for mixed marriages. One such exemption was implemented in the police decree mandating the visual marking of Jews through a patch. From September 1941 onwards, all Jews in the Reich and the Protectorate of Bohemia and Moravia were forced to wear this patch on their clothes, visibly identifying them as Jews.<sup class=\"footnote-ref\" id=\"fnref-62\"><a href=\"#fn-62\">62</a></sup> Paragraph 3 of the police degree ordering the mandatory identification contained an exemption clause for Jews in mixed marriages, if they had children raised as non-Jews, and for Jewish women who were married to non-Jews; not, however, for Jewish men married to non-Jewish women without children. Such exemption clauses prompted mixed families to hope that they would be spared from deportations and eventually even regain their rights. However, the protection awarded by these exemption clauses was treacherous and precarious \u2013 and could have been revoked at any time.  "
       }
     },
     {
@@ -841,7 +854,7 @@
       "data": {
         "id": "fn-60",
         "label": "60",
-        "text": "Bundesarchiv Berlin, BA R 18/5519, Field Marshall G\u00f6ring, Secret express letter informing about Hitler\u2019s decisions on the accommodation of Jews and the treatment of mixed marriages, December 28, 1938."
+        "text": "<p>Bundesarchiv Berlin, BA R 18/5519, Field Marshall G\u00f6ring, Secret express letter informing about Hitler\u2019s decisions on the accommodation of Jews and the treatment of mixed marriages, December 28, 1938.  </p>"
       }
     },
     {
@@ -849,7 +862,7 @@
       "data": {
         "id": "fn-61",
         "label": "61",
-        "text": "The German terms were <em>einfache Mischehe</em> and <em>privilegierte Mischehe.</em>"
+        "text": "<p>The German terms were <em>einfache Mischehe</em> and <em>privilegierte Mischehe.</em> </p>"
       }
     },
     {
@@ -857,14 +870,14 @@
       "data": {
         "id": "fn-62",
         "label": "62",
-        "text": "<em>Reichsgesetzblatt</em> I 1941, 547; <em>Verordnungsblatt des Reichsprotektors in B\u00f6hmen und M\u00e4hren</em> 1941, 497."
+        "text": "<p><em>Reichsgesetzblatt</em> I 1941, 547; <em>Verordnungsblatt des Reichsprotektors in B\u00f6hmen und M\u00e4hren</em> 1941, 497.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Two days after he was appointed the Acting Reich Protector of Bohemia and Moravia, Reinhard Heydrich,<sup class=\"footnote-ref\" id=\"fnref-63\"><a href=\"#fn-63\">69</a></sup> also head of the Reich Security Main Office, decided to eliminate the status of protected mixed marriage in the Protectorate. His decision was announced on September 29, 1941. In breaking with policy in Germany properand Austria, Jewish spouses in such marriages were to be treated just as all other Jews. This decision was reversed by the authorities in Berlin in October of the same year, when it was decided that, for the Protectorate\u2019s German-Jewish marriages the exemptions would still apply, but not, however, for Czech-Jewish marriages.<sup class=\"footnote-ref\" id=\"fnref-64\"><a href=\"#fn-64\">70</a></sup> From this point onwards two different types of mixed marriages existed in the Protectorate. Essentially all Czech-Jewish marriages were robbed of their \u201cprivileges\u201d and became merely \u201cprotected\u201d. It is not clear how the Saraffian family was categorized in this respect, given their non-German citizenship and their statelessness. It should be noted that the relevant parts of the Nuremberg laws defining Jews and non-Jews did not differentiate based on citizenship but operated with the terms Jewish and \u201cof German and related blood\u201d. A person without German citizenship could thus still be \u201cof German and related blood\u201d and the marriage would still be considered \u201cmixed\u201d and protected. In fact, the German census contained information on intermarriages, with Germans and stateless persons in one category, and persons with foreign citizenships in the other. However, most exemptions and so-called \u201cprivileges\u201d granted for mixed marriages only applied when there were no children raised as Jews. For example, the exemption from wearing the yellow star stated that the children must have been registered as non-Jews. In the Saraffian\u2019s case, Noemi had been registered as Jewish, as her Trautenau citizen registration clearly shows, making her a \u201c<em>Geltungsj\u00fcdin</em>,\u201d a <em>Mischling</em> who was \u201cdeemed Jewish.\u201d So even if the Saraffian family was indeed considered a German-Jewish couple (which we do not know) and not a Czech-Jewish mixed marriage, the family would have not been \u201cprivileged\u201d and Martha Saraffian and her daughter were still required to wear the patch: \u201cWe got these stars, my Jewish daughter and I. And we had to carry all the-- through the end of the war.\u201d Martha Saraffian also received ration cards marked with \u201cJew,\u201d which were considerably lower than those for non-Jews and even those for Jews in \u201cprivileged\u201d mixed marriages. Jews usually did not receive any rations of meat, fresh fruits and vegetables, and other essential foods. Even basic staples such as fat or salt were issued in insufficient amounts.  "
+        "text": "Two days after he was appointed the Acting Reich Protector of Bohemia and Moravia, Reinhard Heydrich,<sup class=\"footnote-ref\" id=\"fnref-63\"><a href=\"#fn-63\">63</a></sup> also head of the Reich Security Main Office, decided to eliminate the status of protected mixed marriage in the Protectorate. His decision was announced on September 29, 1941. In breaking with policy in Germany properand Austria, Jewish spouses in such marriages were to be treated just as all other Jews. This decision was reversed by the authorities in Berlin in October of the same year, when it was decided that, for the Protectorate\u2019s German-Jewish marriages the exemptions would still apply, but not, however, for Czech-Jewish marriages.<sup class=\"footnote-ref\" id=\"fnref-64\"><a href=\"#fn-64\">64</a></sup> From this point onwards two different types of mixed marriages existed in the Protectorate. Essentially all Czech-Jewish marriages were robbed of their \u201cprivileges\u201d and became merely \u201cprotected\u201d. It is not clear how the Saraffian family was categorized in this respect, given their non-German citizenship and their statelessness. It should be noted that the relevant parts of the Nuremberg laws defining Jews and non-Jews did not differentiate based on citizenship but operated with the terms Jewish and \u201cof German and related blood\u201d. A person without German citizenship could thus still be \u201cof German and related blood\u201d and the marriage would still be considered \u201cmixed\u201d and protected. In fact, the German census contained information on intermarriages, with Germans and stateless persons in one category, and persons with foreign citizenships in the other. However, most exemptions and so-called \u201cprivileges\u201d granted for mixed marriages only applied when there were no children raised as Jews. For example, the exemption from wearing the yellow star stated that the children must have been registered as non-Jews. In the Saraffian\u2019s case, Noemi had been registered as Jewish, as her Trautenau citizen registration clearly shows, making her a \u201c<em>Geltungsj\u00fcdin</em>,\u201d a <em>Mischling</em> who was \u201cdeemed Jewish.\u201d So even if the Saraffian family was indeed considered a German-Jewish couple (which we do not know) and not a Czech-Jewish mixed marriage, the family would have not been \u201cprivileged\u201d and Martha Saraffian and her daughter were still required to wear the patch: \u201cWe got these stars, my Jewish daughter and I. And we had to carry all the-- through the end of the war.\u201d Martha Saraffian also received ration cards marked with \u201cJew,\u201d which were considerably lower than those for non-Jews and even those for Jews in \u201cprivileged\u201d mixed marriages. Jews usually did not receive any rations of meat, fresh fruits and vegetables, and other essential foods. Even basic staples such as fat or salt were issued in insufficient amounts.  "
       }
     },
     {
@@ -872,7 +885,7 @@
       "data": {
         "id": "fn-63",
         "label": "63",
-        "text": "Cf. Robert Gerwarth, Hitler\u2019s Hangman: The Life and Death of Reinhard Heydrich (New Haven: Yale University Press, 2010), 218\u201377."
+        "text": "<p>Cf. Robert Gerwarth, Hitler\u2019s Hangman: The Life and Death of Reinhard Heydrich (New Haven: Yale University Press, 2010), 218\u201377.  </p>"
       }
     },
     {
@@ -880,14 +893,14 @@
       "data": {
         "id": "fn-64",
         "label": "64",
-        "text": "Gruner, <em>The Holocaust</em>, 267; Gerwarth, <em>Hitler\u2019s Hangman</em>, 256."
+        "text": "<p>Gruner, <em>The Holocaust</em>, 267; Gerwarth, <em>Hitler\u2019s Hangman</em>, 256.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "When these latest antisemitic regulations were introduced in the Protectorate, Martha was already pregnant with her second daughter. Hanna Saraffian was born on May 30, 1942, during great turmoil in the Protectorate.<sup class=\"footnote-ref\" id=\"fnref-65\"><a href=\"#fn-65\">71</a></sup> Three days prior to her birth, on May 27, Czech resistance fighters, affiliated with the Czech government in Exile, ambushed and attacked Heydrich in a suburb of Prague with gunfire and explosives. Heydrich was severely wounded and eventually succumbed to his injuries a week later. Initially, the Czech attackers were able to flee and hide successfully.<sup class=\"footnote-ref\" id=\"fnref-66\"><a href=\"#fn-66\">72</a></sup> In revenge for Heydrich\u2019s death the Germans carried out draconian punitive actions against the Czech and Jewish civil populations in the Protectorate. On June 10, German police and SS units massacred the male populations of the villages of Lidice and Le\u017e\u00e1ky, which had allegedly supported the attackers, and deported the women to concentration camps. The names of these villages became symbols of the German atrocities carried out in Czechia.<sup class=\"footnote-ref\" id=\"fnref-67\"><a href=\"#fn-67\">73</a></sup> In addition, the Germans also executed several thousand Czech political prisoners and enacted martial law for two months. Parallel to the massacres, thousands of Jews from the Protectorate were deported to Ghetto Theresienstadt/Terez\u00edn and concentration camps outside the Protectorate. Among those Jews rounded up for deportation was Martha Saraffian\u2019s mother, Elvira Kummermann:  "
+        "text": "When these latest antisemitic regulations were introduced in the Protectorate, Martha was already pregnant with her second daughter. Hanna Saraffian was born on May 30, 1942, during great turmoil in the Protectorate.<sup class=\"footnote-ref\" id=\"fnref-65\"><a href=\"#fn-65\">65</a></sup> Three days prior to her birth, on May 27, Czech resistance fighters, affiliated with the Czech government in Exile, ambushed and attacked Heydrich in a suburb of Prague with gunfire and explosives. Heydrich was severely wounded and eventually succumbed to his injuries a week later. Initially, the Czech attackers were able to flee and hide successfully.<sup class=\"footnote-ref\" id=\"fnref-66\"><a href=\"#fn-66\">66</a></sup> In revenge for Heydrich\u2019s death the Germans carried out draconian punitive actions against the Czech and Jewish civil populations in the Protectorate. On June 10, German police and SS units massacred the male populations of the villages of Lidice and Le\u017e\u00e1ky, which had allegedly supported the attackers, and deported the women to concentration camps. The names of these villages became symbols of the German atrocities carried out in Czechia.<sup class=\"footnote-ref\" id=\"fnref-67\"><a href=\"#fn-67\">67</a></sup> In addition, the Germans also executed several thousand Czech political prisoners and enacted martial law for two months. Parallel to the massacres, thousands of Jews from the Protectorate were deported to Ghetto Theresienstadt/Terez\u00edn and concentration camps outside the Protectorate. Among those Jews rounded up for deportation was Martha Saraffian\u2019s mother, Elvira Kummermann:  "
       }
     },
     {
@@ -895,7 +908,7 @@
       "data": {
         "id": "fn-65",
         "label": "65",
-        "text": "Her name and birthdate are listed on her sister\u2019s entry in the so-called Theresienstadt file card. Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078445, Noemi Saraffian."
+        "text": "<p>Her name and birthdate are listed on her sister\u2019s entry in the so-called Theresienstadt file card. Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078445, Noemi Saraffian.  </p>"
       }
     },
     {
@@ -903,7 +916,7 @@
       "data": {
         "id": "fn-66",
         "label": "66",
-        "text": "Gerwarth, Hitler\u2019s Hangman, 10\u201312."
+        "text": "<p>Gerwarth, Hitler\u2019s Hangman, 10\u201312.  </p>"
       }
     },
     {
@@ -911,14 +924,14 @@
       "data": {
         "id": "fn-67",
         "label": "67",
-        "text": "Cf. Jessica Rapson, <em>Topographies of Suffering: Buchenwald, Babi Yar, Lidice</em> (New York: Berghahn Books, 2017), 133\u201380."
+        "text": "<p>Cf. Jessica Rapson, <em>Topographies of Suffering: Buchenwald, Babi Yar, Lidice</em> (New York: Berghahn Books, 2017), 133\u201380.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>I was in hospital because I just got my second child. And my mother, five day after my child was born, my mother went in transport. And she was first going to Kol\u00edn, that massive town from where they shipped all the Jews to camps. First to Theresienstadt, and from there, via-- via Lublin to Majdanek.<sup class=\"footnote-ref\" id=\"fnref-v-7\"><a href=\"#fn-v-7\">74</a></sup> </p>"
+        "text": "<p>I was in hospital because I just got my second child. And my mother, five day after my child was born, my mother went in transport. And she was first going to Kol\u00edn, that massive town from where they shipped all the Jews to camps. First to Theresienstadt, and from there, via-- via Lublin to Majdanek.<sup class=\"footnote-ref\" id=\"fnref-v-7\"><a href=\"#fn-v-7\">v-7</a></sup> </p>"
       }
     },
     {
@@ -926,7 +939,7 @@
       "data": {
         "id": "fn-v-7",
         "label": "v-7",
-        "text": "Tape I 00:20:59 - 21:33",
+        "text": "<p>Tape I 00:20:59 - 21:33 </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=1263&media=94894&t=1259&e=1293\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -934,7 +947,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Elvira Kummermann was deported on June 9, 1942 with transport AAc Nr 211 from Kol\u00edn to Ghetto Theresienstadt. Three days later she was deported from the Ghetto to Trawniki concentration camp, about 40 km southeast of Lublin, where she was murdered.<sup class=\"footnote-ref\" id=\"fnref-68\"><a href=\"#fn-68\">75</a></sup> Another parallel transport, the so-called \u201cHeydrich transport,\u201d which Martha mentions in her testimony, went directly from Prague to Majdanek camp on June 10, 1942 \u2013 also in \u201cretaliation\u201d for Heydrich\u2019s murder.<sup class=\"footnote-ref\" id=\"fnref-69\"><a href=\"#fn-69\">76</a></sup> In total, between late 1941 and mid-1944 about 74,000 Jews from the Protectorate were deported to Theresienstadt, most of whom were subsequently transferred to other camps.<sup class=\"footnote-ref\" id=\"fnref-70\"><a href=\"#fn-70\">77</a></sup> "
+        "text": "Elvira Kummermann was deported on June 9, 1942 with transport AAc Nr 211 from Kol\u00edn to Ghetto Theresienstadt. Three days later she was deported from the Ghetto to Trawniki concentration camp, about 40 km southeast of Lublin, where she was murdered.<sup class=\"footnote-ref\" id=\"fnref-68\"><a href=\"#fn-68\">68</a></sup> Another parallel transport, the so-called \u201cHeydrich transport,\u201d which Martha mentions in her testimony, went directly from Prague to Majdanek camp on June 10, 1942 \u2013 also in \u201cretaliation\u201d for Heydrich\u2019s murder.<sup class=\"footnote-ref\" id=\"fnref-69\"><a href=\"#fn-69\">69</a></sup> In total, between late 1941 and mid-1944 about 74,000 Jews from the Protectorate were deported to Theresienstadt, most of whom were subsequently transferred to other camps.<sup class=\"footnote-ref\" id=\"fnref-70\"><a href=\"#fn-70\">70</a></sup> "
       }
     },
     {
@@ -942,7 +955,7 @@
       "data": {
         "id": "fn-68",
         "label": "68",
-        "text": "Holocaust.cz, database of victims, Elvira Kummermannov\u00e1, <a href=\"https://www.holocaust.cz/en/database-of-victims/victim/103577-elvira-kummermannova/\">https://www.holocaust.cz/en/database-of-victims/victim/103577-elvira-kummermannova/</a>."
+        "text": "<p>Holocaust.cz, database of victims, Elvira Kummermannov\u00e1, <a href=\"https://www.holocaust.cz/en/database-of-victims/victim/103577-elvira-kummermannova/\">https://www.holocaust.cz/en/database-of-victims/victim/103577-elvira-kummermannova/</a>.  </p>"
       }
     },
     {
@@ -950,7 +963,7 @@
       "data": {
         "id": "fn-69",
         "label": "69",
-        "text": "Peter Longerich, <em>Holocaust: The Nazi Persecution and Murder of the Jews</em> (Oxford: Oxford University Press, 2010), 233."
+        "text": "<p>Peter Longerich, <em>Holocaust: The Nazi Persecution and Murder of the Jews</em> (Oxford: Oxford University Press, 2010), 233.  </p>"
       }
     },
     {
@@ -958,14 +971,14 @@
       "data": {
         "id": "fn-70",
         "label": "70",
-        "text": "Gerwarth, <em>Hitler\u2019s Hangman</em>, 258."
+        "text": "<p>Gerwarth, <em>Hitler\u2019s Hangman</em>, 258.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "The family\u2019s precarious existence in Podiebrad became less and less bearable. Two months after her mother was deported, the family\u2019s pets were confiscated, according to a document she shows in the testimony.<sup class=\"footnote-ref\" id=\"fnref-71\"><a href=\"#fn-71\">78</a></sup> Valuables, such as fur clothes, were confiscated too. \u201cWe couldn't fight because we were-- we were-- the Czechs were the same, anti-Semites, like-- like the German maybe worse.\u201d Martha Saraffian suffered from malnourishment, due to the inadequate food rations. Her daughter Noemi, who was forced to wear the yellow patch, suffered from abuse by other children on the streets:  "
+        "text": "The family\u2019s precarious existence in Podiebrad became less and less bearable. Two months after her mother was deported, the family\u2019s pets were confiscated, according to a document she shows in the testimony.<sup class=\"footnote-ref\" id=\"fnref-71\"><a href=\"#fn-71\">71</a></sup> Valuables, such as fur clothes, were confiscated too. \u201cWe couldn't fight because we were-- we were-- the Czechs were the same, anti-Semites, like-- like the German maybe worse.\u201d Martha Saraffian suffered from malnourishment, due to the inadequate food rations. Her daughter Noemi, who was forced to wear the yellow patch, suffered from abuse by other children on the streets:  "
       }
     },
     {
@@ -973,14 +986,14 @@
       "data": {
         "id": "fn-71",
         "label": "71",
-        "text": "The document, dated 28 August 1942, is bilingual: in German and Czech. It identifies her as \u201cSarafian Sara Marta,\u201d living in Podiebrad 722. The form had the entries \u201cdog,\u201d \u201ccat\u201d and \u201cbird\u201d pre-printed. It confirms that she gave up one dog. The document is stamped with a seal showing a Star of David."
+        "text": "<p>The document, dated 28 August 1942, is bilingual: in German and Czech. It identifies her as \u201cSarafian Sara Marta,\u201d living in Podiebrad 722. The form had the entries \u201cdog,\u201d \u201ccat\u201d and \u201cbird\u201d pre-printed. It confirms that she gave up one dog. The document is stamped with a seal showing a Star of David.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>It was always-- my husband said it was always this sword of Damocles because he always feared that my-- my Jewish daughter will be attacked, too. She-- she was with the star. From the Czech children, they bounce her on the head and told her always. You are Jew. You are a Jew.<sup class=\"footnote-ref\" id=\"fnref-v-8\"><a href=\"#fn-v-8\">79</a></sup> </p>"
+        "text": "<p>It was always-- my husband said it was always this sword of Damocles because he always feared that my-- my Jewish daughter will be attacked, too. She-- she was with the star. From the Czech children, they bounce her on the head and told her always. You are Jew. You are a Jew.<sup class=\"footnote-ref\" id=\"fnref-v-8\"><a href=\"#fn-v-8\">v-8</a></sup> </p>"
       }
     },
     {
@@ -988,7 +1001,7 @@
       "data": {
         "id": "fn-v-8",
         "label": "v-8",
-        "text": "Tape I 28:01 - 28:29",
+        "text": "<p>Tape I 28:01 - 28:29</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=1682&media=94894&t=1701&e=1709\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -996,7 +1009,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "However, the Saraffian family also received help from non-Jewish friends. Hrand attended services at the Evangelical Church of Czech Brethren in Podiebrad. The local priest, Josef Jeschke,<sup class=\"footnote-ref\" id=\"fnref-72\"><a href=\"#fn-72\">80</a></sup> supported the family and hid many of their valuables in a garden. Hanna, the second daughter, was registered as a member of his congregation. As a non-Jewish <em>Mischling</em>, Hanna received higher food rations than her mother and her sister, who was labelled a <em>Geltungsj\u00fcdin</em> (deemed-Jewish).  "
+        "text": "However, the Saraffian family also received help from non-Jewish friends. Hrand attended services at the Evangelical Church of Czech Brethren in Podiebrad. The local priest, Josef Jeschke,<sup class=\"footnote-ref\" id=\"fnref-72\"><a href=\"#fn-72\">72</a></sup> supported the family and hid many of their valuables in a garden. Hanna, the second daughter, was registered as a member of his congregation. As a non-Jewish <em>Mischling</em>, Hanna received higher food rations than her mother and her sister, who was labelled a <em>Geltungsj\u00fcdin</em> (deemed-Jewish).  "
       }
     },
     {
@@ -1004,7 +1017,7 @@
       "data": {
         "id": "fn-72",
         "label": "72",
-        "text": "Dr. Josef Jeschke, born in 1902, was Pastor of the Evangelical Church of Czech Brethren (ECCB; also called: <em>Bohemian Brethren</em>) in Podiebrad/Pod\u011bbrady from 1931 to 1961. After the war he was a university Professor. The ECCB has a small overview of his professional career on their website <a href=\"https://www.evangnet.cz/cce/kazatel/629-josef_jeschke\">https://www.evangnet.cz/cce/kazatel/629-josef_jeschke</a> and the Bibliography of the History of the Czech Lands contains a short biographical note and picture of Jeschke: <a href=\"https://biblio.hiu.cas.cz/authorities/267590?locale=en\">https://biblio.hiu.cas.cz/authorities/267590?locale=en</a>"
+        "text": "<p>Dr. Josef Jeschke, born in 1902, was Pastor of the Evangelical Church of Czech Brethren (ECCB; also called: <em>Bohemian Brethren</em>) in Podiebrad/Pod\u011bbrady from 1931 to 1961. After the war he was a university Professor. The ECCB has a small overview of his professional career on their website <a href=\"https://www.evangnet.cz/cce/kazatel/629-josef_jeschke\">https://www.evangnet.cz/cce/kazatel/629-josef_jeschke</a> and the Bibliography of the History of the Czech Lands contains a short biographical note and picture of Jeschke: <a href=\"https://biblio.hiu.cas.cz/authorities/267590?locale=en\">https://biblio.hiu.cas.cz/authorities/267590?locale=en</a> </p>"
       }
     },
     {
@@ -1018,7 +1031,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In the first half of 1943 a further radicalization in policy against mixed marriages in the Protectorate was implemented. Many intermarried Jews were ordered to Prague, where they were declared \u201cfull Jews,\u201d and thus subject to forced labor.<sup class=\"footnote-ref\" id=\"fnref-73\"><a href=\"#fn-73\">81</a></sup> These were primarily the Czech-Jewish couples, whereas the German-Jewish mixed marriages were by large exempt from this action. The Protectorate\u2019s Ministry for Economy and Labor instructed its subordinate offices in March 1943 that Jews \u201cliving in German-Jewish mixed marriages and, according to the Police decree of September 1, 1941 on the identification of Jews, are exempt from mandatory identification [\u2026]\u201d are not to be called for labor duty, whereas \u201cJews living in Czech-Jewish mixed marriages are mandated to be identified based on a special provision\u201d and thus also subject to slave labor.<sup class=\"footnote-ref\" id=\"fnref-74\"><a href=\"#fn-74\">82</a></sup> The fact that Martha was not called up for labor at this time is a good indicator that her marriage was considered German-Jewish rather than Czech-Jewish. By the end of 1943, only 7,484 Jews were left in the Protectorate, according to the statistics in the Jewish Council of Elders\u2019 yearly report. Of these, 88.2% had non-Jewish family members. 6,028 Jews in the Protectorate were living in mixed marriages, 196 more were either married to <em>Mischlinge</em> or were unmarried with children counting as <em>Mischlinge</em>. Another 1,260 <em>Mischlinge</em> were \u201cdeemed Jewish\u201d (<em>Geltungsjuden</em>), such as Noemi Saraffian, because they were members of the Jewish community. Only 3,470 or 40.9% of the entire group were Jewish by religion at the end of 1943, the majority either Christians or unaffiliated. The number of <em>Mischlinge</em> children was only estimated in the report: 13,000 first-degree <em>Mischlinge</em> (with two Jewish grandparents) and 34,000 second-degree <em>Mischlinge</em> (one Jewish grandparent). The report contained no statistics on how many of the about 6,000 mixed marriages were Czech-Jewish and how many were German-Jewish.<sup class=\"footnote-ref\" id=\"fnref-75\"><a href=\"#fn-75\">83</a></sup> For comparison: in Vienna at the same time 6,259 Jews were left, of whom 5,094 or 81% were living in mixed marriages and 1,080 were <em>Mischlinge</em> \u201cdeemed Jewish.\u201d<sup class=\"footnote-ref\" id=\"fnref-76\"><a href=\"#fn-76\">84</a></sup> "
+        "text": "In the first half of 1943 a further radicalization in policy against mixed marriages in the Protectorate was implemented. Many intermarried Jews were ordered to Prague, where they were declared \u201cfull Jews,\u201d and thus subject to forced labor.<sup class=\"footnote-ref\" id=\"fnref-73\"><a href=\"#fn-73\">73</a></sup> These were primarily the Czech-Jewish couples, whereas the German-Jewish mixed marriages were by large exempt from this action. The Protectorate\u2019s Ministry for Economy and Labor instructed its subordinate offices in March 1943 that Jews \u201cliving in German-Jewish mixed marriages and, according to the Police decree of September 1, 1941 on the identification of Jews, are exempt from mandatory identification [\u2026]\u201d are not to be called for labor duty, whereas \u201cJews living in Czech-Jewish mixed marriages are mandated to be identified based on a special provision\u201d and thus also subject to slave labor.<sup class=\"footnote-ref\" id=\"fnref-74\"><a href=\"#fn-74\">74</a></sup> The fact that Martha was not called up for labor at this time is a good indicator that her marriage was considered German-Jewish rather than Czech-Jewish. By the end of 1943, only 7,484 Jews were left in the Protectorate, according to the statistics in the Jewish Council of Elders\u2019 yearly report. Of these, 88.2% had non-Jewish family members. 6,028 Jews in the Protectorate were living in mixed marriages, 196 more were either married to <em>Mischlinge</em> or were unmarried with children counting as <em>Mischlinge</em>. Another 1,260 <em>Mischlinge</em> were \u201cdeemed Jewish\u201d (<em>Geltungsjuden</em>), such as Noemi Saraffian, because they were members of the Jewish community. Only 3,470 or 40.9% of the entire group were Jewish by religion at the end of 1943, the majority either Christians or unaffiliated. The number of <em>Mischlinge</em> children was only estimated in the report: 13,000 first-degree <em>Mischlinge</em> (with two Jewish grandparents) and 34,000 second-degree <em>Mischlinge</em> (one Jewish grandparent). The report contained no statistics on how many of the about 6,000 mixed marriages were Czech-Jewish and how many were German-Jewish.<sup class=\"footnote-ref\" id=\"fnref-75\"><a href=\"#fn-75\">75</a></sup> For comparison: in Vienna at the same time 6,259 Jews were left, of whom 5,094 or 81% were living in mixed marriages and 1,080 were <em>Mischlinge</em> \u201cdeemed Jewish.\u201d<sup class=\"footnote-ref\" id=\"fnref-76\"><a href=\"#fn-76\">76</a></sup> "
       }
     },
     {
@@ -1026,7 +1039,7 @@
       "data": {
         "id": "fn-73",
         "label": "73",
-        "text": "Gruner, <em>Holocaust</em>, 361."
+        "text": "<p>Gruner, <em>Holocaust</em>, 361.  </p>"
       }
     },
     {
@@ -1034,7 +1047,7 @@
       "data": {
         "id": "fn-74",
         "label": "74",
-        "text": "Jewish Museum in Prague, Collections, SHOAH/DP/9/49/020, Ministry of Economy and Labour (Ministerium f\u00fcr Wirtschaft und Arbeit), Labour placement of Jews from mixed marriage (Arbeitseinsatz von Juden; hier: privilegierte Mischehen), Prague 22 March 1943. Document titles are cited as in the database of the Jewish Museum."
+        "text": "<p>Jewish Museum in Prague, Collections, SHOAH/DP/9/49/020, Ministry of Economy and Labour (Ministerium f\u00fcr Wirtschaft und Arbeit), Labour placement of Jews from mixed marriage (Arbeitseinsatz von Juden; hier: privilegierte Mischehen), Prague 22 March 1943. Document titles are cited as in the database of the Jewish Museum.  </p>"
       }
     },
     {
@@ -1042,7 +1055,7 @@
       "data": {
         "id": "fn-75",
         "label": "75",
-        "text": "Jewish Museum in Prague, Collections, ARCHIVE/312/I/2/a/008/001, \u017didovsk\u00e1 rada star\u0161\u00edch - zpr\u00e1va za rok 1943 (Jewish Council of Elders in Prague, <em>Report on the year 1943</em>, Prague 1944)."
+        "text": "<p>Jewish Museum in Prague, Collections, ARCHIVE/312/I/2/a/008/001, \u017didovsk\u00e1 rada star\u0161\u00edch - zpr\u00e1va za rok 1943 (Jewish Council of Elders in Prague, <em>Report on the year 1943</em>, Prague 1944).  </p>"
       }
     },
     {
@@ -1050,14 +1063,14 @@
       "data": {
         "id": "fn-76",
         "label": "76",
-        "text": "<em>VEJ</em> 11 (<em>Deutsches Reich und Protektorat B\u00f6hmen und M\u00e4hren April 1943\u20131945</em>), 30."
+        "text": "<p><em>VEJ</em> 11 (<em>Deutsches Reich und Protektorat B\u00f6hmen und M\u00e4hren April 1943\u20131945</em>), 30.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "From Martha Saraffian\u2019s testimony we learn that her husband was the first of the two to be called up for forced labor duty, while she could stay in Podiebrad, where she cared for the children. The exact time could not be determined, but from the context he was most likely called-up in the summer of 1944. In July 1944 the Protectorate\u2019s labor offices summoned intermarried non-Jews and <em>Mischlinge</em> for forced labor duty. An internal document of the German State Minister for Bohemia and Moravia from late August 1944 stated: \u201cfirst degree Mischlinge and Aryans living in Jewish mixed marriages are called up for special labor assignment outside of their places of residence. [\u2026] The calling up to the labor assignment is a temporary measure; the right to abode continues.\u201d<sup class=\"footnote-ref\" id=\"fnref-77\"><a href=\"#fn-77\">85</a></sup> This action mirrored similar efforts in the Old Reich of making <em>Mischlinge</em> and non-Jewish spouses available for forced labor. As neither were deemed \u201cworthy\u201d of serving in the armed forces \u2013 with rare exceptions \u2013 they were mostly assigned to Organisation Todt labor deployments.<sup class=\"footnote-ref\" id=\"fnref-78\"><a href=\"#fn-78\">86</a></sup> While the aim was the same throughout the Reich, the actual implementation varied significantly from region to region. In some regions only a fraction was eventually assigned to these deployments. In the Protectorate it was apparently implemented very strictly. Hrand Saraffian was ordered to an unidentified coal town, where he had to clear rubble and other bomb damage caused by Allied aerial bombing. He was part of a labor detachment that consisted only of intermarried men, according to the testimony: \u201call these men that has Jewish woman. All these Christian men had Jewish women.\u201d  "
+        "text": "From Martha Saraffian\u2019s testimony we learn that her husband was the first of the two to be called up for forced labor duty, while she could stay in Podiebrad, where she cared for the children. The exact time could not be determined, but from the context he was most likely called-up in the summer of 1944. In July 1944 the Protectorate\u2019s labor offices summoned intermarried non-Jews and <em>Mischlinge</em> for forced labor duty. An internal document of the German State Minister for Bohemia and Moravia from late August 1944 stated: \u201cfirst degree Mischlinge and Aryans living in Jewish mixed marriages are called up for special labor assignment outside of their places of residence. [\u2026] The calling up to the labor assignment is a temporary measure; the right to abode continues.\u201d<sup class=\"footnote-ref\" id=\"fnref-77\"><a href=\"#fn-77\">77</a></sup> This action mirrored similar efforts in the Old Reich of making <em>Mischlinge</em> and non-Jewish spouses available for forced labor. As neither were deemed \u201cworthy\u201d of serving in the armed forces \u2013 with rare exceptions \u2013 they were mostly assigned to Organisation Todt labor deployments.<sup class=\"footnote-ref\" id=\"fnref-78\"><a href=\"#fn-78\">78</a></sup> While the aim was the same throughout the Reich, the actual implementation varied significantly from region to region. In some regions only a fraction was eventually assigned to these deployments. In the Protectorate it was apparently implemented very strictly. Hrand Saraffian was ordered to an unidentified coal town, where he had to clear rubble and other bomb damage caused by Allied aerial bombing. He was part of a labor detachment that consisted only of intermarried men, according to the testimony: \u201call these men that has Jewish woman. All these Christian men had Jewish women.\u201d  "
       }
     },
     {
@@ -1065,7 +1078,7 @@
       "data": {
         "id": "fn-77",
         "label": "77",
-        "text": "Jewish Museum in Prague, Collections, SHOAH/DP/9/49/022, German State Minister for Bohemia and Moravia, Work placement of Jewish crossbreeds, 29 August 1944."
+        "text": "<p>Jewish Museum in Prague, Collections, SHOAH/DP/9/49/022, German State Minister for Bohemia and Moravia, Work placement of Jewish crossbreeds, 29 August 1944.  </p>"
       }
     },
     {
@@ -1073,7 +1086,7 @@
       "data": {
         "id": "fn-78",
         "label": "78",
-        "text": "Strnad, \u201cThe Fortune,\u201d 177."
+        "text": "<p>Strnad, \u201cThe Fortune,\u201d 177.  </p>"
       }
     },
     {
@@ -1087,7 +1100,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>When I sent a telegram, that, I have to go in the camp, in the labor camp, with my daughter, with my Jewish daughter. And he was so upset that he asked his commander to let him go. And these men gave him a pass to go through and he came at night. And when I told him what happened, he took the next train at 2 o'clock in the morning and went to Prague. The name was Sonnenbergstrasse, where the Gestapo had the headquarter.<sup class=\"footnote-ref\" id=\"fnref-79\"><a href=\"#fn-79\">87</a></sup> And he was protesting. He-- sent me with just the child, that they sent me with the child to the labor camp and when he was already working for them. But he was not received well. He got in, as punishment, in a special transport to Germany in a truck without food, without light.<sup class=\"footnote-ref\" id=\"fnref-v-9\"><a href=\"#fn-v-9\">88</a></sup> </p>"
+        "text": "<p>When I sent a telegram, that, I have to go in the camp, in the labor camp, with my daughter, with my Jewish daughter. And he was so upset that he asked his commander to let him go. And these men gave him a pass to go through and he came at night. And when I told him what happened, he took the next train at 2 o'clock in the morning and went to Prague. The name was Sonnenbergstrasse, where the Gestapo had the headquarter.<sup class=\"footnote-ref\" id=\"fnref-79\"><a href=\"#fn-79\">79</a></sup> And he was protesting. He-- sent me with just the child, that they sent me with the child to the labor camp and when he was already working for them. But he was not received well. He got in, as punishment, in a special transport to Germany in a truck without food, without light.<sup class=\"footnote-ref\" id=\"fnref-v-9\"><a href=\"#fn-v-9\">v-9</a></sup> </p>"
       }
     },
     {
@@ -1095,7 +1108,7 @@
       "data": {
         "id": "fn-79",
         "label": "79",
-        "text": "Most likely refers to the Police Camp for Jewish laborers at Sommerbergstra\u00dfe."
+        "text": "<p>Most likely refers to the Police Camp for Jewish laborers at Sommerbergstra\u00dfe.  </p>"
       }
     },
     {
@@ -1103,7 +1116,7 @@
       "data": {
         "id": "fn-v-9",
         "label": "v-9",
-        "text": "Tape 1 30:50 - 32:19",
+        "text": "<p>Tape 1 30:50 - 32:19</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=1921&media=94894&t=1850&e=1939\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -1111,7 +1124,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "As a punishment for his protest, Hrand Saraffian was sent to Klettendorf/Klecina in Lower Silesia. Organisation Todt maintained a slave labor camp for Jews in Klettendorf, which had been established in August 1940 and operated until November/December 1944.<sup class=\"footnote-ref\" id=\"fnref-80\"><a href=\"#fn-80\">89</a></sup> This camp was intended for Jews only and many survivor reports, including such in the Fortunoff Archive, stress the very harsh conditions at Klettendorf, likening it to a concentration camp.<sup class=\"footnote-ref\" id=\"fnref-81\"><a href=\"#fn-81\">90</a></sup> That an intermarried non-Jew such as Hrand Saraffian was sent to this camp affirms the character of a severe punishment. His attempt to protest had obviously been in vain and Martha Saraffian was still ordered to Prague for labor duty. The first transports of intermarried Jews from the provinces \u2013 both men and women \u2013 arrived in Prague in Mid-September 1944 and continued in the following weeks and months until almost all of the Protectorate\u2019s remaining Jews were concentrated in Prague  "
+        "text": "As a punishment for his protest, Hrand Saraffian was sent to Klettendorf/Klecina in Lower Silesia. Organisation Todt maintained a slave labor camp for Jews in Klettendorf, which had been established in August 1940 and operated until November/December 1944.<sup class=\"footnote-ref\" id=\"fnref-80\"><a href=\"#fn-80\">80</a></sup> This camp was intended for Jews only and many survivor reports, including such in the Fortunoff Archive, stress the very harsh conditions at Klettendorf, likening it to a concentration camp.<sup class=\"footnote-ref\" id=\"fnref-81\"><a href=\"#fn-81\">81</a></sup> That an intermarried non-Jew such as Hrand Saraffian was sent to this camp affirms the character of a severe punishment. His attempt to protest had obviously been in vain and Martha Saraffian was still ordered to Prague for labor duty. The first transports of intermarried Jews from the provinces \u2013 both men and women \u2013 arrived in Prague in Mid-September 1944 and continued in the following weeks and months until almost all of the Protectorate\u2019s remaining Jews were concentrated in Prague  "
       }
     },
     {
@@ -1119,7 +1132,7 @@
       "data": {
         "id": "fn-80",
         "label": "80",
-        "text": "Bundesarchiv, Haftst\u00e4tenverzeichnis, Zwangsarbeitslager f\u00fcr Juden Klettendorf, <a href=\"https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=2063\">https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=2063</a>. See also: Raymund Sch\u00fctz, <em>Zwangsarbeiterlager f\u00fcr Juden (ZALfJ): Klettendorf</em>, 2015, <a href=\"https://www.academia.edu/22172389/ZALfJ_Klettendorf\">https://www.academia.edu/22172389/ZALfJ_Klettendorf</a>."
+        "text": "<p>Bundesarchiv, Haftst\u00e4tenverzeichnis, Zwangsarbeitslager f\u00fcr Juden Klettendorf, <a href=\"https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=2063\">https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=2063</a>. See also: Raymund Sch\u00fctz, <em>Zwangsarbeiterlager f\u00fcr Juden (ZALfJ): Klettendorf</em>, 2015, <a href=\"https://www.academia.edu/22172389/ZALfJ_Klettendorf\">https://www.academia.edu/22172389/ZALfJ_Klettendorf</a>.  </p>"
       }
     },
     {
@@ -1127,14 +1140,14 @@
       "data": {
         "id": "fn-81",
         "label": "81",
-        "text": "The Fortunoff Archive has several other testimonies of former slave laborers at Klettendorf, including. HVT-480 (Mayer P.), HVT-1096 (Wolf Z.), and HVT-70 (Joseph M.)."
+        "text": "<p>The Fortunoff Archive has several other testimonies of former slave laborers at Klettendorf, including. HVT-480 (Mayer P.), HVT-1096 (Wolf Z.), and HVT-70 (Joseph M.).  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Jewish men and women \u2013 almost all of whom were living in mixed marriages \u2013 were assembled at the newly erected camp at Hagibor square in Prague X.<sup class=\"footnote-ref\" id=\"fnref-82\"><a href=\"#fn-82\">91</a></sup> The camp\u2019s purpose was to serve as a labor-site and to house those who had been summoned from the provinces. Residents of Prague were in many cases allowed to spend the nights in their homes. The name of the locality and the camp was inherited from the Jewish association football club of the same name (<em>Hagibor</em> \u2013 Hebrew for \u201cthe Hero\u201d), which used to have its training grounds there.<sup class=\"footnote-ref\" id=\"fnref-83\"><a href=\"#fn-83\">92</a></sup> The Jewish Council of Elders in Prague, the mandatory organization for Jews maintained by the Nazis, was ordered to erect the camp at the former training grounds and nearby plots, and to organize the summoning of Jews from the provinces. In their written report on the year 1944 they described in detail both the construction of the camp and the labor assignment for Jews from the provinces. The technical details and the bureaucratic language belie \u00a0the tragedies behind these events:  "
+        "text": "Jewish men and women \u2013 almost all of whom were living in mixed marriages \u2013 were assembled at the newly erected camp at Hagibor square in Prague X.<sup class=\"footnote-ref\" id=\"fnref-82\"><a href=\"#fn-82\">82</a></sup> The camp\u2019s purpose was to serve as a labor-site and to house those who had been summoned from the provinces. Residents of Prague were in many cases allowed to spend the nights in their homes. The name of the locality and the camp was inherited from the Jewish association football club of the same name (<em>Hagibor</em> \u2013 Hebrew for \u201cthe Hero\u201d), which used to have its training grounds there.<sup class=\"footnote-ref\" id=\"fnref-83\"><a href=\"#fn-83\">83</a></sup> The Jewish Council of Elders in Prague, the mandatory organization for Jews maintained by the Nazis, was ordered to erect the camp at the former training grounds and nearby plots, and to organize the summoning of Jews from the provinces. In their written report on the year 1944 they described in detail both the construction of the camp and the labor assignment for Jews from the provinces. The technical details and the bureaucratic language belie \u00a0the tragedies behind these events:  "
       }
     },
     {
@@ -1142,7 +1155,7 @@
       "data": {
         "id": "fn-82",
         "label": "82",
-        "text": "Until now, the history of the camp has not been thoroughly examined. The most extensive study is a Czech research article: Ivana Dejmkov\u00e1, \u201cHagibor aneb Jak jedno m\u00edsto v Praze z\u00edskalo smutnou pov\u011bst,\u201d in Olga Fejtov\u00e1 (ed.),_ Evropsk\u00e1 velkom\u011bsta za druh\u00e9 sv\u011btov\u00e9 v\u00e1lky: ka\u017edodennost okupovan\u00e9ho velkom\u011bsta; Praha 1939\u20131945 v evropsk\u00e9m srovn\u00e1n\u00ed 1 <em>(Prague: Scriptorium, 2007), 253.</em>_"
+        "text": "<p>Until now, the history of the camp has not been thoroughly examined. The most extensive study is a Czech research article: Ivana Dejmkov\u00e1, \u201cHagibor aneb Jak jedno m\u00edsto v Praze z\u00edskalo smutnou pov\u011bst,\u201d in Olga Fejtov\u00e1 (ed.),_ Evropsk\u00e1 velkom\u011bsta za druh\u00e9 sv\u011btov\u00e9 v\u00e1lky: ka\u017edodennost okupovan\u00e9ho velkom\u011bsta; Praha 1939\u20131945 v evropsk\u00e9m srovn\u00e1n\u00ed 1 <em>(Prague: Scriptorium, 2007), 253.</em>_  </p>"
       }
     },
     {
@@ -1150,14 +1163,14 @@
       "data": {
         "id": "fn-83",
         "label": "83",
-        "text": "Tatjana Lichtenstein, \u201c\u2018Heja, Heja, Hagibor!\u2019 Jewish Sports, Politics, and Nationalism in Czechoslovakia, 1923\u20131930,\u201d <em>Leipziger Beitr\u00e4ge zur j\u00fcdischen Geschichte und Kultur</em> 2 (2004): 191\u2013208."
+        "text": "<p>Tatjana Lichtenstein, \u201c\u2018Heja, Heja, Hagibor!\u2019 Jewish Sports, Politics, and Nationalism in Czechoslovakia, 1923\u20131930,\u201d <em>Leipziger Beitr\u00e4ge zur j\u00fcdischen Geschichte und Kultur</em> 2 (2004): 191\u2013208.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>Through an order of the Central Office for the Solution of the Jewish Question in Bohemia and Moravia the Jewish Central Labor Office summoned all abled men and women from the provinces to Prague, where they were quartered at camp Hagibor square. This action was undertaken in stages and the first contingent had to report on 17 September 1944. With the exception of persons not fit for transport, everyone who was called up had to appear; the exclusion of the sickly and unable to work was undertaken in Prague by the Central Office for the Solution of the Jewish Question in Bohemia and Moravia. [\u2026] The procedures of the Jewish Central Labor Office in implementing this mission were the following: [\u2026] The arrivals were received at the train stations, their luggage taken and moved to the Hagibor square, a list of the attendees for the mustering was compiled, [\u2026] the allocation to Hagibor square was entered to all registers, [\u2026.] On 31 December 1944 camp Hagibor square housed: Men\u2026. 607, Women\u2026. 697, total\u2026. 1304.<sup class=\"footnote-ref\" id=\"fnref-84\"><a href=\"#fn-84\">93</a></sup> </p>"
+        "text": "<p>Through an order of the Central Office for the Solution of the Jewish Question in Bohemia and Moravia the Jewish Central Labor Office summoned all abled men and women from the provinces to Prague, where they were quartered at camp Hagibor square. This action was undertaken in stages and the first contingent had to report on 17 September 1944. With the exception of persons not fit for transport, everyone who was called up had to appear; the exclusion of the sickly and unable to work was undertaken in Prague by the Central Office for the Solution of the Jewish Question in Bohemia and Moravia. [\u2026] The procedures of the Jewish Central Labor Office in implementing this mission were the following: [\u2026] The arrivals were received at the train stations, their luggage taken and moved to the Hagibor square, a list of the attendees for the mustering was compiled, [\u2026] the allocation to Hagibor square was entered to all registers, [\u2026.] On 31 December 1944 camp Hagibor square housed: Men\u2026. 607, Women\u2026. 697, total\u2026. 1304.<sup class=\"footnote-ref\" id=\"fnref-84\"><a href=\"#fn-84\">84</a></sup> </p>"
       }
     },
     {
@@ -1165,7 +1178,7 @@
       "data": {
         "id": "fn-84",
         "label": "84",
-        "text": "Jewish Museum in Prague, Collections, ARCHIVE/312/I/2/a/009/001, \u017didovsk\u00e1 rada star\u0161\u00edch - zpr\u00e1va za rok 1944 (Jewish Council of the Elders Prague, Central Labor Office, <em>Report on the year 1944</em>, Prague 1945)."
+        "text": "<p>Jewish Museum in Prague, Collections, ARCHIVE/312/I/2/a/009/001, \u017didovsk\u00e1 rada star\u0161\u00edch - zpr\u00e1va za rok 1944 (Jewish Council of the Elders Prague, Central Labor Office, <em>Report on the year 1944</em>, Prague 1945).  </p>"
       }
     },
     {
@@ -1179,7 +1192,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "One of the main purposes of this camp was the operation of a mica plant (<em>Glimmerwerke</em>), which produced raw materials for the electrotechnical industry. Primarily women were forced to cut the mica glimmer into rough pieces that were then brought to Ghetto Theresienstadt, where they were refined in a second stage.<sup class=\"footnote-ref\" id=\"fnref-85\"><a href=\"#fn-85\">94</a></sup> At the end of December 1944, 836 women and 46 men were working in the mica plant at Hagibor square, according to the report. More than half of them \u2013 484 women \u2013 had been called-up for labor duty from the provinces. Other Jewish men and women housed at camp Hagibor had to perform slave labor outside the camp at various sites. Martha Saraffian was part of the labor contingent that collected and sorted luggage, which had to be left behind by Jews who were transported from the Protectorate to the extermination camps.  "
+        "text": "One of the main purposes of this camp was the operation of a mica plant (<em>Glimmerwerke</em>), which produced raw materials for the electrotechnical industry. Primarily women were forced to cut the mica glimmer into rough pieces that were then brought to Ghetto Theresienstadt, where they were refined in a second stage.<sup class=\"footnote-ref\" id=\"fnref-85\"><a href=\"#fn-85\">85</a></sup> At the end of December 1944, 836 women and 46 men were working in the mica plant at Hagibor square, according to the report. More than half of them \u2013 484 women \u2013 had been called-up for labor duty from the provinces. Other Jewish men and women housed at camp Hagibor had to perform slave labor outside the camp at various sites. Martha Saraffian was part of the labor contingent that collected and sorted luggage, which had to be left behind by Jews who were transported from the Protectorate to the extermination camps.  "
       }
     },
     {
@@ -1187,7 +1200,7 @@
       "data": {
         "id": "fn-85",
         "label": "85",
-        "text": "Cf. Wolfgang Benz, Theresienstadt: Eine Geschichte von T\u00e4uschung und Vernichtung (Munich: C.H. Beck, 2013), 71."
+        "text": "<p>Cf. Wolfgang Benz, Theresienstadt: Eine Geschichte von T\u00e4uschung und Vernichtung (Munich: C.H. Beck, 2013), 71.  </p>"
       }
     },
     {
@@ -1201,7 +1214,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "When Martha Saraffian was called up for labor duty, she had to leave her younger daughter Hanna behind in Podiebrad. Her non-Jewish neighbors took the young child in and took good care of her. Nevertheless, the experience of parting from her two-year-old daughter was terrible and traumatic for both mother and daughter, as we learn from the testimony. Her elder daughter Noemi had to come with her mother to Prague, where they were eventually separated from each other. According to Noemi Saraffian\u2019s entry in the so-called Ghetto Theresienstadt card file, she was initially brought to a children\u2019s home (<em>Kinderheim</em>) at Ziegengasse 9 (today: Koz\u00ed ulice) and later to a worker\u2019s home (<em>Arbeiterheim</em>) in Kastulusgasse 20 (today: Ha\u0161talsk\u00e1).<sup class=\"footnote-ref\" id=\"fnref-86\"><a href=\"#fn-86\">95</a></sup> The exact dates are not completely clear, but it seems she arrived at the children\u2019s home on November 9, 1944 and already a day later was transferred to the worker\u2019s home. According to the card file, she left Prague on December 23, 1944. It is not clear when exactly Martha Saraffian had been summoned to Prague in the first place. According to the previously cited report, about half of the women were brought to the camp by the end of September, the second half by the end of November. It seems most likely that Martha arrived in early November, but it could well have been the case that she already came two months earlier in September. The report also states that the Council of Elders maintained a youth home (<em>Jugendheim</em>) and two daycares for children (<em>Kindertagesheime</em>): \u201cThe youth home cares for the accommodation, feeding and hygiene of the children, that constantly live there. The daycares are for little children, whose parents are occupied during the day.\u201d<sup class=\"footnote-ref\" id=\"fnref-87\"><a href=\"#fn-87\">96</a></sup> Most likely Noemi Saraffian was brought to these homes.  "
+        "text": "When Martha Saraffian was called up for labor duty, she had to leave her younger daughter Hanna behind in Podiebrad. Her non-Jewish neighbors took the young child in and took good care of her. Nevertheless, the experience of parting from her two-year-old daughter was terrible and traumatic for both mother and daughter, as we learn from the testimony. Her elder daughter Noemi had to come with her mother to Prague, where they were eventually separated from each other. According to Noemi Saraffian\u2019s entry in the so-called Ghetto Theresienstadt card file, she was initially brought to a children\u2019s home (<em>Kinderheim</em>) at Ziegengasse 9 (today: Koz\u00ed ulice) and later to a worker\u2019s home (<em>Arbeiterheim</em>) in Kastulusgasse 20 (today: Ha\u0161talsk\u00e1).<sup class=\"footnote-ref\" id=\"fnref-86\"><a href=\"#fn-86\">86</a></sup> The exact dates are not completely clear, but it seems she arrived at the children\u2019s home on November 9, 1944 and already a day later was transferred to the worker\u2019s home. According to the card file, she left Prague on December 23, 1944. It is not clear when exactly Martha Saraffian had been summoned to Prague in the first place. According to the previously cited report, about half of the women were brought to the camp by the end of September, the second half by the end of November. It seems most likely that Martha arrived in early November, but it could well have been the case that she already came two months earlier in September. The report also states that the Council of Elders maintained a youth home (<em>Jugendheim</em>) and two daycares for children (<em>Kindertagesheime</em>): \u201cThe youth home cares for the accommodation, feeding and hygiene of the children, that constantly live there. The daycares are for little children, whose parents are occupied during the day.\u201d<sup class=\"footnote-ref\" id=\"fnref-87\"><a href=\"#fn-87\">87</a></sup> Most likely Noemi Saraffian was brought to these homes.  "
       }
     },
     {
@@ -1209,7 +1222,7 @@
       "data": {
         "id": "fn-86",
         "label": "86",
-        "text": "Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078445, Noemi Saraffian."
+        "text": "<p>Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078445, Noemi Saraffian.  </p>"
       }
     },
     {
@@ -1217,7 +1230,7 @@
       "data": {
         "id": "fn-87",
         "label": "87",
-        "text": "Central Labor Office, <em>Report on the year 1944</em>."
+        "text": "<p>Central Labor Office, <em>Report on the year 1944</em>.  </p>"
       }
     },
     {
@@ -1231,7 +1244,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>I feared for my daughter. So I signed that my children are Christian. And I was not punished, and maybe didn't realize that I have a Jewish child in the-- in the internation camp. But this Jewish child, the pastor fought so so much to get her back and he got her back and he took her in his house. This pastor that was already punished from the Gestapo, helping Jews. And he kept my daughter till the end of the war.<sup class=\"footnote-ref\" id=\"fnref-v-10\"><a href=\"#fn-v-10\">97</a></sup> </p>"
+        "text": "<p>I feared for my daughter. So I signed that my children are Christian. And I was not punished, and maybe didn't realize that I have a Jewish child in the-- in the internation camp. But this Jewish child, the pastor fought so so much to get her back and he got her back and he took her in his house. This pastor that was already punished from the Gestapo, helping Jews. And he kept my daughter till the end of the war.<sup class=\"footnote-ref\" id=\"fnref-v-10\"><a href=\"#fn-v-10\">v-10</a></sup> </p>"
       }
     },
     {
@@ -1239,7 +1252,7 @@
       "data": {
         "id": "fn-v-10",
         "label": "v-10",
-        "text": "52:15 - 52:58 Tape I",
+        "text": "<p>52:15 - 52:58 Tape I</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=3178&media=94894&t=3135&e=3178\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -1254,7 +1267,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "While Martha Saraffian was interned in camp Hagibor, her husband \u2013 who had become severely ill in Klettendorf, but eventually recovered \u2013 was transferred to a camp that exclusively housed intermarried non-Jewish men and male <em>Mischlinge</em>. This camp was part of the SS-proving ground B\u00f6hmen at Bistritz bei Beneschau/Byst\u0159ice u Bene\u0161ova. Its official designation was \u201cSpecial Camp for Aryans with Jewish relatives and Jewisch Mischlinge\u201d (<em>Sonderlager f\u00fcr j\u00fcdisch versippte Arier und j\u00fcdische Mischlinge</em>)<sup class=\"footnote-ref\" id=\"fnref-88\"><a href=\"#fn-88\">98</a></sup> and it most likely consisted of two or more smaller detachments in this vast area. Coincidentally, this was also exactly the region where Martha Saraffian\u2019s maternal grandmother, who had lived with the Kummermann family in Trautenau, came from. The slave laborers\u2019 primary task was erecting and maintaining the SS-proving ground.<sup class=\"footnote-ref\" id=\"fnref-89\"><a href=\"#fn-89\">99</a></sup> The camp existed until April 1945, which is most likely when Hrand Saraffian was liberated and able to return home to Podiebrad.  "
+        "text": "While Martha Saraffian was interned in camp Hagibor, her husband \u2013 who had become severely ill in Klettendorf, but eventually recovered \u2013 was transferred to a camp that exclusively housed intermarried non-Jewish men and male <em>Mischlinge</em>. This camp was part of the SS-proving ground B\u00f6hmen at Bistritz bei Beneschau/Byst\u0159ice u Bene\u0161ova. Its official designation was \u201cSpecial Camp for Aryans with Jewish relatives and Jewisch Mischlinge\u201d (<em>Sonderlager f\u00fcr j\u00fcdisch versippte Arier und j\u00fcdische Mischlinge</em>)<sup class=\"footnote-ref\" id=\"fnref-88\"><a href=\"#fn-88\">88</a></sup> and it most likely consisted of two or more smaller detachments in this vast area. Coincidentally, this was also exactly the region where Martha Saraffian\u2019s maternal grandmother, who had lived with the Kummermann family in Trautenau, came from. The slave laborers\u2019 primary task was erecting and maintaining the SS-proving ground.<sup class=\"footnote-ref\" id=\"fnref-89\"><a href=\"#fn-89\">89</a></sup> The camp existed until April 1945, which is most likely when Hrand Saraffian was liberated and able to return home to Podiebrad.  "
       }
     },
     {
@@ -1262,7 +1275,7 @@
       "data": {
         "id": "fn-88",
         "label": "88",
-        "text": "According to a German register of camps, maintained by the Federal Archives and the EVZ Foundation (hereafter <em>EVZ register</em>), it existed from Fall 1943 until April 1945. <em>EVZ register</em>, <a href=\"https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=603\">https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=603</a>. The camp\u2019s history has not yet been explored in detail."
+        "text": "<p>According to a German register of camps, maintained by the Federal Archives and the EVZ Foundation (hereafter <em>EVZ register</em>), it existed from Fall 1943 until April 1945. <em>EVZ register</em>, <a href=\"https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=603\">https://www.bundesarchiv.de/zwangsarbeit/haftstaetten/index.php?action=2.2&amp;tab=7&amp;id=603</a>. The camp\u2019s history has not yet been explored in detail.  </p>"
       }
     },
     {
@@ -1270,7 +1283,7 @@
       "data": {
         "id": "fn-89",
         "label": "89",
-        "text": "In July 1944, 1000 <em>Mischlinge</em> and others with Jewish relatives were called up for labour duty at the proving grounds. Cf. <em>VEJ</em> 4 (<em>Deutsches Reich und Protektorat B\u00f6hmen und M\u00e4hren April 1943\u20131945)</em>, Doc. 271."
+        "text": "<p>In July 1944, 1000 <em>Mischlinge</em> and others with Jewish relatives were called up for labour duty at the proving grounds. Cf. <em>VEJ</em> 4 (<em>Deutsches Reich und Protektorat B\u00f6hmen und M\u00e4hren April 1943\u20131945)</em>, Doc. 271.  </p>"
       }
     },
     {
@@ -1284,7 +1297,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>And the-- we were glad that we-- that our husbands didn't divorce us because there were cases where the men divorced when the woman was already in the labor camp. So he divorced her, and she was immediately shipped to Auschwitz and she was killed. And there were oft so much cries and unhappiness because it happens many times that the Czech men divorced the women.<sup class=\"footnote-ref\" id=\"fnref-v-11\"><a href=\"#fn-v-11\">100</a></sup> </p>"
+        "text": "<p>And the-- we were glad that we-- that our husbands didn't divorce us because there were cases where the men divorced when the woman was already in the labor camp. So he divorced her, and she was immediately shipped to Auschwitz and she was killed. And there were oft so much cries and unhappiness because it happens many times that the Czech men divorced the women.<sup class=\"footnote-ref\" id=\"fnref-v-11\"><a href=\"#fn-v-11\">v-11</a></sup> </p>"
       }
     },
     {
@@ -1292,7 +1305,7 @@
       "data": {
         "id": "fn-v-11",
         "label": "v-11",
-        "text": "39:23 - 40:00",
+        "text": "<p>39:23 - 40:00 </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=2400&media=94894&t=2373&e=2400\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -1300,7 +1313,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "The calling up of intermarried Jews for segregated labor duty in camp conditions was only implemented in fall 1944 in the Protectorate and in a very few areas of the Reich, such as the Rhineland.<sup class=\"footnote-ref\" id=\"fnref-90\"><a href=\"#fn-90\">101</a></sup> "
+        "text": "The calling up of intermarried Jews for segregated labor duty in camp conditions was only implemented in fall 1944 in the Protectorate and in a very few areas of the Reich, such as the Rhineland.<sup class=\"footnote-ref\" id=\"fnref-90\"><a href=\"#fn-90\">90</a></sup> "
       }
     },
     {
@@ -1308,7 +1321,7 @@
       "data": {
         "id": "fn-90",
         "label": "90",
-        "text": "Strnad mentions the Rhineland and Westphalia as the two cases in the Old Reich. Strnad, \u201cFortune,\u201d 178."
+        "text": "<p>Strnad mentions the Rhineland and Westphalia as the two cases in the Old Reich. Strnad, \u201cFortune,\u201d 178.  </p>"
       }
     },
     {
@@ -1322,7 +1335,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>Then I was-- from the labor camp, I was-- we all were waked at 3 o'clock in the morning always. What they did to us was 3 o'clock in the morning. they ordered to be at 4 o'clock, ready to go and transport to Theresienstadt. [\u2026] We were guided to the train. And there, we stand till 10 o'clock in the morning on a cold winter day in melting snow. Till 10 o'clock they left us to go on the train.<sup class=\"footnote-ref\" id=\"fnref-v-12\"><a href=\"#fn-v-12\">102</a></sup> </p>"
+        "text": "<p>Then I was-- from the labor camp, I was-- we all were waked at 3 o'clock in the morning always. What they did to us was 3 o'clock in the morning. they ordered to be at 4 o'clock, ready to go and transport to Theresienstadt. [\u2026] We were guided to the train. And there, we stand till 10 o'clock in the morning on a cold winter day in melting snow. Till 10 o'clock they left us to go on the train.<sup class=\"footnote-ref\" id=\"fnref-v-12\"><a href=\"#fn-v-12\">v-12</a></sup> </p>"
       }
     },
     {
@@ -1330,7 +1343,7 @@
       "data": {
         "id": "fn-v-12",
         "label": "v-12",
-        "text": "42:20 - 42:56",
+        "text": "<p>42:20 - 42:56</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/94894?e=2576&media=94894&t=2540&e=2576\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -1338,7 +1351,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Martha Saraffian was deported to Theresienstadt with Transport AE 1 (<em>Arbeitseinsatz</em>, Ger. for labor assignment) on January 31, 1945.<sup class=\"footnote-ref\" id=\"fnref-91\"><a href=\"#fn-91\">103</a></sup>. Perfidiously, the written order that all the intermarried Jews at Hagibor received claimed that this transport was only a new \u201clabor assignment and not a change in residence or ghettoization.\u201d Hence, everyone transported to Theresienstadt would still officially maintain their formal residence at their locations from where they had been previously ordered to Hagibor.<sup class=\"footnote-ref\" id=\"fnref-92\"><a href=\"#fn-92\">104</a></sup> It seems clear that these instructions only disguised the true character of the transport, even though at this point every remaining Jew in Prague was aware of what was actually going on. Still, it also paid lip service to the regulations regarding Jews in mixed marriages that were still in place at this time, even though the RSHA had effectively decided that all remaining intermarried Jews, except for some elderly, would be deported to Theresienstadt.<sup class=\"footnote-ref\" id=\"fnref-93\"><a href=\"#fn-93\">105</a></sup> Formally, none of the exemptions had been lifted, although at the Wannsee conference it had already been proposed that eventually all remaining \u201cprivileged\u201d Jews in the Reich would be transferred to Theresienstadt.  "
+        "text": "Martha Saraffian was deported to Theresienstadt with Transport AE 1 (<em>Arbeitseinsatz</em>, Ger. for labor assignment) on January 31, 1945.<sup class=\"footnote-ref\" id=\"fnref-91\"><a href=\"#fn-91\">91</a></sup>. Perfidiously, the written order that all the intermarried Jews at Hagibor received claimed that this transport was only a new \u201clabor assignment and not a change in residence or ghettoization.\u201d Hence, everyone transported to Theresienstadt would still officially maintain their formal residence at their locations from where they had been previously ordered to Hagibor.<sup class=\"footnote-ref\" id=\"fnref-92\"><a href=\"#fn-92\">92</a></sup> It seems clear that these instructions only disguised the true character of the transport, even though at this point every remaining Jew in Prague was aware of what was actually going on. Still, it also paid lip service to the regulations regarding Jews in mixed marriages that were still in place at this time, even though the RSHA had effectively decided that all remaining intermarried Jews, except for some elderly, would be deported to Theresienstadt.<sup class=\"footnote-ref\" id=\"fnref-93\"><a href=\"#fn-93\">93</a></sup> Formally, none of the exemptions had been lifted, although at the Wannsee conference it had already been proposed that eventually all remaining \u201cprivileged\u201d Jews in the Reich would be transferred to Theresienstadt.  "
       }
     },
     {
@@ -1346,7 +1359,7 @@
       "data": {
         "id": "fn-91",
         "label": "91",
-        "text": "Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078444, Marta Saraffianov\u00e1."
+        "text": "<p>Arolsen Archives, 1.1.42, Ghetto Theresienstadt Card File, 5078444, Marta Saraffianov\u00e1.  </p>"
       }
     },
     {
@@ -1354,7 +1367,7 @@
       "data": {
         "id": "fn-92",
         "label": "92",
-        "text": "Jewish Museum in Prague, Collections, SHOAH/DP/11/50b/011, Instructions for dispatching transports: Summons, undated (January 1945)."
+        "text": "<p>Jewish Museum in Prague, Collections, SHOAH/DP/11/50b/011, Instructions for dispatching transports: Summons, undated (January 1945).  </p>"
       }
     },
     {
@@ -1362,14 +1375,14 @@
       "data": {
         "id": "fn-93",
         "label": "93",
-        "text": "Strnad, \u201cFortune,\u201d 185\u201386."
+        "text": "<p>Strnad, \u201cFortune,\u201d 185\u201386.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "From the \u201cOld Reich\u201d (Germany proper) only about 1,901 of the still registered 14,500 Jews \u2013 just over 13% \u00a0\u2013 were eventually deported to Theresienstadt.<sup class=\"footnote-ref\" id=\"fnref-94\"><a href=\"#fn-94\">106</a></sup> In the Protectorate 3,570 were deported to the ghetto and only 2,803 Jews were exempted for various reasons and allowed to stay in Prague.<sup class=\"footnote-ref\" id=\"fnref-95\"><a href=\"#fn-95\">107</a></sup> Hence about 56% of all remaining Jews \u2013 most from mixed marriages and also including children counting-as-Jews (<em>Geltungsjuden</em>) \u2013 were deported. Martha Saraffian\u2019s decision to wrongly give her daughter\u2019s status as Christian saved Noemi Saraffian from ghettoization, as in the Protectorate Jewish children had to be brought along, according to the order.  "
+        "text": "From the \u201cOld Reich\u201d (Germany proper) only about 1,901 of the still registered 14,500 Jews \u2013 just over 13% \u00a0\u2013 were eventually deported to Theresienstadt.<sup class=\"footnote-ref\" id=\"fnref-94\"><a href=\"#fn-94\">94</a></sup> In the Protectorate 3,570 were deported to the ghetto and only 2,803 Jews were exempted for various reasons and allowed to stay in Prague.<sup class=\"footnote-ref\" id=\"fnref-95\"><a href=\"#fn-95\">95</a></sup> Hence about 56% of all remaining Jews \u2013 most from mixed marriages and also including children counting-as-Jews (<em>Geltungsjuden</em>) \u2013 were deported. Martha Saraffian\u2019s decision to wrongly give her daughter\u2019s status as Christian saved Noemi Saraffian from ghettoization, as in the Protectorate Jewish children had to be brought along, according to the order.  "
       }
     },
     {
@@ -1377,7 +1390,7 @@
       "data": {
         "id": "fn-94",
         "label": "94",
-        "text": "Strnad, \u201cFortune,\u201d 188."
+        "text": "<p>Strnad, \u201cFortune,\u201d 188.  </p>"
       }
     },
     {
@@ -1385,14 +1398,14 @@
       "data": {
         "id": "fn-95",
         "label": "95",
-        "text": "Gruner, <em>Holocaust</em>, 368."
+        "text": "<p>Gruner, <em>Holocaust</em>, 368.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Two reasons facilitated the implementation of the ghettoization of Jews from the Protectorate and explain the much higher number, when compared with the \u201cOld Reich.\u201d First, whereas in many other parts of the Reich the infrastructure \u2013 including the persecution apparatus \u2013 had already been severely damaged by the war, the Protectorate had barely been targeted by the aerial bombing campaigns and the terror apparatus of the Nazis was thus still intact.<sup class=\"footnote-ref\" id=\"fnref-96\"><a href=\"#fn-96\">108</a></sup> Second, almost all Jews had already been concentrated in Prague, a large number in Hagibor. This was a significant difference between the Protectorate and other parts of the Reich. It effectively meant that there was no space for decisions by the various local and regional Nazi authorities \u2013 some of whom already saw coming the end of their regime and so, as happened in other German and Austrian regions, simply did not implement the order or were more lenient.  "
+        "text": "Two reasons facilitated the implementation of the ghettoization of Jews from the Protectorate and explain the much higher number, when compared with the \u201cOld Reich.\u201d First, whereas in many other parts of the Reich the infrastructure \u2013 including the persecution apparatus \u2013 had already been severely damaged by the war, the Protectorate had barely been targeted by the aerial bombing campaigns and the terror apparatus of the Nazis was thus still intact.<sup class=\"footnote-ref\" id=\"fnref-96\"><a href=\"#fn-96\">96</a></sup> Second, almost all Jews had already been concentrated in Prague, a large number in Hagibor. This was a significant difference between the Protectorate and other parts of the Reich. It effectively meant that there was no space for decisions by the various local and regional Nazi authorities \u2013 some of whom already saw coming the end of their regime and so, as happened in other German and Austrian regions, simply did not implement the order or were more lenient.  "
       }
     },
     {
@@ -1400,14 +1413,14 @@
       "data": {
         "id": "fn-96",
         "label": "96",
-        "text": "In other regions even the lists of Jews maintained by the Gestapo were lost in the bombings, or the infrastructure was so damaged that transports could no longer be organized."
+        "text": "<p>In other regions even the lists of Jews maintained by the Gestapo were lost in the bombings, or the infrastructure was so damaged that transports could no longer be organized.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Her experiences in the Theresienstadt ghetto, where Martha Saraffian was imprisoned until the liberation in May 1945 and forced to work in the mica plant, constitutes a large part of her testimony, where she describes the terrible conditions and her life in the ghetto in detail. Many of her family members, including her mother, had been in Theresienstadt at one point, before being further deported to concentration and extermination camps. \u201cNobody survived from my family. I was the only one.\u201d One of the family members who was eventually murdered was her father\u2019s sister, Martha\u2019s aunt, Ida Freund, who had been transported in November 1942 from Prague to Theresienstadt. On October 28, 1944 she was deported to Auschwitz, where she was murdered.<sup class=\"footnote-ref\" id=\"fnref-97\"><a href=\"#fn-97\">109</a></sup> Approximately 77,000 Jews from the Protectorate were eventually murdered in the Holocaust.<sup class=\"footnote-ref\" id=\"fnref-98\"><a href=\"#fn-98\">110</a></sup> While slave labor in Theresienstadt resembled the work she had been already forced to perform at Hagibor, the living conditions were even worse. Towards the end, Theresienstadt became the destination of death marches from other concentration camps, bringing thousands of ill prisoners to the ghetto, which eventually caused a huge epidemic. In the last months of its existence, and even after it was liberated, many of the ghetto prisoners died of these diseases.  "
+        "text": "Her experiences in the Theresienstadt ghetto, where Martha Saraffian was imprisoned until the liberation in May 1945 and forced to work in the mica plant, constitutes a large part of her testimony, where she describes the terrible conditions and her life in the ghetto in detail. Many of her family members, including her mother, had been in Theresienstadt at one point, before being further deported to concentration and extermination camps. \u201cNobody survived from my family. I was the only one.\u201d One of the family members who was eventually murdered was her father\u2019s sister, Martha\u2019s aunt, Ida Freund, who had been transported in November 1942 from Prague to Theresienstadt. On October 28, 1944 she was deported to Auschwitz, where she was murdered.<sup class=\"footnote-ref\" id=\"fnref-97\"><a href=\"#fn-97\">97</a></sup> Approximately 77,000 Jews from the Protectorate were eventually murdered in the Holocaust.<sup class=\"footnote-ref\" id=\"fnref-98\"><a href=\"#fn-98\">98</a></sup> While slave labor in Theresienstadt resembled the work she had been already forced to perform at Hagibor, the living conditions were even worse. Towards the end, Theresienstadt became the destination of death marches from other concentration camps, bringing thousands of ill prisoners to the ghetto, which eventually caused a huge epidemic. In the last months of its existence, and even after it was liberated, many of the ghetto prisoners died of these diseases.  "
       }
     },
     {
@@ -1415,7 +1428,7 @@
       "data": {
         "id": "fn-97",
         "label": "97",
-        "text": "Holocaust.cz, database of victims, Ida Freundov\u00e1, https://www.holocaust.cz/databaze-obeti/obet/85974-ida-freundova."
+        "text": "<p>Holocaust.cz, database of victims, Ida Freundov\u00e1, https://www.holocaust.cz/databaze-obeti/obet/85974-ida-freundova.  </p>"
       }
     },
     {
@@ -1423,7 +1436,7 @@
       "data": {
         "id": "fn-98",
         "label": "98",
-        "text": "Gerwarth, <em>Hitler\u2019s Hangman</em>, 258."
+        "text": "<p>Gerwarth, <em>Hitler\u2019s Hangman</em>, 258.  </p>"
       }
     },
     {
@@ -1451,7 +1464,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>Nothing has really changed for us since the war, other than that we are no longer living with the same fear. Our mental condition is the same, because the war of nerves has not ended for us. Currently a mission for refugees is taking place, which can emigrate to certain countries from German camps. Couldn\u2019t something be done for us too? We do not care where we go, ultimately maybe with the help of UNRRA [\u2026] Us, who were really harmed and hurt, we are not being helped. So I want to help myself and all I hope for is that my husband will change his mind and decides to leave illegally and then brings us to him. [\u2026] Life is already cross for me, but I have children and it hurts me so much that after these terrible years they still have to live through this. I may have to part with the place, where I belong, because that will be the only thing causing change. My husband still hopes for help from outside but I know that you have to help yourself, that you cannot rely on nobody else.<sup class=\"footnote-ref\" id=\"fnref-99\"><a href=\"#fn-99\">111</a></sup> </p>"
+        "text": "<p>Nothing has really changed for us since the war, other than that we are no longer living with the same fear. Our mental condition is the same, because the war of nerves has not ended for us. Currently a mission for refugees is taking place, which can emigrate to certain countries from German camps. Couldn\u2019t something be done for us too? We do not care where we go, ultimately maybe with the help of UNRRA [\u2026] Us, who were really harmed and hurt, we are not being helped. So I want to help myself and all I hope for is that my husband will change his mind and decides to leave illegally and then brings us to him. [\u2026] Life is already cross for me, but I have children and it hurts me so much that after these terrible years they still have to live through this. I may have to part with the place, where I belong, because that will be the only thing causing change. My husband still hopes for help from outside but I know that you have to help yourself, that you cannot rely on nobody else.<sup class=\"footnote-ref\" id=\"fnref-99\"><a href=\"#fn-99\">99</a></sup> </p>"
       }
     },
     {
@@ -1459,14 +1472,14 @@
       "data": {
         "id": "fn-99",
         "label": "99",
-        "text": "Arolsen Archives, 3.2.1/1718000, Hrand Saraffian."
+        "text": "<p>Arolsen Archives, 3.2.1/1718000, Hrand Saraffian.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Eventually in 1947 the family was able to emigrate to Argentina, but this did not mean the new beginning and lives they were hoping for. It was worst for her husband, Hrand: \u201cHe went every Sunday to the port with us and said, I have to see the ship that brought me here. He said <em>das verfluchte Schiff</em> [the cursed Ship].\u201d The ship\u2019s name was Desirade \u2013 French for desire \u2013 and arrived in Buenos Aires on July 21, 1947.<sup class=\"footnote-ref\" id=\"fnref-100\"><a href=\"#fn-100\">112</a></sup> Hrand Saraffian died of cancer four years after they arrived in Argentina. \u201cIt was very hard in Argentina for my children and for myself. And for my husband.\u201d Adapting to the new surroundings was difficult and the children lost their father when they were still teenagers. She also remembers experiencing high levels of antisemitism in Argentina.  "
+        "text": "Eventually in 1947 the family was able to emigrate to Argentina, but this did not mean the new beginning and lives they were hoping for. It was worst for her husband, Hrand: \u201cHe went every Sunday to the port with us and said, I have to see the ship that brought me here. He said <em>das verfluchte Schiff</em> [the cursed Ship].\u201d The ship\u2019s name was Desirade \u2013 French for desire \u2013 and arrived in Buenos Aires on July 21, 1947.<sup class=\"footnote-ref\" id=\"fnref-100\"><a href=\"#fn-100\">100</a></sup> Hrand Saraffian died of cancer four years after they arrived in Argentina. \u201cIt was very hard in Argentina for my children and for myself. And for my husband.\u201d Adapting to the new surroundings was difficult and the children lost their father when they were still teenagers. She also remembers experiencing high levels of antisemitism in Argentina.  "
       }
     },
     {
@@ -1474,7 +1487,7 @@
       "data": {
         "id": "fn-100",
         "label": "100",
-        "text": "List of passengers of the ship Desirade to Argentina, arrived at Buenos Aires on July 21, 1947, <a href=\"https://www.hebrewsurnames.com/arrival_DESIRADE_1947-07-21\">https://www.hebrewsurnames.com/arrival_DESIRADE_1947-07-21</a>."
+        "text": "<p>List of passengers of the ship Desirade to Argentina, arrived at Buenos Aires on July 21, 1947, <a href=\"https://www.hebrewsurnames.com/arrival_DESIRADE_1947-07-21\">https://www.hebrewsurnames.com/arrival_DESIRADE_1947-07-21</a>.  </p>"
       }
     },
     {
@@ -1488,7 +1501,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In the mid-1990s Martha Saraffian and a small group of other Holocaust survivors sued several major European insurance companies in a class action lawsuit in New York City.<sup class=\"footnote-ref\" id=\"fnref-101\"><a href=\"#fn-101\">113</a></sup> Saraffian maintained that the successor firm of the Victoria insurance company, which had issued policies to her relatives and family in Czechoslovakia in the interwar period, had refused to accept her claims. This lawsuit, the first of its kind, sent shockwaves through many German and European company headquarters, triggered a wave of laws in the United States facilitating Holocaust restitution, and led to the establishment of the International Commission on Holocaust Era Insurance Claims. As a result of international negotiations, in the year 2000 Germany established the Federal Foundation \u201cRemembrance, Responsibility and Future\u201d (<em>Stiftung</em> \u201cErinnerung, Verantwortung und Zukunft\u201d),<sup class=\"footnote-ref\" id=\"fnref-102\"><a href=\"#fn-102\">114</a></sup> which compensated former German forced laborers and other victims of the Nazi. Other European countries, such as Austria and the Netherlands, followed suit.  "
+        "text": "In the mid-1990s Martha Saraffian and a small group of other Holocaust survivors sued several major European insurance companies in a class action lawsuit in New York City.<sup class=\"footnote-ref\" id=\"fnref-101\"><a href=\"#fn-101\">101</a></sup> Saraffian maintained that the successor firm of the Victoria insurance company, which had issued policies to her relatives and family in Czechoslovakia in the interwar period, had refused to accept her claims. This lawsuit, the first of its kind, sent shockwaves through many German and European company headquarters, triggered a wave of laws in the United States facilitating Holocaust restitution, and led to the establishment of the International Commission on Holocaust Era Insurance Claims. As a result of international negotiations, in the year 2000 Germany established the Federal Foundation \u201cRemembrance, Responsibility and Future\u201d (<em>Stiftung</em> \u201cErinnerung, Verantwortung und Zukunft\u201d),<sup class=\"footnote-ref\" id=\"fnref-102\"><a href=\"#fn-102\">102</a></sup> which compensated former German forced laborers and other victims of the Nazi. Other European countries, such as Austria and the Netherlands, followed suit.  "
       }
     },
     {
@@ -1496,7 +1509,7 @@
       "data": {
         "id": "fn-101",
         "label": "101",
-        "text": "Cornell et al. vs. Assicurazioni Generali et al. Civil Action 97 Civ. 2262, United States District Court, Southern District of New York."
+        "text": "<p>Cornell et al. vs. Assicurazioni Generali et al. Civil Action 97 Civ. 2262, United States District Court, Southern District of New York.  </p>"
       }
     },
     {
@@ -1504,14 +1517,14 @@
       "data": {
         "id": "fn-102",
         "label": "102",
-        "text": "<a href=\"https://www.stiftung-evz.de/start.html\">https://www.stiftung-evz.de/start.html</a>."
+        "text": "<p><a href=\"https://www.stiftung-evz.de/start.html\">https://www.stiftung-evz.de/start.html</a>.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "It is not clear if Martha Saraffian herself, who died on December 19, 2006,<sup class=\"footnote-ref\" id=\"fnref-103\"><a href=\"#fn-103\">115</a></sup> ultimately received any compensation. Her effort to receive some sort of justice, however, made a lasting impact.  "
+        "text": "It is not clear if Martha Saraffian herself, who died on December 19, 2006,<sup class=\"footnote-ref\" id=\"fnref-103\"><a href=\"#fn-103\">103</a></sup> ultimately received any compensation. Her effort to receive some sort of justice, however, made a lasting impact.  "
       }
     },
     {
@@ -1519,7 +1532,7 @@
       "data": {
         "id": "fn-103",
         "label": "103",
-        "text": "United States Social Security Applications and Claims, 1936\u20132007."
+        "text": "<p>United States Social Security Applications and Claims, 1936\u20132007.  </p>"
       }
     }
   ]

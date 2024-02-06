@@ -3,54 +3,60 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "YaleNewRoman";
-    src: url("./../../public/fonts/yalenew-roman-webfont.woff2") format("woff2"),
-        url("./../../public/fonts/yalenew-roman-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "YaleNewRoman";
+  src:
+    url("../../public/fonts/yalenew-roman-webfont.woff2") format("woff2"),
+    url("../../public/fonts/yalenew-roman-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "YaleNewRoman";
-    src: url("./../../public/fonts/yalenew-bold-webfont.woff2") format("woff2"),
-        url("./../../public/fonts/yalenew-bold-webfont.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "YaleNewRoman";
+  src:
+    url("../../public/fonts/yalenew-bold-webfont.woff2") format("woff2"),
+    url("../../public/fonts/yalenew-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "YaleNewRoman";
-    src: url("./../../public/fonts/yalenew-italic-webfont.woff2") format("woff2"),
-        url("./../../public/fonts/yalenew-italic-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: italic;
+  font-family: "YaleNewRoman";
+  src:
+    url("../../public/fonts/yalenew-italic-webfont.woff2") format("woff2"),
+    url("../../public/fonts/yalenew-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "YaleNewRoman";
-    src: url("./../../public/fonts/yalenew-bolditalic-webfont.woff2") format("woff2"),
-        url("./../../public/fonts/yalenew-bolditalic-webfont.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
+  font-family: "YaleNewRoman";
+  src:
+    url("../../public/fonts/yalenew-bolditalic-webfont.woff2") format("woff2"),
+    url("../../public/fonts/yalenew-bolditalic-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "Mallory";
-    src: url("./../../public/fonts/Mallory-Medium.woff"), url("./../../public/fonts/Mallory-Medium.woff2");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Mallory";
+  src:
+    url("../../public/fonts/Mallory-Medium.woff2") format("woff2"),
+    url("../../public/fonts/Mallory-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .sans-title-ff {
-    font-family: "Mallory", Arial, Helvetica, sans-serif;
+  font-family: "Mallory", Arial, Helvetica, sans-serif;
 }
 
 .sans-copy-ff {
-    font-family: Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
 }
 
 .serif-title-ff,
 .serif-copy-ff {
-    font-family: "YaleNewRoman", "Times New Roman", Times, serif;
+  font-family: "YaleNewRoman", "Times New Roman", Times, serif;
 }

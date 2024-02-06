@@ -1,5 +1,18 @@
 {
-  "meta": null,
+  "meta": {
+    "slug": "hvt-0764",
+    "smallVideoPath": "https://d12q9fe14kxf9b.cloudfront.net/0764/background-loop-640.mp4",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/0764/background-loop-1280.mp4",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/0764/poster.jpg",
+    "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/830/transcript?",
+    "hvtID": "0764",
+    "supertitle": "Introduction to the testimony of",
+    "title": "Gerhart M. Riegner",
+    "author": "Gil Rubin",
+    "affiliation": "Yale University",
+    "essayPath": "/data/intro-hvt-0764.json",
+    "publicationDate": "February 1, 2021"
+  },
   "blocks": [
     {
       "type": "paragraph",
@@ -27,7 +40,7 @@
       "data": {
         "id": "fn-1",
         "label": "1",
-        "text": "See Walter Laqeuer, <em>The Terrible Secret: Suppression of the Truth about Hitler\u2019s \u201cfinal solution\u201d</em> (Boston: Little, Brown, 1980) as well as Laqueuer and Richard Breitman, <em>Breaking the Silence: The German who Exposed the Final Solution</em> (New York: Simon and Shuster, 1986). See also Laqueur\u2019s recent reflections on his relationship with Riegner and the history of \u201cRiegner Telegram,\u201d Lacquer \u201cThe Riegner Cable, and the Knowing Failure of the West to Act During the Shoa,\u201d <em>Tablet Magazine</em>, August 10, 2015, available at: <a href=\"https://www.tabletmag.com/jewish-arts-and-culture/books/192421/riegner-cable-shoah\">https://www.tabletmag.com/jewish-arts-and-culture/books/192421/riegner-cable-shoah</a>. On the dissemination of news about the Holocaust in the Allied capitals see Yosef Gorny, <em>The Jewish Press and the Holocaust, 1939\u20131945: Palestine, Britain, the United States, and the Soviet Union</em> (New York: Cambridge University Press, 2012) as well as Deborah E. Lipstadt, <em>Beyond Belief: The American Press and the Coming of the Holocaust,</em> 1933-1945 (New York: The Free Press, 1986)."
+        "text": "<p>See Walter Laqeuer, <em>The Terrible Secret: Suppression of the Truth about Hitler\u2019s \u201cfinal solution\u201d</em> (Boston: Little, Brown, 1980) as well as Laqueuer and Richard Breitman, <em>Breaking the Silence: The German who Exposed the Final Solution</em> (New York: Simon and Shuster, 1986). See also Laqueur\u2019s recent reflections on his relationship with Riegner and the history of \u201cRiegner Telegram,\u201d Lacquer \u201cThe Riegner Cable, and the Knowing Failure of the West to Act During the Shoa,\u201d <em>Tablet Magazine</em>, August 10, 2015, available at: <a href=\"https://www.tabletmag.com/jewish-arts-and-culture/books/192421/riegner-cable-shoah\">https://www.tabletmag.com/jewish-arts-and-culture/books/192421/riegner-cable-shoah</a>. On the dissemination of news about the Holocaust in the Allied capitals see Yosef Gorny, <em>The Jewish Press and the Holocaust, 1939\u20131945: Palestine, Britain, the United States, and the Soviet Union</em> (New York: Cambridge University Press, 2012) as well as Deborah E. Lipstadt, <em>Beyond Belief: The American Press and the Coming of the Holocaust,</em> 1933-1945 (New York: The Free Press, 1986).  </p>"
       }
     },
     {
@@ -42,7 +55,7 @@
       "data": {
         "id": "fn-2",
         "label": "2",
-        "text": "Gerhart M. Riegner, <em>Never Despair: Sixty Years in the Service of the Jewish People and the Cause of Human Rights</em> (Chicago: Ivan R. Dee, 2006), 3."
+        "text": "<p>Gerhart M. Riegner, <em>Never Despair: Sixty Years in the Service of the Jewish People and the Cause of Human Rights</em> (Chicago: Ivan R. Dee, 2006), 3.\u00a0  </p>"
       }
     },
     {
@@ -50,7 +63,7 @@
       "data": {
         "id": "fn-3",
         "label": "3",
-        "text": "Ibid., 4."
+        "text": "<p>Ibid., 4.  </p>"
       }
     },
     {
@@ -65,7 +78,7 @@
       "data": {
         "id": "fn-4",
         "label": "4",
-        "text": "Ibid., 12-13."
+        "text": "<p>Ibid., 12-13.  </p>"
       }
     },
     {
@@ -73,7 +86,7 @@
       "data": {
         "id": "fn-5",
         "label": "5",
-        "text": "Ibid., 12."
+        "text": "<p>Ibid., 12.  </p>"
       }
     },
     {
@@ -81,7 +94,7 @@
       "data": {
         "id": "fn-6",
         "label": "6",
-        "text": "Ibid., 14."
+        "text": "<p>Ibid., 14.  </p>"
       }
     },
     {
@@ -89,7 +102,7 @@
       "data": {
         "id": "fn-7",
         "label": "7",
-        "text": "Ibid., 12."
+        "text": "<p>Ibid., 12.\u00a0  </p>"
       }
     },
     {
@@ -111,7 +124,7 @@
       "data": {
         "id": "fn-8",
         "label": "8",
-        "text": "See also Ibid., 22."
+        "text": "<p>See also Ibid., 22.  </p>"
       }
     },
     {
@@ -126,7 +139,7 @@
       "data": {
         "id": "fn-9",
         "label": "9",
-        "text": "For more on Joachim Prinz see footnote 26."
+        "text": "<p>For more on Joachim Prinz see footnote 26.  </p>"
       }
     },
     {
@@ -141,7 +154,7 @@
       "data": {
         "id": "fn-10",
         "label": "10",
-        "text": "For more on French policies toward Jewish refugees see Viki Caron, <em>Uneasy Asylum: France and the Jewish Refugee Crisis, 1933-1942</em> (Stanford: Stanford University Press, 1999)."
+        "text": "<p>For more on French policies toward Jewish refugees see Viki Caron, <em>Uneasy Asylum: France and the Jewish Refugee Crisis, 1933-1942</em> (Stanford: Stanford University Press, 1999).  </p>"
       }
     },
     {
@@ -156,7 +169,7 @@
       "data": {
         "id": "fn-11",
         "label": "11",
-        "text": "See David Engel, \u201cMinorities Treaties\u201d, YIVO encyclopedia, at: <a href=\"https://yivoencyclopedia.org/article.aspx/Minorities_Treaties\">https://yivoencyclopedia.org/article.aspx/Minorities_Treaties</a>."
+        "text": "<p>See David Engel, \u201cMinorities Treaties\u201d, YIVO encyclopedia, at: <a href=\"https://yivoencyclopedia.org/article.aspx/Minorities_Treaties\">https://yivoencyclopedia.org/article.aspx/Minorities_Treaties</a>.  </p>"
       }
     },
     {
@@ -171,7 +184,7 @@
       "data": {
         "id": "fn-12",
         "label": "12",
-        "text": "See James Loeffler, <em>Rooted Cosmopolitans: Jews and Human Rights in the Twentieth Century</em> (New Haven, CT: Yale University Press, 2018) and James Loeffler \u201c\u2018The Famous Trinity of 1917\u2019: Jacob Robinson and the Lost Tradition of Zionist Internationalism,\u201d <em>Simon Dubnow Institute Yearbook</em> 14 (2015): 211-38."
+        "text": "<p>See James Loeffler, <em>Rooted Cosmopolitans: Jews and Human Rights in the Twentieth Century</em> (New Haven, CT: Yale University Press, 2018) and James Loeffler \u201c\u2018The Famous Trinity of 1917\u2019: Jacob Robinson and the Lost Tradition of Zionist Internationalism,\u201d <em>Simon Dubnow Institute Yearbook</em> 14 (2015): 211-38.  </p>"
       }
     },
     {
@@ -179,7 +192,7 @@
       "data": {
         "id": "fn-13",
         "label": "13",
-        "text": "For scholarship on the World Jewish Congress see Zohar Segev, <em>The World Jewish Congress during the Holocaust: Between Activism and Restraint</em> (Berlin: De Gruyter, 2014); Loeffler, _Rooted Cosmopolitans; _Nathan Kurz, \u201cA Sphere above the Nations?: The Rise and Fall of International Jewish Human Rights Politics, 1945-1975\u201d (Doctoral dissertation, Department of History, Yale University, 2015); World Jewish Congress, <em>Unity in Dispersion. A History of the World Jewish Congress</em> (New York: World Jewish Congress, 1948)."
+        "text": "<p>For scholarship on the World Jewish Congress see Zohar Segev, <em>The World Jewish Congress during the Holocaust: Between Activism and Restraint</em> (Berlin: De Gruyter, 2014); Loeffler, _Rooted Cosmopolitans; _Nathan Kurz, \u201cA Sphere above the Nations?: The Rise and Fall of International Jewish Human Rights Politics, 1945-1975\u201d (Doctoral dissertation, Department of History, Yale University, 2015); World Jewish Congress, <em>Unity in Dispersion. A History of the World Jewish Congress</em> (New York: World Jewish Congress, 1948).  </p>"
       }
     },
     {
@@ -208,7 +221,7 @@
       "data": {
         "id": "fn-14",
         "label": "14",
-        "text": "For more on this topic see footnote 32."
+        "text": "<p>For more on this topic see footnote 32.  </p>"
       }
     },
     {
@@ -251,7 +264,7 @@
       "data": {
         "id": "fn-15",
         "label": "15",
-        "text": "See Dan Diner, <em>Beyond the Conceivable: Studies on Germany, Nazism and the Holocaust</em> (Berkeley: University of California Press, 2000)."
+        "text": "<p>See Dan Diner, <em>Beyond the Conceivable: Studies on Germany, Nazism and the Holocaust</em> (Berkeley: University of California Press, 2000).  </p>"
       }
     },
     {
@@ -266,7 +279,7 @@
       "data": {
         "id": "fn-16",
         "label": "16",
-        "text": "For a reporting of these examples see Joseph B. Schechtman, \u201cMore Circumspection!\u201d <em>Zionews</em> IV, nos. 23-24 (February 28, 1943): 16-18. For studies on reportage on the Holocaust in the Jewish and general press see Gorny, _The Jewish Press and the Holocaust, _as well as Lipstadt, <em>Beyond Belief</em>."
+        "text": "<p>For a reporting of these examples see Joseph B. Schechtman, \u201cMore Circumspection!\u201d <em>Zionews</em> IV, nos. 23-24 (February 28, 1943): 16-18. For studies on reportage on the Holocaust in the Jewish and general press see Gorny, _The Jewish Press and the Holocaust, _as well as Lipstadt, <em>Beyond Belief</em>.  </p>"
       }
     },
     {
@@ -281,7 +294,7 @@
       "data": {
         "id": "fn-17",
         "label": "17",
-        "text": "For a discussion of this topic see Gil Rubin, \u201cThe Future of the Jews: Planning for the Postwar Jewish World, 1939-1946\u201d(Doctoral Dissertation, Columbia University, 2017)."
+        "text": "<p>For a discussion of this topic see Gil Rubin, \u201cThe Future of the Jews: Planning for the Postwar Jewish World, 1939-1946\u201d(Doctoral Dissertation, Columbia University, 2017).  </p>"
       }
     },
     {

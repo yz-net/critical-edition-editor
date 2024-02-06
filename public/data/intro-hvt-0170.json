@@ -1,12 +1,16 @@
 {
   "meta": {
+    "slug": "hvt-0170",
+    "smallVideoPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background-loop-640.mp4",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background-loop-1280.mp4",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/poster.jpg",
+    "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/241/transcript?",
     "supertitle": "Introduction to the testimony of",
     "title": "Hans Frei",
     "hvtID": "0170",
     "author": "Ion Popa",
+    "affiliation": "University of Manchester",
     "essayPath": "/data/intro-hvt-0170.json",
-    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background.png",
-    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/0170/background-loop.mp4",
     "publicationDate": "February 1, 2021"
   },
   "blocks": [
@@ -14,7 +18,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Conversion to Christianity was something hundreds of thousands of Jews experienced before and during the Holocaust. Joseph Jacobs estimates that throughout the nineteenth century the number of Jewish conversions to Christianity worldwide was 204,542. The greatest numbers were in Russia (84,536), Austria-Hungary (44,756), Great Britain (28,830), and Germany (22,520).<sup class=\"footnote-ref\" id=\"fnref-1\"><a href=\"#fn-1\">1</a></sup> Unfortunately we lack such centralised figures from 1900 to the period of the Holocaust, but we know from post-war testimonies and available scholarship<sup class=\"footnote-ref\" id=\"fnref-2\"><a href=\"#fn-2\">2</a></sup> that the trend of conversions intensified in many countries immediately prior to and during the Holocaust. "
+        "text": "Conversion to Christianity was something hundreds of thousands of Jews experienced before and during the Holocaust. Joseph Jacobs estimates that throughout the nineteenth century the number of Jewish conversions to Christianity worldwide was 204,542. The greatest numbers were in Russia (84,536), Austria-Hungary (44,756), Great Britain (28,830), and Germany (22,520).<sup class=\"footnote-ref\" id=\"fnref-1\"><a href=\"#fn-1\">1</a></sup> Jacobs provides separate data for various regions that would later form Germany and/or Austria-Hungary, as well as total data for these countries.  Unfortunately we lack such centralised figures from 1900 to the period of the Holocaust, but we know from post-war testimonies and available scholarship<sup class=\"footnote-ref\" id=\"fnref-2\"><a href=\"#fn-2\">2</a></sup> that the trend of conversions intensified in many countries immediately prior to and during the Holocaust. "
       }
     },
     {
@@ -22,7 +26,7 @@
       "data": {
         "id": "fn-1",
         "label": "1",
-        "text": "Joseph Jacobs, \u201cStatistics,\u201d in <em>The Jewish Encyclopaedia</em>, ed. Isidore Singer (New York and London: Funk and Wagnalls Company, 1905), vol. 11, 530. An online version is available at: <a href=\"http://www.jewishencyclopedia.com/articles/13992-statistics\">http://www.jewishencyclopedia.com/articles/13992-statistics</a>. Jacobs provides separate data for various regions that would later form Germany and/or Austria-Hungary, as well as total data for these countries."
+        "text": "<p>Joseph Jacobs, \u201cStatistics,\u201d in <em>The Jewish Encyclopaedia</em>, ed. Isidore Singer (New York and London: Funk and Wagnalls Company, 1905), vol. 11, 530. An online version is available at: <a href=\"http://www.jewishencyclopedia.com/articles/13992-statistics\">http://www.jewishencyclopedia.com/articles/13992-statistics</a>.</p>"
       }
     },
     {
@@ -30,7 +34,7 @@
       "data": {
         "id": "fn-2",
         "label": "2",
-        "text": "See for example Todd Endelman, <em>Leaving the Jewish Fold: Conversion and Radical Assimilation in Modern Jewish History</em> (Princeton: Princeton University Press, 2015), 150-158. See also Viktor Karadi, <em>The Jews of Europe in the Modern Era</em> (Budapest and New York: Central European University Press, 2004), 38."
+        "text": "<p>See for example Todd Endelman, <em>Leaving the Jewish Fold: Conversion and Radical Assimilation in Modern Jewish History</em> (Princeton: Princeton University Press, 2015), 150-158. See also Viktor Karadi, <em>The Jews of Europe in the Modern Era</em> (Budapest and New York: Central European University Press, 2004), 38.  </p>"
       }
     },
     {
@@ -59,7 +63,7 @@
       "data": {
         "id": "fn-3",
         "label": "3",
-        "text": "See more on this in Ion Popa, \u201cExperiences of Jews who Converted to Christianity before and during the Holocaust: An Overview of Testimonies in the Fortunoff Video Archive,\u201d <em>S:I.M.O.N. SHOAH: INTERVENTION. METHODS. DOCUMENTATION</em> 6, no. 2 (2020): 75-86."
+        "text": "<p>See more on this in Ion Popa, \u201cExperiences of Jews who Converted to Christianity before and during the Holocaust: An Overview of Testimonies in the Fortunoff Video Archive,\u201d <em>S:I.M.O.N. SHOAH: INTERVENTION. METHODS. DOCUMENTATION</em> 6, no. 2 (2020): 75-86.  </p>"
       }
     },
     {
@@ -67,7 +71,7 @@
       "data": {
         "id": "fn-4",
         "label": "4",
-        "text": "Yaakov Ariel, \u201cFrom Faith to Faith: Conversions and De-Conversions during the Holocaust,\u201d in <em>Simon Dubnow Institute Yearbook</em>, ed. Dan Diner (G\u00f6ttingen: Vandenhoeck &amp; Ruprecht, 2013), 38."
+        "text": "<p>Yaakov Ariel, \u201cFrom Faith to Faith: Conversions and De-Conversions during the Holocaust,\u201d in <em>Simon Dubnow Institute Yearbook</em>, ed. Dan Diner (G\u00f6ttingen: Vandenhoeck &amp; Ruprecht, 2013), 38.  </p>"
       }
     },
     {
@@ -75,7 +79,7 @@
       "data": {
         "id": "fn-5",
         "label": "5",
-        "text": "Ronald Berger, \u201cTo Be Or Not To Be: The Holocaust And Jewish Identity In The Postwar Era,\u201d <em>Humanity and Society</em> 31, no. 1 (February 2007): 24-42; see also Julia Matveev, \u201cVladimir Vertlib On \u2018Jewish Identity In Particular and Identity and Belonging In General,\u2019\u201d <em>German Life and Letters</em> 68, 3 (July 2015): 1468-83."
+        "text": "<p>Ronald Berger, \u201cTo Be Or Not To Be: The Holocaust And Jewish Identity In The Postwar Era,\u201d <em>Humanity and Society</em> 31, no. 1 (February 2007): 24-42; see also Julia Matveev, \u201cVladimir Vertlib On \u2018Jewish Identity In Particular and Identity and Belonging In General,\u2019\u201d <em>German Life and Letters</em> 68, 3 (July 2015): 1468-83.  </p>"
       }
     },
     {
@@ -83,7 +87,7 @@
       "data": {
         "id": "fn-6",
         "label": "6",
-        "text": "See for example Katarzyna Prot-Klinger, \u201cBroken Identity. The Impact of the Holocaust on Identity in Romanian and Polish Jews,\u201d <em>The Israel Journal of Psychiatry and Related Sciences</em> 45, no. 4 (2008): 239-46."
+        "text": "<p>See for example Katarzyna Prot-Klinger, \u201cBroken Identity. The Impact of the Holocaust on Identity in Romanian and Polish Jews,\u201d <em>The Israel Journal of Psychiatry and Related Sciences</em> 45, no. 4 (2008): 239-46.  </p>"
       }
     },
     {
@@ -91,7 +95,7 @@
       "data": {
         "id": "fn-7",
         "label": "7",
-        "text": "Eva Fleischner, \u201c\u2018Who am I?\u2019 The Struggle for Religious Identity of Jewish Children Hidden by Christians During the Shoah,\u201d in <em>Gray Zones: Ambiguity and Compromise in the Holocaust and its Aftermath</em>, eds. Jonathan Petropoulos and John K. Roth (London: Berghahn Books, 2012), 107-117; see also Joanna Michlic, \u201c\u2018Who Am I?\u2019 The Identity of Jewish Children in Poland, 1945-1949,\u201d <em>Polin</em> 20 (2007): 98-121."
+        "text": "<p>Eva Fleischner, \u201c\u2018Who am I?\u2019 The Struggle for Religious Identity of Jewish Children Hidden by Christians During the Shoah,\u201d in <em>Gray Zones: Ambiguity and Compromise in the Holocaust and its Aftermath</em>, eds. Jonathan Petropoulos and John K. Roth (London: Berghahn Books, 2012), 107-117; see also Joanna Michlic, \u201c\u2018Who Am I?\u2019 The Identity of Jewish Children in Poland, 1945-1949,\u201d <em>Polin</em> 20 (2007): 98-121.  </p>"
       }
     },
     {
@@ -106,7 +110,7 @@
       "data": {
         "id": "fn-8",
         "label": "8",
-        "text": "Yaakov, \u201cFrom Faith to Faith,\u201d 38."
+        "text": "<p>Yaakov, \u201cFrom Faith to Faith,\u201d 38.  </p>"
       }
     },
     {
@@ -114,7 +118,7 @@
       "data": {
         "id": "fn-9",
         "label": "9",
-        "text": "Randolph Braham, <em>The Politics of Genocide: The Holocaust in Hungary</em>, Third Edition (New York: Columbia University Press, 2016), vol. 1, 88."
+        "text": "<p>Randolph Braham, <em>The Politics of Genocide: The Holocaust in Hungary</em>, Third Edition (New York: Columbia University Press, 2016), vol. 1, 88.  </p>"
       }
     },
     {
@@ -122,7 +126,7 @@
       "data": {
         "id": "fn-10",
         "label": "10",
-        "text": "William McCagg Jr., \u201cJewish Conversion in Hungary in Modern Times,\u201d in <em>Jewish Apostasy in the Modern World</em>, ed. Todd Endelman (New York/London: Holmes and Meier, 1987), 142-64; see also Endelman, <em>Leaving the Jewish Fold</em>, 152."
+        "text": "<p>William McCagg Jr., \u201cJewish Conversion in Hungary in Modern Times,\u201d in <em>Jewish Apostasy in the Modern World</em>, ed. Todd Endelman (New York/London: Holmes and Meier, 1987), 142-64; see also Endelman, <em>Leaving the Jewish Fold</em>, 152.  </p>"
       }
     },
     {
@@ -130,7 +134,7 @@
       "data": {
         "id": "fn-11",
         "label": "11",
-        "text": "Gershon David Hundert (ed.), <em>The Yivo Encyclopedia of Jews in Eastern Europe</em> (New Haven/London: Yale University Press, 2008), vol. 1, 348-51. The section on \u201cConversion\u201d is written by Magda Teter."
+        "text": "<p>Gershon David Hundert (ed.), <em>The Yivo Encyclopedia of Jews in Eastern Europe</em> (New Haven/London: Yale University Press, 2008), vol. 1, 348-51. The section on \u201cConversion\u201d is written by Magda Teter.  </p>"
       }
     },
     {
@@ -138,7 +142,7 @@
       "data": {
         "id": "fn-12",
         "label": "12",
-        "text": "ACSIER [The Archive of the Centre for the Study of the History of Romanian Jews] III/474, 1-2."
+        "text": "<p>ACSIER [The Archive of the Centre for the Study of the History of Romanian Jews] III/474, 1-2.  </p>"
       }
     },
     {
@@ -160,7 +164,7 @@
       "data": {
         "id": "fn-13",
         "label": "13",
-        "text": "See for example Yale University Sterling Memorial Library, Holocaust Survivors Film Project records, MS 1909 Box 1, Folder 1, a report on \u201cexisting literature on the psychological effects of videotaping on interviews\u201d (undated, but the next document in the box is from December 1979, so this report was most likely written before). See also \u201cSummary of meeting on 2 June, 1981 with Professor Geoffrey Hartman, Dr. Dori Laub, and Laurel Vlock of the Holocaust Survivors Film Project,\u201d document dated June 16, 1981 (the pages in the box are not numbered)."
+        "text": "<p>See for example Yale University Sterling Memorial Library, Holocaust Survivors Film Project records, MS 1909 Box 1, Folder 1, a report on \u201cexisting literature on the psychological effects of videotaping on interviews\u201d (undated, but the next document in the box is from December 1979, so this report was most likely written before). See also \u201cSummary of meeting on 2 June, 1981 with Professor Geoffrey Hartman, Dr. Dori Laub, and Laurel Vlock of the Holocaust Survivors Film Project,\u201d document dated June 16, 1981 (the pages in the box are not numbered).  </p>"
       }
     },
     {
@@ -168,7 +172,7 @@
       "data": {
         "id": "fn-14",
         "label": "14",
-        "text": "See Ibid., Box 2, Folder 5, \u201cProject procedures\u201d (no date, but the documents in the box before and after are from 1981), describing procedures for pre-interview, interview, and post-interview."
+        "text": "<p>See Ibid., Box 2, Folder 5, \u201cProject procedures\u201d (no date, but the documents in the box before and after are from 1981), describing procedures for pre-interview, interview, and post-interview.  </p>"
       }
     },
     {
@@ -204,7 +208,7 @@
       "data": {
         "id": "fn-15",
         "label": "15",
-        "text": "For a discussion of the psychological impact of conversion on Jewish identity see: Prot-Klinger, \u201cBroken Identity,\u201d 239-246."
+        "text": "<p>For a discussion of the psychological impact of conversion on Jewish identity see: Prot-Klinger, \u201cBroken Identity,\u201d 239-246.  </p>"
       }
     },
     {
@@ -219,7 +223,7 @@
       "data": {
         "id": "fn-16",
         "label": "16",
-        "text": "Susan M., HVT 537.",
+        "text": "<p>Susan M., HVT 537.  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/108964?media=108964&e=29\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -235,7 +239,7 @@
       "data": {
         "id": "fn-17",
         "label": "17",
-        "text": "Peter B., HVT 2736."
+        "text": "<p>Peter B., HVT 2736.  </p>"
       }
     },
     {
@@ -250,7 +254,7 @@
       "data": {
         "id": "fn-18",
         "label": "18",
-        "text": "Susan B., HVT 2008."
+        "text": "<p>Susan B., HVT 2008.  </p>"
       }
     },
     {
@@ -265,7 +269,7 @@
       "data": {
         "id": "fn-19",
         "label": "19",
-        "text": "012:40 - 13:59 Tape I (Nadia R. HVT 3132)",
+        "text": "<p>012:40 - 13:59 Tape I (Nadia R. HVT 3132)</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/109175?media=109175&e=78\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -281,7 +285,7 @@
       "data": {
         "id": "fn-20",
         "label": "20",
-        "text": "See the case of Berthe B., HVT 2668, who was born in Paris in 1935. She tells that the Jewish community was highly critical of her parents for sending her to a Catholic school."
+        "text": "<p>See the case of Berthe B., HVT 2668, who was born in Paris in 1935. She tells that the Jewish community was highly critical of her parents for sending her to a Catholic school.  </p>"
       }
     },
     {
@@ -289,7 +293,7 @@
       "data": {
         "id": "fn-21",
         "label": "21",
-        "text": "See for example Nadia R., HVT 3132."
+        "text": "<p>See for example Nadia R., HVT 3132.  </p>"
       }
     },
     {
@@ -297,7 +301,7 @@
       "data": {
         "id": "fn-22",
         "label": "22",
-        "text": "See for example the case of Judith S. HVT 1263, who was born in Szeged in 1929. She explains that, when offered the possibility of conversion, her father declared: \u201cwe won\u2019t change our religion. We were born as Jews, we will die as Jews if we have to. The religion is not a coat that you can change with the season.\u201d"
+        "text": "<p>See for example the case of Judith S. HVT 1263, who was born in Szeged in 1929. She explains that, when offered the possibility of conversion, her father declared: \u201cwe won\u2019t change our religion. We were born as Jews, we will die as Jews if we have to. The religion is not a coat that you can change with the season.\u201d  </p>"
       }
     },
     {
@@ -312,7 +316,7 @@
       "data": {
         "id": "fn-23",
         "label": "23",
-        "text": "Nicholas P., HVT 575."
+        "text": "<p>Nicholas P., HVT 575.  </p>"
       }
     },
     {
@@ -320,7 +324,7 @@
       "data": {
         "id": "fn-24",
         "label": "24",
-        "text": "See the joint testimony of Jacques F., David I., and Paul S., HVT 1792. They were hidden in a Belgian village but did not know about each other until after the war. They remembered conversion and relation to various Catholic individuals in significantly different ways."
+        "text": "<p>See the joint testimony of Jacques F., David I., and Paul S., HVT 1792. They were hidden in a Belgian village but did not know about each other until after the war. They remembered conversion and relation to various Catholic individuals in significantly different ways.  </p>"
       }
     },
     {
@@ -356,7 +360,7 @@
       "data": {
         "id": "fn-25",
         "label": "25",
-        "text": "Paulette G., HVT 2170.",
+        "text": "<p>Paulette G., HVT 2170. </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/109068?media=109068&e=47\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -372,7 +376,7 @@
       "data": {
         "id": "fn-26",
         "label": "26",
-        "text": "Denise B., HVT 2172."
+        "text": "<p>Denise B., HVT 2172.  </p>"
       }
     },
     {
@@ -380,7 +384,7 @@
       "data": {
         "id": "fn-27",
         "label": "27",
-        "text": "Henri B., HVT 2154."
+        "text": "<p>Henri B., HVT 2154.  </p>"
       }
     },
     {
@@ -402,7 +406,7 @@
       "data": {
         "id": "fn-28",
         "label": "28",
-        "text": "Ariel, \u201cFrom Faith to Faith,\u201d 65-6."
+        "text": "<p>Ariel, \u201cFrom Faith to Faith,\u201d 65-6.  </p>"
       }
     },
     {
@@ -417,7 +421,7 @@
       "data": {
         "id": "fn-29",
         "label": "29",
-        "text": "Ariel, \u201cFrom Faith to Faith,\u201d 42-6."
+        "text": "<p>Ariel, \u201cFrom Faith to Faith,\u201d 42-6.  </p>"
       }
     },
     {
@@ -432,7 +436,7 @@
       "data": {
         "id": "fn-30",
         "label": "30",
-        "text": "The name of the school is not mentioned in the interview but appears in documents from Yale Divinity School. See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27. Personal Items and memorabilia, Folder 1, the second CV (the pages are not numbered)."
+        "text": "<p>The name of the school is not mentioned in the interview but appears in documents from Yale Divinity School. See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27. Personal Items and memorabilia, Folder 1, the second CV (the pages are not numbered).  </p>"
       }
     },
     {
@@ -447,7 +451,7 @@
       "data": {
         "id": "fn-31",
         "label": "31",
-        "text": "Hans F., HVT 170, p. 1 of 2 [00:01:29.96]."
+        "text": "<p>Hans F., HVT 170, p. 1 of 2 [00:01:29.96].  </p>"
       }
     },
     {
@@ -462,7 +466,7 @@
       "data": {
         "id": "fn-32",
         "label": "32",
-        "text": "Hans F., HVT 170, p.2 of 2 [00:02:14.23]."
+        "text": "<p>Hans F., HVT 170, p.2 of 2 [00:02:14.23].  </p>"
       }
     },
     {
@@ -477,7 +481,7 @@
       "data": {
         "id": "fn-33",
         "label": "33",
-        "text": "See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27, especially folder 1."
+        "text": "<p>See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27, especially folder 1.  </p>"
       }
     },
     {
@@ -492,7 +496,7 @@
       "data": {
         "id": "fn-34",
         "label": "34",
-        "text": "See Ibid., folder 5 \u201cIn Memoriam: Hans W. Frei\u201d \u2013 Memorial Service for HWF with tributes by colleagues."
+        "text": "<p>See Ibid., folder 5 \u201cIn Memoriam: Hans W. Frei\u201d \u2013 Memorial Service for HWF with tributes by colleagues.  </p>"
       }
     },
     {
@@ -507,7 +511,7 @@
       "data": {
         "id": "fn-35",
         "label": "35",
-        "text": "David Ford, \u201cHans Frei and the Future of Theology,\u201d <em>Modern Theology</em> 8 (April 1992): 204."
+        "text": "<p>David Ford, \u201cHans Frei and the Future of Theology,\u201d <em>Modern Theology</em> 8 (April 1992): 204.  </p>"
       }
     },
     {
@@ -522,7 +526,7 @@
       "data": {
         "id": "fn-36",
         "label": "36",
-        "text": "See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27, Folder 6 Frei Hans, Obituary."
+        "text": "<p>See Yale Divinity Library, Hans Wilhelm Frei Papers, RG 76, Series 6, Box 27, Folder 6 Frei Hans, Obituary.  </p>"
       }
     },
     {
@@ -544,7 +548,7 @@
       "data": {
         "id": "fn-37",
         "label": "37",
-        "text": "016:47 - 019:34",
+        "text": "<p>016:47 - 019:34</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80727?e=1174&media=80727&t=1007&e=1174\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -574,7 +578,7 @@
       "data": {
         "id": "fn-38",
         "label": "38",
-        "text": "48:24 - 49:07 Tape I",
+        "text": "<p>48:24 - 49:07 Tape I  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80726?e=2947&media=80726&t=2904&e=2947\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -611,7 +615,7 @@
       "data": {
         "id": "fn-39",
         "label": "39",
-        "text": "52:58 - 53:54 Tape I",
+        "text": "<p>52:58 - 53:54 Tape I</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80726?e=3234&media=80726&t=3178&e=3234\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -634,7 +638,7 @@
       "data": {
         "id": "fn-40",
         "label": "40",
-        "text": "017:49 - 018:21 Tape II",
+        "text": "<p>017:49 - 018:21 Tape II </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/80727?e=1082&media=80727&t=1069&e=1101\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },

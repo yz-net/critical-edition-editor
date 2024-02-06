@@ -1,5 +1,18 @@
 {
-  "meta": null,
+  "meta": {
+    "slug": "hvt-3280",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/3280/background-loop-1280.mp4",
+    "smallVideoPath": "https://d12q9fe14kxf9b.cloudfront.net/3280/background-loop-640.mp4",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/3280/poster.jpg",
+    "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/3328/transcript?",
+    "supertitle": "Introduction to the testimony of",
+    "hvtID": "3280",
+    "title": "Liubov\u2019 Naumovna Krasilovskaia",
+    "author": "Sarah Garibova",
+    "affiliation": "Boston University",
+    "essayPath": "/data/intro-hvt-3280.json",
+    "publicationDate": "February 1, 2021"
+  },
   "blocks": [
     {
       "type": "paragraph",
@@ -20,7 +33,7 @@
       "data": {
         "id": "fn-1",
         "label": "1",
-        "text": "See Jeffrey Veidlinger, <em>In the Shadow of the Shtetl: Small-Town Jewish Life in Soviet Ukraine</em> (Bloomington: Indiana University Press, 2013), 79-87; Anna Shternshis, <em>Soviet and Kosher: Jewish Popular Culture in the Soviet Union, 1923-1939</em>(Bloomington: Indiana University Press, 2006), 14-20."
+        "text": "<p>See Jeffrey Veidlinger, <em>In the Shadow of the Shtetl: Small-Town Jewish Life in Soviet Ukraine</em> (Bloomington: Indiana University Press, 2013), 79-87; Anna Shternshis, <em>Soviet and Kosher: Jewish Popular Culture in the Soviet Union, 1923-1939</em>(Bloomington: Indiana University Press, 2006), 14-20.  </p>"
       }
     },
     {
@@ -42,7 +55,7 @@
       "data": {
         "id": "fn-2",
         "label": "2",
-        "text": "Christopher Browning, <em>The Origins of the Final Solution: The Evolution of Nazi Jewish Policy, September 1939-March 1942</em> (Lincoln: University of Nebraska Press, 2004), 424."
+        "text": "<p>Christopher Browning, <em>The Origins of the Final Solution: The Evolution of Nazi Jewish Policy, September 1939-March 1942</em> (Lincoln: University of Nebraska Press, 2004), 424.  </p>"
       }
     },
     {
@@ -50,7 +63,7 @@
       "data": {
         "id": "fn-3",
         "label": "3",
-        "text": "Ibid, 283-4. See also, Yitzhak Arad, <em>The Holocaust in the Soviet Union</em> (Lincoln: University of Nebraska Press, 2009), 125-40."
+        "text": "<p>Ibid, 283-4. See also, Yitzhak Arad, <em>The Holocaust in the Soviet Union</em> (Lincoln: University of Nebraska Press, 2009), 125-40.  </p>"
       }
     },
     {
@@ -65,7 +78,7 @@
       "data": {
         "id": "fn-4",
         "label": "4",
-        "text": "Martin Dean, <em>Collaboration in the Holocaust: Crimes of the Local Police in Belorussia and Ukraine, 1941-1944</em> (New York: St. Martin\u2019s Press, 2000), 163-4."
+        "text": "<p>Martin Dean, <em>Collaboration in the Holocaust: Crimes of the Local Police in Belorussia and Ukraine, 1941-1944</em> (New York: St. Martin\u2019s Press, 2000), 163-4.  </p>"
       }
     },
     {
@@ -80,7 +93,7 @@
       "data": {
         "id": "fn-5",
         "label": "5",
-        "text": "Omer Bartov, <em>Erased: Vanishing Traces of Jewish Galicia in Present-Day Ukraine</em> (Princeton: Princeton University Press, 2007), xii."
+        "text": "<p>Omer Bartov, <em>Erased: Vanishing Traces of Jewish Galicia in Present-Day Ukraine</em> (Princeton: Princeton University Press, 2007), xii.  </p>"
       }
     },
     {
@@ -108,7 +121,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>the people in the two neighboring villages, Shesteryntsi and Budyshche, did a lot to help us. They were wonderful people. [\u2026.] They would come to the camp; they would persuade the politsai, bring us half liters, bring us pieces of bread, a potato here and there, and if they lived nearby, something hot to eat. They really supported us. And we also got a little creative. The politsai had been with us so long they knew that we wouldn\u2019t run away, so on the way home from work, either on the road or right near the camp, we managed to run in pairs to the village to ask for something to eat. If only one person came up to the door, they would even ask, \u201cWhy didn\u2019t you bring a friend? We would have fed both of you.\u201d They fed us, gave us pieces of bread, gave us potatoes, gave us a little salt. That\u2019s how they supported us. If it weren\u2019t for them, we would likely have died from hunger. [Our bellies] would have swollen up.<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">6</a></sup> </p>"
+        "text": "<p>the people in the two neighboring villages, Shesteryntsi and Budyshche, did a lot to help us. They were wonderful people. [\u2026.] They would come to the camp; they would persuade the politsai, bring us half liters, bring us pieces of bread, a potato here and there, and if they lived nearby, something hot to eat. They really supported us. And we also got a little creative. The politsai had been with us so long they knew that we wouldn\u2019t run away, so on the way home from work, either on the road or right near the camp, we managed to run in pairs to the village to ask for something to eat. If only one person came up to the door, they would even ask, \u201cWhy didn\u2019t you bring a friend? We would have fed both of you.\u201d They fed us, gave us pieces of bread, gave us potatoes, gave us a little salt. That\u2019s how they supported us. If it weren\u2019t for them, we would likely have died from hunger. [Our bellies] would have swollen up.<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">v-1</a></sup> </p>"
       }
     },
     {
@@ -116,7 +129,7 @@
       "data": {
         "id": "fn-v-1",
         "label": "v-1",
-        "text": "06:04 - 07:19 Tape II",
+        "text": "<p>06:04 - 07:19 Tape II  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/59560?e=439&media=59560&t=364&e=439\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -152,7 +165,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Liubov\u2019s testimony also broadens familiar Holocaust iconographies of colossal concentration camps, gas chambers, and industrial crematoria in German-occupied Poland. In contrast, the Holocaust in the Soviet Union offers a different iconography\u2014one far more improvised, even makeshift, but no less deadly. In many locales, elderly adults and young children fell victim to mass shootings early in the German occupation. Surviving adults were condemned to forced labor in the ghettoes or in small labor camps, living in constant fear of the ongoing mass shootings. This history of forced labor in occupied Soviet territory is one of the more under-researched aspects of the Holocaust. Liubov\u2019s testimony recounts the experience of grueling labor, appalling living conditions, and the constant threat of death. While Jewish forced laborers were valuable for the German war effort, high rates of malnutrition, disease, injury, and \u201caccidental\u201d death claimed many lives.<sup class=\"footnote-ref\" id=\"fnref-6\"><a href=\"#fn-6\">7</a></sup> As the tide of the war shifted and the German Army began its long westward retreat, 1943 and early 1944 brought a final round of liquidations to these labor camps. In Ukraine, the Nemorozh camp where Liubov\u2019 was a prisoner, was one of the last camps to be liquidated.<sup class=\"footnote-ref\" id=\"fnref-7\"><a href=\"#fn-7\">8</a></sup> Understood in this light, Liubov\u2019s survival and escape are truly extraordinary.  "
+        "text": "Liubov\u2019s testimony also broadens familiar Holocaust iconographies of colossal concentration camps, gas chambers, and industrial crematoria in German-occupied Poland. In contrast, the Holocaust in the Soviet Union offers a different iconography\u2014one far more improvised, even makeshift, but no less deadly. In many locales, elderly adults and young children fell victim to mass shootings early in the German occupation. Surviving adults were condemned to forced labor in the ghettoes or in small labor camps, living in constant fear of the ongoing mass shootings. This history of forced labor in occupied Soviet territory is one of the more under-researched aspects of the Holocaust. Liubov\u2019s testimony recounts the experience of grueling labor, appalling living conditions, and the constant threat of death. While Jewish forced laborers were valuable for the German war effort, high rates of malnutrition, disease, injury, and \u201caccidental\u201d death claimed many lives.<sup class=\"footnote-ref\" id=\"fnref-6\"><a href=\"#fn-6\">6</a></sup> As the tide of the war shifted and the German Army began its long westward retreat, 1943 and early 1944 brought a final round of liquidations to these labor camps. In Ukraine, the Nemorozh camp where Liubov\u2019 was a prisoner, was one of the last camps to be liquidated.<sup class=\"footnote-ref\" id=\"fnref-7\"><a href=\"#fn-7\">7</a></sup> Understood in this light, Liubov\u2019s survival and escape are truly extraordinary.  "
       }
     },
     {
@@ -160,7 +173,7 @@
       "data": {
         "id": "fn-6",
         "label": "6",
-        "text": "See Donald Bloxham, \u201cJewish Slave Labour and its Relationship to the \u2018Final Solution,\u2019\u201d in <em>Remembering for the Future: The Holocaust in an Age of Genocide</em>, eds. John Rother et al. (London: Palgrave Macmillan, 2001), 163-86. See also Gustavo Corni, \u201cWork as Salvation,\u201d in his <em>Hitler\u2019s Ghettos: Voices from a Beleaguered Society, 1939-1944</em> (London: Oxford University Press, 2002), 227-61."
+        "text": "<p>See Donald Bloxham, \u201cJewish Slave Labour and its Relationship to the \u2018Final Solution,\u2019\u201d in <em>Remembering for the Future: The Holocaust in an Age of Genocide</em>, eds. John Rother et al. (London: Palgrave Macmillan, 2001), 163-86. See also Gustavo Corni, \u201cWork as Salvation,\u201d in his <em>Hitler\u2019s Ghettos: Voices from a Beleaguered Society, 1939-1944</em> (London: Oxford University Press, 2002), 227-61.  </p>"
       }
     },
     {
@@ -168,7 +181,7 @@
       "data": {
         "id": "fn-7",
         "label": "7",
-        "text": "Arad, <em>Holocaust in the Soviet Union</em>, 340."
+        "text": "<p>Arad, <em>Holocaust in the Soviet Union</em>, 340.  </p>"
       }
     },
     {
@@ -182,7 +195,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>Farewell, our native city.<br/>\nFarewell, family so dear.<br/>\nFarewell, precious mothers.<br/>\nFarewell, to all our friends.  </p>\n<p>Blindly, we walk down the road,<br/>\nNot knowing what lies ahead.<br/>\nThe ominous thought is growing,<br/>\nThat awaiting us is death.<sup class=\"footnote-ref\" id=\"fnref-v-2\"><a href=\"#fn-v-2\">9</a></sup> </p>"
+        "text": "<p>Farewell, our native city.<br/>\nFarewell, family so dear.<br/>\nFarewell, precious mothers.<br/>\nFarewell, to all our friends.  </p>\n<p>Blindly, we walk down the road,<br/>\nNot knowing what lies ahead.<br/>\nThe ominous thought is growing,<br/>\nThat awaiting us is death.<sup class=\"footnote-ref\" id=\"fnref-v-2\"><a href=\"#fn-v-2\">v-2</a></sup> </p>"
       }
     },
     {
@@ -190,7 +203,7 @@
       "data": {
         "id": "fn-v-2",
         "label": "v-2",
-        "text": "26:24 -26:44 Tape 1. This song has been recorded in the Fortunoff Video Archive's <a href=\"https://fortunoff.library.yale.edu/song/liubov-k-hvt-3280/\">Songs from the Testimonies project</a>.",
+        "text": "<p>26:24 -26:44 Tape 1. This song has been recorded in the Fortunoff Video Archive's <a href=\"https://fortunoff.library.yale.edu/song/liubov-k-hvt-3280/\">Songs from the Testimonies project</a>.</p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/59559?e=1564&media=59559&t=1584&e=1604\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -219,7 +232,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Long before Liubov gave her testimony interview, however, she and other Soviet Jewish survivors found other, more conventional ways to immortalize their relatives and friends who had been murdered during the German occupation. Toward the end of her testimony, Liubov\u2019 describes how she initiated the construction of several monuments at the mass graves where the Jews of Zvenigorodka, Ol\u2019shana, and other neighboring towns had been executed <em>en masse</em>. Beginning immediately after liberation, survivors across the Soviet Union raised funds among themselves for the construction of such monuments in their hometowns.<sup class=\"footnote-ref\" id=\"fnref-8\"><a href=\"#fn-8\">10</a></sup> As organizer of the commemorative efforts in and around Zvenigorodka, Liubov\u2019 describes how she:  "
+        "text": "Long before Liubov gave her testimony interview, however, she and other Soviet Jewish survivors found other, more conventional ways to immortalize their relatives and friends who had been murdered during the German occupation. Toward the end of her testimony, Liubov\u2019 describes how she initiated the construction of several monuments at the mass graves where the Jews of Zvenigorodka, Ol\u2019shana, and other neighboring towns had been executed <em>en masse</em>. Beginning immediately after liberation, survivors across the Soviet Union raised funds among themselves for the construction of such monuments in their hometowns.<sup class=\"footnote-ref\" id=\"fnref-8\"><a href=\"#fn-8\">8</a></sup> As organizer of the commemorative efforts in and around Zvenigorodka, Liubov\u2019 describes how she:  "
       }
     },
     {
@@ -227,14 +240,14 @@
       "data": {
         "id": "fn-8",
         "label": "8",
-        "text": "See Mordechai Altshuler, <em>Religion and Jewish Identity in the Soviet Union, 1941-1964</em> (Waltham, MA: Brandeis University Press, 2012), 219-23."
+        "text": "<p>See Mordechai Altshuler, <em>Religion and Jewish Identity in the Soviet Union, 1941-1964</em> (Waltham, MA: Brandeis University Press, 2012), 219-23.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>corresponded with people, many relatives [of those who died], they would give each other my address and send me money. I used this money to order three monuments, [and to pay] for the labor; I went to Tal\u2019noe.<sup class=\"footnote-ref\" id=\"fnref-9\"><a href=\"#fn-9\">11</a></sup> They brought them there from Korostyshev<sup class=\"footnote-ref\" id=\"fnref-10\"><a href=\"#fn-10\">12</a></sup> where there\u2019s very good polished granite. [\u2026.] They brought it here to Tal\u2019noe. And there some guys engraved [the monuments] for me. I paid them, and they transported and erected them for me.<sup class=\"footnote-ref\" id=\"fnref-v-3\"><a href=\"#fn-v-3\">13</a></sup> </p>"
+        "text": "<p>corresponded with people, many relatives [of those who died], they would give each other my address and send me money. I used this money to order three monuments, [and to pay] for the labor; I went to Tal\u2019noe.<sup class=\"footnote-ref\" id=\"fnref-9\"><a href=\"#fn-9\">9</a></sup> They brought them there from Korostyshev<sup class=\"footnote-ref\" id=\"fnref-10\"><a href=\"#fn-10\">10</a></sup> where there\u2019s very good polished granite. [\u2026.] They brought it here to Tal\u2019noe. And there some guys engraved [the monuments] for me. I paid them, and they transported and erected them for me.<sup class=\"footnote-ref\" id=\"fnref-v-3\"><a href=\"#fn-v-3\">v-3</a></sup> </p>"
       }
     },
     {
@@ -242,7 +255,7 @@
       "data": {
         "id": "fn-9",
         "label": "9",
-        "text": "\u201cTal\u2019noe\u201d: Rus: Tal\u2019noe, Ukr: Tal\u2019ne. A town approximately 30 km southwest from Zvenigorodka."
+        "text": "<p>\u201cTal\u2019noe\u201d: Rus: Tal\u2019noe, Ukr: Tal\u2019ne. A town approximately 30 km southwest from Zvenigorodka.  </p>"
       }
     },
     {
@@ -250,7 +263,7 @@
       "data": {
         "id": "fn-10",
         "label": "10",
-        "text": "\u201cKorostyshev\u201d: Rus: Korostyshev, Ukr: Korostyshiv. A city in the Zhytomyr Province of Ukraine, approximately 200 km northwest of Tal\u2019noe. The Zhytomyr Province is known for its granite."
+        "text": "<p>\u201cKorostyshev\u201d: Rus: Korostyshev, Ukr: Korostyshiv. A city in the Zhytomyr Province of Ukraine, approximately 200 km northwest of Tal\u2019noe. The Zhytomyr Province is known for its granite.  </p>"
       }
     },
     {
@@ -258,7 +271,7 @@
       "data": {
         "id": "fn-v-3",
         "label": "v-3",
-        "text": "Tape III 16:34 - 17:00",
+        "text": "<p>Tape III 16:34 - 17:00  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/59561?e=60&media=59561&t=994&e=1020\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -266,7 +279,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In the process of obtaining and erecting monuments at mass graves, survivors like Liubov\u2019 encountered varying degrees of opposition, support, and indifference from local Soviet officials. In the Soviet Union, the history of the \u201cGreat Patriotic War,\u201d i.e. the Second World War, held deep political significance as a unifying, legitimizing myth. From the earliest months of the war, state propaganda emphasized the struggle of the Soviet people against fascism. This narrative was intended to foster unity among the Soviet Union\u2019s ethnically diverse population and to avoid fanning separatist sentiments.<sup class=\"footnote-ref\" id=\"fnref-11\"><a href=\"#fn-11\">14</a></sup> Yet, the myth of the \u201cGreat Patriotic War\u201d also erased the distinct suffering of Jews under German occupation. After the war, Soviet officials avoided referencing the ethnic (much less religious) identities of civilian victims. Instead, euphemistic, generic phrases such as \u201cSoviet citizens\u201d and \u201cpeaceful residents\u201d became ubiquitous in speeches and on state-sponsored monuments. When individual citizens like Liubov\u2019 approached local authorities for permission to erect privately-funded monuments at mass shooting sites, disagreements frequently arose over the wording of the inscription or the exact number of victims. Liubov\u2019 recalls her encounter with the Zvenigorodka city council:\u00a0  "
+        "text": "In the process of obtaining and erecting monuments at mass graves, survivors like Liubov\u2019 encountered varying degrees of opposition, support, and indifference from local Soviet officials. In the Soviet Union, the history of the \u201cGreat Patriotic War,\u201d i.e. the Second World War, held deep political significance as a unifying, legitimizing myth. From the earliest months of the war, state propaganda emphasized the struggle of the Soviet people against fascism. This narrative was intended to foster unity among the Soviet Union\u2019s ethnically diverse population and to avoid fanning separatist sentiments.<sup class=\"footnote-ref\" id=\"fnref-11\"><a href=\"#fn-11\">11</a></sup> Yet, the myth of the \u201cGreat Patriotic War\u201d also erased the distinct suffering of Jews under German occupation. After the war, Soviet officials avoided referencing the ethnic (much less religious) identities of civilian victims. Instead, euphemistic, generic phrases such as \u201cSoviet citizens\u201d and \u201cpeaceful residents\u201d became ubiquitous in speeches and on state-sponsored monuments. When individual citizens like Liubov\u2019 approached local authorities for permission to erect privately-funded monuments at mass shooting sites, disagreements frequently arose over the wording of the inscription or the exact number of victims. Liubov\u2019 recalls her encounter with the Zvenigorodka city council:\u00a0  "
       }
     },
     {
@@ -274,14 +287,14 @@
       "data": {
         "id": "fn-11",
         "label": "11",
-        "text": "Arad, <em>Holocaust in the Soviet Union</em>, 534-44."
+        "text": "<p>Arad, <em>Holocaust in the Soviet Union</em>, 534-44.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>I needed to engrave the monuments, but I didn\u2019t have the right to do it myself without permission. So I went to the city council and told them how many people are buried there. They didn\u2019t give me permission to write the inscription. It was Pavlenok, the head of the city council. He said, \u201cWe don\u2019t have those statistics. We show that in total, with the Ukrainians, there were 2000 people shot there.\u201d I told him, \u201cThat\u2019s impossible. That\u2019s not true. It can\u2019t be.\u201d So I was forced to write on the large monument \u201cMore than 2000 people.\u201d \u201cMore\u201d is an elastic term.<sup class=\"footnote-ref\" id=\"fnref-v-4\"><a href=\"#fn-v-4\">15</a></sup> </p>"
+        "text": "<p>I needed to engrave the monuments, but I didn\u2019t have the right to do it myself without permission. So I went to the city council and told them how many people are buried there. They didn\u2019t give me permission to write the inscription. It was Pavlenok, the head of the city council. He said, \u201cWe don\u2019t have those statistics. We show that in total, with the Ukrainians, there were 2000 people shot there.\u201d I told him, \u201cThat\u2019s impossible. That\u2019s not true. It can\u2019t be.\u201d So I was forced to write on the large monument \u201cMore than 2000 people.\u201d \u201cMore\u201d is an elastic term.<sup class=\"footnote-ref\" id=\"fnref-v-4\"><a href=\"#fn-v-4\">v-4</a></sup> </p>"
       }
     },
     {
@@ -289,7 +302,7 @@
       "data": {
         "id": "fn-v-4",
         "label": "v-4",
-        "text": "17:00 - 17:35",
+        "text": "<p>17:00 - 17:35  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/59561?e=1023&media=59561&t=1020&e=1055\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -297,7 +310,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In some towns, survivors avoided contact with the local authorities altogether and boldly erected monuments that directly mentioned the Jewish identity of the victims or included Stars of David and Yiddish or Hebrew inscriptions. However, such brazen action came with the risk that the local authorities would demolish the monuments as unauthorized or that antisemitic vandals would deliberately target the monuments.<sup class=\"footnote-ref\" id=\"fnref-12\"><a href=\"#fn-12\">16</a></sup> Liubov\u2019 and her fellow Zvenigorodka survivors took a more pragmatic approach. Their monuments prudently omitted any verbiage indicating that the overwhelming majority of the victims at these mass graves had been Jews. Otherwise, as Liubov\u2019 explains, \u201cthe monuments would have been knocked down long ago.\u201d In the late 1980s or early 1990s, a visiting rabbi suggested adding a Star of David to the Zvenigorodka monuments, but Liubov\u2019 and other local survivors \u201ctalked it over and decided not to. We have to remember where we live.\u201d  "
+        "text": "In some towns, survivors avoided contact with the local authorities altogether and boldly erected monuments that directly mentioned the Jewish identity of the victims or included Stars of David and Yiddish or Hebrew inscriptions. However, such brazen action came with the risk that the local authorities would demolish the monuments as unauthorized or that antisemitic vandals would deliberately target the monuments.<sup class=\"footnote-ref\" id=\"fnref-12\"><a href=\"#fn-12\">12</a></sup> Liubov\u2019 and her fellow Zvenigorodka survivors took a more pragmatic approach. Their monuments prudently omitted any verbiage indicating that the overwhelming majority of the victims at these mass graves had been Jews. Otherwise, as Liubov\u2019 explains, \u201cthe monuments would have been knocked down long ago.\u201d In the late 1980s or early 1990s, a visiting rabbi suggested adding a Star of David to the Zvenigorodka monuments, but Liubov\u2019 and other local survivors \u201ctalked it over and decided not to. We have to remember where we live.\u201d  "
       }
     },
     {
@@ -305,7 +318,7 @@
       "data": {
         "id": "fn-12",
         "label": "12",
-        "text": "For a recent, in-depth study of the obstacles that Soviet survivors faced in their efforts to erect monuments at the sites of mass shootings, see Arkadii Zeltser, <em>Unwelcome Memory: Holocaust Monuments in the Soviet Union</em> (Jerusalem: Yad Vashem, 2018)."
+        "text": "<p>For a recent, in-depth study of the obstacles that Soviet survivors faced in their efforts to erect monuments at the sites of mass shootings, see Arkadii Zeltser, <em>Unwelcome Memory: Holocaust Monuments in the Soviet Union</em> (Jerusalem: Yad Vashem, 2018).  </p>"
       }
     },
     {
@@ -319,7 +332,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In response to these transformations, Soviet Jews confined their Jewishness to the private sphere.<sup class=\"footnote-ref\" id=\"fnref-13\"><a href=\"#fn-13\">17</a></sup> Jews like Liubov\u2019, who had grown up in the former Pale of Settlement and benefitted from the Soviet state\u2019s promotion of secular Yiddish culture, often maintained a deep sense of pride in being Jewish and a rich knowledge of Jewish customs that they could neither practice openly nor pass on to their children. Having experienced a time when it was possible to be both Jewish and Soviet, they maintained a dual self-image as Jewish and fully Soviet, doggedly navigating Soviet society to the best of their abilities despite growing discrimination. In contrast, younger Soviet Jews, who came of age after the war, had few positive memories of being Jewish and experienced their Jewishness primarily as a source of shame. Some later rebelled against this stigma by embracing Zionism and fighting for the right to emigrate. However, a more common tendency among both the older and the younger generation was to confine their Jewishness to the private sphere \u2013 to the family and the home, or even to the secrecy of their personal memories.  "
+        "text": "In response to these transformations, Soviet Jews confined their Jewishness to the private sphere.<sup class=\"footnote-ref\" id=\"fnref-13\"><a href=\"#fn-13\">13</a></sup> Jews like Liubov\u2019, who had grown up in the former Pale of Settlement and benefitted from the Soviet state\u2019s promotion of secular Yiddish culture, often maintained a deep sense of pride in being Jewish and a rich knowledge of Jewish customs that they could neither practice openly nor pass on to their children. Having experienced a time when it was possible to be both Jewish and Soviet, they maintained a dual self-image as Jewish and fully Soviet, doggedly navigating Soviet society to the best of their abilities despite growing discrimination. In contrast, younger Soviet Jews, who came of age after the war, had few positive memories of being Jewish and experienced their Jewishness primarily as a source of shame. Some later rebelled against this stigma by embracing Zionism and fighting for the right to emigrate. However, a more common tendency among both the older and the younger generation was to confine their Jewishness to the private sphere \u2013 to the family and the home, or even to the secrecy of their personal memories.  "
       }
     },
     {
@@ -327,7 +340,7 @@
       "data": {
         "id": "fn-13",
         "label": "13",
-        "text": "For a more comprehensive discussion of the impact that these postwar shifts had on Soviet Jews\u2019 mentalities and identities, see Anna Shternshis, <em>When Sonia Met Boris: An Oral History of Jewish Life under Stalin</em> (New York: Oxford University Press, 2017)."
+        "text": "<p>For a more comprehensive discussion of the impact that these postwar shifts had on Soviet Jews\u2019 mentalities and identities, see Anna Shternshis, <em>When Sonia Met Boris: An Oral History of Jewish Life under Stalin</em> (New York: Oxford University Press, 2017).\u00a0  </p>"
       }
     },
     {

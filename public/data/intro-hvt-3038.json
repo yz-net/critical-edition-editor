@@ -1,5 +1,18 @@
 {
-  "meta": null,
+  "meta": {
+    "slug": "hvt-3038",
+    "smallVideoPath": "https://d12q9fe14kxf9b.cloudfront.net/3038/background-loop-640.mp4",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/3038/background-loop-1280.mp4",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/3038/poster.jpg",
+    "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/3091/transcript?",
+    "hvtID": "3038",
+    "supertitle": "Introduction to the testimony of",
+    "title": "Rubin Pinsker",
+    "author": "Glenn Dynner",
+    "affiliation": "Sarah Lawrence College",
+    "essayPath": "/data/intro-hvt-3038.json",
+    "publicationDate": "February 1, 2021"
+  },
   "blocks": [
     {
       "type": "paragraph",
@@ -13,7 +26,7 @@
       "data": {
         "id": "fn-1",
         "label": "1",
-        "text": "Timothy Snyder, <em>Bloodlands: Europe between Hitler and Stalin</em> (London, 2011), 233; idem., <em>Black Earth: The Holocaust as History and Warning</em> (London, 2015), 191, 207; Wendy Lower, <em>Nazi Empire-Building and the Holocaust in Ukraine</em> (NC, 2005), 69. The Minsk underground smuggled something like 7,500 Jews into the surrounding forests. Many Lithuanian Jews had similar topographical conditions; hence the preponderance of Jewish partisan units around Vilna, as well. Thanks to Anika Walke for her valuable comments to earlier drafts."
+        "text": "<p>Timothy Snyder, <em>Bloodlands: Europe between Hitler and Stalin</em> (London, 2011), 233; idem., <em>Black Earth: The Holocaust as History and Warning</em> (London, 2015), 191, 207; Wendy Lower, <em>Nazi Empire-Building and the Holocaust in Ukraine</em> (NC, 2005), 69. The Minsk underground smuggled something like 7,500 Jews into the surrounding forests. Many Lithuanian Jews had similar topographical conditions; hence the preponderance of Jewish partisan units around Vilna, as well. Thanks to Anika Walke for her valuable comments to earlier drafts.  </p>"
       }
     },
     {
@@ -28,7 +41,7 @@
       "data": {
         "id": "fn-2",
         "label": "2",
-        "text": "The film <em>Defiance</em> (2008) was directed by Edward Zwick. See also Nechama Tec, Resistance: <em>The Bielski Partisans</em> (NY, 2009); Peter Duffy, <em>The Bielski Brothers: The True Story of Three Men Who Defied the Nazis, Built a Village in the Forest, and Saved 1,200 Jews</em> (NY, 2004)."
+        "text": "<p>The film <em>Defiance</em> (2008) was directed by Edward Zwick. See also Nechama Tec, Resistance: <em>The Bielski Partisans</em> (NY, 2009); Peter Duffy, <em>The Bielski Brothers: The True Story of Three Men Who Defied the Nazis, Built a Village in the Forest, and Saved 1,200 Jews</em> (NY, 2004).  </p>"
       }
     },
     {
@@ -43,7 +56,7 @@
       "data": {
         "id": "fn-3",
         "label": "3",
-        "text": "Snyder has observed that \u201cthe largest group of Holocaust victims\u2014religiously Orthodox and Yiddish-speaking Jews of Poland\u2026were culturally alien from West Europeans, including West European Jews. To some degree, they continue to be marginalized from the memory of the Holocaust.\u201d See his \u201cHolocaust: The Ignored Reality,\u201d <em>New York Review of Books</em> (July, 2009)."
+        "text": "<p>Snyder has observed that \u201cthe largest group of Holocaust victims\u2014religiously Orthodox and Yiddish-speaking Jews of Poland\u2026were culturally alien from West Europeans, including West European Jews. To some degree, they continue to be marginalized from the memory of the Holocaust.\u201d See his \u201cHolocaust: The Ignored Reality,\u201d <em>New York Review of Books</em> (July, 2009).  </p>"
       }
     },
     {
@@ -51,7 +64,7 @@
       "data": {
         "id": "fn-4",
         "label": "4",
-        "text": "The Yeshiva Etz Hayyim originated in Slutzk; Bet Yosef originated in Novogorodok, but had been moved during WWI to Homel and Kiev; Or Torah in Bereznica, then Zvihil, then Koretz; and Kenesset Bet Yitzhak in Slobodka, then Kramenchug. On yeshiva migrations during the First World War, see Ben-Tsion Klibansky, <em>Ketzur halamish: tor ha-zahav shel ha-yeshivot ha-litaiyot be-mizrah eyropa</em> (Jerusalem, 2014) 76-118; 396-400; and Glenn Dynner, \u201cReplenishing the Fountain of Judaism: Jewish Traditionalist Education in Interwar Poland,\u201d <em>Jewish History</em> 31:3-4 (2018)."
+        "text": "<p>The Yeshiva Etz Hayyim originated in Slutzk; Bet Yosef originated in Novogorodok, but had been moved during WWI to Homel and Kiev; Or Torah in Bereznica, then Zvihil, then Koretz; and Kenesset Bet Yitzhak in Slobodka, then Kramenchug. On yeshiva migrations during the First World War, see Ben-Tsion Klibansky, <em>Ketzur halamish: tor ha-zahav shel ha-yeshivot ha-litaiyot be-mizrah eyropa</em> (Jerusalem, 2014) 76-118; 396-400; and Glenn Dynner, \u201cReplenishing the Fountain of Judaism: Jewish Traditionalist Education in Interwar Poland,\u201d <em>Jewish History</em> 31:3-4 (2018).  </p>"
       }
     },
     {
@@ -59,14 +72,14 @@
       "data": {
         "id": "fn-5",
         "label": "5",
-        "text": "On <em>musar</em>, see David Fishman, \u201cThe Musar Movement in Interwar Poland,\u201d in Ezra Mendelsohn, Jehuda Reinharz, and Chone Shmeruk, eds., <em>The Jews of Poland between Two World Wars</em> (Hanover, N.H., 1989), 261-5; on Hasidism, see Moshe Rosman, \u201cThe Rise of Hasidism\u201d, _The Cambridge History of Judaism, _vol. 7 (Cambridge, 2018), ed. by Jonathan Karp and Adam Sutcliffe, 625-51; on Hasidic yeshivas, see Shaul Stampfer, \u201cHasidic Yeshivas in Interwar Poland,\u201d in idem., <em>Families, Rabbis, and Education: Traditional Jewish Society in Nineteenth-Century Eastern Europe</em> (Oxford, 2010), 252-76."
+        "text": "<p>On <em>musar</em>, see David Fishman, \u201cThe Musar Movement in Interwar Poland,\u201d in Ezra Mendelsohn, Jehuda Reinharz, and Chone Shmeruk, eds., <em>The Jews of Poland between Two World Wars</em> (Hanover, N.H., 1989), 261-5; on Hasidism, see Moshe Rosman, \u201cThe Rise of Hasidism\u201d, _The Cambridge History of Judaism, _vol. 7 (Cambridge, 2018), ed. by Jonathan Karp and Adam Sutcliffe, 625-51; on Hasidic yeshivas, see Shaul Stampfer, \u201cHasidic Yeshivas in Interwar Poland,\u201d in idem., <em>Families, Rabbis, and Education: Traditional Jewish Society in Nineteenth-Century Eastern Europe</em> (Oxford, 2010), 252-76.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Rubin was born and raised in the western Belarusian town of Zhetl (Zdzi\u0119cio\u0142 in Polish; now Dziatlava, Belarus), which boasted a legacy of local had been home to rabbinic celebrities like R. Israel Kagan, the famed \u201cHafetz Hayyim\u201d (1839-1933). Rubin attended Reb Yoizel\u2019s Yeshiva, a <em>musar</em> institution located in nearby Dworzec that was named after its founder R. Yosef Yoizel Hurwitz, the \u201cElder of Novaradok\u201d. Reb Yoizel\u2019s Yeshiva belonged to the more demanding and elitist Novaradok <em>musar</em> school.<sup class=\"footnote-ref\" id=\"fnref-6\"><a href=\"#fn-6\">6</a></sup> His plan at the time was to become a rabbi, which was what his father wanted and which was \u201cthe only thing I was striving for\u201d [II, 44:37]. Then came the war.  "
+        "text": "Rubin was born and raised in the western Belarusian town of Zhetl (Zdzi\u0119cio\u0142 in Polish; now Dziatlava, Belarus), which had been home to rabbinic celebrities like R. Israel Kagan, the famed \u201cHafetz Hayyim\u201d (1839-1933). Rubin attended Reb Yoizel\u2019s Yeshiva, a <em>musar</em> institution located in nearby Dworzec that was named after its founder R. Yosef Yoizel Hurwitz, the \u201cElder of Novaradok\u201d. Reb Yoizel\u2019s Yeshiva belonged to the more demanding and elitist Novaradok <em>musar</em> school.<sup class=\"footnote-ref\" id=\"fnref-6\"><a href=\"#fn-6\">6</a></sup> His plan at the time was to become a rabbi, which was what his father wanted and which was \u201cthe only thing I was striving for\u201d [II, 44:37]. Then came the war.  "
       }
     },
     {
@@ -74,7 +87,7 @@
       "data": {
         "id": "fn-6",
         "label": "6",
-        "text": "Reb Yoizel\u2019s Yeshiva was established in 1896 by R. Yosef Yoizel Hurwitz, the \u201cElder of Novaradok\u201d. Hurwitz\u2019s more extremist \u201cNovaradok\u201d school of musar, with its premium on self-abnegation and intensive self-analysis, contrasted with the \u201cSlabodka\u201d school of musar founded by R. Nathan Tzvi Finkel, which advocated a degree of worldliness for the purpose of influencing the behavior of ordinary people. See Lester Eckman, <em>History of Yeshivot in Lithuania and White Russia from their Beginnings until 1945</em> (Elizabeth, NJ, 2006), 98; Fishman, \u201cThe Musar Movement in Interwar Poland\u201d; idem., \u201cMussar and Modernity,\u201d Modern Judaism 8, no. 1 (1988): 41-64."
+        "text": "<p>Reb Yoizel\u2019s Yeshiva was established in 1896 by R. Yosef Yoizel Hurwitz, the \u201cElder of Novaradok\u201d. Hurwitz\u2019s more extremist \u201cNovaradok\u201d school of musar, with its premium on self-abnegation and intensive self-analysis, contrasted with the \u201cSlabodka\u201d school of musar founded by R. Nathan Tzvi Finkel, which advocated a degree of worldliness for the purpose of influencing the behavior of ordinary people. See Lester Eckman, <em>History of Yeshivot in Lithuania and White Russia from their Beginnings until 1945</em> (Elizabeth, NJ, 2006), 98; Fishman, \u201cThe Musar Movement in Interwar Poland\u201d; idem., \u201cMussar and Modernity,\u201d Modern Judaism 8, no. 1 (1988): 41-64.</p>"
       }
     },
     {
@@ -89,7 +102,7 @@
       "data": {
         "id": "fn-7",
         "label": "7",
-        "text": "Daniel Boyarin, <em>Unheroic Conduct:</em> <em>The Rise of Heterosexuality and the Invention of the Jewish Man</em> (Berkeley, 1997), 2, 3, 5, 42. Solly I. from the town of Ryki, for example, describes yeshiva students as \u201csoft and anemic, fragile\u201d. Holocaust testimony (HVT-2139)."
+        "text": "<p>Daniel Boyarin, <em>Unheroic Conduct:</em> <em>The Rise of Heterosexuality and the Invention of the Jewish Man</em> (Berkeley, 1997), 2, 3, 5, 42. Solly I. from the town of Ryki, for example, describes yeshiva students as \u201csoft and anemic, fragile\u201d. Holocaust testimony (HVT-2139).  </p>"
       }
     },
     {
@@ -111,7 +124,7 @@
       "data": {
         "id": "fn-8",
         "label": "8",
-        "text": "On traditionalism and orthodoxy, see Jacob Katz, \u201cOrthodoxy in Historical Perspective,\u201d <em>Studies in Contemporary Jewry</em> 2 (1986), esp. 3\u20134; Eliyahu Stern, <em>The Genius: Elijah of Vilna and the Making of Modern Judaism</em> (New Haven, 2013), Introduction."
+        "text": "<p>On traditionalism and orthodoxy, see Jacob Katz, \u201cOrthodoxy in Historical Perspective,\u201d <em>Studies in Contemporary Jewry</em> 2 (1986), esp. 3\u20134; Eliyahu Stern, <em>The Genius: Elijah of Vilna and the Making of Modern Judaism</em> (New Haven, 2013), Introduction.  </p>"
       }
     },
     {
@@ -126,7 +139,7 @@
       "data": {
         "id": "fn-9",
         "label": "9",
-        "text": "Jolanta \u017byndul, <em>Zaj\u015bcia anty\u017cydowskie w Polsce w latach 1935-1937</em> (Warsaw, 1994)."
+        "text": "<p>Jolanta \u017byndul, <em>Zaj\u015bcia anty\u017cydowskie w Polsce w latach 1935-1937</em> (Warsaw, 1994).  </p>"
       }
     },
     {
@@ -141,7 +154,7 @@
       "data": {
         "id": "fn-10",
         "label": "10",
-        "text": "Shalom Cholawski, <em>The Jews of Bielorussia during World War II</em> (Amsterdam, 1998), 1-31."
+        "text": "<p>Shalom Cholawski, <em>The Jews of Bielorussia during World War II</em> (Amsterdam, 1998), 1-31.  </p>"
       }
     },
     {
@@ -163,7 +176,7 @@
       "data": {
         "id": "fn-11",
         "label": "11",
-        "text": "Ibid., 35-42. On the role of Wehrmacht soldiers in abetting and committing genocide in this region, see Waitman Wade Beorn, <em>Marching into Darkness: The Wehrmacht and the Holocaust in Belarus</em> (Cambridge, MA, 2014). The German colonization bureau planned to transfer 75 percent of Belarusians to Siberia and other locales while Germanizing 25 percent of them and transferring them to Germany as farmers. No Belarusian was to receive more than a fourth-grade education. (48-9)."
+        "text": "<p>Ibid., 35-42. On the role of Wehrmacht soldiers in abetting and committing genocide in this region, see Waitman Wade Beorn, <em>Marching into Darkness: The Wehrmacht and the Holocaust in Belarus</em> (Cambridge, MA, 2014). The German colonization bureau planned to transfer 75 percent of Belarusians to Siberia and other locales while Germanizing 25 percent of them and transferring them to Germany as farmers. No Belarusian was to receive more than a fourth-grade education. (48-9).  </p>"
       }
     },
     {
@@ -178,7 +191,7 @@
       "data": {
         "id": "fn-12",
         "label": "12",
-        "text": "On June 27, Order Police Battalion 309 led some 800 Jews into the main synagogue, set it afire, and shot 2,000 additional Jews. Einsatzgruppe 8, a subunit of Einsatzgruppe B, arrived on July 1 and killed 300 of the Jewish intelligentsia there."
+        "text": "<p>On June 27, Order Police Battalion 309 led some 800 Jews into the main synagogue, set it afire, and shot 2,000 additional Jews. Einsatzgruppe 8, a subunit of Einsatzgruppe B, arrived on July 1 and killed 300 of the Jewish intelligentsia there.  </p>"
       }
     },
     {
@@ -193,7 +206,7 @@
       "data": {
         "id": "fn-13",
         "label": "13",
-        "text": "Yitzhak Arad, <em>The Holocaust in the Soviet Union</em> (Lincoln, NE, 2009), 125-140; Cholawski, <em>Jews of Bielorussia</em>, 58."
+        "text": "<p>Yitzhak Arad, <em>The Holocaust in the Soviet Union</em> (Lincoln, NE, 2009), 125-140; Cholawski, <em>Jews of Bielorussia</em>, 58.  </p>"
       }
     },
     {
@@ -201,7 +214,7 @@
       "data": {
         "id": "fn-14",
         "label": "14",
-        "text": "Arad, <em>Holocaust in the Soviet Union</em>, 150, 157."
+        "text": "<p>Arad, <em>Holocaust in the Soviet Union</em>, 150, 157.  </p>"
       }
     },
     {
@@ -216,7 +229,7 @@
       "data": {
         "id": "fn-15",
         "label": "15",
-        "text": "On collaboration by Poles, Ukrainians, and natives of Baltic states, see Martin Dean, <em>Collaboration in the Holocaust: Crimes of the Local Police in Belorussia and Ukraine</em> (NY, 2000), 142. For an interesting discussion of motivations of collaborators, see Snyder, <em>Black Earth</em>."
+        "text": "<p>On collaboration by Poles, Ukrainians, and natives of Baltic states, see Martin Dean, <em>Collaboration in the Holocaust: Crimes of the Local Police in Belorussia and Ukraine</em> (NY, 2000), 142. For an interesting discussion of motivations of collaborators, see Snyder, <em>Black Earth</em>.  </p>"
       }
     },
     {
@@ -224,7 +237,7 @@
       "data": {
         "id": "fn-16",
         "label": "16",
-        "text": "A Schein was work permit (lit. \u201cpaper\u201d) intended primarily for artisans and doctors deemed essential to the German administration. A holder of a Schein could also register his spouse and up to two children. While many Jews believed that possessing a Schein might allow them to survive, the German authorities gradually restricted their numbers. See Leni Yahil, <em>The Holocaust: The Fate of European Jewry</em>, 1932-1945 (NY, 1987), 176-9."
+        "text": "<p>A Schein was work permit (lit. \u201cpaper\u201d) intended primarily for artisans and doctors deemed essential to the German administration. A holder of a Schein could also register his spouse and up to two children. While many Jews believed that possessing a Schein might allow them to survive, the German authorities gradually restricted their numbers. See Leni Yahil, <em>The Holocaust: The Fate of European Jewry</em>, 1932-1945 (NY, 1987), 176-9.  </p>"
       }
     },
     {
@@ -239,7 +252,7 @@
       "data": {
         "id": "fn-17",
         "label": "17",
-        "text": "Arad, <em>Holocaust in the Soviet Union</em>, 257, 329; 519-23. The figure 370 is supplied by Yad Vashem. As for eastern Belarus, between 230,000-240,000 Jews lived in German-occupied eastern Belarus and only 6-7,000 survived."
+        "text": "<p>Arad, <em>Holocaust in the Soviet Union</em>, 257, 329; 519-23. The figure 370 is supplied by Yad Vashem. As for eastern Belarus, between 230,000-240,000 Jews lived in German-occupied eastern Belarus and only 6-7,000 survived.  </p>"
       }
     },
     {
@@ -261,7 +274,7 @@
       "data": {
         "id": "fn-18",
         "label": "18",
-        "text": "On Jewish \u201cfamily units\u201d, see Anika Walke, <em>Pioneers and Partisans: An Oral History of Nazi Genocide in Belorussia</em> (NY, 2015), 165-6. On Belarusian territory Walke estimates that 3,700 and 5,200 members of such units, which were attached to combat units and provided non-combat services like food acquisition and preparation."
+        "text": "<p>On Jewish \u201cfamily units\u201d, see Anika Walke, <em>Pioneers and Partisans: An Oral History of Nazi Genocide in Belorussia</em> (NY, 2015), 165-6. On Belarusian territory Walke estimates that 3,700 and 5,200 members of such units, which were attached to combat units and provided non-combat services like food acquisition and preparation.  </p>"
       }
     },
     {
@@ -269,7 +282,7 @@
       "data": {
         "id": "fn-19",
         "label": "19",
-        "text": "Snyder, <em>Black Earth</em>, 280; Yehuda Bauer, \u201cJewish Resistance in the Ukraine and Belarus during the Holocaust,\u201d in Patrick Henry, ed., <em>Jewish Resistance Against the Nazis</em> (Washington, D.C., 2014), 502; idem., \u201cNowogr\u022fdek- The Story of a Shtetl\u201d, 23; Cholawski, <em>Jews of Bielorussia</em>, 218; and \u201cPartisans,\u201d in Israel Gutman, ed., <em>Encyclopedia of the Holocaust</em> (NY, 1990), 3:1113. Anti-semitism among Soviet partisans, initially a serious problem, abated with the establishment of a united partisan command in 1942 by General Vasily Chernyshev, known as \u201cPlaton\u201d."
+        "text": "<p>Snyder, <em>Black Earth</em>, 280; Yehuda Bauer, \u201cJewish Resistance in the Ukraine and Belarus during the Holocaust,\u201d in Patrick Henry, ed., <em>Jewish Resistance Against the Nazis</em> (Washington, D.C., 2014), 502; idem., \u201cNowogr\u022fdek- The Story of a Shtetl\u201d, 23; Cholawski, <em>Jews of Bielorussia</em>, 218; and \u201cPartisans,\u201d in Israel Gutman, ed., <em>Encyclopedia of the Holocaust</em> (NY, 1990), 3:1113. Anti-semitism among Soviet partisans, initially a serious problem, abated with the establishment of a united partisan command in 1942 by General Vasily Chernyshev, known as \u201cPlaton\u201d.  </p>"
       }
     },
     {
@@ -291,7 +304,7 @@
       "data": {
         "id": "fn-20",
         "label": "20",
-        "text": "Cholawski, <em>Jews of Bielorussia</em>, 111-12, 124-5."
+        "text": "<p>Cholawski, <em>Jews of Bielorussia</em>, 111-12, 124-5.  </p>"
       }
     },
     {
@@ -299,7 +312,7 @@
       "data": {
         "id": "fn-21",
         "label": "21",
-        "text": "Ibid., 125-6; 141, 218."
+        "text": "<p>Ibid., 125-6; 141, 218.  </p>"
       }
     },
     {
@@ -313,7 +326,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>No, it wasn't satisfying. You did it because you had no choice--to take revenge. But, uh, no, no satisfaction in killing anybody at all\u2026the times were so bad that you had to survive. In order to survive, you had to defend yourself-- or attack [II, 9:20]<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">22</a></sup> </p>"
+        "text": "<p>No, it wasn't satisfying. You did it because you had no choice--to take revenge. But, uh, no, no satisfaction in killing anybody at all\u2026the times were so bad that you had to survive. In order to survive, you had to defend yourself-- or attack [II, 9:20]<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">v-1</a></sup> </p>"
       }
     },
     {
@@ -321,7 +334,7 @@
       "data": {
         "id": "fn-v-1",
         "label": "v-1",
-        "text": "09:20-09:56 Tape II",
+        "text": "<p>09:20-09:56 Tape II  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/58978?e=596&media=58978&t=560&e=596\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -336,7 +349,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Many Jewish partisans from Zhetl fought in the \u201cZhetler Battalion,\u201d which was divided into three units headed by Hirsch Kaplinsky, Jonah Midvetsky, and Shalom Ogulnik. Others joined the Yehezkel Atlas, Pobieda, Borba, Kovalov, or famous Bielski units, which operated mainly in the Lipczynska (Bia\u0142owie\u017ca) and Naliboki forests. Rubin joined Kaplinski\u2019s unit after a sojourn at the Dworzec labor camp. The unit grew to 120 members, merged with the Orliani partisan group as Company no. 3, and joined in daring attacks on German garrisons. Kaplinski was killed during the German manhunt known as Operation Hamburg between December 10-24, 1942, at which point command of the unit was taken over by Ukrainian and Russian leaders.<sup class=\"footnote-ref\" id=\"fnref-22\"><a href=\"#fn-22\">23</a></sup> This is but one example of how partisan units could exhibit an extraordinary level of inter-ethnic cooperation in a period defined by exclusivist nationalism.<sup class=\"footnote-ref\" id=\"fnref-23\"><a href=\"#fn-23\">24</a></sup> "
+        "text": "Many Jewish partisans from Zhetl fought in the \u201cZhetler Battalion,\u201d which was divided into three units headed by Hirsch Kaplinsky, Jonah Midvetsky, and Shalom Ogulnik. Others joined the Yehezkel Atlas, Pobieda, Borba, Kovalov, or famous Bielski units, which operated mainly in the Lipczynska (Bia\u0142owie\u017ca) and Naliboki forests. Rubin joined Kaplinski\u2019s unit after a sojourn at the Dworzec labor camp. The unit grew to 120 members, merged with the Orliani partisan group as Company no. 3, and joined in daring attacks on German garrisons. Kaplinski was killed during the German manhunt known as Operation Hamburg between December 10-24, 1942, at which point command of the unit was taken over by Ukrainian and Russian leaders.<sup class=\"footnote-ref\" id=\"fnref-22\"><a href=\"#fn-22\">22</a></sup> This is but one example of how partisan units could exhibit an extraordinary level of inter-ethnic cooperation in a period defined by exclusivist nationalism.<sup class=\"footnote-ref\" id=\"fnref-23\"><a href=\"#fn-23\">23</a></sup> "
       }
     },
     {
@@ -344,7 +357,7 @@
       "data": {
         "id": "fn-22",
         "label": "22",
-        "text": "Arad, <em>The Holocaust in the Soviet Union</em>, 508-9."
+        "text": "<p>Arad, <em>The Holocaust in the Soviet Union</em>, 508-9.  </p>"
       }
     },
     {
@@ -352,14 +365,14 @@
       "data": {
         "id": "fn-23",
         "label": "23",
-        "text": "Some, however, were notoriously anti-semitic. See Leonid Smilovitsky, Antisemitism in the Soviet Partisan Movement, 1941\u20131944: The Case of Belorussia,\u201d <em>Holocaust and Genocide Studies</em> 20:2 (2006)."
+        "text": "<p>Some, however, were notoriously anti-semitic. See Leonid Smilovitsky, Antisemitism in the Soviet Partisan Movement, 1941\u20131944: The Case of Belorussia,\u201d <em>Holocaust and Genocide Studies</em> 20:2 (2006).  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Although Rubin eschews heroic rhetoric in his retelling, at no point does he fulfill the stereotype of the violence-averse Orthodox Jew. Early on, he smuggled weapons for a planned ghetto revolt at great personal risk, and he fought with partisans after his ghetto\u2019s liquidation. Rabbinical opinion during this period actually condoned such conduct. When R. Ephraim Oshry, a ritual legal (<em>halakhic</em>) authority in the Kovno (Kaunus) Ghetto, was asked by a ghetto resident whether it was permissible to escape to the forest and join partisans, he ruled in the affirmative. Despite the personal risk owing to the well-known hatred for Jews among certain Soviet partisans, Oshry reasoned, staying in a ghetto would mean exposing oneself to murder (ghetto residents were popularly known as \u201ceasy kills\u201d, he notes). Escaping to the forests, in contrast, entailed only a \u201cpossible danger\u201d (<em>safek sakanah</em>), since those who resolved to escape were doubtless well-informed of the whereabouts of sympathetic partisans. In fact, Oshry argued, the more Jews who escaped to the forests and joined partisan camps, the more the German \u201cAmalek\u201d would be weakened. Therefore, \u201cone should encourage and fortify them and extend them as much help as possible in obtaining weapons so that they will not come empty-handed to the partisan camps and will be knowledgeable in battle and warfare and poised to be on the front lines at the head of the fighters.\u201d<sup class=\"footnote-ref\" id=\"fnref-24\"><a href=\"#fn-24\">25</a></sup> "
+        "text": "Although Rubin eschews heroic rhetoric in his retelling, at no point does he fulfill the stereotype of the violence-averse Orthodox Jew. Early on, he smuggled weapons for a planned ghetto revolt at great personal risk, and he fought with partisans after his ghetto\u2019s liquidation. Rabbinical opinion during this period actually condoned such conduct. When R. Ephraim Oshry, a ritual legal (<em>halakhic</em>) authority in the Kovno (Kaunus) Ghetto, was asked by a ghetto resident whether it was permissible to escape to the forest and join partisans, he ruled in the affirmative. Despite the personal risk owing to the well-known hatred for Jews among certain Soviet partisans, Oshry reasoned, staying in a ghetto would mean exposing oneself to murder (ghetto residents were popularly known as \u201ceasy kills\u201d, he notes). Escaping to the forests, in contrast, entailed only a \u201cpossible danger\u201d (<em>safek sakanah</em>), since those who resolved to escape were doubtless well-informed of the whereabouts of sympathetic partisans. In fact, Oshry argued, the more Jews who escaped to the forests and joined partisan camps, the more the German \u201cAmalek\u201d would be weakened. Therefore, \u201cone should encourage and fortify them and extend them as much help as possible in obtaining weapons so that they will not come empty-handed to the partisan camps and will be knowledgeable in battle and warfare and poised to be on the front lines at the head of the fighters.\u201d<sup class=\"footnote-ref\" id=\"fnref-24\"><a href=\"#fn-24\">24</a></sup> "
       }
     },
     {
@@ -367,14 +380,14 @@
       "data": {
         "id": "fn-24",
         "label": "24",
-        "text": "Ephraim Oshry, <em>Mi-ma\u2019amakim</em> (NY, 1976), no. 10, pp. 73-9. According to Snyder, by Spring of 1942 the Jews of Minsk were also \u201ccoming to see the forest as less dangerous than the ghetto.\u201d Of the roughly ten thousand Jews who left the Minsk Ghetto and joined partisans, about half seem to have survived. See <em>Bloodlands</em>, 237. The Bielski partisan unit formed an exception to the rule that possession of a weapons was a precondition for acceptance. See However, the Bielski partisans formed an exception: they would often accept members without weapons. See Nechama Tec, <em>Resistance: The Bielski Partisans</em> (NY, 2009), 3."
+        "text": "<p>Ephraim Oshry, <em>Mi-ma\u2019amakim</em> (NY, 1976), no. 10, pp. 73-9. According to Snyder, by Spring of 1942 the Jews of Minsk were also \u201ccoming to see the forest as less dangerous than the ghetto.\u201d Of the roughly ten thousand Jews who left the Minsk Ghetto and joined partisans, about half seem to have survived. See <em>Bloodlands</em>, 237. The Bielski partisan unit formed an exception to the rule that possession of a weapons was a precondition for acceptance. See However, the Bielski partisans formed an exception: they would often accept members without weapons. See Nechama Tec, <em>Resistance: The Bielski Partisans</em> (NY, 2009), 3.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Rubin, for his part, was beyond consulting with rabbis by then. The murder of his family and community members had been too much. \u201cI quit being orthodox. In other words, I protested,\u201d he recalls. \u201cWhy didn't [God] prevent all this?\u201d he demands, noting that it was often the pious Jews who were massacred first [II, 39:05]. His was not the only Orthodox response to the Holocaust\u2014many traditionally observant Jews were convinced that they had been spared because of divine protection and returned to traditional observance as soon as they could.<sup class=\"footnote-ref\" id=\"fnref-25\"><a href=\"#fn-25\">26</a></sup> But a loss of faith was not uncommon. For Rubin, the only thing left to do was to avenge the \u201cinnocent people they killed\u201d before he, himself, was inevitably killed [II, 9:00].  "
+        "text": "Rubin, for his part, was beyond consulting with rabbis by then. The murder of his family and community members had been too much. \u201cI quit being orthodox. In other words, I protested,\u201d he recalls. \u201cWhy didn't [God] prevent all this?\u201d he demands, noting that it was often the pious Jews who were massacred first [II, 39:05]. His was not the only Orthodox response to the Holocaust\u2014many traditionally observant Jews were convinced that they had been spared because of divine protection and returned to traditional observance as soon as they could.<sup class=\"footnote-ref\" id=\"fnref-25\"><a href=\"#fn-25\">25</a></sup> But a loss of faith was not uncommon. For Rubin, the only thing left to do was to avenge the \u201cinnocent people they killed\u201d before he, himself, was inevitably killed [II, 9:00].  "
       }
     },
     {
@@ -382,7 +395,7 @@
       "data": {
         "id": "fn-25",
         "label": "25",
-        "text": "See, e.g., Devorah S. Holocaust testimony (HVT-4109);Solly I. Holocaust testimony (HVT-2139)."
+        "text": "<p>See, e.g., Devorah S. Holocaust testimony (HVT-4109);Solly I. Holocaust testimony (HVT-2139).  </p>"
       }
     },
     {

@@ -1,5 +1,18 @@
 {
-  "meta": null,
+  "meta": {
+    "slug": "hvt-3164",
+    "smallVideoPath": "https://d12q9fe14kxf9b.cloudfront.net/3164/background-loop-640.mp4",
+    "videoPath": "https://d12q9fe14kxf9b.cloudfront.net/3164/background-loop-1280.mp4",
+    "posterPath": "https://d12q9fe14kxf9b.cloudfront.net/3164/poster.jpg",
+    "aviaryLink": "https://fortunoff.aviaryplatform.com/collections/5/collection_resources/3214/transcript?",
+    "hvtID": "3164",
+    "supertitle": "Introduction to the testimony of",
+    "title": "Helena Balicka-Koz\u0142owska",
+    "author": "Anna Machcewicz",
+    "affiliation": "Institute of Political Studies of the Polish Academy of Sciences",
+    "essayPath": "/data/intro-hvt-3164.json",
+    "publicationDate": "February 1, 2021"
+  },
   "blocks": [
     {
       "type": "paragraph",
@@ -34,7 +47,7 @@
       "data": {
         "id": "fn-1",
         "label": "1",
-        "text": "Joanna Michlic, <em>Poland's Threatening Other: The Image of the Jew from 1880 to the Present</em> (Lincoln and London: University of Nebraska Press, 2006), 112."
+        "text": "<p>Joanna Michlic, <em>Poland's Threatening Other: The Image of the Jew from 1880 to the Present</em> (Lincoln and London: University of Nebraska Press, 2006), 112.  </p>"
       }
     },
     {
@@ -49,7 +62,7 @@
       "data": {
         "id": "fn-2",
         "label": "2",
-        "text": "Karolina Matysik, \u201cZesp\u00f3\u0142 mieszkaniowy TOR na warszawskim Grochowie,\u201d <em>Budownictwo i Architektura</em> 14, no. 1 (2015): 73-91."
+        "text": "<p>Karolina Matysik, \u201cZesp\u00f3\u0142 mieszkaniowy TOR na warszawskim Grochowie,\u201d <em>Budownictwo i Architektura</em> 14, no. 1 (2015): 73-91.  </p>"
       }
     },
     {
@@ -77,7 +90,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "blockquote",
-        "text": "<p>\u201c\u2026for us, what was happening in the first years of the war was not a surprise, because we knew what fascism was. So only after a certain threshold was crossed, well, before the war there was no mass extermination, but all the harassment against the Poles, and much more against the Jews, we had been expecting it. We knew about the Kristallnacht, and so on, and so on.\u201d<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">3</a></sup> </p>"
+        "text": "<p>\u201c\u2026for us, what was happening in the first years of the war was not a surprise, because we knew what fascism was. So only after a certain threshold was crossed, well, before the war there was no mass extermination, but all the harassment against the Poles, and much more against the Jews, we had been expecting it. We knew about the Kristallnacht, and so on, and so on.\u201d<sup class=\"footnote-ref\" id=\"fnref-v-1\"><a href=\"#fn-v-1\">v-1</a></sup> </p>"
       }
     },
     {
@@ -85,7 +98,7 @@
       "data": {
         "id": "fn-v-1",
         "label": "v-1",
-        "text": "14:56 - 15:23",
+        "text": "<p>14:56 - 15:23  </p>",
         "embedCode": "<div style=\"padding:56.25% 0 0 0;position:relative;overflow: hidden;width: 100%;\"><iframe style=\"position:absolute;top:0;left:0;bottom: 0;right: 0;width:100%;height:100%;\" src=\"https://fortunoff.aviaryplatform.com/embed/media/98372?e=902&media=98372&t=896&e=923\" allow=\"fullscreen\" frameborder=\"0\"></iframe></div>"
       }
     },
@@ -93,7 +106,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Poland was invaded by Germany on 1 September 1939 and Warsaw defended herself until September 28. The Balickas, like many other citizens, aided in the defense of Warsaw. Nineteen-year-old Helena worked with the Capital Committee of Mutual Assistance (Sto\u0142eczny Komitet Samopomocy Spo\u0142ecznej). When the German occupation began, her friend Krystyna Szapiro, despite her Jewish origin, did not move to the ghetto and lived under the false identity of Hanka Sawicka. She was a communist activist and organized an underground leftist journal. Helena joined this enterprise and became a member of the staff. <sup class=\"footnote-ref\" id=\"fnref-3\"><a href=\"#fn-3\">4</a></sup> "
+        "text": "Poland was invaded by Germany on 1 September 1939 and Warsaw defended herself until September 28. The Balickas, like many other citizens, aided in the defense of Warsaw. Nineteen-year-old Helena worked with the Capital Committee of Mutual Assistance (Sto\u0142eczny Komitet Samopomocy Spo\u0142ecznej). When the German occupation began, her friend Krystyna Szapiro, despite her Jewish origin, did not move to the ghetto and lived under the false identity of Hanka Sawicka. She was a communist activist and organized an underground leftist journal. Helena joined this enterprise and became a member of the staff. <sup class=\"footnote-ref\" id=\"fnref-3\"><a href=\"#fn-3\">3</a></sup> "
       }
     },
     {
@@ -101,14 +114,14 @@
       "data": {
         "id": "fn-3",
         "label": "3",
-        "text": "Stanis\u0142awa Lewandowska, \u201cKobiety i dziewcz\u0119ta w konspiracyjnym ruchu wydawniczym (1939-1945),\u201d <em>Kwartalnik Historii Prasy Polskiej</em> 25, no. 4 (1986): 117-28."
+        "text": "<p>Stanis\u0142awa Lewandowska, \u201cKobiety i dziewcz\u0119ta w konspiracyjnym ruchu wydawniczym (1939-1945),\u201d <em>Kwartalnik Historii Prasy Polskiej</em> 25, no. 4 (1986): 117-28.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "In 1943, a few radical leftist and communist organizations merged in the Young People's Fighting Union (ZWM, Zwi\u0105zek Walki M\u0142odych) and began to release the journal <em>Walka M\u0142odych</em> (The Struggle of the Youth). The Union was a small circle, composed of several dozen people ideologically tied to the communist Polish Workers Party (Polska Partia Robotnicza; PPR) and its military branch \u2013 the People's Army (Armia Ludowa, AL).<sup class=\"footnote-ref\" id=\"fnref-4\"><a href=\"#fn-4\">5</a></sup> Balicka became a member of the Union. She also studied at the underground department of architecture at Warsaw University.  "
+        "text": "In 1943, a few radical leftist and communist organizations merged in the Young People's Fighting Union (ZWM, Zwi\u0105zek Walki M\u0142odych) and began to release the journal <em>Walka M\u0142odych</em> (The Struggle of the Youth). The Union was a small circle, composed of several dozen people ideologically tied to the communist Polish Workers Party (Polska Partia Robotnicza; PPR) and its military branch \u2013 the People's Army (Armia Ludowa, AL).<sup class=\"footnote-ref\" id=\"fnref-4\"><a href=\"#fn-4\">4</a></sup> Balicka became a member of the Union. She also studied at the underground department of architecture at Warsaw University.  "
       }
     },
     {
@@ -116,14 +129,14 @@
       "data": {
         "id": "fn-4",
         "label": "4",
-        "text": "Krystyn D\u0105drowa, ed., _Konspiracyjny ZWM w Warszawie, _Warsaw: Pokolenia 2008, 164."
+        "text": "<p>Krystyn D\u0105drowa, ed., _Konspiracyjny ZWM w Warszawie, _Warsaw: Pokolenia 2008, 164.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Under Nazi occupation Zygmunt Balicki became a member of an underground communist organization named \u201cProletariusz.\u201d In 1943 he was arrested and tortured by the Gestapo in the \u201cPawiak\u201d prison and finally sent to the concentration camps Auschwitz, Sachsenhausen, Bergen-Belsen and Launingen. In April 1945 he was liberated by American troops and then returned to Poland.<sup class=\"footnote-ref\" id=\"fnref-5\"><a href=\"#fn-5\">6</a></sup> "
+        "text": "Under Nazi occupation Zygmunt Balicki became a member of an underground communist organization named \u201cProletariusz.\u201d In 1943 he was arrested and tortured by the Gestapo in the \u201cPawiak\u201d prison and finally sent to the concentration camps Auschwitz, Sachsenhausen, Bergen-Belsen and Launingen. In April 1945 he was liberated by American troops and then returned to Poland.<sup class=\"footnote-ref\" id=\"fnref-5\"><a href=\"#fn-5\">5</a></sup> "
       }
     },
     {
@@ -131,14 +144,14 @@
       "data": {
         "id": "fn-5",
         "label": "5",
-        "text": "<em>S\u0142ownik biograficzny dzia\u0142aczy polskiego ruchu robotniczego</em>, t. 1, Warsaw, Ksi\u0105\u017cka i Wiedza, 1978."
+        "text": "<p><em>S\u0142ownik biograficzny dzia\u0142aczy polskiego ruchu robotniczego</em>, t. 1, Warsaw, Ksi\u0105\u017cka i Wiedza, 1978.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "During the occupation and the Warsaw Uprising (August 1 \u2013 October 1, 1944) Jadwiga Balicka worked continuously as a doctor. She became a member of the Secret Settlement Committee of Democratic and Socialist Doctors (Tajny Komitet Porozumiewawczy Lekarzy Demokrat\u00f3w i Socjalist\u00f3w). Associated doctors worked as a support network, secretly took care of the wounded soldiers of the underground movement, provided false medical certifications, and medical assistance for the ghetto. They also financially supported their Jewish colleagues deprived of jobs. The Committee also published in its own conspiratorial journal, a wartime medical code of ethics, and expressed solidarity with the Jews.<sup class=\"footnote-ref\" id=\"fnref-6\"><a href=\"#fn-6\">7</a></sup> "
+        "text": "During the occupation and the Warsaw Uprising (August 1 \u2013 October 1, 1944) Jadwiga Balicka worked continuously as a doctor. She became a member of the Secret Settlement Committee of Democratic and Socialist Doctors (Tajny Komitet Porozumiewawczy Lekarzy Demokrat\u00f3w i Socjalist\u00f3w). Associated doctors worked as a support network, secretly took care of the wounded soldiers of the underground movement, provided false medical certifications, and medical assistance for the ghetto. They also financially supported their Jewish colleagues deprived of jobs. The Committee also published in its own conspiratorial journal, a wartime medical code of ethics, and expressed solidarity with the Jews.<sup class=\"footnote-ref\" id=\"fnref-6\"><a href=\"#fn-6\">6</a></sup> "
       }
     },
     {
@@ -146,7 +159,7 @@
       "data": {
         "id": "fn-6",
         "label": "6",
-        "text": "W\u0142adys\u0142aw Bartoszewski and Zofia Lewin\u00f3wna, eds., <em>Ten jest z ojczyzny mojej. Polacy z pomoc\u0105 \u017bydom 1939-1945</em> (Cracow: Znak, 1969), 241-44."
+        "text": "<p>W\u0142adys\u0142aw Bartoszewski and Zofia Lewin\u00f3wna, eds., <em>Ten jest z ojczyzny mojej. Polacy z pomoc\u0105 \u017bydom 1939-1945</em> (Cracow: Znak, 1969), 241-44.  </p>"
       }
     },
     {
@@ -174,7 +187,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Balicka had contacts with the ghetto because several of her friends decided to live inside. Amongst them were Marysia Hirszfeld and Ola Zweinbaum, whose parents \u2013 Hanna and Ludwik Hirszfeld and Juliusz Zweibaum \u2013 were outstanding doctors and researchers. In 1940\u20131942 they organized the Sanitary Course for Fighting Epidemics (Kurs Przysposobienia Sanitarnego do Walki z Epidemiami). It was part of the Warsaw Medical University and an opportunity to educate Jewish students and conduct scientific research.<sup class=\"footnote-ref\" id=\"fnref-7\"><a href=\"#fn-7\">8</a></sup> "
+        "text": "Balicka had contacts with the ghetto because several of her friends decided to live inside. Amongst them were Marysia Hirszfeld and Ola Zweinbaum, whose parents \u2013 Hanna and Ludwik Hirszfeld and Juliusz Zweibaum \u2013 were outstanding doctors and researchers. In 1940\u20131942 they organized the Sanitary Course for Fighting Epidemics (Kurs Przysposobienia Sanitarnego do Walki z Epidemiami). It was part of the Warsaw Medical University and an opportunity to educate Jewish students and conduct scientific research.<sup class=\"footnote-ref\" id=\"fnref-7\"><a href=\"#fn-7\">7</a></sup> "
       }
     },
     {
@@ -182,7 +195,7 @@
       "data": {
         "id": "fn-7",
         "label": "7",
-        "text": "Barbara Engelking and Jacek Leociak, <em>Warsaw Ghetto: a guide to the perished city</em> (New Haven: Yale University Press, 2019), 249-51."
+        "text": "<p>Barbara Engelking and Jacek Leociak, <em>Warsaw Ghetto: a guide to the perished city</em> (New Haven: Yale University Press, 2019), 249-51.  </p>"
       }
     },
     {
@@ -203,7 +216,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "The leaders of the Polish Underground State in the first half of 1942 thought that informing the world of the extermination of Jews would itself decrease the scale of murders. We must note, however, that at this time a similar opinion was held by many Jewish communities \u2013 e.g. the Jewish socialist party \u201cBund.\u201d The Polish underground authorities were convinced (and the western Allies shared this point of view) that the quick ending of the war would stop the terror directed against both Poles and Jews. The reactions to the extermination of Jews were restricted to passing on the information. The number of the dispatches and reports was definitely smaller than in the case of those concerning Poles.<sup class=\"footnote-ref\" id=\"fnref-8\"><a href=\"#fn-8\">9</a></sup> "
+        "text": "The leaders of the Polish Underground State in the first half of 1942 thought that informing the world of the extermination of Jews would itself decrease the scale of murders. We must note, however, that at this time a similar opinion was held by many Jewish communities \u2013 e.g. the Jewish socialist party \u201cBund.\u201d The Polish underground authorities were convinced (and the western Allies shared this point of view) that the quick ending of the war would stop the terror directed against both Poles and Jews. The reactions to the extermination of Jews were restricted to passing on the information. The number of the dispatches and reports was definitely smaller than in the case of those concerning Poles.<sup class=\"footnote-ref\" id=\"fnref-8\"><a href=\"#fn-8\">8</a></sup> "
       }
     },
     {
@@ -211,7 +224,7 @@
       "data": {
         "id": "fn-8",
         "label": "8",
-        "text": "A Pu\u0142awski, <em>Wykluczenie czy samowykluczenie? Trzy aspekty obecno\u015bci \u017byd\u00f3w w wojennym spo\u0142ecze\u0144stwie polskim na przyk\u0142adzie 1942 roku</em>, Pami\u0119\u0107 i Sprawiedliwo\u015b\u0107 1/2008 s. 156; Antony Polonsky, <em>The Jews in Poland and Russia</em>, Vol III, 1914-2008 (London: The Littman Library of the Jewish Civilization, 2019), 482-3."
+        "text": "<p>A Pu\u0142awski, <em>Wykluczenie czy samowykluczenie? Trzy aspekty obecno\u015bci \u017byd\u00f3w w wojennym spo\u0142ecze\u0144stwie polskim na przyk\u0142adzie 1942 roku</em>, Pami\u0119\u0107 i Sprawiedliwo\u015b\u0107 1/2008 s. 156; Antony Polonsky, <em>The Jews in Poland and Russia</em>, Vol III, 1914-2008 (London: The Littman Library of the Jewish Civilization, 2019), 482-3.  </p>"
       }
     },
     {
@@ -253,7 +266,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Similarly, the military aid provided during the ghetto uprising in April-May 1943 was very limited. The Jewish Fighting Organization (\u017bydowska Organizacja Bojowa, \u017bOB) was formed at the end of July 1942, mostly by members of Jewish Socialist Party (Bund) and the left Zionist youth groups, such as Ha-shomer ha-taz\u2019ir and Dror. Its goal was an armed struggle with the Nazis to stop deportations. Their primary contact with the Home Army was Henryk Woli\u0144ski. He served as liaison and tried to convince his superiors to hand over weapons to the Jewish underground. The Commander of the Home Army, Gen. Grot-Rowecki, was not convinced of \u017bOB\u2019s combat capabilities. He did finally give an order to help the Jewish fighters in the ghetto, but only a very limited amount of arms and ammunition was delivered.<sup class=\"footnote-ref\" id=\"fnref-9\"><a href=\"#fn-9\">10</a></sup> The \u017bOB was seeking weapons and allies, and made parallel contact with the small communist-controlled People\u2019s Guard, which was in conflict with the Polish Underground State.  "
+        "text": "Similarly, the military aid provided during the ghetto uprising in April-May 1943 was very limited. The Jewish Fighting Organization (\u017bydowska Organizacja Bojowa, \u017bOB) was formed at the end of July 1942, mostly by members of Jewish Socialist Party (Bund) and the left Zionist youth groups, such as Ha-shomer ha-taz\u2019ir and Dror. Its goal was an armed struggle with the Nazis to stop deportations. Their primary contact with the Home Army was Henryk Woli\u0144ski. He served as liaison and tried to convince his superiors to hand over weapons to the Jewish underground. The Commander of the Home Army, Gen. Grot-Rowecki, was not convinced of \u017bOB\u2019s combat capabilities. He did finally give an order to help the Jewish fighters in the ghetto, but only a very limited amount of arms and ammunition was delivered.<sup class=\"footnote-ref\" id=\"fnref-9\"><a href=\"#fn-9\">9</a></sup> The \u017bOB was seeking weapons and allies, and made parallel contact with the small communist-controlled People\u2019s Guard, which was in conflict with the Polish Underground State.  "
       }
     },
     {
@@ -261,14 +274,14 @@
       "data": {
         "id": "fn-9",
         "label": "9",
-        "text": "Adam Pu\u0142awski, <em>Wobec niespotykanego w dziejach mordu. Rz\u0105d RP na uchod\u017astwie, Delegatura Rz\u0105du RP na Kraj, AK a eksterminacja ludno\u015bci \u017cydowskiej od \u201cwielkiej akcji\u201d do powstania w getcie warszawskim</em> (Che\u0142m: Biblioteka Rocznika Che\u0142mskiego, 2018), 816."
+        "text": "<p>Adam Pu\u0142awski, <em>Wobec niespotykanego w dziejach mordu. Rz\u0105d RP na uchod\u017astwie, Delegatura Rz\u0105du RP na Kraj, AK a eksterminacja ludno\u015bci \u017cydowskiej od \u201cwielkiej akcji\u201d do powstania w getcie warszawskim</em> (Che\u0142m: Biblioteka Rocznika Che\u0142mskiego, 2018), 816.  </p>"
       }
     },
     {
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Although Helena became a member of the communist underground that was outside of the Polish Underground State, she did not discuss this tension between the two orientations.<sup class=\"footnote-ref\" id=\"fnref-10\"><a href=\"#fn-10\">11</a></sup> The political split and military aspects are not part of her story. In her testimony, she focuses on the rescue of Jewish citizens. In the circle of people with whom she lived and cooperated the necessity of help was obvious and was based mostly on prewar social relations and professional connections.  "
+        "text": "Although Helena became a member of the communist underground that was outside of the Polish Underground State, she did not discuss this tension between the two orientations.<sup class=\"footnote-ref\" id=\"fnref-10\"><a href=\"#fn-10\">10</a></sup> The political split and military aspects are not part of her story. In her testimony, she focuses on the rescue of Jewish citizens. In the circle of people with whom she lived and cooperated the necessity of help was obvious and was based mostly on prewar social relations and professional connections.  "
       }
     },
     {
@@ -276,7 +289,7 @@
       "data": {
         "id": "fn-10",
         "label": "10",
-        "text": "For more information about the tension between the Polish Underground State and communist-controlled forces see Polonsky, <em>The Jews in Poland and Russia</em>, 480-2."
+        "text": "<p>For more information about the tension between the Polish Underground State and communist-controlled forces see Polonsky, <em>The Jews in Poland and Russia</em>, 480-2.  </p>"
       }
     },
     {
@@ -290,7 +303,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "When information on the massive deportations from the ghetto came out, Balicka warned her closest Jewish friends, but Sarah lived in a distant part of the ghetto and it was not possible to warn her to run away. A few months later, Balicka received a letter from Sarah informing her that she had survived the summer deportations. They met secretly at the Czerniak\u00f3w Farm, which belonged to the Polish landlord Wojciech Zatwarnicki, who employed young Jews from the Dror \u2013 one of the Zionists organizations. They lived and worked there for food and salaries. It was also a secret base of The Jewish Fighting Organization.<sup class=\"footnote-ref\" id=\"fnref-11\"><a href=\"#fn-11\">12</a></sup> Only then did she find out that Sarah was not only a member of the Zionist movement but had also joined the Jewish underground. Sarah explained to her that she had tried to get out of the ghetto but failed. Balicka realized then what Jews faced when attempting to leave the ghetto. It was not only a wall or a pointed weapon; the ghetto was a bad accent, cultural alienation, and a lack of friendly outside contacts. Traditional Polish Jews could not simply loose themselves in a street crowd. Their strangeness was visible and made them vulnerable. This confession is moving: \u201c I did realize something that I should have known earlier, what I had known theoretically, but only then did it get to me. The isolation of the Jews from Polish society [\u2026]. Only then, in Czerniak\u00f3w, did I understand the meaning of the isolation of those two communities that had supposedly lived next to each other for a thousand years.\u201d  "
+        "text": "When information on the massive deportations from the ghetto came out, Balicka warned her closest Jewish friends, but Sarah lived in a distant part of the ghetto and it was not possible to warn her to run away. A few months later, Balicka received a letter from Sarah informing her that she had survived the summer deportations. They met secretly at the Czerniak\u00f3w Farm, which belonged to the Polish landlord Wojciech Zatwarnicki, who employed young Jews from the Dror \u2013 one of the Zionists organizations. They lived and worked there for food and salaries. It was also a secret base of The Jewish Fighting Organization.<sup class=\"footnote-ref\" id=\"fnref-11\"><a href=\"#fn-11\">11</a></sup> Only then did she find out that Sarah was not only a member of the Zionist movement but had also joined the Jewish underground. Sarah explained to her that she had tried to get out of the ghetto but failed. Balicka realized then what Jews faced when attempting to leave the ghetto. It was not only a wall or a pointed weapon; the ghetto was a bad accent, cultural alienation, and a lack of friendly outside contacts. Traditional Polish Jews could not simply loose themselves in a street crowd. Their strangeness was visible and made them vulnerable. This confession is moving: \u201c I did realize something that I should have known earlier, what I had known theoretically, but only then did it get to me. The isolation of the Jews from Polish society [\u2026]. Only then, in Czerniak\u00f3w, did I understand the meaning of the isolation of those two communities that had supposedly lived next to each other for a thousand years.\u201d  "
       }
     },
     {
@@ -298,7 +311,7 @@
       "data": {
         "id": "fn-11",
         "label": "11",
-        "text": "Yitzhak \u201cAntek\u201d Zuckerman, A Surplus of Memory: Chronicle of the Warsaw Ghetto Uprising (Berkeley: University of California Press, 1993), 75-7."
+        "text": "<p>Yitzhak \u201cAntek\u201d Zuckerman, A Surplus of Memory: Chronicle of the Warsaw Ghetto Uprising (Berkeley: University of California Press, 1993), 75-7.  </p>"
       }
     },
     {
@@ -312,7 +325,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "The Home Army military help was still very limited. The \u017bOB soldiers felt neglected and disregarded by the Polish underground authorities. At the same time, they had contacts with the chief of staff of the Peoples\u2019 Army, Gen. Wac\u0142aw J\u00f3\u017awiak, which resulted in support for the Jewish fighters.<sup class=\"footnote-ref\" id=\"fnref-12\"><a href=\"#fn-12\">13</a></sup> It is something of a paradox that the \u017bOB fighters, mostly young Zionists who had nothing to do with the communists, took part in the Warsaw uprising in August 1944 among the ranks of the People Army\u2019s units. It was at this time that Balicka made friendships among them and came to understand the goals of the Zionist movement and their dreams of the own homeland.  "
+        "text": "The Home Army military help was still very limited. The \u017bOB soldiers felt neglected and disregarded by the Polish underground authorities. At the same time, they had contacts with the chief of staff of the Peoples\u2019 Army, Gen. Wac\u0142aw J\u00f3\u017awiak, which resulted in support for the Jewish fighters.<sup class=\"footnote-ref\" id=\"fnref-12\"><a href=\"#fn-12\">12</a></sup> It is something of a paradox that the \u017bOB fighters, mostly young Zionists who had nothing to do with the communists, took part in the Warsaw uprising in August 1944 among the ranks of the People Army\u2019s units. It was at this time that Balicka made friendships among them and came to understand the goals of the Zionist movement and their dreams of the own homeland.  "
       }
     },
     {
@@ -320,7 +333,7 @@
       "data": {
         "id": "fn-12",
         "label": "12",
-        "text": "Zuckerman, <em>Surplus of Memory</em>, 427-32."
+        "text": "<p>Zuckerman, <em>Surplus of Memory</em>, 427-32.  </p>"
       }
     },
     {
@@ -334,7 +347,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Understanding of these limitations motivated Balicka to get to know Jewish tradition and the history of the Zionist movement. After the war, Balicka and her family maintained close contacts with Jews who had survived the ghetto uprising. She wrote memoirs in which she described her Jewish friends\u2019 fight in the two uprisings of 1943 and 1944.<sup class=\"footnote-ref\" id=\"fnref-13\"><a href=\"#fn-13\">14</a></sup> "
+        "text": "Understanding of these limitations motivated Balicka to get to know Jewish tradition and the history of the Zionist movement. After the war, Balicka and her family maintained close contacts with Jews who had survived the ghetto uprising. She wrote memoirs in which she described her Jewish friends\u2019 fight in the two uprisings of 1943 and 1944.<sup class=\"footnote-ref\" id=\"fnref-13\"><a href=\"#fn-13\">13</a></sup> "
       }
     },
     {
@@ -342,7 +355,7 @@
       "data": {
         "id": "fn-13",
         "label": "13",
-        "text": "Helena Balicka \u2013 Koz\u0142owska, <em>Mur mia\u0142 dwie strony</em> (Warsaw: Znak, 2002)."
+        "text": "<p>Helena Balicka \u2013 Koz\u0142owska, <em>Mur mia\u0142 dwie strony</em> (Warsaw: Znak, 2002).  </p>"
       }
     },
     {
@@ -356,7 +369,7 @@
       "type": "paragraph",
       "data": {
         "paragraphType": "paragraph",
-        "text": "Balicka graduated from the Warsaw School of Economics (Szko\u0142a G\u0142\u00f3wna Handlowa, SGH) and worked there as an assistant professor. Her friends recalled her spontaneous performance during one of student meetings in March \u201868. A member of the staff in her department called the young people protesting against antisemitism \u201ca spoiled youth.\u201d Then Balicka, sitting next to her, stood up and smacked her in the mouth.<sup class=\"footnote-ref\" id=\"fnref-14\"><a href=\"#fn-14\">15</a></sup> After this incident, she was prosecuted, but finally acquitted because of her veteran\u2019s past. Eventually, she lost her job for many years.  "
+        "text": "Balicka graduated from the Warsaw School of Economics (Szko\u0142a G\u0142\u00f3wna Handlowa, SGH) and worked there as an assistant professor. Her friends recalled her spontaneous performance during one of student meetings in March \u201868. A member of the staff in her department called the young people protesting against antisemitism \u201ca spoiled youth.\u201d Then Balicka, sitting next to her, stood up and smacked her in the mouth.<sup class=\"footnote-ref\" id=\"fnref-14\"><a href=\"#fn-14\">14</a></sup> After this incident, she was prosecuted, but finally acquitted because of her veteran\u2019s past. Eventually, she lost her job for many years.  "
       }
     },
     {
@@ -364,7 +377,7 @@
       "data": {
         "id": "fn-14",
         "label": "14",
-        "text": "Memories of Balicka\u2019s school friend, Zofia Celi\u0144ska, <a href=\"https://portalplock.pl/pl/11_wiadomosci/13274_przeczytacie-o-nich-w-wikipedii-byly-z-jednej-klasy.html\">https://portalplock.pl/pl/11_wiadomosci/13274_przeczytacie-o-nich-w-wikipedii-byly-z-jednej-klasy.html</a>."
+        "text": "<p>Memories of Balicka\u2019s school friend, Zofia Celi\u0144ska, <a href=\"https://portalplock.pl/pl/11_wiadomosci/13274_przeczytacie-o-nich-w-wikipedii-byly-z-jednej-klasy.html\">https://portalplock.pl/pl/11_wiadomosci/13274_przeczytacie-o-nich-w-wikipedii-byly-z-jednej-klasy.html</a>.  </p>"
       }
     },
     {
