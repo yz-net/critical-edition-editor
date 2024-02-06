@@ -22,6 +22,8 @@ import SimpleImage from "@editorjs/simple-image";
 import Paragraph from "@editorjs/paragraph";
 // @ts-ignore
 import Header from "@editorjs/header";
+// @ts-ignore
+import { Footnote, FootnoteMaker } from "editorjs-footnotes";
 
 export const EDITOR_TOOLS = {
   code: Code,
@@ -43,4 +45,9 @@ export const EDITOR_TOOLS = {
   quote: Quote,
   simpleImage: SimpleImage,
   delimiter: Delimiter,
+  FootnoteMaker,
+  footnoteParagraph: {
+    class: Footnote,
+    inlineToolbar: ["link", "bold", "italic"],
+  },
 };
