@@ -6,9 +6,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["Mallory", "Arial", "Helvetica"],
+        serif: ["YaleNewRoman", "Times New Roman", "Times"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 } satisfies Config;
