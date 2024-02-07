@@ -1,6 +1,6 @@
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
-import EssayIndexItem from "~/components/EasyIndexItem";
+import EssayIndexItem from "~/components/EssayIndexItem";
 
 import config from "public/data/config.json" assert { type: "json" };
 
@@ -15,8 +15,8 @@ export default function HomePage() {
       <ImpactHeader
         caption="Photo: Steven H. and Marion L. Holocaust testimony (HVT-544), recorded in 1985."
         backgroundImageURL="/img/impact-header-background.jpg"
-        title="Critical Editions"
-        subtitle="Holocaust Testimonies in Historical Context"
+        title="Critical Editions Editor"
+        subtitle="Create and change testimonies"
       />
       <main className={styles.CenterColumn}>
         <div className={styles.IndexHeader}>
