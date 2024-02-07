@@ -18,7 +18,7 @@ export default function EssayPreamble(props: EssayPreambleProps) {
 
   return (
     <div className={`sans-copy-ff ${styles.EssayPreamble}`}>
-      <p>
+      <p className="py-[1em]">
         {`HVT-${hvtID}`} |{" "}
         <a className="teal-svg teal-font" href={aviaryURL}>
           Watch the annotated video testimony

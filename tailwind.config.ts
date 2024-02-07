@@ -1,5 +1,4 @@
 import { type Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: ["./src/**/*.tsx"],
@@ -8,6 +7,10 @@ export default {
       fontFamily: {
         sans: ["Mallory", "Arial", "Helvetica"],
         serif: ["YaleNewRoman", "Times New Roman", "Times"],
+        helvetica: ["Helvetica Neue", "Helvetica", "Arial"],
+      },
+      textShadow: {
+        DEFAULT: "0 0 9px #000",
       },
     },
   },
