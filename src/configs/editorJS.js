@@ -23,7 +23,7 @@ import Paragraph from "@editorjs/paragraph";
 // @ts-ignore
 import Header from "@editorjs/header";
 // @ts-ignore
-import { Footnote, FootnoteMaker } from "editorjs-footnotes";
+import { Footnote, FootnoteMaker } from "../editorjs-footnotes/index.d.ts";
 
 export const EDITOR_TOOLS = {
   code: Code,
