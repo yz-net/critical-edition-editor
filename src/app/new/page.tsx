@@ -104,13 +104,13 @@ export default function NewPage() {
             />
             <div>
               <div className="text-[24px]">
-                <div className="flex items-center gap-1">
-                  by
+                <div className="flex items-center">
+                  by&nbsp;
                   <input
                     type="textarea"
                     name="Author"
                     placeholder="Author"
-                    className="h-[45px] flex-1 rounded bg-transparent p-0 text-[24px] focus:border-white focus:ring-0"
+                    className="h-[31px] flex-1 rounded bg-transparent p-0 text-[24px] focus:border-white focus:ring-0"
                     onChange={(newAuthor) => {
                       setData((prev) => ({
                         ...prev,
