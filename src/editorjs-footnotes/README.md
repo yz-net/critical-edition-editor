@@ -42,3 +42,5 @@ new EditorJS({
   },
 });
 ```
+
+[Original Repo](https://github.com/jakekara/editorjs-footnotes)
