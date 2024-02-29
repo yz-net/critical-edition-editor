@@ -23,18 +23,11 @@ import Paragraph from "@editorjs/paragraph";
 // @ts-ignore
 import Header from "@editorjs/header";
 // @ts-ignore
-import { Footnote, FootnoteMaker } from "../editorjs-footnotes/index.d.ts";
+import { Footnote, FootnoteMaker } from "~/editorjs-footnotes/src";
 
 export const EDITOR_TOOLS = {
   code: Code,
-  header: {
-    class: Header,
-    config: {
-      placeholder: "Enter a Header",
-      levels: [2, 3, 4],
-      defaultLevel: 2,
-    },
-  },
+  header: Header,
   paragraph: Paragraph,
   checklist: CheckList,
   embed: Embed,
@@ -46,8 +39,9 @@ export const EDITOR_TOOLS = {
   simpleImage: SimpleImage,
   delimiter: Delimiter,
   FootnoteMaker,
-  footnoteParagraph: {
-    class: Footnote,
-    inlineToolbar: ["link", "bold", "italic"],
-  },
+  footnoteParagraph: Footnote,
+  // footnoteParagraph: {
+  //   class: Footnote,
+  //   inlineToolbar: ["link", "bold", "italic"], // don't allow footnotes to add footnotes
+  // }
 };

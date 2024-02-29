@@ -17,7 +17,7 @@
 textarea {
   /* font-size: 9px; */
   color: gray;
-  font-family: monaco, monospace, 'Courier New', Courier;
+  font-family: monaco, monospace, "Courier New", Courier;
   font-weight: bold;
 }
 .barLabel {
@@ -37,7 +37,7 @@ textarea {
 .footnoteBlock .embedCode {
   /* width: 100%; */
   font-size: 12px;
-  font-family: monaco, monospace, 'Courier New', Courier;
+  font-family: monaco, monospace, "Courier New", Courier;
   border: 1px solid gray;
   background-color: #efefef;
   resize: vertical;
