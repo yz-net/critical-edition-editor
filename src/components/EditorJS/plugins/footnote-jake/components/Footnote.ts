@@ -1,6 +1,8 @@
-import Paragraph from "@editorjs/paragraph";
-import { generateID } from "./generateID";
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
+import Paragraph from "@editorjs/paragraph";
+
+import { generateID } from "../utils/generateID";
+
 import styles from "./Footnote.module.css";
 
 export interface TuneSetting {

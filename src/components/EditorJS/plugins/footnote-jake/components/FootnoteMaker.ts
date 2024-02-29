@@ -1,5 +1,6 @@
 import { API, InlineTool } from "@editorjs/editorjs";
-import { generateID } from "./generateID";
+
+import { generateID } from "../utils/generateID";
 
 export class FootnoteMaker implements InlineTool {
   api: API;
