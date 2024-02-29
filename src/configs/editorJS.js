@@ -23,7 +23,15 @@ import Paragraph from "@editorjs/paragraph";
 // @ts-ignore
 import Header from "@editorjs/header";
 // @ts-ignore
-import { Footnote, FootnoteMaker } from "~/editorjs-footnotes/src";
+import {
+  Footnote,
+  FootnoteMaker,
+} from "~/components/EditorJS/plugins/footnote-jake";
+// @ts-ignore
+// import {
+//   Footnote,
+//   FootnoteMaker,
+// } from "~/components/EditorJS/plugins/footnote";
 
 export const EDITOR_TOOLS = {
   code: Code,
@@ -40,8 +48,4 @@ export const EDITOR_TOOLS = {
   delimiter: Delimiter,
   FootnoteMaker,
   footnoteParagraph: Footnote,
-  // footnoteParagraph: {
-  //   class: Footnote,
-  //   inlineToolbar: ["link", "bold", "italic"], // don't allow footnotes to add footnotes
-  // }
 };

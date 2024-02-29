@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { FiPlus } from "react-icons/fi";
+
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
 import EssayIndexItem from "~/components/EssayIndexItem";
@@ -5,8 +8,6 @@ import EssayIndexItem from "~/components/EssayIndexItem";
 import config from "public/data/config.json" assert { type: "json" };
 
 import styles from "./styles.module.scss";
-import Link from "next/link";
-import { FiPlus } from "react-icons/fi";
 
 export default function HomePage() {
   return (

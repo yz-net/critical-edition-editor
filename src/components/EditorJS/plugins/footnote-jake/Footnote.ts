@@ -1,11 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
 import Paragraph from "@editorjs/paragraph";
 import { FootnoteMaker } from "./FootnoteMaker";
 import { generateID } from "./generateID";
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
-import styles from "./style.css";
+import styles from "./styles.module.css";
 
 export interface TuneSetting {
   name: string;
@@ -107,60 +104,52 @@ export class Footnote extends Paragraph {
   }
 
   render() {
-    // const wrapper = document.createElement("div");
-    // wrapper.classList.add(styles.footnoteBlock);
+    const wrapper = document.createElement("div");
+    wrapper.classList.add(styles.footnoteBlock);
 
-    // const idBar = document.createElement("div");
-    // idBar.classList.add(styles.idField);
-    // idBar.classList.add(styles.barLabel);
-    // idBar.setAttribute("data-id", this.data.id);
-    // idBar.innerHTML = "[ #" + this.data.id + " ]";
-    // wrapper.appendChild(idBar);
+    const idBar = document.createElement("div");
+    idBar.classList.add(styles.idField);
+    idBar.classList.add(styles.barLabel);
+    idBar.setAttribute("data-id", this.data.id);
+    idBar.innerHTML = "[ #" + this.data.id + " ]";
+    wrapper.appendChild(idBar);
 
-    // // const labelBar = document.createElement('div')
-    // // labelBar.classList.add(styles.barLabel)
-    // const label = document.createElement("div");
-    // label.innerHTML = "footnote label";
-    // label.classList.add(styles.barLabel);
-    // const labelInput = document.createElement("div");
-    // labelInput.setAttribute("contentEditable", "true");
-    // labelInput.classList.add("label-field");
-    // // labelInput.classList.add(styles.flexFill);
-    // labelInput.classList.add(styles.textInput);
-    // labelInput.innerHTML = this.data.label || "";
-    // wrapper.appendChild(label);
-    // wrapper.appendChild(labelInput);
-    // // wrapper.appendChild(labelBar)
+    // const labelBar = document.createElement('div')
+    // labelBar.classList.add(styles.barLabel)
+    const label = document.createElement("div");
+    label.innerHTML = "footnote label";
+    label.classList.add(styles.barLabel);
+    const labelInput = document.createElement("div");
+    labelInput.setAttribute("contentEditable", "true");
+    labelInput.classList.add("label-field");
+    // labelInput.classList.add(styles.flexFill);
+    labelInput.classList.add(styles.textInput);
+    labelInput.innerHTML = this.data.label || "";
+    wrapper.appendChild(label);
+    wrapper.appendChild(labelInput);
+    // wrapper.appendChild(labelBar)
 
-    // const contentLabel = document.createElement("div");
-    // contentLabel.classList.add(styles.barLabel);
-    // contentLabel.innerHTML = "footnote body";
-    // wrapper.appendChild(contentLabel);
+    const contentLabel = document.createElement("div");
+    contentLabel.classList.add(styles.barLabel);
+    contentLabel.innerHTML = "footnote body";
+    wrapper.appendChild(contentLabel);
 
-    // const contentArea = document.createElement("div");
-    // contentArea.classList.add(styles.contentArea);
-    // contentArea.classList.add(styles.textInput);
+    const contentArea = document.createElement("div");
+    contentArea.classList.add(styles.contentArea);
+    contentArea.classList.add(styles.textInput);
 
-    // contentArea.classList.add("ce-paragraph");
-    // contentArea.innerHTML = this.data.text;
-    // contentArea.contentEditable = "true";
-    // wrapper.appendChild(contentArea);
+    contentArea.classList.add("ce-paragraph");
+    contentArea.innerHTML = this.data.text;
+    contentArea.contentEditable = "true";
+    wrapper.appendChild(contentArea);
 
-    // contentArea.addEventListener("keyup", this.onKeyUp);
+    contentArea.addEventListener("keyup", this.onKeyUp);
 
-    // this.wrapper = wrapper;
+    this.wrapper = wrapper;
 
-    // this.renderEmbedCode();
+    this.renderEmbedCode();
 
-    // return wrapper;
-
-    const rootNode = document.createElement("div");
-    rootNode.setAttribute("class", this.CSS.wrapper);
-    this.nodes.holder = rootNode;
-
-    const root = ReactDOM.createRoot(rootNode).render(<h1>hello</h1>);
-
-    return root;
+    return wrapper;
   }
 
   /**
@@ -175,5 +164,3 @@ export class Footnote extends Paragraph {
     };
   }
 }
-
-console.log("Defined class", FootnoteMaker);

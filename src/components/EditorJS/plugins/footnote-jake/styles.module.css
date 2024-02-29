@@ -13,8 +13,7 @@
 }
 
 .textInput,
-.barLabel,
-textarea {
+.barLabel/*, textarea */ {
   /* font-size: 9px; */
   color: gray;
   font-family: monaco, monospace, "Courier New", Courier;
