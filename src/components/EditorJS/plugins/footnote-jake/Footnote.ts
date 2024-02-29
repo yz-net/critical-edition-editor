@@ -1,5 +1,4 @@
 import Paragraph from "@editorjs/paragraph";
-import { FootnoteMaker } from "./FootnoteMaker";
 import { generateID } from "./generateID";
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
 import styles from "./styles.module.css";
