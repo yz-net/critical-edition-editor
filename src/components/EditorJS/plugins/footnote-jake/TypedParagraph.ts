@@ -1,6 +1,6 @@
 import Paragraph from "@editorjs/paragraph";
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
-import styles from "./TypedParagraph.css";
+import styles from "./TypedParagraph.module.css";
 
 type ParagraphType = "paragraph" | "blockquote";
 
@@ -156,7 +156,9 @@ export class TypedParagraph extends Paragraph {
     // console.log("154: currentParagraphType:", currentParagraphType)
     const wrapper = document.createElement("div");
     wrapper.setAttribute("data-paragraph-type", currentParagraphType);
-    wrapper.classList.add(styles["typed-paragraph-wrapper"]);
+    if (currentParagraphType === "blockquote") {
+      wrapper.classList.add(styles.blockquote);
+    }
 
     this.wrapper = wrapper;
     wrapper.appendChild(ret);
