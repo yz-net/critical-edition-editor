@@ -29,22 +29,22 @@ import {
 } from "~/components/EditorJS/plugins/footnote-jake";
 
 export const EDITOR_TOOLS = {
-  code: Code,
+  //code: Code,
   header: Header,
-  paragraph: Paragraph,
-  checklist: CheckList,
-  embed: Embed,
+  paragraph: { class: Paragraph, inlineToolbar: ["bold", "italic"] },
+  //checklist: CheckList,
+  embed: { class: Embed, inlineToolbar: true },
   image: Image,
   inlineCode: InlineCode,
-  link: Link,
-  list: List,
-  quote: Quote,
-  simpleImage: SimpleImage,
-  delimiter: Delimiter,
+  //link: Link,
+  //list: List,
+  //quote: Quote,
+  //simpleImage: SimpleImage,
+  //delimiter: Delimiter,
   FootnoteMaker,
-  footnoteParagraph: Footnote,
-  // footnoteParagraph: {
-  //   class: Footnote,
-  //   inlineToolbar: ["link", "bold", "italic"], // don't allow footnotes to add footnotes
-  // }
+  //footnoteParagraph: Footnote,
+  footnoteParagraph: {
+    class: Footnote,
+    inlineToolbar: ["link", "bold", "italic"], // don't allow footnotes to add footnotes
+  },
 };
