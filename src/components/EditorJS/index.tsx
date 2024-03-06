@@ -13,7 +13,7 @@ export default function Editor() {
   const [editorData, setEditorData] = useState(dummyData);
 
   useEffect(() => {
-    console.log(editorData);
+    console.log("editorJS data:", editorData);
   }, [editorData]);
 
   return (

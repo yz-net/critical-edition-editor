@@ -15,7 +15,7 @@ import Header from "@editorjs/header";
 import FootnoteMaker from "~/components/EditorJS/plugins/inline/footenoteMaker";
 import Footnote from "~/components/EditorJS/plugins/tools/footnote";
 import TypedParagraph from "~/components/EditorJS/plugins/tools/typedParagraph";
-import BlockTuneBlockquote from "~/components/EditorJS/plugins/blockTunes/blockquote";
+import BlockTuneBlockquote from "~/components/EditorJS/plugins/tunes/blockquote";
 import CustomHeader from "~/components/EditorJS/plugins/tools/header";
 
 export const EDITOR_TOOLS = {
