@@ -1,8 +1,8 @@
 import { API, InlineTool } from "@editorjs/editorjs";
 
-import { generateID } from "../../utils/generateID";
+import { generateID } from "../../../utils/generateID";
 
-export class FootnoteMaker implements InlineTool {
+export default class FootnoteMaker implements InlineTool {
   api: API;
   button?: HTMLButtonElement;
   state: boolean;
@@ -11,11 +11,18 @@ export class FootnoteMaker implements InlineTool {
     return true;
   }
 
+  static get title() {
+    return "Footnote Maker";
+  }
+
+  static get shortcut() {
+    return "Ctrl+F";
+  }
+
   constructor(args: { api: API }) {
     const { api } = args;
 
     this.api = api;
-    // this.button = null;
     this.state = false;
 
     this.render = this.render.bind(this);
@@ -25,7 +32,7 @@ export class FootnoteMaker implements InlineTool {
   render() {
     this.button = document.createElement("button");
     this.button.type = "button";
-    this.button.textContent = "M";
+    this.button.textContent = "F";
     this.button.classList.add(this.api.styles.inlineToolButton);
 
     return this.button;

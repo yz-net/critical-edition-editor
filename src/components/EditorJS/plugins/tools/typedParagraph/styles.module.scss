@@ -1,0 +1,21 @@
+.blockquote {
+  padding: 2em 2em;
+  font-style: italic;
+  background-color: #efefef;
+  border-radius: 3px;
+  font-size: 21px;
+  line-height: 1.75em !important;
+  font-family: "YaleNewRoman", "Times New Roman", Times, serif;
+  color: #333;
+}
+
+.paragraph {
+  padding: 18px 10px;
+  font-size: 21px;
+  line-height: 1.75em !important;
+  color: #333;
+  font-family: "YaleNewRoman", "Times New Roman", Times, serif;
+  & > * {
+    line-height: 1.75em !important;
+  }
+}

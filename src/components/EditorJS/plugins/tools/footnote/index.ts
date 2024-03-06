@@ -1,9 +1,9 @@
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
 import Paragraph from "@editorjs/paragraph";
 
-import { generateID } from "../../utils/generateID";
+import { generateID } from "../../../utils/generateID";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 export interface TuneSetting {
   name: string;
@@ -12,7 +12,7 @@ export interface TuneSetting {
   handleClick: () => void;
 }
 
-export class Footnote extends Paragraph {
+export default class Footnote extends Paragraph {
   constructor(opts: { data: BlockToolData; config: EditorConfig; api: API }) {
     const { data, config, api } = opts;
     super({ data, config, api });
@@ -31,6 +31,13 @@ export class Footnote extends Paragraph {
     this.save = this.save.bind(this);
     this.render = this.render.bind(this);
     this.renderEmbedCode = this.renderEmbedCode.bind(this);
+  }
+
+  static get toolbox() {
+    return {
+      icon: "F",
+      title: "Footnote",
+    };
   }
 
   renderEmbedCode(e?: any) {
@@ -151,17 +158,5 @@ export class Footnote extends Paragraph {
     this.renderEmbedCode();
 
     return wrapper;
-  }
-
-  /**
-   * Icon and title for displaying at the Toolbox
-   *
-   * @return {{icon: string, title: string}}
-   */
-  static get toolbox() {
-    return {
-      icon: "F",
-      title: "Footnote",
-    };
   }
 }

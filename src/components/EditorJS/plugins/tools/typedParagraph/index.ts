@@ -1,11 +1,11 @@
 import Paragraph from "@editorjs/paragraph";
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 type ParagraphType = "paragraph" | "blockquote";
 
-export class TypedParagraph extends Paragraph {
+export default class TypedParagraph extends Paragraph {
   api: API;
 
   constructor(opts: { data: BlockToolData; config: EditorConfig; api: API }) {
@@ -23,6 +23,13 @@ export class TypedParagraph extends Paragraph {
     this.save = this.save.bind(this);
     this.render = this.render.bind(this);
     this.renderSettings = this.renderSettings.bind(this);
+  }
+
+  static get toolbox() {
+    return {
+      icon: "P",
+      title: "Paragraph",
+    };
   }
 
   clear() {
@@ -159,6 +166,8 @@ export class TypedParagraph extends Paragraph {
     wrapper.setAttribute("data-paragraph-type", currentParagraphType);
     if (currentParagraphType === "blockquote") {
       wrapper.classList.add(styles.blockquote);
+    } else if (currentParagraphType === "paragraph") {
+      wrapper.classList.add(styles.paragraph);
     }
 
     this.wrapper = wrapper;
@@ -188,7 +197,7 @@ export class TypedParagraph extends Paragraph {
 
     const settings = [
       {
-        name: "BlockQuote",
+        name: "Blockquote",
         icon: getParagraphType() === "paragraph" ? "B" : "P",
         onclick: () => {
           setParagraphType(reverseParagraphType(getParagraphType()));
