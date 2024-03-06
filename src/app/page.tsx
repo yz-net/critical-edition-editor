@@ -25,12 +25,13 @@ export default function HomePage() {
         </div>
         <nav aria-label="List of essays">
           <ul className={styles.ItemListContainer}>
-            <li className="max-w-[500px] flex-shrink-0 flex-grow basis-1/2">
+            <li className="h-[300px] max-w-[500px] flex-shrink-0 flex-grow basis-1/2 p-2.5 lg:h-auto">
               <Link
-                className="flex h-full w-full items-center justify-center gap-3 rounded bg-red-500 transition-colors hover:bg-green-500"
+                className="flex h-full w-full items-center justify-center gap-3 rounded bg-blue-700 text-white transition-colors hover:bg-blue-500"
                 href="/new"
               >
-                <FiPlus /> New
+                <FiPlus size={30} strokeWidth={1.5} />
+                <span className="text-3xl">Create new</span>
               </Link>
             </li>
             {config.essays.map((essay) => {
