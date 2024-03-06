@@ -30,7 +30,7 @@ import { Footnote } from "~/components/EditorJS/plugins/footnote";
 export const EDITOR_TOOLS = {
   //code: Code,
   header: Header,
-  paragraph: { class: Paragraph, inlineToolbar: ["bold", "italic"] },
+  //paragraph: { class: Paragraph, inlineToolbar: ["bold", "italic"] },
   //checklist: CheckList,
   embed: { class: Embed, inlineToolbar: true },
   image: Image,
