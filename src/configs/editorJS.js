@@ -23,10 +23,9 @@ import Paragraph from "@editorjs/paragraph";
 // @ts-ignore
 import Header from "@editorjs/header";
 // @ts-ignore
-import {
-  Footnote,
-  FootnoteMaker,
-} from "~/components/EditorJS/plugins/footnote-jake";
+import { FootnoteMaker } from "~/components/EditorJS/plugins/footenoteMaker";
+// @ts-ignore
+import { Footnote } from "~/components/EditorJS/plugins/footnote";
 
 export const EDITOR_TOOLS = {
   //code: Code,
