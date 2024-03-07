@@ -24,7 +24,7 @@ export default function Editor() {
       <button
         className="fixed bottom-3 right-3 flex items-center gap-3 rounded bg-orange-500 p-3 transition-colors hover:bg-orange-400"
         type="button"
-        onPointerDown={(e) => exportToJson(e, editorData)}
+        onPointerDown={(e) => exportToJson(e, editorData, editorData.meta.slug)}
       >
         <FiDownload />
         Download

@@ -22,7 +22,8 @@ export const downloadFile = (
 export const exportToJson = (
   e: React.PointerEvent<HTMLButtonElement>,
   data: any,
+  name: string,
 ) => {
   e.preventDefault();
-  downloadFile(JSON.stringify(data), "users.json", "text/json");
+  downloadFile(JSON.stringify(data), name + ".json", "text/json");
 };
