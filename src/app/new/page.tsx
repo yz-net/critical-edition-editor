@@ -25,13 +25,6 @@ function getVideoPath(hvtID: string) {
 
 export default function NewPage() {
   const [metadataModalOpen, setMetadataModalOpen] = useState<boolean>(false);
-  function handleMetadataModalClick() {
-    setMetadataModalOpen((prev) => !prev);
-  }
-  function handleMetadataModalSave(metadata: Metadata) {
-    setData(metadata);
-    setMetadataModalOpen(false);
-  }
 
   const [data, setData] = useState<Metadata>({
     title: "Hans Frei",
@@ -49,6 +42,12 @@ export default function NewPage() {
     }
   }, [data.hvtID]);
 
+  useEffect(() => {
+    if (!data.hvtID) {
+      setMetadataModalOpen(true);
+    }
+  }, []);
+
   return (
     <div className="serif-copy-ff relative flex h-screen flex-col overflow-hidden">
       <div className="z-[100] h-[60px] overflow-hidden shadow-[0_0_10px_rgba(0,0,0,.3)]">
@@ -58,7 +57,10 @@ export default function NewPage() {
       <MetadataModal
         metadata={data}
         isOpen={metadataModalOpen}
-        onSave={handleMetadataModalSave}
+        onSave={(metadata) => {
+          setData(metadata);
+          setMetadataModalOpen(false);
+        }}
       />
       <div className="flex-shrink flex-grow-0 basis-full overflow-scroll">
         <header className="relative z-[40] box-border h-[50vh] overflow-hidden">
@@ -84,7 +86,7 @@ export default function NewPage() {
                 data-modal-target="metadata-modal"
                 data-modal-toggle="metadata-modal"
                 className="flex scale-100 items-center gap-3 rounded bg-blue-700 p-3 transition-[transform,colors] hover:scale-110"
-                onClick={handleMetadataModalClick}
+                onClick={() => setMetadataModalOpen(true)}
                 type="button"
               >
                 <FiSettings /> Setttings
