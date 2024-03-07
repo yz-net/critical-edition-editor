@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { FiFilm, FiImage, FiSettings } from "react-icons/fi";
-import { twMerge } from "tailwind-merge";
+import { FiDownload, FiSettings } from "react-icons/fi";
 
 import Editor from "~/components/EditorJS";
 import LogoBar from "~/components/LogoBar";
 import EssayPreamble from "~/components/Viewer/EssayPreamble";
 import MetadataModal from "~/components/MetadataModal";
-
+import { exportToJson } from "~/utils/files";
 import { type Metadata } from "~/types/metadata";
+
+import dummyData from "../../../public/data/intro-hvt-0170.json" assert { type: "json" };
 
 import styles from "../essay/[essayID]/styles.module.scss";
 
@@ -24,8 +25,7 @@ function getVideoPath(hvtID: string) {
 }
 
 export default function NewPage() {
-  const [metadataModalOpen, setMetadataModalOpen] = useState<boolean>(false);
-
+  // TODO merge data and editorData, make editor component only access the blocks part of merged data
   const [data, setData] = useState<Metadata>({
     title: "Hans Frei",
     hvtID: "0170",
@@ -33,6 +33,11 @@ export default function NewPage() {
     affiliation: "University of Manchester",
     publicationDate: "February 1, 2021",
   });
+  const [editorData, setEditorData] = useState<{
+    meta: any; // TODO create type
+    blocks: Array<any>; // TODO create type
+  }>(dummyData);
+  const [metadataModalOpen, setMetadataModalOpen] = useState<boolean>(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -156,7 +161,17 @@ export default function NewPage() {
           className={styles.ContentBodyContainer}
         >
           <main className={styles.ContentBodyContents}>
-            <Editor />
+            <Editor data={editorData} onDataChange={setEditorData} />
+            <button
+              className="fixed bottom-3 right-3 flex items-center gap-3 rounded bg-orange-500 p-3 transition-colors hover:bg-orange-400"
+              type="button"
+              onPointerDown={(e) =>
+                exportToJson(e, editorData, editorData.meta.slug)
+              }
+            >
+              <FiDownload />
+              Download
+            </button>
           </main>
 
           {/* TODO: Do we need the call-to-action stuff?
