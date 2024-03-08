@@ -1,22 +1,22 @@
 // @ts-nocheck
-import CheckList from "@editorjs/checklist";
-import Code from "@editorjs/code";
-import Delimiter from "@editorjs/delimiter";
+// import CheckList from "@editorjs/checklist";
+// import Code from "@editorjs/code";
+// import Delimiter from "@editorjs/delimiter";
 import Embed from "@editorjs/embed";
 import Image from "@editorjs/image";
 import InlineCode from "@editorjs/inline-code";
-import Link from "@editorjs/link";
-import List from "@editorjs/list";
-import Quote from "@editorjs/quote";
-import SimpleImage from "@editorjs/simple-image";
-import Paragraph from "@editorjs/paragraph";
-import Header from "@editorjs/header";
+// import Link from "@editorjs/link";
+// import List from "@editorjs/list";
+// import Quote from "@editorjs/quote";
+// import SimpleImage from "@editorjs/simple-image";
+// import Paragraph from "@editorjs/paragraph";
+// import Header from "@editorjs/header";
 
 import FootnoteMaker from "~/components/EditorJS/plugins/inline/footenoteMaker";
-import Footnote from "~/components/EditorJS/plugins/tools/footnote";
-import TypedParagraph from "~/components/EditorJS/plugins/tools/typedParagraph";
+import Footnote from "~/components/EditorJS/plugins/blocks/footnote";
+import TypedParagraph from "~/components/EditorJS/plugins/blocks/typedParagraph";
 import BlockTuneBlockquote from "~/components/EditorJS/plugins/tunes/blockquote";
-import CustomHeader from "~/components/EditorJS/plugins/tools/header";
+import CustomHeader from "~/components/EditorJS/plugins/blocks/header";
 
 export const EDITOR_TOOLS = {
   // code: Code,

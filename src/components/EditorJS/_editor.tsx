@@ -5,6 +5,8 @@ import EditorJS from "@editorjs/editorjs";
 
 import { EDITOR_TOOLS } from "~/configs/editorJS";
 
+import styles from "./styles.module.scss";
+
 export default function Editorjs(props: {
   data: any;
   onChange(data: any): void;
@@ -37,5 +39,5 @@ export default function Editorjs(props: {
     };
   }, []);
 
-  return <div id={props.holder} className="prose max-w-full" />;
+  return <div id={props.holder} className="w-full" />;
 }

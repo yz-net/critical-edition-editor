@@ -120,7 +120,7 @@ export default class Footnote extends Paragraph {
     idBar.classList.add(styles.barLabel);
     idBar.setAttribute("data-id", this.data.id);
     // idBar.innerHTML = "[ #" + this.data.id + " ]";
-    idBar.innerHTML = this.data.label;
+    idBar.innerHTML = this.data.label ?? "-";
     wrapper.appendChild(idBar);
 
     // const labelBar = document.createElement('div')
@@ -132,7 +132,7 @@ export default class Footnote extends Paragraph {
     labelInput.setAttribute("contentEditable", "true");
     labelInput.classList.add("label-field");
     labelInput.addEventListener("input", (e) => {
-      idBar.innerHTML = e.target.innerHTML;
+      idBar.innerHTML = e.target.innerHTML ?? "-";
       idBar.setAttribute("data-id", "fn-" + e.target.innerHTML);
     });
     // labelInput.classList.add(styles.flexFill);

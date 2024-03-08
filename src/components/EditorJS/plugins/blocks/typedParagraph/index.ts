@@ -157,7 +157,7 @@ export default class TypedParagraph extends Paragraph {
     });
 
     // const currentParagraphType: ParagraphType = this._data.paragraphType === "paragraph" ? "paragraph" : "blockquote"
-    console.log("currentParagraphType", this.data.paragraphType);
+    // console.log("currentParagraphType", this.data.paragraphType);
     const currentParagraphType = this.data.paragraphType || "paragraph";
     // const currentParagraphType = "paragraph"
 
@@ -169,6 +169,10 @@ export default class TypedParagraph extends Paragraph {
     } else if (currentParagraphType === "paragraph") {
       wrapper.classList.add(styles.paragraph);
     }
+    wrapper.addEventListener("click", () => {
+      // TODO inline toolbar just won't open if no "range" is selected
+      this.api.inlineToolbar.open();
+    });
 
     this.wrapper = wrapper;
     wrapper.appendChild(ret);

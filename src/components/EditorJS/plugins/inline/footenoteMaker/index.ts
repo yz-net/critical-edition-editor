@@ -10,13 +10,11 @@ export default class FootnoteMaker implements InlineTool {
   static get isInline() {
     return true;
   }
-
-  static get title() {
-    return "Footnote Maker";
-  }
-
   static get shortcut() {
     return "Ctrl+F";
+  }
+  static get title() {
+    return "Footnote Maker";
   }
 
   constructor(args: { api: API }) {
@@ -27,6 +25,24 @@ export default class FootnoteMaker implements InlineTool {
 
     this.render = this.render.bind(this);
     this.surround = this.surround.bind(this);
+  }
+
+  checkState(selection: Selection): boolean {
+    const text = selection.anchorNode;
+
+    if (!text) {
+      return false;
+    }
+
+    const anchorElement = text instanceof Element ? text : text.parentElement;
+
+    this.state = !!anchorElement?.closest("MARK");
+
+    return this.state;
+  }
+
+  clear() {
+    console.log("Clear called");
   }
 
   render() {
@@ -50,37 +66,36 @@ export default class FootnoteMaker implements InlineTool {
     // probably a good solution.
     // https://github.com/codex-team/editor.js/blob/next/src/components/inline-tools/inline-tool-link.ts
 
-    if (this.state) {
+    if (!!(range.endContainer.parentNode?.nodeName.toLowerCase() === "a")) {
       // If highlights is already applied, do nothing for now
       return;
     }
 
-    const selectedText = range.extractContents();
+    console.log("RANGE", range);
 
-    // Create MARK element
     const id = generateID();
+    const mark = document.createElement("sup");
+    mark.className = "footnote-ref";
+    mark.id = `fnref-${id}`;
+    const link = document.createElement("a");
+    link.href = "#" + id;
+    link.textContent = id;
+    // const text = range.cloneContents();
+    // link.appendChild(text);
+    mark.appendChild(link);
 
-    const mark = document.createElement("a");
-    mark.href = "#" + id;
-
-    const footnoteNumber = document.createElement("small");
-    footnoteNumber.innerHTML = " [ #" + id + " ]";
-
-    // Append to the MARK element selected TextNode
-    mark.appendChild(selectedText);
-    mark.appendChild(footnoteNumber);
-
-    // Insert new element
-    range.insertNode(mark);
+    const endRange = range.cloneRange();
+    endRange.collapse(false);
+    endRange.insertNode(mark);
 
     // add a footnote block now
-    const newBlock = this.api.blocks.insert(
-      "footnoteParagraph",
-      { id },
-      undefined,
-      undefined,
-      true,
-    );
+    // this.api.blocks.insert(
+    //   "footnoteParagraph",
+    //   { id },
+    //   undefined,
+    //   undefined,
+    //   true,
+    // );
 
     // console.log(
     //   this.api.blocks
@@ -92,23 +107,5 @@ export default class FootnoteMaker implements InlineTool {
     this.api.inlineToolbar.close();
 
     // this.api.focus(this.api.blocks.getCurrentBlockIndex() + 1)
-  }
-
-  clear() {
-    console.log("Clear called");
-  }
-
-  checkState(selection: Selection): boolean {
-    const text = selection.anchorNode;
-
-    if (!text) {
-      return false;
-    }
-
-    const anchorElement = text instanceof Element ? text : text.parentElement;
-
-    this.state = !!anchorElement?.closest("MARK");
-
-    return this.state;
   }
 }

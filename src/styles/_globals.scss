@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./editorjs.scss";
+
 @font-face {
   font-family: "YaleNewRoman";
   src:
@@ -59,8 +61,4 @@
 .serif-title-ff,
 .serif-copy-ff {
   font-family: "YaleNewRoman", "Times New Roman", Times, serif;
-}
-
-.testtesttest {
-  background-color: red;
 }
