@@ -78,7 +78,7 @@ export default class FootnoteMaker implements InlineTool {
     mark.className = "footnote-ref";
     mark.id = `fnref-${id}`;
     const link = document.createElement("a");
-    link.href = "#" + id;
+    link.href = "#fn" + id;
     link.textContent = id;
     // const text = range.cloneContents();
     // link.appendChild(text);

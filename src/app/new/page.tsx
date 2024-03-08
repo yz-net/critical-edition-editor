@@ -53,6 +53,11 @@ export default function NewPage() {
     }
   }, []);
 
+  // TODO remove (debug)
+  useEffect(() => {
+    console.log("EDITOR DATA", editorData);
+  }, [editorData]);
+
   return (
     <div className="serif-copy-ff relative flex h-screen flex-col overflow-hidden">
       <div className="z-[100] h-[60px] overflow-hidden shadow-[0_0_10px_rgba(0,0,0,.3)]">
