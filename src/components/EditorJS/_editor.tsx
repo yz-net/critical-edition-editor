@@ -5,8 +5,6 @@ import EditorJS from "@editorjs/editorjs";
 
 import { EDITOR_TOOLS } from "~/configs/editorJS";
 
-import styles from "./styles.module.scss";
-
 export default function Editorjs(props: {
   data: any;
   onChange(data: any): void;
