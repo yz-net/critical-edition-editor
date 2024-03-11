@@ -3,6 +3,9 @@ import Header from "@editorjs/header";
 import styles from "./styles.module.scss";
 
 export default class CustomHeader extends Header {
+  _CSS: any;
+  _element: any;
+
   constructor({ data, config, api, readOnly }) {
     super({ data, config, api, readOnly });
     this._CSS.wrapper = "title";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { FiDownload, FiSettings } from "react-icons/fi";
+import { FiArrowLeft, FiDownload, FiSettings } from "react-icons/fi";
 
 import Editor from "~/components/EditorJS";
 import LogoBar from "~/components/LogoBar";
@@ -13,6 +13,7 @@ import { type Metadata } from "~/types/metadata";
 import dummyData from "../../../public/data/intro-hvt-0170.json" assert { type: "json" };
 
 import styles from "../essay/[essayID]/styles.module.scss";
+import { useRouter } from "next/navigation";
 
 const MEDIA_PATH_PREFIX = "https://d12q9fe14kxf9b.cloudfront.net";
 
@@ -40,6 +41,8 @@ export default function NewPage() {
   const [metadataModalOpen, setMetadataModalOpen] = useState<boolean>(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     if (data.hvtID) {
@@ -91,17 +94,6 @@ export default function NewPage() {
             )}
           </div>
           <div className="relative z-[200] flex h-full flex-col justify-end bg-[rgba(0,0,0,.3)] px-[30px] pb-[30px] text-white">
-            <div className="absolute right-3 top-3 flex items-center gap-3">
-              <button
-                data-modal-target="metadata-modal"
-                data-modal-toggle="metadata-modal"
-                className="flex scale-100 items-center gap-3 rounded bg-blue-700 p-3 transition-[transform,colors] hover:scale-110"
-                onClick={() => setMetadataModalOpen(true)}
-                type="button"
-              >
-                <FiSettings /> Setttings
-              </button>
-            </div>
             <p className="sans-title-ff my-[1em] text-[13px] uppercase tracking-[.5px] [text-shadow:_0_0_9px_#000]">
               introduction to the testimony of
             </p>
@@ -167,17 +159,51 @@ export default function NewPage() {
         >
           <main className={styles.ContentBodyContents}>
             <Editor data={editorData} onDataChange={setEditorData} />
-            <button
-              className="fixed bottom-3 right-3 flex items-center gap-3 rounded bg-orange-500 p-3 transition-colors hover:bg-orange-400"
-              type="button"
-              onPointerDown={(e) =>
-                exportToJson(e, editorData, editorData.meta.slug)
-              }
-            >
-              <FiDownload />
-              Download
-            </button>
           </main>
+
+          <div className="fixed bottom-5 left-5 right-5 z-50">
+            <div className="flex justify-center">
+              <div className="flex w-full max-w-7xl justify-between">
+                <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+                  <button
+                    className="bg-critical-600 hover:bg-critical-700 flex items-center gap-3 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors"
+                    type="button"
+                    onPointerDown={(e) => {
+                      if (window.confirm("Are you sure you want to go back?")) {
+                        router.push("/");
+                      }
+                    }}
+                  >
+                    <FiArrowLeft />
+                    Back
+                  </button>
+                </div>
+
+                <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+                  <button
+                    data-modal-target="metadata-modal"
+                    data-modal-toggle="metadata-modal"
+                    className="bg-critical-600 hover:bg-critical-700 flex items-center gap-3 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors"
+                    onClick={() => setMetadataModalOpen(true)}
+                    type="button"
+                  >
+                    <FiSettings /> Setttings
+                  </button>
+
+                  <button
+                    className="bg-critical-600 hover:bg-critical-700 flex items-center gap-3 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors"
+                    type="button"
+                    onPointerDown={(e) =>
+                      exportToJson(e, editorData, editorData.meta.slug)
+                    }
+                  >
+                    <FiDownload />
+                    Download
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* TODO: Do we need the call-to-action stuff?
           {callToAction && essayAviaryLink ? (

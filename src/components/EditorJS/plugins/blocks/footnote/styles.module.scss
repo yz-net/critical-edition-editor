@@ -14,7 +14,7 @@
 .barLabel/*, textarea */ {
   /* font-size: 9px; */
   color: gray;
-  font-family: monaco, monospace, "Courier New", Courier;
+  font-family: monospace, "Courier New", Courier;
   font-weight: bold;
 }
 .barLabel {
@@ -22,8 +22,7 @@
 }
 
 .textInput {
-  padding: 0 1em;
-  margin: 0 1em;
+  padding: 0 0.5em;
   border: 1px solid gray;
 }
 
@@ -34,21 +33,19 @@
 .footnoteBlock .embedCode {
   /* width: 100%; */
   font-size: 12px;
-  font-family: monaco, monospace, "Courier New", Courier;
+  font-family: monospace, "Courier New", Courier;
   border: 1px solid gray;
   background-color: #efefef;
   resize: vertical;
   color: #222;
   padding: 1 1em;
   box-sizing: border-box;
-  width: calc(100% - 2em);
-  margin-left: 1em;
+  width: 100%;
 }
 
 .embedPreview {
   border: 1px dashed gray;
   padding: 1em;
-  margin: 1em;
 }
 
 .embedCodeLabel {

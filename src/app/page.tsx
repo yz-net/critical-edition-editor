@@ -25,13 +25,15 @@ export default function HomePage() {
         </div>
         <nav aria-label="List of essays">
           <ul className={styles.ItemListContainer}>
-            <li className="h-[300px] max-w-[500px] flex-shrink-0 flex-grow basis-1/2 p-2.5 lg:h-auto">
+            <li className="h-[300px] max-w-[500px] flex-shrink-0 flex-grow basis-1/2 lg:h-auto">
               <Link
-                className="flex h-full w-full items-center justify-center gap-3 rounded bg-blue-700 text-white transition-colors hover:bg-blue-500"
+                className="group block h-full w-full rounded p-2.5 transition-colors hover:bg-gray-200"
                 href="/new"
               >
-                <FiPlus size={30} strokeWidth={1.5} />
-                <span className="text-3xl">Create new</span>
+                <div className="group-hover:bg-critical-600 group-hover:border-critical-600 flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 transition-colors group-hover:text-white">
+                  <FiPlus size={30} strokeWidth={1.5} />
+                  <span className="scale-100 text-3xl">Create new</span>
+                </div>
               </Link>
             </li>
             {config.essays.map((essay) => {

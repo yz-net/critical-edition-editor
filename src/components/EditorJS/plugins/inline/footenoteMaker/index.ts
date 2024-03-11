@@ -71,8 +71,6 @@ export default class FootnoteMaker implements InlineTool {
       return;
     }
 
-    console.log("RANGE", range);
-
     const id = generateID();
     const mark = document.createElement("sup");
     mark.className = "footnote-ref";
