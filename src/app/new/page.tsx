@@ -161,7 +161,7 @@ export default function NewPage() {
             <Editor data={editorData} onDataChange={setEditorData} />
           </main>
 
-          <div className="fixed bottom-5 left-5 right-5 z-50">
+          <div className="fixed bottom-5 left-5 right-5 z-10">
             <div className="flex justify-center">
               <div className="flex w-full max-w-7xl justify-between">
                 <div className="flex items-center divide-x divide-white overflow-hidden rounded">
