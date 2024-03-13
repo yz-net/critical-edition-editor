@@ -6,6 +6,7 @@ export default class FootnoteMaker implements InlineTool {
   api: API;
   button?: HTMLButtonElement;
   state: boolean;
+  footnoteRefInput?: HTMLInputElement;
 
   static get isInline() {
     return true;
@@ -17,9 +18,7 @@ export default class FootnoteMaker implements InlineTool {
     return "Footnote Maker";
   }
 
-  static get sanitize() {
-    return {};
-  }
+  // static get sanitize() { }
 
   constructor(args: { api: API }) {
     const { api } = args;
@@ -32,12 +31,23 @@ export default class FootnoteMaker implements InlineTool {
   }
 
   checkState(selection: Selection): boolean {
-    const element = selection.focusNode;
-    const parentElement = element?.parentElement;
+    // console.log("checkState", selection);
+    let element = selection.focusNode;
+    if (element?.nodeName === "#text") {
+      element = element?.parentElement;
+    }
 
-    const isFootnoteRef =
-      parentElement?.nodeName === "A" &&
-      parentElement?.parentElement?.nodeName === "SUP";
+    let isFootnoteRef = false;
+    if (
+      element?.nodeName === "A" &&
+      element?.parentElement?.nodeName === "SUP"
+    ) {
+      isFootnoteRef = true;
+    }
+    if (element?.nodeName === "SUP" && element?.firstChild?.nodeName === "A") {
+      isFootnoteRef = true;
+      element = element.firstChild;
+    }
 
     if (isFootnoteRef) {
       this.button?.classList.add(this.api.styles.inlineToolButtonActive);
@@ -45,10 +55,21 @@ export default class FootnoteMaker implements InlineTool {
       this.button?.classList.remove(this.api.styles.inlineToolButtonActive);
     }
 
+    if (this.footnoteRefInput) {
+      this.footnoteRefInput.hidden = !isFootnoteRef;
+      if (isFootnoteRef) {
+        this.footnoteRefInput.value = element?.textContent ?? "";
+        this.footnoteRefInput.oninput = (e: Event) => {
+          if (e.target instanceof HTMLInputElement) {
+            element!.setAttribute("href", `#fn-${e.target.value}`);
+            element!.textContent = e.target.value;
+          }
+        };
+      }
+    }
+
     return isFootnoteRef;
   }
-
-  // clear() { }
 
   render() {
     this.button = document.createElement("button");
@@ -59,20 +80,47 @@ export default class FootnoteMaker implements InlineTool {
     return this.button;
   }
 
+  renderActions() {
+    this.footnoteRefInput = document.createElement("input");
+    return this.footnoteRefInput;
+  }
+
   surround(range: Range) {
-    const lastElement = range.endContainer.parentElement;
-    const isFootnoteRef =
-      lastElement?.nodeName === "A" &&
-      lastElement?.parentElement?.nodeName === "SUP";
+    // console.log("surround", range);
+    let element = range.endContainer;
+    if (element.nodeName !== "SUP") {
+      element = element.parentNode as Node;
+    }
+
+    let isFootnoteRef = false;
+
+    if (element?.nodeName === "A" && element?.parentNode?.nodeName === "SUP") {
+      isFootnoteRef = true;
+    }
+    if (element?.nodeName === "SUP" && element?.firstChild?.nodeName === "A") {
+      isFootnoteRef = true;
+      element = element.firstChild;
+    }
 
     if (!isFootnoteRef) {
-      const id = generateID();
+      const id = "footnote";
       const mark = document.createElement("sup");
       mark.className = "footnote-ref";
       mark.id = `fnref-${id}`;
+
+      mark.onclick = () => {
+        const range = document.createRange();
+        range.selectNodeContents(mark);
+        const selection = window.getSelection();
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+        this.api.selection.expandToTag(mark);
+      };
+
       const link = document.createElement("a");
       link.href = "#fn-" + id;
       link.textContent = id;
+
       // const text = range.cloneContents();
       // link.appendChild(text);
       mark.appendChild(link);
@@ -81,7 +129,7 @@ export default class FootnoteMaker implements InlineTool {
       endRange.collapse(false);
       endRange.insertNode(mark);
     } else {
-      lastElement?.parentElement?.remove();
+      element?.parentElement?.remove();
     }
 
     this.api.inlineToolbar.close();

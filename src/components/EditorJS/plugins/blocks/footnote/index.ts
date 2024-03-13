@@ -106,8 +106,6 @@ export default class Footnote extends Paragraph {
       embedCode,
     };
 
-    console.log("Saving", ret);
-
     return ret;
   }
 

@@ -22,8 +22,10 @@ export default function Editorjs(props: {
         tools: EDITOR_TOOLS,
         data: props.data,
         async onChange(api, event) {
+          console.log("ON CHANGE", api);
           const data = await api.saver.save();
-          props.onChange(data);
+          console.log("OAKWDKOAWD", data);
+          props.onChange((prev: any) => ({ ...prev, blocks: data.blocks }));
         },
       });
       ref.current = editor;

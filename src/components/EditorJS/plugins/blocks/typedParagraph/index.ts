@@ -25,6 +25,14 @@ export default class TypedParagraph extends Paragraph {
     this.renderSettings = this.renderSettings.bind(this);
   }
 
+  static get sanitize() {
+    return {
+      url: true,
+      sup: true,
+      a: true,
+    };
+  }
+
   static get toolbox() {
     return {
       icon: "P",
@@ -37,20 +45,7 @@ export default class TypedParagraph extends Paragraph {
     super.clear();
   }
 
-  // onPaste(event: Event) {
-  // }
-
-  save(blockContent: BlockToolData) {
-    const innerBlock = blockContent.querySelector(".ce-paragraph");
-
-    const paragraphType = blockContent.getAttribute("data-paragraph-type");
-    const ret = super.save(innerBlock);
-
-    return {
-      paragraphType,
-      ...ret,
-    };
-  }
+  // onPaste(event: Event) { }
 
   render() {
     const ret = super.render();
@@ -169,10 +164,10 @@ export default class TypedParagraph extends Paragraph {
     } else if (currentParagraphType === "paragraph") {
       wrapper.classList.add(styles.paragraph);
     }
-    wrapper.addEventListener("click", () => {
+    wrapper.onclick = (e) => {
       // TODO inline toolbar just won't open if no "range" is selected
       this.api.inlineToolbar.open();
-    });
+    };
 
     this.wrapper = wrapper;
     wrapper.appendChild(ret);
@@ -221,5 +216,25 @@ export default class TypedParagraph extends Paragraph {
     });
 
     return wrapper;
+  }
+
+  save(blockContent: BlockToolData) {
+    const innerBlock = blockContent.querySelector(".ce-paragraph");
+    const paragraphType = blockContent.getAttribute("data-paragraph-type");
+
+    // const ret = super.save(innerBlock);
+
+    // console.log("1", innerBlock.innerHTML);
+
+    const pattern = /<sup[^>]*>(<a[^>]*><\/a>)*<\/sup>/g;
+    const text = innerBlock.innerHTML.replace(pattern, "");
+
+    // console.log("2", text);
+
+    return {
+      paragraphType,
+      // ...ret,
+      text,
+    };
   }
 }
