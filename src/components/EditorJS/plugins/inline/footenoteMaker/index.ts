@@ -17,6 +17,10 @@ export default class FootnoteMaker implements InlineTool {
     return "Footnote Maker";
   }
 
+  static get sanitize() {
+    return {};
+  }
+
   constructor(args: { api: API }) {
     const { api } = args;
 
@@ -28,22 +32,23 @@ export default class FootnoteMaker implements InlineTool {
   }
 
   checkState(selection: Selection): boolean {
-    const text = selection.anchorNode;
+    const element = selection.focusNode;
+    const parentElement = element?.parentElement;
 
-    if (!text) {
-      return false;
+    const isFootnoteRef =
+      parentElement?.nodeName === "A" &&
+      parentElement?.parentElement?.nodeName === "SUP";
+
+    if (isFootnoteRef) {
+      this.button?.classList.add(this.api.styles.inlineToolButtonActive);
+    } else {
+      this.button?.classList.remove(this.api.styles.inlineToolButtonActive);
     }
 
-    const anchorElement = text instanceof Element ? text : text.parentElement;
-
-    this.state = !!anchorElement?.closest("MARK");
-
-    return this.state;
+    return isFootnoteRef;
   }
 
-  clear() {
-    console.log("Clear called");
-  }
+  // clear() { }
 
   render() {
     this.button = document.createElement("button");
@@ -55,55 +60,30 @@ export default class FootnoteMaker implements InlineTool {
   }
 
   surround(range: Range) {
-    // TODO - Check to see if there are any <mark> elements inside
-    // the selectedText. If so, don't allow a footnote to be created.
-    // however, this will require us to create a "delete" footnote
-    // button. Or we could automatically broaden a footnote when
-    // the user selects beyond either end of a mark, or srhink the
-    // footnote when the user selects within it.
-    // The way link handles it is if any part of an existing link is
-    // selected, the icon changes to a delete link icon. this is
-    // probably a good solution.
-    // https://github.com/codex-team/editor.js/blob/next/src/components/inline-tools/inline-tool-link.ts
+    const lastElement = range.endContainer.parentElement;
+    const isFootnoteRef =
+      lastElement?.nodeName === "A" &&
+      lastElement?.parentElement?.nodeName === "SUP";
 
-    if (!!(range.endContainer.parentNode?.nodeName.toLowerCase() === "a")) {
-      // If highlights is already applied, do nothing for now
-      return;
+    if (!isFootnoteRef) {
+      const id = generateID();
+      const mark = document.createElement("sup");
+      mark.className = "footnote-ref";
+      mark.id = `fnref-${id}`;
+      const link = document.createElement("a");
+      link.href = "#fn-" + id;
+      link.textContent = id;
+      // const text = range.cloneContents();
+      // link.appendChild(text);
+      mark.appendChild(link);
+
+      const endRange = range.cloneRange();
+      endRange.collapse(false);
+      endRange.insertNode(mark);
+    } else {
+      lastElement?.parentElement?.remove();
     }
 
-    const id = generateID();
-    const mark = document.createElement("sup");
-    mark.className = "footnote-ref";
-    mark.id = `fnref-${id}`;
-    const link = document.createElement("a");
-    link.href = "#fn-" + id;
-    link.textContent = id;
-    // const text = range.cloneContents();
-    // link.appendChild(text);
-    mark.appendChild(link);
-
-    const endRange = range.cloneRange();
-    endRange.collapse(false);
-    endRange.insertNode(mark);
-
-    // add a footnote block now
-    // this.api.blocks.insert(
-    //   "footnoteParagraph",
-    //   { id },
-    //   undefined,
-    //   undefined,
-    //   true,
-    // );
-
-    // console.log(
-    //   this.api.blocks
-    //     .getBlockByIndex(this.api.blocks.getCurrentBlockIndex())
-    //     .save()
-    //     .then((d) => console.log(d))
-    // );
-
     this.api.inlineToolbar.close();
-
-    // this.api.focus(this.api.blocks.getCurrentBlockIndex() + 1)
   }
 }
