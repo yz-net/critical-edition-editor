@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiPlus } from "react-icons/fi";
+import { FiPlus, FiSave, FiUpload } from "react-icons/fi";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
@@ -30,7 +30,7 @@ export default function HomePage() {
                 className="group block h-full w-full rounded p-2.5 transition-colors hover:bg-gray-200"
                 href="/new"
               >
-                <div className="group-hover:bg-critical-600 group-hover:border-critical-600 flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 transition-colors group-hover:text-white">
+                <div className="flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
                   <FiPlus size={30} strokeWidth={1.5} />
                   <span className="scale-100 text-3xl">Create new</span>
                 </div>
@@ -58,6 +58,23 @@ export default function HomePage() {
           </ul>
         </nav>
       </main>
+
+      <div className="fixed bottom-3 right-3 flex divide-x overflow-hidden rounded">
+        <button
+          className="flex items-center gap-3 bg-critical-600 p-3 text-white transition-colors hover:bg-critical-500"
+          type="button"
+        >
+          <FiSave />
+          Download
+        </button>
+        <button
+          className="flex items-center gap-3 bg-critical-600 p-3 text-white transition-colors hover:bg-critical-500"
+          type="button"
+        >
+          <FiUpload />
+          Load
+        </button>
+      </div>
     </div>
   );
 }

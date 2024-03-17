@@ -50,7 +50,9 @@ export default class TypedParagraph extends Paragraph {
   render() {
     const ret = super.render();
     ret.addEventListener("paste", (event: ClipboardEvent) => {
-      console.log(event.clipboardData.types);
+      // TODO paste footnote marker?
+      console.log("paste", event);
+      console.log("paste data", event.clipboardData?.getData("text/html"));
       // console.log(event.clipboardData.getData("text/html"))
 
       let s = "";
