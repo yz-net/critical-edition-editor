@@ -25,7 +25,7 @@ function getVideoPath(hvtID: string) {
   return `${MEDIA_PATH_PREFIX}/${hvtID}/background-loop-1280.mp4`;
 }
 
-export default function NewPage() {
+export default async function NewPage() {
   // TODO merge data and editorData, make editor component only access the blocks part of merged data
   const [data, setData] = useState<Metadata>({
     title: "Hans Frei",
@@ -161,12 +161,12 @@ export default function NewPage() {
             <Editor data={editorData} onDataChange={setEditorData} />
           </main>
 
-          <div className="fixed bottom-5 left-5 right-5 z-10">
+          <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
             <div className="flex justify-center">
               <div className="flex w-full max-w-7xl justify-between">
                 <div className="flex items-center divide-x divide-white overflow-hidden rounded">
                   <button
-                    className="bg-critical-600 hover:bg-critical-700 flex items-center gap-3 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors"
+                    className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     type="button"
                     onPointerDown={(e) => {
                       if (window.confirm("Are you sure you want to go back?")) {
@@ -183,7 +183,7 @@ export default function NewPage() {
                   <button
                     data-modal-target="metadata-modal"
                     data-modal-toggle="metadata-modal"
-                    className="bg-critical-600 hover:bg-critical-700 flex items-center gap-3 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors"
+                    className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     onClick={() => setMetadataModalOpen(true)}
                     type="button"
                   >
@@ -191,10 +191,11 @@ export default function NewPage() {
                   </button>
 
                   <button
-                    className="bg-critical-600 hover:bg-critical-700 flex items-center gap-3 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors"
+                    className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     type="button"
-                    onPointerDown={(e) =>
-                      exportToJson(e, editorData, editorData.meta.slug)
+                    onPointerDown={async (e) =>
+                      // exportToJson(e, editorData, editorData.meta.slug)
+                      await fetch("api/save?path=test", { method: "GET" })
                     }
                   >
                     <FiDownload />

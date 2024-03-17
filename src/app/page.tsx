@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiPlus, FiSave, FiUpload } from "react-icons/fi";
+import { FiDownload, FiPlus, FiSave, FiUpload } from "react-icons/fi";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
@@ -59,21 +59,49 @@ export default function HomePage() {
         </nav>
       </main>
 
-      <div className="fixed bottom-3 right-3 flex divide-x overflow-hidden rounded">
-        <button
-          className="flex items-center gap-3 bg-critical-600 p-3 text-white transition-colors hover:bg-critical-500"
-          type="button"
-        >
-          <FiSave />
-          Download
-        </button>
-        <button
-          className="flex items-center gap-3 bg-critical-600 p-3 text-white transition-colors hover:bg-critical-500"
-          type="button"
-        >
-          <FiUpload />
-          Load
-        </button>
+      <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
+        <div className="flex justify-center">
+          <div className="flex w-full max-w-7xl justify-between">
+            <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+              {/* <button
+                    className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                    type="button"
+                    onPointerDown={(e) => {
+                      if (window.confirm("Are you sure you want to go back?")) {
+                        router.push("/");
+                      }
+                    }}
+                  >
+                    <FiArrowLeft />
+                    Back
+                  </button> */}
+            </div>
+
+            <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+              <button
+                data-modal-target="metadata-modal"
+                data-modal-toggle="metadata-modal"
+                className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                // onClick={() => setMetadataModalOpen(true)}
+                type="button"
+              >
+                <FiUpload /> Load
+              </button>
+
+              <button
+                className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                type="button"
+                // onPointerDown={async (e) =>
+                //   // exportToJson(e, editorData, editorData.meta.slug)
+                //   await fetch("api/save?path=test", { method: "GET" })
+                // }
+              >
+                <FiDownload />
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
