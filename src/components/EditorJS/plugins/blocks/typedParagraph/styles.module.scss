@@ -10,12 +10,18 @@
 }
 
 .paragraph {
-  padding: 18px 10px;
-  font-size: 21px;
-  line-height: 1.75em !important;
-  color: #333;
-  font-family: "YaleNewRoman", "Times New Roman", Times, serif;
-  & > * {
+  & > div {
+    padding: 18px 10px;
+    font-size: 21px;
     line-height: 1.75em !important;
+    color: #333;
+    font-family: "YaleNewRoman", "Times New Roman", Times, serif;
+    border-radius: 3px;
+    &:focus {
+      outline: 2px solid black;
+    }
+    & > * {
+      line-height: 1.75em !important;
+    }
   }
 }
