@@ -103,7 +103,7 @@ export default class FootnoteMaker implements InlineTool {
     }
 
     if (!isFootnoteRef) {
-      const id = "footnote";
+      const id = "footnote-id";
       const mark = document.createElement("sup");
       mark.className = "footnote-ref";
       mark.id = `fnref-${id}`;
