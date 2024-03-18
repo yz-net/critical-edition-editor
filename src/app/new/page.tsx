@@ -25,7 +25,7 @@ function getVideoPath(hvtID: string) {
   return `${MEDIA_PATH_PREFIX}/${hvtID}/background-loop-1280.mp4`;
 }
 
-export default async function NewPage() {
+export default function NewPage() {
   // TODO merge data and editorData, make editor component only access the blocks part of merged data
   const [data, setData] = useState<Metadata>({
     title: "Hans Frei",
@@ -193,9 +193,9 @@ export default async function NewPage() {
                   <button
                     className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     type="button"
-                    onPointerDown={async (e) =>
-                      // exportToJson(e, editorData, editorData.meta.slug)
-                      await fetch("api/save?path=test", { method: "GET" })
+                    onPointerDown={
+                      (e) => exportToJson(e, editorData, editorData.meta.slug)
+                      // fetch("api/save?path=test", { method: "GET" })
                     }
                   >
                     <FiDownload />
