@@ -10,15 +10,13 @@ export default function Editorjs(props: {
   onChange(data: any): void;
   holder: any;
 }) {
-  //add a reference to editor
   const ref = useRef<EditorJS>();
 
-  //initialize editorjs
   useEffect(() => {
-    //initialize editor if we don't have a reference
     if (!ref.current) {
       const editor = new EditorJS({
         holder: props.holder,
+        // @ts-ignore
         tools: EDITOR_TOOLS,
         data: props.data,
         async onChange(api, event) {

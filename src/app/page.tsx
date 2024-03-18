@@ -1,5 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { FiDownload, FiPlus, FiSave, FiUpload } from "react-icons/fi";
+import { FiDownload, FiPlus, FiUpload } from "react-icons/fi";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
@@ -10,6 +13,22 @@ import config from "public/data/config.json" assert { type: "json" };
 import styles from "./styles.module.scss";
 
 export default function HomePage() {
+  // TODO: global context handling config & all essays
+  const [data, setData] = useState<any>({
+    config: null,
+    essays: null,
+  });
+
+  useEffect(() => {
+    setData({
+      config,
+    });
+  }, []);
+
+  if (!data.config) {
+    return;
+  }
+
   return (
     <div className="serif-copy-ff">
       <LogoBar />
@@ -21,7 +40,7 @@ export default function HomePage() {
       />
       <main className={styles.CenterColumn}>
         <div className={styles.IndexHeader}>
-          <p className="sans-copy-ff">{config.projectData.introCopy}</p>
+          <p className="sans-copy-ff">{data.config.projectData.introCopy}</p>
         </div>
         <nav aria-label="List of essays">
           <ul className={styles.ItemListContainer}>
@@ -36,7 +55,7 @@ export default function HomePage() {
                 </div>
               </Link>
             </li>
-            {config.essays.map((essay) => {
+            {data.config.essays.map((essay: any) => {
               // const essay: EssayDataEntry = essays[essayID];
               if (!essay) {
                 // logger.warn("bad essay id: " + essayID);
@@ -62,39 +81,28 @@ export default function HomePage() {
       <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
         <div className="flex justify-center">
           <div className="flex w-full max-w-7xl justify-between">
-            <div className="flex items-center divide-x divide-white overflow-hidden rounded">
-              {/* <button
-                    className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                    type="button"
-                    onPointerDown={(e) => {
-                      if (window.confirm("Are you sure you want to go back?")) {
-                        router.push("/");
-                      }
-                    }}
-                  >
-                    <FiArrowLeft />
-                    Back
-                  </button> */}
-            </div>
-
+            {/* left side */}
+            <div className="flex items-center divide-x divide-white overflow-hidden rounded"></div>
+            {/* right side */}
             <div className="flex items-center divide-x divide-white overflow-hidden rounded">
               <button
                 data-modal-target="metadata-modal"
                 data-modal-toggle="metadata-modal"
-                className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                // onClick={() => setMetadataModalOpen(true)}
+                className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                onPointerDown={(e) => {
+                  alert("TODO: retrieve data folder");
+                }}
                 type="button"
               >
                 <FiUpload /> Load
               </button>
 
               <button
-                className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                 type="button"
-                // onPointerDown={async (e) =>
-                //   // exportToJson(e, editorData, editorData.meta.slug)
-                //   await fetch("api/save?path=test", { method: "GET" })
-                // }
+                onPointerDown={(e) => {
+                  alert("TODO: download compressed data (e.g. zipped folder)");
+                }}
               >
                 <FiDownload />
                 Download

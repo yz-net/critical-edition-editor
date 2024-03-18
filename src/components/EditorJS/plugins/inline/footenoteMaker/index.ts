@@ -37,14 +37,15 @@ export default class FootnoteMaker implements InlineTool {
       element = element?.parentElement;
     }
 
+    if (!element) {
+      return false;
+    }
+
     let isFootnoteRef = false;
-    if (
-      element?.nodeName === "A" &&
-      element?.parentElement?.nodeName === "SUP"
-    ) {
+    if (element.nodeName === "A" && element.parentElement?.nodeName === "SUP") {
       isFootnoteRef = true;
     }
-    if (element?.nodeName === "SUP" && element?.firstChild?.nodeName === "A") {
+    if (element.nodeName === "SUP" && element.firstChild?.nodeName === "A") {
       isFootnoteRef = true;
       element = element.firstChild;
     }
@@ -60,9 +61,9 @@ export default class FootnoteMaker implements InlineTool {
       if (isFootnoteRef) {
         this.footnoteRefInput.value = element?.textContent ?? "";
         this.footnoteRefInput.oninput = (e: Event) => {
-          if (e.target instanceof HTMLInputElement) {
-            element!.setAttribute("href", `#fn-${e.target.value}`);
-            element!.textContent = e.target.value;
+          if (element && e.target instanceof HTMLInputElement) {
+            (element as Element).setAttribute("href", `#fn-${e.target.value}`);
+            element.textContent = e.target.value;
           }
         };
       }
