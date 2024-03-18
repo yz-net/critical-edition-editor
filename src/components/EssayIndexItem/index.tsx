@@ -1,12 +1,11 @@
-"use client"
+"use client";
 
-import React, { useRef } from 'react';
-import Link from 'next/link';
+import React, { useRef } from "react";
+import Link from "next/link";
 
-import { EssayDataEntry } from '~/types/essayData';
+import { EssayDataEntry } from "~/types/essayData";
 
-import styles from './styles.module.scss';
-
+import styles from "./styles.module.scss";
 
 export interface EssayIndexItemProps {
   essay: EssayDataEntry;
@@ -26,7 +25,9 @@ export default function EssayIndexItem({
 
   const handleMouseOver = () => {
     if (videoRef && videoRef.current) {
-      videoRef.current.play();
+      videoRef.current.play().catch((e) => {
+        console.log("error", e);
+      });
     }
   };
 
