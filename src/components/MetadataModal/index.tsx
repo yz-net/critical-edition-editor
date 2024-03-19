@@ -20,7 +20,7 @@ export default function MetadataModal(props: MetadataModalProps) {
         aria-hidden="true"
         className={
           visibilityClass +
-          " fixed left-0 right-0 top-[56.5px] z-50 flex h-[calc(100%-56.5px)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-black bg-opacity-70"
+          " fixed left-0 right-0 top-[56.5px] z-50 flex h-[calc(100%-56.5px)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-black/70"
         }
       >
         <div className="sans-copy-ff relative max-h-full w-full max-w-md p-4">
@@ -130,7 +130,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                 </div>
                 <button
                   type="button"
-                  className="bg-critical-600 hover:bg-critical-700 w-full rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white transition-colors focus:outline-none focus:ring-4"
+                  className="w-full rounded-lg bg-critical-600 px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-critical-700 focus:outline-none focus:ring-4"
                   onClick={() => {
                     props.onSave(metadata);
                   }}

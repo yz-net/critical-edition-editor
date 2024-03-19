@@ -11,6 +11,7 @@ import EssayIndexItem from "~/components/EssayIndexItem";
 import config from "public/data/config.json" assert { type: "json" };
 
 import styles from "./styles.module.scss";
+import Import from "~/components/Import";
 
 export default function HomePage() {
   // TODO: global context handling config & all essays
@@ -85,17 +86,7 @@ export default function HomePage() {
             <div className="flex items-center divide-x divide-white overflow-hidden rounded"></div>
             {/* right side */}
             <div className="flex items-center divide-x divide-white overflow-hidden rounded">
-              <button
-                data-modal-target="metadata-modal"
-                data-modal-toggle="metadata-modal"
-                className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                onPointerDown={(e) => {
-                  alert("TODO: retrieve data folder");
-                }}
-                type="button"
-              >
-                <FiUpload /> Load
-              </button>
+              <Import />
 
               <button
                 className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
@@ -105,7 +96,7 @@ export default function HomePage() {
                 }}
               >
                 <FiDownload />
-                Download
+                Export
               </button>
             </div>
           </div>

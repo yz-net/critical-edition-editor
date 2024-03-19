@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { FiArrowLeft, FiDownload, FiSettings } from "react-icons/fi";
+import { FiArrowLeft, FiDownload, FiSave, FiSettings } from "react-icons/fi";
 
 import Editor from "~/components/EditorJS";
 import LogoBar from "~/components/LogoBar";
@@ -177,6 +177,16 @@ export default function NewPage() {
                     <FiArrowLeft />
                     Back
                   </button>
+
+                  <button
+                    data-modal-target="metadata-modal"
+                    data-modal-toggle="metadata-modal"
+                    className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                    // onClick={() => setMetadataModalOpen(true)}
+                    type="button"
+                  >
+                    <FiSave /> Save
+                  </button>
                 </div>
 
                 <div className="flex items-center divide-x divide-white overflow-hidden rounded">
@@ -199,7 +209,7 @@ export default function NewPage() {
                     }
                   >
                     <FiDownload />
-                    Download
+                    JSON
                   </button>
                 </div>
               </div>
