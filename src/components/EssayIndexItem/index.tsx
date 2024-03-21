@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import Link from "next/link";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 import { EssayDataEntry } from "~/types/essayData";
 
@@ -12,6 +13,7 @@ export interface EssayIndexItemProps {
   textOnly: boolean;
   showBylines: boolean;
   showSupertitles: boolean;
+  onChangeOrder(direction: "up" | "down"): void;
 }
 
 export default function EssayIndexItem({
@@ -19,6 +21,7 @@ export default function EssayIndexItem({
   textOnly,
   showBylines,
   showSupertitles,
+  onChangeOrder,
 }: EssayIndexItemProps) {
   // const { essay, textOnly, showBylines, showSupertitles } = props;
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -38,16 +41,19 @@ export default function EssayIndexItem({
   };
 
   return (
-    <Link
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-      onFocus={handleMouseOver}
-      onBlur={handleMouseOut}
-      tabIndex={0}
-      href={`/essay/${essay.id}`}
-      className={styles.ItemLink}
+    <article
+      title={essay.title}
+      className="group relative flex flex-col rounded p-2.5 hover:bg-[#efefef]"
     >
-      <article title={essay.title} className={styles.EssayIndexItem}>
+      <Link
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+        onFocus={handleMouseOver}
+        onBlur={handleMouseOut}
+        tabIndex={0}
+        href={`/essay/${essay.id}`}
+        className="hover:text-critical-600"
+      >
         {textOnly ? null : (
           <div className={styles.ThumbnailArea}>
             <video
@@ -87,7 +93,29 @@ export default function EssayIndexItem({
             {/* </header> */}
           </div>
         </div>
-      </article>
-    </Link>
+      </Link>
+      <div className="pointer-events-none absolute right-4 top-4 flex flex-col divide-y overflow-hidden rounded opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100">
+        <button
+          className="bg-critical-600 p-3 text-white transition-colors hover:bg-critical-700"
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onChangeOrder("up");
+          }}
+        >
+          <FiChevronUp />
+        </button>
+        <button
+          className="bg-critical-600 p-3 text-white transition-colors hover:bg-critical-700"
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onChangeOrder("down");
+          }}
+        >
+          <FiChevronDown />
+        </button>
+      </div>
+    </article>
   );
 }

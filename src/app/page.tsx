@@ -1,34 +1,65 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
-import { FiDownload, FiPlus, FiUpload } from "react-icons/fi";
+import { FiDownload, FiPlus } from "react-icons/fi";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
 import EssayIndexItem from "~/components/EssayIndexItem";
 
-import config from "public/data/config.json" assert { type: "json" };
+import configJson from "public/data/config.json" assert { type: "json" };
 
 import styles from "./styles.module.scss";
 import Import from "~/components/Import";
+import useDataStore from "~/store/data";
 
 export default function HomePage() {
-  // TODO: global context handling config & all essays
-  const [data, setData] = useState<any>({
-    config: null,
-    essays: null,
-  });
+  const { config, setConfig } = useDataStore();
 
   useEffect(() => {
-    setData({
-      config,
-    });
-  }, []);
+    if (config === null) {
+      const localDataStore = JSON.parse(
+        localStorage.getItem("data") ?? "",
+      ).state;
+      if (localDataStore.config) {
+        setConfig(localDataStore.config);
+      } else {
+        // TODO do not work with local files (fetch data from github?)
+        setConfig(configJson);
+      }
+    }
+  }, [config]);
 
-  if (!data.config) {
+  if (config === null) {
     return;
   }
+
+  const moveEssay = (id: string, direction: "up" | "down") => {
+    const newEssays = [...config.essays];
+    const newEssayOrder = [...config.projectData.essayOrder];
+    // essays
+    const essaysAIndex = newEssays.findIndex((e) => e.id === id);
+    if (essaysAIndex < 0) return;
+    const essaysBIndex = essaysAIndex - (direction === "up" ? 1 : -1);
+    if (essaysBIndex < 0 || essaysBIndex > newEssays.length - 1) return;
+    const tempEssay = newEssays[essaysBIndex];
+    newEssays[essaysBIndex] = newEssays[essaysAIndex]!;
+    newEssays[essaysAIndex] = tempEssay!;
+    // essayOrder
+    const essayOrderAIndex = newEssayOrder.findIndex((e) => e === id);
+    if (essayOrderAIndex < 0) return;
+    const essayOrderBIndex = essayOrderAIndex - (direction === "up" ? 1 : -1);
+    if (essayOrderBIndex < 0 || essayOrderBIndex > newEssayOrder.length - 1)
+      return;
+    const tempEssayOder = newEssayOrder[essayOrderBIndex];
+    newEssayOrder[essayOrderBIndex] = newEssayOrder[essayOrderAIndex]!;
+    newEssayOrder[essayOrderAIndex] = tempEssayOder!;
+    setConfig({
+      essays: newEssays,
+      projectData: { ...config.projectData, essayOrder: newEssayOrder },
+    });
+  };
 
   return (
     <div className="serif-copy-ff">
@@ -41,7 +72,7 @@ export default function HomePage() {
       />
       <main className={styles.CenterColumn}>
         <div className={styles.IndexHeader}>
-          <p className="sans-copy-ff">{data.config.projectData.introCopy}</p>
+          <p className="sans-copy-ff">{config.projectData.introCopy}</p>
         </div>
         <nav aria-label="List of essays">
           <ul className={styles.ItemListContainer}>
@@ -56,25 +87,21 @@ export default function HomePage() {
                 </div>
               </Link>
             </li>
-            {data.config.essays.map((essay: any) => {
-              // const essay: EssayDataEntry = essays[essayID];
-              if (!essay) {
-                // logger.warn("bad essay id: " + essayID);
-                return null;
-              }
-              return (
-                <li key={essay.id} className={styles.IndexItemContainer}>
-                  <EssayIndexItem
-                    showSupertitles={
-                      config.projectData.showSupertitlesOnIndexPage
-                    }
-                    showBylines={config.projectData.showBylinesOnIndexPage}
-                    textOnly={config.projectData.textOnlyIndexPage}
-                    essay={essay}
-                  />
-                </li>
-              );
-            })}
+            {config.essays.map((essay: any) => (
+              <li key={essay.id} className={styles.IndexItemContainer}>
+                <EssayIndexItem
+                  showSupertitles={
+                    config.projectData.showSupertitlesOnIndexPage
+                  }
+                  showBylines={config.projectData.showBylinesOnIndexPage}
+                  textOnly={config.projectData.textOnlyIndexPage}
+                  essay={essay}
+                  onChangeOrder={(direction: "up" | "down") =>
+                    moveEssay(essay.id, direction)
+                  }
+                />
+              </li>
+            ))}
           </ul>
         </nav>
       </main>
