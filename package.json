@@ -25,6 +25,7 @@
     "@editorjs/simple-image": "^1.6.0",
     "@t3-oss/env-nextjs": "^0.7.1",
     "@tailwindcss/forms": "^0.5.7",
+    "jszip": "^3.10.1",
     "next": "^14.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { FiDownload, FiPlus } from "react-icons/fi";
+import JSZip from "jszip";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
@@ -59,6 +60,27 @@ export default function HomePage() {
       essays: newEssays,
       projectData: { ...config.projectData, essayOrder: newEssayOrder },
     });
+  };
+
+  const downloadZip = async () => {
+    const configBlob = new Blob([JSON.stringify(config)]);
+    // const configFile = new File([configBlob], "config.json", {
+    //   type: "application/json",
+    // });
+
+    const zip = new JSZip();
+    // zip.file("config.json", configFile);
+    zip.folder("data")!.file("config.json", configBlob);
+
+    const zipData = await zip.generateAsync({
+      type: "blob",
+      streamFiles: true,
+    });
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(zipData);
+    link.download = "critical-edition.zip";
+    link.click();
+    link.remove();
   };
 
   return (
@@ -118,9 +140,7 @@ export default function HomePage() {
               <button
                 className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                 type="button"
-                onPointerDown={(e) => {
-                  alert("TODO: download compressed data (e.g. zipped folder)");
-                }}
+                onPointerDown={downloadZip}
               >
                 <FiDownload />
                 Export
