@@ -110,7 +110,7 @@ export default function EssayPage() {
               name="Title"
               placeholder="Title"
               className="mb-[0.75em] h-[56px] w-full rounded bg-transparent p-0 text-[56px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-              value={data.meta.title}
+              value={data.meta.title ?? ""}
               onChange={(e) => {
                 setData((prev) => ({
                   ...prev!,
@@ -118,40 +118,36 @@ export default function EssayPage() {
                 }));
               }}
             />
-            <div>
-              <div className="text-[24px]">
-                <div className="flex items-center [text-shadow:_0_0_9px_#000]">
-                  by&nbsp;
-                  <input
-                    type="textarea"
-                    name="Author"
-                    placeholder="Author"
-                    className="h-[31px] flex-1 rounded bg-transparent p-0 text-[24px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-                    value={data.meta.author}
-                    onChange={(e) => {
-                      setData((prev) => ({
-                        ...prev!,
-                        meta: { ...prev!.meta, author: e.target.value },
-                      }));
-                    }}
-                  />
-                </div>
-                <div className="font-helvetica text-[13px]">
-                  <input
-                    type="textarea"
-                    name="Affiliation"
-                    placeholder="Affiliation"
-                    className="h-[13px] w-full rounded bg-transparent p-0 text-[13px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-                    value={data.meta.affiliation}
-                    onChange={(e) => {
-                      setData((prev) => ({
-                        ...prev!,
-                        meta: { ...prev!.meta, affiliation: e.target.value },
-                      }));
-                    }}
-                  />
-                </div>
-              </div>
+            <div className="flex items-center text-[24px] [text-shadow:_0_0_9px_#000]">
+              by&nbsp;
+              <input
+                type="textarea"
+                name="Author"
+                placeholder="Author"
+                className="h-[31px] flex-1 rounded bg-transparent p-0 text-[24px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
+                value={data.meta.author ?? ""}
+                onChange={(e) => {
+                  setData((prev) => ({
+                    ...prev!,
+                    meta: { ...prev!.meta, author: e.target.value },
+                  }));
+                }}
+              />
+            </div>
+            <div className="font-helvetica text-[13px]">
+              <input
+                type="textarea"
+                name="Affiliation"
+                placeholder="Affiliation"
+                className="h-[13px] w-full rounded bg-transparent p-0 text-[13px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
+                value={data.meta.affiliation ?? ""}
+                onChange={(e) => {
+                  setData((prev) => ({
+                    ...prev!,
+                    meta: { ...prev!.meta, affiliation: e.target.value },
+                  }));
+                }}
+              />
             </div>
           </div>
           <div className="h-80 bg-white" />
@@ -226,21 +222,6 @@ export default function EssayPage() {
               </div>
             </div>
           </div>
-
-          {/* TODO: Do we need the call-to-action stuff?
-          {callToAction && essayAviaryLink ? (
-            <div className={styles.CallToActionArea}>
-              <CallToAction posterURL={essayPosterPath} essay={essay} />
-            </div>
-          ) : null}
-
-          <Footer
-            orgName={config.projectData.organizationName || ""}
-            orgURL={config.projectData.homeLink || ""}
-            parentOrgName={config.projectData.parentOrganizationName || ""}
-            parentOrgURL={config.projectData.parentOrganizationURL || ""}
-          />
-          */}
         </div>
       </div>
     </div>

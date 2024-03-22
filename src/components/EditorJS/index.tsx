@@ -10,7 +10,6 @@ export default function Editor(props: {
   data: any;
   onDataChange(data: any): void;
 }) {
-  console.log("EditorWrapper Data", props.data);
   return (
     <Editorjs
       data={props.data}

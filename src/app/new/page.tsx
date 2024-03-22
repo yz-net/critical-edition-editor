@@ -10,7 +10,7 @@ import MetadataModal from "~/components/MetadataModal";
 import { exportToJson } from "~/utils/files";
 import { useRouter } from "next/navigation";
 
-import type { Essay } from "~/types/essay";
+import type { Essay, EssayMeta } from "~/types/essay";
 
 import styles from "../essay/[essayID]/styles.module.scss";
 
@@ -55,10 +55,25 @@ export default function NewPage() {
         meta={data?.meta}
         isOpen={metadataModalOpen}
         onSave={(meta) => {
-          setData((prev) => ({ ...prev!, meta }));
+          setData((prev) => {
+            if (!prev) {
+              return {
+                meta,
+                blocks: [
+                  {
+                    type: "paragraph",
+                    data: { paragraphType: "paragraph", text: "Edit text..." },
+                  },
+                ],
+              };
+            } else {
+              return { ...prev!, meta };
+            }
+          });
           setMetadataModalOpen(false);
         }}
       />
+
       <div className="flex-shrink flex-grow-0 basis-full overflow-scroll">
         <header className="relative z-[40] box-border h-[50vh] overflow-hidden">
           <div className="absolute bottom-0 left-[calc(50%-400px)] right-[calc(50%-400px)] top-0 z-[100] bg-[linear-gradient(90deg,#000_10%,rgba(0,0,0,.1)49%,rgba(0,0,0,.1)51%,#000_90%)]" />
@@ -91,7 +106,7 @@ export default function NewPage() {
               name="Title"
               placeholder="Title"
               className="mb-[0.75em] h-[56px] w-full rounded bg-transparent p-0 text-[56px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-              value={data?.meta.title}
+              value={data?.meta.title ?? ""}
               onChange={(e) => {
                 setData((prev) => ({
                   ...prev!,
@@ -99,133 +114,118 @@ export default function NewPage() {
                 }));
               }}
             />
-            <div>
-              <div className="text-[24px]">
-                <div className="flex items-center [text-shadow:_0_0_9px_#000]">
-                  by&nbsp;
-                  <input
-                    type="textarea"
-                    name="Author"
-                    placeholder="Author"
-                    className="h-[31px] flex-1 rounded bg-transparent p-0 text-[24px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-                    value={data?.meta.author}
-                    onChange={(e) => {
-                      setData((prev) => ({
-                        ...prev!,
-                        meta: { ...prev!.meta, author: e.target.value },
-                      }));
-                    }}
-                  />
-                </div>
-                <div className="font-helvetica text-[13px]">
-                  <input
-                    type="textarea"
-                    name="Affiliation"
-                    placeholder="Affiliation"
-                    className="h-[13px] w-full rounded bg-transparent p-0 text-[13px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-                    value={data?.meta.affiliation}
-                    onChange={(e) => {
-                      setData((prev) => ({
-                        ...prev!,
-                        meta: { ...prev!.meta, affiliation: e.target.value },
-                      }));
-                    }}
-                  />
-                </div>
-              </div>
+            <div className="flex items-center text-[24px] [text-shadow:_0_0_9px_#000]">
+              by&nbsp;
+              <input
+                type="textarea"
+                name="Author"
+                placeholder="Author"
+                className="h-[31px] flex-1 rounded bg-transparent p-0 text-[24px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
+                value={data?.meta.author ?? ""}
+                onChange={(e) => {
+                  setData((prev) => ({
+                    ...prev!,
+                    meta: { ...prev!.meta, author: e.target.value },
+                  }));
+                }}
+              />
+            </div>
+            <div className="font-helvetica text-[13px]">
+              <input
+                type="textarea"
+                name="Affiliation"
+                placeholder="Affiliation"
+                className="h-[13px] w-full rounded bg-transparent p-0 text-[13px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
+                value={data?.meta.affiliation ?? ""}
+                onChange={(e) => {
+                  setData((prev) => ({
+                    ...prev!,
+                    meta: { ...prev!.meta, affiliation: e.target.value },
+                  }));
+                }}
+              />
             </div>
           </div>
           <div className="h-80 bg-white" />
         </header>
 
-        <div
-          // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
-          className={styles.ContentBodyContainer}
-        >
-          <main className={styles.ContentBodyContents}>
-            <Editor
-              data={data?.blocks}
-              onDataChange={(data) =>
-                setData((prev) => ({ ...prev!, blocks: data }))
-              }
-            />
-          </main>
+        {data && (
+          <div
+            // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
+            className={styles.ContentBodyContainer}
+          >
+            <main className={styles.ContentBodyContents}>
+              <Editor
+                data={data?.blocks}
+                onDataChange={(data) =>
+                  setData((prev) => ({ ...prev!, blocks: data }))
+                }
+              />
+            </main>
 
-          <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
-            <div className="flex justify-center">
-              <div className="flex w-full max-w-7xl justify-between">
-                <div className="flex items-center divide-x divide-white overflow-hidden rounded">
-                  <button
-                    className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                    type="button"
-                    onPointerDown={(e) => {
-                      if (window.confirm("Are you sure you want to go back?")) {
-                        router.push("/");
+            <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
+              <div className="flex justify-center">
+                <div className="flex w-full max-w-7xl justify-between">
+                  <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+                    <button
+                      className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                      type="button"
+                      onPointerDown={(e) => {
+                        if (
+                          window.confirm("Are you sure you want to go back?")
+                        ) {
+                          router.push("/");
+                        }
+                      }}
+                    >
+                      <FiArrowLeft />
+                      Back
+                    </button>
+
+                    <button
+                      data-modal-target="metadata-modal"
+                      data-modal-toggle="metadata-modal"
+                      className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                      // onClick={() => setMetadataModalOpen(true)}
+                      type="button"
+                    >
+                      <FiSave /> Save
+                    </button>
+                  </div>
+
+                  <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+                    <button
+                      data-modal-target="metadata-modal"
+                      data-modal-toggle="metadata-modal"
+                      className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                      onClick={() => setMetadataModalOpen(true)}
+                      type="button"
+                    >
+                      <FiSettings /> Setttings
+                    </button>
+
+                    <button
+                      className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                      type="button"
+                      onPointerDown={
+                        (e) =>
+                          exportToJson(
+                            e,
+                            data?.blocks,
+                            data?.meta.slug ?? "_.json",
+                          )
+                        // fetch("api/save?path=test", { method: "GET" })
                       }
-                    }}
-                  >
-                    <FiArrowLeft />
-                    Back
-                  </button>
-
-                  <button
-                    data-modal-target="metadata-modal"
-                    data-modal-toggle="metadata-modal"
-                    className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                    // onClick={() => setMetadataModalOpen(true)}
-                    type="button"
-                  >
-                    <FiSave /> Save
-                  </button>
-                </div>
-
-                <div className="flex items-center divide-x divide-white overflow-hidden rounded">
-                  <button
-                    data-modal-target="metadata-modal"
-                    data-modal-toggle="metadata-modal"
-                    className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                    onClick={() => setMetadataModalOpen(true)}
-                    type="button"
-                  >
-                    <FiSettings /> Setttings
-                  </button>
-
-                  <button
-                    className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                    type="button"
-                    onPointerDown={
-                      (e) =>
-                        exportToJson(
-                          e,
-                          data?.blocks,
-                          data?.meta.slug ?? "_.json",
-                        )
-                      // fetch("api/save?path=test", { method: "GET" })
-                    }
-                  >
-                    <FiDownload />
-                    JSON
-                  </button>
+                    >
+                      <FiDownload />
+                      JSON
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* TODO: Do we need the call-to-action stuff?
-          {callToAction && essayAviaryLink ? (
-            <div className={styles.CallToActionArea}>
-              <CallToAction posterURL={essayPosterPath} essay={essay} />
-            </div>
-          ) : null}
-
-          <Footer
-            orgName={config.projectData.organizationName || ""}
-            orgURL={config.projectData.homeLink || ""}
-            parentOrgName={config.projectData.parentOrganizationName || ""}
-            parentOrgURL={config.projectData.parentOrganizationURL || ""}
-          />
-          */}
-        </div>
+        )}
       </div>
     </div>
   );
