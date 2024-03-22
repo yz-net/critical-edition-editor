@@ -4,30 +4,57 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { FiDownload, FiPlus } from "react-icons/fi";
 import JSZip from "jszip";
+import { Octokit } from "@octokit/rest";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
 import EssayIndexItem from "~/components/EssayIndexItem";
 
-import configJson from "public/data/config.json" assert { type: "json" };
-
 import styles from "./styles.module.scss";
 import Import from "~/components/Import";
-import useDataStore from "~/store/data";
+import useDataStore, { type DataStoreEssays } from "~/store/data";
+
+const octokit = new Octokit();
 
 export default function HomePage() {
-  const { config, setConfig } = useDataStore();
+  const { config, setConfig, essays, setEssays } = useDataStore();
+
+  const fetchGitHubData = () => {
+    octokit.rest.repos
+      .getContent({
+        owner: "probably-an-organization",
+        repo: "critical-editions-content",
+        path: "/data",
+        ref: "staging",
+      })
+      .then(async (res) => {
+        if (Array.isArray(res.data)) {
+          const newEssays: DataStoreEssays = [];
+          for (const file of res.data) {
+            if (!file.download_url) continue;
+            const fileData = await (await fetch(file.download_url)).json();
+            if (file.name === "config.json") {
+              setConfig(fileData);
+            } else if (file.name.includes("intro-hvt")) {
+              newEssays.push(fileData);
+            }
+          }
+          setEssays(newEssays);
+        }
+      })
+      .catch((err) => alert("Error: " + err));
+  };
 
   useEffect(() => {
     if (config === null) {
       const localDataStore = JSON.parse(
         localStorage.getItem("data") ?? "",
       ).state;
-      if (localDataStore.config) {
+      if (localDataStore.config && localDataStore.essays) {
         setConfig(localDataStore.config);
+        setEssays(localDataStore.essays);
       } else {
-        // TODO do not work with local files (fetch data from github?)
-        setConfig(configJson);
+        fetchGitHubData();
       }
     }
   }, [config]);
@@ -63,14 +90,22 @@ export default function HomePage() {
   };
 
   const downloadZip = async () => {
-    const configBlob = new Blob([JSON.stringify(config)]);
-    // const configFile = new File([configBlob], "config.json", {
-    //   type: "application/json",
-    // });
-
+    const files: Array<{ path: string; blob: Blob }> = [];
+    files.push({
+      path: "config.json",
+      blob: new Blob([JSON.stringify(config)]),
+    });
+    if (!essays) return;
+    for (const essay of essays) {
+      files.push({
+        path: `intro-${essay.meta.slug}.json`,
+        blob: new Blob([JSON.stringify(essay)]),
+      });
+    }
     const zip = new JSZip();
-    // zip.file("config.json", configFile);
-    zip.folder("data")!.file("config.json", configBlob);
+    for (const file of files) {
+      zip.folder("data")!.file(file.path, file.blob);
+    }
 
     const zipData = await zip.generateAsync({
       type: "blob",
@@ -78,7 +113,7 @@ export default function HomePage() {
     });
     const link = document.createElement("a");
     link.href = window.URL.createObjectURL(zipData);
-    link.download = "critical-edition.zip";
+    link.download = "critical-edition-data.zip";
     link.click();
     link.remove();
   };
