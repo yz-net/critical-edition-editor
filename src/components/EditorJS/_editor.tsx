@@ -18,12 +18,14 @@ export default function Editorjs(props: {
         holder: props.holder,
         // @ts-ignore
         tools: EDITOR_TOOLS,
-        data: props.data,
+        data: {
+          // time: 1552744582955,
+          blocks: props.data,
+          // version: "2.11.10"
+        },
         async onChange(api, event) {
-          console.log("ON CHANGE", api);
           const data = await api.saver.save();
-          console.log("OAKWDKOAWD", data);
-          props.onChange((prev: any) => ({ ...prev, blocks: data.blocks }));
+          props.onChange(data.blocks);
         },
       });
       ref.current = editor;

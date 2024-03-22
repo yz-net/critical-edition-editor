@@ -8,12 +8,11 @@ import LogoBar from "~/components/LogoBar";
 import EssayPreamble from "~/components/Viewer/EssayPreamble";
 import MetadataModal from "~/components/MetadataModal";
 import { exportToJson } from "~/utils/files";
-import { type Metadata } from "~/types/metadata";
+import { useRouter } from "next/navigation";
 
-import dummyData from "../../../public/data/intro-hvt-0170.json" assert { type: "json" };
+import type { Essay } from "~/types/essay";
 
 import styles from "../essay/[essayID]/styles.module.scss";
-import { useRouter } from "next/navigation";
 
 const MEDIA_PATH_PREFIX = "https://d12q9fe14kxf9b.cloudfront.net";
 
@@ -27,17 +26,7 @@ function getVideoPath(hvtID: string) {
 
 export default function NewPage() {
   // TODO merge data and editorData, make editor component only access the blocks part of merged data
-  const [data, setData] = useState<Metadata>({
-    title: "Hans Frei",
-    hvtID: "0170",
-    author: "Ion Popa",
-    affiliation: "University of Manchester",
-    publicationDate: "February 1, 2021",
-  });
-  const [editorData, setEditorData] = useState<{
-    meta: any; // TODO create type
-    blocks: Array<any>; // TODO create type
-  }>(dummyData);
+  const [data, setData] = useState<Essay>();
   const [metadataModalOpen, setMetadataModalOpen] = useState<boolean>(false);
 
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -45,21 +34,16 @@ export default function NewPage() {
   const router = useRouter();
 
   useEffect(() => {
-    if (data.hvtID) {
+    if (data?.meta.hvtID) {
       videoRef.current?.load();
     }
-  }, [data.hvtID]);
+  }, [data?.meta.hvtID]);
 
   useEffect(() => {
-    if (!data.hvtID) {
+    if (!data?.meta.hvtID) {
       setMetadataModalOpen(true);
     }
   }, []);
-
-  // TODO remove (debug)
-  useEffect(() => {
-    console.log("EDITOR DATA", editorData);
-  }, [editorData]);
 
   return (
     <div className="serif-copy-ff relative flex h-screen flex-col overflow-hidden">
@@ -68,10 +52,10 @@ export default function NewPage() {
       </div>
 
       <MetadataModal
-        metadata={data}
+        meta={data?.meta}
         isOpen={metadataModalOpen}
-        onSave={(metadata) => {
-          setData(metadata);
+        onSave={(meta) => {
+          setData((prev) => ({ ...prev!, meta }));
           setMetadataModalOpen(false);
         }}
       />
@@ -79,7 +63,7 @@ export default function NewPage() {
         <header className="relative z-[40] box-border h-[50vh] overflow-hidden">
           <div className="absolute bottom-0 left-[calc(50%-400px)] right-[calc(50%-400px)] top-0 z-[100] bg-[linear-gradient(90deg,#000_10%,rgba(0,0,0,.1)49%,rgba(0,0,0,.1)51%,#000_90%)]" />
           <div className="absolute inset-0 z-0 flex flex-col items-center justify-center overflow-hidden bg-black">
-            {data.hvtID && (
+            {data?.meta.hvtID && (
               <video
                 className="h-full max-h-full w-full max-w-[800px] object-cover object-center"
                 playsInline
@@ -87,9 +71,9 @@ export default function NewPage() {
                 autoPlay
                 disablePictureInPicture
                 ref={videoRef}
-                poster={getPosterPath(data.hvtID)}
+                poster={getPosterPath(data.meta.hvtID)}
               >
-                <source src={getVideoPath(data.hvtID)} />
+                <source src={getVideoPath(data.meta.hvtID)} />
               </video>
             )}
           </div>
@@ -107,9 +91,12 @@ export default function NewPage() {
               name="Title"
               placeholder="Title"
               className="mb-[0.75em] h-[56px] w-full rounded bg-transparent p-0 text-[56px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-              value={data.title}
-              onChange={(newTitle) => {
-                setData((prev) => ({ ...prev, title: newTitle.target.value }));
+              value={data?.meta.title}
+              onChange={(e) => {
+                setData((prev) => ({
+                  ...prev!,
+                  meta: { ...prev!.meta, title: e.target.value },
+                }));
               }}
             />
             <div>
@@ -121,11 +108,11 @@ export default function NewPage() {
                     name="Author"
                     placeholder="Author"
                     className="h-[31px] flex-1 rounded bg-transparent p-0 text-[24px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-                    value={data.author}
-                    onChange={(newAuthor) => {
+                    value={data?.meta.author}
+                    onChange={(e) => {
                       setData((prev) => ({
-                        ...prev,
-                        author: newAuthor.target.value,
+                        ...prev!,
+                        meta: { ...prev!.meta, author: e.target.value },
                       }));
                     }}
                   />
@@ -136,11 +123,11 @@ export default function NewPage() {
                     name="Affiliation"
                     placeholder="Affiliation"
                     className="h-[13px] w-full rounded bg-transparent p-0 text-[13px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
-                    value={data.affiliation}
-                    onChange={(newAffiliation) => {
+                    value={data?.meta.affiliation}
+                    onChange={(e) => {
                       setData((prev) => ({
-                        ...prev,
-                        affiliation: newAffiliation.target.value,
+                        ...prev!,
+                        meta: { ...prev!.meta, affiliation: e.target.value },
                       }));
                     }}
                   />
@@ -151,14 +138,17 @@ export default function NewPage() {
           <div className="h-80 bg-white" />
         </header>
 
-        <EssayPreamble hvtID={data.hvtID} />
-
         <div
           // style={{ top: Math.max(0, 200 - this.state.scrollPosition) }}
           className={styles.ContentBodyContainer}
         >
           <main className={styles.ContentBodyContents}>
-            <Editor data={editorData} onDataChange={setEditorData} />
+            <Editor
+              data={data?.blocks}
+              onDataChange={(data) =>
+                setData((prev) => ({ ...prev!, blocks: data }))
+              }
+            />
           </main>
 
           <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
@@ -204,7 +194,12 @@ export default function NewPage() {
                     className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     type="button"
                     onPointerDown={
-                      (e) => exportToJson(e, editorData, editorData.meta.slug)
+                      (e) =>
+                        exportToJson(
+                          e,
+                          data?.blocks,
+                          data?.meta.slug ?? "_.json",
+                        )
                       // fetch("api/save?path=test", { method: "GET" })
                     }
                   >

@@ -1,16 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { type Metadata } from "~/types/metadata";
+import type { EssayMeta } from "~/types/essay";
 
 type MetadataModalProps = {
-  metadata: Metadata;
+  meta?: EssayMeta;
   isOpen: boolean;
-  onSave: (metadata: Metadata) => void;
+  onSave: (meta: EssayMeta) => void;
 };
 
 export default function MetadataModal(props: MetadataModalProps) {
-  const [metadata, setMetadata] = useState<Metadata>(props.metadata);
+  const [meta, setMeta] = useState<EssayMeta>();
+
+  useEffect(() => {
+    if (props.meta) {
+      setMeta(props.meta);
+    }
+  }, [props.meta]);
+
   let visibilityClass = props.isOpen ? "visible" : "invisible";
+
+  const onSave = () => {
+    if (meta) {
+      props.onSave(meta);
+    }
+  };
+
   return (
     <>
       {/* Main modal */}
@@ -52,10 +66,10 @@ export default function MetadataModal(props: MetadataModalProps) {
                       id="hvt-id"
                       className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 pl-11 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
                       placeholder="0000"
-                      value={metadata.hvtID}
+                      value={meta?.hvtID ?? ""}
                       onChange={(e) => {
-                        setMetadata((prev) => ({
-                          ...prev,
+                        setMeta((prev) => ({
+                          ...prev!,
                           hvtID: e.target.value,
                         }));
                       }}
@@ -75,10 +89,10 @@ export default function MetadataModal(props: MetadataModalProps) {
                     id="title"
                     className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
                     placeholder="Name of the Survivor"
-                    value={metadata.title}
+                    value={meta?.title ?? ""}
                     onChange={(e) => {
-                      setMetadata((prev) => ({
-                        ...prev,
+                      setMeta((prev) => ({
+                        ...prev!,
                         title: e.target.value,
                       }));
                     }}
@@ -97,10 +111,10 @@ export default function MetadataModal(props: MetadataModalProps) {
                     id="author"
                     placeholder="Name of the Interviewer"
                     className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
-                    value={metadata.author}
+                    value={meta?.author ?? ""}
                     onChange={(e) => {
-                      setMetadata((prev) => ({
-                        ...prev,
+                      setMeta((prev) => ({
+                        ...prev!,
                         author: e.target.value,
                       }));
                     }}
@@ -119,10 +133,10 @@ export default function MetadataModal(props: MetadataModalProps) {
                     id="affiliation"
                     placeholder="Affiliation of the Interviewer"
                     className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
-                    value={metadata.affiliation}
+                    value={meta?.affiliation ?? ""}
                     onChange={(e) => {
-                      setMetadata((prev) => ({
-                        ...prev,
+                      setMeta((prev) => ({
+                        ...prev!,
                         affiliation: e.target.value,
                       }));
                     }}
@@ -130,10 +144,9 @@ export default function MetadataModal(props: MetadataModalProps) {
                 </div>
                 <button
                   type="button"
-                  className="w-full rounded-lg bg-critical-600 px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-critical-700 focus:outline-none focus:ring-4"
-                  onClick={() => {
-                    props.onSave(metadata);
-                  }}
+                  className="w-full rounded-lg bg-critical-600 px-5 py-2.5 text-center text-sm font-medium text-white transition-colors focus:outline-none focus:ring-4 hover:enabled:bg-critical-700 disabled:opacity-50"
+                  disabled={!meta}
+                  onClick={onSave}
                 >
                   Save changes
                 </button>

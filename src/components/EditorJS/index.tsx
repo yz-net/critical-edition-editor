@@ -8,8 +8,9 @@ const Editorjs = dynamic(() => import("~/components/EditorJS/_editor"), {
 
 export default function Editor(props: {
   data: any;
-  onDataChange: React.Dispatch<React.SetStateAction<any>>;
+  onDataChange(data: any): void;
 }) {
+  console.log("EditorWrapper Data", props.data);
   return (
     <Editorjs
       data={props.data}
