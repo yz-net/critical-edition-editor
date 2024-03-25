@@ -1,23 +1,30 @@
 "use client";
 
-import { useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FiDownload, FiPlus } from "react-icons/fi";
 import JSZip from "jszip";
+import { useRouter } from "next/navigation";
 import { Octokit } from "@octokit/rest";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
 import EssayIndexItem from "~/components/EssayIndexItem";
+import Import from "~/components/Import";
+import useDataStore from "~/store/data";
+
+import type { Essay } from "~/types/essay";
 
 import styles from "./styles.module.scss";
-import Import from "~/components/Import";
-import useDataStore, { type DataStoreEssays } from "~/store/data";
+import MetadataModal from "~/components/MetadataModal";
 
 const octokit = new Octokit();
 
 export default function HomePage() {
+  const [showMetadataModal, setShowMetadataModal] = useState<boolean>(false);
+
   const { config, setConfig, essays, setEssays } = useDataStore();
+
+  const router = useRouter();
 
   const fetchGitHubData = () => {
     octokit.rest.repos
@@ -29,7 +36,7 @@ export default function HomePage() {
       })
       .then(async (res) => {
         if (Array.isArray(res.data)) {
-          const newEssays: DataStoreEssays = [];
+          const newEssays: Array<Essay> = [];
           for (const file of res.data) {
             if (!file.download_url) continue;
             const fileData = await (await fetch(file.download_url)).json();
@@ -134,15 +141,16 @@ export default function HomePage() {
         <nav aria-label="List of essays">
           <ul className={styles.ItemListContainer}>
             <li className="h-[300px] max-w-[500px] flex-shrink-0 flex-grow basis-1/2 lg:h-auto">
-              <Link
+              <button
                 className="group block h-full w-full rounded p-2.5 transition-colors hover:bg-gray-200"
-                href="/new"
+                type="button"
+                onClick={() => setShowMetadataModal(true)}
               >
                 <div className="flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
                   <FiPlus size={30} strokeWidth={1.5} />
                   <span className="scale-100 text-3xl">Create new</span>
                 </div>
-              </Link>
+              </button>
             </li>
             {config.essays.map((essay: any) => (
               <li key={essay.id} className={styles.IndexItemContainer}>
@@ -184,6 +192,23 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      <MetadataModal
+        show={showMetadataModal}
+        onCancel={() => setShowMetadataModal(false)}
+        onSave={(meta) => {
+          setConfig({
+            projectData: {
+              ...config.projectData,
+              essayOrder: [meta.id, ...config.projectData.essayOrder],
+            },
+            essays: [meta, ...config.essays],
+          });
+          setEssays([{ meta, blocks: [] }, ...(essays ?? [])]);
+          router.push(`/essay/${meta.id}`);
+        }}
+        title="Create new Critical Edition"
+      />
     </div>
   );
 }
