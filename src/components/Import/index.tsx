@@ -1,5 +1,4 @@
 import { FiUpload } from "react-icons/fi";
-import isEqual from "lodash.isequal";
 
 import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";

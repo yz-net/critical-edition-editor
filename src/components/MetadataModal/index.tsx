@@ -1,4 +1,3 @@
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import useDataStore from "~/store/local-data";
@@ -18,8 +17,6 @@ export default function MetadataModal(props: MetadataModalProps) {
   const [error, setError] = useState<string>();
 
   const { config } = useDataStore();
-
-  const router = useRouter();
 
   useEffect(() => {
     if (props.meta) {
