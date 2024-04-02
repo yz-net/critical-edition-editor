@@ -52,7 +52,7 @@ export default function MetadataModal(props: MetadataModalProps) {
       >
         <div className="sans-copy-ff relative max-h-full w-full max-w-md p-4">
           {/* Modal content */}
-          <div className="relative rounded-lg bg-white shadow-lg shadow-neutral-800 dark:bg-neutral-700">
+          <div className="relative rounded-lg bg-neutral-900 shadow shadow-neutral-800 dark:shadow-black">
             {/* Modal header */}
             <div className="flex items-center justify-between rounded-t border-b p-4 md:p-5 dark:border-neutral-600">
               <h3 className="text-xl font-semibold text-neutral-900 dark:text-white">
@@ -172,7 +172,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                     {props.onCancel && (
                       <button
                         type="button"
-                        className="w-full rounded-lg bg-neutral-500 px-5 py-2.5 text-center"
+                        className="w-full rounded-lg bg-neutral-700 px-5 py-2.5 text-center text-sm text-white transition-colors hover:bg-neutral-600"
                         onClick={() => props.onCancel()}
                       >
                         Cancel
@@ -180,11 +180,10 @@ export default function MetadataModal(props: MetadataModalProps) {
                     )}
                     <button
                       type="button"
-                      className="w-full rounded-lg bg-critical-600 px-5 py-2.5 text-center text-sm font-medium text-white transition-colors focus:outline-none focus:ring-4 hover:enabled:bg-critical-700 disabled:opacity-50"
-                      disabled={!meta}
+                      className="w-full rounded-lg bg-critical-600 px-5 py-2.5 text-center text-sm font-medium text-white transition-colors transition-colors focus:outline-none focus:ring-4 hover:enabled:bg-critical-700 disabled:opacity-50"
                       onClick={onSave}
                     >
-                      Save changes
+                      Save
                     </button>
                   </div>
                 </div>

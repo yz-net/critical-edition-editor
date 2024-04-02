@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FiDownload, FiPlus } from "react-icons/fi";
 import JSZip from "jszip";
@@ -17,8 +17,12 @@ import type { DataStore } from "~/types/store";
 import type { ConfigEssay } from "~/types/config";
 
 import styles from "./styles.module.scss";
+import MetadataModal from "~/components/MetadataModal";
+import { EssayMeta } from "~/types/essay";
 
 export default function HomePage() {
+  const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
+
   const localDataStore: DataStore = useLocalDataStore();
   const gitDataStore: DataStore = useGitDataStore();
 
@@ -53,14 +57,35 @@ export default function HomePage() {
     localDataStore.setEssays(localData.essays ?? gitDataStore.essays);
   }, [localDataStore.config, gitDataStore.config]);
 
-  if (localDataStore.config === null) {
+  if (localDataStore.config === null || localDataStore.essays === null) {
     return;
   }
+
+  const createEssay = (meta: EssayMeta) => {
+    // config
+    const newConfigEssays = [meta, ...localDataStore.config.essays];
+    const newConfigEssayOrder = [
+      meta.slug,
+      ...localDataStore.config.projectData.essayOrder,
+    ];
+    // essays
+    const newEssays = [{ meta, blocks: [] }, localDataStore.essays];
+    // update
+    localDataStore.setConfig({
+      essays: newConfigEssays,
+      projectData: {
+        ...localDataStore.config.projectData,
+        essayOrder: newConfigEssayOrder,
+      },
+    });
+    localDataStore.setEssays(newEssays);
+    setShowNewEssayModal(false);
+  };
 
   const moveEssay = (id: string, direction: "up" | "down") => {
     const newEssays = [...localDataStore.config.essays];
     const newEssayOrder = [...localDataStore.config.projectData.essayOrder];
-    // essays
+    // config essays
     const essaysAIndex = newEssays.findIndex((e) => e.id === id);
     if (essaysAIndex < 0) return;
     const essaysBIndex = essaysAIndex - (direction === "up" ? 1 : -1);
@@ -68,7 +93,7 @@ export default function HomePage() {
     const tempEssay = newEssays[essaysBIndex];
     newEssays[essaysBIndex] = newEssays[essaysAIndex]!;
     newEssays[essaysAIndex] = tempEssay!;
-    // essay order
+    // config essay order
     const essayOrderAIndex = newEssayOrder.findIndex((e) => e === id);
     if (essayOrderAIndex < 0) return;
     const essayOrderBIndex = essayOrderAIndex - (direction === "up" ? 1 : -1);
@@ -88,7 +113,7 @@ export default function HomePage() {
   };
 
   const deleteEssay = (id: string) => {
-    // essays
+    // config essays
     const newEssays = localDataStore.config.essays.reduce(
       (acc: Array<ConfigEssay>, curr: ConfigEssay) => {
         if (curr.id !== id) {
@@ -98,7 +123,7 @@ export default function HomePage() {
       },
       [],
     );
-    // essay order
+    // config essay order
     const newEssayOrder = localDataStore.config.projectData.essayOrder.reduce(
       (acc: Array<string>, curr: string) => {
         if (curr !== id) {
@@ -148,84 +173,97 @@ export default function HomePage() {
   };
 
   return (
-    <div className="serif-copy-ff">
-      <LogoBar />
-      <ImpactHeader
-        caption="Photo: Steven H. and Marion L. Holocaust testimony (HVT-544), recorded in 1985."
-        backgroundImageURL="/img/impact-header-background.jpg"
-        title="Critical Editions Editor"
-        subtitle="Create and change testimonies"
-      />
-      <main className={styles.CenterColumn}>
-        <div className={styles.IndexHeader}>
-          <p className="sans-copy-ff">
-            {localDataStore.config.projectData.introCopy}
-          </p>
-        </div>
-        <nav aria-label="List of essays">
-          <ul className={styles.ItemListContainer}>
-            <li className="h-[300px] max-w-[500px] flex-shrink-0 flex-grow basis-1/2 lg:h-auto">
-              <Link
-                className="group block h-full w-full rounded p-2.5 transition-colors hover:bg-gray-200"
-                href="/new"
-              >
-                <div className="flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
-                  <FiPlus size={30} strokeWidth={1.5} />
-                  <span className="scale-100 text-3xl">Create new</span>
-                </div>
-              </Link>
-            </li>
-            {localDataStore.config.essays.map((essay: any) => (
-              <li key={essay.id} className={styles.IndexItemContainer}>
-                <EssayIndexItem
-                  showSupertitles={
-                    localDataStore.config.projectData.showSupertitlesOnIndexPage
-                  }
-                  showBylines={
-                    localDataStore.config.projectData.showBylinesOnIndexPage
-                  }
-                  textOnly={localDataStore.config.projectData.textOnlyIndexPage}
-                  essay={essay}
-                  onChangeOrder={(direction: "up" | "down") =>
-                    moveEssay(essay.id, direction)
-                  }
-                  onDelete={() => {
-                    if (
-                      window.confirm(
-                        `Are you sure you want to delete Essay \"${essay.title}\"?`,
-                      )
-                    ) {
-                      deleteEssay(essay.id);
-                    }
-                  }}
-                />
+    <>
+      <div className="serif-copy-ff">
+        <LogoBar />
+        <ImpactHeader
+          caption="Photo: Steven H. and Marion L. Holocaust testimony (HVT-544), recorded in 1985."
+          backgroundImageURL="/img/impact-header-background.jpg"
+          title="Critical Editions Editor"
+          subtitle="Create and change testimonies"
+        />
+        <main className={styles.CenterColumn}>
+          <div className={styles.IndexHeader}>
+            <p className="sans-copy-ff">
+              {localDataStore.config.projectData.introCopy}
+            </p>
+          </div>
+          <nav aria-label="List of essays">
+            <ul className={styles.ItemListContainer}>
+              <li className="h-[300px] max-w-[500px] flex-shrink-0 flex-grow basis-1/2 lg:h-auto">
+                <button
+                  className="group block h-full w-full rounded p-2.5 transition-colors hover:bg-gray-200"
+                  type="button"
+                  onClick={() => setShowNewEssayModal(true)}
+                >
+                  <div className="flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 text-3xl transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
+                    <FiPlus size={30} strokeWidth={1.5} />
+                    Create new
+                  </div>
+                </button>
               </li>
-            ))}
-          </ul>
-        </nav>
-      </main>
+              {localDataStore.config.essays.map((essay: any) => (
+                <li key={essay.id} className={styles.IndexItemContainer}>
+                  <EssayIndexItem
+                    showSupertitles={
+                      localDataStore.config.projectData
+                        .showSupertitlesOnIndexPage
+                    }
+                    showBylines={
+                      localDataStore.config.projectData.showBylinesOnIndexPage
+                    }
+                    textOnly={
+                      localDataStore.config.projectData.textOnlyIndexPage
+                    }
+                    essay={essay}
+                    onChangeOrder={(direction: "up" | "down") =>
+                      moveEssay(essay.id, direction)
+                    }
+                    onDelete={() => {
+                      if (
+                        window.confirm(
+                          `Are you sure you want to delete Essay \"${essay.title}\"?`,
+                        )
+                      ) {
+                        deleteEssay(essay.id);
+                      }
+                    }}
+                  />
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </main>
 
-      <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
-        <div className="flex justify-center">
-          <div className="flex w-full max-w-7xl justify-between">
-            {/* left side */}
-            <div className="flex items-center divide-x divide-white overflow-hidden rounded"></div>
-            {/* right side */}
-            <div className="flex items-center divide-x divide-white overflow-hidden rounded">
-              <Import />
+        <div className="pointer-events-none fixed bottom-5 left-5 right-5 z-10">
+          <div className="flex justify-center">
+            <div className="flex w-full max-w-7xl justify-between">
+              {/* left side */}
+              <div className="flex items-center divide-x divide-white overflow-hidden rounded"></div>
+              {/* right side */}
+              <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+                <Import />
 
-              <button
-                className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                type="button"
-                onPointerDown={downloadZip}
-              >
-                <FiDownload />
-                Export
-              </button>
+                <button
+                  className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                  type="button"
+                  onPointerDown={downloadZip}
+                >
+                  <FiDownload />
+                  Export
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <MetadataModal
+        title="Create new Critical Edition"
+        show={showNewEssayModal}
+        onCancel={() => setShowNewEssayModal(false)}
+        onSave={(meta) => createEssay(meta)}
+      />
+    </>
   );
 }
