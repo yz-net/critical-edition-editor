@@ -31,7 +31,10 @@ export default function MetadataModal(props: MetadataModalProps) {
     ) {
       return setError("Invalid form data");
     }
-    if (config && config.essays.some((e) => e.hvtID === meta.hvtID)) {
+    if (
+      config &&
+      config.essays.some((e: ConfigEssay) => e.hvtID === meta.hvtID)
+    ) {
       return setError("HVT already exists");
     }
     setError("");
