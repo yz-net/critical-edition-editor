@@ -1,17 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { FiArrowLeft, FiDownload, FiSave, FiSettings } from "react-icons/fi";
+import { FiArrowLeft, FiSettings } from "react-icons/fi";
 import { useParams, useRouter } from "next/navigation";
 
 import Editor from "~/components/EditorJS";
 import LogoBar from "~/components/LogoBar";
 import EssayPreamble from "~/components/Viewer/EssayPreamble";
 import MetadataModal from "~/components/MetadataModal";
-import { exportToJson } from "~/utils/files";
 import useLocalDataStore from "~/store/local-data";
 
-import type { Essay } from "~/types/essay";
+import type { Essay, EssayMeta } from "~/types/essay";
 import type { ConfigEssay } from "~/types/config";
 
 import styles from "./styles.module.scss";
@@ -26,11 +25,13 @@ function getVideoPath(hvtID: string) {
   return `${MEDIA_PATH_PREFIX}/${hvtID}/background-loop-1280.mp4`;
 }
 
+let initialized = false;
+
 export default function EssayPage() {
   const [data, setData] = useState<Essay>();
-  const [metadataModalOpen, setMetadataModalOpen] = useState<boolean>(false);
+  const [showMetaModal, setShowMetaModal] = useState<boolean>(false);
 
-  const { essays } = useLocalDataStore();
+  const { essays, config, setEssays, setConfig } = useLocalDataStore();
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -44,39 +45,70 @@ export default function EssayPage() {
         localStorage.getItem("local-data") ?? "",
       ).state;
       essay = (localData.essays as Array<Essay>).find(
-        (e) => e.meta.slug === params.essayID,
+        (e) => e?.meta.slug === params.id,
       );
     } else {
-      essay = essays.find((e) => e.meta.slug === params.essayID);
+      essay = essays.find((e) => e?.meta.slug === params.id);
     }
     if (essay) {
       setData(essay);
+      initialized = true;
     } else {
-      alert(`Essay ${params.essayID} not found, redirecting...`);
+      alert(`Essay ${params.id} not found, redirecting...`);
       return router.push("/");
     }
-  }, [params.essayID]);
+  }, [params.id]);
 
   useEffect(() => {
     if (data?.meta.hvtID) {
       videoRef.current?.load();
     }
-  }, [data?.meta.hvtID]);
+
+    // update data
+    if (initialized && essays && !!data) {
+      setEssays(
+        essays?.map((e: Essay) => (e.meta.slug === params.id ? data : e)),
+      );
+    }
+  }, [data]);
 
   if (!data) return;
 
+  const editEssay = (meta: EssayMeta) => {
+    if (!essays) {
+      throw Error("Essays not found");
+    }
+    // config
+    const newConfigEssays = config.essays.map((e: ConfigEssay) =>
+      e.id === params.id ? (meta as ConfigEssay) : e,
+    );
+    const newConfigEssayOrder = config.projectData.essayOrder.map(
+      (eo: string) => (eo === params.id ? meta.slug : eo),
+    );
+    setConfig({
+      essays: newConfigEssays,
+      projectData: {
+        ...config.projectData,
+        essayOrder: newConfigEssayOrder,
+      },
+    });
+    // essays
+    const newEssays = essays.map((e: Essay) =>
+      e.meta.slug === params.id
+        ? { meta: { ...data.meta, ...meta }, blocks: data.blocks }
+        : e,
+    );
+    setEssays(newEssays);
+    // update
+    if (meta.slug !== params.id) {
+      window.history.pushState(null, "", `/essay/${meta.slug}`);
+    }
+    setData((prev) => ({ ...prev!, meta }));
+    setShowMetaModal(false);
+  };
+
   return (
     <>
-      <MetadataModal
-        meta={data.meta as ConfigEssay}
-        show={metadataModalOpen}
-        onCancel={() => setMetadataModalOpen(false)}
-        onSave={(metadata) => {
-          // TODO find old entry and edit
-          setData((prev) => ({ ...prev!, meta: metadata }));
-          setMetadataModalOpen(false);
-        }}
-      />
       <div className="serif-copy-ff relative flex h-screen flex-col overflow-hidden">
         <div className="z-[100] h-[60px] overflow-hidden shadow-[0_0_10px_rgba(0,0,0,.3)]">
           <LogoBar />
@@ -197,7 +229,7 @@ export default function EssayPage() {
                       data-modal-target="metadata-modal"
                       data-modal-toggle="metadata-modal"
                       className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                      onClick={() => setMetadataModalOpen(true)}
+                      onClick={() => setShowMetaModal(true)}
                       type="button"
                     >
                       <FiSettings /> Setttings
@@ -221,6 +253,13 @@ export default function EssayPage() {
           </div>
         </div>
       </div>
+
+      <MetadataModal
+        meta={data.meta as ConfigEssay}
+        show={showMetaModal}
+        onCancel={() => setShowMetaModal(false)}
+        onSave={(meta) => editEssay(meta)}
+      />
     </>
   );
 }

@@ -70,6 +70,7 @@ export default function HomePage() {
     ];
     // essays
     const newEssays = [
+      // TODO, meta is missing aviaryLink, publicationDate, supertitle
       { meta, blocks: [] },
       ...(localDataStore.essays as Array<Essay>),
     ];
