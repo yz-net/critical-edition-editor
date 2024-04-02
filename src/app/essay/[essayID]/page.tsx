@@ -190,16 +190,6 @@ export default function EssayPage() {
                       <FiArrowLeft />
                       Back
                     </button>
-
-                    <button
-                      data-modal-target="metadata-modal"
-                      data-modal-toggle="metadata-modal"
-                      className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                      // onClick={() => setMetadataModalOpen(true)}
-                      type="button"
-                    >
-                      <FiSave /> Save
-                    </button>
                   </div>
 
                   <div className="flex items-center divide-x divide-white overflow-hidden rounded">
@@ -213,7 +203,7 @@ export default function EssayPage() {
                       <FiSettings /> Setttings
                     </button>
 
-                    <button
+                    {/* <button
                       className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                       type="button"
                       onPointerDown={
@@ -223,7 +213,7 @@ export default function EssayPage() {
                     >
                       <FiDownload />
                       JSON
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
