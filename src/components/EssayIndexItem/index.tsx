@@ -2,18 +2,19 @@
 
 import React, { useRef } from "react";
 import Link from "next/link";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiChevronDown, FiChevronUp, FiTrash } from "react-icons/fi";
 
-import { EssayDataEntry } from "~/types/essayData";
+import type { ConfigEssay } from "~/types/config";
 
 import styles from "./styles.module.scss";
 
 export interface EssayIndexItemProps {
-  essay: EssayDataEntry;
+  essay: ConfigEssay;
   textOnly: boolean;
   showBylines: boolean;
   showSupertitles: boolean;
   onChangeOrder(direction: "up" | "down"): void;
+  onDelete(): void;
 }
 
 export default function EssayIndexItem({
@@ -22,6 +23,7 @@ export default function EssayIndexItem({
   showBylines,
   showSupertitles,
   onChangeOrder,
+  onDelete,
 }: EssayIndexItemProps) {
   // const { essay, textOnly, showBylines, showSupertitles } = props;
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -94,6 +96,7 @@ export default function EssayIndexItem({
           </div>
         </div>
       </Link>
+
       <div className="pointer-events-none absolute right-4 top-4 flex flex-col divide-y overflow-hidden rounded opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100">
         <button
           className="bg-critical-600 p-3 text-white transition-colors hover:bg-critical-700"
@@ -114,6 +117,19 @@ export default function EssayIndexItem({
           }}
         >
           <FiChevronDown />
+        </button>
+      </div>
+
+      <div className="pointer-events-none absolute left-4 top-4 flex flex-col divide-y overflow-hidden rounded opacity-0 transition-opacity group-hover:pointer-events-auto group-hover:opacity-100">
+        <button
+          className="bg-red-500 p-3 text-white transition-colors hover:bg-red-400"
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onDelete();
+          }}
+        >
+          <FiTrash />
         </button>
       </div>
     </article>

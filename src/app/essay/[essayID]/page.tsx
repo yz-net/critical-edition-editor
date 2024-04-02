@@ -9,7 +9,7 @@ import LogoBar from "~/components/LogoBar";
 import EssayPreamble from "~/components/Viewer/EssayPreamble";
 import MetadataModal from "~/components/MetadataModal";
 import { exportToJson } from "~/utils/files";
-import useDataStore from "~/store/data";
+import useDataStore from "~/store/local-data";
 
 import { Essay } from "~/types/essay";
 import type { ConfigEssay } from "~/types/config";
@@ -41,7 +41,7 @@ export default function EssayPage() {
     let essay;
     if (!essays) {
       const localDataStore = JSON.parse(
-        localStorage.getItem("data") ?? "",
+        localStorage.getItem("local-data") ?? "",
       ).state;
       essay = (localDataStore.essays as Array<Essay>).find(
         (e) => e.meta.slug === params.essayID,

@@ -1,39 +1,44 @@
 import { FiUpload } from "react-icons/fi";
-import { useState } from "react";
+import isEqual from "lodash.isequal";
 
-import Modal from "../Modal";
+import useLocalDataStore from "~/store/local-data";
+import useGitDataStore from "~/store/git";
+
+import { fetchGitHubData } from "~/utils/data";
+
+const confirmText =
+  "Are you sure you want to pull content from GitHub? All changes will be deleted.";
 
 export default function Import(props: any) {
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const localDataStore = useLocalDataStore();
+  const gitDataStore = useGitDataStore();
+
+  const fetch = async () => {
+    if (
+      !isEqual(localDataStore.config, gitDataStore.config) &&
+      !isEqual(localDataStore.essays, gitDataStore.essays)
+    ) {
+      if (window.confirm(confirmText)) {
+        const data = await fetchGitHubData();
+        gitDataStore.setConfig(data.config);
+        gitDataStore.setEssays(data.essays);
+        localDataStore.setConfig(data.config);
+        localDataStore.setEssays(data.essays);
+      }
+    } else {
+      alert("Everything is up-to-date!");
+    }
+  };
 
   return (
-    <>
-      <button
-        data-modal-target="metadata-modal"
-        data-modal-toggle="metadata-modal"
-        className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-        onPointerDown={(e) => {
-          setShowModal(true);
-        }}
-        type="button"
-      >
-        <FiUpload /> Import
-      </button>
-      <Modal
-        title="Data import"
-        open={showModal}
-        onClose={() => setShowModal(false)}
-        onSave={() => setShowModal(false)}
-      >
-        <div>TODO drag and drop file (zip?) import</div>
-        <button
-          className="rounded bg-critical-600 p-3"
-          type="button"
-          onClick={() => setShowModal(false)}
-        >
-          Close
-        </button>
-      </Modal>
-    </>
+    <button
+      data-modal-target="metadata-modal"
+      data-modal-toggle="metadata-modal"
+      className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+      onPointerDown={fetch}
+      type="button"
+    >
+      <FiUpload /> Import
+    </button>
   );
 }

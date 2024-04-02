@@ -6,7 +6,7 @@ import Embed from "@editorjs/embed";
 import Image from "@editorjs/image";
 import InlineCode from "@editorjs/inline-code";
 // import Link from "@editorjs/link";
-// import List from "@editorjs/list";
+import List from "@editorjs/list";
 // import Quote from "@editorjs/quote";
 // import SimpleImage from "@editorjs/simple-image";
 // import Paragraph from "@editorjs/paragraph";
@@ -27,7 +27,7 @@ export const EDITOR_TOOLS = {
   image: Image,
   inlineCode: InlineCode,
   // link: Link,
-  // list: List,
+  list: List,
   // quote: Quote,
   // simpleImage: SimpleImage,
   // delimiter: Delimiter,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import useDataStore from "~/store/data";
+import useDataStore from "~/store/local-data";
 
 import type { ConfigEssay } from "~/types/config";
 

@@ -1,17 +1,9 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-import type { Config } from "~/types/config";
-import type { Essay } from "~/types/essay";
+import { DataStore } from "~/types/store";
 
-export type DataStore = {
-  config: null | Config;
-  essays: null | Array<Essay>;
-  setConfig: (config: null | Config) => void;
-  setEssays: (essays: null | Array<Essay>) => void;
-};
-
-const useDataStore = create<DataStore>()(
+const useLocalDataStore = create<DataStore>()(
   persist(
     (set) => ({
       config: null,
@@ -27,8 +19,8 @@ const useDataStore = create<DataStore>()(
           essays: newEssays,
         })),
     }),
-    { name: "data" },
+    { name: "local-data" },
   ),
 );
 
-export default useDataStore;
+export default useLocalDataStore;

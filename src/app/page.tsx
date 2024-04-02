@@ -1,78 +1,65 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Link from "next/link";
 import { FiDownload, FiPlus } from "react-icons/fi";
 import JSZip from "jszip";
-import { useRouter } from "next/navigation";
-import { Octokit } from "@octokit/rest";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
 import EssayIndexItem from "~/components/EssayIndexItem";
 import Import from "~/components/Import";
-import useDataStore from "~/store/data";
+import useLocalDataStore from "~/store/local-data";
+import useGitDataStore from "~/store/git";
+import { fetchGitHubData } from "~/utils/data";
 
-import type { Essay } from "~/types/essay";
+import type { DataStore } from "~/types/store";
+import type { ConfigEssay } from "~/types/config";
 
 import styles from "./styles.module.scss";
-import MetadataModal from "~/components/MetadataModal";
-
-const octokit = new Octokit();
 
 export default function HomePage() {
-  const [showMetadataModal, setShowMetadataModal] = useState<boolean>(false);
-
-  const { config, setConfig, essays, setEssays } = useDataStore();
-
-  const router = useRouter();
-
-  const fetchGitHubData = () => {
-    octokit.rest.repos
-      .getContent({
-        owner: "probably-an-organization",
-        repo: "critical-editions-content",
-        path: "/data",
-        ref: "staging",
-      })
-      .then(async (res) => {
-        if (Array.isArray(res.data)) {
-          const newEssays: Array<Essay> = [];
-          for (const file of res.data) {
-            if (!file.download_url) continue;
-            const fileData = await (await fetch(file.download_url)).json();
-            if (file.name === "config.json") {
-              setConfig(fileData);
-            } else if (file.name.includes("intro-hvt")) {
-              newEssays.push(fileData);
-            }
-          }
-          setEssays(newEssays);
-        }
-      })
-      .catch((err) => alert("Error: " + err));
-  };
+  const localDataStore: DataStore = useLocalDataStore();
+  const gitDataStore: DataStore = useGitDataStore();
 
   useEffect(() => {
-    if (config === null) {
-      const localDataStore = JSON.parse(
-        localStorage.getItem("data") ?? "",
-      ).state;
-      if (localDataStore.config && localDataStore.essays) {
-        setConfig(localDataStore.config);
-        setEssays(localDataStore.essays);
-      } else {
-        fetchGitHubData();
-      }
+    if (gitDataStore.config) {
+      return;
     }
-  }, [config]);
 
-  if (config === null) {
+    const fetch = async () => {
+      const newGitData = await fetchGitHubData();
+      gitDataStore.setConfig(newGitData.config);
+      gitDataStore.setEssays(newGitData.essays);
+    };
+
+    const gitData = JSON.parse(localStorage.getItem("git-data") ?? "").state;
+    if (gitData.config && gitData.essays) {
+      gitDataStore.setConfig(gitData.config);
+      gitDataStore.setEssays(gitData.essays);
+    } else {
+      fetch();
+    }
+  }, [gitDataStore.config]);
+
+  useEffect(() => {
+    if (localDataStore.config) {
+      return;
+    }
+    const localData = JSON.parse(
+      localStorage.getItem("local-data") ?? "",
+    ).state;
+    localDataStore.setConfig(localData.config ?? gitDataStore.config);
+    localDataStore.setEssays(localData.essays ?? gitDataStore.essays);
+  }, [localDataStore.config, gitDataStore.config]);
+
+  if (localDataStore.config === null) {
     return;
   }
 
   const moveEssay = (id: string, direction: "up" | "down") => {
-    const newEssays = [...config.essays];
-    const newEssayOrder = [...config.projectData.essayOrder];
+    const newEssays = [...localDataStore.config.essays];
+    const newEssayOrder = [...localDataStore.config.projectData.essayOrder];
     // essays
     const essaysAIndex = newEssays.findIndex((e) => e.id === id);
     if (essaysAIndex < 0) return;
@@ -81,7 +68,7 @@ export default function HomePage() {
     const tempEssay = newEssays[essaysBIndex];
     newEssays[essaysBIndex] = newEssays[essaysAIndex]!;
     newEssays[essaysAIndex] = tempEssay!;
-    // essayOrder
+    // essay order
     const essayOrderAIndex = newEssayOrder.findIndex((e) => e === id);
     if (essayOrderAIndex < 0) return;
     const essayOrderBIndex = essayOrderAIndex - (direction === "up" ? 1 : -1);
@@ -90,9 +77,44 @@ export default function HomePage() {
     const tempEssayOder = newEssayOrder[essayOrderBIndex];
     newEssayOrder[essayOrderBIndex] = newEssayOrder[essayOrderAIndex]!;
     newEssayOrder[essayOrderAIndex] = tempEssayOder!;
-    setConfig({
+    // update
+    localDataStore.setConfig({
       essays: newEssays,
-      projectData: { ...config.projectData, essayOrder: newEssayOrder },
+      projectData: {
+        ...localDataStore.config.projectData,
+        essayOrder: newEssayOrder,
+      },
+    });
+  };
+
+  const deleteEssay = (id: string) => {
+    // essays
+    const newEssays = localDataStore.config.essays.reduce(
+      (acc: Array<ConfigEssay>, curr: ConfigEssay) => {
+        if (curr.id !== id) {
+          acc.push(curr);
+        }
+        return acc;
+      },
+      [],
+    );
+    // essay order
+    const newEssayOrder = localDataStore.config.projectData.essayOrder.reduce(
+      (acc: Array<string>, curr: string) => {
+        if (curr !== id) {
+          acc.push(curr);
+        }
+        return acc;
+      },
+      [],
+    );
+    // update
+    localDataStore.setConfig({
+      essays: newEssays,
+      projectData: {
+        ...localDataStore.config.projectData,
+        essayOrder: newEssayOrder,
+      },
     });
   };
 
@@ -100,10 +122,10 @@ export default function HomePage() {
     const files: Array<{ path: string; blob: Blob }> = [];
     files.push({
       path: "config.json",
-      blob: new Blob([JSON.stringify(config)]),
+      blob: new Blob([JSON.stringify(localDataStore.config)]),
     });
-    if (!essays) return;
-    for (const essay of essays) {
+    if (!localDataStore.essays) return;
+    for (const essay of localDataStore.essays) {
       files.push({
         path: `intro-${essay.meta.slug}.json`,
         blob: new Blob([JSON.stringify(essay)]),
@@ -136,34 +158,46 @@ export default function HomePage() {
       />
       <main className={styles.CenterColumn}>
         <div className={styles.IndexHeader}>
-          <p className="sans-copy-ff">{config.projectData.introCopy}</p>
+          <p className="sans-copy-ff">
+            {localDataStore.config.projectData.introCopy}
+          </p>
         </div>
         <nav aria-label="List of essays">
           <ul className={styles.ItemListContainer}>
             <li className="h-[300px] max-w-[500px] flex-shrink-0 flex-grow basis-1/2 lg:h-auto">
-              <button
+              <Link
                 className="group block h-full w-full rounded p-2.5 transition-colors hover:bg-gray-200"
-                type="button"
-                onClick={() => setShowMetadataModal(true)}
+                href="/new"
               >
                 <div className="flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
                   <FiPlus size={30} strokeWidth={1.5} />
                   <span className="scale-100 text-3xl">Create new</span>
                 </div>
-              </button>
+              </Link>
             </li>
-            {config.essays.map((essay: any) => (
+            {localDataStore.config.essays.map((essay: any) => (
               <li key={essay.id} className={styles.IndexItemContainer}>
                 <EssayIndexItem
                   showSupertitles={
-                    config.projectData.showSupertitlesOnIndexPage
+                    localDataStore.config.projectData.showSupertitlesOnIndexPage
                   }
-                  showBylines={config.projectData.showBylinesOnIndexPage}
-                  textOnly={config.projectData.textOnlyIndexPage}
+                  showBylines={
+                    localDataStore.config.projectData.showBylinesOnIndexPage
+                  }
+                  textOnly={localDataStore.config.projectData.textOnlyIndexPage}
                   essay={essay}
                   onChangeOrder={(direction: "up" | "down") =>
                     moveEssay(essay.id, direction)
                   }
+                  onDelete={() => {
+                    if (
+                      window.confirm(
+                        `Are you sure you want to delete Essay \"${essay.title}\"?`,
+                      )
+                    ) {
+                      deleteEssay(essay.id);
+                    }
+                  }}
                 />
               </li>
             ))}
@@ -192,23 +226,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      <MetadataModal
-        show={showMetadataModal}
-        onCancel={() => setShowMetadataModal(false)}
-        onSave={(meta) => {
-          setConfig({
-            projectData: {
-              ...config.projectData,
-              essayOrder: [meta.id, ...config.projectData.essayOrder],
-            },
-            essays: [meta, ...config.essays],
-          });
-          setEssays([{ meta, blocks: [] }, ...(essays ?? [])]);
-          router.push(`/essay/${meta.id}`);
-        }}
-        title="Create new Critical Edition"
-      />
     </div>
   );
 }
