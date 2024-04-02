@@ -7,26 +7,19 @@ import useGitDataStore from "~/store/git";
 import { fetchGitHubData } from "~/utils/data";
 
 const confirmText =
-  "Are you sure you want to pull content from GitHub? All changes will be deleted.";
+  "Are you sure you want to pull content from GitHub? All local changes will be deleted.";
 
 export default function Import(props: any) {
   const localDataStore = useLocalDataStore();
   const gitDataStore = useGitDataStore();
 
   const fetch = async () => {
-    if (
-      !isEqual(localDataStore.config, gitDataStore.config) &&
-      !isEqual(localDataStore.essays, gitDataStore.essays)
-    ) {
-      if (window.confirm(confirmText)) {
-        const data = await fetchGitHubData();
-        gitDataStore.setConfig(data.config);
-        gitDataStore.setEssays(data.essays);
-        localDataStore.setConfig(data.config);
-        localDataStore.setEssays(data.essays);
-      }
-    } else {
-      alert("Everything is up-to-date!");
+    if (window.confirm(confirmText)) {
+      const data = await fetchGitHubData();
+      gitDataStore.setConfig(data.config);
+      gitDataStore.setEssays(data.essays);
+      localDataStore.setConfig(data.config);
+      localDataStore.setEssays(data.essays);
     }
   };
 
