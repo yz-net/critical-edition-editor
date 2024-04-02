@@ -9,9 +9,9 @@ import LogoBar from "~/components/LogoBar";
 import EssayPreamble from "~/components/Viewer/EssayPreamble";
 import MetadataModal from "~/components/MetadataModal";
 import { exportToJson } from "~/utils/files";
-import useDataStore from "~/store/local-data";
+import useLocalDataStore from "~/store/local-data";
 
-import { Essay } from "~/types/essay";
+import type { Essay } from "~/types/essay";
 import type { ConfigEssay } from "~/types/config";
 
 import styles from "./styles.module.scss";
@@ -30,7 +30,7 @@ export default function EssayPage() {
   const [data, setData] = useState<Essay>();
   const [metadataModalOpen, setMetadataModalOpen] = useState<boolean>(false);
 
-  const { essays } = useDataStore();
+  const { essays } = useLocalDataStore();
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -40,10 +40,10 @@ export default function EssayPage() {
   useEffect(() => {
     let essay;
     if (!essays) {
-      const localDataStore = JSON.parse(
+      const localData = JSON.parse(
         localStorage.getItem("local-data") ?? "",
       ).state;
-      essay = (localDataStore.essays as Array<Essay>).find(
+      essay = (localData.essays as Array<Essay>).find(
         (e) => e.meta.slug === params.essayID,
       );
     } else {

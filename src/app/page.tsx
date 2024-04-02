@@ -15,10 +15,10 @@ import { fetchGitHubData } from "~/utils/data";
 
 import type { DataStore } from "~/types/store";
 import type { ConfigEssay } from "~/types/config";
+import type { Essay, EssayMeta } from "~/types/essay";
 
 import styles from "./styles.module.scss";
 import MetadataModal from "~/components/MetadataModal";
-import { EssayMeta } from "~/types/essay";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
@@ -69,7 +69,10 @@ export default function HomePage() {
       ...localDataStore.config.projectData.essayOrder,
     ];
     // essays
-    const newEssays = [{ meta, blocks: [] }, localDataStore.essays];
+    const newEssays = [
+      { meta, blocks: [] },
+      ...(localDataStore.essays as Array<Essay>),
+    ];
     // update
     localDataStore.setConfig({
       essays: newConfigEssays,
