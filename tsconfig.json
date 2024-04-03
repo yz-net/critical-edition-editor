@@ -27,16 +27,20 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
+
+    /* EditorJS */
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
   "include": [
     ".eslintrc.cjs",
     "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "./declaration.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
-    "**/*.js",
-    ".next/types/**/*.ts"
+    "**/*.js"
   ],
   "exclude": ["node_modules"]
 }

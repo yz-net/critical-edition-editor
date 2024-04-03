@@ -1,6 +1,12 @@
-export type DataStore = {
-  config: null | Config;
-  essays: null | Array<Essay>;
-  setConfig: (config: null | Config) => void;
-  setEssays: (essays: null | Array<Essay>) => void;
+import type { Config } from "./config";
+import type { Essay } from "./essay";
+
+export type CEDataStore = CEData & {
+  setConfig: (config: Config) => void;
+  setEssays: (essays: Essay[]) => void;
+};
+
+export type CEData = {
+  config: Config | null;
+  essays: Essay[];
 };

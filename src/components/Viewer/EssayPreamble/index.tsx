@@ -14,7 +14,7 @@ export default function EssayPreamble(props: EssayPreambleProps) {
 
   const pdfURL = `https://d12q9fe14kxf9b.cloudfront.net/pdf/critical-edition-hvt-${hvtID}.pdf`;
   const aviaryURL =
-    aviaryLink || `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${hvtID}`;
+    aviaryLink ?? `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${hvtID}`;
 
   return (
     <div className={`sans-copy-ff ${styles.EssayPreamble}`}>

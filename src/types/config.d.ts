@@ -1,5 +1,5 @@
 export interface Config {
-  essays: Array<ConfigEssay>;
+  essays: ConfigEssay[];
   projectData: ConfigProjectData;
 }
 
@@ -32,5 +32,5 @@ export interface ConfigProjectData {
   showBylinesOnIndexPage: boolean;
   showSupertitlesOnIndexPage: boolean;
   textOnlyIndexPage: boolean;
-  essayOrder: Array<string>;
+  essayOrder: string[];
 }

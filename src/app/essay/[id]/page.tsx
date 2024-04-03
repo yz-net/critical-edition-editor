@@ -12,6 +12,7 @@ import useLocalDataStore from "~/store/local-data";
 
 import type { Essay, EssayMeta } from "~/types/essay";
 import type { ConfigEssay } from "~/types/config";
+import type { CEData } from "~/types/store";
 
 import styles from "./styles.module.scss";
 
@@ -41,12 +42,12 @@ export default function EssayPage() {
   useEffect(() => {
     let essay;
     if (!essays) {
-      const localData = JSON.parse(
-        localStorage.getItem("local-data") ?? "",
+      const localData: CEData = (
+        JSON.parse(localStorage.getItem("local-data") ?? "") as {
+          state: CEData;
+        }
       ).state;
-      essay = (localData.essays as Array<Essay>).find(
-        (e) => e?.meta.slug === params.id,
-      );
+      essay = localData.essays.find((e) => e?.meta.slug === params.id);
     } else {
       essay = essays.find((e) => e?.meta.slug === params.id);
     }
@@ -54,7 +55,7 @@ export default function EssayPage() {
       setData(essay);
       initialized = true;
     } else {
-      alert(`Essay ${params.id} not found, redirecting...`);
+      alert(`Essay ${params.id as string} not found, redirecting...`);
       return router.push("/");
     }
   }, [params.id]);
@@ -75,6 +76,9 @@ export default function EssayPage() {
   if (!data) return;
 
   const editEssay = (meta: EssayMeta) => {
+    if (!config) {
+      throw Error("Config not found");
+    }
     if (!essays) {
       throw Error("Essays not found");
     }
@@ -82,13 +86,13 @@ export default function EssayPage() {
     const newConfigEssays = config.essays.map((e: ConfigEssay) =>
       e.id === params.id ? (meta as ConfigEssay) : e,
     );
-    const newConfigEssayOrder = config.projectData.essayOrder.map(
+    const newConfigEssayOrder = config?.projectData.essayOrder.map(
       (eo: string) => (eo === params.id ? meta.slug : eo),
     );
     setConfig({
       essays: newConfigEssays,
       projectData: {
-        ...config.projectData,
+        ...config?.projectData,
         essayOrder: newConfigEssayOrder,
       },
     });

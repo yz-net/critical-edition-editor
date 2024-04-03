@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import { FiChevronDown, FiChevronUp, FiTrash } from "react-icons/fi";
+import useLocalDataStore from "~/store/local-data";
 
 import type { ConfigEssay } from "~/types/config";
 
@@ -10,26 +11,21 @@ import styles from "./styles.module.scss";
 
 export interface EssayIndexItemProps {
   essay: ConfigEssay;
-  textOnly: boolean;
-  showBylines: boolean;
-  showSupertitles: boolean;
   onChangeOrder(direction: "up" | "down"): void;
   onDelete(): void;
 }
 
 export default function EssayIndexItem({
   essay,
-  textOnly,
-  showBylines,
-  showSupertitles,
   onChangeOrder,
   onDelete,
 }: EssayIndexItemProps) {
-  // const { essay, textOnly, showBylines, showSupertitles } = props;
+  const { config } = useLocalDataStore();
+
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseOver = () => {
-    if (videoRef && videoRef.current) {
+    if (videoRef?.current) {
       videoRef.current.play().catch((e) => {
         console.log("error", e);
       });
@@ -37,7 +33,7 @@ export default function EssayIndexItem({
   };
 
   const handleMouseOut = () => {
-    if (videoRef && videoRef.current) {
+    if (videoRef?.current) {
       videoRef.current.pause();
     }
   };
@@ -56,7 +52,7 @@ export default function EssayIndexItem({
         href={`/essay/${essay.id}`}
         className="hover:text-critical-600"
       >
-        {textOnly ? null : (
+        {config?.projectData.textOnlyIndexPage ? null : (
           <div className={styles.ThumbnailArea}>
             <video
               ref={videoRef}
@@ -74,7 +70,7 @@ export default function EssayIndexItem({
         <div className={styles.TextArea}>
           <div className={styles.TitleContainer}>
             {/* <header> */}
-            {showSupertitles ? (
+            {config?.projectData.showSupertitlesOnIndexPage ? (
               <p
                 aria-label={`Supertitle for '${essay.title}'`}
                 className={styles.SuperTitle}
@@ -83,7 +79,7 @@ export default function EssayIndexItem({
               </p>
             ) : null}
             <h3 className={styles.Title}> {essay.title}</h3>
-            {showBylines ? (
+            {config?.projectData.showBylinesOnIndexPage ? (
               <p
                 aria-label={`Author byline for '${essay.title}'`}
                 className={`${styles.Byline} sans-copy-ff`}

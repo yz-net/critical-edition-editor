@@ -7,9 +7,9 @@ const octokit = new Octokit();
 
 export const fetchGitHubData: () => Promise<{
   config: Config;
-  essays: Array<Essay>;
+  essays: Essay[];
 }> = async () => {
-  const data: { config: Config; essays: Array<Essay> } = {
+  const data: { config: Config; essays: Essay[] } = {
     config: {
       projectData: {
         title: "",

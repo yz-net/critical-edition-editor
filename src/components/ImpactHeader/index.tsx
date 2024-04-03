@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export interface ImpactHeaderProps {
-  title: String;
-  subtitle: String;
+  title: string;
+  subtitle: string;
   backgroundImageURL?: string;
   caption: string;
 }
@@ -14,7 +14,7 @@ export default function ImpactHeader(props: ImpactHeaderProps) {
 
   const backgroundImageCSSProperty = backgroundImageURL
     ? `url(${backgroundImageURL})`
-    : '';
+    : "";
 
   const style = backgroundImageURL
     ? { backgroundImage: backgroundImageCSSProperty }

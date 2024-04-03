@@ -18,11 +18,11 @@ function getChars(n: number): string {
   return ret.slice(0, n);
 }
 
-export function generateID(options?: { length?: number }): string {
+export function generateID(options?: { length: number }): string {
   let length = 10;
 
   // Set user-provided values
-  if (options && (options.length || options.length === 0)) {
+  if (options?.length && options.length > 0) {
     length = options.length;
   }
 

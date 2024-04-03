@@ -1,13 +1,13 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-import { DataStore } from "~/types/store";
+import { CEDataStore } from "~/types/store";
 
-const useGitDataStore = create<DataStore>()(
+const useGitDataStore = create<CEDataStore>()(
   persist(
     (set) => ({
       config: null,
-      essays: null,
+      essays: [],
       setConfig: (newConfig) =>
         set((state) => ({
           ...state,

@@ -21,7 +21,7 @@ export const downloadFile = (
 
 export const exportToJson = (
   e: React.PointerEvent<HTMLButtonElement>,
-  data: any,
+  data: Record<string, string | number>,
   name: string,
 ) => {
   e.preventDefault();

@@ -8,7 +8,7 @@ import { fetchGitHubData } from "~/utils/data";
 const confirmText =
   "Are you sure you want to pull content from GitHub? All local changes will be deleted.";
 
-export default function Import(props: any) {
+export default function Import() {
   const localDataStore = useLocalDataStore();
   const gitDataStore = useGitDataStore();
 

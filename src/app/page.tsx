@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { FiDownload, FiPlus } from "react-icons/fi";
 import JSZip from "jszip";
 
@@ -12,19 +11,19 @@ import Import from "~/components/Import";
 import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
 import { fetchGitHubData } from "~/utils/data";
+import MetadataModal from "~/components/MetadataModal";
 
-import type { DataStore } from "~/types/store";
+import type { CEData, CEDataStore } from "~/types/store";
 import type { ConfigEssay } from "~/types/config";
 import type { Essay, EssayMeta } from "~/types/essay";
 
 import styles from "./styles.module.scss";
-import MetadataModal from "~/components/MetadataModal";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
 
-  const localDataStore: DataStore = useLocalDataStore();
-  const gitDataStore: DataStore = useGitDataStore();
+  const localDataStore: CEDataStore = useLocalDataStore();
+  const gitDataStore: CEDataStore = useGitDataStore();
 
   useEffect(() => {
     if (gitDataStore.config) {
@@ -32,12 +31,21 @@ export default function HomePage() {
     }
 
     const fetch = async () => {
-      const newGitData = await fetchGitHubData();
-      gitDataStore.setConfig(newGitData.config);
-      gitDataStore.setEssays(newGitData.essays);
+      try {
+        const newGitData = await fetchGitHubData();
+        gitDataStore.setConfig(newGitData.config);
+        gitDataStore.setEssays(newGitData.essays);
+      } catch (err) {
+        throw Error("Error fetching GitHub data");
+      }
     };
 
-    const gitData = JSON.parse(localStorage.getItem("git-data") ?? "").state;
+    const gitDataString = localStorage.getItem("git-data");
+    if (!gitDataString) {
+      fetch();
+      return;
+    }
+    const gitData = (JSON.parse(gitDataString) as { state: CEData }).state;
     if (gitData.config && gitData.essays) {
       gitDataStore.setConfig(gitData.config);
       gitDataStore.setEssays(gitData.essays);
@@ -50,20 +58,28 @@ export default function HomePage() {
     if (localDataStore.config) {
       return;
     }
-    const localData = JSON.parse(
-      localStorage.getItem("local-data") ?? "",
-    ).state;
-    localDataStore.setConfig(localData.config ?? gitDataStore.config);
-    localDataStore.setEssays(localData.essays ?? gitDataStore.essays);
+    if (!gitDataStore.config) {
+      return;
+    }
+
+    let localData: CEData | undefined;
+    const localDataString = localStorage.getItem("local-data");
+    if (localDataString) {
+      localData = (JSON.parse(localDataString) as { state: CEData }).state;
+    }
+    localDataStore.setConfig(localData?.config ?? gitDataStore.config);
+    localDataStore.setEssays(localData?.essays ?? gitDataStore.essays);
   }, [localDataStore.config, gitDataStore.config]);
 
-  if (localDataStore.config === null || localDataStore.essays === null) {
-    return;
-  }
-
   const createEssay = (meta: EssayMeta) => {
+    if (!localDataStore.config) {
+      throw Error("Local config is null");
+    }
     // config
-    const newConfigEssays = [meta, ...localDataStore.config.essays];
+    const newConfigEssays: ConfigEssay[] = [
+      meta as ConfigEssay,
+      ...localDataStore.config.essays,
+    ];
     const newConfigEssayOrder = [
       meta.slug,
       ...localDataStore.config.projectData.essayOrder,
@@ -72,7 +88,7 @@ export default function HomePage() {
     const newEssays = [
       // TODO, meta is missing aviaryLink, publicationDate, supertitle
       { meta, blocks: [] },
-      ...(localDataStore.essays as Array<Essay>),
+      ...localDataStore.essays,
     ];
     // update
     localDataStore.setConfig({
@@ -87,6 +103,9 @@ export default function HomePage() {
   };
 
   const moveEssay = (id: string, direction: "up" | "down") => {
+    if (!localDataStore.config) {
+      throw Error("Local config missing");
+    }
     const newEssays = [...localDataStore.config.essays];
     const newEssayOrder = [...localDataStore.config.projectData.essayOrder];
     // config essays
@@ -117,9 +136,12 @@ export default function HomePage() {
   };
 
   const deleteEssay = (id: string) => {
+    if (!localDataStore.config) {
+      throw Error("Local config missing");
+    }
     // config essays
     const newEssays = localDataStore.config.essays.reduce(
-      (acc: Array<ConfigEssay>, curr: ConfigEssay) => {
+      (acc: ConfigEssay[], curr: ConfigEssay) => {
         if (curr.id !== id) {
           acc.push(curr);
         }
@@ -129,7 +151,7 @@ export default function HomePage() {
     );
     // config essay order
     const newEssayOrder = localDataStore.config.projectData.essayOrder.reduce(
-      (acc: Array<string>, curr: string) => {
+      (acc: string[], curr: string) => {
         if (curr !== id) {
           acc.push(curr);
         }
@@ -148,7 +170,7 @@ export default function HomePage() {
   };
 
   const downloadZip = async () => {
-    const files: Array<{ path: string; blob: Blob }> = [];
+    const files: { path: string; blob: Blob }[] = [];
     files.push({
       path: "config.json",
       blob: new Blob([JSON.stringify(localDataStore.config)]),
@@ -175,6 +197,10 @@ export default function HomePage() {
     link.click();
     link.remove();
   };
+
+  if (!localDataStore.config || !localDataStore.essays) {
+    return;
+  }
 
   return (
     <>
@@ -206,19 +232,9 @@ export default function HomePage() {
                   </div>
                 </button>
               </li>
-              {localDataStore.config.essays.map((essay: any) => (
+              {localDataStore.config.essays.map((essay: ConfigEssay) => (
                 <li key={essay.id} className={styles.IndexItemContainer}>
                   <EssayIndexItem
-                    showSupertitles={
-                      localDataStore.config.projectData
-                        .showSupertitlesOnIndexPage
-                    }
-                    showBylines={
-                      localDataStore.config.projectData.showBylinesOnIndexPage
-                    }
-                    textOnly={
-                      localDataStore.config.projectData.textOnlyIndexPage
-                    }
                     essay={essay}
                     onChangeOrder={(direction: "up" | "down") =>
                       moveEssay(essay.id, direction)

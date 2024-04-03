@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Paragraph from "@editorjs/paragraph";
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
 
@@ -6,10 +7,6 @@ import styles from "./styles.module.scss";
 type ParagraphType = "paragraph" | "blockquote";
 
 export default class TypedParagraph extends Paragraph {
-  api: API;
-  wrapper: HTMLDivElement;
-  data: any;
-
   constructor(opts: { data: BlockToolData; config: EditorConfig; api: API }) {
     const { data, config, api } = opts;
     super({ data, config, api });
@@ -52,6 +49,9 @@ export default class TypedParagraph extends Paragraph {
   render() {
     const ret = super.render();
     ret.addEventListener("paste", (event: ClipboardEvent) => {
+      if (!event.clipboardData) {
+        return;
+      }
       // TODO paste footnote marker?
       console.log("paste", event);
       console.log("paste data", event.clipboardData?.getData("text/html"));
@@ -59,11 +59,11 @@ export default class TypedParagraph extends Paragraph {
 
       let s = "";
       try {
-        s = event.clipboardData.getData("text/html");
+        s = event.clipboardData?.getData("text/html");
         // console.log("Loaded text/html")
       } catch {
         console.log("Falling back to plain text");
-        s = event.clipboardData.getData("text/plain");
+        s = event.clipboardData?.getData("text/plain");
       }
       // s = s.replace(/<!--StartFragment-->([^<]*(?:<(?!!--(?:Start|End)Fragment-->)[^<]*)*)<!--EndFragment-->/g, '$1');
       // var arr = [s]
@@ -81,8 +81,11 @@ export default class TypedParagraph extends Paragraph {
       var rx =
         /<!--StartFragment-->([^<]*(?:<(?!!--(?:Start|End)Fragment-->)[^<]*)*)<!--EndFragment-->/g;
       var arr = rx.exec(s);
+      if (!arr) {
+        return;
+      }
       arr.forEach((item, index) => {
-        console.log(`arr [${index + 1} / ${arr.length}]: ${item}`);
+        console.log(`arr [${index + 1} / ${arr!.length}]: ${item}`);
       });
 
       ret.innerHTML = "";
@@ -91,6 +94,9 @@ export default class TypedParagraph extends Paragraph {
       const paragraphs = tmp.getElementsByTagName("p");
       for (let i = 0; i < paragraphs.length; i++) {
         const p = paragraphs.item(i);
+        if (!p) {
+          continue;
+        }
         const isFootnote = p.classList.contains("MsoFootnoteText");
         const blockContent = this.api.sanitizer.clean(p.innerHTML, {
           i: true,
@@ -110,7 +116,7 @@ export default class TypedParagraph extends Paragraph {
             console.log("ruh-roh no anchors found. can't get footnote id", p);
             continue;
           }
-          const firstLink = anchors[0];
+          const firstLink = anchors[0]!;
 
           // remove the reundent first link
           p.removeChild(firstLink);
@@ -120,7 +126,7 @@ export default class TypedParagraph extends Paragraph {
             a: { href: true },
             b: true,
           });
-          const footnoteID = firstLink.getAttribute("name");
+          const footnoteID = firstLink.getAttribute("name") ?? "";
           const footnoteLabel = firstLink.innerText
             .replace("[", "")
             .replace("]", "")
@@ -158,9 +164,9 @@ export default class TypedParagraph extends Paragraph {
     const wrapper = document.createElement("div");
     wrapper.setAttribute("data-paragraph-type", currentParagraphType);
     if (currentParagraphType === "blockquote") {
-      wrapper.classList.add(styles.blockquote);
+      wrapper.classList.add(styles.blockquote!);
     } else if (currentParagraphType === "paragraph") {
-      wrapper.classList.add(styles.paragraph);
+      wrapper.classList.add(styles.paragraph!);
     }
 
     // wrapper.oninput = (e) => {

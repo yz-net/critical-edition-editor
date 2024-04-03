@@ -1,6 +1,5 @@
+/* eslint-disable */
 import { API, InlineTool } from "@editorjs/editorjs";
-
-import { generateID } from "../../../utils/generateID";
 
 export default class FootnoteMaker implements InlineTool {
   api: API;

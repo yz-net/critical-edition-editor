@@ -1,5 +1,8 @@
+/* eslint-disable */
 export default class BlockTuneBlockquote {
-  constructor({ api }) {
+  api: any;
+
+  constructor({ api }: { api: any }) {
     this.api = api;
   }
 

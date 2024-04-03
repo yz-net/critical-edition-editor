@@ -1,12 +1,20 @@
+/* eslint-disable */
 import Header from "@editorjs/header";
 
 import styles from "./styles.module.scss";
 
 export default class CustomHeader extends Header {
-  _CSS: any;
-  _element: any;
-
-  constructor({ data, config, api, readOnly }) {
+  constructor({
+    data,
+    config,
+    api,
+    readOnly,
+  }: {
+    data: any;
+    config: any;
+    api: any;
+    readOnly: boolean;
+  }) {
     super({ data, config, api, readOnly });
     this._CSS.wrapper = "title";
     /**

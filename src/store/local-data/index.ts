@@ -1,19 +1,21 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-import { DataStore } from "~/types/store";
+import type { Essay } from "~/types/essay";
+import type { Config } from "~/types/config";
+import type { CEDataStore } from "~/types/store";
 
-const useLocalDataStore = create<DataStore>()(
+const useLocalDataStore = create<CEDataStore>()(
   persist(
     (set) => ({
       config: null,
-      essays: null,
-      setConfig: (newConfig) =>
+      essays: [],
+      setConfig: (newConfig: Config) =>
         set((state) => ({
           ...state,
           config: newConfig,
         })),
-      setEssays: (newEssays) =>
+      setEssays: (newEssays: Essay[]) =>
         set((state) => ({
           ...state,
           essays: newEssays,

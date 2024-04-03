@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
 import Paragraph from "@editorjs/paragraph";
 
@@ -107,11 +108,11 @@ export default class Footnote extends Paragraph {
 
   render() {
     const footnote = document.createElement("div");
-    footnote.classList.add(styles.footnoteBlock);
+    footnote.classList.add(styles.footnoteBlock!);
 
     const footnoteId = document.createElement("div");
-    footnoteId.classList.add(styles.idField);
-    footnoteId.classList.add(styles.barLabel);
+    footnoteId.classList.add(styles.idField!);
+    footnoteId.classList.add(styles.barLabel!);
     footnoteId.setAttribute("data-id", this.data.id);
     footnoteId.setAttribute("contenteditable", "true");
     footnoteId.setAttribute("placeholder", "Footnote ID");
@@ -135,8 +136,8 @@ export default class Footnote extends Paragraph {
     const contentArea = document.createElement("div");
     contentArea.setAttribute("contenteditable", "true");
     contentArea.setAttribute("placeholder", "Footnote content...");
-    contentArea.classList.add(styles.contentArea);
-    contentArea.classList.add(styles.textInput);
+    contentArea.classList.add(styles.contentArea!);
+    contentArea.classList.add(styles.textInput!);
     contentArea.classList.add("ce-paragraph");
     contentArea.innerHTML = this.data.text;
     footnote.appendChild(contentArea);

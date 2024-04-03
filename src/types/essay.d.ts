@@ -1,6 +1,6 @@
 export interface Essay {
   meta: EssayMeta;
-  blocks: Array<EssayBlock>;
+  blocks: EssayBlock[];
 }
 
 export interface EssayMeta {
@@ -20,5 +20,5 @@ export interface EssayMeta {
 
 export interface EssayBlock {
   type: string;
-  data: any;
+  data: Record<string, string | number>;
 }

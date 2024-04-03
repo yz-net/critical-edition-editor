@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import useDataStore from "~/store/local-data";
+import useLocalDataStore from "~/store/local-data";
 
 import type { ConfigEssay } from "~/types/config";
 
@@ -16,7 +16,7 @@ export default function MetadataModal(props: MetadataModalProps) {
   const [meta, setMeta] = useState<ConfigEssay>();
   const [error, setError] = useState<string>();
 
-  const { config } = useDataStore();
+  const { config } = useLocalDataStore();
 
   useEffect(() => {
     if (props.meta) {
@@ -25,6 +25,10 @@ export default function MetadataModal(props: MetadataModalProps) {
   }, [props.meta]);
 
   const onSave = () => {
+    if (!config) {
+      throw Error("Local config missing");
+    }
+
     if (
       !meta ||
       !(meta.hvtID && meta.title && meta.author && meta.affiliation)
@@ -34,7 +38,6 @@ export default function MetadataModal(props: MetadataModalProps) {
     if (
       props.meta &&
       meta.hvtID !== props.meta.hvtID &&
-      config &&
       config.essays.some((e: ConfigEssay) => e.hvtID === meta.hvtID)
     ) {
       return setError("HVT already exists");
