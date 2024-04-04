@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiSettings } from "react-icons/fi";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import Editor from "~/components/EditorJS";
 import LogoBar from "~/components/LogoBar";
@@ -37,7 +37,9 @@ export default function EssayPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const router = useRouter();
-  const params = useParams();
+  const searchParams = useSearchParams();
+
+  const id = searchParams.get("id");
 
   useEffect(() => {
     let essay;
@@ -47,18 +49,18 @@ export default function EssayPage() {
           state: CEData;
         }
       ).state;
-      essay = localData.essays.find((e) => e?.meta.slug === params.id);
+      essay = localData.essays.find((e) => e?.meta.slug === id);
     } else {
-      essay = essays.find((e) => e?.meta.slug === params.id);
+      essay = essays.find((e) => e?.meta.slug === id);
     }
     if (essay) {
       setData(essay);
       initialized = true;
     } else {
-      alert(`Essay ${params.id as string} not found, redirecting...`);
+      alert(`Essay ${id as string} not found, redirecting...`);
       return router.push("/");
     }
-  }, [params.id]);
+  }, [id]);
 
   useEffect(() => {
     if (data?.meta.hvtID) {
@@ -67,9 +69,7 @@ export default function EssayPage() {
 
     // update data
     if (initialized && essays && !!data) {
-      setEssays(
-        essays?.map((e: Essay) => (e.meta.slug === params.id ? data : e)),
-      );
+      setEssays(essays?.map((e: Essay) => (e.meta.slug === id ? data : e)));
     }
   }, [data]);
 
@@ -84,10 +84,10 @@ export default function EssayPage() {
     }
     // config
     const newConfigEssays = config.essays.map((e: ConfigEssay) =>
-      e.id === params.id ? (meta as ConfigEssay) : e,
+      e.id === id ? (meta as ConfigEssay) : e,
     );
     const newConfigEssayOrder = config?.projectData.essayOrder.map(
-      (eo: string) => (eo === params.id ? meta.slug : eo),
+      (eo: string) => (eo === id ? meta.slug : eo),
     );
     setConfig({
       essays: newConfigEssays,
@@ -98,13 +98,13 @@ export default function EssayPage() {
     });
     // essays
     const newEssays = essays.map((e: Essay) =>
-      e.meta.slug === params.id
+      e.meta.slug === id
         ? { meta: { ...data.meta, ...meta }, blocks: data.blocks }
         : e,
     );
     setEssays(newEssays);
     // update
-    if (meta.slug !== params.id) {
+    if (meta.slug !== id) {
       window.history.pushState(null, "", `/essay/${meta.slug}`);
     }
     setData((prev) => ({ ...prev!, meta }));

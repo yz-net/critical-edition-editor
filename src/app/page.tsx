@@ -68,7 +68,9 @@ export default function HomePage() {
       localData = (JSON.parse(localDataString) as { state: CEData }).state;
     }
     localDataStore.setConfig(localData?.config ?? gitDataStore.config);
-    localDataStore.setEssays(localData?.essays ?? gitDataStore.essays);
+    localDataStore.setEssays(
+      localData?.config ? localData.essays : gitDataStore.essays,
+    );
   }, [localDataStore.config, gitDataStore.config]);
 
   const createEssay = (meta: EssayMeta) => {
