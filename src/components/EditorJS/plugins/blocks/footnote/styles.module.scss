@@ -1,0 +1,81 @@
+.footnoteBlock {
+  background-color: #f9f5ef;
+  padding: 32px;
+  word-break: break-word;
+  color: #222;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: unset;
+  &:hover {
+    outline: 2px solid lightgrey;
+  }
+}
+
+.barLabel {
+  padding-top: 12px;
+}
+
+.embedCode {
+  font-size: 12px;
+  font-family: monospace, "Courier New", Courier;
+  background-color: #efefef;
+  resize: vertical;
+  color: #222;
+  padding: 1 1em;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 2em;
+  border-radius: 3px;
+  border: none;
+  &:empty:before {
+    content: attr(placeholder);
+    pointer-events: none;
+    color: #222;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: 2px solid black;
+  }
+}
+
+.embedPreview {
+  border: 1px dashed gray;
+  padding: 1em;
+  &:empty:before {
+    content: attr(placeholder);
+    pointer-events: none;
+    color: #888;
+  }
+}
+
+.contentArea[contenteditable] {
+  outline: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  &:empty:before {
+    content: attr(placeholder);
+    pointer-events: none;
+    color: #a8a8a8;
+  }
+  &:focus {
+    outline: 2px solid black;
+    border-radius: 3px;
+  }
+}
+
+.idField {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ccc0a6;
+  color: #fff;
+  padding: 0 14px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.75em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  &:empty:before {
+    content: attr(placeholder);
+    pointer-events: none;
+    color: #efefef;
+  }
+}

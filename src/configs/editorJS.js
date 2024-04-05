@@ -1,53 +1,46 @@
-// @ts-ignore
-import CheckList from "@editorjs/checklist";
-// @ts-ignore
-import Code from "@editorjs/code";
-// @ts-ignore
-import Delimiter from "@editorjs/delimiter";
-// @ts-ignore
+// @ts-nocheck
+// import CheckList from "@editorjs/checklist";
+// import Code from "@editorjs/code";
+// import Delimiter from "@editorjs/delimiter";
 import Embed from "@editorjs/embed";
-// @ts-ignore
 import Image from "@editorjs/image";
-// @ts-ignore
 import InlineCode from "@editorjs/inline-code";
-// @ts-ignore
-import Link from "@editorjs/link";
-// @ts-ignore
+// import Link from "@editorjs/link";
 import List from "@editorjs/list";
-// @ts-ignore
-import Quote from "@editorjs/quote";
-// @ts-ignore
-import SimpleImage from "@editorjs/simple-image";
-// @ts-ignore
-import Paragraph from "@editorjs/paragraph";
-// @ts-ignore
-import Header from "@editorjs/header";
-// @ts-ignore
-import { Footnote, FootnoteMaker } from "editorjs-footnotes";
+// import Quote from "@editorjs/quote";
+// import SimpleImage from "@editorjs/simple-image";
+// import Paragraph from "@editorjs/paragraph";
+// import Header from "@editorjs/header";
+
+import FootnoteMaker from "~/components/EditorJS/plugins/inline/footenoteMaker";
+import Footnote from "~/components/EditorJS/plugins/blocks/footnote";
+import TypedParagraph from "~/components/EditorJS/plugins/blocks/typedParagraph";
+import BlockTuneBlockquote from "~/components/EditorJS/plugins/tunes/blockquote";
+import CustomHeader from "~/components/EditorJS/plugins/blocks/header";
 
 export const EDITOR_TOOLS = {
-  code: Code,
-  header: {
-    class: Header,
-    config: {
-      placeholder: "Enter a Header",
-      levels: [2, 3, 4],
-      defaultLevel: 2,
-    },
-  },
-  paragraph: Paragraph,
-  checklist: CheckList,
-  embed: Embed,
+  // code: Code,
+  header: CustomHeader,
+  // paragraph: { class: Paragraph, inlineToolbar: ["bold", "italic"] },
+  // checklist: CheckList,
+  embed: { class: Embed, inlineToolbar: true },
   image: Image,
   inlineCode: InlineCode,
-  link: Link,
+  // link: Link,
   list: List,
-  quote: Quote,
-  simpleImage: SimpleImage,
-  delimiter: Delimiter,
-  FootnoteMaker,
+  // quote: Quote,
+  // simpleImage: SimpleImage,
+  // delimiter: Delimiter,
   footnoteParagraph: {
     class: Footnote,
-    inlineToolbar: ["link", "bold", "italic"],
+    inlineToolbar: ["link", "bold", "italic"], // don't allow footnotes to add footnotes
   },
+  paragraph: {
+    // class: Paragraph,
+    class: TypedParagraph,
+    inlineToolbar: ["link", "bold", "italic", "inlineToolFootnoteMaker"],
+    tunes: ["blockTuneBlockquote"],
+  },
+  inlineToolFootnoteMaker: FootnoteMaker,
+  blockTuneBlockquote: BlockTuneBlockquote,
 };

@@ -1,0 +1,41 @@
+.ce-block {
+  &__content {
+    // max-width: 1070px;
+    max-width: 950px;
+    .cdx-list {
+      font-size: 21px;
+    }
+  }
+}
+
+.ce-toolbar {
+  &__content {
+    // max-width: 1070px;
+    max-width: 950px;
+  }
+}
+
+.footnote-ref {
+  border-radius: 2px;
+  margin: 0 0.1em;
+  padding: 1px 6px;
+  color: #006464;
+  a {
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 13.125px;
+    padding-left: 5px;
+    font-family: "Arial";
+  }
+  &:hover {
+    background-color: #f9f5ef;
+    color: #ff4500;
+    &:before {
+      content: url("/icons/footnote-hover.svg");
+    }
+  }
+  &:before {
+    content: url("/icons/footnote.svg");
+    vertical-align: middle;
+  }
+}

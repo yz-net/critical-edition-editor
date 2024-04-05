@@ -1,0 +1,10 @@
+.header {
+  font-size: 27px;
+  padding: 0 10px;
+  font-weight: 400;
+  font-family: "YaleNewRoman", "Times New Roman", Times, serif;
+  line-height: 1.5;
+  &:hover {
+    outline: 2px solid lightgrey;
+  }
+}

@@ -1,25 +1,21 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
 
-import dummyData from "../../../public/data/intro-hvt-0170.json" assert { type: "json" };
+import type { EssayBlock } from "~/types/essay";
 
 const Editorjs = dynamic(() => import("~/components/EditorJS/_editor"), {
   ssr: false,
 });
 
-export default function Editor() {
-  const [editorData, setEditorData] = useState(dummyData);
-
-  useEffect(() => {
-    console.log(editorData);
-  }, [editorData]);
-
+export default function Editor(props: {
+  data: EssayBlock[];
+  onDataChange(data: EssayBlock[]): void;
+}) {
   return (
     <Editorjs
-      data={editorData}
-      onChange={setEditorData}
+      data={props.data}
+      onChange={(data) => props.onDataChange(data)}
       holder="editorjs-container"
     />
   );
