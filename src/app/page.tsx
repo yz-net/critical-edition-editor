@@ -212,7 +212,7 @@ export default function HomePage() {
           caption="Photo: Steven H. and Marion L. Holocaust testimony (HVT-544), recorded in 1985."
           backgroundImageURL="/img/impact-header-background.jpg"
           title="Critical Editions Editor"
-          subtitle="Create and change testimonies"
+          subtitle="Create and edit testimonies"
         />
         <main className={styles.CenterColumn}>
           <div className={styles.IndexHeader}>
