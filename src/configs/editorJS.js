@@ -17,6 +17,7 @@ import Footnote from "~/components/EditorJS/plugins/blocks/footnote";
 import TypedParagraph from "~/components/EditorJS/plugins/blocks/typedParagraph";
 import BlockTuneBlockquote from "~/components/EditorJS/plugins/tunes/blockquote";
 import CustomHeader from "~/components/EditorJS/plugins/blocks/header";
+import BlockTuneParagraph from "~/components/EditorJS/plugins/tunes/paragraph";
 
 export const EDITOR_TOOLS = {
   // code: Code,
@@ -39,8 +40,9 @@ export const EDITOR_TOOLS = {
     // class: Paragraph,
     class: TypedParagraph,
     inlineToolbar: ["link", "bold", "italic", "inlineToolFootnoteMaker"],
-    tunes: ["blockTuneBlockquote"],
+    tunes: ["blockTuneBlockquote", "blockTuneParagraph"],
   },
   inlineToolFootnoteMaker: FootnoteMaker,
   blockTuneBlockquote: BlockTuneBlockquote,
+  blockTuneParagraph: BlockTuneParagraph,
 };

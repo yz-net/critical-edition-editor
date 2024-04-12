@@ -4,8 +4,6 @@ import { API, BlockToolData, EditorConfig } from "@editorjs/editorjs";
 
 import styles from "./styles.module.scss";
 
-type ParagraphType = "paragraph" | "blockquote";
-
 export default class TypedParagraph extends Paragraph {
   constructor(opts: { data: BlockToolData; config: EditorConfig; api: API }) {
     const { data, config, api } = opts;
@@ -43,8 +41,6 @@ export default class TypedParagraph extends Paragraph {
     console.log("Clearing");
     super.clear();
   }
-
-  // onPaste(event: Event) { }
 
   render() {
     const ret = super.render();
@@ -242,32 +238,33 @@ export default class TypedParagraph extends Paragraph {
   }
 
   renderSettings() {
-    const getParagraphType = (): ParagraphType => {
-      const paragraphTypeAttribute = this.wrapper.getAttribute(
-        "data-paragraph-type",
-      );
-      console.log("paragraphTypeAttribute", paragraphTypeAttribute);
-      return paragraphTypeAttribute === "paragraph"
-        ? "paragraph"
-        : "blockquote";
-    };
+    // const getParagraphType = (): ParagraphType => {
+    //   const paragraphTypeAttribute = this.wrapper.getAttribute(
+    //     "data-paragraph-type",
+    //   );
+    //   return paragraphTypeAttribute === "paragraph"
+    //     ? "paragraph"
+    //     : "blockquote";
+    // };
 
-    const reverseParagraphType = (p: ParagraphType): ParagraphType => {
-      return p === "paragraph" ? "blockquote" : "paragraph";
-    };
+    // const reverseParagraphType = (p: ParagraphType): ParagraphType => {
+    //   return p === "paragraph" ? "blockquote" : "paragraph";
+    // };
 
-    const setParagraphType = (newParagraphType: ParagraphType) => {
-      this.wrapper.setAttribute("data-paragraph-type", newParagraphType);
-      // toggleTypeButton.innerHTML = newParagraphType === "paragraph" ? "P" : "B"
-    };
+    // const setParagraphType = (newParagraphType: ParagraphType) => {
+    //   this.wrapper.setAttribute("data-paragraph-type", newParagraphType);
+    //   // toggleTypeButton.innerHTML = newParagraphType === "paragraph" ? "P" : "B"
+    // };
 
     const settings = [
       {
-        name: "Blockquote",
-        icon: getParagraphType() === "paragraph" ? "B" : "P",
+        icon: "Typed Paragraph",
         onclick: () => {
-          setParagraphType(reverseParagraphType(getParagraphType()));
-          const settings = this.wrapper.querySelector(".ce-settings");
+          // setParagraphType(reverseParagraphType(getParagraphType()));
+          // const currentBlock = this.api.blocks.getBlockByIndex(
+          //   this.api.blocks.getCurrentBlockIndex(),
+          // );
+          // this.api.blocks.update(currentBlock.id);
         },
       },
     ];
@@ -275,7 +272,6 @@ export default class TypedParagraph extends Paragraph {
 
     settings.forEach((tune) => {
       let button = document.createElement("div");
-
       button.classList.add("cdx-settings-button");
       button.innerHTML = tune.icon;
       wrapper.appendChild(button);
@@ -289,14 +285,8 @@ export default class TypedParagraph extends Paragraph {
     const innerBlock = blockContent.querySelector(".ce-paragraph");
     const paragraphType = blockContent.getAttribute("data-paragraph-type");
 
-    // const ret = super.save(innerBlock);
-
-    // console.log("1", innerBlock.innerHTML);
-
     const pattern = /<sup[^>]*>(<a[^>]*><\/a>)*<\/sup>/g;
     const text = innerBlock.innerHTML.replace(pattern, "");
-
-    // console.log("2", text);
 
     return {
       paragraphType,

@@ -2,7 +2,7 @@
 
 import styles from "~/components/EditorJS/plugins/blocks/typedParagraph/styles.module.scss";
 
-export default class BlockTuneBlockquote {
+export default class BlockTuneParagraph {
   api: any;
   block: any;
 
@@ -23,11 +23,11 @@ export default class BlockTuneBlockquote {
     }
 
     return {
-      icon: "B",
-      label: "Transform to blockquote",
+      icon: "P",
+      label: "Transform to paragraph",
       onActivate: () => {
-        paragraph.setAttribute("data-paragraph-type", "blockquote");
-        paragraph.classList.replace(styles.paragraph!, styles.blockquote!);
+        paragraph.setAttribute("data-paragraph-type", "paragraph");
+        paragraph.classList.replace(styles.blockquote!, styles.paragraph!);
       },
     };
   }
