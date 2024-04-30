@@ -1,0 +1,68 @@
+.simple-image {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simple-image input,
+.simple-image [contenteditable] {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-top: 13px;
+  line-height: 2em;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.simple-image [contenteditable]:empty:before {
+  content: "Caption...";
+  pointer-events: none;
+  font-size: 14px;
+  color: #aaa;
+  font-style: italic;
+  display: block;
+}
+
+.simple-image [contenteditable]:after {
+  content: none !important;
+  height: 0px;
+}
+
+.simple-image [contenteditable]:hover {
+  outline: 2px solid lightgrey;
+}
+
+.simple-image [contenteditable]:focus {
+  outline: 2px solid black;
+}
+
+.simple-image img {
+  height: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 75vh;
+}
+
+.simple-image.withBorder img {
+  border: 1px solid #e8e8eb;
+}
+
+.simple-image.withBackground {
+  background: #eff2f5;
+  padding: 10px;
+}
+
+.simple-image.withBackground img {
+  display: block;
+  max-width: 60%;
+  margin: 0 auto 15px;
+}
+
+.simple-image .src-input {
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FiDownload, FiPlus } from "react-icons/fi";
+import { FiPlus, FiDownload } from "react-icons/fi";
 import JSZip from "jszip";
 
 import LogoBar from "~/components/LogoBar";
@@ -228,7 +228,7 @@ export default function HomePage() {
                   type="button"
                   onClick={() => setShowNewEssayModal(true)}
                 >
-                  <div className="flex h-full w-full items-center justify-center gap-3 border-2 border-neutral-800 bg-neutral-100 text-3xl transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
+                  <div className="flex h-full w-full items-center justify-center gap-2 border-2 border-neutral-800 bg-neutral-100 text-3xl transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
                     <FiPlus size={30} strokeWidth={1.5} />
                     Create new
                   </div>
@@ -267,12 +267,12 @@ export default function HomePage() {
                 <Import />
 
                 <button
-                  className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                  className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                   type="button"
                   onPointerDown={downloadZip}
                 >
                   <FiDownload />
-                  Export
+                  Download
                 </button>
               </div>
             </div>

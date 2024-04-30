@@ -1,4 +1,4 @@
-import { FiUpload } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
 
 import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
@@ -26,11 +26,11 @@ export default function Import() {
     <button
       data-modal-target="metadata-modal"
       data-modal-toggle="metadata-modal"
-      className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+      className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
       onPointerDown={fetch}
       type="button"
     >
-      <FiUpload /> Import
+      <FiGithub /> Import
     </button>
   );
 }

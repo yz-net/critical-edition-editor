@@ -209,7 +209,7 @@ function Essay() {
               <div className="flex w-full max-w-7xl justify-between">
                 <div className="flex items-center divide-x divide-white overflow-hidden rounded">
                   <button
-                    className="pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                    className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     type="button"
                     onPointerDown={(e) => {
                       if (window.confirm("Are you sure you want to go back?")) {
@@ -226,7 +226,7 @@ function Essay() {
                   <button
                     data-modal-target="metadata-modal"
                     data-modal-toggle="metadata-modal"
-                    className=" pointer-events-auto flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                    className=" pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     onClick={() => setShowMetaModal(true)}
                     type="button"
                   >
@@ -234,7 +234,7 @@ function Essay() {
                   </button>
 
                   {/* <button
-                      className="flex items-center gap-3 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                      className="flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                       type="button"
                       onPointerDown={
                         (e) => exportToJson(e, data.blocks, data.meta.slug)
