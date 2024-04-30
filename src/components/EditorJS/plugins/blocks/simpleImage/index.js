@@ -118,6 +118,11 @@ export default class CustomSimpleImage {
     input.addEventListener("paste", (event) => {
       this._createImage(event.clipboardData.getData("text"));
     });
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        this._createImage(event.target.value);
+      }
+    });
 
     this.wrapper.appendChild(input);
 
