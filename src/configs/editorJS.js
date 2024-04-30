@@ -3,11 +3,11 @@
 // import Code from "@editorjs/code";
 // import Delimiter from "@editorjs/delimiter";
 import Embed from "@editorjs/embed";
-import Image from "@editorjs/image";
 import InlineCode from "@editorjs/inline-code";
 // import Link from "@editorjs/link";
 import List from "@editorjs/list";
 // import Quote from "@editorjs/quote";
+import Image from "@editorjs/image";
 // import SimpleImage from "@editorjs/simple-image";
 // import Paragraph from "@editorjs/paragraph";
 // import Header from "@editorjs/header";
@@ -18,6 +18,7 @@ import TypedParagraph from "~/components/EditorJS/plugins/blocks/typedParagraph"
 import BlockTuneBlockquote from "~/components/EditorJS/plugins/tunes/blockquote";
 import CustomHeader from "~/components/EditorJS/plugins/blocks/header";
 import BlockTuneParagraph from "~/components/EditorJS/plugins/tunes/paragraph";
+// import CustomImage from "~/components/EditorJS/plugins/blocks/image";
 
 export const EDITOR_TOOLS = {
   // code: Code,
@@ -25,12 +26,11 @@ export const EDITOR_TOOLS = {
   // paragraph: { class: Paragraph, inlineToolbar: ["bold", "italic"] },
   // checklist: CheckList,
   embed: { class: Embed, inlineToolbar: true },
-  image: Image,
+  image: Image /* CustomImage */ /* SimpleImage */,
   inlineCode: InlineCode,
   // link: Link,
   list: List,
   // quote: Quote,
-  // simpleImage: SimpleImage,
   // delimiter: Delimiter,
   footnoteParagraph: {
     class: Footnote,

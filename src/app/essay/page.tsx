@@ -124,6 +124,7 @@ function Essay() {
                 loop
                 autoPlay
                 disablePictureInPicture
+                muted
                 ref={videoRef}
                 poster={getPosterPath(data.meta.hvtID)}
               >
@@ -132,7 +133,7 @@ function Essay() {
             )}
           </div>
           <div className="relative z-[200] flex h-full flex-col justify-end bg-[rgba(0,0,0,.3)] px-[30px] pb-[30px] text-white">
-            <p className="sans-title-ff my-[1em] text-[13px] uppercase tracking-[.5px] [text-shadow:_0_0_9px_#000]">
+            <p className="sans-title-ff my-[0.725em] text-[13px] uppercase tracking-[.5px] [text-shadow:_0_0_9px_#000]">
               introduction to the testimony of
             </p>
 
@@ -144,7 +145,7 @@ function Essay() {
               type="textarea"
               name="Title"
               placeholder="Title"
-              className="mb-[0.75em] h-[56px] w-full rounded bg-transparent p-0 text-[56px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
+              className="mb-[0.625em] h-[56px] w-full max-w-[600px] rounded bg-transparent p-0 text-[46px] font-[400] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
               value={data.meta.title ?? ""}
               onChange={(e) => {
                 setData((prev) => ({
