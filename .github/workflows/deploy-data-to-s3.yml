@@ -9,7 +9,7 @@ env:
   S3BUCKET: edit.editions.fortunoff.library.yale.edu
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
