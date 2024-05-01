@@ -1,0 +1,41 @@
+name: Deploy to S3
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: ["main"]
+    paths: ["out/**", ".github/workflows/deploy-data-to-s3.yml"]
+
+env:
+  AWS_REGION: ca-central-1
+  S3BUCKET: edit.editions.fortunoff.library.yale.edu
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Static website
+        run: npm run build
+  deploy:
+    runs-on: ubuntu-latest
+    environment: main
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Deploy data to S3 bucket
+        run: |
+          aws s3 sync ./out/ s3://${{ env.S3BUCKET }} --delete
+      - name: Invalidating Cloudfront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id E35OACCU6U4722 --paths "/*"
