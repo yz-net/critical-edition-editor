@@ -211,11 +211,7 @@ function Essay() {
                   <button
                     className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                     type="button"
-                    onPointerDown={(e) => {
-                      if (window.confirm("Are you sure you want to go back?")) {
-                        router.push("/");
-                      }
-                    }}
+                    onPointerDown={() => router.push("/")}
                   >
                     <FiArrowLeft />
                     Back
