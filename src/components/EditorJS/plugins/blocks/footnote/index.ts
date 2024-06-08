@@ -140,6 +140,15 @@ export default class Footnote extends Paragraph {
     contentArea.classList.add(styles.textInput!);
     contentArea.classList.add("ce-paragraph");
     contentArea.innerHTML = this.data.text;
+    contentArea.addEventListener("paste", (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      const pastedData = e.clipboardData?.getData("Text");
+      if (!pastedData) {
+        return;
+      }
+      contentArea.innerHTML += pastedData;
+    });
     footnote.appendChild(contentArea);
 
     contentArea.addEventListener("keyup", this.onKeyUp);
