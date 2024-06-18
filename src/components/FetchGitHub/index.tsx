@@ -30,7 +30,7 @@ export default function Import() {
       onPointerDown={fetch}
       type="button"
     >
-      <FiGithub /> Import
+      <FiGithub /> Fetch
     </button>
   );
 }

@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { FiPlus, FiDownload } from "react-icons/fi";
+import { useEffect, useRef, useState } from "react";
+import { FiPlus, FiDownload, FiUpload } from "react-icons/fi";
 import JSZip from "jszip";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
 import EssayIndexItem from "~/components/EssayIndexItem";
-import Import from "~/components/Import";
+import FetchGitHub from "~/components/FetchGitHub";
 import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
 import { fetchGitHubData } from "~/utils/data";
@@ -21,9 +21,12 @@ import styles from "./styles.module.scss";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
+  const [importFile, setImportFile] = useState<File>();
 
   const localDataStore: CEDataStore = useLocalDataStore();
   const gitDataStore: CEDataStore = useGitDataStore();
+
+  const importRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (gitDataStore.config) {
@@ -200,6 +203,16 @@ export default function HomePage() {
     link.remove();
   };
 
+  const handleFileImport = async (e) => {
+    const file = e.target.files[0];
+    if (file && file.type === "application/zip") {
+      // TODO parse import
+      alert("TODO");
+    } else {
+      alert("Please select a ZIP file.");
+    }
+  };
+
   if (!localDataStore.config || !localDataStore.essays) {
     return;
   }
@@ -261,10 +274,28 @@ export default function HomePage() {
           <div className="flex justify-center">
             <div className="flex w-full max-w-7xl justify-between">
               {/* left side */}
-              <div className="flex items-center divide-x divide-white overflow-hidden rounded"></div>
+              <div className="flex items-center divide-x divide-white overflow-hidden rounded">
+                <FetchGitHub />
+              </div>
               {/* right side */}
               <div className="flex items-center divide-x divide-white overflow-hidden rounded">
-                <Import />
+                <button
+                  className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
+                  type="button"
+                  onPointerDown={() => {
+                    importRef.current?.click();
+                  }}
+                >
+                  <FiUpload />
+                  Import
+                </button>
+                <input
+                  ref={importRef}
+                  type="file"
+                  accept=".zip"
+                  className="hidden"
+                  onChange={handleFileImport}
+                />
 
                 <button
                   className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
