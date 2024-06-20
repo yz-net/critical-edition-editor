@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiPlus, FiDownload, FiUpload } from "react-icons/fi";
 import JSZip from "jszip";
 
@@ -15,7 +15,7 @@ import MetadataModal from "~/components/MetadataModal";
 
 import type { CEData, CEDataStore } from "~/types/store";
 import type { ConfigEssay } from "~/types/config";
-import type { Essay, EssayMeta } from "~/types/essay";
+import type { EssayMeta } from "~/types/essay";
 
 import styles from "./styles.module.scss";
 
@@ -203,8 +203,12 @@ export default function HomePage() {
     link.remove();
   };
 
-  const handleFileImport = async (e) => {
-    const file = e.target.files[0];
+  const handleFileImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = e.target as HTMLInputElement;
+    if (!input.files || input.files.length < 1) {
+      return;
+    }
+    const file = input.files[0];
     if (file && file.type === "application/zip") {
       // TODO parse import
       alert("TODO");
