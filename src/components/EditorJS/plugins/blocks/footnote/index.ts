@@ -14,7 +14,6 @@ export interface TuneSetting {
 }
 
 export default class Footnote extends Paragraph {
-  private _data: any;
   data: any;
   wrapper: any;
 
@@ -22,15 +21,17 @@ export default class Footnote extends Paragraph {
     const { data, config, api } = opts;
     super({ data, config, api });
 
+    this.data = data;
+
     // if no ID is set, set one
-    if (!data.id) {
+    if (!this.data.id) {
       const initialID = generateID();
-      this._data.id = initialID;
+      this.data.id = initialID;
     }
 
     // if not text is set, set it
-    if (!data.text) {
-      this._data.text = "";
+    if (!this.data.text) {
+      this.data.text = "";
     }
 
     this.save = this.save.bind(this);
@@ -56,7 +57,7 @@ export default class Footnote extends Paragraph {
       embedCode = document.createElement("textarea");
       embedCode.setAttribute("placeholder", "Embed code...");
       embedCode.classList.add(styles.embedCode);
-      embedCode.value = this.data.embedCode || "";
+      embedCode.value = this.data?.embedCode || "";
       embedCode.addEventListener("change", this.renderEmbedCode);
       embedCode.addEventListener("keyup", this.renderEmbedCode);
       this.wrapper.appendChild(embedCode);
@@ -87,7 +88,7 @@ export default class Footnote extends Paragraph {
 
   save(blockContent: BlockToolData) {
     const label =
-      blockContent.querySelector(`div[data-id="${this.data.id}"]`)
+      blockContent.querySelector(`div[data-id="${this.data?.id}"]`)
         ?.textContent ?? "";
     const id = `fn-${label}`;
 
@@ -113,7 +114,7 @@ export default class Footnote extends Paragraph {
     const footnoteId = document.createElement("div");
     footnoteId.classList.add(styles.idField!);
     footnoteId.classList.add(styles.barLabel!);
-    footnoteId.setAttribute("data-id", this.data.id);
+    footnoteId.setAttribute("data-id", this.data?.id);
     footnoteId.setAttribute("contenteditable", "true");
     footnoteId.setAttribute("placeholder", "Footnote ID");
     footnoteId.addEventListener("input", (e) => {
@@ -129,8 +130,7 @@ export default class Footnote extends Paragraph {
       sel?.removeAllRanges();
       sel?.addRange(range);
     });
-    // idBar.innerHTML = "[ #" + this.data.id + " ]";
-    footnoteId.innerHTML = this.data.label ?? "";
+    footnoteId.innerHTML = this.data?.label ?? "";
     footnote.appendChild(footnoteId);
 
     const contentArea = document.createElement("div");
@@ -139,13 +139,31 @@ export default class Footnote extends Paragraph {
     contentArea.classList.add(styles.contentArea!);
     contentArea.classList.add(styles.textInput!);
     contentArea.classList.add("ce-paragraph");
-    contentArea.innerHTML = this.data.text;
+    contentArea.innerHTML = this.data?.text;
     contentArea.addEventListener("paste", (e) => {
       e.stopPropagation();
       e.preventDefault();
-      const pastedData = e.clipboardData?.getData("Text");
+      // Get clipboard data as HTML
+      const clipboardData = e.clipboardData;
+      let pastedData = clipboardData?.getData("text/html");
+      console.log("asdf", pastedData);
+      // If there's no HTML data, fall back to plain text
       if (!pastedData) {
-        return;
+        pastedData = clipboardData?.getData("text/plain");
+      } else {
+        /**
+          // TODO remove styling such as background-color if existant
+          // Parse the HTML string into a DOM structure
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(pastedHtml, "text/html");
+          // Traverse and remove background color styles
+          doc.body.querySelectorAll('*').forEach(node => {
+            // Remove background color styles
+            node.style.backgroundColor = '';
+          });
+          // Get the cleaned HTML back
+          pastedData = doc.body.innerHTML;
+        */
       }
       contentArea.innerHTML += pastedData;
     });

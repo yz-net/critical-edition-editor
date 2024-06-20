@@ -151,12 +151,8 @@ export default class TypedParagraph extends Paragraph {
       // ret.innerHTML = cleaned
     });
 
-    // const currentParagraphType: ParagraphType = this._data.paragraphType === "paragraph" ? "paragraph" : "blockquote"
-    // console.log("currentParagraphType", this.data.paragraphType);
-    const currentParagraphType = this.data.paragraphType || "paragraph";
-    // const currentParagraphType = "paragraph"
+    const currentParagraphType = this.data?.paragraphType || "paragraph";
 
-    // console.log("154: currentParagraphType:", currentParagraphType)
     const wrapper = document.createElement("div");
     wrapper.setAttribute("data-paragraph-type", currentParagraphType);
     if (currentParagraphType === "blockquote") {
@@ -164,61 +160,6 @@ export default class TypedParagraph extends Paragraph {
     } else if (currentParagraphType === "paragraph") {
       wrapper.classList.add(styles.paragraph!);
     }
-
-    // wrapper.oninput = (e) => {
-    //   const footnoteButton = document.querySelector(
-    //     'button[id="footnote-button"]',
-    //   );
-    //   console.log("INPUT", footnoteButton);
-    //   if (footnoteButton) {
-    //     footnoteButton.remove();
-    //   }
-    // };
-    // document.onclick = (e) => {
-    //   console.log("ONCLICK", e.target);
-    //   if (e.target !== wrapper) {
-    //     document.querySelector('button[id="footnote-button"]')?.remove();
-    //   }
-    // };
-    // wrapper.onclick = (e) => {
-    //   const target = e.target;
-    //   let footnoteButton = document.querySelector(
-    //     'button[id="footnote-button"]',
-    //   );
-    //   if (footnoteButton) {
-    //     footnoteButton.remove();
-    //   }
-
-    //   if ((target as Element)?.parentElement?.nodeName === "SUP") {
-    //     return;
-    //   }
-    //   const selection = window.getSelection();
-    //   if (selection && selection.anchorOffset !== selection.focusOffset) {
-    //     return;
-    //   }
-
-    //   footnoteButton = document.createElement("button");
-    //   footnoteButton.setAttribute("id", "footnote-button");
-    //   footnoteButton.setAttribute(
-    //     "style",
-    //     `
-    //       position: fixed;
-    //       z-index: 50;
-    //       width: 50px;
-    //       height: 50px;
-    //       left:${e.clientX}px;
-    //       top: ${e.clientY + 20}px;
-    //       background-color: white;
-    //       border-radius: 5px;
-    //       border: 1px solid #e8e8e8;
-    //     `,
-    //   );
-    //   (footnoteButton as HTMLElement).onclick = (e) => {
-    //     alert("AYO", e.target);
-    //   };
-    //   footnoteButton.innerHTML = "F";
-    //   document.body.appendChild(footnoteButton);
-    // };
 
     const footnotes: HTMLElement[] = ret.querySelectorAll("sup");
     footnotes.forEach((footnote) => {
@@ -238,24 +179,6 @@ export default class TypedParagraph extends Paragraph {
   }
 
   renderSettings() {
-    // const getParagraphType = (): ParagraphType => {
-    //   const paragraphTypeAttribute = this.wrapper.getAttribute(
-    //     "data-paragraph-type",
-    //   );
-    //   return paragraphTypeAttribute === "paragraph"
-    //     ? "paragraph"
-    //     : "blockquote";
-    // };
-
-    // const reverseParagraphType = (p: ParagraphType): ParagraphType => {
-    //   return p === "paragraph" ? "blockquote" : "paragraph";
-    // };
-
-    // const setParagraphType = (newParagraphType: ParagraphType) => {
-    //   this.wrapper.setAttribute("data-paragraph-type", newParagraphType);
-    //   // toggleTypeButton.innerHTML = newParagraphType === "paragraph" ? "P" : "B"
-    // };
-
     const settings = [
       {
         icon: "Typed Paragraph",
