@@ -10,6 +10,8 @@ export default class TypedParagraph extends Paragraph {
     super({ data, config, api });
     this.api = api;
 
+    this.data = data;
+
     // if no paragraph type is set, set one
     if (!data.paragraphType) {
       this.data.paragraphType = "paragraph";

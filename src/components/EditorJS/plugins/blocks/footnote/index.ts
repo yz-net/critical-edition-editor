@@ -146,24 +146,20 @@ export default class Footnote extends Paragraph {
       // Get clipboard data as HTML
       const clipboardData = e.clipboardData;
       let pastedData = clipboardData?.getData("text/html");
-      console.log("asdf", pastedData);
       // If there's no HTML data, fall back to plain text
       if (!pastedData) {
         pastedData = clipboardData?.getData("text/plain");
       } else {
-        /**
-          // TODO remove styling such as background-color if existant
-          // Parse the HTML string into a DOM structure
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(pastedHtml, "text/html");
-          // Traverse and remove background color styles
-          doc.body.querySelectorAll('*').forEach(node => {
-            // Remove background color styles
-            node.style.backgroundColor = '';
-          });
-          // Get the cleaned HTML back
-          pastedData = doc.body.innerHTML;
-        */
+        // Parse the HTML string into a DOM structure
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(pastedData, "text/html");
+        // Traverse and remove background color styles
+        doc.body.querySelectorAll("*").forEach((node) => {
+          // Remove background color styles
+          node.style = "";
+        });
+        // Get the cleaned HTML back
+        pastedData = doc.body.innerHTML;
       }
       contentArea.innerHTML += pastedData;
     });

@@ -42,6 +42,10 @@ function Essay() {
   const id = searchParams.get("id");
 
   useEffect(() => {
+    if (!config) {
+      return;
+    }
+
     let essay;
     if (!essays) {
       const localData: CEData = (
@@ -60,7 +64,7 @@ function Essay() {
       alert(`Essay ${id ?? ""} not found, redirecting...`);
       return router.push("/");
     }
-  }, [id]);
+  }, [id, config]);
 
   useEffect(() => {
     if (data?.meta.hvtID) {
