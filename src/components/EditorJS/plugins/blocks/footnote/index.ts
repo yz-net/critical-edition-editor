@@ -156,7 +156,7 @@ export default class Footnote extends Paragraph {
         // Traverse and remove background color styles
         doc.body.querySelectorAll("*").forEach((node) => {
           // Remove background color styles
-          node.style = "";
+          node.setAttribute("style", "");
         });
         // Get the cleaned HTML back
         pastedData = doc.body.innerHTML;
