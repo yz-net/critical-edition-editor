@@ -49,7 +49,7 @@ export default function EssayIndexItem({
         onFocus={handleMouseOver}
         onBlur={handleMouseOut}
         tabIndex={0}
-        href={`/essay?id=${essay.id}`}
+        href={`/essay?id=${essay.slug}`}
         className="hover:text-critical-600"
       >
         {config?.projectData.textOnlyIndexPage ? null : (

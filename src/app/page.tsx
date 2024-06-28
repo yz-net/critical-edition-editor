@@ -14,15 +14,13 @@ import { fetchGitHubData } from "~/utils/data";
 import MetadataModal from "~/components/MetadataModal";
 
 import type { CEData, CEDataStore } from "~/types/store";
-import type { ConfigEssay } from "~/types/config";
-import type { EssayMeta } from "~/types/essay";
+import type { Config, ConfigEssay } from "~/types/config";
+import type { Essay, EssayMeta } from "~/types/essay";
 
 import styles from "./styles.module.scss";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
-  const [importFile, setImportFile] = useState<File>();
-
   const localDataStore: CEDataStore = useLocalDataStore();
   const gitDataStore: CEDataStore = useGitDataStore();
 
@@ -86,7 +84,7 @@ export default function HomePage() {
       ...localDataStore.config.essays,
     ];
     const newConfigEssayOrder = [
-      meta.slug,
+      meta.hvtID,
       ...localDataStore.config.projectData.essayOrder,
     ];
     // essays
@@ -183,7 +181,7 @@ export default function HomePage() {
     if (!localDataStore.essays) return;
     for (const essay of localDataStore.essays) {
       files.push({
-        path: `intro-${essay.meta.slug}.json`,
+        path: `intro-${essay.meta.hvtID}.json`,
         blob: new Blob([JSON.stringify(essay)]),
       });
     }
@@ -203,17 +201,117 @@ export default function HomePage() {
     link.remove();
   };
 
+  const importJson = (json: Essay) => {
+    if (!localDataStore.config) {
+      return alert("Error, no local data config");
+    }
+
+    const duplicate = localDataStore.config?.essays.find(
+      (e) => e.hvtID === json.meta?.hvtID,
+    );
+    if (
+      duplicate &&
+      window.confirm(
+        `A local version of an edition with the hvtID ${duplicate.hvtID} already exists! Confirm to overwrite.`,
+      )
+    ) {
+      localDataStore.setConfig({
+        ...localDataStore.config,
+        essays: localDataStore.config.essays.map((e) =>
+          e.hvtID === json?.meta?.hvtID ? (json.meta as ConfigEssay) : e,
+        ),
+      });
+    }
+    if (!duplicate) {
+      localDataStore.setConfig({
+        essays: [json.meta as ConfigEssay, ...localDataStore.config.essays],
+        projectData: {
+          ...localDataStore.config.projectData,
+          essayOrder: [
+            json.meta.hvtID,
+            ...localDataStore.config.projectData.essayOrder,
+          ],
+        },
+      });
+    }
+  };
+
+  const importZip = (file: File) => {
+    let config: Config | null = null;
+    let essays: Essay[] = [];
+
+    JSZip.loadAsync(file)
+      .then((zip) => {
+        const files = Object.fromEntries(
+          Object.entries(zip.files).filter((f) => !f[1].dir),
+        );
+        // Collect all promises for processing files
+        const fileProcessingPromises = Object.keys(files).map((filename) => {
+          return files[filename]!.async("string").then((data) => {
+            const parsedData = JSON.parse(data);
+            if (filename.includes("config")) {
+              config = parsedData;
+            } else if (parsedData.meta && parsedData.blocks) {
+              essays.push(parsedData);
+            }
+          });
+        });
+
+        // Wait for all file processing promises to complete
+        return Promise.all(fileProcessingPromises);
+      })
+      .then(() => {
+        // Now config and essays are ready to use
+        if (config && essays.length > 0) {
+          localDataStore.setConfig(config);
+          localDataStore.setEssays(essays);
+        } else {
+          throw Error();
+        }
+      })
+      .catch((error) => {
+        return alert("Error processing files");
+      });
+  };
+
   const handleFileImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target as HTMLInputElement;
     if (!input.files || input.files.length < 1) {
       return;
     }
     const file = input.files[0];
-    if (file && file.type === "application/zip") {
-      // TODO parse import
-      alert("TODO");
-    } else {
-      alert("Please select a ZIP file.");
+    if (file) {
+      const fileReader = new FileReader();
+      fileReader.onload = (e) => {
+        try {
+          if (!e.target) {
+            return alert("Error reading file");
+          }
+          const json = JSON.parse(e.target.result as string) as Essay;
+          if (!json.meta || !json.blocks) {
+            return alert("Error, corrupt JSON file");
+          }
+          importJson(json);
+        } catch (error) {
+          console.error("File reader onload error");
+        }
+      };
+
+      fileReader.onerror = () => {
+        console.error("File reader onerror");
+      };
+
+      if (file.type === "application/zip") {
+        if (
+          window.confirm(
+            "Importing a .zip file overwrites all local changes. Confirm to continue.",
+          )
+        ) {
+          importZip(file);
+        }
+      } else if (file.type === "application/json") {
+        fileReader.readAsText(file);
+      }
     }
   };
 
@@ -252,7 +350,7 @@ export default function HomePage() {
                 </button>
               </li>
               {localDataStore.config.essays.map((essay: ConfigEssay) => (
-                <li key={essay.id} className={styles.IndexItemContainer}>
+                <li key={essay.hvtID} className={styles.IndexItemContainer}>
                   <EssayIndexItem
                     essay={essay}
                     onChangeOrder={(direction: "up" | "down") =>
@@ -296,7 +394,7 @@ export default function HomePage() {
                 <input
                   ref={importRef}
                   type="file"
-                  accept=".zip"
+                  accept=".zip,.json"
                   className="hidden"
                   onChange={handleFileImport}
                 />
