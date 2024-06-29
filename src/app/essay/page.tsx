@@ -72,8 +72,14 @@ function Essay() {
     }
 
     // update data
-    if (initialized && essays && !!data) {
+    if (initialized && essays && !!data && !!config) {
       setEssays(essays?.map((e: Essay) => (e.meta.slug === id ? data : e)));
+      setConfig({
+        ...config,
+        essays: config.essays.map((e: ConfigEssay) =>
+          e.slug === id ? (data.meta as ConfigEssay) : e,
+        ),
+      });
     }
   }, [data]);
 

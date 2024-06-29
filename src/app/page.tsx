@@ -343,7 +343,7 @@ export default function HomePage() {
                   type="button"
                   onClick={() => setShowNewEssayModal(true)}
                 >
-                  <div className="flex h-full w-full items-center justify-center gap-2 border-2 border-neutral-800 bg-neutral-100 text-3xl transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
+                  <div className="flex h-full min-h-60 w-full items-center justify-center gap-2 border-2 border-neutral-800 bg-neutral-100 text-3xl transition-colors group-hover:border-critical-600 group-hover:bg-critical-600 group-hover:text-white">
                     <FiPlus size={30} strokeWidth={1.5} />
                     Create new
                   </div>
