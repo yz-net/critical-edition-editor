@@ -38,6 +38,7 @@ const config = {
     "@typescript-eslint/class-literal-property-style": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
   },
 };
 

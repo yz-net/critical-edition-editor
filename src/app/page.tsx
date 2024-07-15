@@ -238,7 +238,7 @@ export default function HomePage() {
 
   const importZip = (file: File) => {
     let config: Config | null = null;
-    let essays: Essay[] = [];
+    const essays: Essay[] = [];
 
     JSZip.loadAsync(file)
       .then((zip) => {
