@@ -80,7 +80,7 @@ export default class Footnote extends Paragraph {
   static get sanitize() {
     return {
       id: false,
-      label: false, // TODO - Is this right?
+      label: false,
       text: { i: true, a: true, b: true },
       embedCode: true,
     };

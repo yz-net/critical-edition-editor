@@ -29,6 +29,8 @@ export default class TypedParagraph extends Paragraph {
       url: true,
       sup: true,
       a: true,
+      b: true,
+      i: true,
     };
   }
 
