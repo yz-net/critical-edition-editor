@@ -49,18 +49,15 @@ export default class TypedParagraph extends Paragraph {
   render() {
     const ret = super.render();
     ret.addEventListener("paste", (event: ClipboardEvent) => {
+      event.preventDefault();
+
       if (!event.clipboardData) {
         return;
       }
-      // TODO paste footnote marker?
-      console.log("paste", event);
-      console.log("paste data", event.clipboardData?.getData("text/html"));
-      // console.log(event.clipboardData.getData("text/html"))
 
       let s = "";
       try {
         s = event.clipboardData?.getData("text/html");
-        // console.log("Loaded text/html")
       } catch {
         console.log("Falling back to plain text");
         s = event.clipboardData?.getData("text/plain");
@@ -71,12 +68,6 @@ export default class TypedParagraph extends Paragraph {
         console.log("Not MS Word Content", s);
         return;
       }
-
-      if (!window.confirm("Use MS Word super-pasting black magic?")) {
-        return;
-      }
-      console.log("MS Word Content");
-      event.preventDefault();
 
       var rx =
         /<!--StartFragment-->([^<]*(?:<(?!!--(?:Start|End)Fragment-->)[^<]*)*)<!--EndFragment-->/g;
