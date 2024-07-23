@@ -15,6 +15,7 @@ import type { ConfigEssay } from "~/types/config";
 import type { CEData } from "~/types/store";
 
 import styles from "./styles.module.scss";
+import LoadingSpinner from "~/components/LoadingSpinner";
 
 const MEDIA_PATH_PREFIX = "https://d12q9fe14kxf9b.cloudfront.net";
 
@@ -269,14 +270,17 @@ function Essay() {
 
 export default function EssayPage() {
   return (
-    <div className="serif-copy-ff relative flex h-screen flex-col overflow-hidden">
-      <div className="z-[100] h-[60px] overflow-hidden shadow-[0_0_10px_rgba(0,0,0,.3)]">
-        <LogoBar />
-      </div>
+    <>
+      <div className="serif-copy-ff relative flex h-screen flex-col overflow-hidden">
+        <div className="z-[100] h-[60px] overflow-hidden shadow-[0_0_10px_rgba(0,0,0,.3)]">
+          <LogoBar />
+        </div>
 
-      <Suspense>
-        <Essay />
-      </Suspense>
-    </div>
+        <Suspense>
+          <Essay />
+        </Suspense>
+      </div>
+      <LoadingSpinner />
+    </>
   );
 }

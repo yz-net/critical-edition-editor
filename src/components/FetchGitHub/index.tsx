@@ -4,6 +4,7 @@ import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
 
 import { fetchGitHubData } from "~/utils/data";
+import { useStateStore } from "~/store/state";
 
 const confirmText =
   "Are you sure you want to pull content from GitHub? All local changes will be deleted.";
@@ -11,14 +12,22 @@ const confirmText =
 export default function Import() {
   const localDataStore = useLocalDataStore();
   const gitDataStore = useGitDataStore();
+  const { setLoading } = useStateStore();
 
   const fetch = async () => {
     if (window.confirm(confirmText)) {
-      const data = await fetchGitHubData();
-      gitDataStore.setConfig(data.config);
-      gitDataStore.setEssays(data.essays);
-      localDataStore.setConfig(data.config);
-      localDataStore.setEssays(data.essays);
+      setLoading(true);
+      try {
+        const data = await fetchGitHubData();
+        gitDataStore.setConfig(data.config);
+        gitDataStore.setEssays(data.essays);
+        localDataStore.setConfig(data.config);
+        localDataStore.setEssays(data.essays);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 

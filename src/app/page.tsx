@@ -12,6 +12,8 @@ import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
 import { fetchGitHubData } from "~/utils/data";
 import MetadataModal from "~/components/MetadataModal";
+import { useStateStore } from "~/store/state";
+import LoadingSpinner from "~/components/LoadingSpinner";
 
 import type { CEData, CEDataStore } from "~/types/store";
 import type { Config, ConfigEssay } from "~/types/config";
@@ -21,8 +23,10 @@ import styles from "./styles.module.scss";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
+
   const localDataStore: CEDataStore = useLocalDataStore();
   const gitDataStore: CEDataStore = useGitDataStore();
+  const { loading, setLoading } = useStateStore();
 
   const importRef = useRef<HTMLInputElement>(null);
 
@@ -32,12 +36,15 @@ export default function HomePage() {
     }
 
     const fetch = async () => {
+      setLoading(true);
       try {
         const newGitData = await fetchGitHubData();
         gitDataStore.setConfig(newGitData.config);
         gitDataStore.setEssays(newGitData.essays);
       } catch (err) {
         throw Error("Error fetching GitHub data");
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -419,6 +426,8 @@ export default function HomePage() {
         onCancel={() => setShowNewEssayModal(false)}
         onSave={(meta) => createEssay(meta)}
       />
+
+      <LoadingSpinner />
     </>
   );
 }
