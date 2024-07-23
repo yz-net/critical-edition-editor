@@ -11,12 +11,12 @@ export default function Toast() {
     text: string;
   } | null>(null);
 
-  const { toast } = useStateStore();
+  const { toast, setToast } = useStateStore();
 
   useEffect(() => {
     if (data) {
       setTimeout(() => {
-        setData(null);
+        setToast(null);
       }, 3000);
     }
   }, [data]);
