@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import useLocalDataStore from "~/store/local-data";
 
 import type { ConfigEssay } from "~/types/config";
 
 type MetadataModalProps = {
-  meta?: ConfigEssay;
+  meta: ConfigEssay;
   show: boolean;
   title?: string;
   onCancel: () => void;
@@ -13,16 +13,10 @@ type MetadataModalProps = {
 };
 
 export default function MetadataModal(props: MetadataModalProps) {
-  const [meta, setMeta] = useState<ConfigEssay>();
+  const [meta, setMeta] = useState<ConfigEssay>(props.meta);
   const [error, setError] = useState<string>();
 
   const { config } = useLocalDataStore();
-
-  useEffect(() => {
-    if (props.meta) {
-      setMeta(props.meta);
-    }
-  }, [props.meta]);
 
   const onSave = () => {
     if (!config) {

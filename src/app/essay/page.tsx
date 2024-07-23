@@ -66,7 +66,7 @@ function Essay() {
       alert(`Essay ${id ?? ""} not found, redirecting...`);
       return router.push("/");
     }
-  }, [id, config]);
+  }, [id]);
 
   useEffect(() => {
     if (data?.meta.hvtID) {
