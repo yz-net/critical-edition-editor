@@ -14,6 +14,7 @@ import { fetchGitHubData } from "~/utils/data";
 import MetadataModal from "~/components/MetadataModal";
 import { useStateStore } from "~/store/state";
 import LoadingSpinner from "~/components/LoadingSpinner";
+import Toast from "~/components/Toast";
 
 import type { CEData, CEDataStore } from "~/types/store";
 import type { Config, ConfigEssay } from "~/types/config";
@@ -26,7 +27,7 @@ export default function HomePage() {
 
   const localDataStore: CEDataStore = useLocalDataStore();
   const gitDataStore: CEDataStore = useGitDataStore();
-  const { loading, setLoading } = useStateStore();
+  const { setLoading, setToast } = useStateStore();
 
   const importRef = useRef<HTMLInputElement>(null);
 
@@ -42,6 +43,10 @@ export default function HomePage() {
         gitDataStore.setConfig(newGitData.config);
         gitDataStore.setEssays(newGitData.essays);
       } catch (err) {
+        setToast({
+          className: "bg-red-300 text-white",
+          text: "GitHub data could not be fetched",
+        });
         throw Error("Error fetching GitHub data");
       } finally {
         setLoading(false);
@@ -428,6 +433,7 @@ export default function HomePage() {
       />
 
       <LoadingSpinner />
+      <Toast />
     </>
   );
 }

@@ -9,13 +9,14 @@ import LogoBar from "~/components/LogoBar";
 import EssayPreamble from "~/components/Viewer/EssayPreamble";
 import MetadataModal from "~/components/MetadataModal";
 import useLocalDataStore from "~/store/local-data";
+import LoadingSpinner from "~/components/LoadingSpinner";
+import Toast from "~/components/Toast";
 
 import type { Essay, EssayMeta } from "~/types/essay";
 import type { ConfigEssay } from "~/types/config";
 import type { CEData } from "~/types/store";
 
 import styles from "./styles.module.scss";
-import LoadingSpinner from "~/components/LoadingSpinner";
 
 const MEDIA_PATH_PREFIX = "https://d12q9fe14kxf9b.cloudfront.net";
 
@@ -280,7 +281,9 @@ export default function EssayPage() {
           <Essay />
         </Suspense>
       </div>
+
       <LoadingSpinner />
+      <Toast />
     </>
   );
 }

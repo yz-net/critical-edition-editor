@@ -17,10 +17,8 @@ export default function LoadingSpinner() {
   return (
     <>
       {show && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/80 shadow-lg shadow-black">
-            <Spinner />
-          </div>
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/50">
+          <Spinner />
         </div>
       )}
     </>

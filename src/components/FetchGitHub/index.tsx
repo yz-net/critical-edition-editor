@@ -1,10 +1,12 @@
-import { FiGithub } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { FiGithub, FiX } from "react-icons/fi";
 
 import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
 
 import { fetchGitHubData } from "~/utils/data";
 import { useStateStore } from "~/store/state";
+import { AnimatePresence, motion } from "framer-motion";
 
 const confirmText =
   "Are you sure you want to pull content from GitHub? All local changes will be deleted.";
@@ -12,7 +14,7 @@ const confirmText =
 export default function Import() {
   const localDataStore = useLocalDataStore();
   const gitDataStore = useGitDataStore();
-  const { setLoading } = useStateStore();
+  const { setLoading, setToast } = useStateStore();
 
   const fetch = async () => {
     if (window.confirm(confirmText)) {
@@ -23,7 +25,15 @@ export default function Import() {
         gitDataStore.setEssays(data.essays);
         localDataStore.setConfig(data.config);
         localDataStore.setEssays(data.essays);
+        setToast({
+          className: "bg-yellow-300 text-black",
+          text: "GitHub data fetched successfully",
+        });
       } catch (err) {
+        setToast({
+          className: "bg-red-300 text-white",
+          text: "GitHub data could not be fetched",
+        });
         console.error(err);
       } finally {
         setLoading(false);
