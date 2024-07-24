@@ -14,7 +14,8 @@ const confirmText =
 export default function Import() {
   const localDataStore = useLocalDataStore();
   const gitDataStore = useGitDataStore();
-  const { setLoading, setToast } = useStateStore();
+  const setLoading = useStateStore((state) => state.setLoading);
+  const setToast = useStateStore((state) => state.setToast);
 
   const fetch = async () => {
     if (window.confirm(confirmText)) {

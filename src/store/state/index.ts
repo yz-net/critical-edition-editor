@@ -5,14 +5,17 @@ type Toast = {
   text: string;
 } | null;
 
-interface AppState {
+interface AppStates {
   loading: boolean;
-  setLoading: (value: boolean) => void;
   toast: Toast;
+}
+
+interface AppActions {
+  setLoading: (value: boolean) => void;
   setToast: (value: Toast) => void;
 }
 
-export const useStateStore = create<AppState>()((set) => ({
+export const useStateStore = create<AppStates & AppActions>()((set) => ({
   loading: false,
   setLoading: (value) => set((state) => ({ ...state, loading: value })),
   toast: null,

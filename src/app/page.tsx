@@ -27,7 +27,8 @@ export default function HomePage() {
 
   const localDataStore: CEDataStore = useLocalDataStore();
   const gitDataStore: CEDataStore = useGitDataStore();
-  const { setLoading, setToast } = useStateStore();
+  const setLoading = useStateStore((state) => state.setLoading);
+  const setToast = useStateStore((state) => state.setToast);
 
   const importRef = useRef<HTMLInputElement>(null);
 

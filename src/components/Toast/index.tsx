@@ -11,7 +11,8 @@ export default function Toast() {
     text: string;
   } | null>(null);
 
-  const { toast, setToast } = useStateStore();
+  const toast = useStateStore((state) => state.toast);
+  const setToast = useStateStore((state) => state.setToast);
 
   useEffect(() => {
     if (data) {
