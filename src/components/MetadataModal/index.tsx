@@ -85,7 +85,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                         value={meta?.hvtID ?? ""}
                         onChange={(e) => {
                           setMeta((prev) => ({
-                            ...prev!,
+                            ...prev,
                             hvtID: e.target.value,
                             id: `hvt-${e.target.value}`,
                             slug: `hvt-${e.target.value}`,
@@ -114,7 +114,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                       value={meta?.title ?? ""}
                       onChange={(e) => {
                         setMeta((prev) => ({
-                          ...prev!,
+                          ...prev,
                           title: e.target.value,
                         }));
                       }}
@@ -136,7 +136,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                       value={meta?.author ?? ""}
                       onChange={(e) => {
                         setMeta((prev) => ({
-                          ...prev!,
+                          ...prev,
                           author: e.target.value,
                         }));
                       }}
@@ -158,7 +158,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                       value={meta?.affiliation ?? ""}
                       onChange={(e) => {
                         setMeta((prev) => ({
-                          ...prev!,
+                          ...prev,
                           affiliation: e.target.value,
                         }));
                       }}

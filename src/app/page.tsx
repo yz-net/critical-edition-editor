@@ -427,6 +427,7 @@ export default function HomePage() {
       </div>
 
       <MetadataModal
+        meta={{} as ConfigEssay}
         title="Create new Critical Edition"
         show={showNewEssayModal}
         onCancel={() => setShowNewEssayModal(false)}
