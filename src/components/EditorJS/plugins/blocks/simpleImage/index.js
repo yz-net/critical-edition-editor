@@ -54,6 +54,9 @@ export default class CustomSimpleImage {
     return {
       src: {},
       caption: {
+        il: true,
+        ul: true,
+        ol: true,
         b: true,
         a: {
           href: true,

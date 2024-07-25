@@ -31,6 +31,9 @@ export default class TypedParagraph extends Paragraph {
       a: true,
       b: true,
       i: true,
+      il: true,
+      ul: true,
+      ol: true,
     };
   }
 
