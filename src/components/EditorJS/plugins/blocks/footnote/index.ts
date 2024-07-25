@@ -81,7 +81,7 @@ export default class Footnote extends Paragraph {
     return {
       id: false,
       label: false,
-      text: { i: true, a: true, b: true, il: true, ul: true, ol: true },
+      text: { i: true, a: true, b: true, li: true, ul: true, ol: true },
       embedCode: true,
     };
   }
