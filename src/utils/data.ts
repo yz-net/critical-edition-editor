@@ -32,10 +32,10 @@ export const fetchGitHubData: () => Promise<{
   };
   try {
     const res = await octokit.rest.repos.getContent({
-      owner: "probably-an-organization",
+      owner: "yale-fortunoff",
       repo: "critical-editions-content",
       path: "/data",
-      ref: "staging",
+      ref: "main",
     });
 
     if (!Array.isArray(res.data)) {
