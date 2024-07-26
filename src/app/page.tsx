@@ -219,7 +219,7 @@ export default function HomePage() {
     if (!localEssays) return;
     for (const essay of localEssays) {
       files.push({
-        path: `intro-${essay.meta.hvtID}.json`,
+        path: `intro-hvt-${essay.meta.hvtID}.json`,
         blob: new Blob([JSON.stringify(essay)]),
       });
     }
