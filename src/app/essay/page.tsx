@@ -14,7 +14,6 @@ import Toast from "~/components/Toast";
 
 import type { Essay, EssayMeta } from "~/types/essay";
 import type { ConfigEssay } from "~/types/config";
-import type { CEData } from "~/types/store";
 
 import styles from "./styles.module.scss";
 
@@ -34,7 +33,10 @@ function Essay() {
   const [data, setData] = useState<Essay>();
   const [showMetaModal, setShowMetaModal] = useState<boolean>(false);
 
-  const { essays, config, setEssays, setConfig } = useLocalDataStore();
+  const essays = useLocalDataStore((state) => state.essays);
+  const setEssays = useLocalDataStore((state) => state.setEssays);
+  const config = useLocalDataStore((state) => state.config);
+  const setConfig = useLocalDataStore((state) => state.setConfig);
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -44,21 +46,11 @@ function Essay() {
   const id = searchParams.get("id");
 
   useEffect(() => {
-    if (!config) {
+    if (!config || data) {
       return;
     }
 
-    let essay;
-    if (!essays) {
-      const localData: CEData = (
-        JSON.parse(localStorage.getItem("local-data") ?? "") as {
-          state: CEData;
-        }
-      ).state;
-      essay = localData.essays.find((e) => e?.meta.slug === id);
-    } else {
-      essay = essays.find((e) => e?.meta.slug === id);
-    }
+    const essay = essays.find((e) => e.meta.slug === id);
     if (essay) {
       setData(essay);
       initialized = true;
@@ -66,7 +58,7 @@ function Essay() {
       alert(`Essay ${id ?? ""} not found, redirecting...`);
       return router.push("/");
     }
-  }, [id]);
+  }, [id, config]);
 
   useEffect(() => {
     if (data?.meta.hvtID) {

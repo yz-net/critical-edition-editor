@@ -25,7 +25,7 @@ export default function Editorjs(props: {
           blocks: props.data,
           // version: "2.11.10"
         },
-        async onChange(api, event) {
+        async onChange(api) {
           const data = await api.saver.save();
           props.onChange(data.blocks);
         },

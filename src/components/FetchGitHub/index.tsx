@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-import { FiGithub, FiX } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
 
 import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
 
 import { fetchGitHubData } from "~/utils/data";
 import { useStateStore } from "~/store/state";
-import { AnimatePresence, motion } from "framer-motion";
 
 const confirmText =
   "Are you sure you want to pull content from GitHub? All local changes will be deleted.";

@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-import { CEDataStore } from "~/types/store";
+import type { CEDataStore } from "~/types/store";
 
 const useGitDataStore = create<CEDataStore>()(
   persist(
