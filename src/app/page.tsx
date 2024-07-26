@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FiPlus, FiDownload, FiUpload } from "react-icons/fi";
 import JSZip from "jszip";
+import { format } from "date-fns/format";
 
 import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
@@ -111,8 +112,12 @@ export default function HomePage() {
      *
      * (they are not really being used in the app)
      */
-
-    console.log("CREATE", meta);
+    meta = {
+      ...meta,
+      supertitle: "Introduction to the testimony of",
+      aviaryLink: `https://fortunoff.aviaryplatform.com/c/mssa.hvt.${meta.hvtID}`,
+      publicationDate: format(Date.now(), "PPP"),
+    };
 
     // config
     const newConfigEssays: ConfigEssay[] = [
