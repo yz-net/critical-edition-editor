@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "prebuild": "node scripts/generate-timestamp.js && echo 'Timestamp generated'",
+    "deploy": "aws s3 sync out/ s3://edit.editions.fortunoff.library.yale.edu/ --delete",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start",
-    "deploy": "aws s3 sync out/ s3://edit.editions.fortunoff.library.yale.edu/ --delete"
+    "prebuild": "node scripts/generate-timestamp.js && echo 'Timestamp generated'",
+    "serve": "npx serve@latest ./out",
+    "start": "next start"
   },
   "dependencies": {
     "@editorjs/checklist": "^1.6.0",
