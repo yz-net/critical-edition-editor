@@ -16,6 +16,7 @@ import MetadataModal from "~/components/MetadataModal";
 import { useStateStore } from "~/store/state";
 import LoadingSpinner from "~/components/LoadingSpinner";
 import Toast from "~/components/Toast";
+import VersionButton from "~/components/VersionButton";
 
 import type { CEData } from "~/types/store";
 import type { Config, ConfigEssay } from "~/types/config";
@@ -430,7 +431,6 @@ export default function HomePage() {
                   className="hidden"
                   onChange={handleFileImport}
                 />
-
                 <button
                   className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                   type="button"
@@ -439,6 +439,7 @@ export default function HomePage() {
                   <FiDownload />
                   Download
                 </button>
+                <VersionButton />
               </div>
             </div>
           </div>
