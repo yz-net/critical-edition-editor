@@ -16,6 +16,7 @@ export interface EssayMeta {
   affiliation: string;
   essayPath: string;
   publicationDate: string;
+  id: string;
 }
 
 export interface EssayBlock {

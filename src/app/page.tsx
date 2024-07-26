@@ -16,7 +16,7 @@ import { useStateStore } from "~/store/state";
 import LoadingSpinner from "~/components/LoadingSpinner";
 import Toast from "~/components/Toast";
 
-import type { CEData, CEDataStore } from "~/types/store";
+import type { CEData } from "~/types/store";
 import type { Config, ConfigEssay } from "~/types/config";
 import type { Essay, EssayMeta } from "~/types/essay";
 
@@ -25,15 +25,23 @@ import styles from "./styles.module.scss";
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
 
-  const localDataStore: CEDataStore = useLocalDataStore();
-  const gitDataStore: CEDataStore = useGitDataStore();
+  const localConfig = useLocalDataStore((state) => state.config);
+  const localEssays = useLocalDataStore((state) => state.essays);
+  const localSetConfig = useLocalDataStore((state) => state.setConfig);
+  const localSetEssays = useLocalDataStore((state) => state.setEssays);
+
+  const gitConfig = useGitDataStore((state) => state.config);
+  const gitEssays = useGitDataStore((state) => state.essays);
+  const gitSetConfig = useGitDataStore((state) => state.setConfig);
+  const gitSetEssays = useGitDataStore((state) => state.setEssays);
+
   const setLoading = useStateStore((state) => state.setLoading);
   const setToast = useStateStore((state) => state.setToast);
 
   const importRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (gitDataStore.config) {
+    if (gitConfig) {
       return;
     }
 
@@ -41,8 +49,13 @@ export default function HomePage() {
       setLoading(true);
       try {
         const newGitData = await fetchGitHubData();
-        gitDataStore.setConfig(newGitData.config);
-        gitDataStore.setEssays(newGitData.essays);
+        gitSetConfig(newGitData.config);
+        gitSetEssays(
+          newGitData.essays.map((e) => ({
+            ...e,
+            meta: { ...e.meta, id: e.meta.slug },
+          })),
+        );
       } catch (err) {
         setToast({
           className: "bg-red-300 text-white",
@@ -61,18 +74,18 @@ export default function HomePage() {
     }
     const gitData = (JSON.parse(gitDataString) as { state: CEData }).state;
     if (gitData.config && gitData.essays) {
-      gitDataStore.setConfig(gitData.config);
-      gitDataStore.setEssays(gitData.essays);
+      gitSetConfig(gitData.config);
+      gitSetEssays(gitData.essays);
     } else {
       fetch();
     }
-  }, [gitDataStore.config]);
+  }, [gitConfig]);
 
   useEffect(() => {
-    if (localDataStore.config) {
+    if (localConfig) {
       return;
     }
-    if (!gitDataStore.config) {
+    if (!gitConfig) {
       return;
     }
 
@@ -81,49 +94,55 @@ export default function HomePage() {
     if (localDataString) {
       localData = (JSON.parse(localDataString) as { state: CEData }).state;
     }
-    localDataStore.setConfig(localData?.config ?? gitDataStore.config);
-    localDataStore.setEssays(
-      localData?.config ? localData.essays : gitDataStore.essays,
-    );
-  }, [localDataStore.config, gitDataStore.config]);
+    localSetConfig(localData?.config ?? gitConfig);
+    localSetEssays(localData?.config ? localData.essays : gitEssays);
+  }, [localConfig, gitConfig]);
 
   const createEssay = (meta: EssayMeta) => {
-    if (!localDataStore.config) {
+    if (!localConfig) {
       throw Error("Local config is null");
     }
+
+    /**
+     * Note: meta is missing the following values:
+     * aviaryLink
+     * publicationDate
+     * supertitle
+     *
+     * (they are not really being used in the app)
+     */
+
+    console.log("CREATE", meta);
+
     // config
     const newConfigEssays: ConfigEssay[] = [
       meta as ConfigEssay,
-      ...localDataStore.config.essays,
+      ...localConfig.essays,
     ];
     const newConfigEssayOrder = [
-      meta.hvtID,
-      ...localDataStore.config.projectData.essayOrder,
+      meta.slug,
+      ...localConfig.projectData.essayOrder,
     ];
     // essays
-    const newEssays = [
-      // TODO, meta is missing aviaryLink, publicationDate, supertitle
-      { meta, blocks: [] },
-      ...localDataStore.essays,
-    ];
+    const newEssays = [{ meta, blocks: [] }, ...localEssays];
     // update
-    localDataStore.setConfig({
+    localSetConfig({
       essays: newConfigEssays,
       projectData: {
-        ...localDataStore.config.projectData,
+        ...localConfig.projectData,
         essayOrder: newConfigEssayOrder,
       },
     });
-    localDataStore.setEssays(newEssays);
+    localSetEssays(newEssays);
     setShowNewEssayModal(false);
   };
 
   const moveEssay = (id: string, direction: "up" | "down") => {
-    if (!localDataStore.config) {
+    if (!localConfig) {
       throw Error("Local config missing");
     }
-    const newEssays = [...localDataStore.config.essays];
-    const newEssayOrder = [...localDataStore.config.projectData.essayOrder];
+    const newEssays = [...localConfig.essays];
+    const newEssayOrder = [...localConfig.projectData.essayOrder];
     // config essays
     const essaysAIndex = newEssays.findIndex((e) => e.id === id);
     if (essaysAIndex < 0) return;
@@ -142,21 +161,21 @@ export default function HomePage() {
     newEssayOrder[essayOrderBIndex] = newEssayOrder[essayOrderAIndex]!;
     newEssayOrder[essayOrderAIndex] = tempEssayOder!;
     // update
-    localDataStore.setConfig({
+    localSetConfig({
       essays: newEssays,
       projectData: {
-        ...localDataStore.config.projectData,
+        ...localConfig.projectData,
         essayOrder: newEssayOrder,
       },
     });
   };
 
   const deleteEssay = (id: string) => {
-    if (!localDataStore.config) {
+    if (!localConfig) {
       throw Error("Local config missing");
     }
     // config essays
-    const newEssays = localDataStore.config.essays.reduce(
+    const newEssays = localConfig.essays.reduce(
       (acc: ConfigEssay[], curr: ConfigEssay) => {
         if (curr.id !== id) {
           acc.push(curr);
@@ -166,7 +185,7 @@ export default function HomePage() {
       [],
     );
     // config essay order
-    const newEssayOrder = localDataStore.config.projectData.essayOrder.reduce(
+    const newEssayOrder = localConfig.projectData.essayOrder.reduce(
       (acc: string[], curr: string) => {
         if (curr !== id) {
           acc.push(curr);
@@ -176,10 +195,10 @@ export default function HomePage() {
       [],
     );
     // update
-    localDataStore.setConfig({
+    localSetConfig({
       essays: newEssays,
       projectData: {
-        ...localDataStore.config.projectData,
+        ...localConfig.projectData,
         essayOrder: newEssayOrder,
       },
     });
@@ -189,10 +208,10 @@ export default function HomePage() {
     const files: { path: string; blob: Blob }[] = [];
     files.push({
       path: "config.json",
-      blob: new Blob([JSON.stringify(localDataStore.config)]),
+      blob: new Blob([JSON.stringify(localConfig)]),
     });
-    if (!localDataStore.essays) return;
-    for (const essay of localDataStore.essays) {
+    if (!localEssays) return;
+    for (const essay of localEssays) {
       files.push({
         path: `intro-${essay.meta.hvtID}.json`,
         blob: new Blob([JSON.stringify(essay)]),
@@ -215,11 +234,11 @@ export default function HomePage() {
   };
 
   const importJson = (json: Essay) => {
-    if (!localDataStore.config) {
+    if (!localConfig) {
       return alert("Error, no local data config");
     }
 
-    const duplicate = localDataStore.config?.essays.find(
+    const duplicate = localConfig?.essays.find(
       (e) => e.hvtID === json.meta?.hvtID,
     );
     if (
@@ -228,22 +247,19 @@ export default function HomePage() {
         `A local version of an edition with the hvtID ${duplicate.hvtID} already exists! Confirm to overwrite.`,
       )
     ) {
-      localDataStore.setConfig({
-        ...localDataStore.config,
-        essays: localDataStore.config.essays.map((e) =>
+      localSetConfig({
+        ...localConfig,
+        essays: localConfig.essays.map((e) =>
           e.hvtID === json?.meta?.hvtID ? (json.meta as ConfigEssay) : e,
         ),
       });
     }
     if (!duplicate) {
-      localDataStore.setConfig({
-        essays: [json.meta as ConfigEssay, ...localDataStore.config.essays],
+      localSetConfig({
+        essays: [json.meta as ConfigEssay, ...localConfig.essays],
         projectData: {
-          ...localDataStore.config.projectData,
-          essayOrder: [
-            json.meta.hvtID,
-            ...localDataStore.config.projectData.essayOrder,
-          ],
+          ...localConfig.projectData,
+          essayOrder: [json.meta.hvtID, ...localConfig.projectData.essayOrder],
         },
       });
     }
@@ -276,8 +292,8 @@ export default function HomePage() {
       .then(() => {
         // Now config and essays are ready to use
         if (config && essays.length > 0) {
-          localDataStore.setConfig(config);
-          localDataStore.setEssays(essays);
+          localSetConfig(config);
+          localSetEssays(essays);
         } else {
           throw Error();
         }
@@ -328,7 +344,7 @@ export default function HomePage() {
     }
   };
 
-  if (!localDataStore.config || !localDataStore.essays) {
+  if (!localConfig || !localEssays) {
     return;
   }
 
@@ -344,9 +360,7 @@ export default function HomePage() {
         />
         <main className={styles.CenterColumn}>
           <div className={styles.IndexHeader}>
-            <p className="sans-copy-ff">
-              {localDataStore.config.projectData.introCopy}
-            </p>
+            <p className="sans-copy-ff">{localConfig.projectData.introCopy}</p>
           </div>
           <nav aria-label="List of essays">
             <ul className={styles.ItemListContainer}>
@@ -362,7 +376,7 @@ export default function HomePage() {
                   </div>
                 </button>
               </li>
-              {localDataStore.config.essays.map((essay: ConfigEssay) => (
+              {localConfig.essays.map((essay: ConfigEssay) => (
                 <li key={essay.hvtID} className={styles.IndexItemContainer}>
                   <EssayIndexItem
                     essay={essay}
