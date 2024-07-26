@@ -11,7 +11,7 @@ export default function VersionButton() {
       type="button"
       onClick={() =>
         alert(
-          "Build version:" +
+          "Build version: " +
             format(parseISO(timestampJSON.timestamp), "PPPP pppp"),
         )
       }
