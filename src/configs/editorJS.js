@@ -17,6 +17,7 @@ import BlockTuneBlockquote from "~/components/EditorJS/plugins/tunes/blockquote"
 import CustomHeader from "~/components/EditorJS/plugins/blocks/header";
 import BlockTuneParagraph from "~/components/EditorJS/plugins/tunes/paragraph";
 import CustomSimpleImage from "~/components/EditorJS/plugins/blocks/simpleImage";
+import ListMaker from "~/components/EditorJS/plugins/inline/listMaker";
 
 export const EDITOR_TOOLS = {
   // code: Code,
@@ -37,10 +38,17 @@ export const EDITOR_TOOLS = {
   paragraph: {
     // class: Paragraph,
     class: TypedParagraph,
-    inlineToolbar: ["link", "bold", "italic", "inlineToolFootnoteMaker"],
+    inlineToolbar: [
+      "link",
+      "bold",
+      "italic",
+      "inlineToolListMaker",
+      "inlineToolFootnoteMaker",
+    ],
     tunes: ["blockTuneBlockquote", "blockTuneParagraph"],
   },
   inlineToolFootnoteMaker: FootnoteMaker,
+  inlineToolListMaker: ListMaker,
   blockTuneBlockquote: BlockTuneBlockquote,
   blockTuneParagraph: BlockTuneParagraph,
 };

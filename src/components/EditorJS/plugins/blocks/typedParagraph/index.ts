@@ -179,7 +179,7 @@ export default class TypedParagraph extends Paragraph {
   renderSettings() {
     const settings = [
       {
-        icon: "Typed Paragraph",
+        icon: "Paragraph",
         onclick: () => {
           // setParagraphType(reverseParagraphType(getParagraphType()));
           // const currentBlock = this.api.blocks.getBlockByIndex(

@@ -30,7 +30,6 @@ export default class FootnoteMaker implements InlineTool {
   }
 
   checkState(selection: Selection): boolean {
-    // console.log("checkState", selection);
     let element = selection.focusNode;
     if (element?.nodeName === "#text") {
       element = element?.parentElement;
@@ -86,7 +85,6 @@ export default class FootnoteMaker implements InlineTool {
   }
 
   surround(range: Range) {
-    // console.log("surround", range);
     let element = range.endContainer;
     if (element.nodeName !== "SUP") {
       element = element.parentNode as Node;
@@ -121,8 +119,6 @@ export default class FootnoteMaker implements InlineTool {
       link.href = "#fn-" + id;
       link.textContent = id;
 
-      // const text = range.cloneContents();
-      // link.appendChild(text);
       mark.appendChild(link);
 
       const endRange = range.cloneRange();
