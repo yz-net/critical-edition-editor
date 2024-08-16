@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import { format } from "date-fns/format";
 
@@ -16,14 +16,14 @@ import { useStateStore } from "~/store/state";
 import LoadingSpinner from "~/components/LoadingSpinner";
 import Toast from "~/components/Toast";
 import VersionButton from "~/components/VersionButton";
+import DownloadButton from "~/components/DownloadButton";
+import ImportButton from "~/components/ImportButton";
 
 import type { CEData } from "~/types/store";
 import type { ConfigEssay } from "~/types/config";
 import type { EssayMeta } from "~/types/essay";
 
 import styles from "./styles.module.scss";
-import ImportButton from "~/components/ImportButton";
-import DownloadButton from "~/components/DownloadButton";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
