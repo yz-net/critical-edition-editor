@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { FiPlus, FiDownload, FiUpload } from "react-icons/fi";
+import React, { useEffect, useState } from "react";
+import { FiPlus, FiDownload } from "react-icons/fi";
 import JSZip from "jszip";
 import { format } from "date-fns/format";
 
@@ -19,10 +19,11 @@ import Toast from "~/components/Toast";
 import VersionButton from "~/components/VersionButton";
 
 import type { CEData } from "~/types/store";
-import type { Config, ConfigEssay } from "~/types/config";
-import type { Essay, EssayMeta } from "~/types/essay";
+import type { ConfigEssay } from "~/types/config";
+import type { EssayMeta } from "~/types/essay";
 
 import styles from "./styles.module.scss";
+import ImportButton from "~/components/ImportButton";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
@@ -39,8 +40,6 @@ export default function HomePage() {
 
   const setLoading = useStateStore((state) => state.setLoading);
   const setToast = useStateStore((state) => state.setToast);
-
-  const importRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (gitConfig) {
@@ -239,117 +238,6 @@ export default function HomePage() {
     link.remove();
   };
 
-  const importJson = (json: Essay) => {
-    if (!localConfig) {
-      return alert("Error, no local data config");
-    }
-
-    const duplicate = localConfig?.essays.find(
-      (e) => e.hvtID === json.meta?.hvtID,
-    );
-    if (
-      duplicate &&
-      window.confirm(
-        `A local version of an edition with the hvtID ${duplicate.hvtID} already exists! Confirm to overwrite.`,
-      )
-    ) {
-      localSetConfig({
-        ...localConfig,
-        essays: localConfig.essays.map((e) =>
-          e.hvtID === json?.meta?.hvtID ? (json.meta as ConfigEssay) : e,
-        ),
-      });
-    }
-    if (!duplicate) {
-      localSetConfig({
-        essays: [json.meta as ConfigEssay, ...localConfig.essays],
-        projectData: {
-          ...localConfig.projectData,
-          essayOrder: [json.meta.hvtID, ...localConfig.projectData.essayOrder],
-        },
-      });
-    }
-  };
-
-  const importZip = (file: File) => {
-    let config: Config | null = null;
-    const essays: Essay[] = [];
-
-    JSZip.loadAsync(file)
-      .then((zip) => {
-        const files = Object.fromEntries(
-          Object.entries(zip.files).filter((f) => !f[1].dir),
-        );
-        // Collect all promises for processing files
-        const fileProcessingPromises = Object.keys(files).map((filename) => {
-          return files[filename]!.async("string").then((data) => {
-            const parsedData = JSON.parse(data);
-            if (filename.includes("config")) {
-              config = parsedData;
-            } else if (parsedData.meta && parsedData.blocks) {
-              essays.push(parsedData);
-            }
-          });
-        });
-
-        // Wait for all file processing promises to complete
-        return Promise.all(fileProcessingPromises);
-      })
-      .then(() => {
-        // Now config and essays are ready to use
-        if (config && essays.length > 0) {
-          localSetConfig(config);
-          localSetEssays(essays);
-        } else {
-          throw Error();
-        }
-      })
-      .catch((error) => {
-        return alert("Error processing files");
-      });
-  };
-
-  const handleFileImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const input = e.target as HTMLInputElement;
-    if (!input.files || input.files.length < 1) {
-      return;
-    }
-    const file = input.files[0];
-    if (file) {
-      const fileReader = new FileReader();
-      fileReader.onload = (e) => {
-        try {
-          if (!e.target) {
-            return alert("Error reading file");
-          }
-          const json = JSON.parse(e.target.result as string) as Essay;
-          if (!json.meta || !json.blocks) {
-            return alert("Error, corrupt JSON file");
-          }
-          importJson(json);
-        } catch (error) {
-          console.error("File reader onload error");
-        }
-      };
-
-      fileReader.onerror = () => {
-        console.error("File reader onerror");
-      };
-
-      if (file.type === "application/zip") {
-        if (
-          window.confirm(
-            "Importing a .zip file overwrites all local changes. Confirm to continue.",
-          )
-        ) {
-          importZip(file);
-        }
-      } else if (file.type === "application/json") {
-        fileReader.readAsText(file);
-      }
-    }
-  };
-
   if (!localConfig || !localEssays) {
     return;
   }
@@ -414,23 +302,8 @@ export default function HomePage() {
               </div>
               {/* right side */}
               <div className="flex items-center divide-x divide-white overflow-hidden rounded">
-                <button
-                  className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                  type="button"
-                  onPointerDown={() => {
-                    importRef.current?.click();
-                  }}
-                >
-                  <FiUpload />
-                  Import
-                </button>
-                <input
-                  ref={importRef}
-                  type="file"
-                  accept=".zip,.json"
-                  className="hidden"
-                  onChange={handleFileImport}
-                />
+                <ImportButton />
+
                 <button
                   className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
                   type="button"
