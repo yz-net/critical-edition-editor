@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import { FiUpload } from "react-icons/fi";
 import JSZip from "jszip";

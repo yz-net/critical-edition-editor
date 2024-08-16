@@ -8,7 +8,7 @@
     "deploy": "aws s3 sync out/ s3://edit.editions.fortunoff.library.yale.edu/ --delete",
     "dev": "next dev",
     "lint": "next lint",
-    "prebuild": "node scripts/generate-timestamp.js && echo 'Timestamp generated'",
+    "prebuild": "rimraf -rf out && node scripts/generate-timestamp.js && echo 'Timestamp generated'",
     "serve": "npx serve@latest ./out",
     "start": "next start"
   },
@@ -53,6 +53,7 @@
     "postcss-nesting": "^12.1.2",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
+    "rimraf": "^6.0.1",
     "sass": "^1.70.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.3.5",

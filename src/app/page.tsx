@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FiPlus, FiDownload } from "react-icons/fi";
-import JSZip from "jszip";
+import { FiPlus } from "react-icons/fi";
 import { format } from "date-fns/format";
 
 import LogoBar from "~/components/LogoBar";
@@ -24,6 +23,7 @@ import type { EssayMeta } from "~/types/essay";
 
 import styles from "./styles.module.scss";
 import ImportButton from "~/components/ImportButton";
+import DownloadButton from "~/components/DownloadButton";
 
 export default function HomePage() {
   const [showNewEssayModal, setShowNewEssayModal] = useState<boolean>(false);
@@ -208,36 +208,6 @@ export default function HomePage() {
       },
     });
   };
-
-  const downloadZip = async () => {
-    const files: { path: string; blob: Blob }[] = [];
-    files.push({
-      path: "config.json",
-      blob: new Blob([JSON.stringify(localConfig)]),
-    });
-    if (!localEssays) return;
-    for (const essay of localEssays) {
-      files.push({
-        path: `intro-hvt-${essay.meta.hvtID}.json`,
-        blob: new Blob([JSON.stringify(essay)]),
-      });
-    }
-    const zip = new JSZip();
-    for (const file of files) {
-      zip.folder("data")!.file(file.path, file.blob);
-    }
-
-    const zipData = await zip.generateAsync({
-      type: "blob",
-      streamFiles: true,
-    });
-    const link = document.createElement("a");
-    link.href = window.URL.createObjectURL(zipData);
-    link.download = "critical-edition-data.zip";
-    link.click();
-    link.remove();
-  };
-
   if (!localConfig || !localEssays) {
     return;
   }
@@ -303,15 +273,7 @@ export default function HomePage() {
               {/* right side */}
               <div className="flex items-center divide-x divide-white overflow-hidden rounded">
                 <ImportButton />
-
-                <button
-                  className="pointer-events-auto flex items-center gap-2 bg-critical-600 p-3 font-[Helvetica,Arial,sans-serif] text-white transition-colors hover:bg-critical-700"
-                  type="button"
-                  onPointerDown={downloadZip}
-                >
-                  <FiDownload />
-                  Download
-                </button>
+                <DownloadButton />
                 <VersionButton />
               </div>
             </div>
