@@ -139,6 +139,10 @@ export default function HomePage() {
       },
     });
     localSetEssays(newEssays);
+    setToast({
+      className: "bg-yellow-300 text-black",
+      text: "New local edition successfully created",
+    });
     setShowNewEssayModal(false);
   };
 

@@ -16,6 +16,7 @@ import type { Essay, EssayMeta } from "~/types/essay";
 import type { ConfigEssay } from "~/types/config";
 
 import styles from "./styles.module.scss";
+import { useStateStore } from "~/store/state";
 
 const MEDIA_PATH_PREFIX = "https://d12q9fe14kxf9b.cloudfront.net";
 
@@ -37,6 +38,8 @@ function Essay() {
   const setEssays = useLocalDataStore((state) => state.setEssays);
   const config = useLocalDataStore((state) => state.config);
   const setConfig = useLocalDataStore((state) => state.setConfig);
+
+  const setToast = useStateStore((state) => state.setToast);
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -112,6 +115,10 @@ function Essay() {
       window.history.pushState(null, "", `/essay?id=${meta.slug}`);
     }
     setData((prev) => ({ ...prev!, meta }));
+    setToast({
+      className: "bg-yellow-300 text-black",
+      text: "Edition successfully modified",
+    });
     setShowMetaModal(false);
   };
 

@@ -18,10 +18,11 @@ export default function MetadataModal(props: MetadataModalProps) {
 
   const { config } = useLocalDataStore();
 
-  const onSave = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (!config) {
       throw Error("Local config missing");
     }
+    e.preventDefault();
 
     if (
       !meta ||
@@ -63,7 +64,7 @@ export default function MetadataModal(props: MetadataModalProps) {
             </div>
             {/* Modal body */}
             <div className="p-4 md:p-5">
-              <form action="#">
+              <form onSubmit={handleSubmit}>
                 <div className="space-y-3">
                   <div>
                     <label
@@ -181,9 +182,8 @@ export default function MetadataModal(props: MetadataModalProps) {
                       </button>
                     )}
                     <button
-                      type="button"
+                      type="submit"
                       className="w-full rounded-lg bg-critical-600 px-5 py-2.5 text-center text-sm font-medium text-white transition-colors transition-colors focus:outline-none focus:ring-4 hover:enabled:bg-critical-700 disabled:opacity-50"
-                      onClick={onSave}
                     >
                       Save
                     </button>

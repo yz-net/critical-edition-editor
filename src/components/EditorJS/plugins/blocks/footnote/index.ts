@@ -88,7 +88,7 @@ export default class Footnote extends Paragraph {
 
   save(blockContent: BlockToolData) {
     const label =
-      blockContent.querySelector(`div[data-id="${this.data?.id}"]`)
+      blockContent.querySelector(`div[data-id="fn-${this.data?.id}"]`)
         ?.textContent ?? "";
     const id = `fn-${label}`;
 
@@ -122,6 +122,7 @@ export default class Footnote extends Paragraph {
       const value = target.innerHTML ?? "";
       footnoteId.innerHTML = value;
       footnoteId.setAttribute("data-id", `fn-${value}`);
+      this.data.id = value;
       // place caret at end
       var range = document.createRange();
       range.selectNodeContents(target);
