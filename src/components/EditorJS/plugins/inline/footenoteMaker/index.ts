@@ -6,6 +6,7 @@ export default class FootnoteMaker implements InlineTool {
   button?: HTMLButtonElement;
   state: boolean;
   footnoteRefInput?: HTMLInputElement;
+  markRef?: HTMLElement;
 
   static get isInline() {
     return true;
@@ -104,7 +105,6 @@ export default class FootnoteMaker implements InlineTool {
       const id = "footnote-id";
       const mark = document.createElement("sup");
       mark.className = "footnote-ref";
-      mark.id = `fnref-${id}`;
 
       mark.onclick = () => {
         const range = document.createRange();
