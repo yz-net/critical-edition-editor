@@ -65,4 +65,12 @@
 .simple-image .src-input {
   font-size: 15px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-shadow: none;
+  outline-offset: 0;
+  &:hover {
+    outline: 2px solid lightgrey;
+  }
+  &:focus {
+    outline: 2px solid black;
+  }
 }

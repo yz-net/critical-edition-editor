@@ -1,7 +1,7 @@
 // @ts-nocheck
 /* eslint-disable */
 
-import "./index.css";
+import "./index.scss";
 
 /**
  * Tool for creating image Blocks for Editor.js
