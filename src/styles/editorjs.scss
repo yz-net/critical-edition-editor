@@ -8,6 +8,13 @@
     max-width: 950px;
     .cdx-list {
       font-size: 21px;
+      border-radius: 3px;
+      &:hover {
+        outline: 2px solid lightgrey;
+      }
+      &:focus {
+        outline: 2px solid black;
+      }
     }
   }
   margin-bottom: 16px;
