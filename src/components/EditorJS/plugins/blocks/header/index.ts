@@ -25,6 +25,7 @@ export default class CustomHeader extends Header {
      */
     this._element = this.getTag();
   }
+
   /**
    * Get tag for target level
    * By default returns second-leveled header
