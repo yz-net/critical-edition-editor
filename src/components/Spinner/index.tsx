@@ -1,7 +1,7 @@
 export default function Spinner() {
   return (
     <svg
-      className="stroke-critical-500"
+      className="stroke-white"
       width="24"
       height="24"
       viewBox="0 0 24 24"

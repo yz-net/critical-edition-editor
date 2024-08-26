@@ -81,7 +81,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                         type="text"
                         name="id"
                         id="hvt-id"
-                        className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 pl-11 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
+                        className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 pl-11 text-sm text-neutral-900 focus:border-white focus:ring-white dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
                         placeholder="0000"
                         value={meta?.hvtID ?? ""}
                         onChange={(e) => {
@@ -110,7 +110,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                       type="text"
                       name="title"
                       id="title"
-                      className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
+                      className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-white focus:ring-white dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
                       placeholder="Name of the Survivor"
                       value={meta?.title ?? ""}
                       onChange={(e) => {
@@ -133,7 +133,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                       name="author"
                       id="author"
                       placeholder="Name of the Interviewer"
-                      className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
+                      className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-white focus:ring-white dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
                       value={meta?.author ?? ""}
                       onChange={(e) => {
                         setMeta((prev) => ({
@@ -155,7 +155,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                       name="affiliation"
                       id="affiliation"
                       placeholder="Affiliation of the Interviewer"
-                      className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-blue-500 focus:ring-blue-500 dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
+                      className="block w-full rounded-lg border border-neutral-300 bg-neutral-50 p-2.5 text-sm text-neutral-900 focus:border-white focus:ring-white dark:border-neutral-500 dark:bg-neutral-600 dark:text-white dark:placeholder-neutral-400"
                       value={meta?.affiliation ?? ""}
                       onChange={(e) => {
                         setMeta((prev) => ({

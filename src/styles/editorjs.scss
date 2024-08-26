@@ -1,3 +1,7 @@
+.codex-editor {
+  padding-top: 16px;
+}
+
 .ce-block {
   &__content {
     // max-width: 1070px;
@@ -6,7 +10,7 @@
       font-size: 21px;
     }
   }
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 }
 
 .ce-toolbar {

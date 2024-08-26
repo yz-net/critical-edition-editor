@@ -177,17 +177,17 @@ export default class TypedParagraph extends Paragraph {
   }
 
   renderSettings() {
-    const settings = [
-      {
-        icon: "Paragraph",
-        onclick: () => {
-          // setParagraphType(reverseParagraphType(getParagraphType()));
-          // const currentBlock = this.api.blocks.getBlockByIndex(
-          //   this.api.blocks.getCurrentBlockIndex(),
-          // );
-          // this.api.blocks.update(currentBlock.id);
-        },
-      },
+    const settings: any[] = [
+      // {
+      //   icon: "Paragraph",
+      //   onclick: () => {
+      //     setParagraphType(reverseParagraphType(getParagraphType()));
+      //     const currentBlock = this.api.blocks.getBlockByIndex(
+      //       this.api.blocks.getCurrentBlockIndex(),
+      //     );
+      //     this.api.blocks.update(currentBlock.id);
+      //   },
+      // },
     ];
     const wrapper = document.createElement("div");
 

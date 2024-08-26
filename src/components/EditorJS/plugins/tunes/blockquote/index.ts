@@ -17,18 +17,21 @@ export default class BlockTuneBlockquote {
 
   render() {
     const wrapper = document.querySelector(`div[data-id="${this.block.id}"]`);
-    const paragraph = wrapper?.querySelector("div[data-paragraph-type]");
-    if (!paragraph) {
-      return null;
-    }
+    const paragraph = wrapper?.querySelector(
+      "div[data-paragraph-type='paragraph']",
+    );
 
     return {
       icon: "B",
-      label: "Transform to blockquote",
-      onActivate: () => {
-        paragraph.setAttribute("data-paragraph-type", "blockquote");
-        paragraph.classList.replace(styles.paragraph!, styles.blockquote!);
-      },
+      label: !paragraph ? "Blockquote (active)" : "Blockquote",
+      isDisabled: !paragraph,
+      closeOnActivate: true,
+      onActivate: paragraph
+        ? () => {
+            paragraph.setAttribute("data-paragraph-type", "blockquote");
+            paragraph.classList.replace(styles.paragraph!, styles.blockquote!);
+          }
+        : null,
     };
   }
 }

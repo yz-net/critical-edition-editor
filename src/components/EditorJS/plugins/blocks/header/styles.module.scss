@@ -1,10 +1,11 @@
 .header {
   font-size: 27px;
-  padding: 0 10px;
+  padding: 0 10px !important;
   font-weight: 400;
   font-family: "YaleNewRoman", "Times New Roman", Times, serif;
   line-height: 1.5;
   border-radius: 3px;
+
   &:hover {
     outline: 2px solid lightgrey;
   }
