@@ -108,7 +108,6 @@ export default function HomePage() {
      * Note: meta is missing the following values:
      * aviaryLink
      * publicationDate
-     * supertitle
      *
      * (they are not really being used in the app)
      */

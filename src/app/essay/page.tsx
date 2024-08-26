@@ -186,7 +186,7 @@ function Essay() {
                 type="textarea"
                 name="Affiliation"
                 placeholder="Affiliation"
-                className="h-[13px] w-full rounded bg-transparent p-0 text-[13px] [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
+                className="h-[13px] w-full rounded bg-transparent p-0 text-[13px] leading-none [text-shadow:_0_0_9px_#000] focus:border-white focus:ring-0"
                 value={data.meta.affiliation ?? ""}
                 onChange={(e) => {
                   setData((prev) => ({
