@@ -20,6 +20,12 @@
   }
 }
 
+.ce-popover {
+  &__container {
+    width: fit-content !important;
+  }
+}
+
 .footnote-ref {
   border-radius: 2px;
   margin: 0 0.1em;

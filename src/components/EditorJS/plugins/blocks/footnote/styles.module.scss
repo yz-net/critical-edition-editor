@@ -27,7 +27,6 @@
   box-sizing: border-box;
   width: 100%;
   margin-top: 2em;
-  border-radius: 3px;
   border: none;
   &:empty:before {
     content: attr(placeholder);
@@ -61,7 +60,6 @@
   }
   &:focus {
     outline: 2px solid black;
-    border-radius: 3px;
   }
 }
 

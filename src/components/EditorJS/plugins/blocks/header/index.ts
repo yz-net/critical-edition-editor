@@ -26,6 +26,32 @@ export default class CustomHeader extends Header {
     this._element = this.getTag();
   }
 
+  renderSettings() {
+    const settings: any[] = [
+      // {
+      //   icon: "Paragraph",
+      //   onclick: () => {
+      //     setParagraphType(reverseParagraphType(getParagraphType()));
+      //     const currentBlock = this.api.blocks.getBlockByIndex(
+      //       this.api.blocks.getCurrentBlockIndex(),
+      //     );
+      //     this.api.blocks.update(currentBlock.id);
+      //   },
+      // },
+    ];
+    const wrapper = document.createElement("div");
+
+    settings.forEach((tune) => {
+      let button = document.createElement("div");
+      button.classList.add("cdx-settings-button");
+      button.innerHTML = tune.icon;
+      wrapper.appendChild(button);
+      button.onclick = tune.onclick;
+    });
+
+    return wrapper;
+  }
+
   /**
    * Get tag for target level
    * By default returns second-leveled header
