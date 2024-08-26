@@ -46,7 +46,7 @@ export default function ImportButton() {
         essays: [json.meta as ConfigEssay, ...localConfig.essays],
         projectData: {
           ...localConfig.projectData,
-          essayOrder: [json.meta.hvtID, ...localConfig.projectData.essayOrder],
+          essayOrder: [json.meta.id, ...localConfig.projectData.essayOrder],
         },
       });
       localSetEssays([json, ...localEssays]);

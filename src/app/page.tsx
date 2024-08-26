@@ -162,10 +162,13 @@ export default function HomePage() {
     newEssays[essaysAIndex] = tempEssay!;
     // config essay order
     const essayOrderAIndex = newEssayOrder.findIndex((e) => e === id);
-    if (essayOrderAIndex < 0) return;
-    const essayOrderBIndex = essayOrderAIndex - (direction === "up" ? 1 : -1);
-    if (essayOrderBIndex < 0 || essayOrderBIndex > newEssayOrder.length - 1)
+    if (essayOrderAIndex < 0) {
       return;
+    }
+    const essayOrderBIndex = essayOrderAIndex - (direction === "up" ? 1 : -1);
+    if (essayOrderBIndex < 0 || essayOrderBIndex > newEssayOrder.length - 1) {
+      return;
+    }
     const tempEssayOder = newEssayOrder[essayOrderBIndex];
     newEssayOrder[essayOrderBIndex] = newEssayOrder[essayOrderAIndex]!;
     newEssayOrder[essayOrderAIndex] = tempEssayOder!;
@@ -248,9 +251,10 @@ export default function HomePage() {
                 <li key={essay.hvtID} className={styles.IndexItemContainer}>
                   <EssayIndexItem
                     essay={essay}
-                    onChangeOrder={(direction: "up" | "down") =>
-                      moveEssay(essay.id, direction)
-                    }
+                    onChangeOrder={(direction: "up" | "down") => {
+                      console.log("CHANGE ORDER", direction, essay);
+                      moveEssay(essay.id, direction);
+                    }}
                     onDelete={() => {
                       if (
                         window.confirm(
