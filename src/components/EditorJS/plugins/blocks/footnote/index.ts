@@ -87,9 +87,7 @@ export default class Footnote extends Paragraph {
   }
 
   save(blockContent: BlockToolData) {
-    const label =
-      blockContent.querySelector(`div[data-id="fn-${this.data?.id}"]`)
-        ?.textContent ?? "";
+    const label = blockContent.querySelector(`div[data-id]`)?.textContent ?? "";
     const id = `fn-${label}`;
 
     const content = blockContent.querySelector("." + styles.contentArea);
@@ -120,9 +118,10 @@ export default class Footnote extends Paragraph {
     footnoteId.addEventListener("input", (e) => {
       const target = e.target as HTMLElement;
       const value = target.innerHTML ?? "";
+      const id = `fn-${value}`;
       footnoteId.innerHTML = value;
-      footnoteId.setAttribute("data-id", `fn-${value}`);
-      this.data.id = value;
+      footnoteId.setAttribute("data-id", id);
+      this.data.id = id;
       // place caret at end
       var range = document.createRange();
       range.selectNodeContents(target);
