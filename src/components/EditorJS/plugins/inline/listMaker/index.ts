@@ -55,7 +55,6 @@ export default class ListMaker implements InlineTool {
 
     range.insertNode(list);
 
-    console.log("AYOOO", this.button);
     this.button?.classList.add("active");
   }
 

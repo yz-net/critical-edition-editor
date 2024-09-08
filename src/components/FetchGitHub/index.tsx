@@ -6,9 +6,6 @@ import useGitDataStore from "~/store/git";
 import { fetchGitHubData } from "~/utils/data";
 import { useStateStore } from "~/store/state";
 
-const confirmText =
-  "Are you sure you want to pull content from GitHub? All local changes will be deleted.";
-
 export default function Import() {
   const localSetConfig = useLocalDataStore((state) => state.setConfig);
   const localSetEssays = useLocalDataStore((state) => state.setEssays);
@@ -18,6 +15,9 @@ export default function Import() {
 
   const setLoading = useStateStore((state) => state.setLoading);
   const setToast = useStateStore((state) => state.setToast);
+
+  const confirmText =
+    "Are you sure you want to pull content from GitHub? All local changes will be deleted.";
 
   const fetch = async () => {
     if (window.confirm(confirmText)) {
