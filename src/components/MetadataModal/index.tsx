@@ -91,7 +91,7 @@ export default function MetadataModal(props: MetadataModalProps) {
                             id: `hvt-${e.target.value}`,
                             slug: `hvt-${e.target.value}`,
                             essayPath: `/data/intro-hvt-${e.target.value}.json`,
-                            posterPath: `https://d12q9fe14kxf9b.cloudfront.net/${e.target.value}/.poster.jpg`,
+                            posterPath: `https://d12q9fe14kxf9b.cloudfront.net/${e.target.value}/poster.jpg`,
                             smallVideoPath: `https://d12q9fe14kxf9b.cloudfront.net/${e.target.value}/background-loop-640.mp4`,
                             videoPath: `https://d12q9fe14kxf9b.cloudfront.net/${e.target.value}/background-loop-1280.mp4`,
                           }));
