@@ -17,7 +17,7 @@ import styles from "./styles.module.scss";
 const MEDIA_PATH_PREFIX = "https://d12q9fe14kxf9b.cloudfront.net";
 
 function getPosterPath(hvtID: string) {
-  return `${MEDIA_PATH_PREFIX}/${hvtID}/poster.jpg`;
+  return `${MEDIA_PATH_PREFIX}/${hvtID}/poster.webp`;
 }
 
 function getVideoPath(hvtID: string) {
