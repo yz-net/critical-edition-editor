@@ -31,7 +31,8 @@ export default function DownloadButton() {
     });
     const link = document.createElement("a");
     link.href = window.URL.createObjectURL(zipData);
-    link.download = "critical-edition-data.zip";
+    const date = new Date().toLocaleDateString("en-CA"); // local date as YYYY-MM-DD
+    link.download = `critical-edition-data-${date}.zip`;
     link.click();
     link.remove();
   };
