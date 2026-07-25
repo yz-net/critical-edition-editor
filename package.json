@@ -8,7 +8,7 @@
     "deploy": "aws s3 sync out/ s3://edit.editions.fortunoff.library.yale.edu/ --delete",
     "dev": "next dev",
     "lint": "next lint",
-    "prebuild": "rimraf -rf out && node scripts/generate-timestamp.js && echo 'Timestamp generated'",
+    "prebuild": "rimraf -rf out",
     "serve": "npx serve@latest ./out",
     "start": "next start"
   },

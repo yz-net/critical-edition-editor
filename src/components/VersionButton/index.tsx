@@ -2,7 +2,8 @@ import { FiInfo } from "react-icons/fi";
 import { parseISO } from "date-fns/parseISO";
 import { format } from "date-fns/format";
 
-import timestampJSON from "~/configs/timestamp.json" assert { type: "json" };
+const buildTime = process.env.NEXT_PUBLIC_BUILD_TIME;
+const commitHash = process.env.NEXT_PUBLIC_COMMIT_HASH;
 
 export default function VersionButton() {
   return (
@@ -12,7 +13,9 @@ export default function VersionButton() {
       onClick={() =>
         alert(
           "Build version: " +
-            format(parseISO(timestampJSON.timestamp), "PPPP pppp"),
+            (buildTime ? format(parseISO(buildTime), "PPPP pppp") : "unknown") +
+            "\nCommit: " +
+            (commitHash ?? "unknown"),
         )
       }
     >
