@@ -12,30 +12,32 @@ export default function Import() {
 
   const gitSetConfig = useGitDataStore((state) => state.setConfig);
   const gitSetEssays = useGitDataStore((state) => state.setEssays);
+  const branch = useGitDataStore((state) => state.branch);
+  const gitSetFetchedBranch = useGitDataStore((state) => state.setFetchedBranch);
 
   const setLoading = useStateStore((state) => state.setLoading);
   const setToast = useStateStore((state) => state.setToast);
 
-  const confirmText =
-    "Are you sure you want to pull content from GitHub? All local changes will be deleted.";
+  const confirmText = `Are you sure you want to pull content from the '${branch}' branch on GitHub? All local changes will be deleted.`;
 
   const fetch = async () => {
     if (window.confirm(confirmText)) {
       setLoading(true);
       try {
-        const data = await fetchGitHubData();
+        const data = await fetchGitHubData(branch);
         data.essays = data.essays.map((e) => ({
           ...e,
           meta: { ...e.meta, id: e.meta.slug },
         }));
         gitSetConfig(data.config);
         gitSetEssays(data.essays);
+        gitSetFetchedBranch(branch);
         localSetConfig(data.config);
         localSetEssays(data.essays);
 
         setToast({
           className: "bg-yellow-300 text-black",
-          text: "GitHub data fetched successfully",
+          text: `GitHub data fetched successfully from '${branch}'`,
         });
       } catch (err) {
         setToast({

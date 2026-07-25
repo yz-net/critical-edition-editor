@@ -51,6 +51,17 @@
     padding-bottom: 38px;
     z-index: 20;
   }
+
+  /* Below this height the header runs to the foot of the viewport (see the
+     max-height rule above), which puts the tagline underneath the fixed button
+     bar — 48px tall, sitting 20px off the bottom. Reserve room for it.
+     This has to come after .TextArea above: a media query adds no specificity,
+     so an earlier block of equal weight would simply lose the cascade. */
+  @media screen and (max-height: 500px) {
+    .TextArea {
+      padding-bottom: 80px;
+    }
+  }
   
   h1.Title {
     font-size: 56px;

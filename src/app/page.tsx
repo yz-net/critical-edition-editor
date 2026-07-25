@@ -8,6 +8,7 @@ import LogoBar from "~/components/LogoBar";
 import ImpactHeader from "~/components/ImpactHeader";
 import EssayIndexItem from "~/components/EssayIndexItem";
 import FetchGitHub from "~/components/FetchGitHub";
+import BranchSelect from "~/components/BranchSelect";
 import useLocalDataStore from "~/store/local-data";
 import useGitDataStore from "~/store/git";
 import { fetchGitHubData } from "~/utils/data";
@@ -19,7 +20,7 @@ import VersionButton from "~/components/VersionButton";
 import DownloadButton from "~/components/DownloadButton";
 import ImportButton from "~/components/ImportButton";
 
-import type { CEData } from "~/types/store";
+import type { CEData, ContentBranch } from "~/types/store";
 import type { ConfigEssay } from "~/types/config";
 import type { EssayMeta } from "~/types/essay";
 
@@ -37,19 +38,30 @@ export default function HomePage() {
   const gitEssays = useGitDataStore((state) => state.essays);
   const gitSetConfig = useGitDataStore((state) => state.setConfig);
   const gitSetEssays = useGitDataStore((state) => state.setEssays);
+  const branch = useGitDataStore((state) => state.branch);
+  const gitFetchedBranch = useGitDataStore((state) => state.fetchedBranch);
+  const gitSetFetchedBranch = useGitDataStore((state) => state.setFetchedBranch);
 
   const setLoading = useStateStore((state) => state.setLoading);
   const setToast = useStateStore((state) => state.setToast);
 
   useEffect(() => {
-    if (gitConfig) {
+    // Cached git data belongs to the branch it was pulled from, so a branch
+    // switch has to invalidate it even when the store is already populated.
+    if (gitConfig && gitFetchedBranch === branch) {
       return;
     }
 
+    // A branch switch refreshes the git mirror while content is already on
+    // screen; blacking the page out behind the full-screen spinner for that
+    // reads as a flash. Only the first load, which has nothing to show yet,
+    // gets the overlay.
+    const isInitialLoad = !gitConfig;
+
     const fetch = async () => {
-      setLoading(true);
+      if (isInitialLoad) setLoading(true);
       try {
-        const newGitData = await fetchGitHubData();
+        const newGitData = await fetchGitHubData(branch);
         gitSetConfig(newGitData.config);
         gitSetEssays(
           newGitData.essays.map((e) => ({
@@ -57,14 +69,18 @@ export default function HomePage() {
             meta: { ...e.meta, id: e.meta.slug },
           })),
         );
+        gitSetFetchedBranch(branch);
       } catch (err) {
+        // Leave the git store untouched so the failure is visible as an error
+        // rather than persisted as empty content. Rethrowing here would only
+        // surface as an unhandled rejection — nothing awaits this.
         setToast({
           className: "bg-red-300 text-white",
-          text: "GitHub data could not be fetched",
+          text: `Content could not be fetched from '${branch}'`,
         });
-        throw Error("Error fetching GitHub data");
+        console.error(err);
       } finally {
-        setLoading(false);
+        if (isInitialLoad) setLoading(false);
       }
     };
 
@@ -73,14 +89,19 @@ export default function HomePage() {
       fetch();
       return;
     }
-    const gitData = (JSON.parse(gitDataString) as { state: CEData }).state;
-    if (gitData.config && gitData.essays) {
+    const gitData = (
+      JSON.parse(gitDataString) as {
+        state: CEData & { fetchedBranch?: ContentBranch | null };
+      }
+    ).state;
+    if (gitData.config && gitData.essays && gitData.fetchedBranch === branch) {
       gitSetConfig(gitData.config);
       gitSetEssays(gitData.essays);
+      gitSetFetchedBranch(branch);
     } else {
       fetch();
     }
-  }, [gitConfig]);
+  }, [gitConfig, branch, gitFetchedBranch]);
 
   useEffect(() => {
     if (localConfig) {
@@ -276,6 +297,7 @@ export default function HomePage() {
               {/* left side */}
               <div className="flex items-center divide-x divide-white overflow-hidden rounded">
                 <FetchGitHub />
+                <BranchSelect />
               </div>
               {/* right side */}
               <div className="flex items-center divide-x divide-white overflow-hidden rounded">
